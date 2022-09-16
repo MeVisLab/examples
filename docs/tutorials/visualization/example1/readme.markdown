@@ -1,2 +1,2 @@
 # Visualization Example 1: Synchronous view of two images
-![Screenshot](../image.png)
+![Screenshot](./image.png)
