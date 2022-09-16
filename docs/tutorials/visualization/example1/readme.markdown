@@ -4,4 +4,4 @@ This very simple example shows how to load an image and apply a basic `Convoluti
 ![Screenshot](./image.png)
 
 # Download
-You can download the example network ![here](./VisualizationExample1.mlab)
+You can download the example network [here](./VisualizationExample1.mlab)
