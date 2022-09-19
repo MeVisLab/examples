@@ -1,0 +1,4 @@
+<p class="page-image">
+    <a data-modal="bs-lightbox" href="{{ .Destination | safeURL }}" title="{{ .Title }}"><img id="{{ .Title }}" class="img-fluid rounded" src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} /></a>
+    <figcaption class="figure-caption">{{ .Title }}</figcaption>
+</p>

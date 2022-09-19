@@ -1,0 +1,21 @@
+Module Name:                        `<NAME>`
+Field Name/Value:                   *<NAME>*
+Paths/Filenames:                    *<PATH>*
+Menu Item:                          {{< menuitem "<ENTRY>" "<SUB_ENTRY>"... >}}
+Keyboard Shortcut:                  {{< keyboard "<KEY>" "<KEY>" "<KEY>"... >}}
+YouTube:                            {{< youtube "<VIDEO ID>">}}
+Links to external Documentation:    {{< docuLinks "<URL>" "<LINK TEXT>" >}}
+Info:                               {{<alert class="info" caption="Info">}}<TEXT>{{</alert>}}
+Warning:                            {{<alert class="warning" caption="Warning">}}<TEXT>{{</alert>}}
+Check:                              {{<alert class="check" caption="Check">}}<TEXT>{{</alert>}}
+Mouse Buttons:                      {{< mousebutton "left" >}}
+                                    {{< mousebutton "right" >}}
+                                    {{< mousebutton "middle" >}}
+Image Gallery:                      {{< imagegallery <NUMBER OF COLUMNS> "<IMAGE_NAME>" "<IMAGE_NAME>"... }}
+MLAB File Download                  {{< networkfile "<RELATIVE_PATH>" >}}
+Syntax Highlighting for Code        {{< highlight filename="<FILENAME>" >}}
+                                    ```Python
+                                    def enableFunctionalities():
+                                        ctx.field("SoView2DCSOExtensibleEditor.updateCSOIdUnderMouseCursor").value = True
+                                    ```
+                                    {{</highlight>}}

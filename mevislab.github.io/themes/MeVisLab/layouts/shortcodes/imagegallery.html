@@ -1,0 +1,14 @@
+<div class="container">
+    {{ $columns := .Get 0 }}
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-{{ $columns }}">
+        {{- range (seq 1 (sub (len .Params) 1) ) }}
+            {{- $myArg := $.Get . }}
+        <div class="col mt-{{ $columns }}">
+            <p class="page-image">
+                <a data-modal="bs-lightbox" href="/images/tutorial/{{ $myArg }}.png" title="{{ $myArg }}"><img src="/images/tutorial/{{ $myArg }}.png" class="img-fluid" alt="{{ $myArg }}"></a>
+                <figcaption class="figure-caption">{{ $myArg }}</figcaption>
+            </p>
+        </div>
+        {{- end }}
+    </div>
+</div>

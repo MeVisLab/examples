@@ -1,0 +1,4 @@
+[submodule "mevislab.github.io/node_modules/bootstrap"]
+	path = mevislab.github.io/node_modules/bootstrap
+	url = https://github.com/twbs/bootstrap.git
+	branch = main
