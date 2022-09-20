@@ -1,0 +1,7 @@
+<i>[
+{{- range (seq 0 (sub (len .Params) 1) ) }}
+    {{ if gt . 0 }} &rarr; {{end}}
+    {{- $myArg := $.Get . }}
+    {{ printf `%s` $myArg }}
+{{- end }}
+]</i>

@@ -1,0 +1,66 @@
+# BaseURL is set to the correct value by the build system
+BaseURL = "/"
+languageCode = "en-us"
+title = "MeVisLab Examples"
+theme = "MeVisLab"
+relativeURLS = true
+sectionPagesMenu = "main"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      linkifyProtocol = 'https'
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      autoHeadingIDType = 'github'
+      withAttribute = true
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+
+[Author]
+  name = "MeVis Medical Solutions AG"
+  copyright = "(c) Copyright {year}"
+  website = "https://www.mevis.de"
+
+[module]
+  [[module.mounts]]
+    source = "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    target = "./assets/js/bootstrap.bundle.min.js"
+
+[sitemap]
+  changefreq = 'daily'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+[outputs]
+    home = [ "HTML", "JSON" ]
+  
+[menu]
+[[menu.main]]
+    identifier = "home"
+    title = "Home"
+    url = "/"
+    weight = -100
+
+[[menu.main]]
+    identifier = "contact"
+    title = "Contact"
+    url = "/contact/"
+    weight = 800
+
+[[menu.main]]
+    identifier = "about"
+    title = "About"
+    url = "/about/"
+    weight = 900
+

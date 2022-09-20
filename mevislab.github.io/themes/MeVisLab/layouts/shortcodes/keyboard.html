@@ -1,0 +1,19 @@
+{{- range (seq 0 (sub (len .Params) 1) ) }}
+    {{ if gt . 0 }}+{{end}}
+    <kbd>
+    {{- $myArg := $.Get . }}
+    {{ if eq $myArg "ArrowUp" }}
+    &uarr;
+    {{ end }}
+    {{ if eq $myArg "ArrowDown" }}
+    &darr;
+    {{ end }}
+    {{ if eq $myArg "ArrowLeft" }}
+    &larr;
+    {{ end }}
+    {{ if eq $myArg "ArrowRight" }}
+    &rarr;
+    {{ end }}
+    {{ printf `%s` $myArg }}
+    </kbd>
+{{- end }}

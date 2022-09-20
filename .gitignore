@@ -1,0 +1,4 @@
+.hugo_build.lock
+/mevislab.github.io/node_modules/*
+
+/mevislab.github.io/public/*
