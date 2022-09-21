@@ -7,7 +7,7 @@ status: "OK"
 menu: 
   main:
     identifier: "Visualization_example2"
-    title: "Overview of MeVisLab Tutorials and general information about User Interface, Modules, types of Modules, searching for Modules and Glossary including filetypes."
+    title: "This example shows how to create a magnifier."
     weight: 120
     parent: "Visualization_examples"
 ---

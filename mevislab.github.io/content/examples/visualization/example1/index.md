@@ -6,7 +6,7 @@ status: "OK"
 menu: 
   main:
     identifier: "Visualization_example1"
-    title: "Overview of MeVisLab Tutorials and general information about User Interface, Modules, types of Modules, searching for Modules and Glossary including filetypes."
+    title: "This very simple example shows how to load an image and apply a basic Convolution filter to the image."
     weight: 110
     parent: "Visualization_examples"
 ---
