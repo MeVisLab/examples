@@ -2,6 +2,14 @@
 layout: post
 title: "Visualization Example 2: Creating a magnifier"
 categories: TUTORIAL BEGINNER
+draft: false
+status: "OK"
+menu: 
+  main:
+    identifier: "Visualization_example2"
+    title: "Overview of MeVisLab Tutorials and general information about User Interface, Modules, types of Modules, searching for Modules and Glossary including filetypes."
+    weight: 120
+    parent: "Visualization_examples"
 ---
 
 # Visualization Example 2: Creating a magnifier

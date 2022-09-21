@@ -5,9 +5,9 @@ draft: false
 status: "OK"
 menu: 
   main:
-    identifier: "Visualization_example"
+    identifier: "Visualization_examples"
     title: "Overview of MeVisLab Tutorials and general information about User Interface, Modules, types of Modules, searching for Modules and Glossary including filetypes."
-    weight: 10
+    weight: 100
     parent: "examples"
 ---
 
