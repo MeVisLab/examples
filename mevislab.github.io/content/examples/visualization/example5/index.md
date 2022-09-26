@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Visualization Example 5: Volume rendering and interactions"
+categories: TUTORIAL ADVANCED
+---
+
+# Visualization Example 5: Volume rendering and interactions
+This example shows the volume rendering of a scan. The texture of the volume is edited and animations are implemented.
+![Screenshot](./image.png)
+
+# Download
+You can download the example network [here](./VisualizationExample5.mlab)
