@@ -5,7 +5,7 @@ categories: TUTORIAL BEGINNER
 ---
 
 # Contour Example 3: 2D and 3D visualization of contours
-This image shows how to display CSOs in 2D as an overlay. In addition, the CSOs are displayed in 3D.
+This example shows how to display CSOs in 2D as an overlay. In addition, the CSOs are displayed in 3D.
 ![Screenshot](./image.png)
 
 # Download
