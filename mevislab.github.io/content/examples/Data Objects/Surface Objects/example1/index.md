@@ -5,7 +5,7 @@ categories: TUTORIAL BEGINNER
 ---
 
 # Surface Example 1: Creation of WEMs
-This image shows how to create WEMs out of voxel images and CSOs.
+This example shows how to create WEMs out of voxel images and CSOs.
 ![Screenshot](./image.png)
 
 # Download
