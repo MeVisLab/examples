@@ -9,4 +9,4 @@ This example shows how to use dragger modules, to modify objects in a 3D viewer.
 ![Screenshot](./image.png)
 
 # Download
-You can download the example network [here](./SurfaceExample4.mlab)
+You can download the example network [here](./SurfaceExample4.zip)
