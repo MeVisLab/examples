@@ -27,7 +27,7 @@ jobs:
         
       - name: Build
         working-directory: ./mevislab.github.io
-        run: hugo --minify --baseURL https://mevislab.github.io/examples/
+        run: hugo --minify --baseURL https://mevislab.github.io/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
