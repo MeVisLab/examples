@@ -1,5 +1,5 @@
 # BaseURL is set to the correct value by the build system
-BaseURL = "/"
+#BaseURL = "/"
 languageCode = "en-us"
 title = "MeVisLab Examples"
 theme = "MeVisLab"
