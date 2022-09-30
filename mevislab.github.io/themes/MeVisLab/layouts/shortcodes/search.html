@@ -4,7 +4,7 @@
 <script>
     // CUSTOM AREA
     let static_params = {
-        json_src       : '/index.json', // for multiple sources: comma separated list of JSONarrays
+        json_src       : "{{ .Site.BaseURL }}/index.json", // for multiple sources: comma separated list of JSONarrays
         minlength      : 3,
         defaultsearch  : 'AND',
         sort_date      : 'DESC',
@@ -17,8 +17,8 @@
         err_badstring  : '<p>Der Suchbegriff ist zu kurz!</p>',
         err_nostring   : '<p><em>Please enter string to search for.</em></p>',
         err_noresult   : '<p><em>No Results.</em></p>',
-        err_norequest  : '<p style="text-align: center; color:red;">Die Volltextsuche steht zur Zeit nicht zurVerfügung.</p>',
-        err_filefailed : '<p style="text-align: center;color: red;">Eine Datei konnte nicht abgerufen werden.</p>',
+        err_norequest  : '<p style="text-align: center; color:red;">The full context search is currently not available.</p>',
+        err_filefailed : '<p style="text-align: center;color: red;">A file could not be loaded.</p>',
         res_one_item   : '<p><em>[CNT] Result</em></p>',
         res_more_items : '<p><em>[CNT] Results</em></p>',
         res_out_top    : '<p>',

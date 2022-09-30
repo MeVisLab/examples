@@ -104,16 +104,16 @@
       }
     // CUSTOM AREA
     let params = {
-        json_src       : '/index.json', // for multiple sources: comma separated list of JSONarrays
+        json_src       : "{{ .Site.BaseURL }}/index.json", // for multiple sources: comma separated list of JSONarrays
         minlength      : 3,
         defaultsearch  : 'AND',
         sort_date      : 'DESC',
         autocomplete   : 1, // 0: form needs a submit button
         section_search : 0, // 1: needs checkboxes with name="section[]"
-        badwords       : 'und,oder,aber,wenn,also,der,die,das,den,dem,des,ein,eines,einer', //ignore this words
+        badwords       : 'and,or,but,if,when,the,a,an,one', //ignore this words
         json_wait      : '<p><em>Searching...</em></p>',
         json_ready     : '',
-        extern_icon    : ' (externer Link)', // marker for external links (optional)
+        extern_icon    : ' (external Link)', // marker for external links (optional)
         err_badstring  : '',
         err_noresult   : '<p><em>NO RESULTS</em></p>',
         err_norequest  : '',
