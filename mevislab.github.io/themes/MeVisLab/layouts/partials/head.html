@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#1A94D2" />
 
+    <base href="{{ .Site.BaseURL }}">
+    
     {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
 
     {{ $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}

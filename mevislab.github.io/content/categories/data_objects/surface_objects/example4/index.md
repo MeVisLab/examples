@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Surface Example 4: Interactively moving WEM"
+categories: TUTORIAL ADVANCED
+---
+
+# Surface Example 4: Interactively moving WEM
+This example shows how to use dragger modules, to modify objects in a 3D viewer.
+![Screenshot](/categories/data_objects/surface_objects/example4/image.png)
+
+# Download
+You can download the example network [here](/categories/data_objects/surface_objects/example4/SurfaceExample4.zip)

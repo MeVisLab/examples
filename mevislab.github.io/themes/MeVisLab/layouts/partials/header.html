@@ -72,7 +72,7 @@
           {{ else }}
           <li class="nav-item">
             <a class='nav-link {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active {{ end }}'
-              href="{{ absURL .URL }}">
+              href="{{ relURL .URL }}">
                {{ .Title }}
             </a>
           </li>

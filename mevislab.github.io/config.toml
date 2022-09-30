@@ -3,7 +3,8 @@ BaseURL = "/"
 languageCode = "en-us"
 title = "MeVisLab Examples"
 theme = "MeVisLab"
-relativeURLS = false
+relativeURLs = false
+canonifyURLs = true
 sectionPagesMenu = "main"
 
 [markup]
