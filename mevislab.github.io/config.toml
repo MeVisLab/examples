@@ -60,6 +60,18 @@ sectionPagesMenu = "main"
     weight = 200
 
 [[menu.main]]
+    identifier = "tutorials"
+    title = "Tutorials"
+    url = "/tutorials/"
+    weight = 300
+
+[[menu.main]]
+    identifier = "examples"
+    title = "Examples"
+    url = "/examples/"
+    weight = 600
+
+[[menu.main]]
     identifier = "contact"
     title = "Contact"
     url = "/contact/"

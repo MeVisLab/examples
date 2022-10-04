@@ -34,6 +34,6 @@ More Information about Open Inventor and Scene Graphs can be found {{< docuLinks
 {{</alert>}}
 
 ## Examples:
-1. [Open Inventor Objects](./openinventorobjects)
-2. [Mouse Interactions in Open Inventor](./mouseinteractions)
-3. [Camera Interactions](./camera)
+1. [Open Inventor Objects](./tutorials/openinventor/openinventorobjects)
+2. [Mouse Interactions in Open Inventor](./tutorials/openinventor/mouseinteractions)
+3. [Camera Interactions](./tutorials/openinventor/camera)
