@@ -5,7 +5,7 @@ draft: false
 status: "OK"
 menu: 
   main:
-    identifier: "macromodules"
+    identifier: "macro_modules"
     title: "Examples for Creating Macro Modules, adding User Interfaces and Python scripting."
     weight: 370
     parent: "basicmechanisms"
@@ -15,7 +15,7 @@ menu:
 
 ## Macro Modules and Module Interactions via User Interface and Python Scripting
 
-MeVisLab provides different types of modules, which can be distinguished by their color. The brown modules are called macro modules. Macro modules condense a whole network into one module. You can open the internal network by pressing the middle mouse button {{< mousebutton "middle" >}} or via right mouse click {{< mousebutton "right" >}} and select {{< menuitem "Help" "Show Example Network" >}}. Macro modules provide the possibility to create customized user interfaces and and python interactions.
+MeVisLab provides different types of modules, which can be distinguished by their color. The brown modules are called macro modules. Macro modules condense a whole network into one module. You can open the internal network by pressing the middle mouse button {{< mousebutton "middle" >}} or via right mouse click {{< mousebutton "right" >}} and select {{< menuitem "Help" "Show Internal Network" >}}. Macro modules provide the possibility to create customized user interfaces and and python interactions.
 
 In [Chapter I - Basic Mechanics](./tutorials/basicmechanisms) we built a
 contour filter and condensed all the modules into one local macro module.

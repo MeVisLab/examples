@@ -8,7 +8,7 @@ menu:
     identifier: "globalmacromodules"
     title: "Creation of Global Macro Modules from local Macro and via Project Wizard"
     weight: 390
-    parent: "macromodules"
+    parent: "macro_modules"
 ---
 
 # Global Macro Modules

@@ -8,7 +8,7 @@ menu:
     identifier: "packageCreation"
     title: "Creation of packages necessary for Macro Modules."
     weight: 380
-    parent: "macromodules"
+    parent: "macro_modules"
 ---
 
 

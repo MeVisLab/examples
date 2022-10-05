@@ -6,7 +6,7 @@ status: "open"
 tags: ["Examples", "Example Networks"]
 menu: 
   main:
-    identifier: "intro"
+    identifier: "examples"
     title: "Examples"
     weight: 600
 ---

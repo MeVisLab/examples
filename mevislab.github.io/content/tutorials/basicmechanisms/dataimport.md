@@ -5,7 +5,7 @@ status: "open"
 draft: false
 menu: 
   main:
-    identifier: "dataimport"
+    identifier: "data_import"
     title: "How to import several data formats into MeVisLab like DICOM, Contours, Surface Objects or 3D Scenes."
     weight: 360
     parent: "basicmechanisms"
@@ -43,18 +43,18 @@ The `ImageLoad` module can import the following formats:
 Basic information of the imported images are available on the Panel which opens via double click.
 
 ## DICOM data {#DICOMImport}
-Even if above explained `ImageLoad` is able to import DICOM data, a much better way is to use one of the specialized modules for DICOM images such as `DicomImport`.
+Even if the above explained `ImageLoad` is able to import DICOM data, a much better way is to use one of the specialized modules for DICOM images such as `DicomImport`.
 
 The `DicomImport` module allows to define a directory containing DICOM files to import as well as a list of files which can be dropped to the UI and imported. After import, the volumes are shown in a patient tree providing the following patient, study, series and volume information (depending on the availability in the DICOM file(s)):
 
 * **PATIENT LEVEL** Patient Name (0010,0010) - Patient Birthdate (0010,0030)
   * **STUDY LEVEL** Study Date (0008,0020) - Study Description (0008,1030)
-    * **SERIES LEVEL** Modality (0008,0060) - Series Description (0008,103e) - Rows (0028,0010) - Columns (0028,0011) - number of slices in volume - number of timepoints in volume
+    * **SERIES/VOLUME LEVEL** Modality (0008,0060) - Series Description (0008,103e) - Rows (0028,0010) - Columns (0028,0011) - number of slices in volume - number of timepoints in volume
 
 ![DicomImport Module](/images/DicomImport.png "DicomImport Module")
 
 ### Configuration
-The `DicomImport` module generates volumes based on the **Dicom Processor Library (DPL)** which allows to define sorting and parting options.
+The `DicomImport` module generates volumes based on the **Dicom Processor Library (DPL)** which allows to define sorting and partitioning options.
 
 ![DicomImport Sort Part Configuration](/images/DicomImportSortPart.png "DicomImport Sort Part Configuration")
 
