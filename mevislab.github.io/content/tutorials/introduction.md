@@ -8,7 +8,7 @@ menu:
   main:
     identifier: "tutorial_introduction"
     title: "Overview of MeVisLab Tutorials and general information about User Interface, Modules, types of Modules, searching for Modules and Glossary including filetypes."
-    weight: 300
+    weight: 310
     parent: "tutorials"
 ---
 
