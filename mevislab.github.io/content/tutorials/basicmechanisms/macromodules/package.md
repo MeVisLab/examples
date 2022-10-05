@@ -29,7 +29,7 @@ Macro modules and projects are stored in packages. If you like to create a globa
 ## Steps to do
 To create packages and package groups, we will use the Project Wizard. Open the Project Wizard via {{< menuitem "File" "Run Project Wizard ..." >}}. Then, select {{< menuitem "Package" "New Package" >}} and *Run Wizard*.
 
-![The Project Wizard](/images/GUI_01.png "The Project Wizard")
+![The Project Wizard](/images/tutorials/basicmechanics/GUI_01.png "The Project Wizard")
 
 Next you need to:
 
@@ -47,7 +47,7 @@ desired directory. The folder of your package group contains the folder
 of your package. We have now successfully created a package in which we can store our
 global macro module.
 
-![Package creation](/images/GUI_02.png "Package creation")
+![Package creation](/images/tutorials/basicmechanics/GUI_02.png "Package creation")
 
 ## Summary
 * Packages are needed to store global macro modules and projects.

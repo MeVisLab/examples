@@ -26,7 +26,7 @@ More detailed explanations for loading images in MeVisLab can be found {{< docuL
 
 ## Images {#ImageImport}
 A very simple module for loading images is the `ImageLoad` module.
-![ImageLoad Module](/images/ImageLoad.png "ImageLoad Module")
+![ImageLoad Module](/images/tutorials/basicmechanics/ImageLoad.png "ImageLoad Module")
 
 The `ImageLoad` module can import the following formats:
 * DICOM
@@ -51,17 +51,17 @@ The `DicomImport` module allows to define a directory containing DICOM files to 
   * **STUDY LEVEL** Study Date (0008,0020) - Study Description (0008,1030)
     * **SERIES/VOLUME LEVEL** Modality (0008,0060) - Series Description (0008,103e) - Rows (0028,0010) - Columns (0028,0011) - number of slices in volume - number of timepoints in volume
 
-![DicomImport Module](/images/DicomImport.png "DicomImport Module")
+![DicomImport Module](/images/tutorials/basicmechanics/DicomImport.png "DicomImport Module")
 
 ### Configuration
 The `DicomImport` module generates volumes based on the **Dicom Processor Library (DPL)** which allows to define sorting and partitioning options.
 
-![DicomImport Sort Part Configuration](/images/DicomImportSortPart.png "DicomImport Sort Part Configuration")
+![DicomImport Sort Part Configuration](/images/tutorials/basicmechanics/DicomImportSortPart.png "DicomImport Sort Part Configuration")
 
 ### DicomTree information
 In order to get all DICOM tags from your currently imported and selected volume, you can connect the `DicomImport` module to a `DicomTagBrowser`.
 
-![DicomTagBrowser Module](/images/DicomTagBrowser.png "DicomTagBrowser Module")
+![DicomTagBrowser Module](/images/tutorials/basicmechanics/DicomTagBrowser.png "DicomTagBrowser Module")
 
 ### Additional options
 It is also possible to access files and filenames via Python scripting. Use the Module `RunPythonScript` to execute.
@@ -116,13 +116,13 @@ The module `WEMLoad` loads different 3D mesh file formats like:
 * VRML (*.wrl)
 * Winged Edge Mesh (*.wem)
 
-![WEMLoad Module](/images/WEMLoad.png "WEMLoad Module")
+![WEMLoad Module](/images/tutorials/basicmechanics/WEMLoad.png "WEMLoad Module")
 
 WEMs can be rendered via Open Inventor by using the modules `SoExaminerViewer` or `SoRenderArea` and `SoCameraInteraction`.
 
 Before visualizing a WEM, it needs to be converted to a Scene Object via `SoWEMRenderer`.
 
-![SoWEMRenderer Module](/images/SoWEMRenderer.png "SoWEMRenderer Module")
+![SoWEMRenderer Module](/images/tutorials/basicmechanics/SoWEMRenderer.png "SoWEMRenderer Module")
 
 {{<alert class="info" caption="Extra Infos">}}
 Tutorials for WEMs are available [here](../../dataobjects/surfaces/surfaceobjects).
@@ -135,7 +135,7 @@ The `SoSceneLoader` module is able to load external 3D formats. MeVisLab uses th
 Supported file formats of the assimp library are documented on their [website](https://github.com/assimp/assimp/blob/master/doc/Fileformats.md).
 {{</alert>}}
 
-![SoSceneLoader Module](/images/SoSceneLoader.png "SoSceneLoader Module")
+![SoSceneLoader Module](/images/tutorials/basicmechanics/SoSceneLoader.png "SoSceneLoader Module")
 
 The `SoSceneLoader` module generates a 3D scene from your loaded files which can be rendered via `SoExaminerViewer` or `SoRenderArea` and `SoCameraInteraction`.
 

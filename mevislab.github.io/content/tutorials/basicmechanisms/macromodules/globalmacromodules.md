@@ -24,7 +24,7 @@ In this chapter you will learn how to create global macro modules. There are man
 To transform our local macro module `Filter` from [Chapter I](../basicmechanisms) into a global macro module,
 right-click {{< mousebutton "right" >}} the macro module to open the context menu and select {{< menuitem "Extras" "Convert To Global Module..." >}}
 
-![Convert local macro to global macro](/images/GUI_03.png "Convert local macro to global macro")
+![Convert local macro to global macro](/images/tutorials/basicmechanics/GUI_03.png "Convert local macro to global macro")
 
 ### Define module properties
 
@@ -49,7 +49,7 @@ right-click {{< mousebutton "right" >}} the macro module to open the context men
 Make sure to chose *Directory Structure* as *self-contained*. This makes sure that all files of your module are stored in a single directory.
 {{</alert>}}
 
-![Create global macro module](/images/GUI_04.png "Create global macro module")
+![Create global macro module](/images/tutorials/basicmechanics/GUI_04.png "Create global macro module")
 
 ### Use the Project Wizard to create global macro modules
 Instead of converting a local macro module into a global macro module, you can also use the *Project Wizard* to create new macro modules. Open the Project Wizard via {{< menuitem "File" "Run Project Wizard ..." >}}. Then, select {{< menuitem "Modules (Scripting)" "Macro Module" >}} and *Run Wizard*.
@@ -89,19 +89,19 @@ In addition, two folders may be created:
 * *mhelp*: contains the help files of all modules of this project
 * *network*: contains the example networks of all modules of this project
 
-![Structure of global macro modules](/images/GUI_04_2.png "Structure of global macro modules")
+![Structure of global macro modules](/images/tutorials/basicmechanics/GUI_04_2.png "Structure of global macro modules")
 
 ## How to find global macro modules
 All available modules are categorized and can be found via {{< menuitem "Modules" >}} in
 the respective genre. After creating a global
 macro, the new module can be found via {{< menuitem "Modules" "Filters" >}}. In addition, you can now find your macro module via module search.
 
-![Find module in menu](/images/GUI_05.png "Find module in menu")
+![Find module in menu](/images/tutorials/basicmechanics/GUI_05.png "Find module in menu")
 
 
 {{<alert class="info" caption="Hint">}}
 If you do not find your new global macro module, try to reload the module database.
-![Reload module database](/images/GUI_05_2.png "Reload module database")
+![Reload module database](/images/tutorials/basicmechanics/GUI_05_2.png "Reload module database")
 {{</alert>}}
 
 ## Summary

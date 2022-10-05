@@ -25,7 +25,7 @@ Inventor scenes are organized in structures called scene graphs. A scene graph i
 {{<alert class="info" caption="Open Inventor Scenes">}}
 The following shows the order in which the modules are executed. The red arrow shows the order of traversal, from top to bottom and left to right. The numbers designate the order in which each module is passed first, from 1 to 8. As shown in the example before, the order of transversal is important.
 
-![Traversing in Open Inventor](/images/OI1_13.png "Traversing in Open Inventor")
+![Traversing in Open Inventor](/images/tutorials/openinventor/OI1_13.png "Traversing in Open Inventor")
 
 {{</alert>}}
 
