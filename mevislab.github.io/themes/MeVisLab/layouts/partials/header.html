@@ -46,9 +46,22 @@
                       <a class="dropdown-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">{{ .Name }} &raquo;</a>
                       <ul class="dropdown-menu dropdown-submenu">
                       {{ range .Children }}
-                        <li>
-                          <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
-                        </li>
+                      {{ if .HasChildren }}
+                      <li>
+                        <a class="dropdown-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">{{ .Name }} &raquo;</a>
+                        <ul class="dropdown-menu dropdown-submenu">
+                        {{ range .Children }}
+                          <li>
+                            <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
+                          </li>
+                        {{ end }}
+                        </ul>
+                      </li>
+                      {{ else }}
+                      <li>
+                        <a class="dropdown-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+                      </li>
+                      {{ end }}
                       {{ end }}
                       </ul>
                     </li>

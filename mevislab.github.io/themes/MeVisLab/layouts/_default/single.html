@@ -6,6 +6,22 @@
     <div class="row vh-auto overflow-auto">
       <div class="col d-flex flwx-column h-sm-auto">
           <div class="col px-6">
+      {{- with .Params.tags -}}
+        {{- if ge (len .) 1 -}}
+            {{- range . -}}
+              {{ if eq . "Beginner" }}
+            <a href="#" title="{{ . }}"><span class="badge bg-success">{{ . }}</span></a>
+              {{ else if eq . "Advanced" }}
+              <a href="#" title="{{ . }}"><span class="badge bg-warning">{{ . }}</span></a>
+              {{ else if eq . "Expert" }}
+              <a href="#" title="{{ . }}"><span class="badge bg-danger">{{ . }}</span></a>
+              {{ else }}
+              <a href="#" title="{{ . }}"><span class="badge bg-secondary">{{ . }}</span></a>
+              {{ end }}
+
+            {{ end -}}
+        {{- end -}}
+    {{- end -}}
     {{ .Content }}
           </div>
       </div>
