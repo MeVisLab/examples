@@ -1,8 +1,9 @@
 ---
 title: "Example 2.1: Package Creation"
 date: 2022-06-15T08:58:44+02:00
-draft: false
 status: "OK"
+draft: false
+tags: ["Beginner", "Tutorial", "Package"]
 menu: 
   main:
     identifier: "packageCreation"

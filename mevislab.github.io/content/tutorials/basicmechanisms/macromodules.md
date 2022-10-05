@@ -3,6 +3,7 @@ title: "Example 2: Macro Modules and Module Interaction"
 date: 2022-06-15T08:58:44+02:00
 draft: false
 status: "OK"
+tags: ["Beginner", "Tutorial", "Macro", "Macro Modules"]
 menu: 
   main:
     identifier: "macro_modules"

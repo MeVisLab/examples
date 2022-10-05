@@ -1,8 +1,9 @@
 ---
 title: "Chapter II: Open Inventor"
 date: 2022-06-15T08:56:33+02:00
-draft: false
 status: "open"
+draft: false
+tags: ["Beginner", "Tutorial", "Open Inventor", "3D"]
 menu: 
   main:
     identifier: "openinventor"
@@ -34,6 +35,6 @@ More Information about Open Inventor and Scene Graphs can be found {{< docuLinks
 {{</alert>}}
 
 ## Examples:
-1. [Open Inventor Objects](./openinventorobjects)
-2. [Mouse Interactions in Open Inventor](./mouseinteractions)
-3. [Camera Interactions](./camera)
+1. [Open Inventor Objects](./tutorials/openinventor/openinventorobjects)
+2. [Mouse Interactions in Open Inventor](./tutorials/openinventor/mouseinteractions)
+3. [Camera Interactions](./tutorials/openinventor/camera)

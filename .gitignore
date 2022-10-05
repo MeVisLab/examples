@@ -2,3 +2,4 @@
 /mevislab.github.io/node_modules/*
 
 /mevislab.github.io/public/*
+*.content
