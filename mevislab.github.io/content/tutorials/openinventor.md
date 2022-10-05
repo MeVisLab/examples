@@ -1,8 +1,9 @@
 ---
 title: "Chapter II: Open Inventor"
 date: 2022-06-15T08:56:33+02:00
-draft: false
 status: "open"
+draft: false
+tags: ["Beginner", "Tutorial", "Open Inventor", "3D"]
 menu: 
   main:
     identifier: "openinventor"

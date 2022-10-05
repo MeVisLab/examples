@@ -1,8 +1,9 @@
 ---
 title: "Example 2.2: Creation of Global Macro Modules"
 date: 2022-06-15T08:58:44+02:00
-draft: false
 status: "OK"
+draft: false
+tags: ["Beginner", "Tutorial", "Macro", "Macro Modules", "Global Macro"]
 menu: 
   main:
     identifier: "globalmacromodules"

@@ -3,6 +3,7 @@ title: "Open Inventor"
 date: 2022-06-15T08:56:33+02:00
 draft: false
 status: "OK"
+tags: ["Examples", "Example Networks"]
 menu: 
   main:
     identifier: "open_inventor_examples"
@@ -11,6 +12,6 @@ menu:
 ---
 
 ## Open Inventor Examples:
-[Open Inventor objects](/categories/open_inventor/example1/)  
-[Mouse interactions in an Open Inventor scene](/categories/open_inventor/example2/)  
+[Open Inventor objects](/examples/open_inventor/example1/)  
+[Mouse interactions in an Open Inventor scene](/examples/open_inventor/example2/)  
 

@@ -3,6 +3,7 @@ title: "Data Objects"
 date: 2022-06-15T08:56:33+02:00
 draft: false
 status: "OK"
+tags: ["Examples", "Example Networks"]
 menu: 
   main:
     identifier: "data_objects"
@@ -11,14 +12,14 @@ menu:
 ---
 
 ## Data Object Examples:
-[Creation of Contours](/categories/data_objects/contours/example1/)  
-[Contour interpolation](/categories/data_objects/contours/example2/)  
-[2D and 3D visualization of contours](/categories/data_objects/contours/example3/)  
-[Annotation of images](/categories/data_objects/contours/example4/)  
-[Contours and ghosting](/categories/data_objects/contours/example5/)  
-[Distance between markers](/categories/data_objects/markers/example1/)  
-[Creation of WEMs](/categories/data_objects/surface_objects/example1/)  
-[Processing and modification of WEMs](/categories/data_objects/surface_objects/example2/)  
-[Interactively moving WEM](/categories/data_objects/surface_objects/example4/)  
-[WEM - Primitive Value Lists](/categories/data_objects/surface_objects/example5/)  
+[Creation of Contours](/examples/data_objects/contours/example1/)  
+[Contour interpolation](/examples/data_objects/contours/example2/)  
+[2D and 3D visualization of contours](/examples/data_objects/contours/example3/)  
+[Annotation of images](/examples/data_objects/contours/example4/)  
+[Contours and ghosting](/examples/data_objects/contours/example5/)  
+[Distance between markers](/examples/data_objects/markers/example1/)  
+[Creation of WEMs](/examples/data_objects/surface_objects/example1/)  
+[Processing and modification of WEMs](/examples/data_objects/surface_objects/example2/)  
+[Interactively moving WEM](/examples/data_objects/surface_objects/example4/)  
+[WEM - Primitive Value Lists](/examples/data_objects/surface_objects/example5/)  
 
