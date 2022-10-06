@@ -16,10 +16,10 @@ menu:
 MeVisLab provides several pre-defined modules to import data for processing in your networks.
 
 This chapter explains the basic data formats and modules to use in your network:
-* [Images](#ImageImport)
-* [DICOM Data](#DICOMImport)
-* [Segmentations / 2D Contours](#2DContours)
-* [3D Data / Meshes](#3DMeshes)
+* [Images](/tutorials/basicmechanisms/dataimport#ImageImport)
+* [DICOM Data](/tutorials/basicmechanisms/dataimport#DICOMImport)
+* [Segmentations / 2D Contours](/tutorials/basicmechanisms/dataimport#2DContours)
+* [3D Data / Meshes](/tutorials/basicmechanisms/dataimport#3DMeshes)
 
 {{<alert class="info" caption="Extra Infos">}}
 More detailed explanations for loading images in MeVisLab can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch03.html" "here" >}}
@@ -141,5 +141,5 @@ Supported file formats of the assimp library are documented on their [website](h
 The `SoSceneLoader` module generates a 3D scene from your loaded files which can be rendered via `SoExaminerViewer` or `SoRenderArea` and `SoCameraInteraction`.
 
 {{<alert class="info" caption="Extra Infos">}}
-Example usage is explained in the tutorials for [Open Inventor](../../openinventor).
+Example usage is explained in the tutorials for [Open Inventor](/tutorials/openinventor).
 {{</alert>}}

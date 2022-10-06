@@ -116,10 +116,10 @@ Here a list of the most important file types:
 | --- | --- |
 | `.mlab` | Network file, includes all information about the network\'s modules, their settings, their connections, and module groups. Networks developed by using the `MeVisLab SDK`are stored as `.mlab` file and can only be opened having a valid SDK license. |
 | `.def` | Module definition file, necessary for a module to be added to the common MeVisLab module database. May also include all MDL script parts (if they are not sourced out to the `.script` file). |
-| `.script` | `MDL` script file, typically includes the user interface definition for panels. See [Chapter GUI Development](./tutorials/macromodules/guidesign#Example_Paneldesign "GUI Development") for an example on GUI programming. |
+| `.script` | `MDL` script file, typically includes the user interface definition for panels. See [Chapter GUI Development](./tutorials/basicmechanisms/macromodules/guidesign#Example_Paneldesign "GUI Development") for an example on GUI programming. |
 | `.mlimage` | MeVisLab internal image format for 6D images saved with all DICOM tags, lossless compression, and in all data types. |
-| `.mhelp` | File with descriptions of all fields and the use of a module, edit- and creatable by using `MATE`. See [Help files](./tutorials/macromodules/helpfiles "Help files") for details. |
-| `.py` | Python file, used for scripting in macro modules. See [Python scripting](./tutorials/macromodules/pythonscripting#TutorialPythonScripting "Python scripting") for an example on macro programming. |
+| `.mhelp` | File with descriptions of all fields and the use of a module, edit- and creatable by using `MATE`. See [Help files](./tutorials/basicmechanisms/macromodules/helpfiles "Help files") for details. |
+| `.py` | Python file, used for scripting in macro modules. See [Python scripting](./tutorials/basicmechanisms/macromodules/pythonscripting#TutorialPythonScripting "Python scripting") for an example on macro programming. |
 | `.dcm` | DCM part of the imported DICOM file, see [Importing DICOM Data](./tutorials/basicmechanisms/dataimport#DICOMImport "Importing DICOM Data"). |
 
 ### Types of Modules {#Module_Types}
@@ -171,14 +171,14 @@ Besides connecting connectors, basically any field of modules can be connected t
 Some modules contain hidden connectors in addition to the ones you can see when adding a module to the workspace. Click on the workspace and press {{< keyboard "SPACE" >}} to see the hidden connectors as well as the internal networks of each module. You can now use the hidden connectors for building connections.
 
 {{<alert class="info" caption="Extra Infos">}}
-For more information about connecter and connection types click {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s03.html" "here" >}}
+For more information about connector and connection types click {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s03.html" "here" >}}
 For more information about connecting, disconnecting, moving, and replacing connections click {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s04.html" "here" >}}
 {{</alert>}}
 
 ### Macro Modules {#Macro_Modules}
 
 {{<alert class="info" caption="More Information">}}
-More information about creating Macro Modules is available in [MeVisLab Tutorial Chapter VI](/tutorials/macromodules/macromodules) 
+More information about creating Macro Modules is available in [Tutorial Chapter I - Example 2.2](/tutorials/basicmechanisms/macromodules/globalmacromodules) 
 {{</alert>}}
 ### Searching and Adding Modules {#Searching_and_Adding_Modules}
 
@@ -205,7 +205,7 @@ text editor).
 {{<alert class="info" caption="Note">}}
 For a module to get listed, it has to be available in the SDK distribution or in your user-defined packages. If in doubt or missing something, check out the loaded packages in the Preferences.
 
-For details on packages, see [Package Creation](../macromodules/package/).
+For details on packages, see [Package Creation](/tutorials//basicmechanisms/macromodules/package/).
 {{</alert>}}
 
 Usually the quickest way to add modules to a network is the quick search in the menu bar. It offers you the possibility to search for modules by module name. By default, the search will also be extended to keywords and substrings and is case-insensitive. To change these settings, click the magnifier button for the search options.
