@@ -58,3 +58,5 @@ The `SoView2DOverlay` module is explained {{< docuLinks "/Standard/Documentation
 {{<alert class="warning" caption="Warning">}}
 The `SoView2DOverlay` module is not intended to work with `OrthoView2D`; in this case, use a `GVROrthoOverlay`.
 {{</alert>}}
+
+{{< networkfile "examples/visualization/example3/" >}}

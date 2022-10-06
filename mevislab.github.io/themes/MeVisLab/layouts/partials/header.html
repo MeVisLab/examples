@@ -20,27 +20,26 @@
 </div>
 
 <div class="my-header-menu d-flex justify-content-center">
-  <nav class="navbar navbar-expand">
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <ul class="navbar-nav">
-        {{ $currentPage := . }}
+  <nav class="navbar navbar-dark navbar-expand-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <ul class="navbar-nav">
+          {{ $currentPage := . }}
 
-        {{ range .Site.Menus.main.ByWeight }}
+          {{ range .Site.Menus.main.ByWeight }}
 
-          {{ if .HasChildren }}
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="#"
-                id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                 {{ .Title }}
-              </a>
-           
-               <ul class="dropdown-menu">
-                {{ range .Children }}
-                  {{ if .HasChildren }}
-                  <li>
-                    <a class="dropdown-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">{{ .Name }} &raquo;</a>
-                    <ul class="dropdown-menu dropdown-submenu">
-                    {{ range .Children }}
+            {{ if .HasChildren }}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="#"
+                  id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{ .Title }}
+                </a>
+            
+                <ul class="dropdown-menu">
+                  {{ range .Children }}
                     {{ if .HasChildren }}
                     <li>
                       <a class="dropdown-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">{{ .Name }} &raquo;</a>
@@ -51,9 +50,22 @@
                         <a class="dropdown-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">{{ .Name }} &raquo;</a>
                         <ul class="dropdown-menu dropdown-submenu">
                         {{ range .Children }}
-                          <li>
-                            <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
-                          </li>
+                        {{ if .HasChildren }}
+                        <li>
+                          <a class="dropdown-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">{{ .Name }} &raquo;</a>
+                          <ul class="dropdown-menu dropdown-submenu">
+                          {{ range .Children }}
+                            <li>
+                              <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
+                            </li>
+                          {{ end }}
+                          </ul>
+                        </li>
+                        {{ else }}
+                        <li>
+                          <a class="dropdown-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+                        </li>
+                        {{ end }}
                         {{ end }}
                         </ul>
                       </li>
@@ -70,35 +82,29 @@
                       <a class="dropdown-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
                     </li>
                     {{ end }}
-                    {{ end }}
-                    </ul>
-                  </li>
-                  {{ else }}
-                  <li>
-                    <a class="dropdown-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
-                  </li>
                   {{ end }}
-                {{ end }}
-              </ul> 
+                </ul> 
+              </li>
+          
+            {{ else }}
+            <li class="nav-item">
+              <a class='nav-link {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active {{ end }}'
+                href="{{ relURL .URL }}">
+                {{ .Title }}
+              </a>
             </li>
-        
-          {{ else }}
-          <li class="nav-item">
-            <a class='nav-link {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active {{ end }}'
-              href="{{ relURL .URL }}">
-               {{ .Title }}
-            </a>
-          </li>
-          {{ end }}
+            {{ end }}
 
-        {{ end }}
-      
-      </ul>
-      <form class="d-flex px-4" id="custom-search" name="custom-search" method="post">
-        <input id="custom-search-field" name="search" value="" title="Search String" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button id="search_submit" class="btn btn-outline-light" type="submit">Search</button>
-      </form>
+          {{ end }}
+        
+        </ul>
+        <form class="d-flex px-4" id="custom-search" name="custom-search" method="post">
+          <input id="custom-search-field" name="search" value="" title="Search String" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button id="search_submit" class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+      </div>
     </div>
+    
     <div class="autocomplete-dropdown-container" id="custom-search-results" data-popper-placement="bottom" style="width: 100px; position: absolute; inset: 0px 0px auto 0px; margin-left: 4px; transform: translate3d(400px, 60px, 0px);">
       <div class="dropdown-menu dropdown-submenu">
       </div>

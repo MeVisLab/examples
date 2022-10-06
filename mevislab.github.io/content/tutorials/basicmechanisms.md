@@ -223,3 +223,5 @@ More information about Marco Modules can be found {{< docuLinks "/Resources/Docu
 * Parameter connections can be established to synchronize the values of these parameters.
 * Modules can be grouped. Grouped Modules can be encapsulated to Macro Modules.
 * Macro Modules encapsulate networks. Internal networks can be shown and modified. Any changes of the internal network are applied to the Macro Module.
+
+{{< networkfile "examples/basic_mechanisms/contour_filter/" >}}

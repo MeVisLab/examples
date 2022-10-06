@@ -78,7 +78,7 @@ Make sure to chose *Directory Structure* as *self-contained*. This makes sure th
  
  Press *Next >* to edit further properties. You have the opportunity to directly define the internal network of the macro module, for example by copying an existing network. In this case, we could copy the network of the local macro module `Filter` we already created. In addition, you have the opportunity to directly create a Python file. Python scripting can be used for the implementation of module interactions and other module functionalities. More information about Python scripting can be found [here](../pythonscripting/).
 
-{{< imagegallery 2 "ProjectWizard1" "ProjectWizard2" >}}
+{{< imagegallery 2 "/images" "ProjectWizard1" "ProjectWizard2" >}}
 
 ## Structure of global macro modules
 After creating your global macro module, you can find the created project *MyProject* in your package. This project contains your macro module `Filter`. For the macro module exist three files:

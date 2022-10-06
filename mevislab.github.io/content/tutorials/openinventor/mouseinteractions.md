@@ -52,3 +52,5 @@ If you now press the right mouse key {{< mousebutton "right" >}} inside the View
 ## Summary
 * The module `SoExaminerViewer` enables the rendering of Open Inventor scenes and allows interactions with the Open Inventor scenes.
 * Mouse interactions can be applied to the objects in the scene.
+
+{{< networkfile "examples/open_inventor/example2/" >}}

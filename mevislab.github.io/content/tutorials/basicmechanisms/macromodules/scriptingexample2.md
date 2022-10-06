@@ -337,3 +337,5 @@ TabViewItem Settings {
 * The tag *WindowActivationCommand* of the control Window triggers Python functions executed when opening the panel.
 * Field listeners can be used to activate Python functions triggered by a change of defined parameter fields.
 * Use the view *Scripting Assistant* can be used to translate actions into Python code.
+
+{{< networkfile "examples/basic_mechanisms/macro_modules_and_module_interaction/example2/" >}}
