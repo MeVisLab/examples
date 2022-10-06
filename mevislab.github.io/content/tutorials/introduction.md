@@ -85,7 +85,7 @@ information and links are provided in colored boxes.
 
 First, start MeVisLab IDE. After the Welcome Screen, the standard user interface opens.
 
-![MeVisLab IDE User Interface](/images/IDE1.png "MeVisLab IDE User Interface")
+![MeVisLab IDE User Interface](/images/tutorials/introduction/IDE1.png "MeVisLab IDE User Interface")
 
 #### Workspace
 
@@ -133,17 +133,17 @@ distinguished by their colors:
 
 | <div style="width:230px">Type</div> | <div style="width:430px">Look</div> | Characteristics |
 | --- | --- | --- |
-| ML Module (blue) | ![ML Module](/images/MLMModuleML.png "ML Module") | Page-based, demand-driven processing of voxels |
-| Open Inventor Module (green) | ![Open Inventor Module](/images/MLMModuleSo.png "Open Inventor Module") | Visual scene graphs (3D); naming convention: all modules starting with *So* (for **s**cene **o**bject) |
-| Macro Module (brown) | ![Macro Module](/images/MLMModuleMacro.png "Macro Module") | Combination of other module types, allowing implementing hierarchies and scripted interaction |
+| ML Module (blue) | ![ML Module](/images/tutorials/introduction/MLMModuleML.png "ML Module") | Page-based, demand-driven processing of voxels |
+| Open Inventor Module (green) | ![Open Inventor Module](/images/tutorials/introduction/MLMModuleSo.png "Open Inventor Module") | Visual scene graphs (3D); naming convention: all modules starting with *So* (for **s**cene **o**bject) |
+| Macro Module (brown) | ![Macro Module](/images/tutorials/introduction/MLMModuleMacro.png "Macro Module") | Combination of other module types, allowing implementing hierarchies and scripted interaction |
 
 If a module is invalid, it is displayed in bright red. This might happen if the module itself is not available on your system.
 
 
 | <div style="width:330px">Appearance</div> | Explanation |
 | --- | --- |
-| ![Invalid Module](/images/MLMModuleStateInvalid.png "Invalid Module") | Invalid module |
-  ![Macro State Invalid](/images/MLMModuleStateMacroInvalidModule.png "Macro State Invalid") | Macro containing an invalid module |
+| ![Invalid Module](/images/tutorials/introduction/MLMModuleStateInvalid.png "Invalid Module") | Invalid module |
+  ![Macro State Invalid](/images/tutorials/introduction/MLMModuleStateMacroInvalidModule.png "Macro State Invalid") | Macro containing an invalid module |
 
 The number of warning and error messages that are being printed to the
 debug console are listed at the upper right corner of the module. Once
@@ -160,9 +160,9 @@ In MeVisLab, three types of connectors are defined.
 
 | <div style="width:330px">Look</div> | <div style="width:130px">Appearance</div> | Definition |
 | --- | --- | --- |
-| ![Triangle](/images/MLMConnectorTriangle.png "Triangle - ML Image") | triangle | ML images |
-| ![Circle](/images/MLMConnectorHalfCircle.png "Circle - Inventor Scene") | half-circle | Inventor scene |
-| ![Square](/images/MLMConnectorSquare.png "Square - Base Object") | square | Base objects: pointers to data structures |
+| ![Triangle](/images/tutorials/introduction/MLMConnectorTriangle.png "Triangle - ML Image") | triangle | ML images |
+| ![Circle](/images/tutorials/introduction/MLMConnectorHalfCircle.png "Circle - Inventor Scene") | half-circle | Inventor scene |
+| ![Square](/images/tutorials/introduction/MLMConnectorSquare.png "Square - Base Object") | square | Base objects: pointers to data structures |
 
 By connecting these connectors and therefore establishing a so-called data connection, image data, or Open Inventor information is transported from one module to one or more others.
 
@@ -195,7 +195,7 @@ name, as given in the file `Genre.def`.
 
 Therefore, both places are a good starting point when in need of a specific function, like an image load module.
 
-![Modules Menu and Module Browser](/images/GSExampleNetworkViewImage01c.png "Modules Menu and Module Browser")
+![Modules Menu and Module Browser](/images/tutorials/introduction/GSExampleNetworkViewImage01c.png "Modules Menu and Module Browser")
 
 The advantage of the Module Browser is that you can right-click {{< mousebutton "right" >}} the
 entries, open the context menu and, for example, open the help (in your
@@ -205,7 +205,7 @@ text editor).
 {{<alert class="info" caption="Note">}}
 For a module to get listed, it has to be available in the SDK distribution or in your user-defined packages. If in doubt or missing something, check out the loaded packages in the Preferences.
 
-For details on packages, see [Package Creation](/tutorials//basicmechanisms/macromodules/package/).
+For details on packages, see [Package Creation](/tutorials/basicmechanisms/macromodules/package/).
 {{</alert>}}
 
 Usually the quickest way to add modules to a network is the quick search in the menu bar. It offers you the possibility to search for modules by module name. By default, the search will also be extended to keywords and substrings and is case-insensitive. To change these settings, click the magnifier button for the search options.
@@ -214,11 +214,11 @@ Usually the quickest way to add modules to a network is the quick search in the 
 The quick search field does not need to have the focus. Any time you enter something in the MeVisLab GUI while not being in a dialog window, this will be entered into the quick search automatically.
 {{</alert>}}
 
-![Quick Search Options](/images/MLMQuickSearch.png "Quick Search Options")
+![Quick Search Options](/images/tutorials/introduction/MLMQuickSearch.png "Quick Search Options")
 
 To search for a module to load an image, you could either type *load* or *image*. Let us go with the second option this time. While typing *image*, the possible results appear. Use the {{< keyboard "ArrowUp" >}} or {{< keyboard "ArrowDown" >}} keys on your keyboard to move to one of the listed modules. The module's About information will appear next to it, allowing you to decide if this is the right module for you.
 
-![Quick Search Results](/images/GSExampleNetworkViewImage02.png "Quick Search Results")
+![Quick Search Results](/images/tutorials/introduction/GSExampleNetworkViewImage02.png "Quick Search Results")
 
 {{<alert class="info" caption="Tip">}}
 For a more complex search, use the Module Search View.
