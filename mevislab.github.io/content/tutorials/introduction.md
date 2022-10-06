@@ -16,8 +16,6 @@ menu:
 
 ## Introduction {#tutorial_introduction}
 
-### Welcome {#tutorial_welcome}
-
 Welcome to MeVisLab!
 
 MeVisLab is a development environment for rapid prototyping and product
@@ -59,7 +57,7 @@ information and links are provided in colored boxes.
 | `MeVisLab IDE` | The MeVisLab Integrated Development Environment (IDE) is your starting point whenever you are working with MeVisLab. It provides a programming interface and an advanced text editor. |
 | `MeVisLab MATE` | The Advanced Text Editor (MATE) is an integrated text editor for Python and `MDL` development in MeVisLab. It provides auto completion and syntax highlighting as well as debugging functionalities. |
 | `MDL` | The MeVisLab Definition Language (MDL) is the language for developing basic User Interfaces for `Networks` and `Modules` in MeVisLab. |
-| `Module` | A Module is a single instance providing encapsulated functionalities for a specific purpose. MeVisLab provides thousands of such pre-defined Modules and you can develop your own Modules for extending existing functionalities. Modules provide inputs and outputs for connections in a `Network` and/or one or more `Panels` for interacting. |
+| `Module` | A Module is a single instance providing encapsulated functionalities for a specific purpose. MeVisLab provides thousands of such pre-defined Modules and you can develop your own Modules for extending functionalities. Modules provide inputs and outputs for connections in a `Network` and/or one or more `Panels` for interacting. |
 | `Panel` | A Panel is a User Interface providing possibilities to interact with MeVisLab. |
 | `Field` | Parameters of Modules are called fields. Several different types of fields are available such as numbers, text, trigger buttons, etc. Publicly accessible fields can be modified in the `Module Inspector` or Panel of the selected Module.         |
 | `Macro Module` | Macro Modules encapsulate `Networks` including input and output into a single `Module`. In order to see whats inside a Macro Module, you can open the Context Menu via Right-Click and select *[ Show Internal Network ]*. You can chose to create `Local Macros` and `Global Macros`. |
@@ -73,7 +71,7 @@ information and links are provided in colored boxes.
 | `Workspace` | The Workspace is the area where you can add and connect `Modules`. Multiple `Networks` are organized in separate Tabs. |
 | `Views Area` | The right side of the `MeVisLab IDE` provides a space to add several predefined panels like `Output-` and `Module inspectors`. |
 | `Debug Output` | The Debug Output shows debugging messages of your `Modules` and the `MeVisLab IDE`. |
-| `Open Inventor` | |
+| `Open Inventor` | Open Inventor Modules process and render 3D scene objects and enable image interactions. |
 | `Scene Objects` | |
 | `CSO` | Contour Segmentation Objects (CSOs) |
 | `WEM` | Winged Edge Meshes (WEMs) |
@@ -115,7 +113,7 @@ Here a list of the most important file types:
 {{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:230px">Extension</div> | Description |
 | --- | --- |
-| `.mlab` | Network file, includes all information about the network\'s modules, their settings, their connections, and module groups. Networks developed by using the `MeVisLab SDK`are stored as `.mlab` file and can only be opened having a valid SDK license. |
+| `.mlab` | Network file, includes all information about the network\'s modules, their settings, their connections, and module groups. Networks developed by using the `MeVisLab SDK` are stored as `.mlab` file and can only be opened having a valid SDK license. |
 | `.def` | Module definition file, necessary for a module to be added to the common MeVisLab module database. May also include all MDL script parts (if they are not sourced out to the `.script` file). |
 | `.script` | `MDL` script file, typically includes the user interface definition for panels. See [Chapter GUI Development](./tutorials/basicmechanisms/macromodules/guidesign#Example_Paneldesign "GUI Development") for an example on GUI programming. |
 | `.mlimage` | MeVisLab internal image format for 6D images saved with all DICOM tags, lossless compression, and in all data types. |

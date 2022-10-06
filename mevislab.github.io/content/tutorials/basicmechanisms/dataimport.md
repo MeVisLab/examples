@@ -44,6 +44,9 @@ The `ImageLoad` module can import the following formats:
 Basic information of the imported images are available on the Panel which opens via double click.
 
 ## DICOM data {#DICOMImport}
+{{<alert class="info" caption="Extra Infos">}}
+Additional information about **Digital Imaging and Communications in Medicine (DICOM)** can be found at [Wikipedia](https://en.wikipedia.org/wiki/DICOM "DICOM Format")
+{{< /alert >}}
 Even if the above explained `ImageLoad` is able to import DICOM data, a much better way is to use one of the specialized modules for DICOM images such as `DicomImport`.
 
 The `DicomImport` module allows to define a directory containing DICOM files to import as well as a list of files which can be dropped to the UI and imported. After import, the volumes are shown in a patient tree providing the following patient, study, series and volume information (depending on the availability in the DICOM file(s)):
@@ -63,21 +66,6 @@ The `DicomImport` module generates volumes based on the **Dicom Processor Librar
 In order to get all DICOM tags from your currently imported and selected volume, you can connect the `DicomImport` module to a `DicomTagBrowser`.
 
 ![DicomTagBrowser Module](/images/tutorials/basicmechanics/DicomTagBrowser.png "DicomTagBrowser Module")
-
-### Additional options
-It is also possible to access files and filenames via Python scripting. Use the Module `RunPythonScript` to execute.
-
-{{< highlight filename="Example script" >}}
-```Python
-object = ctx.field("DicomImport.outImportResult").object()
-ctx.log(object.volumeCount())
-ctx.log(object.filePaths(0))
-```
-{{</highlight>}}
-
-{{<alert class="info" caption="Extra Infos">}}
-The MeVisLab Scripting Reference for the `DicomImportResultWrapper` can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/ScriptingReference/classDicomImportResultWrapper.html" "here" >}}
-{{</alert>}}
 
 ## Segmentations / 2D Contours {#2DContours}
 2-dimensional contours in MeVisLab are handled via *CSO*s (**C**ontour **S**egmentation **O**bjects).
@@ -138,7 +126,7 @@ Supported file formats of the assimp library are documented on their [website](h
 
 ![SoSceneLoader Module](/images/tutorials/basicmechanics/SoSceneLoader.png "SoSceneLoader Module")
 
-The `SoSceneLoader` module generates a 3D scene from your loaded files which can be rendered via `SoExaminerViewer` or `SoRenderArea` and `SoCameraInteraction`.
+The {{< docuLinks "/../MeVisLab/Standard/Documentation/Publish/ModuleReference/SoSceneLoader.html" "SoSceneLoader" >}} module generates a 3D scene from your loaded files which can be rendered via {{< docuLinks "/../MeVisLab/Standard/Documentation/Publish/ModuleReference/SoExaminerViewer.html" "SoExaminerViewer" >}} or {{< docuLinks "/../MeVisLab/Standard/Documentation/Publish/ModuleReference/SoRenderArea.html" "SoRenderArea" >}} and {{< docuLinks "/../MeVisLab/Standard/Documentation/Publish/ModuleReference/SoCameraInteraction.html" "SoCameraInteraction" >}}
 
 {{<alert class="info" caption="Extra Infos">}}
 Example usage is explained in the tutorials for [Open Inventor](/tutorials/openinventor).
