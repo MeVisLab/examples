@@ -163,7 +163,7 @@ As a result, scrolling through the slices with the mouse wheel {{< mousebutton "
 
 ![Your final Network](/images/tutorials/basicmechanics/BM_16.png "Your final Network")
 
-You can also use the pre-defined Module `SynchroView2D` to reach the same goal (shown in [this chapter](../visualization/tutorialvisualizationexample1/) ).
+You can also use the pre-defined Module `SynchroView2D` to reach the same goal (shown in [this chapter](/tutorials/visualization/visualizationexample1/) ).
 
 ### Grouping Modules {#TutorialGroupingModules}
 

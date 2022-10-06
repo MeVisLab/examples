@@ -22,7 +22,7 @@ In this chapter you will learn how to create global macro modules. There are man
 
 ## Steps to do
 ### Transform a local macro module into a global macro module
-To transform our local macro module `Filter` from [Chapter I](../basicmechanisms) into a global macro module,
+To transform our local macro module `Filter` from [Chapter I](/tutorials/basicmechanisms#TutorialMacroModules) into a global macro module,
 right-click {{< mousebutton "right" >}} the macro module to open the context menu and select {{< menuitem "Extras" "Convert To Global Module..." >}}
 
 ![Convert local macro to global macro](/images/tutorials/basicmechanics/GUI_03.png "Convert local macro to global macro")
