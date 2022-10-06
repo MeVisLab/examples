@@ -42,7 +42,7 @@ right-click {{< mousebutton "right" >}} the macro module to open the context men
 4. Tick the box *Add reference to example network* to directly create the template for an example network for your macro module.
 
 5.  Select the package you like to store the module in. We choose the
-    package we created [before](../package/). Your module is saved in an .mlab format
+    package we created [before](./tutorials/basicmechanisms/macromodules/package/). Your module is saved in an .mlab format
     and can be found in
     *\\MyPackageGroup\\General\\Modules\\Macros\\MyProject*.
 
@@ -68,7 +68,7 @@ Instead of converting a local macro module into a global macro module, you can a
 4. Tick the box *Add reference to example network* to directly create the template for an example network for your macro module.
 
 5.  Select the package you like to store the module in. We choose the
-    package we created [before](../package/). Your module is saved in an .mlab format
+    package we created [before](./tutorials/basicmechanisms/macromodules/package/). Your module is saved in an .mlab format
     and can be found in
     *\\MyPackageGroup\\General\\Modules\\Macros\\MyProject*.
 
@@ -76,7 +76,7 @@ Instead of converting a local macro module into a global macro module, you can a
 Make sure to chose *Directory Structure* as *self-contained*. This makes sure that all files of your module are stored in a single directory.
 {{</alert>}}
  
- Press *Next >* to edit further properties. You have the opportunity to directly define the internal network of the macro module, for example by copying an existing network. In this case, we could copy the network of the local macro module `Filter` we already created. In addition, you have the opportunity to directly create a Python file. Python scripting can be used for the implementation of module interactions and other module functionalities. More information about Python scripting can be found [here](../pythonscripting/).
+ Press *Next >* to edit further properties. You have the opportunity to directly define the internal network of the macro module, for example by copying an existing network. In this case, we could copy the network of the local macro module `Filter` we already created. In addition, you have the opportunity to directly create a Python file. Python scripting can be used for the implementation of module interactions and other module functionalities. More information about Python scripting can be found [here](./tutorials/basicmechanisms/macromodules/pythonscripting).
 
 {{< imagegallery 2 "/images" "ProjectWizard1" "ProjectWizard2" >}}
 

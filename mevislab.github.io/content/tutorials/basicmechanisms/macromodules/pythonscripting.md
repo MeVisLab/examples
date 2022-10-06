@@ -41,7 +41,7 @@ In the *Scripting Console*, you can add and connect modules using the following 
 
 In this case we added the modules `DicomImport` and `View2D` to the workspace and connected both modules.
 
-![Add and connect modules via scripting](/images/tutorials/basicmechanbasicmechanicsisms/Scripting_03.png "Add and connect modules via scripting")
+![Add and connect modules via scripting](/images/tutorials/basicmechanics/Scripting_03.png "Add and connect modules via scripting")
 
 It is also possible to add notes to your workspace.
 

@@ -16,8 +16,6 @@ menu:
 
 ## Introduction {#tutorial_introduction}
 
-### Welcome {#tutorial_welcome}
-
 Welcome to MeVisLab!
 
 MeVisLab is a development environment for rapid prototyping and product
@@ -50,6 +48,7 @@ new mechanics and possibilities in MeVisLab step-by-step. Additional
 information and links are provided in colored boxes.
 
 ### Glossary {#tutorial_glossary}
+{{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:230px">Term</div> | Description |
 | --- | --- |
 | `MeVisLab` | MeVisLab consists of the `MeVisLab SDK` and the `MeVisLab ApplicationBuilder`. |
@@ -58,10 +57,10 @@ information and links are provided in colored boxes.
 | `MeVisLab IDE` | The MeVisLab Integrated Development Environment (IDE) is your starting point whenever you are working with MeVisLab. It provides a programming interface and an advanced text editor. |
 | `MeVisLab MATE` | The Advanced Text Editor (MATE) is an integrated text editor for Python and `MDL` development in MeVisLab. It provides auto completion and syntax highlighting as well as debugging functionalities. |
 | `MDL` | The MeVisLab Definition Language (MDL) is the language for developing basic User Interfaces for `Networks` and `Modules` in MeVisLab. |
-| `Module` | A Module is a single instance providing encapsulated functionalities for a specific purpose. MeVisLab provides thousands of such pre-defined Modules and you can develop your own Modules for extending existing functionalities. Modules provide inputs and outputs for connections in a `Network` and/or one or more `Panels` for interacting. |
+| `Module` | A Module is a single instance providing encapsulated functionalities for a specific purpose. MeVisLab provides thousands of such pre-defined Modules and you can develop your own Modules for extending functionalities. Modules provide inputs and outputs for connections in a `Network` and/or one or more `Panels` for interacting. |
 | `Panel` | A Panel is a User Interface providing possibilities to interact with MeVisLab. |
 | `Field` | Parameters of Modules are called fields. Several different types of fields are available such as numbers, text, trigger buttons, etc. Publicly accessible fields can be modified in the `Module Inspector` or Panel of the selected Module.         |
-| `Macro Module` | Macro Modules encapsulate `Networks` including input and output into a single `Module`. In order to see whats inside a Macro Module, you can open the Context Menu via Right-Click and select {{< menuitem "Show Internal Network" >}}. You can chose to create `Local Macros` and `Global Macros`. |
+| `Macro Module` | Macro Modules encapsulate `Networks` including input and output into a single `Module`. In order to see whats inside a Macro Module, you can open the Context Menu via Right-Click and select *[ Show Internal Network ]*. You can chose to create `Local Macros` and `Global Macros`. |
 | `Local Macro` | Local Macros are only available in your currently opened `Network`. You cannot use the Module Search in MeVisLab to find Local Macros. |
 | `Global Macro` | Global Macros are integrated into MeVisLab and can be used in any future Networks. They are available in Module search. |
 | `Network` | A Network defines at least two connected `Modules`. |
@@ -72,14 +71,14 @@ information and links are provided in colored boxes.
 | `Workspace` | The Workspace is the area where you can add and connect `Modules`. Multiple `Networks` are organized in separate Tabs. |
 | `Views Area` | The right side of the `MeVisLab IDE` provides a space to add several predefined panels like `Output-` and `Module inspectors`. |
 | `Debug Output` | The Debug Output shows debugging messages of your `Modules` and the `MeVisLab IDE`. |
-| `Open Inventor` | |
+| `Open Inventor` | Open Inventor Modules process and render 3D scene objects and enable image interactions. |
 | `Scene Objects` | |
 | `CSO` | Contour Segmentation Objects (CSOs) |
 | `WEM` | Winged Edge Meshes (WEMs) |
 | `GVR` | Giga Voxel Renderer (GVR) |
 | `Lookup Table (LUT)` | |
 | `Package` | |
-
+{{< /bootstrap-table >}}
 
 ### MeVisLab IDE User Interface {#tutorial_ide}
 
@@ -111,17 +110,17 @@ rearrange the items and add new views via {{< menuitem "Main Menu" "View" "Views
 ### Filetypes in MeVisLab
 
 Here a list of the most important file types:
-
+{{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:230px">Extension</div> | Description |
 | --- | --- |
-| `.mlab` | Network file, includes all information about the network\'s modules, their settings, their connections, and module groups. Networks developed by using the `MeVisLab SDK`are stored as `.mlab` file and can only be opened having a valid SDK license. |
+| `.mlab` | Network file, includes all information about the network\'s modules, their settings, their connections, and module groups. Networks developed by using the `MeVisLab SDK` are stored as `.mlab` file and can only be opened having a valid SDK license. |
 | `.def` | Module definition file, necessary for a module to be added to the common MeVisLab module database. May also include all MDL script parts (if they are not sourced out to the `.script` file). |
 | `.script` | `MDL` script file, typically includes the user interface definition for panels. See [Chapter GUI Development](./tutorials/basicmechanisms/macromodules/guidesign#Example_Paneldesign "GUI Development") for an example on GUI programming. |
 | `.mlimage` | MeVisLab internal image format for 6D images saved with all DICOM tags, lossless compression, and in all data types. |
 | `.mhelp` | File with descriptions of all fields and the use of a module, edit- and creatable by using `MATE`. See [Help files](./tutorials/basicmechanisms/macromodules/helpfiles "Help files") for details. |
 | `.py` | Python file, used for scripting in macro modules. See [Python scripting](./tutorials/basicmechanisms/macromodules/pythonscripting#TutorialPythonScripting "Python scripting") for an example on macro programming. |
 | `.dcm` | DCM part of the imported DICOM file, see [Importing DICOM Data](./tutorials/basicmechanisms/dataimport#DICOMImport "Importing DICOM Data"). |
-
+{{< /bootstrap-table >}}
 ### Types of Modules {#Module_Types}
 
 Within the concept of MeVisLab the basic entities we are working with
@@ -131,19 +130,22 @@ for image processing, image visualization, and image interaction.
 The three basic module types (ML, Open Inventor and Macro Module) are
 distinguished by their colors:
 
+{{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:230px">Type</div> | <div style="width:430px">Look</div> | Characteristics |
 | --- | --- | --- |
 | ML Module (blue) | ![ML Module](/images/tutorials/introduction/MLMModuleML.png "ML Module") | Page-based, demand-driven processing of voxels |
 | Open Inventor Module (green) | ![Open Inventor Module](/images/tutorials/introduction/MLMModuleSo.png "Open Inventor Module") | Visual scene graphs (3D); naming convention: all modules starting with *So* (for **s**cene **o**bject) |
 | Macro Module (brown) | ![Macro Module](/images/tutorials/introduction/MLMModuleMacro.png "Macro Module") | Combination of other module types, allowing implementing hierarchies and scripted interaction |
+{{< /bootstrap-table >}}
 
 If a module is invalid, it is displayed in bright red. This might happen if the module itself is not available on your system.
 
-
+{{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:330px">Appearance</div> | Explanation |
 | --- | --- |
 | ![Invalid Module](/images/tutorials/introduction/MLMModuleStateInvalid.png "Invalid Module") | Invalid module |
   ![Macro State Invalid](/images/tutorials/introduction/MLMModuleStateMacroInvalidModule.png "Macro State Invalid") | Macro containing an invalid module |
+{{< /bootstrap-table >}}
 
 The number of warning and error messages that are being printed to the
 debug console are listed at the upper right corner of the module. Once
@@ -158,11 +160,13 @@ Most modules have connectors which are displayed on the module. These represent 
 
 In MeVisLab, three types of connectors are defined.
 
+{{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:330px">Look</div> | <div style="width:130px">Appearance</div> | Definition |
 | --- | --- | --- |
 | ![Triangle](/images/tutorials/introduction/MLMConnectorTriangle.png "Triangle - ML Image") | triangle | ML images |
 | ![Circle](/images/tutorials/introduction/MLMConnectorHalfCircle.png "Circle - Inventor Scene") | half-circle | Inventor scene |
 | ![Square](/images/tutorials/introduction/MLMConnectorSquare.png "Square - Base Object") | square | Base objects: pointers to data structures |
+{{< /bootstrap-table >}}
 
 By connecting these connectors and therefore establishing a so-called data connection, image data, or Open Inventor information is transported from one module to one or more others.
 
