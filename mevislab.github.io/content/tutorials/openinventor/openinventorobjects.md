@@ -76,3 +76,5 @@ In addition to the objects, a background can be added to the scene using the mod
 * Nodes are rendered in the order of traversal.
 * Nodes on the same level are traversed from left to right.
 * All modules that are derived from `SoGroup` offer a basically infinite number of input connectors (a new connector is added for every new connection).
+
+{{< networkfile "examples/open_inventor/example1/" >}}

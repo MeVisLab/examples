@@ -89,3 +89,5 @@ Invert the image inside your magnified `SubImage` without changing the original 
 * The `SubImage` module allows to define a region of an input image to be treated as a separate image.
 * Single x, y and z coordinates can be transferred to a 3-dimensional vector and vice versa by using `ComposeVector3` and `DecomposeVector3`
 * Some modules provide hidden in- and outputs which can be shown via {{< keyboard "SPACE" >}}
+
+{{< networkfile "examples/visualization/example2/" >}}

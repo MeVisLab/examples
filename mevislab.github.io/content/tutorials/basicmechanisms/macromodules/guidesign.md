@@ -339,4 +339,4 @@ def printCurrentSliceNumber(field):
 * Module interactions can be implemented using commands, which are linked to Python functions.
 * You can implement fieldlisteners, which trigger actions after a field value changes.
 
-[//]: <> (MVL-653)
+{{< networkfile "examples/basic_mechanisms/macro_modules_and_module_interaction/example1/" >}}
