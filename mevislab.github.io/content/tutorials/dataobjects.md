@@ -20,6 +20,6 @@ MeVisLab provides a lot of pre-defined data objects for usage such as [Contours]
 Differences between these types are explained in the following chapters and example networks are built to learn how to use them.
 
 ## Examples:
-1. [Contours](/tutorials/dataobjects/contours/contour-objects)
-2. [Surface Objects](/tutorials/dataobjects/surfaces/surfaceobjects)
-3. [Markers](/tutorials/dataobjects/markers/markers)
+1. [Contours](/tutorials/dataobjects/contourobjects)
+2. [Surface Objects](/tutorials/dataobjects/surfaceobjects)
+3. [Markers](/tutorials/dataobjects/markers)

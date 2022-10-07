@@ -1,5 +1,5 @@
 ---
-title: "Contours"
+title: "Contour Objects (CSO)"
 date: 2022-06-15T08:56:33+02:00
 status: "open"
 draft: false
