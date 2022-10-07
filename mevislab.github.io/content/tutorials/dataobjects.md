@@ -8,7 +8,7 @@ menu:
   main:
     identifier: "dataobjects"
     title: "Examples for handling Data Objects like Contours, Surfaces and Markers in MeVisLab."
-    weight: 600
+    weight: 650
     parent: "tutorials"
 ---
 # MeVisLab Tutorial Chapter V {#TutorialChapter5}

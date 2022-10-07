@@ -8,7 +8,7 @@ menu:
   main:
     identifier: "contourexample2"
     title: "Creating Contours using Live Wire and linear Interpolation, grouping CSOs for different colors"
-    weight: 620
+    weight: 670
     parent: "contours"
 ---
 # Contour Example 2: Creating Contours using Live Wire and Interpolation {#TutorialContoursExample2}

@@ -8,7 +8,7 @@ menu:
   main:
     identifier: "contourexample5"
     title: "Visualizing Contours on currently visible and neighboring slices (ghosting)"
-    weight: 635
+    weight: 685
     parent: "contours"
 ---
 # Contour Example 5: Visualizing Contours and Images {#TutorialContoursExample5}

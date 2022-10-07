@@ -8,7 +8,7 @@ menu:
   main:
     identifier: "contours"
     title: "Contour Segmented Objects (CSOs) in MeVisLab"
-    weight: 610
+    weight: 660
     parent: "dataobjects"
 ---
 # Contour Segmented Objects (CSOs) in MeVisLab {#CSO}
