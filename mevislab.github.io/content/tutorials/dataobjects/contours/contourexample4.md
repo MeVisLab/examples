@@ -8,7 +8,7 @@ menu:
   main:
     identifier: "contourexample4"
     title: "Calculate the volume of your segmentation and display ml value on your image in viewer"
-    weight: 630
+    weight: 680
     parent: "contours"
 ---
 # Contour Example 4: Annotation of Images {#TutorialContoursExample4}

@@ -8,7 +8,7 @@ menu:
   main:
     identifier: "contourexample3"
     title: "Overlay Creation and 3D Visualization of Contours"
-    weight: 625
+    weight: 675
     parent: "contours"
 ---
 # Contour Example 3: Overlay Creation and 3D Visualization of Contours {#TutorialContoursExample3}

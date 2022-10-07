@@ -2,8 +2,8 @@
 
 <div class="container pb-5 pt-3">
 
-    <div class="container-fluid overflow-hidden">
-      <div class="row vh-auto overflow-auto">
+    <div class="container-fluid">
+      <div class="row vh-auto">
         <div class="col d-flex flex-column h-sm-auto">
             <div class="col px-6">
                 <h1>{{ .Title }}</h1>
@@ -13,22 +13,22 @@
                     <ol class="list-group list-group-numbered">
                         {{ range .Children }}
                             {{ if eq $currentPage.Section .Parent }}
-                        <li class="list-group-item"><a class="fw-bold" href="{{ .URL }}" title="{{ .Title }}" target="_self">{{ .Name }}</a>
+                        <li class="list-group-item" style="position: inherit; !important"><a class="fw-bold" href="{{ .URL }}" title="{{ .Title }}" target="_self">{{ .Name }}</a>
                             <div class="ps-4">{{ .Title }}</div>
                                 {{ if .HasChildren }}
                             <ol class="list-group list-group-numbered list-group-flush">
                                     {{ range .Children }}
-                                    <li class="list-group-item"><a class="fw-bold" href="{{ .URL }}" title="{{ .Title }}" target="_self">{{ .Name }}</a>
+                                    <li class="list-group-item" style="position: inherit; !important"><a class="fw-bold" href="{{ .URL }}" title="{{ .Title }}" target="_self">{{ .Name }}</a>
                                         <div class="ps-4">{{ .Title }}</div>
                                     {{ if .HasChildren }}
                                     <ol class="list-group list-group-numbered list-group-flush">
                                         {{ range .Children }}
-                                        <li class="list-group-item"><a class="fw-bold" href="{{ .URL }}" title="{{ .Title }}" target="_self">{{ .Name }}</a>
+                                        <li class="list-group-item" style="position: inherit; !important"><a class="fw-bold" href="{{ .URL }}" title="{{ .Title }}" target="_self">{{ .Name }}</a>
                                             <div class="ps-4">{{ .Title }}</div>
                                         {{ if .HasChildren }}
                                             <ol class="list-group list-group-numbered list-group-flush">
                                                     {{ range .Children }}
-                                                    <li class="list-group-item"><a class="fw-bold" href="{{ .URL }}" title="{{ .Title }}" target="_self">{{ .Name }}</a>
+                                                    <li class="list-group-item" style="position: inherit; !important"><a class="fw-bold" href="{{ .URL }}" title="{{ .Title }}" target="_self">{{ .Name }}</a>
                                                         <div class="ps-4">{{ .Title }}</div>
                                                     </li>
                                                     {{ end }}

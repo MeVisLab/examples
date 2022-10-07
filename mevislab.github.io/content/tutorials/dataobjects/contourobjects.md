@@ -1,5 +1,5 @@
 ---
-title: "Contours"
+title: "Contour Objects (CSO)"
 date: 2022-06-15T08:56:33+02:00
 status: "open"
 draft: false
@@ -8,7 +8,7 @@ menu:
   main:
     identifier: "contours"
     title: "Contour Segmented Objects (CSOs) in MeVisLab"
-    weight: 610
+    weight: 660
     parent: "dataobjects"
 ---
 # Contour Segmented Objects (CSOs) in MeVisLab {#CSO}

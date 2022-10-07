@@ -11,14 +11,14 @@ menu:
     weight: 400
     parent: "macro_modules"
 ---
-# Creation of module help
+# Example 2.3: Creation of module help
 
-Generating help of a Macro Module is part of the video about Macro Modules from [Example 2: Creation of Global Macro Modules](../globalmacromodules)
+Generating help of a Macro Module is part of the video about Macro Modules from [Example 2: Creation of Global Macro Modules](/tutorials/basicmechanisms/macromodules/globalmacromodules)
 {{< youtube "M4HnA0d1V5k">}}
 
 ## Introduction
 
-In this chapter, you will learn how to create a help page and an example network. For hands-on training, we will use the macro module `Filter`, which was created in the [previous chapter](../globalmacromodules/).
+In this chapter, you will learn how to create a help page and an example network. For hands-on training, we will use the macro module `Filter`, which was created in the [previous chapter](/tutorials/basicmechanisms/macromodules/globalmacromodules).
 
 Depending on the way the macro module was created the default help page and example network might or might not exist. In case they exist, the help page only contains information about module in- and outputs as well as module fields. The example network only contains the macro module itself. Both, the help page and the example network, can be created and edited after module creation.
 
@@ -30,7 +30,7 @@ We will start by creating a help file using the build in text editor {{< docuLin
 
 ![Creation of module help](/images/tutorials/basicmechanics/GUI_06.png "Creation of module help")
 
-When doing so, {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MeVisLab MATE">}} opens. An .mhelp file (*Filter.mhelp*) is created automatically and is stored in the folder your macro module `Filter` is stored in. You can find the folder structure in MATE on the left side. Editing the text field, you can edit the help file. 
+{{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MeVisLab MATE">}} opens. An .mhelp file (*Filter.mhelp*) is created automatically and is stored in the folder your macro module `Filter` is stored in. You can find the folder structure in MATE on the left side. Editing the text field, you can edit the help file. 
 
 [//]: <> (MVL-653)
 

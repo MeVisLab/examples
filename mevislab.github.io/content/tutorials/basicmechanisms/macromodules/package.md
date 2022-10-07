@@ -13,7 +13,7 @@ menu:
 ---
 
 
-# Package creation
+# Example 2.1: Package creation
 
 {{< youtube "1wrGsYtAs3g">}}
 

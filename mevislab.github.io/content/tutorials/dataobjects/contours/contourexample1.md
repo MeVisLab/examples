@@ -8,7 +8,7 @@ menu:
   main:
     identifier: "contourexample1"
     title: "Creation of simple Contours changing their appearance"
-    weight: 615
+    weight: 665
     parent: "contours"
 ---
 

@@ -11,7 +11,7 @@ menu:
     weight: 410
     parent: "macro_modules"
 ---
-# Building a Panel Layout: Interactions with Macro Modules
+# Example 2.4: Building a Panel Layout: Interactions with Macro Modules
 
 {{< youtube "tdQUkkROWBg">}}
 
@@ -29,7 +29,7 @@ More information about GUI design in MeVisLab can be found {{< docuLinks "/Resou
 
 ## Creating a panel for the macro module flilter {#Example_Paneldesign}
 ### Creation of a module panel
-In [this chapter](../globalmacromodules/) we created the global macro module `Filter`. By now, this module does not have a proper panel. When double-clicking {{< mousebutton "left" >}} the module, the *Automatic Panel* is shown.
+In [Example 2.2](/tutorials/basicmechanisms/macromodules/globalmacromodules) we created the global macro module `Filter`. By now, this module does not have a proper panel. When double-clicking {{< mousebutton "left" >}} the module, the *Automatic Panel* is shown.
 
 The *Automatic Panel* contains fields, as well as module in and outputs. In this case, no fields exists except the *instanceName*. Accordingly, there is no possibility to interact with the module. Only the input and the output of the module are given.
 
@@ -69,7 +69,7 @@ Creating an input/output causes:
 1. Input/output connectors are added to the module.
 2. You can find placeholders for the input and output in the internal network (see image).
 3. Input/output fields are added to the automatic panel.
-4. A description of the input/output fields is automatically added to the module help file, when opening the *.mhelp* file after input/output creation. Helpfile creation is explained [this chapter](../helpfiles/).
+4. A description of the input/output fields is automatically added to the module help file, when opening the *.mhelp* file after input/output creation. Helpfile creation is explained in [Example 2.3](/tutorials/basicmechanisms/macromodules/helpfiles/).
 
 ![Internal Network of your macro module](/images/tutorials/basicmechanics/BM_23.png "Internal Network of your macro module")
 
@@ -195,6 +195,8 @@ network name. To find the internal field name, open the internal network of the 
 
 Then, open the panel of the module `Convolution` and right-click {{< mousebutton "right" >}} the field title *Use* of the box *Predefined Kernel* and select *Copy Name*. You now copied the internal network name of the field to your clipboard. The name is made up of *ModuleName.FieldName*, in this case *Convolution.predefKernel*.
 
+![Convolution Module](/images/tutorials/basicmechanics/Convolution.png "Convolution Module")
+
 In the panel of the module `Convolution`, you can change this variable *Kernel* via a drop-down menu. In
 MDL a drop-down menu is called a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_ComboBox" "ComboBox" >}}. We can take over the field *predefKernel*, its drop-down menu and all its properties by
 creating a new field in our panel and reference to the internal
@@ -271,7 +273,7 @@ The *wakeupCommand* defines a Python function which is executed as soon as the W
 
 Both commands reference a Python function which is executed whenever both actions (open the Window or click the Button) are executed.
 
-If you like to learn more about Python scripting, take a look at [this](../pythonscripting/) chapter.
+If you like to learn more about Python scripting, take a look at [Example 2.5](tutorials/basicmechanisms/macromodules/pythonscripting).
 
 We need to define the Python script, which contains our Python functions. In order to do this, add a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Commands" "Command">}} section outside your window and define the tag source.
 
@@ -290,7 +292,7 @@ The section Source should already be available and generated automatically in ca
 
 [//]: <> (MVL-653)
 
-You can right-click {{< mousebutton "right" >}} on the command in your *.script* file and select {{< menuitem "Open definition..." >}}. The text editor MATE opens automatically and generates an initial Python function for you. You can simply add a logging function or implement complex logic here.
+You can right-click {{< mousebutton "right" >}} on the command (*myWindowCommand* or *myButtonAction*) in your *.script* file and select {{< menuitem "Create Python Funtion......" >}}. The text editor MATE opens automatically and generates an initial Python function for you. You can simply add a logging function or implement complex logic here.
 
 **Example:**
 {{< highlight filename="Filter.py" >}}
@@ -300,36 +302,6 @@ def myWindowCommand:
 
 def myButtonAction:
     MLAB.log("Button clicked")
-```
-{{</highlight>}}
-
-#### Field listeners {#fieldlisteners}
-
-A field listener watches a given field in your network and reacts on any changes of the field value. You can define Python functions to execute in case a change has been detected.
-
-In order to define such a listener, you need to create a *Command* section in your *.script* file.
-
-**Example:**
-{{< highlight filename="Filter.script" >}}
-```Stan
-Commands {
-    source = $(LOCAL)/Filter.py
-
-    FieldListener View2D.startSlice {
-        command = printCurrentSliceNumber
-    }
-}
-```
-{{</highlight>}}
-
-In the above example, we react on changes of the field *startSlice* of the module `View2D`. Whenever the field value (currently displayed slice) changes, the Python function *printCurrentSliceNumber* is executed.
-
-In your Python file `Filter.py` you can now add the following:
-
-{{< highlight filename="Filter.py" >}}
-```Python
-def printCurrentSliceNumber(field):
-    MLAB.log(field.value)
 ```
 {{</highlight>}}
 
