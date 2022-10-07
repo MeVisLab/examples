@@ -12,7 +12,7 @@ menu:
     parent: "macro_modules"
 ---
 
-# Scripting Example 1: The module RunPythonScript
+# Example 2.5.1: The module RunPythonScript
 ## Introduction
 
 The module `RunPythonScript` allows to execute Python scripts from within a MeVisLab network. You can draw parameter connection from modules to `RunPythonScript` and back, to process parameter fields using Python scripting. 
@@ -39,9 +39,9 @@ The module `TimeCounter` counts in a defined *Frequency*. We like to randomly ch
 ```Python
 import random
 
-red = TimeCounter * random(0,52)/255
-green = TimeCounter * random(0,52)/255
-blue = TimeCounter * random(0,52)/255
+red = TimeCounter * random.randrange(0,52)/255
+green = TimeCounter * random.randrange(0,52)/255
+blue = TimeCounter * random.randrange(0,52)/255
 
 updateOutputValue("DiffuseColor", str(red) + " " + str(green) + " " + str(blue))
 ```

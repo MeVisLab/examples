@@ -12,7 +12,7 @@ menu:
     parent: "macro_modules"
 ---
 
-# Global Macro Modules
+# Example 2.2: Global Macro Modules
 
 {{< youtube "M4HnA0d1V5k">}}
 

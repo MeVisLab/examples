@@ -11,7 +11,7 @@ menu:
     weight: 440
     parent: "macro_modules"
 ---
-# Scripting Example 2: Module interactions via Python scripting
+# Example 2.5.2: Module interactions via Python scripting
 ## Introduction
 
 We like to create a GUI for [this](../../../dataobjects/contours/contourexample5/) example network of Chapter V. In the example, CSOs were automatically created based on a predefined iso value. You can either implement the network, or else download the network [here]().

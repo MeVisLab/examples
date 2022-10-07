@@ -11,7 +11,7 @@ menu:
     weight: 400
     parent: "macro_modules"
 ---
-# Creation of module help
+# Example 2.3: Creation of module help
 
 Generating help of a Macro Module is part of the video about Macro Modules from [Example 2: Creation of Global Macro Modules](/tutorials/basicmechanisms/macromodules/globalmacromodules)
 {{< youtube "M4HnA0d1V5k">}}

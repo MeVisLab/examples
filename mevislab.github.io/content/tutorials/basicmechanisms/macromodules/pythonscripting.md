@@ -11,7 +11,7 @@ menu:
     weight: 420
     parent: "macro_modules"
 ---
-# Module Interactions Using Python Scripting {#TutorialPythonScripting}
+# Example 2.5: Module Interactions Using Python Scripting {#TutorialPythonScripting}
 ## Introduction
 
 This chapter will give you an overview over Python scripting in MeVisLab. Here, no introduction into Python will be given. However, basic knowledge in Python is helpful. Instead, we will show how to integrate and use Python in the MeVisLab SDK. 

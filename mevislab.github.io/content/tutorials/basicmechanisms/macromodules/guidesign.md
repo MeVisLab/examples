@@ -11,7 +11,7 @@ menu:
     weight: 410
     parent: "macro_modules"
 ---
-# Building a Panel Layout: Interactions with Macro Modules
+# Example 2.4: Building a Panel Layout: Interactions with Macro Modules
 
 {{< youtube "tdQUkkROWBg">}}
 
@@ -302,36 +302,6 @@ def myWindowCommand:
 
 def myButtonAction:
     MLAB.log("Button clicked")
-```
-{{</highlight>}}
-
-#### Field listeners {#fieldlisteners}
-
-A field listener watches a given field in your network and reacts on any changes of the field value. You can define Python functions to execute in case a change has been detected.
-
-In order to define such a listener, you need to add it to the *Command* section in your *.script* file.
-
-**Example:**
-{{< highlight filename="Filter.script" >}}
-```Stan
-Commands {
-    source = $(LOCAL)/Filter.py
-
-    FieldListener View2D.startSlice {
-        command = printCurrentSliceNumber
-    }
-}
-```
-{{</highlight>}}
-
-In the above example, we react on changes of the field *startSlice* of the module `View2D`. Whenever the field value (currently displayed slice) changes, the Python function *printCurrentSliceNumber* is executed.
-
-In your Python file `Filter.py` you can now add the following:
-
-{{< highlight filename="Filter.py" >}}
-```Python
-def printCurrentSliceNumber(field):
-    MLAB.log(field.value)
 ```
 {{</highlight>}}
 
