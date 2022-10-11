@@ -14,9 +14,7 @@ menu:
 # Example 2.5.2: Module interactions via Python scripting
 ## Introduction
 
-We like to create a GUI for [this](../../../dataobjects/contours/contourexample5/) example network of Chapter V. In the example, CSOs were automatically created based on a predefined iso value. You can either implement the network, or else download the network [here]().
-
-[//]: <> (OPEN: Here, we need the reference to the example network, the .mlab file)
+In this example, you will learn how to add Python scripting to your User Interface. The network used in [Chapter V](tutorials/dataobjects/contours/contourexample5/) will be used for creating the Macro Module.
 
 ## Steps to do
 ### Creating the macro module
