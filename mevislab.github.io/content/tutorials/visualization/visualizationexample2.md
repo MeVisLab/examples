@@ -70,6 +70,10 @@ We like to use the modules `DecomposeVector3` to extract the single x, y and z v
 
 Open the panel of the module `SubImage`. Select the *Mode World Start & End* (*Image Axis Aligned*). Enable the function *Auto apply*.
 
+{{<alert class="info" caption="Extra Infos">}}
+Make sure to also check *Auto-correct for negative subimage extents* so that you can draw rectangles from left to right and from right to left.
+{{</alert>}}
+
 ![World Coordinates](/images/tutorials/visualization/V2_10.png "World Coordinates")
 
 Now, create parameter connections from the fields *X*, *Y*, *Z* of the module `StartWorldPos_Rectangle` to the field *Start X*, *Start Y*, *Start Z* in the panel of the module `SubImage`. Similarly, connect the parameter fields fields *X*, *Y*, *Z* of the module `EndWorldPos_Rectangle` to the field *End X*, *End Y*, *End Z* in the panel of the module `SubImage`.
