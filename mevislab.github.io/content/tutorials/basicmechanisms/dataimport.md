@@ -41,7 +41,7 @@ The `ImageLoad` module can import the following formats:
 * JPEG
 * MLImageFileFormat
 
-Basic information of the imported images are available on the Panel which opens via double click.
+Basic information of the imported images are available on the Panel which opens via double-click.
 
 ## DICOM data {#DICOMImport}
 {{<alert class="info" caption="Extra Infos">}}
@@ -53,7 +53,7 @@ The `DicomImport` module allows to define a directory containing DICOM files to 
 
 * **PATIENT LEVEL** Patient Name (0010,0010) - Patient Birthdate (0010,0030)
   * **STUDY LEVEL** Study Date (0008,0020) - Study Description (0008,1030)
-    * **SERIES/VOLUME LEVEL** Modality (0008,0060) - Series Description (0008,103e) - Rows (0028,0010) - Columns (0028,0011) - number of slices in volume - number of timepoints in volume
+    * **SERIES/VOLUME LEVEL** Modality (0008,0060) - Series Description (0008,103e) - Rows (0028,0010) - Columns (0028,0011) - number of slices in volume - number of time points in volume
 
 ![DicomImport Module](/images/tutorials/basicmechanics/DicomImport.png "DicomImport Module")
 
@@ -71,7 +71,7 @@ In order to get all DICOM tags from your currently imported and selected volume,
 2-dimensional contours in MeVisLab are handled via *CSO*s (**C**ontour **S**egmentation **O**bjects).
 
 {{<alert class="info" caption="Extra Infos">}}
-Tutorials for CSOs are available [here](../../dataobjects/contours/contour-objects).
+Tutorials for CSOs are available [here](../../dataobjects/contours/contour-objects)
 
 Detailed explanations about CSOs can be found {{< docuLinks "/Standard/Documentation/Publish/Overviews/CSOOverview.html" "here" >}}
 {{</alert>}}

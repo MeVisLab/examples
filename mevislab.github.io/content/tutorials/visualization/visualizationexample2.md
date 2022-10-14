@@ -30,15 +30,15 @@ In case your image is black, change the *Window* and *Center* values by moving t
 
 ![OrthoView2D](/images/tutorials/visualization/V2_01.png "OrthoView2D")
 
-### SoView2DPositioning
-Next, we add the module `SoView2DPositioning` (an Open Inventor module).
+### SoView2DPosition
+Next, we add the module `SoView2DPosition` (an Open Inventor module).
 
 The module enables the selection of an image position via mouse-click {{< mousebutton "left" >}}. The last-clicked location in the Viewer is marked in white. If you now scroll through the slices, both, the last-clicked location and the current image location are shown.
 
-![SoView2DPositioning](/images/tutorials/visualization/V2_02.png "SoView2DPositioning")
+![SoView2DPosition](/images/tutorials/visualization/V2_02.png "SoView2DPosition")
 
 ### SoView2DRectangle
-Instead of points, we like to mark areas. In order to do that, replace the module `SoView2DPosition` with the module `SoView2DRectangle`. The module allows to add a rectangle to the image. Right-click on the image and draw a rectangle. In the `OthoView2D`, the rectangle is displayed in every viewing direction.
+Instead of points, we like to mark areas. In order to do that, replace the module `SoView2DPosition` with the module `SoView2DRectangle`. The module allows to add a rectangle to the image. Left-click {{< mousebutton "left" >}} on the image and draw a rectangle. In the `OthoView2D`, the rectangle is displayed in every viewing direction.
 
 ![SoView2DRectangle](/images/tutorials/visualization/V2_03.png "SoView2DRectangle")
 
@@ -54,7 +54,7 @@ In addition to that, add two types of the module `DecomposeVector3` to your netw
 
 ![DecomposeVector3](/images/tutorials/visualization/V2_07.png "DecomposeVector3")
 
-We like to use the module `SubImage` to select a section of a slice, which is than displayed in the Viewer. The idea is to display a magnified section of one slice next to the whole slice in the module `SynchroView2D`. In order to do that, we need to tell the module `SubImage` which section to display in the Viewer. The section is selected using the module `SoView2DRectangle`. As a last step, we need to transmit the coordinates of the chosen rectangle to the module `SubImage`. To do that, we will build some parameter connections.
+We like to use the module `SubImage` to select a section of a slice, which is then displayed in the Viewer. The idea is to display a magnified section of one slice next to the whole slice in the module `SynchroView2D`. In order to do that, we need to tell the module `SubImage` which section to display in the Viewer. The section is selected using the module `SoView2DRectangle`. As a last step, we need to transmit the coordinates of the chosen rectangle to the module `SubImage`. To do that, we will build some parameter connections.
 
 ![SubImage](/images/tutorials/visualization/V2_08.png "SubImage")
 
@@ -76,7 +76,7 @@ Make sure to also check *Auto-correct for negative subimage extents* so that you
 
 ![World Coordinates](/images/tutorials/visualization/V2_10.png "World Coordinates")
 
-Now, create parameter connections from the fields *X*, *Y*, *Z* of the module `StartWorldPos_Rectangle` to the field *Start X*, *Start Y*, *Start Z* in the panel of the module `SubImage`. Similarly, connect the parameter fields fields *X*, *Y*, *Z* of the module `EndWorldPos_Rectangle` to the field *End X*, *End Y*, *End Z* in the panel of the module `SubImage`.
+Now, create parameter connections from the fields *X*, *Y*, *Z* of the module `StartWorldPos_Rectangle` to the field *Start X*, *Start Y*, *Start Z* in the panel of the module `SubImage`. Similarly, connect the parameter fields *X*, *Y*, *Z* of the module `EndWorldPos_Rectangle` to the field *End X*, *End Y*, *End Z* in the panel of the module `SubImage`.
 
 ![Another Parameter Connection](/images/tutorials/visualization/V2_11.png "Another Parameter Connection")
 
@@ -86,7 +86,7 @@ With this, you finished your magnifier. Open the Viewer and draw a rectangle on 
 
 
 ## Exercises
-Invert the image inside your magnified `SubImage` without changing the original image.
+Invert the image inside your magnified `SubImage` without changing the original image. You can use `Arithmetic*` modules for inverting.
 
 ## Summary
 * The module `OrthoView2D` provides coronal, axial and sagittal views of an image.

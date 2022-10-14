@@ -24,9 +24,9 @@ First, add the modules `SoExaminerViewer` and `SoCone` to the workspace and conn
 
 ![SoExaminerViewer](/images/tutorials/openinventor/OI1_01.png "SoExaminerViewer")
 
-We like to change the color of the cone. In order to do so, add the module `SoMaterial` to the workspace and connect the module as shown below. When creating Open Inventor scene (by creating networks of Open Inventor modules), the sequence of module connections, in this case the sequence of the inputs to the module `SoExaminerViewer` determines the functionality of the network.
+We like to change the color of the cone. In order to do so, add the module `SoMaterial` to the workspace and connect the module as shown below. When creating an Open Inventor scene (by creating networks of Open Inventor modules), the sequence of module connections, in this case the sequence of the inputs to the module `SoExaminerViewer` determines the functionality of the network.
 
-Open Inventor modules are executed like scene graphs. This means, modules are executed from top to bottom and from left to right. Here, it is important to connect the module `SoMaterial` to an input on the left side of connection between `SoCone` and `SoExaminerViewer`. With this, we first select features like a color and these features are then assigned to all objects, which were executed afterwards. Now, open the panel of the module `SoMaterial` and select any *Diffuse Color* you like. Here, we choose green.
+Open Inventor modules are executed like scene graphs. This means, modules are executed from top to bottom and from left to right. Here, it is important to connect the module `SoMaterial` to an input on the left side of the connection between `SoCone` and `SoExaminerViewer`. With this, we first select features like a color and these features are then assigned to all objects, which were executed afterwards. Now, open the panel of the module `SoMaterial` and select any *Diffuse Color* you like. Here, we choose green.
 
 ![Colors and Material in Open Inventor](/images/tutorials/openinventor/OI1_02.png "Colors and Material in Open Inventor")
 
@@ -36,7 +36,7 @@ In order to do that, add the module `SoSphere` to the workspace. Connect this mo
 
 ![Adding a SoSphere](/images/tutorials/openinventor/OI1_03.png "Adding a SoSphere")
 
-The display both objects at different positions, add the modules `SoSeparator` and `SoTransform` to the scene and connect both modules shown on the following picture. Open the panel of `SoTransform` and implement a translation in x-direction to shift the object. Now you can examine two things:
+They display both objects at different positions, add the modules `SoSeparator` and `SoTransform` to the scene and connect both modules shown on the following picture. Open the panel of `SoTransform` and implement a translation in x-direction to shift the object. Now you can examine two things:
 
 1. The sphere loses its green color
 2. The cone is shifted to the side

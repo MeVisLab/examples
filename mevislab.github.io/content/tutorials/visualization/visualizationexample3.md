@@ -31,10 +31,12 @@ The `Threshold` module is explained {{< docuLinks "/Standard/Documentation/Publi
 
 The module `Threshold` compares the contrast of each voxel of the image with a customized threshold. In this case: If the contrast of the chosen voxel is lower than the threshold, the voxel contrast is replaced by the minimum contrast of the image. If the contrast of the chosen voxel is higher than the threshold, the voxel contrast is replaced by the maximum contrast of the image. With this, we can construct a binary image, which divides the image into bone (white) and no bone (black).
 
+Select output of the `Threshold` module to see the binary image in Output Inspector.
+
 ![Image Threshold](/images/tutorials/visualization/V3_01.png "Image Threshold")
 
 ### Overlays
-The module `SoView2DOverlay` blends a 2D image over another one in a 2D viewer. In this case, all voxels with contrast above the `Threshold` are colored and therefore highlighted. The colored voxels are than blended over the original image. Using the panel of `SoView2DOverlay`, you can select the color of the overlay.
+The module `SoView2DOverlay` blends a 2D image over another one in a 2D viewer. In this case, all voxels with contrast above the `Threshold` are colored and therefore highlighted. The colored voxels are then blended over the original image. Using the panel of `SoView2DOverlay`, you can select the color of the overlay.
 
 ![SoView2DOverlay](/images/tutorials/visualization/V3_02.png "SoView2DOverlay")
 

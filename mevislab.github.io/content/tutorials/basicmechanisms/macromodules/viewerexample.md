@@ -49,7 +49,7 @@ MeVisLab reloads its internal database and you can open a new Tab. Search for yo
 
 ![MyViewerApplication](images/tutorials/basicmechanics/SimpleApp_06.png "MyViewerApplication")
 
-In case you double click {{< mousebutton "left" >}} your module now, you will see the *Automatic Panel* only showing the name of your module, because we did not add any own *Window* until now.
+In case you double-click {{< mousebutton "left" >}} your module now, you will see the *Automatic Panel* only showing the name of your module, because we did not add any own *Window* until now.
 
 ### Develop your User Interface
 Before adding your own UI, open internal network of your Macro Module via right-click {{< mousebutton "right" >}} and {{< menuitem "Show Internal Network" >}}. Open the panel of your `ImageLoad` module and set filename to an empty string (clear). This is necessary for later.
@@ -207,7 +207,7 @@ Scrolling through slices in the `View2D` module now logs a message containing th
 
 ## Summary
 * You can add any Viewers to your application UI by reusing them in MDL.
-* Parameter Fields using the internalName of an existing field in your network allow to re-use this UI element in your own UI. Changes in your UI are applied to the field in the module.
-* Field Listeners allow you to react on changes of a field value in Python.
+* Parameter Fields using the internalName of an existing field in your network allows re-using this UI element in your own UI. Changes in your UI are applied to the field in the module.
+* Field Listeners allow reacting on changes of a field value in Python.
 
 {{< networkfile "examples/basic_mechanisms/viewer_application/" >}}
