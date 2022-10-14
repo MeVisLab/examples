@@ -18,7 +18,7 @@ In this example, you will learn how to modify and process WEMs.
 ## Steps to do
 ### Develop your network
 #### Modification of WEMs
-Use the module `WEMLoad` to load the file *venus.off*. Than add and connect the shown modules. We like to display the WEM *venus* two times, one time this WEM is modified. You can use the module `WEMModify` to apply modifications. In its panel, change the scale and the size of the WEM. Now you see two times the `venus` next to each other.
+Use the module `WEMLoad` to load the file *venus.off*. Then add and connect the shown modules. We like to display the WEM *venus* two times, one time this WEM is modified. You can use the module `WEMModify` to apply modifications. In its panel, change the scale and the size of the WEM. Now you see two times the `venus` next to each other.
 
 ![WEMModify](/images/tutorials/dataobjects/surfaces/DO7_01.png "WEMModify")
 

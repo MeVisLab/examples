@@ -35,7 +35,7 @@ You may have noticed, that you are not able to scroll through the slices. This f
 ![View2DExtensions](/images/tutorials/visualization/V4_02.png "View2DExtensions")
 
 ### Add Screenshot Gallery to Viewing Area
-With the help of the module `SoRenderArea` you can record screen-shots and movies. Before we do that, open {{< menuitem "View" "Views" "Screenshot Gallery" >}}, to add the Screenshot Gallery to your viewing area.
+With the help of the module `SoRenderArea` you can record screenshots and movies. Before we do that, open {{< menuitem "View" "Views" "Screenshot Gallery" >}}, to add the Screenshot Gallery to your viewing area.
 
 ![Screenshot Gallery](/images/tutorials/visualization/V4_03.png "Screenshot Gallery")
 

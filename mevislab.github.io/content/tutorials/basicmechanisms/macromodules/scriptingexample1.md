@@ -13,6 +13,9 @@ menu:
 ---
 
 # Example 2.5.1: The module RunPythonScript
+
+{{< youtube "O5Get1PMOq8" >}}
+
 ## Introduction
 
 The module `RunPythonScript` allows to execute Python scripts from within a MeVisLab network. You can draw parameter connection from modules to `RunPythonScript` and back, to process parameter fields using Python scripting. 

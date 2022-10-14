@@ -28,7 +28,7 @@ for visual programming and the advanced text editor *MATE* for Python
 scripting including code completion, debugging, profiling and automated
 test development or execution.
 
-You can re-use thousands of pre defined *Modules* for image processing
+You can re-use thousands of pre-defined *Modules* for image processing
 (2D up to 6D images) and visualization. You will get a quick
 introduction into the available modules and example networks in the following tutorials.
 
@@ -55,12 +55,12 @@ information and links are provided in colored boxes.
 | `MeVisLab SDK` | The MeVisLab Software Development Kit (SDK) is the `MeVisLab IDE` including the text editor `MATE` and any tools integrated for debugging, testing and profiling. |
 | `MeVisLab ApplicationBuilder` | The MeVisLab ApplicationBuilder allows you to generate installable executables from your developed networks and applications. These executables can be delivered to customers. |
 | `MeVisLab IDE` | The MeVisLab Integrated Development Environment (IDE) is your starting point whenever you are working with MeVisLab. It provides a programming interface and an advanced text editor. |
-| `MeVisLab MATE` | The Advanced Text Editor (MATE) is an integrated text editor for Python and `MDL` development in MeVisLab. It provides auto completion and syntax highlighting as well as debugging functionalities. |
+| `MeVisLab MATE` | The Advanced Text Editor (MATE) is an integrated text editor for Python and `MDL` development in MeVisLab. It provides auto-completion and syntax highlighting, as well as debugging functionalities. |
 | `MDL` | The MeVisLab Definition Language (MDL) is the language for developing basic User Interfaces for `Networks` and `Modules` in MeVisLab. |
 | `Module` | A Module is a single instance providing encapsulated functionalities for a specific purpose. MeVisLab provides thousands of such pre-defined Modules and you can develop your own Modules for extending functionalities. Modules provide inputs and outputs for connections in a `Network` and/or one or more `Panels` for interacting. |
 | `Panel` | A Panel is a User Interface providing possibilities to interact with MeVisLab. |
 | `Field` | Parameters of Modules are called fields. Several different types of fields are available such as numbers, text, trigger buttons, etc. Publicly accessible fields can be modified in the `Module Inspector` or Panel of the selected Module.         |
-| `Macro Module` | Macro Modules encapsulate `Networks` including input and output into a single `Module`. In order to see whats inside a Macro Module, you can open the Context Menu via Right-Click and select *[ Show Internal Network ]*. You can chose to create `Local Macros` and `Global Macros`. |
+| `Macro Module` | Macro Modules encapsulate `Networks` including input and output into a single `Module`. In order to see whats inside a Macro Module, you can open the Context Menu via Right-Click and select *[ Show Internal Network ]*. You can choose to create `Local Macros` and `Global Macros`. |
 | `Local Macro` | Local Macros are only available in your currently opened `Network`. You cannot use the Module Search in MeVisLab to find Local Macros. |
 | `Global Macro` | Global Macros are integrated into MeVisLab and can be used in any future Networks. They are available in Module search. |
 | `Network` | A Network defines at least two connected `Modules`. |
@@ -80,6 +80,15 @@ information and links are provided in colored boxes.
 | `Package` | |
 {{< /bootstrap-table >}}
 
+### Installation and first start
+Right after installation of MeVisLab, you will find some new icons on your Desktop (if selected during setup).
+
+![MeVisLab Desktop Icons](images/tutorials/basicmechanics/WindowsIcons.png "MeVisLab Desktop Icons (Windows)")
+
+Use the top middle icon to start the MeVisLab IDE. You can also start the integrated text editor MATE or the ToolRunner. For this tutorial, you will generally require the IDE.
+
+You can also use the *QuickStart* icons but any packages developed yourself during these tutorials will not be loaded, so you should not use this for now.
+
 ### MeVisLab IDE User Interface {#tutorial_ide}
 
 First, start MeVisLab IDE. After the Welcome Screen, the standard user interface opens.
@@ -97,7 +106,7 @@ pipelines.
 
 The standard Views Area contains the [Output Inspector and the Module Inspector](./tutorials/basicmechanisms#The_Output_Inspector_and_the_Module_Inspector "Output Inspector and the Module Inspector"). With the help of the Output Inspector, you can visualize the Module output.
 
-Further information of each module, like information about Module parameters can be found using the Module Inspector .
+Further information of each module, like information about Module parameters, can be found using the Module Inspector.
 
 #### Debug Output
 
@@ -121,10 +130,11 @@ Here a list of the most important file types:
 | `.py` | Python file, used for scripting in macro modules. See [Python scripting](./tutorials/basicmechanisms/macromodules/pythonscripting#TutorialPythonScripting "Python scripting") for an example on macro programming. |
 | `.dcm` | DCM part of the imported DICOM file, see [Importing DICOM Data](./tutorials/basicmechanisms/dataimport#DICOMImport "Importing DICOM Data"). |
 {{< /bootstrap-table >}}
+
 ### Types of Modules {#Module_Types}
 
 Within the concept of MeVisLab the basic entities we are working with
-a graphical representations of modules having their specific functions
+a graphical representation of modules having their specific functions
 for image processing, image visualization, and image interaction.
 
 The three basic module types (ML, Open Inventor and Macro Module) are
@@ -140,6 +150,8 @@ distinguished by their colors:
 
 If a module is invalid, it is displayed in bright red. This might happen if the module itself is not available on your system.
 
+### Invalid Modules
+
 {{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:330px">Appearance</div> | Explanation |
 | --- | --- |
@@ -148,12 +160,27 @@ If a module is invalid, it is displayed in bright red. This might happen if the 
 {{< /bootstrap-table >}}
 
 The number of warning and error messages that are being printed to the
-debug console are listed at the upper right corner of the module. Once
+debug console are listed in the upper right corner of the module. Once
 the debug console is cleared, the warning and error indicators at the
 module are also cleared. If the module produces information messages,
 their number is printed in gray at this position. This enables a network
 or module developer to find the modules in a network that produce
 messages quickly.
+
+### Module context menu
+Each module provides a context menu to get additional information.
+
+![Context Menu of a module](/images/tutorials/introduction/ModuleContextMenu.png "Context Menu of a module")
+
+* **Show Internal Network:** Macro Modules provide an entry to open the internal network. You can see what happens inside a Macro Module. This network may also contain other Macro Modules.
+* **Show Window:** In case a module does not provide an own User Interface, you will see the Automatic Panel of the module showing the name. Modules may additionally have one or more Windows to be opened. You can also open the Scripting Console of a module to use Python.
+* **Instance Name:** You can also edit or copy the instance name. Editing is useful if you have the same module multiple times in one network. You should give the modules a useful name to access and distinguish them in Python. Copying the name is useful if you want to access the module in Python. You will have the correct name in your clipboard for usage in Python.
+* **Help:** The menu entry Help provides access to the Module Help pages and to an Example Network where the module is used. This example network often helps to understand which additional modules are necessary for usage.
+* **Extras:** Automated tests written for the specific module can be executed here. You can also run this Module in a separate process.
+* **Reload Definition:** In case you are currently working on a Module, you may need to reload the definition so that your changes are applied on the Module (for example attached Python scripts).
+* **Related Files:** Related files allows a quick access to the modules **.script* or **.py* files. The files are automatically opened in MATE for editing.
+* **Show Enclosing Folder:** This entry opens the directory where your Module has been stored.
+* **Grouping:** Multiple Modules can be Grouped and the groups can be named. This makes sense to structure your network for a better overview. In addition to that, grouped Modules can be converted to local- or global Macro Modules easily.
 
 ### Module Connectors {#Module_Connectors}
 Most modules have connectors which are displayed on the module. These represent the inputs (bottom) and outputs (top) of modules.

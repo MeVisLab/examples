@@ -29,6 +29,10 @@ Additional information about the `SoMouseGrabber` can be found here: {{< docuLin
 ### Configure mouse interactions
 Now, open the panels of the module `SoMouseGrabber` and the module `SoExaminerViewer`, which displays a cube. In the Viewer, press the right key of your mouse {{< mousebutton "right" >}} and move the mouse around. This action can be seen in the panel of the module SoMouseGrabber.
 
+{{<alert class="warning" caption="Attention">}}
+Make sure to configure `SoMouseGrabber` fields as seen below.
+{{</alert>}}
+
 ![SoMouseGrabber](/images/tutorials/openinventor/V5_02.png "SoMouseGrabber")
 
 **You can see:**

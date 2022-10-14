@@ -19,6 +19,7 @@ menu:
 ## Basic Mechanics of MeVisLab (Example: Building a Contour Filter) {#TutorialBasicMechanics}
 
 In this chapter you will learn the basic mechanics of the MeVisLab IDE. You will learn how to re-use existing Modules to load and view data, and you will build your first processing pipeline.
+
 {{<alert class="info" caption="Extra Infos">}}
 Additional information about the basics of MeVisLab are explained {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/index.html" "here">}}
 {{</alert>}}
@@ -119,7 +120,7 @@ Double-click the module `Convolution` to open its panel. The panel allows config
 
 The module `View2D` is now displaying the smoothed image.
 
-To see the difference between the processed and the unprocessed image, click on the output of the module `ImageLoad` to view the original image in the Output Inspector . The great thing about the Output Inspector is that it can display the output of any connector in the process chain (as long as a format is used, the inspector can interpret). Simply click the connector or connection to find out more about the module output.
+To see the difference between the processed and the unprocessed image, click on the output of the module `ImageLoad` to view the original image in the Output Inspector. The great thing about the Output Inspector is that it can display the output of any connector in the process chain (as long as a format is used, the inspector can interpret). Simply click the connector or connection to find out more about the module output.
 
 There is another way of inspecting the difference between the processed and the unprocessed image. Add a second viewer module `View2D` to your workspace. The new module gets a different name: `View2D1`. It is possible to establish numerous connections from one module output to different other module inputs, but a module input can only receive one connection. Connect the module `ImageLoad` to the second viewer to display two images at the same time. You can scroll through the slices of both viewers and inspect the images.
 

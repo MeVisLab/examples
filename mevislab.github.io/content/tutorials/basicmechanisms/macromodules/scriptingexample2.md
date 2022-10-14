@@ -144,8 +144,7 @@ As a next step, we like to add a *Browse\...*-Button, like in the module
 To create the *Browse\...*-Button:
 
 1.  Create a button containing the command *fileDialog*.
-2.  Right-click {{< mousebutton "right" >}} the command to create the respective function in the.
-    Python file.
+2.  Right-click {{< mousebutton "right" >}} the command to create the respective function in the Python file.
 3.  Edit the function in the Python file, to enable the file dialog (similar function as in *LocalImage.py*).
 
 To create the Iso Generator Button:
