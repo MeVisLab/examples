@@ -47,6 +47,14 @@ the MeVisLab SDK and try to implement each step yourself. You will learn
 new mechanics and possibilities in MeVisLab step-by-step. Additional
 information and links are provided in colored boxes.
 
+The tutorials are divided into chapters for a specific topic. Each chapter contains one or more example(s).
+**The following chapters are available:**
+* [Chapter I: Basic Mechanisms](/tutorials/basicmechanisms "Basic Mechanisms of MeVisLab and the MeVisLab SDK")
+* [Chapter II: Open Inventor](/tutorials/openinventor "Using the Open Inventor toolkit")
+* [Chapter III: Visualization](/tutorials/visualization "2D and 3D Visualization examples")
+* [Chapter IV: Image Processing](/tutorials/image_processing "Processing Images")
+* [Chapter V: Basic Mechanisms](/tutorials/dataobjects "2D Contours, 3D Surfaces and Marker examples")
+
 ### Glossary {#tutorial_glossary}
 {{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:230px">Term</div> | Description |

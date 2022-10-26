@@ -17,9 +17,9 @@ menu:
 
 MeVisLab provides a lot of pre-defined data objects for usage such as [Contours](/tutorials/dataobjects/contours/contour-objects), [Surface Objects (WEMs)](/tutorials/dataobjects/surfaces/surfaceobjects) and [Markers](/tutorials/dataobjects/markers/markers).
 
-Differences between these types are explained in the following chapters and example networks are built to learn how to use them.
+**The following examples are available:**
+* [Contours](/tutorials/dataobjects/contourobjects "Creating 2D contours")
+* [Surface Objects](/tutorials/dataobjects/surfaceobjects "Creating 3D surface objects")
+* [Markers](/tutorials/dataobjects/markers "Creating markers")
 
-## Examples:
-1. [Contours](/tutorials/dataobjects/contourobjects)
-2. [Surface Objects](/tutorials/dataobjects/surfaceobjects)
-3. [Markers](/tutorials/dataobjects/markers)
+Differences between these types are explained in the following chapters and example networks are built to learn how to use them.
