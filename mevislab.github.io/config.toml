@@ -30,7 +30,7 @@ sectionPagesMenu = "main"
 
 [Author]
   name = "MeVis Medical Solutions AG"
-  copyright = "(c) Copyright {year}"
+  copyright = "{year}"
   website = "https://www.mevis.de"
 
 [module]
