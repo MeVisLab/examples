@@ -15,7 +15,7 @@ menu:
 ## Introduction
 ### Structure of CSOs
 
-MeVisLab provides modules to create contours in voxel-images. 3D objects which encapsulate these contours are called Contour Segmented Objects (CSOs).
+MeVisLab provides modules to create contours in images. 3D objects which encapsulate these contours are called Contour Segmented Objects (CSOs).
 
 **The following examples are available:**
 * [Create CSOs using editors](/tutorials/dataobjects/contours/contourexample1/)
