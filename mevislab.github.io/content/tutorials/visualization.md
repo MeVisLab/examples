@@ -23,7 +23,7 @@ In this chapter, we focus on 2D and 3D visualization and simple image interactio
 * [Image Overlays](/tutorials/visualization/visualizationexample3 "Displaying image overlays and transparency")
 * [Display 2D images in Open Inventor SoRenderArea](/tutorials/visualization/visualizationexample4 "Adding 2D images to an Open Inventor scene")
 * [Volume rendering and interactions](/tutorials/visualization/visualizationexample5 "Volume Rendering example")
-* [MeVisLab PathTracer](/tutorials/visualization/visualizationexample6 "MeVisLab PathTracer and foto realistic rendering")
+* [MeVisLab PathTracer](/tutorials/visualization/visualizationexample6 "MeVisLab PathTracer and photorealistic rendering")
 
 ## View2D and View3D
 
