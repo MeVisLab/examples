@@ -15,6 +15,13 @@ menu:
 ## Introduction
 In MeVisLab it is possible to create, visualize, process and manipulate surface objects, also known as polygon meshes. Here, we call surface objects *Winged Edge Mesh*, in short WEM. In this chapter you will get an introduction into WEMs. In addition, you will find examples on how to work with WEMs. For more information on WEMs take a look at the {{< docuLinks "/Resources/Documentation/Publish/SDK/ToolBoxReference/WEMDataStructure.html" "MeVislab Toolbox Reference" >}}. If you like to know which WEM formats can be imported into MeVisLab, take a look at the assimp documentation [here](https://github.com/assimp/assimp).
 
+**The following examples are available:**
+* [Surface Example 1: Creation of WEMs](tutorials/dataobjects/surfaces/surfaceexample1/)
+* [Surface Example 2: Processing and Modification of WEM](tutorials/dataobjects/surfaces/surfaceexample2/)
+* [Surface Example 3: Interactions with WEM](tutorials/dataobjects/surfaces/surfaceexample3/)
+* [Surface Example 4: Interactively moving WEM](tutorials/dataobjects/surfaces/surfaceexample4/)
+* [Surface Example 5: WEM - Primitive Value Lists](tutorials/dataobjects/surfaces/surfaceexample5/)
+
 [//]: <> (MVL-653)
 
 ## WEM explained with MeVisLab
@@ -55,11 +62,3 @@ In MeVisLab WEMs can consist of triangles, squares or other polygons. Most commo
 * WEMs are polygon meshes, in most cases composed of triangles
 * WEM's geometry is determined by nodes, edges, faces and normals, which can be visualized using renderer modules
 
-## Examples
-The following examples can give you a first impression of working with WEMs. You will learn how to
-
-* [Surface Example 1: Creation of WEMs](tutorials/dataobjects/surfaces/surfaceexample1/)
-* [Surface Example 2: Processing and Modification of WEM](tutorials/dataobjects/surfaces/surfaceexample2/)
-* [Surface Example 3: Interactions with WEM](tutorials/dataobjects/surfaces/surfaceexample3/)
-* [Surface Example 4: Interactively moving WEM](tutorials/dataobjects/surfaces/surfaceexample4/)
-* [Surface Example 5: WEM - Primitive Value Lists](tutorials/dataobjects/surfaces/surfaceexample5/)

@@ -28,9 +28,9 @@ modules are called global macros and can be found in MeVisLab {{< menuitem "Modu
 in packages. A package structure makes it easy to exchange projects and
 different functionalities between people.
 
-Therefore, this chapter will cover:
-1. [Package creation](./tutorials/basicmechanisms/macromodules/package/)
-2. [Creation of global macro modules](./tutorials/basicmechanisms/macromodules/globalmacromodules/)
-3. [Creation of help files and example networks](./tutorials/basicmechanisms/macromodules/helpfiles/)
-4. [GUI development: Interactions with macro modules via user interfaces (using MDL)](./tutorials/basicmechanisms/macromodules/guidesign/)
-5. [Interactions with macro modules via Python scripting](./tutorials/basicmechanisms/macromodules/pythonscripting/)
+**The following examples are available:**
+1. [Example 2.1: Package creation](./tutorials/basicmechanisms/macromodules/package/)
+2. [Example 2.2: Creation of global macro modules](./tutorials/basicmechanisms/macromodules/globalmacromodules/)
+3. [Example 2.3: Creation of help files and example networks](./tutorials/basicmechanisms/macromodules/helpfiles/)
+4. [Example 2.4: GUI development: Interactions with macro modules via user interfaces (using MDL)](./tutorials/basicmechanisms/macromodules/guidesign/)
+5. [Example 2.5: Interactions with macro modules via Python scripting](./tutorials/basicmechanisms/macromodules/pythonscripting/)

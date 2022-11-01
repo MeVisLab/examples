@@ -15,7 +15,14 @@ menu:
 ## Introduction
 ### Structure of CSOs
 
-MeVisLab provides modules to create contours in voxel-images. 3D objects which encapsulate these contours are called Contour Segmented Objects (CSOs).
+MeVisLab provides modules to create contours in images. 3D objects which encapsulate these contours are called Contour Segmented Objects (CSOs).
+
+**The following examples are available:**
+* [Create CSOs using editors](/tutorials/dataobjects/contours/contourexample1/)
+* [Create CSOs semi automatically and group CSOs](/tutorials/dataobjects/contours/contourexample2/)
+* [Create CSO overlays](/tutorials/dataobjects/contours/contourexample3/)
+* [Calculate the volume of CSOs forming objects and annotate the volume in images](/tutorials/dataobjects/contours/contourexample4/)
+* [Visualize CSOs](/tutorials/dataobjects/contours/contourexample5/)
 
 In the next image, you can see a rectangular shaped CSO. The pink circles you can see are called *Seed Points*.
 
@@ -57,15 +64,6 @@ The appearance of the CSO can be defined by using a `SoCSOVisualizationSettings`
 CSOs can also be grouped together. The following image shows two different CSO groups. Groups can be used to organize CSOs, in this case to distinguish the CSOs of the right and the left lung. [Here](/tutorials/dataobjects/contours/contours/contourexample2/) you can find more information about CSO Groups.
 
 ![CSO Groups](/images/tutorials/dataobjects/contours/DO2_11_2.png "CSO Groups")
-
-## Examples
-There is a bunch of modules which enables not only the creation, but also the manipulation, analysis and grouping of CSOs. The following examples can give you a first impression of working with CSOs. You will learn how to
-
-* [Create CSOs using editors](/tutorials/dataobjects/contours/contourexample1/)
-* [Create CSOs semi automatically and group CSOs](/tutorials/dataobjects/contours/contourexample2/)
-* [Create CSO overlays](/tutorials/dataobjects/contours/contourexample3/)
-* [Calculate the volume of CSOs forming objects and annotate the volume in images](/tutorials/dataobjects/contours/contourexample4/)
-* [Visualize CSOs](/tutorials/dataobjects/contours/contourexample5/)
 
 {{<alert class="info" caption="Extra Infos">}}
 For more information, see {{< docuLinks "/Standard/Documentation/Publish/Overviews/CSOOverview.html" "CSO Overview" >}}
