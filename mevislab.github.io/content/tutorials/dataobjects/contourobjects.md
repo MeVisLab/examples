@@ -26,7 +26,7 @@ MeVisLab provides modules to create contours in images. 3D objects which encapsu
 
 **The following examples are available:**
 * [Create CSOs using editors](/tutorials/dataobjects/contours/contourexample1/)
-* [Create CSOs semi automatically and group CSOs](/tutorials/dataobjects/contours/contourexample2/)
+* [Create CSOs semi-automatically and group CSOs](/tutorials/dataobjects/contours/contourexample2/)
 * [Create CSO overlays](/tutorials/dataobjects/contours/contourexample3/)
 * [Calculate the volume of CSOs forming objects and annotate the volume in images](/tutorials/dataobjects/contours/contourexample4/)
 * [Visualize CSOs](/tutorials/dataobjects/contours/contourexample5/)
@@ -60,7 +60,7 @@ The `SoCSOIsoEditor` and `SoCSOLiveWireEditor` are special, because they are usi
 
 ### CSO Lists and CSO Groups
 
-All created CSOs are stored in CSO lists, which can be saved and loaded on demand. The lists can not only store the coordinates of the CSOs but also additional information in form of name-value pares (using specialized modules or python scripting).
+All created CSOs are stored in CSO lists, which can be saved and loaded on demand. The lists can not only store the coordinates of the CSOs but also additional information in form of name-value pairs (using specialized modules or python scripting).
 
 ![Basic CSO Network](/images/tutorials/dataobjects/contours/BasicCSONetwork.png "Basic CSO Network")
 

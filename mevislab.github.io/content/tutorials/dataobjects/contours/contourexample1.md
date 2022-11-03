@@ -45,7 +45,7 @@ Now, add the module `SoCSOVisualizationSettings` to your workspace and connect i
 
 ![CSO Manager](/images/tutorials/dataobjects/contours/DO1_05.png "CSO Manager")
 
-Open the module to change the visualization settings of you CSOs. In
+Open the module to change the visualization settings of your CSOs. In
 this case, we change the line style (to dashed lines) and the color (to
 be red). Tick the *Auto apply* box at the bottom or press *Apply*.
 

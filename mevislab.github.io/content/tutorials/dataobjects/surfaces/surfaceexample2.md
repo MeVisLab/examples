@@ -33,7 +33,7 @@ Now, we like to calculate the distance between our two WEMs. In order to do this
 ![Calculate surface distance](/images/tutorials/dataobjects/surfaces/DO7_03.png "Calculate surface distance")
 
 #### Annotations in 3D
-As a last step, we like to draw the calculated distances as annotations into the image. This is a little bit tricky as we need the module `SoView2DAnnotation` to create annotations in a 3D viewer. Add and connect the following modules as shown. What is done here? We use the module `SoView2D` to display a 2D image in the `SoExaminerViewer`, in addition to the WEMs we already see in the viewer. We do not see an additional image in the viewer, as we chose no proper input image to the module `SoView2D` using the module `ConstantImage` with value 0. Thus, we pretend having a 2D image, which we can annotate. Now, we use the module `SoView2DAnnotation` to annotate the pretended-2D-image, displayed in the viewer of `SoExaminerViewer`. We already used the module `SoView2DAnnotation` in [Contour Example 4](tutorials/dataobjects/contours/contourexample4/).
+As a last step, we like to draw the calculated distances as annotations into the image. This is a little bit tricky as we need the module `SoView2DAnnotation` to create annotations in a 3D viewer. Add and connect the following modules as shown. What is done here? We use the module `SoView2D` to display a 2D image in the `SoExaminerViewer`, in addition to the WEMs we already see in the viewer. We do not see an additional image in the viewer, as we chose no proper input image to the module `SoView2D` using the module `ConstantImage` with value 0. Thus, we pretend to have a 2D image, which we can annotate. Now, we use the module `SoView2DAnnotation` to annotate the pretended-2D-image, displayed in the viewer of `SoExaminerViewer`. We already used the module `SoView2DAnnotation` in [Contour Example 4](tutorials/dataobjects/contours/contourexample4/).
 
 ![Annotation modules](/images/tutorials/dataobjects/surfaces/DO7_05.png "Annotation modules")
 
@@ -57,7 +57,7 @@ Now, you can see the result in the viewer. If the annotations are not visible, p
 ![Display surface distance in viewer](/images/tutorials/dataobjects/surfaces/DO7_09.png "Display surface distance in viewer")
 
 ## Summary
-* There are several modules to modify and process WEMs, eg. `WEMModify`, `WEMSmooth`.
+* There are several modules to modify and process WEMs, e.g. `WEMModify`, `WEMSmooth`.
 * To calculate the minimal and maximal surface distance between two WEMs, use the module `WEMSurfaceDistance`.
 * To create annotations in 3D, the module `SoView2DAnnotation` can be used, when adapted to be used in combination with a 3D-viewer. 
 

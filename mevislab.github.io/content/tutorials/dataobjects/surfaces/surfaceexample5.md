@@ -26,7 +26,7 @@ We start our network by initializing two WEMs using `WEMInitialize`. We chose an
 ![WEMInitialize](/images/tutorials/dataobjects/surfaces/DO12_01.png "WEMInitialize")
 
 #### Subdividing WEM edges
-As a next step, add and connect two modules `WEMSubdivide`, to further divide edges and surfaces. With this step we increase the node density to have an accurate distance measurement.
+As a next step, add and connect two modules `WEMSubdivide` to further divide edges and surfaces. With this step we increase the node density to have an accurate distance measurement.
 
 ![WEMSubdivide](/images/tutorials/dataobjects/surfaces/DO12_02.png "WEMSubdivide")
 
@@ -54,7 +54,7 @@ To translate the LUT values from the PVLs into color, open the panel of `SoLUTEd
 
 Our goal is to colorize faces of the *Octasphere* in red, if they are close to or even intersect the cubic WEM. And we like to colorize faces of the *Octasphere* in green, if these faces are far away from the cubic WEM.
 
-Open the tab *Editor* of the panel of `SoLUTEditor`. This tab allows to interactively select a color for each PVL-value. Select the color point on the left side. Its *Position* value is supposed to be 0, so we like to select the *Color* *red* in order to color-code small distances between the WEMs in red. In addition to that, increase the *Opacity* of this color point. Next, select the right color point. Its *Position* is supposed to be 3 and thus equals value of the field *New Range Max*. As these color point colorize large distances between WEMs, select the *Color* *green*. You can add new color points by clicking on the colorized bar in the panel. Select for example the *Color* *yellow* for a color point in the middle. Select and shift the color points to get the desired visualization.
+Open the tab *Editor* of the panel of `SoLUTEditor`. This tab allows to interactively select a color for each PVL-value. Select the color point on the left side. Its *Position* value is supposed to be 0, so we like to select the *Color* *red* in order to color-code small distances between the WEMs in red. In addition to that, increase the *Opacity* of this color point. Next, select the right color point. Its *Position* is supposed to be 3 and thus equals value of the field *New Range Max*. As these color points colorize large distances between WEMs, select the *Color* *green*. You can add new color points by clicking on the colorized bar in the panel. Select for example the *Color* *yellow* for a color point in the middle. Select and shift the color points to get the desired visualization.
 
 ![Changing the LUT](/images/tutorials/dataobjects/surfaces/DO12_09.png "Changing the LUT")
 
@@ -63,7 +63,7 @@ Add the module `WEMModify` to your workspace and connect the module as shown. If
 ![WEMModify](/images/tutorials/dataobjects/surfaces/DO12_10.png "WEMModify")
 
 ### Interactive shift of WEMs
-As a next step, we like to implement the interactive shift of the WEM. Add the modules `SoTranlateDragger1` and `SyncVector`. Connect all translation vectors: Draw connections from the field *Translate* of `SoTranslateDragger1` to *Vector1* of `SyncVector`, from *Vector2* of `SyncVector` to *Translate* of `WEMModify`, and at last from *Translate* of `WEMModify` to *Translate* of `SoTranslateDragger1`.
+As a next step, we like to implement the interactive shift of the WEM. Add the modules `SoTranslateDragger1` and `SyncVector`. Connect all translation vectors: Draw connections from the field *Translate* of `SoTranslateDragger1` to *Vector1* of `SyncVector`, from *Vector2* of `SyncVector` to *Translate* of `WEMModify`, and at last from *Translate* of `WEMModify` to *Translate* of `SoTranslateDragger1`.
 
 You can now interactively drag the WEM insight the viewer.
 

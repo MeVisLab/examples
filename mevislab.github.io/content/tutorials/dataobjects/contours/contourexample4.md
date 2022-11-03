@@ -36,7 +36,7 @@ input of `SoView2DAnnotation`.
 ![Display Volume](/images/tutorials/dataobjects/contours/DO4_02.png "Display Volume")
 
 Go back to the tap *General* to select the *Annotation Mode User*. For
-each annotation mode exist a separate tab.
+each annotation mode exists a separate tab.
 
 ![Annotate Image](/images/tutorials/dataobjects/contours/DO4_03_2.png "Annotate Image")
 

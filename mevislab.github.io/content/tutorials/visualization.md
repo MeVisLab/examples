@@ -43,6 +43,12 @@ An easy way to display data and images in 2D and 3D is by using the Modules `Vie
 
 5. More features can be found on the help page.
 
+{{<alert class="info" caption="Additional Information">}}
+In case you are not happy with the default `View2D` interactions, you can connect a `View2DExtensions` module for defining additional interactions like zoom or modify the behavior of the mouse buttons.
+
+![View2DExtensions](/images/tutorials/visualization/V0a.png "View2DExtensions")
+{{</alert>}}
+
 ### View3D
 
 1. Zoom in and out using the mouse wheel {{< mousebutton "middle" >}}.

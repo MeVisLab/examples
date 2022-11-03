@@ -13,7 +13,7 @@ menu:
 ---
 # Surface Example 1: Create Winged Edge Mesh out of voxel-images and CSOs
 ## Introduction
-In this example you will learn how to create Winged Edge Mesh (WEM). There are several ways how to create WEMs, a few of them are shown in this example. Instead of creating WEMs, it is also possible to load existing WEMs. This was already shown in [Surface Objects (WEM)](tutorials/dataobjects/surfaceobjects) chapter.
+In this example you will learn how to create a Winged Edge Mesh (WEM). There are several ways how to create WEMs, a few of them are shown in this example. Instead of creating WEMs, it is also possible to load existing WEMs. This was already shown in [Surface Objects (WEM)](tutorials/dataobjects/surfaceobjects) chapter.
 
 ## Steps to do
 
@@ -36,7 +36,7 @@ Next, add and connect the module `CSOToSurface` to convert CSOs into a surface o
 
 ![WEM](/images/tutorials/dataobjects/surfaces/DO6_03.png "WEM")
 
-It is also possible to display the WEM in 2D in addition to the original image. In order to do that, add and connect the modules `SoRenderSurfaceIntersection` and `SoView2DScene`. The module `SoRenderSurfaceIntersection` allows to display the voxel image and the created WEM in one viewer using the same coordinates. In its panel, you can chose the color used for visualizing the WEM. The module `SoView2DScene` renders an Open Inventor scene graph into 2D slices.
+It is also possible to display the WEM in 2D in addition to the original image. In order to do that, add and connect the modules `SoRenderSurfaceIntersection` and `SoView2DScene`. The module `SoRenderSurfaceIntersection` allows to display the voxel image and the created WEM in one viewer using the same coordinates. In its panel, you can choose the color used for visualizing the WEM. The module `SoView2DScene` renders an Open Inventor scene graph into 2D slices.
 
 ![WEM](/images/tutorials/dataobjects/surfaces/DO6_04.png "WEM")
 
