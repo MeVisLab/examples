@@ -91,7 +91,7 @@ To enable transformations in all directions, we need to connect the modules `SoM
 
 ![Interactive dragging of objects](/images/tutorials/dataobjects/surfaces/DO10_12.png "Interactive dragging of objects")
 
-As a next step, we like to enlarge the planes, to make them exceed the object. For that, add the module `CalculateVectorFromVectors` to your network. Open its panel and connect the field *Size* of `WEMInfo` to *Vector 1*. We like to enlarge the size by one, so we add up the vector (1,1,1), by editing the field *Vector 2*. Now, connect the *Result* to the field *V* of the module `DecomposeVector3`.
+As a next step, we like to enlarge the planes, to make them exceed the object. For that, add the module `CalculateVectorFromVectors` to your network. Open its panel and connect the field *Size* of `WEMInfo` to *Vector 1*. We like to enlarge the size by one, so we add the vector (1,1,1), by editing the field *Vector 2*. Now, connect the *Result* to the field *V* of the module `DecomposeVector3`.
 
 ![Interactive dragging of objects](/images/tutorials/dataobjects/surfaces/DO10_13.png "Interactive dragging of objects")
 

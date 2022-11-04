@@ -26,7 +26,7 @@ Now, open the panel of `CSOIsoGenerator` to set the *Iso Value* to 1200. If you 
 the panel, you can see the creation of CSOs on every slide, when opening
 the module `View2D`. In addition to that the number of CSOs is displayed in the `CSOManager`. The module
 `CSOIsoGenerator` generates iso-contours for each slice at a fixed iso
-value. This means, closed CSOs are formed based on the detection of the
+value. This means, that closed CSOs are formed based on the detection of the
 voxel value of 1200 on every slice.
 
 ![Data Objects Contours Example 5](/images/tutorials/dataobjects/contours/DO5_02.png "Data Objects Contours Example 5")

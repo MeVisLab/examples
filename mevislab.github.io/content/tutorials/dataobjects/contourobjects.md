@@ -55,12 +55,12 @@ The following images show editors available in MeVisLab for drawing CSOs:
 The `SoCSOIsoEditor` and `SoCSOLiveWireEditor` are special, because they are using an algorithm to detect edges themselves.
 
 * The `SoCSOIsoEditor` generates iso-contours interactively.
-* The `SoCSOLiveWireEditor` renders and semi-interactively generated CSOs based on the LiveWire algorithm.
+* The `SoCSOLiveWireEditor` renders and semi-interactively generates CSOs based on the LiveWire algorithm.
 {{</alert>}}
 
 ### CSO Lists and CSO Groups
 
-All created CSOs are stored in CSO lists, which can be saved and loaded on demand. The lists can not only store the coordinates of the CSOs but also additional information in form of name-value pairs (using specialized modules or python scripting).
+All created CSOs are stored in CSO lists, which can be saved and loaded on demand. The lists can not only store the coordinates of the CSOs, but also additional information in the form of name-value pairs (using specialized modules or Python scripting).
 
 ![Basic CSO Network](/images/tutorials/dataobjects/contours/BasicCSONetwork.png "Basic CSO Network")
 

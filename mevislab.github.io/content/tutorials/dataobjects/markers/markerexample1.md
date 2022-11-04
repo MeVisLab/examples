@@ -26,7 +26,7 @@ We changed the names of the modules `SoView2DMarkerEditor` and `XMarkerLIstConta
 
 As a next step, add two more modules: `SoView2DMarkerEditor` and `XMarkerLIstContainer`.
 
-Change their names and the marker color to *green* and connect them as shown. We also like to change the mouse button you need to press, to create a marker. This enables to place both types of markers, the red ones and the green ones. In order to do this, open the panel of `GreenMarker`. Under *Buttons* you can adjust, which button needs to be pressed in order to place a marker. Select here the *Button2* (the middle button of your mouse {{< mousebutton "middle" >}}) instead of *Button1* (the left mouse button {{< mousebutton "left" >}}).
+Change their names and the marker color to *green* and connect them as shown. We also like to change the mouse button you need to press, in order to create a marker. This allows to place both types of markers, the red ones and the green ones. In order to do this, open the panel of `GreenMarker`. Under *Buttons* you can adjust, which button needs to be pressed in order to place a marker. Select the *Button2* (the middle button of your mouse {{< mousebutton "middle" >}}) instead of *Button1* (the left mouse button {{< mousebutton "left" >}}).
 
 In addition to that, we like to allow only one green marker to be present. If we place a new marker, the old marker should vanish. For this, select the *Max Size* to be one and select *Overflow Mode: Remove All*.
 

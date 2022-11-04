@@ -59,7 +59,7 @@ Now, you can see the result in the viewer. If the annotations are not visible, p
 ## Summary
 * There are several modules to modify and process WEMs, e.g. `WEMModify`, `WEMSmooth`.
 * To calculate the minimal and maximal surface distance between two WEMs, use the module `WEMSurfaceDistance`.
-* To create annotations in 3D, the module `SoView2DAnnotation` can be used, when adapted to be used in combination with a 3D-viewer. 
+* To create annotations in 3D, the module `SoView2DAnnotation` can be used, when adapted to be used in combination with a 3D viewer. 
 
 
 {{< networkfile "examples/data_objects/surface_objects/example2" >}}
