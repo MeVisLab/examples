@@ -17,20 +17,6 @@ menu:
 
 MeVisLab provides modules to create contours in images. 3D objects which encapsulate these contours are called Contour Segmented Objects (CSOs).
 
-**The following examples are available:**
-* [Create CSOs using editors](/tutorials/dataobjects/contours/contourexample1/)
-* [Create CSOs semi automatically and group CSOs](/tutorials/dataobjects/contours/contourexample2/)
-* [Create CSO overlays](/tutorials/dataobjects/contours/contourexample3/)
-* [Calculate the volume of CSOs forming objects and annotate the volume in images](/tutorials/dataobjects/contours/contourexample4/)
-* [Visualize CSOs](/tutorials/dataobjects/contours/contourexample5/)
-
-**The following examples are available:**
-* [Create CSOs using editors](/tutorials/dataobjects/contours/contourexample1/)
-* [Create CSOs semi-automatically and group CSOs](/tutorials/dataobjects/contours/contourexample2/)
-* [Create CSO overlays](/tutorials/dataobjects/contours/contourexample3/)
-* [Calculate the volume of CSOs forming objects and annotate the volume in images](/tutorials/dataobjects/contours/contourexample4/)
-* [Visualize CSOs](/tutorials/dataobjects/contours/contourexample5/)
-
 In the next image, you can see a rectangular shaped CSO. The pink circles you can see are called *Seed Points*.
 
 *Seed Points* define the shape of the CSO. In case of a rectangle, you need four *Seed Points* forming the corners, to define the whole rectangle.

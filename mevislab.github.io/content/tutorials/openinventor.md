@@ -19,11 +19,6 @@ Besides blue modules (ML Modules) and brown macro modules, there is a third type
 
 This chapter will start with an example Open Inventor scene. Explanations to Open Inventor scenes will follow the example.
 
-**The following examples are available:**
-* [Example 1: Open Inventor Objects](./tutorials/openinventor/openinventorobjects "General information about Open Inventor objects")
-* [Example 2: Mouse Interactions in Open Inventor](./tutorials/openinventor/mouseinteractions "Mouse interactions in Open Inventor Scenes")
-* [Example 3: Camera Interactions](./tutorials/openinventor/camerainteraction "Camera interaction in Open Inventor Scenes")
-
 ## Open Inventor Scenes and Execution of Scene Graphs{#sceneGraphs}
 
 Inventor scenes are organized in structures called scene graphs. A scene graph is made up of nodes, which represent 3D objects to be drawn, properties of the 3D objects, nodes that combine other nodes and are used for hierarchical grouping, and others (cameras, lights, etc.). These nodes are accordingly called shape nodes, property nodes, group nodes and so on. Each node contains one or more pieces of information stored in fields. For example, the Sphere node contains only its radius, stored in its *radius* field. Open Inventor modules function as Inventor nodes, so they may have input connectors to add Inventor child nodes (modules) and output connectors to link themselves to Inventor parent nodes (modules).

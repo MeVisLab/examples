@@ -12,8 +12,15 @@ menu:
     parent: "tutorials"
 ---
 # Image Processing in MeVisLab {#TutorialImageProcessing}
+Digital image processing is the use of a digital computer to process digital images through an algorithm (see [Wikipedia](https://en.wikipedia.org/wiki/Digital_image_processing)).
 
-## Example 1: Filter: OPEN {#TutorialImageProcessingExample1}
-## Example 2: Transformation: OPEN {#TutorialImageProcessingExample2}
-## Example 3: Statistics: OPEN {#TutorialImageProcessingExample3}
-## Example 4: Arithmetics: OPEN {#TutorialImageProcessingExample4}
+MeVisLab provides multiple modules for image processing tasks, such as:
+* Filters
+* Masks
+* Transformations
+* Arithmetics
+* Statistics
+
+For details about Image Processing in MeVisLab, see the {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch06.html#FOImageProcessing" "MeVisLab Documentation">}}
+
+In this chapter, you will find some examples for different types of image processing in MeVisLab.

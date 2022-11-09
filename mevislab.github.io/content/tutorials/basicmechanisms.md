@@ -20,11 +20,6 @@ menu:
 
 In this chapter you will learn the basic mechanics of the MeVisLab IDE. You will learn how to re-use existing Modules to load and view data, and you will build your first processing pipeline.
 
-**The following additional examples are available:**
-* [Example 1: Data Import in MeVisLab](/tutorials/basicmechanisms/dataimport "How to import DICOM and other image data in MeVisLab")
-* [Example 2: Macro Modules](/tutorials/basicmechanisms/macromodules "Developing Macro Modules with User Interfaces and Python Scripting")
-* [Example 3: Creating a simple application](/tutorials/basicmechanisms/macromodules/viewerexample "Developing a tiny application in MeVisLab")
-
 {{<alert class="info" caption="Extra Infos">}}
 Additional information about the basics of MeVisLab are explained {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/index.html" "here">}}
 {{</alert>}}
