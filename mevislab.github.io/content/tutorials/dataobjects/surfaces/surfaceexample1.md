@@ -52,4 +52,4 @@ If you like to transform WEMs back into CSOs, take a look at the module `WEMClip
 Whenever converting voxel data to pixel data, keep the so called **Partial Volume Effect** in mind, see [wikipedia](https://en.wikipedia.org/wiki/Partial_volume_(imaging) "Partial Volume Effect") for details.
 {{</alert>}}
 
-{{< networkfile "examples/data_objects/surface_objects/example1" >}}
+{{< networkfile "examples/data_objects/surface_objects/example1/SurfaceExample1.mlab" >}}

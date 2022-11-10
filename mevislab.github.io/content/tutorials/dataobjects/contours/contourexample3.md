@@ -45,6 +45,6 @@ viewer.
 * The module `VoxelizeCSO` converts CSOs to voxel images
 * Create an overlay out of voxel images using `SoView2DOverlay`
 
-{{< networkfile "examples/data_objects/contours/example3" >}}
+{{< networkfile "examples/data_objects/contours/example3/ContourExample3.mlab" >}}
 
  [//]: <> (MVL-682)

@@ -83,4 +83,4 @@ The result can be seen in the next image.
 * PVLs containing LUT values can be used to color-code additional information on the WEM surface.
 
 
-{{< networkfile "examples/data_objects/surface_objects/example5" >}}
+{{< networkfile "examples/data_objects/surface_objects/example5/SurfaceExample5.mlab" >}}

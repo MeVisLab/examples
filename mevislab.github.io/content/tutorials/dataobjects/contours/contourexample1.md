@@ -70,6 +70,6 @@ Create CSOs with green color and ellipsoid shapes.
 * A list of CSOs can be stored in the `CSOManager`
 * Properties of CSOs can be changed using `SoCSOVisualizationSettings`
 
-{{< networkfile "examples/data_objects/contours/example1" >}}
+{{< networkfile "examples/data_objects/contours/example1/ContourExample1.mlab" >}}
 
  [//]: <> (MVL-682)

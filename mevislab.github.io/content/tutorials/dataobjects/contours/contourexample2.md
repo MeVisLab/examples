@@ -84,6 +84,6 @@ As a last step, we need to disconnect the module `SoCSOVisualizationSettings`, a
 * CSO interpolations can be created using `CSOSliceInterpolator`
 * CSOs can be grouped together using the `CSOManager`
 
-{{< networkfile "examples/data_objects/contours/example2" >}}
+{{< networkfile "examples/data_objects/contours/example2/ContourExample2.mlab" >}}
 
  [//]: <> (MVL-682)

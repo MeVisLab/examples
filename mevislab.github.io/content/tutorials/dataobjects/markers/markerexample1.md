@@ -51,4 +51,4 @@ To automatically update the calculation when placing a new marker, we need to te
 * Markers can be stored and managed using `XMarkerListContainer`
 * The distance between markers can be calculated using `DistanceFromXMarkerList`
 
-{{< networkfile "examples/data_objects/markers/example1" >}}
+{{< networkfile "examples/data_objects/markers/example1/Marker_Example1.mlab" >}}

@@ -53,6 +53,6 @@ all CSOs together. In this case all scanned bones can be seen.
 * `CSOIsoGenerator` enables automatic COS generation based on an iso value
 * Ghosting allows to display CSOs of previous and following slices
 
-{{< networkfile "examples/data_objects/contours/example5" >}}
+{{< networkfile "examples/data_objects/contours/example5/ContourExample5.mlab" >}}
 
  [//]: <> (MVL-682)

@@ -62,4 +62,4 @@ Now, you can see the result in the viewer. If the annotations are not visible, p
 * To create annotations in 3D, the module `SoView2DAnnotation` can be used, when adapted to be used in combination with a 3D viewer. 
 
 
-{{< networkfile "examples/data_objects/surface_objects/example2" >}}
+{{< networkfile "examples/data_objects/surface_objects/example1/SurfaceExample1.mlab" >}}

@@ -36,4 +36,4 @@ Start the example by adding the module `LocalImage` to your workspace to load th
 ## Summary
 * Multiple images can be synchronized by the `SynchroView2D` module
 
-{{< networkfile "examples/visualization/example1/" >}}
+{{< networkfile "examples/visualization/example1/VisualizationExample1.mlab" >}}

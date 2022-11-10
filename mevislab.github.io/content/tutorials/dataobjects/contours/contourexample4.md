@@ -58,6 +58,6 @@ the annotations of the viewer by pressing the keyboard shortcut {{< keyboard "A"
 * `SoView2DAnnotation` enables to manually change the annotation mode of a viewer
 * Annotations shown in a `View2D` can be customized by using a `SoView2DAnnotation` module
 
-{{< networkfile "examples/data_objects/contours/example4" >}}
+{{< networkfile "examples/data_objects/contours/example4/ContourExample4.mlab" >}}
 
  [//]: <> (MVL-682)

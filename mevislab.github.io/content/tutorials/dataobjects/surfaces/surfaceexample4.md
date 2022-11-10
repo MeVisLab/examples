@@ -108,4 +108,4 @@ The result can be seen in the next image. This module can now be used for intera
 * A family of `SoDragger` modules is available, which can be used to interactively modify Open Inventor objects.
 
 
-{{< networkfile "examples/data_objects/surface_objects/example4" >}}
+{{< networkfile "examples/data_objects/surface_objects/example4/SurfaceExample4.zip" >}}

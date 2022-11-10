@@ -210,4 +210,4 @@ Scrolling through slices in the `View2D` module now logs a message containing th
 * Parameter Fields using the internalName of an existing field in your network allows re-using this UI element in your own UI. Changes in your UI are applied to the field in the module.
 * Field Listeners allow reacting on changes of a field value in Python.
 
-{{< networkfile "examples/basic_mechanisms/viewer_application/" >}}
+{{< networkfile "examples/basic_mechanisms/viewer_application/viewerexample.mlab" >}}
