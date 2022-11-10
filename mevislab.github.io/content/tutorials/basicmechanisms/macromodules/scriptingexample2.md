@@ -12,6 +12,9 @@ menu:
     parent: "macro_modules"
 ---
 # Example 2.5.2: Module interactions via Python scripting
+
+{{< youtube "hGq6vA7Ll9Q" >}}
+
 ## Introduction
 
 In this example, you will learn how to add Python scripting to your User Interface. The network used in [Chapter V](tutorials/dataobjects/contours/contourexample5/) will be used for creating the Macro Module.
@@ -335,4 +338,4 @@ TabViewItem Settings {
 * Field listeners can be used to activate Python functions triggered by a change of defined parameter fields.
 * Use the view *Scripting Assistant* can be used to translate actions into Python code.
 
-{{< networkfile "examples/basic_mechanisms/macro_modules_and_module_interaction/example2/" >}}
+{{< networkfile "examples/basic_mechanisms/macro_modules_and_module_interaction/example2/ScriptingExample2.zip" >}}

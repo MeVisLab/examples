@@ -17,14 +17,6 @@ MeVisLab contains a whole toolkit to visualize data and images. 2D, 3D and 4D re
 
 In this chapter, we focus on 2D and 3D visualization and simple image interactions. Not only pixel- and voxel-based data can be visualized, but also scene objects and 3D scenes (see [here](/tutorials/openinventor#TutorialOpenInventorModules)).
 
-**The following examples are available:**
-* [Synchronous view of two images](/tutorials/visualization/visualizationexample1 "Show the same image in multiple viewers")
-* [Creating a magnifier](/tutorials/visualization/visualizationexample2 "Creating a magnifier from a rectangle")
-* [Image Overlays](/tutorials/visualization/visualizationexample3 "Displaying image overlays and transparency")
-* [Display 2D images in Open Inventor SoRenderArea](/tutorials/visualization/visualizationexample4 "Adding 2D images to an Open Inventor scene")
-* [Volume rendering and interactions](/tutorials/visualization/visualizationexample5 "Volume Rendering example")
-* [MeVisLab PathTracer](/tutorials/visualization/visualizationexample6 "MeVisLab PathTracer and photorealistic rendering")
-
 ## View2D and View3D
 
 An easy way to display data and images in 2D and 3D is by using the Modules `View2D` and `View3D`. What can you do with these viewers?
@@ -42,6 +34,12 @@ An easy way to display data and images in 2D and 3D is by using the Modules `Vie
 4. Toggle between multiple timepoints (if available) via {{< keyboard "ArrowLeft" >}} and {{< keyboard "ArrowRight" >}}
 
 5. More features can be found on the help page.
+
+{{<alert class="info" caption="Additional Information">}}
+In case you are not happy with the default `View2D` interactions, you can connect a `View2DExtensions` module for defining additional interactions like zoom or modify the behavior of the mouse buttons.
+
+![View2DExtensions](/images/tutorials/visualization/V0a.png "View2DExtensions")
+{{</alert>}}
 
 ### View3D
 

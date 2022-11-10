@@ -51,4 +51,4 @@ If you now select your favorite slice of the bone in the Viewer `SoRenderArea` a
 * Modules of the `SoView2D`-family create or interact with scene objects and are based on the module `SoView2D`, which can convert a voxel-image into a scene object
 * The `SoRenderArea` module provides functionalities for screenshots and movie generation
 
-{{< networkfile "examples/visualization/example4/" >}}
+{{< networkfile "examples/visualization/example4/VisualizationExample4.mlab" >}}

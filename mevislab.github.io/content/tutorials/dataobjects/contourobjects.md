@@ -17,13 +17,6 @@ menu:
 
 MeVisLab provides modules to create contours in images. 3D objects which encapsulate these contours are called Contour Segmented Objects (CSOs).
 
-**The following examples are available:**
-* [Create CSOs using editors](/tutorials/dataobjects/contours/contourexample1/)
-* [Create CSOs semi automatically and group CSOs](/tutorials/dataobjects/contours/contourexample2/)
-* [Create CSO overlays](/tutorials/dataobjects/contours/contourexample3/)
-* [Calculate the volume of CSOs forming objects and annotate the volume in images](/tutorials/dataobjects/contours/contourexample4/)
-* [Visualize CSOs](/tutorials/dataobjects/contours/contourexample5/)
-
 In the next image, you can see a rectangular shaped CSO. The pink circles you can see are called *Seed Points*.
 
 *Seed Points* define the shape of the CSO. In case of a rectangle, you need four *Seed Points* forming the corners, to define the whole rectangle.
@@ -48,12 +41,12 @@ The following images show editors available in MeVisLab for drawing CSOs:
 The `SoCSOIsoEditor` and `SoCSOLiveWireEditor` are special, because they are using an algorithm to detect edges themselves.
 
 * The `SoCSOIsoEditor` generates iso-contours interactively.
-* The `SoCSOLiveWireEditor` renders and semi-interactively generated CSOs based on the LiveWire algorithm.
+* The `SoCSOLiveWireEditor` renders and semi-interactively generates CSOs based on the LiveWire algorithm.
 {{</alert>}}
 
 ### CSO Lists and CSO Groups
 
-All created CSOs are stored in CSO lists, which can be saved and loaded on demand. The lists can not only store the coordinates of the CSOs but also additional information in form of name-value pares (using specialized modules or python scripting).
+All created CSOs are stored in CSO lists, which can be saved and loaded on demand. The lists can not only store the coordinates of the CSOs, but also additional information in the form of name-value pairs (using specialized modules or Python scripting).
 
 ![Basic CSO Network](/images/tutorials/dataobjects/contours/BasicCSONetwork.png "Basic CSO Network")
 

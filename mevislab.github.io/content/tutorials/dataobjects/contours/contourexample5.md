@@ -24,9 +24,9 @@ Load the example image *Bone.tiff*.
 ### Automatic creation of CSOs based on the iso value
 Now, open the panel of `CSOIsoGenerator` to set the *Iso Value* to 1200. If you press *Update* in
 the panel, you can see the creation of CSOs on every slide, when opening
-the module `View2D`. In addition to that the number of CSOs ins displayd in the `CSOManager`. The module
-`CSOIsoGenerator` generates iso-controus for each slice at a fixed iso
-value. This means, closed CSOs are formed based on the detection of the
+the module `View2D`. In addition to that the number of CSOs is displayed in the `CSOManager`. The module
+`CSOIsoGenerator` generates iso-contours for each slice at a fixed iso
+value. This means that closed CSOs are formed based on the detection of the
 voxel value of 1200 on every slice.
 
 ![Data Objects Contours Example 5](/images/tutorials/dataobjects/contours/DO5_02.png "Data Objects Contours Example 5")
@@ -35,7 +35,7 @@ voxel value of 1200 on every slice.
 Now, we like to make CSOs of previous and subsequent slices visible (Ghosting). In
 order to do that, open the panel of `SoCSOVisualizationSettings` and
 open the tab *Misc*. Increase the parameter `Ghosting depth in voxel`,
-which shows you the number of slices above an below the current slice,
+which shows you the number of slices above and below the current slice,
 which CSOs are also seen in the viewer. The result can be seen in the
 viewer.
 
@@ -53,6 +53,6 @@ all CSOs together. In this case all scanned bones can be seen.
 * `CSOIsoGenerator` enables automatic COS generation based on an iso value
 * Ghosting allows to display CSOs of previous and following slices
 
-{{< networkfile "examples/data_objects/contours/example5" >}}
+{{< networkfile "examples/data_objects/contours/example5/ContourExample5.mlab" >}}
 
  [//]: <> (MVL-682)

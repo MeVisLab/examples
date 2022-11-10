@@ -15,9 +15,6 @@ menu:
 ## Introduction
 In MeVisLab you can equip images and other data objects with markers. In this example you will see how to create, process and use markers.
 
-**The following examples are available:**
-* [Distance between Markers](/tutorials/dataobjects/markers/markerexample1/)
-
 ## Marker Creation and Rendering
 To create markers, you can use a marker editor, for example the `SoView2DMarkerEditor`. Connect this editor to a viewer as shown below. Now you can interactively create new markers. Connect the module `XMarkerListContainer` to your marker editor to store markers in a list.
 

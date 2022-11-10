@@ -61,4 +61,4 @@ The `SoView2DOverlay` module is explained {{< docuLinks "/Standard/Documentation
 The `SoView2DOverlay` module is not intended to work with `OrthoView2D`; in this case, use a `GVROrthoOverlay`.
 {{</alert>}}
 
-{{< networkfile "examples/visualization/example3/" >}}
+{{< networkfile "examples/visualization/example3/VisualizationExample3.mlab" >}}

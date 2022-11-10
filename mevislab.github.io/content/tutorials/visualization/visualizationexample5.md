@@ -60,4 +60,4 @@ Open the panels of both modules and select the axis the image should rotate arou
 * The module `SoGVRVolumeRenderer` renders paged images like DICOM files in a GVR.
 * Lookup Tables (LUT) allow you to modify the color of your renderings
 
-{{< networkfile "examples/visualization/example5/" >}}
+{{< networkfile "examples/visualization/example5/VisualizationExample5.mlab" >}}

@@ -61,7 +61,7 @@ We like to switch the visualization of the plane, in dependence of the mouse pos
 
 ![Interactive dragging of objects](/images/tutorials/dataobjects/surfaces/DO10_06_02.png "Interactive dragging of objects")
 
-Open the panels of the modules `SoMaterial`. Change the *Transparency* of the first `SoMaterial` module to make the plane invisible, when not hovering over the plane. Furthermore, changed the *Diffuse Color* of the module `SoMaterial1` to red, so that the plane appears in red, when hovering over it.
+Open the panels of the modules `SoMaterial`. Change the *Transparency* of the first `SoMaterial` module to make the plane invisible, when not hovering over the plane. Furthermore, we changed the *Diffuse Color* of the module `SoMaterial1` to red, so that the plane appears in red, when hovering over it.
 
 ![Interactive dragging of objects](/images/tutorials/dataobjects/surfaces/DO10_07.png "Interactive dragging of objects")
 
@@ -91,7 +91,7 @@ To enable transformations in all directions, we need to connect the modules `SoM
 
 ![Interactive dragging of objects](/images/tutorials/dataobjects/surfaces/DO10_12.png "Interactive dragging of objects")
 
-As a next step, we like to enlarge the planes, to make them exceed the object. For that, add the module `CalculateVectorFromVectors` to your network. Open its panel and connect the field *Size* of `WMEInfo` to *Vector 1*. We like to enlarge the size by one, so we add up the vector (1,1,1), by editing the field *Vector 2*. Now, connect the *Result* to the field *V* of the module `DecomposeVector3`.
+As a next step, we like to enlarge the planes, to make them exceed the object. For that, add the module `CalculateVectorFromVectors` to your network. Open its panel and connect the field *Size* of `WEMInfo` to *Vector 1*. We like to enlarge the size by one, so we add the vector (1,1,1), by editing the field *Vector 2*. Now, connect the *Result* to the field *V* of the module `DecomposeVector3`.
 
 ![Interactive dragging of objects](/images/tutorials/dataobjects/surfaces/DO10_13.png "Interactive dragging of objects")
 
@@ -105,7 +105,7 @@ The result can be seen in the next image. This module can now be used for intera
 
 
 ## Summary
-* It exist a family of `SoDragger` modules, which can be used to interactively modify Open Inventor objects.
+* A family of `SoDragger` modules is available, which can be used to interactively modify Open Inventor objects.
 
 
-{{< networkfile "examples/data_objects/surface_objects/example4" >}}
+{{< networkfile "examples/data_objects/surface_objects/example4/SurfaceExample4.zip" >}}

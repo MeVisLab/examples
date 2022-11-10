@@ -35,8 +35,8 @@ input of `SoView2DAnnotation`.
 
 ![Display Volume](/images/tutorials/dataobjects/contours/DO4_02.png "Display Volume")
 
-Go back to the tap *General* to select the *Annotation Mode User*. For
-each annotation mode exist a separate tab.
+Go back to the tap *General* to select the *Annotation Mode User*. A separate tab exists for
+each annotation mode.
 
 ![Annotate Image](/images/tutorials/dataobjects/contours/DO4_03_2.png "Annotate Image")
 
@@ -58,6 +58,6 @@ the annotations of the viewer by pressing the keyboard shortcut {{< keyboard "A"
 * `SoView2DAnnotation` enables to manually change the annotation mode of a viewer
 * Annotations shown in a `View2D` can be customized by using a `SoView2DAnnotation` module
 
-{{< networkfile "examples/data_objects/contours/example4" >}}
+{{< networkfile "examples/data_objects/contours/example4/ContourExample4.mlab" >}}
 
  [//]: <> (MVL-682)
