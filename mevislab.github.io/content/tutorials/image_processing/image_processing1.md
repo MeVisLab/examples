@@ -40,3 +40,5 @@ The selected function is applied automatically.
 ## Summary
 * Arithmetic operations on two images can be applied on images by using `Arithmetic*` modules.
 * The `SynchroView2D` module allows to scroll through slices synchronized on two images.
+
+{{< networkfile "examples/image_processing/example1/BasicFilter.mlab" >}}

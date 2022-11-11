@@ -56,3 +56,5 @@ The `Mask` module is configured to use the *Masked Original* image. Changing the
 * The module `Threshold` applies a relative or an absolute threshold to a voxel image. It can be defined what should be written to those voxels which pass or which fail the adjustable comparison.
 * The module `Mask` masks the image of input one with the mask at input two.
 * A mask can be used to filter pixels inside images
+
+{{< networkfile "examples/image_processing/example2/ImageMask.mlab" >}}

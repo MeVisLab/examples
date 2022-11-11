@@ -7,7 +7,7 @@ tags: ["Examples", "Example Networks"]
 menu: 
   main:
     identifier: "visualization_examples"
-    weight: 800
+    weight: 750
     parent: "examples"
 ---
 
