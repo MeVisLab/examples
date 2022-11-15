@@ -25,11 +25,11 @@ An easy way to display data and images in 2D and 3D is by using the Modules `Vie
 
 ### View2D
 
-1. Scroll through the slices using the mouse wheel {{< mousebutton "middle" >}}.
+1. Scroll through the slices using the mouse wheel {{< mousebutton "middle" >}}  and/or middle mouse button {{< mousebutton "middle" >}}.
 
 2. Change the contrast of the image by clicking the right mouse button {{< mousebutton "right" >}} and move the mouse
 
-3. Zoom in and out by pressing {{< keyboard "+" >}} and {{< keyboard "-" >}}
+3. Zoom in and out by pressing {{< keyboard "CTRL" >}} and middle mouse button {{< mousebutton "middle" >}}
 
 4. Toggle between multiple timepoints (if available) via {{< keyboard "ArrowLeft" >}} and {{< keyboard "ArrowRight" >}}
 
@@ -43,15 +43,17 @@ In case you are not happy with the default `View2D` interactions, you can connec
 
 ### View3D
 
-1. Zoom in and out using the mouse wheel {{< mousebutton "middle" >}}.
+1. Zoom in and out using the mouse wheel {{< mousebutton "middle" >}}
 
-2. Change the contrast of the image by clicking the right mouse button {{< mousebutton "right" >}} and move the mouse
+2. Drag the 3D objects via middle mouse button {{< mousebutton "middle" >}}
 
-3. Grab the object by pressing the left mouse button {{< mousebutton "left" >}} and move the object around. The present orientation is displayed by a cube in the bottom right corner.
+3. Change the contrast of the image by clicking the right mouse button {{< mousebutton "right" >}} and move the mouse
 
-4. More features, like recording movies, can be found on the help page.
+4. Rotate the object by pressing the left mouse button {{< mousebutton "left" >}} and move the object around. The present orientation is displayed by a cube in the bottom right corner.
 
-5. Toggle between multiple timepoints (if available) via {{< keyboard "ArrowLeft" >}} and {{< keyboard "ArrowRight" >}}
+5. More features, like recording movies, can be found on the help page.
+
+6. Toggle between multiple timepoints (if available) via {{< keyboard "ArrowLeft" >}} and {{< keyboard "ArrowRight" >}}
 
 {{<alert class="info" caption="Additional Information">}}
 More Information about Image Processing in MeVisLab can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch12.html" "here" >}}
