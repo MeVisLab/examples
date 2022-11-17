@@ -94,6 +94,7 @@ Open MeVisLab TestCase Manager and select your package and test case. You will s
 The identifiers of your test functions are shown as defined in the list (*ProbandT1/2*). The *TestWindowCenter* now runs for each entry in the list and calls the function *testPatient* for each entry using the given values.
 
 ### Adding screenshots to your TestReport
+Now, extend your network by adding a `View2D` module and connect it with the `LocalImage` module. Add the following lines to the end of your function *testPatient*:
 {{< highlight filename="IterativeTestCase.py" >}}
 ```Python
 def testPatient(path, windowCenter):
