@@ -72,4 +72,4 @@ You can now also add a `View3D` to show your segmentation in 3D. Your final resu
 * Gaps in a segmentation mask can be closed by using the `CloseGap` module.
 * Segmentation results can be visualized in 2D and 3D.
 
-{{< networkfile "examples/image_processing/example3/RegionGrowing.mlab" >}}
+{{< networkfile "/examples/image_processing/example3/RegionGrowingExample.mlab" >}}
