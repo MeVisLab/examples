@@ -13,4 +13,4 @@ We are loading images by using the `LocalImage` module and show them in a `Synch
 ![Screenshot](/examples/image_processing/example2/image.png)
 
 # Download
-You can download the example network [here](/examples/image_processing/example1/ImageMask.mlab)
+You can download the example network [here](/examples/image_processing/example2/ImageMask.mlab)
