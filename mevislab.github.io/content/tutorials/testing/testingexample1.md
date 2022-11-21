@@ -100,8 +100,14 @@ Writing automated tests for global macro modules works a little different. If yo
   ctx.field("<MACRO_MODULE_NAME>.DicomImport.inputMode").value = "Directory"
 ```
 {{</highlight>}}
+## Excercise
+creat a global macro module and implement the following test objectives for both (network and macro module) 
+* check, if the file exist.
+* check, if the max value of file is greater than zero.
+* ckeck, if the View3D-Input and DicomImport-output have the same data.
 
 ## Summary
 * MeVisLab provides a TestCenter for writing automated tests in Python
 * Tests can be executed on networks and macro modules
 * The test results are shown in a ReportViewer
+ {{< networkfile "examples/testing/Example1/networkTest.py" >}}
