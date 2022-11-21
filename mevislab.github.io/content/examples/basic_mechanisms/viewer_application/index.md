@@ -9,4 +9,4 @@ In this example, you will learn how to create a simple Prototype application in 
 ![Screenshot](/examples/basic_mechanisms/viewer_application/image.png)
 
 # Download
-You can download the example network [here](/examples/basic_mechanisms/viewer_application/viewerapplication.mlab)
+You can download the example network [here](/examples/basic_mechanisms/viewer_application/viewerexample.mlab)
