@@ -110,4 +110,4 @@ creat a global macro module and implement the following test objectives for both
 * MeVisLab provides a TestCenter for writing automated tests in Python
 * Tests can be executed on networks and macro modules
 * The test results are shown in a ReportViewer
- {{< networkfile "examples/testing/Example1/networkTest.py" >}}
+ {{< networkfile "examples/testing/Example1/TestCases.zip" >}}
