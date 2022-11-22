@@ -16,4 +16,4 @@ In order to display the same slice (unchanged and changed), the module `SyncFloa
 ![Screenshot](/examples/basic_mechanisms/contour_filter/image.png)
 
 # Download
-You can download the example network [here](/examples/basic_mechanisms/contour_filter/contourFilter.zip)
+You can download the example network [here](/examples/basic_mechanisms/contour_filter/ContourFilter.zip)
