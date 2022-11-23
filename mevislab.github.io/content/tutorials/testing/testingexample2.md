@@ -7,11 +7,13 @@ tags: ["Beginner", "Tutorial", "Profiling"]
 menu: 
   main:
     identifier: "testingexample2"
-    title: "Enabling the profiler and inspecting the behaviour of your network"
+    title: "Enabling the profiler and inspecting the behavior of your network"
     weight: 760
     parent: "testing"
 ---
 # Example 2: Profiling in MeVisLab
+
+{{< youtube "DZ4BcAne4hM" >}}
 
 ## Introduction
 In this example, we are using the MeVisLab Profiler to inspect the memory and CPU consumption of the modules in an example network.
