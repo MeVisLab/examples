@@ -1,0 +1,307 @@
+<h2>Search results:</h2>
+<span id="tag_string" class="badge bg-secondary"></span>
+<div id="tag-results"></div>
+<script>
+    // CUSTOM AREA
+    let static_params = {
+        json_src       : "{{ .Site.BaseURL }}/index.json", // for multiple sources: comma separated list of JSONarrays
+        minlength      : 3,
+        defaultsearch  : 'AND',
+        sort_date      : 'DESC',
+        autocomplete   : 1, // 0: form needs a submit button
+        section_search : 0, // 1: needs checkboxes with name="section[]"
+        badwords       : 'and,or,but,when,it,this,one', //ignore this words
+        json_wait      : '<p><em>One moment please, loading...</em></p>',
+        json_ready     : '<p><em>Please enter string to search for.</em></p>',
+        extern_icon    : ' (externer Link)', // marker for external links (optional)
+        err_badstring  : '<p>Der Suchbegriff ist zu kurz!</p>',
+        err_nostring   : '<p><em>Please enter string to search for.</em></p>',
+        err_noresult   : '<p><em>No Results.</em></p>',
+        err_norequest  : '<p style="text-align: center; color:red;">The full context search is currently not available.</p>',
+        err_filefailed : '<p style="text-align: center;color: red;">A file could not be loaded.</p>',
+        res_one_item   : '<p><em>[CNT] Result</em></p>',
+        res_more_items : '<p><em>[CNT] Results</em></p>',
+        res_out_top    : '<p>',
+        res_out_bottom : '</p>',
+        res_item_tpl   : '<h4><a href="[URL]">[TITLE]</a></h4><b>[DATE]:</b>&nbsp;[SUMMARY]<br><b>Keywords:&nbsp;</b><em>[TAGS]</em>',
+        add_searchlink : '<p>Not happy with the results? Please check the MeVisLab help overview.</p>'
+    };    
+    
+    let mysearchfield_weight = {
+        "tags"    : 5
+    };
+
+    let result_data = [];
+
+    window.onload = function () {
+        document.getElementById("custom-search-results").hidden = true;
+        var query = new URLSearchParams(window.location.search).get("tag");
+        if(query != '') {
+            document.getElementById("tag_string").innerHTML = query;
+        } else {
+            document.getElementById("tag-results").innerHTML = static_params['err_nostring'];
+        }
+
+        loadResults();
+    }
+
+    function showResults()
+    {
+        if (result_data.length) {
+            var myOutput = document.getElementById("tag-results");
+            var myString = document.getElementById("tag_string").innerHTML;
+            if (myString == '') {
+                myOutput.innerHTML = static_params['err_nostring'];
+                return false;
+            }
+            if (myString.length < static_params['minlength']) {
+                myOutput.innerHTML = static_params['err_badstring'];
+                return false;
+            }
+
+            var mydata = result_data;
+
+            var myadd_searchlink = static_params['add_searchlink'];
+            if ((myadd_searchlink) && (myadd_searchlink != '')) {
+                myadd_searchlink = myadd_searchlink.replace(/\[QUERY\]/g, myString);
+            }
+            
+
+            var mybadwords = [];
+            if (static_params['badwords'] != '') {
+                var mybadwords_str = static_params['badwords'];
+                mybadwords_str = mybadwords_str.replace("/\s/g", "");
+                mybadwords = mybadwords_str.split(",");
+            }
+
+            var mywords = [];
+            var mysearch_words = myString.split(" ");
+            for (var i = 0; i < mysearch_words.length; i++) {
+                if (mybadwords.includes(mysearch_words[i])) {
+                    continue;
+                } else {
+                    mywords.push(mysearch_words[i]);
+                }
+            }
+            if (!mywords.length) {
+                myOutput.innerHTML = static_params['err_badstring'];
+                return false;
+            }
+            
+            var myresults = [];
+            for (var i = 0; i < mydata.length; i++) {
+                var mytitle   = mydata[i].title;
+                var mysummary = mydata[i].summary;
+                var mycontent = mydata[i].content;
+                var mytags    = mydata[i].tags;
+
+                var mysearchtext = '';
+                // if (mytitle != '')   mysearchtext += mytitle;
+                // if (mysummary != '') mysearchtext += ' '+mysummary;
+                // if (mycontent != '') mysearchtext += ' '+mycontent;
+                if (mytags != '')    mysearchtext += ' '+mytags;
+
+                var mymatched = 0;
+                var mymatches = 0;
+                var mymatches_calc = 0;
+                var mytitle_matches = 0;
+                var mytags_matches = 0;
+                var mysummary_matches = 0;
+                var mycontent_matches = 0;
+                for (var y = 0; y < mywords.length; y++) {
+                    var mysearchword = new RegExp(mywords[y], 'gi');
+                    if (mysearchword.test(mysearchtext) === true) {
+                        var mywordmatches = mysearchtext.match(mysearchword);
+                        mymatches = mymatches + mywordmatches.length;
+                        mymatches_calc = mymatches;
+
+                        for (var mykey in mysearchfield_weight) {
+                            var myval = mysearchfield_weight[mykey];
+                            var mysearchstr = '';
+                            var mycount = '';
+                            if (mykey == 'title') mysearchstr = mytitle;
+                            if ((mykey == 'tags') && (mytags != '')) mysearchstr = mytags.join(",");
+                            if (mykey == 'summary') mysearchstr = mysummary;
+                            if (mykey == 'content') mysearchstr = mycontent; 
+                            
+                            if (mysearchword.test(mysearchstr) === true) {
+                                mymatches_calc = mymatches_calc + myval;
+                                mycount = mysearchstr.match(mysearchword).length;
+                                if (mykey == 'title') mytitle_matches = mytitle_matches + mycount;
+                                if ((mykey == 'tags') && (mytags != '')) mytags_matches = mytags_matches + mycount;
+                                if (mykey == 'summary') mysummary_matches = mysummary_matches + mycount;
+                                if (mykey == 'content') mycontent_matches = mycontent_matches + mycount; 
+                            }           
+                        }
+                        mymatched++;
+                    }
+                }
+                mydata[i]['mymatches_calc'] = mymatches_calc;
+                if ((debug != '') && (debug != null)) {
+                    mydata[i]['mymatches'] = mymatches;
+                    mydata[i]['mytitle_matches'] = mytitle_matches;
+                    mydata[i]['mytags_matches'] = mytags_matches;
+                    mydata[i]['mysummary_matches'] = mysummary_matches;
+                    mydata[i]['mycontent_matches'] = mycontent_matches;
+                }
+                if (mymatched == mywords.length) {
+                    myresults.push(mydata[i]);
+                }
+            } 
+
+            // results
+            if (myresults.length >= 1) {
+                myadd_searchlink = "";
+                myresults.sort(function(a, b) {
+                if (static_params['sort_date'] == 'DESC') {
+                    return b.mymatches_calc - a.mymatches_calc || b.mydate - a.mydate;
+                } else {
+                    return b.mymatches_calc - a.mymatches_calc || a.mydate - b.mydate;
+                }
+                }); 
+
+                var myresults_header = '';
+                if (myresults.length > 1) {
+                    myresults_header = static_params['res_more_items'];
+                } else {
+                    myresults_header = static_params['res_one_item'];
+                } 
+                myresults_header = myresults_header.replace("[CNT]", myresults.length);
+                if ((myadd_searchlink) && (myadd_searchlink != '')) {
+                    myresults_header += myadd_searchlink;
+                }
+
+                var mytag_top = static_params['res_out_top'];
+                var mytag_bottom = static_params['res_out_bottom'];
+
+                var myresults_content = '';
+                for (var i = 0; i < myresults.length; i++) {
+                    var mytitle   = myresults[i].title;
+                    var mysummary = myresults[i].summary;
+                    var mydate    = myresults[i].date;
+                    var myurl     = myresults[i].url;
+                    var mytags    = myresults[i].tags;
+                    var mysection = myresults[i].section;
+                    var myextern  = myresults[i].extern;
+
+                    // only for debug mode
+                    var myinfos = '';
+                    if ((debug != '') && (debug != null)) {
+                        var mymatches         = myresults[i].matches;
+                        var mymatches_calc    = myresults[i].matches_calc;
+                        var mytitle_matches   = myresults[i].title_matches;
+                        var mytags_matches    = myresults[i].tags_matches;
+                        var mysummary_matches = myresults[i].summary_matches;
+                        var mycontent_matches = myresults[i].content_matches;
+
+                        var myplus_title   = mytitle_matches >=1   ? '+ '+mysearchfield_weight['title']   : '+ 0';
+                        var myplus_tags    = mytags_matches >=1    ? '+ '+mysearchfield_weight['tags']    : '+ 0';
+                        var myplus_summary = mysummary_matches >=1 ? '+ '+mysearchfield_weight['summary'] : '+ 0';
+                        var myplus_content = mycontent_matches >=1 ? '+ '+mysearchfield_weight['content'] : '+ 0';
+
+                        myinfos += '<table style="font-size: 12px; color: #666666;">';
+                        myinfos += '<tr><td style="width: 100px;"><b>Gesamt:</b></td><td style="text-align: right;">'+mymatches+'</td></tr>';
+                        myinfos += '<tr><td>Title ('+mytitle_matches+'):</td><td style="text-align: right;">'+myplus_title+'</td></tr>';
+                        myinfos += '<tr><td>Tags ('+mytags_matches+'):</td><td style="text-align: right;">'+myplus_tags+'</td></tr>';
+                        myinfos += '<tr><td>Summary ('+mysummary_matches+'):</td><td style="text-align: right;">'+myplus_summary+'</td></tr>';
+                        myinfos += '<tr><td>Content ('+mycontent_matches+'):</td><td style="text-align: right;">'+myplus_content+'</td></tr>';
+                        myinfos += '<tr><td><b>Gesamt neu:</b></td><td style="text-align: right;">'+mymatches_calc+'</td></tr>';
+                        myinfos += '</table><br>';
+                    }
+
+                    var mynewdate = new Date(mydate*1000);
+                    var mydatestr = mynewdate.toLocaleDateString();
+
+                    var mytempl = static_params['res_item_tpl'];
+
+                    if (mytempl) {
+                        mytempl = mytempl.replace("[TITLE]", text_truncate(mytitle));
+                        mytempl = mytempl.replace(/\[URL\]/g, myurl);
+
+                        if (mytempl.includes("[DATE]")) {
+                        if (mydate != '') { 
+                            mytempl = mytempl.replace("[DATE]", mydatestr);
+                        } else {
+                            mytempl = mytempl.replace("[DATE]", '');
+                        }
+                        }
+                        if (mytempl.includes("[SUMMARY]")) {
+                        if (mysummary != '') { 
+                            mytempl = mytempl.replace("[SUMMARY]", mysummary).replace(myString, "<b>" + myString + "</b>");
+                        } else {
+                            mytempl = mytempl.replace("[SUMMARY]", '').replace(myString, "<b>" + myString + "</b>");
+                        }
+                        }
+                        if (mytempl.includes("[TAGS]")) {
+                        if (mytags != '') { 
+                            mytags  = mytags.join(",");
+                            mytags  = mytags.replace(/,/g, ", ");
+                            mytempl = mytempl.replace("[TAGS]", mytags);
+                        } else {
+                            mytempl = mytempl.replace("[TAGS]", 'n.a.');
+                        }
+                        }
+                        myresults_content += mytempl;
+                        if (myinfos != '') {
+                            myresults_content += '<li>'+myinfos+'</li>';
+                        }
+                    }
+                } 
+                myOutput.innerHTML = myresults_header+mytag_top+myresults_content+mytag_bottom;
+            } else {
+                var mynoresult = '';
+                if ((myadd_searchlink) && (myadd_searchlink != '')) {
+                    mynoresult += myadd_searchlink;
+                }
+                mynoresult += static_params['err_noresult'];
+                myOutput.innerHTML = mynoresult;
+            }
+
+
+        } else {
+            document.getElementById("tag-results").innerHTML = static_params['err_noresult'];
+        }
+    }
+
+    function loadResults()
+    {
+        if (!result_data.length) {
+  	        document.getElementById("tag-results").innerHTML = static_params['json_wait'];
+            if (static_params['json_src'] != '') {
+                var static_json_src_str = static_params['json_src'].replace("/\s/g", "");
+                var static_json_sources = static_json_src_str.split(",");
+
+                var static_src_count = 0;
+                for (var i = 0; i < static_json_sources.length; i++) {
+                    var static_xmlhttp = new XMLHttpRequest();
+                    var static_url = static_json_sources[i];
+                    static_xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            var static_data = JSON.parse(this.responseText);
+                            for (var i = 0; i < static_data.length; i++) {
+                                result_data.push(static_data[i]);
+                            }
+                            static_src_count++;
+
+                            if (static_src_count == static_json_sources.length) {
+                                document.getElementById("custom-search").querySelectorAll("input").forEach(item => {
+                                    item.disabled = '';
+                                });
+
+                                // document.getElementById("custom-search-field").focus();
+                                document.getElementById("tag-results").innerHTML = static_params['json_ready'];
+
+                                showResults();
+                            }
+                        } 
+                        if (this.status == 404) {
+                            document.getElementById("tag-results").innerHTML = static_params['err_filefailed'];
+                        }
+                    };
+                    static_xmlhttp.open("GET", static_url, true);
+                    static_xmlhttp.send();
+                }
+            }
+        }
+    }
+</script>

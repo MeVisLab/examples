@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Visualization Example 5: Volume rendering and interactions"
-categories: TUTORIAL ADVANCED
+tags: ["Example", "Visualization", "3D", "Volume Rendering", "GVR", "LUT"]
 ---
 
 # Visualization Example 5: Volume rendering and interactions

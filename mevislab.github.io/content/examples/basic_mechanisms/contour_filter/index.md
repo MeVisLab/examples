@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Example 1: Contour Filter"
-tags: ["Examples", "Example Networks", "Contour Filter"]
+tags: ["Example", "Example Networks", "Contour Filter"]
 ---
 
 # Example 1: Contour Filter

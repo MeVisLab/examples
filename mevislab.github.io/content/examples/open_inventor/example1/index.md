@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Open Inventor Example 1: Open Inventor objects"
-categories: TUTORIAL BEGINNER
+tags: ["Example", "Open Inventor", "3D"]
 ---
 
 # Open Inventor Example 1: Open Inventor objects

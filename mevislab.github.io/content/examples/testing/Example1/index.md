@@ -2,7 +2,7 @@
 title: "Testing Example 1: Writing a simple testcase in MeVisLab"
 date: 2022-06-15T08:56:33+02:00
 draft: false
-status: "OK"
+tags: ["Example", "Testing", "Python", "Automated Tests"]
 ---
 
 # Testing Example 1: Writing a simple testcase in MeVisLab
