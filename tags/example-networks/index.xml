@@ -13,7 +13,9 @@ Interactively moving WEM
 WEM - Primitive Value Lists</description></item><item><title>Image Processing</title><link>https://mevislab.github.io/examples/examples/image_processing/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/examples/image_processing/</guid><description>Open Inventor Examples: Arithmetic Operations
 Masking Images
 Region Growing (Segmentation)</description></item><item><title>Open Inventor</title><link>https://mevislab.github.io/examples/examples/open_inventor/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/examples/open_inventor/</guid><description>Open Inventor Examples: Open Inventor objects
-Mouse interactions in an Open Inventor scene</description></item><item><title>Visualization Examples</title><link>https://mevislab.github.io/examples/examples/visualization/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/examples/visualization/</guid><description>Visualization Examples: Synchronous view of two images
+Mouse interactions in an Open Inventor scene</description></item><item><title>Testing Examples</title><link>https://mevislab.github.io/examples/examples/testing/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/examples/testing/</guid><description>Testing Examples: Writing a simple test case in MeVisLab
+Profiling in MeVisLab
+Iterative tests in MeVisLab with Screenshots</description></item><item><title>Visualization Examples</title><link>https://mevislab.github.io/examples/examples/visualization/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/examples/visualization/</guid><description>Visualization Examples: Synchronous view of two images
 Creating a magnifier
 Image overlays
 Display images converted to Open Inventor scene objects
