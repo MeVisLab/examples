@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Contour Example 4: Annotation of images"
-categories: TUTORIAL ADVANCED
+tags: ["Example", "Data Objects", "2D", "Contours", "CSO", "Annotations"]
 ---
 
 # Contour Example 4: Annotation of images

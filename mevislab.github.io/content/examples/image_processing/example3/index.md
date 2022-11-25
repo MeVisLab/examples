@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Image Processing Example 3: Region Growing (Segmentation)"
-categories: TUTORIAL BEGINNER
+tags: ["Example", "Image Processing", "Segmentation", "Region Growing"]
 ---
 
 # Image Processing Example 3: Region Growing (Segmentation)

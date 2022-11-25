@@ -3,7 +3,7 @@ title: "Image Processing"
 date: 2022-06-15T08:56:33+02:00
 draft: false
 status: "OK"
-tags: ["Examples", "Example Networks"]
+tags: ["Example", "Example Networks", "Image Processing"]
 menu: 
   main:
     identifier: "image_processing_examples"

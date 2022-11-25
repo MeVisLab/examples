@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Contour Example 5: Contours and ghosting"
-categories: TUTORIAL BEGINNER
+tags: ["Example", "Data Objects", "2D", "Contours", "CSO"]
 ---
 
 # Contour Example 5: Contours and ghosting

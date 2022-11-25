@@ -1,6 +1,6 @@
-<h2>Search results</h2>
-<p>Searching for '<b><label id="search_string"></label></b>':</p>
-<div id="static-search-results"></div>
+<h2>Search results:</h2>
+<span id="tag_string" class="badge bg-secondary"></span>
+<div id="tag-results"></div>
 <script>
     // CUSTOM AREA
     let static_params = {
@@ -28,21 +28,18 @@
     };    
     
     let mysearchfield_weight = {
-        "title"   : 5,
-        "tags"    : 5,
-        "summary" : 2,
-        "content" : 1
+        "tags"    : 5
     };
 
     let result_data = [];
 
     window.onload = function () {
         document.getElementById("custom-search-results").hidden = true;
-        var query = new URLSearchParams(window.location.search).get("query");
+        var query = new URLSearchParams(window.location.search).get("tag");
         if(query != '') {
-            document.getElementById("search_string").innerHTML = query;
+            document.getElementById("tag_string").innerHTML = query;
         } else {
-            document.getElementById("static-search-results").innerHTML = static_params['err_nostring'];
+            document.getElementById("tag-results").innerHTML = static_params['err_nostring'];
         }
 
         loadResults();
@@ -51,8 +48,8 @@
     function showResults()
     {
         if (result_data.length) {
-            var myOutput = document.getElementById("static-search-results");
-            var myString = document.getElementById("search_string").innerHTML;
+            var myOutput = document.getElementById("tag-results");
+            var myString = document.getElementById("tag_string").innerHTML;
             if (myString == '') {
                 myOutput.innerHTML = static_params['err_nostring'];
                 return false;
@@ -99,9 +96,6 @@
                 var mytags    = mydata[i].tags;
 
                 var mysearchtext = '';
-                if (mytitle != '')   mysearchtext += mytitle;
-                if (mysummary != '') mysearchtext += ' '+mysummary;
-                if (mycontent != '') mysearchtext += ' '+mycontent;
                 if (mytags != '')    mysearchtext += ' '+mytags;
 
                 var mymatched = 0;
@@ -262,14 +256,14 @@
 
 
         } else {
-            document.getElementById("static-search-results").innerHTML = static_params['err_noresult'];
+            document.getElementById("tag-results").innerHTML = static_params['err_noresult'];
         }
     }
 
     function loadResults()
     {
         if (!result_data.length) {
-  	        document.getElementById("static-search-results").innerHTML = static_params['json_wait'];
+  	        document.getElementById("tag-results").innerHTML = static_params['json_wait'];
             if (static_params['json_src'] != '') {
                 var static_json_src_str = static_params['json_src'].replace("/\s/g", "");
                 var static_json_sources = static_json_src_str.split(",");
@@ -292,13 +286,13 @@
                                 });
 
                                 // document.getElementById("custom-search-field").focus();
-                                document.getElementById("static-search-results").innerHTML = static_params['json_ready'];
+                                document.getElementById("tag-results").innerHTML = static_params['json_ready'];
 
                                 showResults();
                             }
                         } 
                         if (this.status == 404) {
-                            document.getElementById("static-search-results").innerHTML = static_params['err_filefailed'];
+                            document.getElementById("tag-results").innerHTML = static_params['err_filefailed'];
                         }
                     };
                     static_xmlhttp.open("GET", static_url, true);

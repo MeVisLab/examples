@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Visualization Example 3: Image overlays"
-categories: TUTORIAL BEGINNER
+tags: ["Example", "Visualization", "2D", "Overlays", "Masks"]
 draft: false
 status: "OK"
 ---

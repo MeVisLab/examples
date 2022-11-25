@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Image Processing Example 2: Masking images"
-categories: TUTORIAL BEGINNER
+tags: ["Example", "Image Processing", "Mask"]
 ---
 
 # Image Processing Example 2: Masking images

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Surface Example 5: WEM - Primitive Value Lists"
-categories: TUTORIAL ADVANCED
+tags: ["Example", "Data Objects", "3D", "Surfaces", "Meshes", "WEM", "PVM", "Primitive Value Lists", "LUT"]
 ---
 
 # Surface Example 5: WEM - Primitive Value Lists

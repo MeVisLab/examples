@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Example 3: Creating a simple application"
-tags: ["Examples", "Example Networks", "Application", "GUI", "Python"]
+tags: ["Example", "Example Networks", "Application", "GUI", "Python"]
 ---
 
 # Example 3: Creating a simple application

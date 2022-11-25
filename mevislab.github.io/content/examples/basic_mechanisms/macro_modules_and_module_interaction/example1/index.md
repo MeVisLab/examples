@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Example 1: Panel for the contour filter"
-tags: ["Examples", "Example Networks", "Macro Module", "User Interface", "Panel"]
+tags: ["Example", "Example Networks", "Macro Module", "User Interface", "Panel"]
 ---
 
 # Example 1: Panel for the contour filter

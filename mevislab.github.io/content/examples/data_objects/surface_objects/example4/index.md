@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Surface Example 4: Interactively moving WEM"
-categories: TUTORIAL ADVANCED
+tags: ["Example", "Data Objects", "3D", "Surfaces", "Meshes", "WEM"]
 ---
 
 # Surface Example 4: Interactively moving WEM

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Contour Example 3: 2D and 3D visualization of contours"
-categories: TUTORIAL BEGINNER
+tags: ["Example", "Data Objects", "2D", "Contours", "CSO", "3D"]
 ---
 
 # Contour Example 3: 2D and 3D visualization of contours
