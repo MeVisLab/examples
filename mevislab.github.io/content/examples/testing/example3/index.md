@@ -6,7 +6,7 @@ tags: ["Example", "Testing", "Python", "Automated Tests", "Iterative Test", "Scr
 ---
 
 # Testing Example 3: Iterative tests in MeVisLab with Screenshots
-This example you will learn how to write iterative tests in MeVisLab. In addition to that, we create a screenshot of a viewer and add the image to the test report.
+In this example you will learn how to write iterative tests in MeVisLab. In addition to that, we create a screenshot of a viewer and add the image to the test report.
 
 # Download
 n.a.
