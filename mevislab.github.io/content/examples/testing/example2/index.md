@@ -5,7 +5,7 @@ category: "testing"
 ---
 
 # Testing Example 2: Profiling in MeVisLab
-This example you will learn how to use the Profiling View in MeVisLab.
+This example shows how to use the Profiling View in MeVisLab.
 
 # Download
 n.a.
