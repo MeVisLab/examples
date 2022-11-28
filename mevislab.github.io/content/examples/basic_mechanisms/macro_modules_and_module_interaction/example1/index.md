@@ -15,4 +15,4 @@ In this example we update the *.script* file of the module `Filter` and add the 
 ![Screenshot](/examples/basic_mechanisms/macro_modules_and_module_interaction/example1/image.png)
 
 # Download
-You can download the example network [here](/examples/basic_mechanisms/macro_modules_and_module_interaction/example1/MyPackageGroup.zip)
+You can download the example network [here](/examples/basic_mechanisms/macro_modules_and_module_interaction/example1/FilterExample.zip)
