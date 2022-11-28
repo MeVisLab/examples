@@ -27,7 +27,7 @@ Open the panel of the `DicomTagViewer` and set *Tag Name* to *WindowCenter*. The
 
 Save the network.
 
-Start MeVisLab TestCaseManager and create a new TestCase called *IterativeTestCase* as seen in [Example 1: Writing a simple testcase in MeVisLab](/tutorials/testing/testingexample1).
+Start MeVisLab TestCaseManager and create a new test case called *IterativeTestCase* as seen in [Example 1: Writing a simple testcase in MeVisLab](/tutorials/testing/testingexample1).
 
 ![DicomTagViewer](/images/tutorials/testing/DicomTagViewer.png "DicomTagViewer")
 
@@ -39,13 +39,14 @@ Add a list for test data to be used as input and a prefix for the path of the te
 {{< highlight filename="IterativeTestCase.py" >}}
 ```Python
 from mevis import *
-from TestSupport import Base, Fields, Logging, ScreenShot
+from TestSupport import Base, Fields, ScreenShot
 from TestSupport.Macros import *
 
 patientPathPrefix = "$(DemoDataPath)/BrainMultiModal/"
 
 testData = { "ProbandT1":("ProbandT1.dcm", "439.9624938965"),
      "ProbandT2":("ProbandT2.dcm", "234.91")}
+```
 {{</highlight>}}
 
 The above list contains an identifier for the testcase (*ProbandT1/2*), the file names(s) and a number value. The number value is the value of the DICOM tag (0028,1050) WindowCenter for each file.
@@ -56,6 +57,7 @@ Add the python function to your script file:
 ```Python
 def ITERATIVETEST_TestWindowCenter():
   return testData, testPatient
+```
 {{</highlight>}}
 
 This function defines that *testPatient* shall be called for each entry available in the defined list *testData*. Define the function *testPatient*:
@@ -68,6 +70,7 @@ def testPatient(path, windowCenter):
   dicomValue = str(ctx.field("DicomTagViewer.tagValue0").value)
   ASSERT_EQ(windowCenter, importValue, "Checking expected WindowCenter value against DICOM tree value.")
   ASSERT_EQ(windowCenter, dicomValue, "Checking expected WindowCenter value against DicomTagViewer value.")
+```
 {{</highlight>}}
 
 1. Initially, the path and filename for the module `LocalImage` are set. The data is loaded automatically, because the module has the *AutoLoad* flag enabled by default.
@@ -97,6 +100,7 @@ def testPatient(path, windowCenter):
   result = ScreenShot.createOffscreenScreenShot("View2D.self", "screentest.png")
   Logging.showImage("My screenshot", result)
   Logging.showFile("Link to screenshot file", result)
+```
 {{</highlight>}}
 
 Your ReportViewer now shows a screenshot of the image in the `View2D`.
