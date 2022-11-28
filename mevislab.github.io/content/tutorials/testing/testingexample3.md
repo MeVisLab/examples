@@ -27,7 +27,7 @@ Open the panel of the `DicomTagViewer` and set *Tag Name* to *WindowCenter*. The
 
 Save the network.
 
-Start MeVisLab TestCaseManager and create a new TestCase called *IterativeTestCase* as seen in [Example 1: Writing a simple testcase in MeVisLab](/tutorials/testing/testingexample1).
+Start MeVisLab TestCaseManager and create a new test case called *IterativeTestCase* as seen in [Example 1: Writing a simple testcase in MeVisLab](/tutorials/testing/testingexample1).
 
 ![DicomTagViewer](/images/tutorials/testing/DicomTagViewer.png "DicomTagViewer")
 
