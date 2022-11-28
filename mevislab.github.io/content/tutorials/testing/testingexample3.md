@@ -25,17 +25,17 @@ Add a `LocalImage` and a `DicomTagViewer` module to your workspace and connect t
 
 ![Example Network](/images/tutorials/testing/network_test3.png "Example Network")
 
-### Test case creation
+### TestCase creation
 Open the panel of the `DicomTagViewer` and set *Tag Name* to *WindowCenter*. The value of the DICOM tag from the current input image is automatically set as value.
 
 Save the network.
 
-Start MeVisLab TestCaseManager and create a new test case called *IterativeTestCase* as seen in [Example 1: Writing a simple testcase in MeVisLab](/tutorials/testing/testingexample1).
+Start MeVisLab TestCaseManager and create a new TestCase called *IterativeTestCase* as seen in [Example 1: Writing a simple testcase in MeVisLab](/tutorials/testing/testingexample1).
 
 ![DicomTagViewer](/images/tutorials/testing/DicomTagViewer.png "DicomTagViewer")
 
 ### Defining the test data
-In TestCaseManager open the test case Python file via *Edit File*.
+In TestCaseManager open the testcase Python file via *Edit File*.
 
 Add a list for test data to be used as input and a prefix for the path of the test data as seen below.
 
