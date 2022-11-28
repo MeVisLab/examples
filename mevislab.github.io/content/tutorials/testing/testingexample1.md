@@ -13,6 +13,8 @@ menu:
 ---
 # Example 1: Writing a simple testcase in MeVisLab
 
+{{< youtube "DqpVaKai_00" >}}
+
 ## Introduction
 In this example, you will learn how to write an automated test for a simple network using the `DicomImport`, `MinMaxScan` and `View3D` modules. You can write testcases for any other module and network yourself.
 

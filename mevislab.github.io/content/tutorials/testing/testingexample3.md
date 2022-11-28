@@ -18,26 +18,28 @@ In this example, you are writing an iterative test. Iterative test functions run
 
 ## Steps to do
 ### Creating the network to be used for testing
-Add a `LocalImage`and a `DicomTagViewer` module to your workspace and connect them. Save the network.
+Add a `LocalImage` and a `DicomTagViewer` module to your workspace and connect them.
 
 ![Example Network](/images/tutorials/testing/network_test3.png "Example Network")
 
 ### TestCase creation
-Start MeVisLab TestCaseManager and create a new TestCase called *IterativeTestCase* as seen in [Example 1: Writing a simple testcase in MeVisLab](/tutorials/testing/testingexample1).
-
 Open the panel of the `DicomTagViewer` and set *Tag Name* to *WindowCenter*. The value of the DICOM tag from the current input image is automatically set as value.
+
+Save the network.
+
+Start MeVisLab TestCaseManager and create a new TestCase called *IterativeTestCase* as seen in [Example 1: Writing a simple testcase in MeVisLab](/tutorials/testing/testingexample1).
 
 ![DicomTagViewer](/images/tutorials/testing/DicomTagViewer.png "DicomTagViewer")
 
-### Defining the testdata
+### Defining the test data
 In TestCaseManager open the testcase Python file via *Edit File*.
 
-Add a list for testdata to be used as input and a prefix for the path of the testdata as seen below.
+Add a list for test data to be used as input and a prefix for the path of the test data as seen below.
 
 {{< highlight filename="IterativeTestCase.py" >}}
 ```Python
 from mevis import *
-from TestSupport import Base
+from TestSupport import Base, Fields, Logging, ScreenShot
 from TestSupport.Macros import *
 
 patientPathPrefix = "$(DemoDataPath)/BrainMultiModal/"
