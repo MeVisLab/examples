@@ -1,5 +1,5 @@
 ---
-title: "Example 1: Writing a simple testcase in MeVisLab"
+title: "Example 1: Writing a simple test case in MeVisLab"
 date: 2022-06-15T08:56:33+02:00
 status: "open"
 draft: false
@@ -7,14 +7,16 @@ tags: ["Beginner", "Tutorial", "Testing", "Python", "Automated Tests"]
 menu: 
   main:
     identifier: "testingexample1"
-    title: "Writing a simple testcase for the module DicomImport in MeVisLab using Python and MeVisLab TestCenter."
+    title: "Writing a simple test case for the module DicomImport in MeVisLab using Python and MeVisLab TestCenter."
     weight: 755
     parent: "testing"
 ---
-# Example 1: Writing a simple testcase in MeVisLab
+# Example 1: Writing a simple test case in MeVisLab
+
+{{< youtube "DqpVaKai_00" >}}
 
 ## Introduction
-In this example, you will learn how to write an automated test for a simple network using the `DicomImport`, `MinMaxScan` and `View3D` modules. You can write testcases for any other module and network yourself.
+In this example, you will learn how to write an automated test for a simple network using the `DicomImport`, `MinMaxScan` and `View3D` modules. You can write test cases for any other module and network yourself.
 
 ## Steps to do
 ### Creating the network to be used for testing
@@ -29,7 +31,7 @@ Open MeVisLab TestCaseManager via menu {{<menuitem "File" "Run TestCaseManager" 
 
 ![TestCaseManager window ](/images/tutorials/testing/testCaseManagerWindow.png "TestCaseManager window ")
 
-On *Test Creation* tab, enter the details of your testcase as seen below. Make sure to have a package available already. For details about packages, see ([Example 2.1: Package creation](./tutorials/basicmechanisms/macromodules/package/)).
+On *Test Creation* tab, enter the details of your test case as seen below. Make sure to have a package available already. For details about packages, see ([Example 2.1: Package creation](./tutorials/basicmechanisms/macromodules/package/)).
 Select the just saved network *NetworkTestCase.mlab*.
 
  ![Test Creation window ](/images/tutorials/testing/TestCreation.png "Test Creation window ")
@@ -39,7 +41,7 @@ Click *Create*. The MeVisLab text editor MATE opens automatically showing the Py
 {{< highlight filename="NetworkTestCase.py" >}}
 ```Python
 from mevis import *
-from TestSupport import Base, Fields, Logging, ScreenShot
+from TestSupport import Base, Fields, Logging
 from TestSupport.Macros import *
 
 filePath="C:/Program Files/MeVisLab3.6.0/Packages/MeVisLab/Resources/DemoData/BrainT1Dicom" 
@@ -77,11 +79,11 @@ Back to the *TEST_DicomImport()* function, we get the current value of the field
 
 In the end, we check if *currentValue* and *expectedValue* of the progress are equal.
 
-### Run your testcase
+### Run your test case
 
-After finishing the code, open the TestCaseManager und run your test.
+After finishing the code, open the TestCase Manager und run your test.
 
-![Run TestCase](/images/tutorials/testing/runTestCase.png "Run TestCase")
+![Run Test Case](/images/tutorials/testing/runTestCase.png "Run Test Case")
 
 After the test finished execution, the ReportViewer opens automatically showing the results of your test.
 

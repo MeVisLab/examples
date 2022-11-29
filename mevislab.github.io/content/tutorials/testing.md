@@ -25,15 +25,15 @@ The MeVisLab TestCenter is the starting point of your tests. Select {{<menuitem 
 ![MeVisLab TestCaseManager](/images/tutorials/testing/TestCaseManager.png "MeVisLab TestCaseManager")
 
 #### Test Selection
-The Test Selection allows you to define a selection of testcases to be executed. The list can be configured by defining a filter by manually selecting the packages ([see Example 2.1: Package Creation](/tutorials/basicmechanisms/macromodules/package)) to be scanned for testcases. All testcases found in the selected packages are shown.
+The Test Selection allows you to define a selection of test cases to be executed. The list can be configured by defining a filter by manually selecting the packages ([see Example 2.1: Package Creation](/tutorials/basicmechanisms/macromodules/package)) to be scanned for test cases. All test cases found in the selected packages are shown.
 
-On the right side of the Test Selection tab, you can see a list of functions in the testcase. Each list entry is related to a Python function. You can select the functions to be executed. If your testcase contains a network, you can open the *.mlab file or edit the Python file in MATE.
+On the right side of the Test Selection tab, you can see a list of functions in the test case. Each list entry is related to a Python function. You can select the functions to be executed. If your test case contains a network, you can open the *.mlab file or edit the Python file in MATE.
 
 #### Test Reports
 The results of your tests are shown as a report after execution. 
 
 #### Test Creation
-You can create your own testcases here. A package is necessary to store your network and Python file.
+You can create your own test cases here. A package is necessary to store your network and Python file.
 
 #### Configuration
 Here you can configure details of your tests and reports. The installation directory of your MeVisLab is configured automatically but maybe needs to be updated in case you have multiple versions of MeVisLab installed.

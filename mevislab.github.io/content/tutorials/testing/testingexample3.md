@@ -18,35 +18,38 @@ In this example, you are writing an iterative test. Iterative test functions run
 
 ## Steps to do
 ### Creating the network to be used for testing
-Add a `LocalImage`and a `DicomTagViewer` module to your workspace and connect them. Save the network.
+Add a `LocalImage` and a `DicomTagViewer` module to your workspace and connect them.
 
 ![Example Network](/images/tutorials/testing/network_test3.png "Example Network")
 
-### TestCase creation
-Start MeVisLab TestCaseManager and create a new TestCase called *IterativeTestCase* as seen in [Example 1: Writing a simple testcase in MeVisLab](/tutorials/testing/testingexample1).
-
+### Test case creation
 Open the panel of the `DicomTagViewer` and set *Tag Name* to *WindowCenter*. The value of the DICOM tag from the current input image is automatically set as value.
+
+Save the network.
+
+Start MeVisLab TestCaseManager and create a new test case called *IterativeTestCase* as seen in [Example 1: Writing a simple testcase in MeVisLab](/tutorials/testing/testingexample1).
 
 ![DicomTagViewer](/images/tutorials/testing/DicomTagViewer.png "DicomTagViewer")
 
-### Defining the testdata
-In TestCaseManager open the testcase Python file via *Edit File*.
+### Defining the test data
+In TestCaseManager open the test case Python file via *Edit File*.
 
-Add a list for testdata to be used as input and a prefix for the path of the testdata as seen below.
+Add a list for test data to be used as input and a prefix for the path of the test data as seen below.
 
 {{< highlight filename="IterativeTestCase.py" >}}
 ```Python
 from mevis import *
-from TestSupport import Base
+from TestSupport import Base, Fields, ScreenShot
 from TestSupport.Macros import *
 
 patientPathPrefix = "$(DemoDataPath)/BrainMultiModal/"
 
 testData = { "ProbandT1":("ProbandT1.dcm", "439.9624938965"),
      "ProbandT2":("ProbandT2.dcm", "234.91")}
+```
 {{</highlight>}}
 
-The above list contains an identifier for the testcase (*ProbandT1/2*), the file names(s) and a number value. The number value is the value of the DICOM tag (0028,1050) WindowCenter for each file.
+The above list contains an identifier for the test case (*ProbandT1/2*), the file names(s) and a number value. The number value is the value of the DICOM tag (0028,1050) WindowCenter for each file.
 
 ### Create your iterative test function
 Add the python function to your script file:
@@ -54,6 +57,7 @@ Add the python function to your script file:
 ```Python
 def ITERATIVETEST_TestWindowCenter():
   return testData, testPatient
+```
 {{</highlight>}}
 
 This function defines that *testPatient* shall be called for each entry available in the defined list *testData*. Define the function *testPatient*:
@@ -66,6 +70,7 @@ def testPatient(path, windowCenter):
   dicomValue = str(ctx.field("DicomTagViewer.tagValue0").value)
   ASSERT_EQ(windowCenter, importValue, "Checking expected WindowCenter value against DICOM tree value.")
   ASSERT_EQ(windowCenter, dicomValue, "Checking expected WindowCenter value against DicomTagViewer value.")
+```
 {{</highlight>}}
 
 1. Initially, the path and filename for the module `LocalImage` are set. The data is loaded automatically, because the module has the *AutoLoad* flag enabled by default.
@@ -95,6 +100,7 @@ def testPatient(path, windowCenter):
   result = ScreenShot.createOffscreenScreenShot("View2D.self", "screentest.png")
   Logging.showImage("My screenshot", result)
   Logging.showFile("Link to screenshot file", result)
+```
 {{</highlight>}}
 
 Your ReportViewer now shows a screenshot of the image in the `View2D`.
