@@ -13,6 +13,7 @@ The following chapters are available:
 * [Chapter III: Visualization](tutorials/visualization/)
 * [Chapter IV: Image Processing](tutorials/image_processing/)
 * [Chapter V: Data Objects](tutorials/dataobjects/)
+* [Chapter VI: Testing](tutorials/testing/)
 
 Each of these chapters provides examples you can try yourself, explanations about the used Modules and links to our [YouTube channel](https://www.youtube.com/channel/UCUGi64NseroIGjga8l7EX8g) where you can find videos for each tutorial.
 

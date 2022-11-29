@@ -31,7 +31,7 @@ Open MeVisLab TestCaseManager via menu {{<menuitem "File" "Run TestCaseManager" 
 
 ![TestCaseManager window ](/images/tutorials/testing/testCaseManagerWindow.png "TestCaseManager window ")
 
-On *Test Creation* tab, enter the details of your testccase as seen below. Make sure to have a package available already. For details about packages, see ([Example 2.1: Package creation](./tutorials/basicmechanisms/macromodules/package/)).
+On *Test Creation* tab, enter the details of your test case as seen below. Make sure to have a package available already. For details about packages, see ([Example 2.1: Package creation](./tutorials/basicmechanisms/macromodules/package/)).
 Select the just saved network *NetworkTestCase.mlab*.
 
  ![Test Creation window ](/images/tutorials/testing/TestCreation.png "Test Creation window ")
@@ -41,7 +41,7 @@ Click *Create*. The MeVisLab text editor MATE opens automatically showing the Py
 {{< highlight filename="NetworkTestCase.py" >}}
 ```Python
 from mevis import *
-from TestSupport import Base, Fields, Logging, ScreenShot
+from TestSupport import Base, Fields, Logging
 from TestSupport.Macros import *
 
 filePath="C:/Program Files/MeVisLab3.6.0/Packages/MeVisLab/Resources/DemoData/BrainT1Dicom" 
