@@ -22,7 +22,7 @@ Add a `LocalImage` and a `DicomTagViewer` module to your workspace and connect t
 
 ![Example Network](/images/tutorials/testing/network_test3.png "Example Network")
 
-### TestCase creation
+### Test case creation
 Open the panel of the `DicomTagViewer` and set *Tag Name* to *WindowCenter*. The value of the DICOM tag from the current input image is automatically set as value.
 
 Save the network.
@@ -32,7 +32,7 @@ Start MeVisLab TestCaseManager and create a new test case called *IterativeTestC
 ![DicomTagViewer](/images/tutorials/testing/DicomTagViewer.png "DicomTagViewer")
 
 ### Defining the test data
-In TestCaseManager open the testcase Python file via *Edit File*.
+In TestCaseManager open the test case Python file via *Edit File*.
 
 Add a list for test data to be used as input and a prefix for the path of the test data as seen below.
 
@@ -49,7 +49,7 @@ testData = { "ProbandT1":("ProbandT1.dcm", "439.9624938965"),
 ```
 {{</highlight>}}
 
-The above list contains an identifier for the testcase (*ProbandT1/2*), the file names(s) and a number value. The number value is the value of the DICOM tag (0028,1050) WindowCenter for each file.
+The above list contains an identifier for the test case (*ProbandT1/2*), the file names(s) and a number value. The number value is the value of the DICOM tag (0028,1050) WindowCenter for each file.
 
 ### Create your iterative test function
 Add the python function to your script file:
