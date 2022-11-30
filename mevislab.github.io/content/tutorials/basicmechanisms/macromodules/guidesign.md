@@ -305,10 +305,36 @@ def myButtonAction:
 ```
 {{</highlight>}}
 
+## Available examples
+MeVisLab provides a lot of example modules for GUI development. All of these examples provides the *.script file for UI development and the *.py file containing the Python script.
+
+### Layouting examples
+* {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#TestVerticalLayout" "TestVerticalLayout Module">}}
+* {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#TestHorizontalLayout" "TestHorizontalLayout Module">}}
+* {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#TestTableLayout" "TestTableLayout Module">}}
+* {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#TestGridLayout" "TestGridLayout Module">}}
+* {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#TestSplitterLayout" "TestSplitterLayout Module">}}
+* {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#TestBoxLayout" "TestBoxLayout Module">}}
+* {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#TestTabViewLayout" "TestTabViewLayout Module">}}
+
+### Other examples
+* {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#TestHyperText" "TestHyperText Module">}}
+* {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#TestListBox" "TestListBox Module">}}
+* {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#TestListView" "TestListView Module">}}
+* {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#TestIconView" "TestIconView Module">}}
+* {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#TestPopupMenu" "TestPopupMenu Module">}}
+* {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#TestViewers" "TestViewers Module">}}
+* {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#TestEventFilter" "TestEventFilter Module">}}
+* {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#TestStyles" "TestStyles Module">}}
+* {{< docuLinks "/Standard/Documentation/Publish/ModuleReference/TestButtonGroups.html" "TestButtonGroups Module">}}
+* {{< docuLinks "/Standard/Documentation/Publish/ModuleReference/TestImageMap.html" "TestImageMap Module">}}
+
+Please use the *Module Search* with the prefix *Test* for more examples.
+
 ## Summary
 * User interfaces and several module panels can be created for each macro module.
-* You can create a panel, define in and outputs as well as interactions, in your *.script* file in {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} by using the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html" "MeVisLab Definition Language (MDL)">}}.
+* You can create a panel, define inputs and outputs as well as interactions, in your *.script* file in {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} by using the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html" "MeVisLab Definition Language (MDL)">}}.
 * Module interactions can be implemented using commands, which are linked to Python functions.
-* You can implement fieldlisteners, which trigger actions after a field value changes.
+* You can implement field listeners, which trigger actions after a field value changes.
 
 {{< networkfile "examples/basic_mechanisms/macro_modules_and_module_interaction/example1/FilterExample.zip" >}}

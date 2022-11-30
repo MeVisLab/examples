@@ -22,4 +22,5 @@ menu:
 [Processing and modification of WEMs](/examples/data_objects/surface_objects/example2/)  
 [Interactively moving WEM](/examples/data_objects/surface_objects/example4/)  
 [WEM - Primitive Value Lists](/examples/data_objects/surface_objects/example5/)  
+[Curves](/examples/data_objects/curves/example1/)  
 
