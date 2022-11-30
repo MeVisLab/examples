@@ -333,7 +333,7 @@ Please use the *Module Search* with the prefix *Test* for more examples.
 
 ## Summary
 * User interfaces and several module panels can be created for each macro module.
-* You can create a panel, define in and outputs as well as interactions, in your *.script* file in {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} by using the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html" "MeVisLab Definition Language (MDL)">}}.
+* You can create a panel, define inputs and outputs as well as interactions, in your *.script* file in {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} by using the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html" "MeVisLab Definition Language (MDL)">}}.
 * Module interactions can be implemented using commands, which are linked to Python functions.
 * You can implement field listeners, which trigger actions after a field value changes.
 
