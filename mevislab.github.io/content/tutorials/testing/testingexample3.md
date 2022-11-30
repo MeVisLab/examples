@@ -13,6 +13,8 @@ menu:
 ---
 # Example 3: Iterative tests in MeVisLab
 
+{{<youtube "1JidUyfz0xU">}}
+
 ## Introduction
 In this example, you are writing an iterative test. Iterative test functions run a function for every specified input. They return a tuple consisting of the function object called and the inputs iterated over. The iterative test functions are useful if the same function should be applied to different input data. These could be input values, names of input images, etc.
 

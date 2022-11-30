@@ -73,7 +73,7 @@ You can see 2 curves. The second and third columns are printed as separate curve
 
 {{<imagegallery 2 "/images/tutorials/dataobjects/curves" "before_split" "after_split">}}
 
-If the flag *Split columns into data sets* is set to *TRUE*, then a table with more than two columns is split into different *CurveData* objects. This gives the user the possibility to assign for each series a different style and title.
+If the flag *Split columns into data sets* is set to *TRUE*, then a table with more than two columns is split into different *CurveData* objects. This gives the user the possibility to assign a different style and title for each series.
 
 ### Titles and styles
 Let's do this. Open the panel of the `SoDiagram2D` module and check *Draw legend*. Enter *"Curve1 Curve2"* into the *Title(s)* text box and click *Update* {{<mousebutton "left">}}.
