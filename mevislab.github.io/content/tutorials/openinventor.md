@@ -30,6 +30,19 @@ The following shows the order in which the modules are executed. The red arrow s
 
 {{</alert>}}
 
+## SoGroup and SoSeparator
+The `SoGroup` and `Soseparator` modules cam be used as a container for the child nodes. They both allow multiple inputs and combine the results as one single output as seen above. Nevertheless, there is a big difference in handling the traversal state of the scene graph.
+
+![SoGroup vs. SoSeparator](/images/tutorials/openinventor/SoGroup_SoSeparator.png "SoGroup vs. SoSeparator")
+
+In the example above, we render 4 `SoCone` objects. The left side uses the `SoSeparator` modules, the right side uses the `SoGroup`. You can see a `SoMaterial` defining the cone object to be yellow on the left side. The `SoMaterial` is only applied to one cone, the other cone remains grey (default) because the `SoSeparator` isolates the separator's children from the rest of the scene graph.
+
+On the right side, we are using a `SoGroup`. The material of the cone is set to red. As the `SoGroup` module does NOT alter the traversal state in any way, the second cone in this group is also red.
+
+For details, see the MeVisLab module reference for {{< docuLinks "/Standard/Documentation/Publish/ModuleReference/SoGroup.html" "SoGroup" >}} and  {{< docuLinks "/Standard/Documentation/Publish/ModuleReference/SoSeparator.html" "SoSeparator" >}}
+
+{{< networkfile "examples/open_inventor/SoGroupSoSeparator.mlab" >}}
+
 {{<alert class="info" caption="Extra Info">}}
 More Information about Open Inventor and Scene Graphs can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch07.html" "here" >}} or else in the {{< docuLinks "/Standard/Documentation/Publish/Overviews/OpenInventorOverview.html" "Open Inventor Overview" >}} and the [Open Inventor Reference](https://mevislabdownloads.mevis.de/docs/current/MeVis/ThirdParty/Documentation/Publish/OpenInventorReference/index.html)
 {{</alert>}}
