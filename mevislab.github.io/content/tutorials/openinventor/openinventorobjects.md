@@ -65,7 +65,7 @@ The implementation of all objects can be grouped together.
 
 ![Grouping](/images/tutorials/openinventor/OI1_11.png "Grouping")
 
-In addition to the objects, a background can be added to the scene using the module `SoGBackground`.
+In addition to the objects, a background can be added to the scene using the module `SoBackground`.
 
 ![SoBackground](/images/tutorials/openinventor/OI1_12.png "SoBackground")
 
