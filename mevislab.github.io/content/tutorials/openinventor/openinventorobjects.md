@@ -13,9 +13,11 @@ menu:
 ---
 
 # Example 1: Open Inventor Objects {#TutorialOpenInventorModules}
+
+{{< youtube "aFCK_aqmPsg" >}}
+
 ## Introduction
 In this example we like to construct an Open Inventor scene in which we display three 3D objects of different color and shape.
-
 
 ## Steps to do
 ### Generating Open Inventor Objects {#TutorialGenerateOpenInventorObjects}
