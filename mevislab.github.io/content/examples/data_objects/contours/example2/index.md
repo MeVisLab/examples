@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Contour Example 2: Contour interpolation"
-tags: ["Example", "Data Objects", "2D", "Contours", "CSO", "Interpolation"]
 ---
 
 # Contour Example 2: Contour interpolation

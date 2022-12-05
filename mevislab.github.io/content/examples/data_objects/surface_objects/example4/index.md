@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Surface Example 4: Interactively moving WEM"
-tags: ["Example", "Data Objects", "3D", "Surfaces", "Meshes", "WEM"]
 ---
 
 # Surface Example 4: Interactively moving WEM

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Surface Example 1: Creation of WEMs"
-tags: ["Example", "Data Objects", "3D", "Surfaces", "Meshes", "WEM"]
 ---
 
 # Surface Example 1: Creation of WEMs

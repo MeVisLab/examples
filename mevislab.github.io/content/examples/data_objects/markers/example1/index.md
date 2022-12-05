@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Marker Example 1: Distance between markers"
-tags: ["Example", "Data Objects", "2D", "3D", "Marker"]
 ---
 
 # Marker Example 1: Distance between markers

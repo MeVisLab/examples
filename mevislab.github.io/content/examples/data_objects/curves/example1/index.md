@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Curves Example 1: Drawing curves"
-tags: ["Example", "Data Objects", "2D", "Curves"]
 ---
 
 # Marker Example 1: Distance between markers
