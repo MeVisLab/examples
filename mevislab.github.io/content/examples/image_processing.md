@@ -10,7 +10,7 @@ menu:
     parent: "examples"
 ---
 
-## Open Inventor Examples:
+## Image Processing Examples:
 [Arithmetic Operations](/examples/image_processing/example1/)  
 [Masking Images](/examples/image_processing/example2/)  
 [Region Growing (Segmentation)](/examples/image_processing/example3/)  
