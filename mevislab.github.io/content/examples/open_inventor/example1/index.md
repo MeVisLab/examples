@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Open Inventor Example 1: Open Inventor objects"
-tags: ["Example", "Open Inventor", "3D"]
 ---
 
 # Open Inventor Example 1: Open Inventor objects

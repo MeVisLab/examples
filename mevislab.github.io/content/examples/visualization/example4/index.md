@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Visualization Example 4: Display images converted to Open Inventor scene objects"
-tags: ["Example", "Visualization", "2D", "3D", "Open Inventor"]
 draft: false
 status: "OK"
 ---

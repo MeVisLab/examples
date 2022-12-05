@@ -2,7 +2,6 @@
 title: "Visualization Example 2: Creating a magnifier"
 categories: TUTORIAL BEGINNER
 draft: false
-tags: ["Example", "Visualization", "2D", "Magnifier"]
 ---
 
 # Visualization Example 2: Creating a magnifier

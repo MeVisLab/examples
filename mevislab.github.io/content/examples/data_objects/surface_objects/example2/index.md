@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Surface Example 2: Processing and modification of WEMs"
-tags: ["Example", "Data Objects", "3D", "Surfaces", "Meshes", "WEM"]
 ---
 
 # Surface Example 2: Processing and modification of WEMs

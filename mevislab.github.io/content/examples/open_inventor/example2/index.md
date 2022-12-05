@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Open Inventor Example 2: Mouse interactions in an Open Inventor scene"
-tags: ["Example", "Open Inventor", "3D", "Mouse Interactions"]
 ---
 
 # Open Inventor Example 2: Mouse interactions in an Open Inventor scene

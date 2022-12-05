@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Example 2: Python scripting"
-tags: ["Example", "Example Networks", "Contour Filter"]
 ---
 
 # Example 2: Python scripting

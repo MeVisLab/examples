@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Image Processing Example 2: Masking images"
-tags: ["Example", "Image Processing", "Mask"]
 ---
 
 # Image Processing Example 2: Masking images

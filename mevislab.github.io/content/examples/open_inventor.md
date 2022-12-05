@@ -3,7 +3,6 @@ title: "Open Inventor"
 date: 2022-06-15T08:56:33+02:00
 draft: false
 status: "OK"
-tags: ["Example", "Example Networks", "Open Inventor"]
 menu: 
   main:
     identifier: "open_inventor_examples"

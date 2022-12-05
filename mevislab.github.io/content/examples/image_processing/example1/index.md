@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Image Processing Example 1: Arithmetic operations on two images"
-tags: ["Example", "Image Processing", "Arithmetic"]
 ---
 
 # Image Processing Example 1: Arithmetic operations on two images

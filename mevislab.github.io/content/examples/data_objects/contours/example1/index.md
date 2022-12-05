@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Contour Example 1: Creation of Contours"
-tags: ["Example", "Data Objects", "2D", "Contours", "CSO"]
 ---
 
 # Contour Example 1: Creation of Contours
