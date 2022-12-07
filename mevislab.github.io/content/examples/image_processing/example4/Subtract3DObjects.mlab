@@ -5,7 +5,7 @@ network  {
 }
 module LocalImage {
   internal  {
-    frame = "497 485 144 72"
+    frame = "473 509 144 72"
     moduleGroupName = ""
     showNetworkPanel = true
   }
@@ -17,7 +17,7 @@ module LocalImage {
 }
 module WEMIsoSurface {
   internal  {
-    frame = "493 373 152 72"
+    frame = "469 397 152 72"
     moduleGroupName = ""
     showNetworkPanel = true
     windows  {
@@ -58,7 +58,7 @@ module WEMIsoSurface {
 }
 module SoWEMRenderer {
   internal  {
-    frame = "481 157 160 72"
+    frame = "481 141 160 72"
     moduleGroupName = ""
     showNetworkPanel = true
   }
@@ -102,13 +102,13 @@ module SoWEMRenderer {
 }
 module SoExaminerViewer {
   internal  {
-    frame = "581 -36 136 56"
+    frame = "581 -75 136 56"
     moduleGroupName = ""
     windows  {
       window _viewer {
-        geometry = "153 143 855 684"
+        geometry = "958 165 508 517"
         sizeHint = "400 400"
-        wasOpen = no
+        wasOpen = yes
       }
     }
   }
@@ -160,11 +160,11 @@ module SoExaminerViewer {
     stereoViewing = FALSE
     stereoOffset = 3
     height = 0.78539819
-    position = "-2.47456574440002 -367.032775878906 -1.4058358669281"
-    orientation = "0.996521592140198 0.0555988103151321 -0.062077809125185 1.57850968837738"
-    nearDistance = 234.19328
-    farDistance = 450.34805
-    focalDistance = 367.04379
+    position = "-228.286819458008 -172.202133178711 525.012084960938"
+    orientation = "-0.58172869682312 0.50002110004425 0.641537666320801 5.6281418800354"
+    nearDistance = 434.3728
+    farDistance = 708.30298
+    focalDistance = 597.82288
     forceRedrawOnInteraction = FALSE
     button1events = TO_VIEWER
     button2events = TO_VIEWER
@@ -184,7 +184,7 @@ module SoExaminerViewer {
 }
 module SoBackground {
   internal  {
-    frame = "401 61 112 56"
+    frame = "449 29 112 56"
     moduleGroupName = ""
   }
   fields  {
@@ -197,11 +197,11 @@ module SoBackground {
 }
 module SoMaterial {
   internal  {
-    frame = "665 573 96 56"
+    frame = "681 501 96 56"
     moduleGroupName = ""
     windows  {
       window _materialeditor {
-        geometry = "150 293 217 182"
+        geometry = "39 233 217 182"
         sizeHint = "217 182"
         wasOpen = no
       }
@@ -217,30 +217,9 @@ module SoMaterial {
     transparency = 0
   }
 }
-module SoCylinder {
-  internal  {
-    frame = "905 573 96 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "903 289 225 196"
-        sizeHint = "137 196"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = SoCylinder
-    parts = ALL
-    radius = 10
-    height = 240
-    sides = 0
-    sections = 0
-  }
-}
 module SoSeparator {
   internal  {
-    frame = "769 469 128 56"
+    frame = "769 429 128 56"
     moduleGroupName = ""
   }
   fields  {
@@ -251,14 +230,32 @@ module SoSeparator {
     pickCulling = AUTO
   }
 }
+module SoSphere {
+  internal  {
+    frame = "901 501 88 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "795 246 294 118"
+        sizeHint = "153 118"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoSphere
+    radius = 50
+    subdivision = 0
+  }
+}
 module SoTranslation {
   internal  {
-    frame = "777 573 112 72"
+    frame = "785 533 112 72"
     moduleGroupName = ""
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "841 695 273 34"
+        geometry = "730 304 273 34"
         sizeHint = "273 34"
         wasOpen = no
       }
@@ -266,12 +263,12 @@ module SoTranslation {
   }
   fields  {
     instanceName = SoTranslation
-    translation = "-10 -20 0"
+    translation = "0 20 80"
   }
 }
 module SoWEMRenderer {
   internal  {
-    frame = "677 157 168 72"
+    frame = "717 141 168 72"
     moduleGroupName = ""
     showNetworkPanel = true
   }
@@ -313,14 +310,25 @@ module SoWEMRenderer {
     selectedTab = 0
   }
 }
+module SoSwitch {
+  internal  {
+    frame = "609 29 128 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = SoSwitch
+    whichChild = 0
+  }
+}
 module WEMLevelSetBoolean {
   internal  {
-    frame = "645 261 184 56"
+    frame = "725 253 184 56"
     moduleGroupName = ""
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "747 380 290 396"
+        geometry = "815 372 290 396"
         sizeHint = "290 396"
         wasOpen = no
       }
@@ -350,16 +358,9 @@ module WEMLevelSetBoolean {
 }
 module SoWEMConvertInventor {
   internal  {
-    frame = "733 381 200 56"
+    frame = "733 341 200 56"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
-      window _default {
-        geometry = "835 521 250 98"
-        sizeHint = "250 98"
-        wasOpen = no
-      }
-    }
   }
   fields  {
     instanceName = SoWEMConvertInventor
@@ -374,26 +375,15 @@ module SoWEMConvertInventor {
     isProcessing = FALSE
   }
 }
-module SoSwitch {
-  internal  {
-    frame = "589 53 136 72"
-    moduleGroupName = ""
-    showNetworkPanel = true
-  }
-  fields  {
-    instanceName = SoSwitch
-    whichChild = 0
-  }
-}
 connections  {
   WEMIsoSurface.input0 = LocalImage.outImage
   SoWEMRenderer.inWEM = WEMIsoSurface.outWEM
   SoExaminerViewer.children = "SoBackground.self SoSwitch.self"
-  SoSeparator.children = "SoMaterial.self SoTranslation.self SoCylinder.self"
+  SoSeparator.children = "SoMaterial.self SoTranslation.self SoSphere.self"
   SoWEMRenderer1.inWEM = WEMLevelSetBoolean.outWEM
+  SoSwitch.children = "SoWEMRenderer.self SoWEMRenderer1.self"
   WEMLevelSetBoolean.inWEM0 = WEMIsoSurface.outWEM
   WEMLevelSetBoolean.inWEM1 = SoWEMConvertInventor.outWEM
   SoWEMConvertInventor.inScene = SoSeparator.self
-  SoSwitch.children = "SoWEMRenderer.self SoWEMRenderer1.self"
 }
 networkModel = ""

@@ -13,5 +13,6 @@ menu:
 ## Image Processing Examples:
 [Arithmetic Operations](/examples/image_processing/example1/)  
 [Masking Images](/examples/image_processing/example2/)  
-[Region Growing (Segmentation)](/examples/image_processing/example3/)  
+[Region Growing (Segmentation)](/examples/image_processing/example3/) 
+[Subtract 3D objects](/examples/image_processing/example4/) 
 

@@ -14,7 +14,7 @@ menu:
 
 # Example 4: Subtract 3D objects
 ## Introduction
-In this example, we load an image and render it as `WEMIsoSurface`. Then we create a 3-dimensional `SoCylinder` and subtract the cylinder from the initial WEM.
+In this example, we load an image and render it as `WEMIsoSurface`. Then we create a 3-dimensional `SoSphere` and subtract the sphere from the initial WEM.
 
 ## Steps to do
 ### Develop your network
@@ -26,29 +26,29 @@ The `SoExaminerViewer` now shows the head as a 3-dimensional rendering.
 
 ![SoExaminerViewer](/images/tutorials/image_processing/SoExaminerViewer_initial.png "SoExaminerViewer")
 
-### Add a 3D Cylinder to your scene
-We now want to add a 3-dimensional cylinder to our scene. Add a `SoMaterial` and a `SoCylinder` to your network, connect them to a `SoSeparator` and then to the `SoExaminerViewer`. Set your material to use a *Diffuse Color* red and adapt the size of the cylinder to *Radius* 10 and *Height* 240.
+### Add a 3D sphere to your scene
+We now want to add a 3-dimensional sphere to our scene. Add a `SoMaterial` and a `SoSphere` to your network, connect them to a `SoSeparator` and then to the `SoExaminerViewer`. Set your material to use a *Diffuse Color* red and adapt the size of the sphere to *Radius* 50.
 
 ![Example Network](/images/tutorials/image_processing/network_example4b.png "Example Network")
 
-The `SoExaminerViewer` now shows the head and the red cylinder.
+The `SoExaminerViewer` now shows the head and the red sphere inside.
 
-![SoExaminerViewer](/images/tutorials/image_processing/SoExaminerViewer_cylinder.png "SoExaminerViewer")
+![SoExaminerViewer](/images/tutorials/image_processing/SoExaminerViewer_sphere.png "SoExaminerViewer")
 
-### Set location of your cylinder
-In order to define the best possible location of the cylinder, we additionally add a `SoTranslation` Module and connect it to the `SoSeparator` between the material and the cylinder. Define a translation of x=-10, y=-20 and z=0.
+### Set location of your sphere
+In order to define the best possible location of the sphere, we additionally add a `SoTranslation` Module and connect it to the `SoSeparator` between the material and the sphere. Define a translation of x=0, y=20 and z=80.
 
 ![Example Network](/images/tutorials/image_processing/network_example4c.png "Example Network")
 
-### Subtract the cylinder from the head
-Your cylinder now goes directly through the head of the scene. We now want to subtract the cylinder from the head to get a hole. Add another `SoWEMRenderer`, a `WEMLevelSetBoolean` and a `SoWEMConvertInventor` to the network and connect them to a `SoSwitch` as seen below. The `SoSwitch` also needs to be connected to the `SoWEMRenderer` of the head. Set your `WEMLevelSetBoolean` to use the *Mode* **Difference**.
+### Subtract the sphere from the head
+We now want to subtract the sphere from the head to get a hole. Add another `SoWEMRenderer`, a `WEMLevelSetBoolean` and a `SoWEMConvertInventor` to the network and connect them to a `SoSwitch` as seen below. The `SoSwitch` also needs to be connected to the `SoWEMRenderer` of the head. Set your `WEMLevelSetBoolean` to use the *Mode* **Difference**.
 
 ![Example Network](/images/tutorials/image_processing/network_example4d.png "Example Network")
 
 What happens in your network now?
 
-1) The `SoCylinder` is converted to a WEM.
-2) The WEMs from the head and from the cylinder are subtracted by using a `WEMLevelSetBoolean`.
+1) The `SoSphere` is converted to a WEM.
+2) The WEMs from the head and from the sphere are subtracted by using a `WEMLevelSetBoolean`.
 3) The result of the subtraction is used for a `SoWEMRenderer`
 4) Both `SoWEMRenderer` (the head on the left side and the subtraction on the right side) are inputs for a `SoSwitch`.
 5) The `SoSwitch` toggles through its inputs and you can show the original WEM of the head or the subtraction.
