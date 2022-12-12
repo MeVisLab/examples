@@ -12,6 +12,9 @@ menu:
     parent: "visualization"
 ---
 # Example 2: Creating a magnifier {#TutorialVisualizationExample2}
+
+{{< youtube "lfq_TkWOuCo" >}}
+
 ## Introduction
 Medical images are typically displayed in three different viewing directions (see image): coronal, axial and sagittal.
 

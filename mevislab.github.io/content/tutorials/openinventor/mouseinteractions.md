@@ -12,6 +12,9 @@ menu:
     parent: "openinventor"
 ---
 # Example 2: Mouse interactions in Open Inventor {#TutorialVisualizationExample5}
+
+{{< youtube "Ye5lOHDWcRo" >}}
+
 ## Introduction
 In this example, we implement some image or object interactions. We will create a 3D scene, in which we display a cube and change its size using the mouse. We also get to know another viewer, the module `SoExaminerViewer`. This viewer is important. It enables the rendering of Open Inventor scenes and allows interactions with the Open Inventor scenes.
 
