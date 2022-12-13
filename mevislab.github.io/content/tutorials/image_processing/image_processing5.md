@@ -18,13 +18,13 @@ In this example, we are using the `SoGVRDrawOnPlane` module to define the curren
 
 ## Steps to do
 ### Develop your network
-First we need to develop the network to scroll through the slices. Add a `LocalImage` module to your workspace and select the file *ProbandT1* from mevislab demo data.
+First we need to develop the network to scroll through the slices. Add a `LocalImage` module to your workspace and select the file *ProbandT1* from MeVisLab demo data.
 
 Add the modules `OrthoReformat3`, `Switch`, `SoView2D`, `View2DExtensions` and `SoRenderArea` and connect them as seen below.
 
 ![Example Network](/images/tutorials/image_processing/network_example5.png "Example Network")
 
-In previous tutorials, we already learned that it is possible to show 2D slices in a `SoRenderArea`. For scrolling through the slices, a `View3DExtensions` module is necessary. In this network, we also have a `OrthoReformat3` module. Its allows us to transform the input image (by rotating and/or flipping) into the three main views commonly used:
+In previous tutorials, we already learned that it is possible to show 2D slices in a `SoRenderArea`. For scrolling through the slices, a `View3DExtensions` module is necessary. In this network, we also have a `OrthoReformat3` module. It allows us to transform the input image (by rotating and/or flipping) into the three main views commonly used:
 * Axial
 * Coronal
 * Sagittal
@@ -55,11 +55,11 @@ Now the plane representation of the visible slice is synchronized to the plane o
 ![Visible slice in 3D](/images/tutorials/image_processing/2DSlice_3D.png "Visible slice in 3D")
 
 ### Current 2D slice as clip plane in 3D
-This slice shall now be used as a clip plane in 3D. In order to achieve this, you need another `SoExaminerViewer` and a `SoClipPlane`. Add them to your workspace and connect them as seen below. You can also use the same `SoLutEditor` and `SoBackground` for the 3D view. Also use the same `SoGVRVolumeRenderer`, the 3D volume does not change.
+This slice shall now be used as a clip plane in 3D. In order to achieve this, you need another `SoExaminerViewer` and a `SoClipPlane`. Add them to your workspace and connect them as seen below. You can also use the same `SoLUTEditor` and `SoBackground` for the 3D view. Also use the same `SoGVRVolumeRenderer`, the 3D volume does not change.
 
 ![Example Network](/images/tutorials/image_processing/network_example5c.png "Example Network")
 
-Now your 3D scene shows a 3-dimenaional volume cut by a plane in the middle. Once again, the clipping is not the same slice as your 2D view shows.
+Now your 3D scene shows a 3-dimensional volume cut by a plane in the middle. Once again, the clipping is not the same slice as your 2D view shows.
 
 ![Clip plane in 3D](/images/tutorials/image_processing/3D_ClipPlane.png "Clip plane in 3D")
 
