@@ -87,7 +87,6 @@ With this, you finished your magnifier. Open the Viewer and draw a rectangle on 
 
 ![Final Magnifier with SubImage](/images/tutorials/visualization/V2_12.png "Final Magnifier with SubImage")
 
-
 ## Exercises
 Invert the image inside your magnified `SubImage` without changing the original image. You can use `Arithmetic*` modules for inverting.
 

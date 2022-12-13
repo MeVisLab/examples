@@ -15,4 +15,5 @@ menu:
 [Masking Images](/examples/image_processing/example2/)  
 [Region Growing (Segmentation)](/examples/image_processing/example3/)  
 [Subtract 3D objects](/examples/image_processing/example4/)  
+[Clip planes](/examples/image_processing/example5/)  
 
