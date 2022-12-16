@@ -11,4 +11,4 @@ menu:
 ---
 
 ## Testing Examples:
-[OpenCVE](/examples/thirdparty/example1/)  
+[OpenCV](/examples/thirdparty/example1/)  
