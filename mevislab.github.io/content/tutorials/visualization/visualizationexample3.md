@@ -12,6 +12,9 @@ menu:
     parent: "visualization"
 ---
 # Example 3: How to blend images over each other {#TutorialVisualizationExample3}
+
+{{< youtube "e8iFGp-St0c" >}}
+
 ## Introduction
 In this example we will show you how to blend a 2D image over another one. With the help of the module `SoView2DOverlay` we will create an overlay, which allows us to highlight all bones in the scan.
 
