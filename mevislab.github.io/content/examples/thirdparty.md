@@ -10,5 +10,5 @@ menu:
     parent: "examples"
 ---
 
-## Testing Examples:
+## ThirdParty Examples:
 [OpenCV](/examples/thirdparty/example1/)  
