@@ -22,9 +22,172 @@
 <div class="my-header-menu d-flex justify-content-center">
   <nav class="navbar navbar-dark navbar-expand-lg">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#navbarAccordion" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="navbarAccordion" tabindex="-1" aria-labelledby="exampleLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="/favicon.ico" alt="Logo">
+              <button type="button" class="btn-close" dat-bs-dismiss="modal" aria-label="Close"></button>
+              <form class="d-flex px-4" id="custom-search" name="custom-search" method="post">
+                <input id="custom-search-field-modal" name="search" value="" title="Search String" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button id="search_submit_mobile" class="btn btn-outline-light" type="submit">Search</button>
+              </form>
+            </div>
+
+            <div class="modal-body">
+              <!-- menu -->
+              <div id="MainMenu">
+                <div class="accordion accordion-flush" id="accordionExample">
+                  
+                  {{ $currentPage := . }}
+
+                  {{ range .Site.Menus.main.ByWeight }}
+
+                    {{ if .HasChildren }}
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading{{ .Identifier }}">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ .Identifier }}" aria-expanded="false" aria-controls="collapse{{ .Identifier }}">
+                        {{ .Title }}
+                      </button>
+                    </h2>
+
+                    <div id="collapse{{ .Identifier }}" class="accordion-collapse collapse" aria-labelledby="heading{{ .Identifier }}" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        <div class="accordion" id="sub-accordion{{ .Identifier }}">
+
+                      {{ range .Children }}
+
+                        {{ if .HasChildren }}
+
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading{{ .Identifier }}">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ .Identifier }}" aria-expanded="false" aria-controls="collapse{{ .Identifier }}">
+                                {{ .Name }}
+                              </button>
+                            </h2>
+
+                            <div id="collapse{{ .Identifier }}" class="accordion-collapse collapse" aria-labelledby="heading{{ .Identifier }}" data-bs-parent="#sub-accordion{{ .Parent }}">
+                              <div class="accordion-body">
+                                <div class="accordion" id="subsub-accordion{{ .Identifier }}">
+
+                          {{ range .Children }}
+                            
+                          {{ if .HasChildren }}
+        
+                          <div class="accordion-item">
+                            <h2 class="accordion-header" id="heading{{ .Identifier }}">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ .Identifier }}" aria-expanded="false" aria-controls="collapse{{ .Identifier }}">
+                                {{ .Name }}
+                              </button>
+                            </h2>
+
+                            <div id="collapse{{ .Identifier }}" class="accordion-collapse collapse" aria-labelledby="heading{{ .Identifier }}" data-bs-parent="#sub-accordion{{ .Parent }}">
+                              <div class="accordion-body">
+                                <div class="accordion" id="subsub-accordion{{ .Identifier }}">
+
+                          {{ range .Children }}
+                            
+                            {{ if .HasChildren }}
+
+                              {{ range .Children }}
+
+                                  <div class="accordion-item accordion-link-item">
+                                    <h2 class="accordion-header" id="heading{{ .Identifier }}">
+                                      <a class="accordion-link collapsed" href="{{ .URL }}">
+                                        {{ .Name }}
+                                      </a>
+                                    </h2>
+                                  </div>
+
+                              {{ end }}
+
+                            {{ else }}
+                                  <div class="accordion-item accordion-link-item">
+                                    <h2 class="accordion-header" id="sub-{{ .Identifier }}">
+                                      <a class="accordion-link collapsed" href="{{ .URL }}">
+                                        {{ .Name }}
+                                      </a>
+                                    </h2>
+                                  </div>
+
+                            {{ end }}
+
+                          {{ end }}
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        {{ else }}
+                          <div class="accordion-item accordion-link-item">
+                            <h2 class="accordion-header" id="{{ .Identifier }}">
+                              <a class="accordion-link collapsed" href="{{ .URL }}">
+                                {{ .Name }}
+                              </a>
+                            </h2>
+                          </div>
+
+                        {{ end }}
+
+                          {{ end }}
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                        {{ else }}
+                          <div class="accordion-item accordion-link-item">
+                            <h2 class="accordion-header" id="{{ .Identifier }}">
+                              <a class="accordion-link collapsed" href="{{ .URL }}">
+                                {{ .Name }}
+                              </a>
+                            </h2>
+                          </div>
+
+                        {{ end }}
+
+                      {{ end }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                    {{ else }}
+
+                  <div class="accordion-item accordion-link-item">
+                    <h2 class="accordion-header" id="{{ .Identifier }}">
+                      <a class="accordion-link collapsed" href="{{ .URL }}">
+                        {{ .Title }}
+                      </a>
+                    </h2>
+                  </div>
+
+                    {{ end }}
+
+                  {{ end }}
+
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="modal-footer">
+
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <ul class="navbar-nav">
           {{ $currentPage := . }}
@@ -110,17 +273,30 @@
       </div>
     </div>
     <script>
-      let button = document.getElementById('search_submit');
 
-      button.onclick = function(e) {
-        e.preventDefault();
-        var search_string = document.getElementById("custom-search-field").value;
-        var url = "{{ .Site.BaseURL }}/search?query=" + encodeURIComponent(search_string);
+    let button = document.getElementById('search_submit');
+    let mobile_button = document.getElementById('search_submit_mobile');
 
-        // Replace localhost and the folder name
-        // based on your setup
-        location.href = url;
-      }
+    button.onclick = function(e) {
+      e.preventDefault();
+      var search_string = document.getElementById("custom-search-field").value;
+      var url = "{{ .Site.BaseURL }}/search?query=" + encodeURIComponent(search_string);
+
+      // Replace localhost and the folder name
+      // based on your setup
+      location.href = url;
+    }
+
+    mobile_button.onclick = function(e) {
+      e.preventDefault();
+      var search_string = document.getElementById("custom-search-field-modal").value;
+      var url = "{{ .Site.BaseURL }}/search?query=" + encodeURIComponent(search_string);
+
+      // Replace localhost and the folder name
+      // based on your setup
+      location.href = url;
+    }
+
     // CUSTOM AREA
     let params = {
         json_src       : "{{ .Site.BaseURL }}/index.json", // for multiple sources: comma separated list of JSONarrays
