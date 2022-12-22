@@ -56,6 +56,11 @@ MeVisLab provides a lot of pre-defined data objects for usage in MeVisLab, such 
 * [Contours](tutorials/dataobjects/contourobjects#CSO)
 * [Surface Objects](tutorials/dataobjects/surfaceobjects#Introduction)
 * [Markers](tutorials/dataobjects/markerobjects#MarkersInMeVisLab)
+* [Curves](tutorials/dataobjects/curves#CurvesInMeVisLab)
+## Testing, Profiling and Debugging {#Testing}
+The MeVisLab IDE provides tools for writing automated tests in Python, profiling your network performance and debugging your Python code.
+## ThirdParty components {#ThirdParty}
+Examples for using integrated ThirdParty components such as *OpenCV* or *Matplotlib* are explained in this chapter.
 
 # YouTube
 Some of our tutorials are also available on [YouTube](https://www.youtube.com/channel/UCUGi64NseroIGjga8l7EX8g). They are marked like this on top of the tutorial:
