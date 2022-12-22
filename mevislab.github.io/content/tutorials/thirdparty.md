@@ -32,5 +32,3 @@ MeVisLab comes with a lot of software already integrated and ready to use. Even 
 * follow eye movements,
 * recognize scenery and
 * establish markers to overlay it with augmented reality, etc.
-
-### Matplotlib

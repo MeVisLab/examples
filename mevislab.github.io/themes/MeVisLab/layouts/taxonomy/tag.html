@@ -6,7 +6,7 @@
                 <div class="col px-6">
                     <h3>{{ if eq .Title "Beginner" }}<span class="badge bg-success">{{ .Title }}{{ else if eq .Title "Advanced" }}<span class="badge bg-warning">{{ .Title }}{{ else if eq . "Expert" }}<span class="badge bg-danger">{{ .Title }}{{ else }}<span class="badge bg-secondary">{{ .Title }}{{ end }}</span></h3>
                     {{ range .Data.Pages }}
-                    <h4><a href="{{.Permalink}}">{{.Title}}</a></h4><b>{{.Date.Format "02.01.2006"}}:</b>&nbsp;{{.Summary}}
+                    <h4><a href="{{.Permalink}}">{{.Title}}</a></h4>{{.Summary}}
                     {{ end }}
                 </div>
             </div>

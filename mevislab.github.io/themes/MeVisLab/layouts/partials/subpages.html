@@ -5,12 +5,9 @@
         {{ range .Children }}
             {{ if eq .Name $currentPage.Title }}
                 {{ if .HasChildren }}
-    <div class="btn-group dropend">
-        <button type="button" class="btn btn-outline-secondary">
+    <div class="dropdown">
+        <button type="button" class="btn btn-outline-secondary" data-bs-toggle="dropdown">
           Sub-Pages of {{ $currentPage.Title }}
-        </button>
-        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-          <span class="visually-hidden">Toggle Dropright</span>
         </button>
         <ul class="dropdown-menu">
                     {{ range .Children }}
@@ -24,12 +21,9 @@
                     {{ range .Children }}
                         {{ if eq .Name $currentPage.Title }}
                             {{ if .HasChildren }}
-            <div class="btn-group dropend">
-                <button type="button" class="btn btn-outline-secondary">
+            <div class="dropdown">
+                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="dropdown">
                   Sub-Pages of {{ $currentPage.Title }}
-                </button>
-                <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                  <span class="visually-hidden">Toggle Dropright</span>
                 </button>
                 <ul class="dropdown-menu">
                                 {{ range .Children }}
