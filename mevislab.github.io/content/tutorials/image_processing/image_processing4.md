@@ -18,7 +18,7 @@ In this example, we load an image and render it as `WEMIsoSurface`. Then we crea
 
 ## Steps to do
 ### Develop your network
-Add a `LocalImage` module to your workspace and select load *$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm*. Add a `WEMIsoSurface`, a `SoWEMRenderer`, a `SoBackground` and a `SoExaminerViewer` module and connect them as seen below. Make sure to configure the `WEMIsuSurface` to use a *Iso Min. Value* of 420 and a *Voxel Sampling* 0.
+Add a `LocalImage` module to your workspace and select load *$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm*. Add a `WEMIsoSurface`, a `SoWEMRenderer`, a `SoBackground` and a `SoExaminerViewer` module and connect them as seen below. Make sure to configure the `WEMIsoSurface` to use a *Iso Min. Value* of 420 and a *Voxel Sampling* 1.
 
 ![Example Network](/images/tutorials/image_processing/network_example4.png "Example Network")
 
