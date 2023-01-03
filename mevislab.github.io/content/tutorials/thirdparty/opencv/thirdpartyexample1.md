@@ -1,5 +1,5 @@
 ---
-title: "Example 1: OpenCV WebCam access"
+title: "Example 1: WebCam access with OpenCV"
 date: 2022-06-15T08:56:33+02:00
 status: "open"
 draft: false
@@ -9,9 +9,9 @@ menu:
     identifier: "thirdpartyexample1"
     title: "Access your webcam and use the live video in MeVisLab via OpenCV."
     weight: 805
-    parent: "thirdparty"
+    parent: "opencv"
 ---
-# Example 1: OpenCV WebCam access
+# Example 1: WebCam access with OpenCV
 
 ## Introduction
 In this example, we are using the `PythonImage` module and access your WebCam to show the video in a `View2D`.
