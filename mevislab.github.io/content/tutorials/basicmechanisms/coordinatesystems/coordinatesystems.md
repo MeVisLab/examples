@@ -13,12 +13,12 @@ menu:
 ---
 
 # Example 1.1: MeVisLab Coordinate Systems
-Coordinate systems in MeVisLab are always [right handed](https://en.wikipedia.org/wiki/Right-hand_rule).
-
 Three coordinate systems exist next to each other:
 * World coordinates
 * Voxel coordinates
 * Device coordinates
+
+World coordinate systems in MeVisLab are always [right handed](https://en.wikipedia.org/wiki/Right-hand_rule).
 
 The blue rectangle shows the same region in the three coordinate systems.
 
@@ -31,14 +31,14 @@ World coordinates are:
 * Isotropic: All directions are equivalent
 * Orthogonal: Coordinate axes are orthogonal to each other
 
-The origin of the world coordinate system can be anywhere and is not clearly defined. All other coordinates are relative to the origin of the world coordinates.
+The origin of the world coordinate system can be anywhere and is not clearly defined. Coordinates of the other systems are always relative to the origin of the world coordinates.
 
 ### World coordinates in MeVisLab
 You can show the world coordinates in MeVisLab by using the following example network:
 
 ![World Coordinates in MeVisLab](/images/tutorials/basicmechanics/WorldCoordinates.png "World Coordinates in MeVisLab")
 
-The `ConstantImage` module generates an artificial image with a certain size, data type and a constant fill value. The image is located directly at the origin of the world coordinate system, therefore the `SoCoordinateSystem` module shows the world coordinate system.
+The `ConstantImage` module generates an artificial image with a certain size, data type and a constant fill value. The origin of the image is at the origin of the world coordinate system, therefore the `SoCoordinateSystem` module shows the world coordinate system.
 
 ![ConstantImage Info](/images/tutorials/basicmechanics/ConstantImageInfo.png "ConstantImage Info")
 
@@ -47,12 +47,12 @@ Placing an object into the Open Inventor Scene of the `SoExaminerViewer`, in thi
 ![SoCube in world coordinate system](/images/tutorials/basicmechanics/SoCubeWorldCoordinates.png "SoCube in world coordinate system")
 
 ### Translations
-You can move an object in your scene using a `SoTranslation` module for example. Update your network and add the module before your cube. Defining a translation vector 50, 0, 0 moves your cube by 50 in x-direction based on the origin of the world coordinate system.
+You can move an object in your scene, for example by using a `SoTranslation` module. Update your network and add the module before your cube. Defining a translation vector 50, 0, 0 moves your cube by 50 in x-direction based on the origin of the world coordinate system.
 
 ![SoTranslation](/images/tutorials/basicmechanics/SoTranslation.png "SoTranslation")
 
 ### Transformations
-More complex transformations can be done by using the `SoTransform` module. You can not only translate an existing object but also rotate, scale and many other transformations.
+More complex transformations can be done by using the `SoTransform` module. You can not only translate an existing object, but also rotate, scale and apply many other transformations.
 
 ![SoTransform](/images/tutorials/basicmechanics/SoTransform.png "SoTransform")
 
@@ -61,7 +61,6 @@ More complex transformations can be done by using the `SoTransform` module. You 
 ## Voxel coordinates
 Voxel coordinates are:
 * Relative to an image
-* Dependent on voxel spacing
 * Continuous from [0..x,0..y,0..z], voxel center at 0.5
 * Often non-isotropic, sometimes non-orthogonal
 * Direct relation to voxel location in memory
@@ -71,7 +70,7 @@ You can show the voxel coordinates in MeVisLab by using the following example ne
 
 ![Voxel Coordinates](/images/tutorials/basicmechanics/VoxelCoordinates.png "Voxel Coordinates")
 
-Load the file *Liver1_CT_venous.small.tif* .The `Info` module shows detailed information about the image loaded by the `LocalImage`. Opening the `SoExaminerViewer` shows the voxel coordinate system of the loaded image. You might have to change the LUT in `SoGVRVolumeRenderer` so that the image looks better.
+Load the file *Liver1_CT_venous.small.tif* .The `Info` module shows detailed information about the image loaded by the `LocalImage`. Opening the `SoExaminerViewer` shows the voxel coordinate system of the loaded image. You may have to change the LUT in `SoGVRVolumeRenderer` so that the image looks better.
 
 ![Voxel coordinates of the loaded image](/images/tutorials/basicmechanics/SoExaminerViewer_Voxel.png "Voxel coordinates of the loaded image")
 

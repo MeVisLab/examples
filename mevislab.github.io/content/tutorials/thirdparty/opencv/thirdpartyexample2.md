@@ -8,7 +8,7 @@ menu:
   main:
     identifier: "thirdpartyexample2"
     title: "Enhance OpenCV WebCam example and build a face detection using MeVisLab, OpenCV and Python."
-    weight: 806
+    weight: 856
     parent: "opencv"
 ---
 # Example 2: Face Detection with OpenCV

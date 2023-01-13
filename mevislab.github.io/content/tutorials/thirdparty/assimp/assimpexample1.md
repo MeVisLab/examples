@@ -8,7 +8,7 @@ menu:
   main:
     identifier: "assimpexample1"
     title: "Open a 3D file and save the file or 3D scene as *.stl file for 3D printing."
-    weight: 822
+    weight: 872
     parent: "assimp"
 ---
 # Example 1: 3D Printing in MeVisLab

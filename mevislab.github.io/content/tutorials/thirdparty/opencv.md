@@ -8,7 +8,7 @@ menu:
   main:
     identifier: "opencv"
     title: "Open Source Computer Vision Library (OpenCV) in MeVisLab"
-    weight: 802
+    weight: 852
     parent: "thirdparty"
 ---
 # Open Source Computer Vision Library (OpenCV) {#OpenCV}

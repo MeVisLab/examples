@@ -8,7 +8,7 @@ menu:
   main:
     identifier: "thirdpartyexample1"
     title: "Access your webcam and use the live video in MeVisLab via OpenCV."
-    weight: 805
+    weight: 855
     parent: "opencv"
 ---
 # Example 1: WebCam access with OpenCV
