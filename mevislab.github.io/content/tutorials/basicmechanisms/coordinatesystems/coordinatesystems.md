@@ -27,11 +27,10 @@ The blue rectangle shows the same region in the three coordinate systems.
 ## World coordinates
 World coordinates are:
 * Global: Combine several objects in a view
-* Absolute: Measure distances and angles
 * Isotropic: All directions are equivalent
 * Orthogonal: Coordinate axes are orthogonal to each other
 
-The origin of the world coordinate system can be anywhere and is not clearly defined. Coordinates of the other systems are always relative to the origin of the world coordinates.
+The origin of the world coordinate system can be anywhere and is not clearly defined. Origins of the other coordinate systems are always relative to the origin of the world coordinates.
 
 ### World coordinates in MeVisLab
 You can show the world coordinates in MeVisLab by using the following example network:
@@ -62,7 +61,6 @@ More complex transformations can be done by using the `SoTransform` module. You 
 Voxel coordinates are:
 * Relative to an image
 * Continuous from [0..x,0..y,0..z], voxel center at 0.5
-* Often non-isotropic, sometimes non-orthogonal
 * Direct relation to voxel location in memory
 
 ### Voxel coordinates in MeVisLab

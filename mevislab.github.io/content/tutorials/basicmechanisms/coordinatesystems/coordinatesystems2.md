@@ -16,7 +16,7 @@ menu:
 ## General
 Coordinate systems in [DICOM](https://en.wikipedia.org/wiki/DICOM) are basically the same as world coordinates in MeVisLab (except for the 0.5 voxel offset).
 World coordinates also refer to the patient axes. They are:
-* Based on the patient's main body axes (transversal, coronal, sagittal)
+* Based on the patient's main body axes (transverse, coronal, sagittal)
 * Measured as 1 coordinate unit = 1 millimeter
 * Right-handed
 * Not standardized regarding their origin
