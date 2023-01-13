@@ -1,5 +1,5 @@
 ---
-title: "Chapter VII: ThirdParty components"
+title: "Chapter VIII: ThirdParty components"
 date: 2022-06-15T08:56:33+02:00
 status: "open"
 draft: false
@@ -8,11 +8,11 @@ menu:
   main:
     identifier: "thirdparty"
     title: "Usage of ThirdParty software integrated into MeVisLab"
-    weight: 800
+    weight: 850
     parent: "tutorials"
 ---
 
-# MeVisLab Tutorial Chapter VII {#TutorialChapter7}
+# MeVisLab Tutorial Chapter VIII {#TutorialChapter8}
 
 ## Using ThirdParty software integrated into MeVisLab {#TutorialThirdParty}
 MeVisLab comes with a lot of software already integrated and ready to use. Even if these tools are not available as a module, like itk and vtk for example, they can be used via Python scripting. This chapter shall give some examples of how to use a selection of integrated ThirdParty components.
