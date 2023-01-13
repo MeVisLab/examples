@@ -30,7 +30,7 @@ World coordinates are:
 * Isotropic: All directions are equivalent
 * Orthogonal: Coordinate axes are orthogonal to each other
 
-The origin of the world coordinate system can be anywhere and is not clearly defined. Origins of the other coordinate systems are always relative to the origin of the world coordinates.
+The origin of the world coordinate system can be anywhere and is not clearly defined. Origins of the other coordinate systems can always be mapped to the world coordinate system. In case of DICOM images, this mapping is defined by DICOM tags.
 
 ### World coordinates in MeVisLab
 You can show the world coordinates in MeVisLab by using the following example network:
