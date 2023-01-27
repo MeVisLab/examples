@@ -1,7 +1,7 @@
 ---
 title: "Example 1: WebCam access with OpenCV"
 date: 2022-06-15T08:56:33+02:00
-status: "open"
+status: "OK"
 draft: false
 tags: ["Advanced", "Tutorial", "OpenCV", "Python", "WebCam", "Macro", "Macro Modules", "Global Macro"]
 menu: 
