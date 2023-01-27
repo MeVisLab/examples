@@ -12,6 +12,9 @@ menu:
     parent: "visualization"
 ---
 # Example 5: Volume rendering and interactions {#TutorialVisualizationExample6}
+
+{{< youtube "QViPqXs2LHc" >}}
+
 ## Introduction
 In this example we like to convert a scan of a head into a 3D scene-object. The scene-object allows to add some textures, interactions and animations.
 
