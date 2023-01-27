@@ -13,11 +13,11 @@ menu:
 ---
 # Example 3: Prototyping - User Interface and Python scripting
 ## Introduction
-In this example, we will develop a user interface and add Python scripting to the Macro Module you created in [Example 2](/tutorials/summary/summary2).
+In this example, we will develop a User Interface and add Python scripting to the Macro Module you created in [Example 2](/tutorials/summary/summary2).
 
 ## Steps to do
 ### Develop the User Interface
-A mockup of the user interface you are going to develop is available [here](/tutorials/summary#UIDesign). The interface provides the possibility to load files and shows a 2D and a 3D viewer. In addition to that, some settings and information for our final application are available.
+A mock up of the User Interface you are going to develop is available [here](/tutorials/summary#UIDesign). The interface provides the possibility to load files and shows a 2D and a 3D viewer. In addition to that, some settings and information for our final application are available.
 
 Search for your Macro Module and add it to your workspace. Right-click {{< mousebutton "right">}} and select {{< menuitem "Related Files" "<MACRO_MODULE_NAME>.script" >}}.
 
@@ -121,7 +121,7 @@ Window {
 ```
 {{</highlight>}}
 
-Again, you can preview your user interface in MeVisLab directly. You can already select a file to open. The image is available at the output of the `LocalImage` module in your internal network but the Viewers are missing in our interface.
+Again, you can preview your User Interface in MeVisLab directly. You can already select a file to open. The image is available at the output of the `LocalImage` module in your internal network but the Viewers are missing in our interface.
 
 ![Source Box](/images/tutorials/summary/Example3_2.png "Source Box")
 
