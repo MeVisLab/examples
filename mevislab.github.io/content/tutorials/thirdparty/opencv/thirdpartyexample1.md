@@ -29,14 +29,14 @@ More information about the `PythonImage` module can be found {{< docuLinks "/Sta
 {{</alert>}}
 
 ### Create a Macro Module
-Now you need to create a Macro Module from your network. You can either group your modules, create a local Macro and convert it to a global Macro Module, or you use the Project Wizard and load your *.mlab file.
+Now you need to create a Macro Module from your network. You can either group your modules, create a local Macro and convert it to a global Macro Module, or you use the Project Wizard and load your \*.mlab file.
 
 {{<alert class="info" caption="Info">}}
 A tutorial how to create your own Macro Modules can be found in [Example 2.2: Global Macro Modules](/tutorials/basicmechanisms/macromodules/globalmacromodules "Example 2.2: Global Macro Modules"). Make sure to add a Python file to your Macro Module.
 {{</alert>}}
 
 ### Add the View2D to your UI
-Next, we need to add the `View2D` to a Window of your Macro Module. Right click on your module {{< mousebutton "right" >}}, open the context menu and select {{< menuitem "Related Files" "<YOUR_MODULE_NAME>.script" >}}. The text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the *.script file of your module.
+Next, we need to add the `View2D` to a Window of your Macro Module. Right click on your module {{< mousebutton "right" >}}, open the context menu and select {{< menuitem "Related Files" "<YOUR_MODULE_NAME>.script" >}}. The text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the \*.script file of your module.
 
 Add the following to your file:
 {{< highlight filename="<YOUR_MODULE_NAME>.script" >}}
@@ -81,7 +81,7 @@ Window {
 ```
 {{</highlight>}}
 
-Now open the Python file of your module and define the commands to be called from the *.script file:
+Now open the Python file of your module and define the commands to be called from the \*.script file:
 {{< highlight filename="<YOUR_MODULE_NAME>.py" >}}
 ```Python
 # from mevis import *

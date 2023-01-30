@@ -42,7 +42,7 @@ The overlay is shown in white.
 
 ![RegionGrowing via marker editor](/images/tutorials/summary/Example1_2.png "RegionGrowing via marker editor")
 
-Open the `SoView2DOverlay` module, define Blend Mode to *Blend* and select any color and *Alpha Factor* for your overlay. The changes are applied automatically in the viewer.
+Open the `SoView2DOverlay` module, change Blend Mode to *Blend* and select any color and *Alpha Factor* for your overlay. The changes are applied automatically in the viewer.
 
 ![Overlay color and transparency](/images/tutorials/summary/Example1_3.png "Overlay color and transparency")
 

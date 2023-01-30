@@ -102,4 +102,4 @@ See the following examples for Python Scripting:
 
 * Python can be used to access, create and process networks, modules, fields and panels.
 * You can use Python via different scripting consoles.
-* You can also define module costume module interactions by referencing to Python functions from the *.script* file
+* You can also define module costume module interactions by referencing to Python functions from the \*.script* file

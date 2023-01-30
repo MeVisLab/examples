@@ -30,7 +30,7 @@ Opening your viewers should now show the images in 2D and 3D.
 ![Show images in 2D and 3D](images/tutorials/basicmechanics/SimpleApp_02.png "Show images in 2D and 3D")
 
 ### Save your network
-Now, save your network as *.mlab* file and remember the location.
+Now, save your network as \*.mlab* file and remember the location.
 
 ### Create a Macro Module
 Open the Project Wizard via {{< menuitem "File" "Run Project Wizard" >}} and run Wizard for a *Macro Module*. Name your module *MyViewerApplication*, enter your details and click *Next >*.
@@ -74,7 +74,7 @@ Interface {
 ``` 
 {{</highlight>}}
 
-We now re-use the *filepath* field from the `ImageLoad` module for our interface. Add a *Window* and a *Vertical* to the bottom of your *.script* file. Add the just created parameter field *filepath* inside your *Vertical* as seen below.
+We now re-use the *filepath* field from the `ImageLoad` module for our interface. Add a *Window* and a *Vertical* to the bottom of your \*.script* file. Add the just created parameter field *filepath* inside your *Vertical* as seen below.
 
 {{< highlight filename="MyViewerApplication.script" >}}
 ``` Stan
@@ -104,7 +104,7 @@ If you now double-click {{< mousebutton "left" >}} on your module, you can see y
 
 ![Filepath field in UI](images/tutorials/basicmechanics/SimpleApp_08.png "Filepath field in UI")
 
-Next, we will add your 2D and 3D Viewers and a Button to your Window. Change your *.script* file as seen below:
+Next, we will add your 2D and 3D Viewers and a Button to your Window. Change your \*.script* file as seen below:
 
 {{< highlight filename="MyViewerApplication.script" >}}
 ``` Stan
@@ -177,7 +177,7 @@ Clicking on *Reset* in your module now clears the filename field and the viewers
 
 A field listener watches a given field in your network and reacts on any changes of the field value. You can define Python functions to execute in case a change has been detected.
 
-In order to define such a listener, you need to add it to the *Commands* section in your *.script* file.
+In order to define such a listener, you need to add it to the *Commands* section in your \*.script* file.
 
 **Example:**
 {{< highlight filename="MyViewerApplication.script" >}}

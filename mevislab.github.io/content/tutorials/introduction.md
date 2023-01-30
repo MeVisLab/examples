@@ -180,7 +180,7 @@ Each module provides a context menu to get additional information.
 * **Help:** The menu entry Help provides access to the Module Help pages and to an Example Network where the module is used. This example network often helps to understand which additional modules are necessary for usage.
 * **Extras:** Automated tests written for the specific module can be executed here. You can also run this Module in a separate process.
 * **Reload Definition:** In case you are currently working on a Module, you may need to reload the definition so that your changes are applied on the Module (for example attached Python scripts).
-* **Related Files:** Related files allows a quick access to the modules **.script* or **.py* files. The files are automatically opened in MATE for editing.
+* **Related Files:** Related files allows a quick access to the modules *\*.script* or *\*.py* files. The files are automatically opened in MATE for editing.
 * **Show Enclosing Folder:** This entry opens the directory where your Module has been stored.
 * **Grouping:** Multiple Modules can be Grouped and the groups can be named. This makes sense to structure your network for a better overview. In addition to that, grouped Modules can be converted to local- or global Macro Modules easily.
 

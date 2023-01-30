@@ -98,12 +98,12 @@ For saving and loading existing CSOs, the modules `CSOSave` and `CSOLoad` can be
 3-dimensional meshes in MeVisLab are handled via *WEM*s (**W**inged **E**dge **M**esh).
 
 The module `WEMLoad` loads different 3D mesh file formats like:
-* Object File Format (*.off *.geom)
-* Wavefront (*.obj)
-* Polygon File Format (*.ply)
-* Standard Tessellation Language (*.stl)
-* VRML (*.wrl)
-* Winged Edge Mesh (*.wem)
+* Object File Format (\*.off \*.geom)
+* Wavefront (\*.obj)
+* Polygon File Format (\*.ply)
+* Standard Tessellation Language (\*.stl)
+* VRML (\*.wrl)
+* Winged Edge Mesh (\*.wem)
 
 ![WEMLoad Module](/images/tutorials/basicmechanics/WEMLoad.png "WEMLoad Module")
 

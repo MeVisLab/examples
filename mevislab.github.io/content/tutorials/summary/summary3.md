@@ -13,17 +13,15 @@ menu:
 ---
 # Example 3: Prototyping - User Interface and Python scripting
 ## Introduction
-In this example, we will develop a User Interface and add Python scripting to the Macro Module you created in [Example 2](/tutorials/summary/summary2).
+In this example, we will develop a user interface and add Python scripting to the Macro Module you created in [Example 2](/tutorials/summary/summary2).
 
 ## Steps to do
 ### Develop the User Interface
-A mock up of the User Interface you are going to develop is available [here](/tutorials/summary#UIDesign). The interface provides the possibility to load files and shows a 2D and a 3D viewer. In addition to that, some settings and information for our final application are available.
+A mockup of the user interface you are going to develop is available [here](/tutorials/summary#UIDesign). The interface provides the possibility to load files and shows a 2D and a 3D viewer. In addition to that, some settings and information for our final application are available.
 
 Search for your Macro Module and add it to your workspace. Right-click {{< mousebutton "right">}} and select {{< menuitem "Related Files" "<MACRO_MODULE_NAME>.script" >}}.
 
-If the module search cannot find your new Macro, select {{< menuitem "Extras" "Reload Module Database (Clear Cache)" >}}
-
-The MeVisLab text editor MATE opens showing the *.script file of your module.
+The MeVisLab text editor MATE opens showing the \*.script file of your module.
 
 #### Layout
 You can see that the interface is divided into 4 parts in vertical direction:
@@ -34,7 +32,7 @@ You can see that the interface is divided into 4 parts in vertical direction:
 
 Inside the vertical parts, the elements are placed next to each other horizontally.
 
-Add a *Window* section to your *.script file. Inside the *Window*, we need a *Vertical* for the 4 parts and a *Box* for each part. Name the Boxes Source, Viewing, Settings and Info. The layout inside each *Box* shall be *Horizontal*.
+Add a *Window* section to your \*.script file. Inside the *Window*, we need a *Vertical* for the 4 parts and a *Box* for each part. Name the Boxes Source, Viewing, Settings and Info. The layout inside each *Box* shall be *Horizontal*.
 
 In addition to that, we define the minimal size of the Window as 400 x 300 pixels.
 
@@ -67,7 +65,7 @@ You can preview your initial layout in MeVisLab by double-clicking your module {
 
 ![Initial Window Layout](/images/tutorials/summary/Example3_1.png "Initial Window Layout")
 
-You can see the 4 vertical aligned parts as defined in the *.script file. Now we are going to add the content of the Boxes.
+You can see the 4 vertical aligned parts as defined in the \*.script file. Now we are going to add the content of the Boxes.
 
 {{<alert class="info" caption="Additional">}}
 An overview over the existing layout elements in MeVisLab Definition Language (MDL) can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#N11695" "here" >}}
@@ -77,9 +75,9 @@ An overview over the existing layout elements in MeVisLab Definition Language (M
 ##### Source
 The *Source Box* shall provide the possibility to select a file for loading into the viewers. You have many options to achieve that in MeVisLab and Python. The easiest way is to re-use the existing field of the `LocalImage` module in your internal network.
 
-Add a *Field* to the *Parameters* section of your *.script file. Name the Field *openFile* and set type to *String* and internalName to *LocalImage.name*.
+Add a field to the *Parameters* section of your \*.script file. Name the field *openFile* and set type to *String* and internalName to *LocalImage.name*.
 
-Then add another *Field* to your *Box* for the *Source* and use the field name from *Parameters* section, in this case *openFile*. Set *browseButton = True* and *browseMode = open* and save your script.
+Then add another field to your *Box* for the *Source* and use the field name from *Parameters* section, in this case *openFile*. Set *browseButton = True* and *browseMode = open* and save your script.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -123,14 +121,14 @@ Window {
 ```
 {{</highlight>}}
 
-Again, you can preview your User Interface in MeVisLab directly. You can already select a file to open. The image is available at the output of the `LocalImage` module in your internal network but the Viewers are missing in our interface.
+Again, you can preview your user interface in MeVisLab directly. You can already select a file to open. The image is available at the output of the `LocalImage` module in your internal network but the Viewers are missing in our interface.
 
 ![Source Box](/images/tutorials/summary/Example3_2.png "Source Box")
 
 ##### Viewing
-Add the 2 *Viewer* to the *Viewing* section of your *.script file and define their *Field* as *View2D.self* and *SoExaminerViewer.self*. Set *expandX = Yes* and *expandY = Yes* for both *Viewers*. We want them to resize in case the size of the Window changes.
+Add the 2 viewer modules to the *Viewing* section of your \*.script file and define their field as *View2D.self* and *SoExaminerViewer.self*. Set *expandX = Yes* and *expandY = Yes* for both viewing modules. We want them to resize in case the size of the Window changes.
 
-Set the 2D Viewer type to *SoRenderArea* and the 3D Viewer type to *SoExaminerViewer* and inspect your new User Interface in MeVisLab.
+Set the 2D Viewer type to *SoRenderArea* and the 3D Viewer type to *SoExaminerViewer* and inspect your new user interface in MeVisLab.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -156,10 +154,10 @@ Set the 2D Viewer type to *SoRenderArea* and the 3D Viewer type to *SoExaminerVi
 
 ![2D and 3D Viewer](/images/tutorials/summary/Example3_3.png "2D and 3D Viewer")
 
-The images selected in the *Source* section are shown in 2D and 3D. We simply re-used the existing fields and viewers from your internal network and are already able to interact with the images. As the `View2D` of your internal network itself provides the possibility to accept Markers and starts the `RegionGrowing`, this is also already possible and the segmentations are shown in 2D and 3D.
+The images selected in the *Source* section are shown in 2D and 3D. We simply re-used the existing fields and viewers from your internal network and are already able to interact with the images. As the `View2D` of your internal network itself provides the possibility to accept markers and starts the `RegionGrowing`, this is also already possible and the segmentations are shown in 2D and 3D.
 
 ##### Settings
-Let's define the Settings section. Once again we first define the necessary *Fields*. For automated tests we are going to develop later, it makes sense to make some of the *Fields* of the internal network available from outside.
+Let's define the Settings section. Once again we first define the necessary fields. For automated tests which we are going to develop later, it makes sense to make some of the fields of the internal network available from outside.
 
 The following shall be accessible as Field for our Macro Module:
 * Filename to be opened
@@ -171,7 +169,7 @@ The following shall be accessible as Field for our Macro Module:
 * Selection for 3D visualization (image, segmentation or both)
 * Trigger to reset the application to its initial state
 
-We already defined the filename as a Field. Next we want to change the color of the overlay. Add another *Field* to your *Parameters* section as *selectOverlayColor*. Define *internalName = SoView2DOverlay.baseColor* and *type = Color*. You may also define a title for the Field, for example *Color*.
+We already defined the filename as a field. Next we want to change the color of the overlay. Add another field to your *Parameters* section as *selectOverlayColor*. Define *internalName = SoView2DOverlay.baseColor* and *type = Color*. You may also define a title for the field, for example *Color*.
 
 The *baseColor* field of the `SoView2DOverlay` already has a parameter connection to the color of the `SoWEMRendererSegmentation`. This has been done in the internal network. The defined color is used for 2D and 3D automatically.
 
@@ -203,17 +201,17 @@ Interface {
 ```
 {{</highlight>}}
 
-The next elements follow the same rules, therefore the final script will be available in the end for completeness.
+The next elements follow the same rules, therefore the final script will be available at the end for completeness.
 
-In order to set the transparency of the 3D image, we need another field re-using the *SoWEMRendererImage.faceAlphaValue*. Add a *Field* *imageAlpha* to the *Parameters* section. Define *internalName = SoWEMRendererImage.faceAlphaValue*, *type = Integer*, *min = 0* and *max = 1*.
+In order to set the transparency of the 3D image, we need another field re-using the *SoWEMRendererImage.faceAlphaValue*. Add a field *imageAlpha* to the *Parameters* section. Define *internalName = SoWEMRendererImage.faceAlphaValue*, *type = Integer*, *min = 0* and *max = 1*.
 
-Add the Field to the *Settings Box* and set *step = 0.1* and *slider = True*.
+Add the field to the *Settings Box* and set *step = 0.1* and *slider = True*.
 
-For the `RegionGrowing` threshold, add the *Field* *thresholdInterval* to *Parameters* section and set *type = Integer*,  *min = 1*,  *max = 100* and *internalName = RegionGrowing.autoThresholdIntervalSizeInPercent*.
+For the `RegionGrowing` threshold, add the field *thresholdInterval* to *Parameters* section and set *type = Integer*,  *min = 1*,  *max = 100* and *internalName = RegionGrowing.autoThresholdIntervalSizeInPercent*.
 
-Add the Field to the *Settings* UI and define *step = 0.1* and *slider = True*.
+Add the field to the *Settings* UI and define *step = 0.1* and *slider = True*.
 
-Define a *Field* *isoValueImage* in *Parameters* section and set *internalName = IsoSurfaceImage.isoValue*,  *type = Integer*,  *min = 1* and  *max = 1000*.
+Define a field *isoValueImage* in the *Parameters* section and set *internalName = IsoSurfaceImage.isoValue*,  *type = Integer*,  *min = 1* and  *max = 1000*.
 
 In *Settings* section of the UI, set *step = 2* and *slider = True*.
 
@@ -309,27 +307,27 @@ Window {
 ```
 {{</highlight>}}
 
-Your User Interface of the Macro Module should now look similar to this:
+Your user interface of the Macro Module should now look similar to this:
 
 ![User Interface without Python Scripting](/images/tutorials/summary/Example3_4.png "User Interface without Python Scripting")
 
 For the next elements, we require Python scripting. Nevertheless, you are already able to use your application and perform the basic functionalities without writing any line of code.
 
 ### Python scripting
-Python scripting is always necessary in case you do not want to re-use an existing Field for your User Interface but implement functions to define what happens in case of any event.
+Python scripting is always necessary in case you do not want to re-use an existing field for your user interface but implement functions to define what happens in case of any event.
 
-Events can be raised by the user (i.e. by clicking a Button) or by the application itself (i.e. when the Window is opened).
+Events can be raised by the user (i.e. by clicking a button) or by the application itself (i.e. when the window is opened).
 
 #### 3D visualization selection
 You will now add a selection possibility for the 3D viewer. This allows you to define the visibility of the 3D objects Image, Segmentation or Both.
 
-Add another *Field* to your *Parameters* section. Define the *Field* as *selected3DView* and set *type = Enum* and *values =Segmentation,Image,Both*.
+Add another field to your *Parameters* section. Define the field as *selected3DView* and set *type = Enum* and *values =Segmentation,Image,Both*.
 
-Add a *ComboBox* to your *Settings* and use the *Field* name defined above. Set *alignX = Left* and *editable = False* and open the *Window* of the Macro Module in MeVisLab.
+Add a *ComboBox* to your *Settings* and use the field name defined above. Set *alignX = Left* and *editable = False* and open the *Window* of the Macro Module in MeVisLab.
 
-The values of the Field can be selected, but nothing happens in our viewers. We need to implement a *FieldListener* in Python which reacts on any value changes of the *Field selected3DView*.
+The values of the field can be selected, but nothing happens in our viewers. We need to implement a *FieldListener* in Python which reacts on any value changes of the field *selected3DView*.
 
-Open your script file and go to the *Commands* section. Add a *FieldListener* and re-use the name of our internal *Field selected3DView*. Add a *Command* to the *FieldListener* calling a Python function *viewSelectionChanged*.
+Open your script file and go to the *Commands* section. Add a *FieldListener* and re-use the name of our internal field *selected3DView*. Add a *Command* to the *FieldListener* calling a Python function *viewSelectionChanged*.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -359,12 +357,12 @@ def viewSelectionChanged(field):
 ```
 {{</highlight>}}
 
-The function sets the `SoSwitch` to the child value depending on the selected *Field* value from the *ComboBox* and you should now be able to switch the 3D rendering by selecting an entry in the User Interface.
+The function sets the `SoSwitch` to the child value depending on the selected field value from the *ComboBox* and you should now be able to switch the 3D rendering by selecting an entry in the user interface.
 
 #### Setting the Marker
-The Marker for the `RegionGrowing` is defined by the click position as Vector3. Add another *Field markerPosition* to the *Parameters* section and define *type = Vector3*.
+The Marker for the `RegionGrowing` is defined by the click position as Vector3. Add another field *markerPosition* to the *Parameters* section and define *type = Vector3*.
 
-Teen, add a trigger *Field* *applyMarker* to your *Parameters* section. Set *type  = Trigger* and *title = Add*.
+Then, add a trigger field *applyMarker* to your *Parameters* section. Set *type  = Trigger* and *title = Add*.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -394,7 +392,7 @@ Add another *FieldListener* to both fields:
 ```
 {{</highlight>}}
 
-In the end, add both fields to the *Settings* section of your user interface:
+Finally, add both fields to the *Settings* section of your user interface:
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
 ...
@@ -418,18 +416,18 @@ def applyPosition():
 ```
 {{</highlight>}}
 
-Whenever the Field *markerPosition* changes its value, the value is automatically applied to the *SoView2DMarkerEditor.newPosXYZ*. Clicking *SoView2DMarkerEditor.add* adds the new Vector to the `SoView2DMarkerEditor` and the region growing starts.
+Whenever the field *markerPosition* changes its value, the value is automatically applied to the *SoView2DMarkerEditor.newPosXYZ*. Clicking *SoView2DMarkerEditor.add* adds the new Vector to the `SoView2DMarkerEditor` and the region growing starts.
 
 {{<alert class="info" caption="Info">}}
-The *Field* *SoView2DMarkerEditor.useInsertTemplate* needs to be set to *True* in order to allow adding Markers via Python.
+The *Field* *SoView2DMarkerEditor.useInsertTemplate* needs to be set to *True* in order to allow adding markers via Python.
 {{</alert>}}
 
 #### Reset
-Add a new Field *resetApplication* to the *Parameters* section and set *type = Trigger* and *title = Reset*.
+Add a new field *resetApplication* to the *Parameters* section and set *type = Trigger* and *title = Reset*.
 
 Add another *FieldListener* to your *Commands* and define *command = resetApplication*.
 
-Add the *Field* to your *Source* region.
+Add the field to your *Source* region.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -476,7 +474,7 @@ def resetApplication():
 ```
 {{</highlight>}}
 
-You can also reset the application to initial state by adding a *initCommand* to your *Window*. Call the resetApplication function here, too and whenever the Window is opened, the application is reset to its initial state.
+You can also reset the application to initial state by adding a *initCommand* to your *Window*. Call the resetApplication function here, too and whenever the window is opened, the application is reset to its initial state.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -511,11 +509,11 @@ def resetApplication():
 ### Information
 In the end, we want to provide some information about the volume of the segmented area (in ml).
 
-Add one more *Field* to your *Parameters* section and re-use the internal network fields *CalculateVolume.totalVolume*. Set *Field* to *editable = False*
+Add one more field to your *Parameters* section and re-use the internal network fields *CalculateVolume.totalVolume*. Set field to *editable = False*
 
-Add the Field to the Info section of your Window.
+Add the field to the Info section of your window.
 
-Opening the Window of your Macro Module in MeVisLab now provides all functionalities we wanted to achieve. You can also play around in the Window and define some additional Boxes or MDL controls but the basic application prototype is now done.
+Opening the window of your Macro Module in MeVisLab now provides all functionalities we wanted to achieve. You can also play around in the window and define some additional Boxes or MDL controls but the basic application prototype is now done.
 
 ![Final Macro Module](/images/tutorials/summary/Example3_5.png "Final Macro Module")
 
@@ -683,8 +681,8 @@ def applyPosition():
 {{</highlight>}}
 
 ## Summary
-* You now added a User Interface to your Macro Module.
-* The Window opens automatically on double-click {{< mousebutton "right" >}}
+* You now added a user interface to your Macro Module.
+* The window opens automatically on double-click {{< mousebutton "right" >}}
 * Fields defined in the *Parameters* section can be modified in the MeVisLab Module Inspector
 * Python allows to implement functions executed on events raised by the user or by the application itself.
 

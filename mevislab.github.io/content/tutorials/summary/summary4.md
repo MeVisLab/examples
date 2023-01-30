@@ -17,15 +17,15 @@ In the previous chapters you developed a Macro Module with User Interface and Py
 
 ## Steps to do
 ### Create a test network using your Macro Module
-Create a new and empty network and save it as *.mlab file. Remember the location.
+Create a new and empty network and save it as \*.mlab file. Remember the location.
 
 Use Module Search and add your Macro Module developed in previous examples to your Workspace.
 
 ![Macro Module](/images/tutorials/summary/Example4_1.png "Macro Module")
 
-You can see that the module does not have any in- and outputs. You cannot connect it to other modules. For testing purposes it makes sense to provide the viewers and images as outputs so that you can use them for generating screenshots.
+You can see that the module does not have any inputs or outputs. You cannot connect it to other modules. For testing purposes it makes sense to provide the viewers and images as outputs so that you can use them for generating screenshots.
 
-Open the *.script file in MATE as already explained in [Example 3](/tutorials/summary/summary3). In the *Outputs* section, add the following:
+Open the \*.script file in MATE as already explained in [Example 3](/tutorials/summary/summary3). In the *Outputs* section, add the following:
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -48,7 +48,7 @@ You can now add a viewer or any other module to your Macro Module and use them f
 ![Test Network](/images/tutorials/summary/Example4_3.png "Test Network")
 
 ### Create test case
-Open MeVisLab TestCaseManager via {{< menuitem "File" "Run TestCaseManager..." >}}. On tab *Test Creation* define a name of your test case, for example *TutorialSummaryTest*. Select Type as *Macros*, define the Package and use the same as for your Macro Module, select *Import Network* and Select your saved *.mlab file from the step above. Click *Create*.
+Open MeVisLab TestCaseManager via {{< menuitem "File" "Run TestCaseManager..." >}}. On tab *Test Creation* define a name of your test case, for example *TutorialSummaryTest*. Select Type as *Macros*, define the package and use the same as for your Macro Module, select *Import Network* and Select your saved \*.mlab file from the step above. Click *Create*.
 
 ![Test Creation](/images/tutorials/summary/Example4_4.png "Test Creation")
 
@@ -58,7 +58,7 @@ MATE automatically opens the Python file of your test case and it appears in MeV
 
 ### Write test functions in Python
 #### Preparations
-Before writing a test case, we need some helper functions in Python we will be using in our test cases. The first thing we need is a function to load images.
+Before writing a test case, we need some helper functions in Python, which we will use in our test cases. The first thing we need is a function to load images.
 
 {{< highlight filename="<TEST_CASE_NAME>.py" >}}
 ```Python
@@ -67,8 +67,8 @@ from TestSupport import Base, Fields, Logging, ScreenShot
 from TestSupport.Macros import *
 
 path_to_image = "$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm"
-marker_location = [-29,-26,45]
-marker_location_new = [-20,-30,35]
+marker_location = [-29, -26, 45]
+marker_location_new = [-20, -30, 35]
 new_color = [0.5, 0.5, 0]
 
 def loadImage(full_path):
@@ -77,7 +77,7 @@ def loadImage(full_path):
 ```
 {{</highlight>}}
 
-We define the path to a file to be loaded and the function *loadImage* sets the value of the `TutorialSummary` modules *openFile* field by the value of the given parameter *full_path*.
+We define the path to a file to be loaded. The function *loadImage* sets the *openFile* field of the `TutorialSummary` module.
 
 The arrays for the marker location and color will be used later.
 
@@ -117,7 +117,7 @@ def setMarkerPosition(vector):
 
 The *setMarkerPosition* function gets a 3-dimensional vector and sets the *markerPosition* field of our module. Then the *applyMarker* trigger is touched. As the region growing algorithm might need some time to segment, we need to wait until the *outSegmentationMask* output field is valid, means there is a valid segmentation mask at the segmentation mask output of our Macro Module.
 
-In the end, we need to reset the application to its initial state, so that each test case has the initial start conditions of the application. A test case should never depend on another test case so that they all can be executed exclusively.
+Finally, we need to reset the application to its initial state, so that each test case has the initial start conditions of the application. A test case should never depend on another test case so that they all can be executed exclusively.
 
 Example:
 Having one test case for the requirement to load images and one for setting the marker depending on the image to be loaded by previous test case, you will never be able to execute the marker test case without executing the load image first.
@@ -398,7 +398,7 @@ Logging.showFile("Link to screenshot file", result)
 {{</highlight>}}
 
 ## Summary
-* Define accessible Fields for Macro Modules so that they can be set in Python tests
+* Define accessible fields for Macro Modules so that they can be set in Python tests
 * Add outputs to your Macro Modules for automated testing and connecting testing modules
 * Testcase numbering allows you to sort them and define execution order
 

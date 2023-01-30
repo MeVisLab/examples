@@ -27,7 +27,7 @@ The MeVisLab TestCenter is the starting point of your tests. Select {{<menuitem 
 #### Test Selection
 The Test Selection allows you to define a selection of test cases to be executed. The list can be configured by defining a filter by manually selecting the packages ([see Example 2.1: Package Creation](/tutorials/basicmechanisms/macromodules/package)) to be scanned for test cases. All test cases found in the selected packages are shown.
 
-On the right side of the Test Selection tab, you can see a list of functions in the test case. Each list entry is related to a Python function. You can select the functions to be executed. If your test case contains a network, you can open the *.mlab file or edit the Python file in MATE.
+On the right side of the Test Selection tab, you can see a list of functions in the test case. Each list entry is related to a Python function. You can select the functions to be executed. If your test case contains a network, you can open the \*.mlab file or edit the Python file in MATE.
 
 #### Test Reports
 The results of your tests are shown as a report after execution. 

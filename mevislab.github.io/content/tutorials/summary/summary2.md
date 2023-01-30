@@ -36,7 +36,7 @@ Select the created package and click *Next*.
 
 ![Macro Module wizard](/images/tutorials/summary/Example2_3.png "Macro Module wizard")
 
-Select your *.mlab file from [Example 1](/tutorials/summary/summary1/) and check *Add Python file*. Click *Next*.
+Select your \*.mlab file from [Example 1](/tutorials/summary/summary1/) and check *Add Python file*. Click *Next*.
 
 ![Macro Module wizard](/images/tutorials/summary/Example2_4.png "Macro Module wizard")
 
@@ -57,8 +57,8 @@ The directory structure for a Macro Module is as follows:
 
 ![Directory Structure](/images/tutorials/summary/Example2_6.png "Directory Structure")
 
-#### Definition (*.def) file
-The initial *.def file contains information you entered into the Wizard for the Macro Module.
+#### Definition (\*.def) file
+The initial \*.def file contains information you entered into the Wizard for the Macro Module.
 
 {{< highlight filename="<MACRO_NAME>.def" >}}
 ```Stan
@@ -74,13 +74,13 @@ MacroModule TutorialSummary {
 ```
 {{</highlight>}}
 
-An *externalDefinition* to a script file is also added (see below for the *.script file).
+An *externalDefinition* to a script file is also added (see below for the \*.script file).
 
-#### MeVisLab Network (*.mlab) file
-The *.mlab file is a copy of the *.mlab file you developed in [Example 1](/tutorials/summary/summary1/) and re-used in the wizard. In the next chapters, this file will be used as *internal network*. 
+#### MeVisLab Network (\*.mlab) file
+The \*.mlab file is a copy of the \*.mlab file you developed in [Example 1](/tutorials/summary/summary1/) and re-used in the wizard. In the next chapters, this file will be used as *internal network*. 
 
-#### Python (*.py) file
-The initial *.py file only contains the import of MeVisLab specific objects and functions. In the future examples, we will add functionalities to our application in Python.
+#### Python (\*.py) file
+The initial \*.py file only contains the import of MeVisLab specific objects and functions. In the future examples, we will add functionalities to our application in Python.
 
 {{< highlight filename="<MACRO_NAME>.py" >}}
 ```Python
@@ -88,8 +88,8 @@ from mevis import *
 ```
 {{</highlight>}}
 
-#### Script (*.script) file
-The script (*.script) file defines Fields accessible from outside the Macro Module, inputs and outputs and allows you to develop a User Interface for your prototype and your final application.
+#### Script (\*.script) file
+The script (\*.script) file defines fields accessible from outside the Macro Module, inputs and outputs and allows you to develop a User Interface for your prototype and your final application.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan

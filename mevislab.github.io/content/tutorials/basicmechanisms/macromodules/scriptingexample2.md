@@ -42,7 +42,7 @@ Now, create your macro module and reload MeVisLab. You can find your module via 
 
 ![Enable Python scripting](/images/tutorials/basicmechanics/EnablePythonScripting.png "Enable Python scripting")
 
-To design a panel and create a user interface for the macro module, open the *.script* file. You can see, that a Command environment exist, which defines the python file as source for all commands.
+To design a panel and create a user interface for the macro module, open the \*.script* file. You can see, that a Command environment exist, which defines the python file as source for all commands.
 
 ![Open the script file](/images/tutorials/basicmechanics/OpenScriptFile.png "Open the script file")
 
@@ -244,7 +244,7 @@ can do this in the following way:
 
     We like to activate this functionality when opening the panel of our macro module `IsoCSOs`. Thus, we add a starting command to the control Window. We can call this command for example *enableFunctionalities*.
 
-    In the *.script* file:
+    In the \*.script* file:
 
 {{< highlight filename="IsoCSOs.script" >}}
 ```Stan
@@ -270,7 +270,7 @@ def enableFunctionalities():
 
 3.  Implement a field listener. This field listener will detect when you hover over a CSO and the CSO id changes. Triggered by a CSO id change, a colorization function will be executed and colorize the selected CSO.
 
-In the *.script* file:
+In the \*.script* file:
 
 {{< highlight filename="IsoCSOs.script" >}}
 ```Stan
