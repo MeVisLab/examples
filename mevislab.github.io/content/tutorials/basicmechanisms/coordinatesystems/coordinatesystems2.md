@@ -53,7 +53,7 @@ The module `OrthoView2D` provides a 2D view displaying the input image in three 
 
 ![OrthoView2D](/images/tutorials/basicmechanics/OrthoView2D.png "OrthoView2D")
 
-As already learned in previous example [1.1: MeVisLab Coordinate Systems](/tutorials/basicmechanisms/coordinatesystems/coordinatesystems), world and voxel positions are based on different coordinate systems. Selecting the top left corner of any of your views will not show a world position of 0, 0, 0. You can move the mouse cursor to the voxel position 0, 0, 0 as seen in the image information of the viewers in brackets *(x, y, z)*. The field *worldPosition* then shows the location of the image in world coordinate system (see `Info` module).
+As already learned in the previous example [1.1: MeVisLab Coordinate Systems](/tutorials/basicmechanisms/coordinatesystems/coordinatesystems), world and voxel positions are based on different coordinate systems. Selecting the top left corner of any of your views will not show a world position of 0, 0, 0. You can move the mouse cursor to the voxel position 0, 0, 0 as seen in the image information of the viewers in brackets *(x, y, z)*. The field *worldPosition* then shows the location of the image in world coordinate system (see `Info` module).
 
 ![OrthoView2D Voxel- and World Position](/images/tutorials/basicmechanics/OrthoView2D_WorldPosition.png "OrthoView2D Voxel- and World Position")
 
