@@ -40,7 +40,7 @@ To add and edit a panel, open the context menu and select {{< menuitem "Related 
 ![Module script file](/images/tutorials/basicmechanics/GUI_11.png "Module script file")
 
 ### Module interface
-Per default, the \*.script* file contains the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Interface" "interface" >}} of the module.
+Per default, the *\*.script* file contains the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Interface" "interface" >}} of the module.
 In the interface section (everything insight the curled brackets behind the name *Interface*) you can define the module inputs, the module outputs and also all module fields (or *Parameters*).
 
 [//]: <> (MVL-653)
@@ -69,7 +69,7 @@ Creating an input/output causes:
 1. Input/output connectors are added to the module.
 2. You can find placeholders for the input and output in the internal network (see image).
 3. Input/output fields are added to the automatic panel.
-4. A description of the input/output fields is automatically added to the module help file, when opening the \*.mhelp* file after input/output creation. Helpfile creation is explained in [Example 2.3](/tutorials/basicmechanisms/macromodules/helpfiles/).
+4. A description of the input/output fields is automatically added to the module help file, when opening the *\*.mhelp* file after input/output creation. Helpfile creation is explained in [Example 2.3](/tutorials/basicmechanisms/macromodules/helpfiles/).
 
 ![Internal Network of your macro module](/images/tutorials/basicmechanics/BM_23.png "Internal Network of your macro module")
 
@@ -292,7 +292,7 @@ The section Source should already be available and generated automatically in ca
 
 [//]: <> (MVL-653)
 
-You can right-click {{< mousebutton "right" >}} on the command (*myWindowCommand* or *myButtonAction*) in your \*.script* file and select {{< menuitem "Create Python Funtion......" >}}. The text editor MATE opens automatically and generates an initial Python function for you. You can simply add a logging function or implement complex logic here.
+You can right-click {{< mousebutton "right" >}} on the command (*myWindowCommand* or *myButtonAction*) in your *\*.script* file and select {{< menuitem "Create Python Funtion......" >}}. The text editor MATE opens automatically and generates an initial Python function for you. You can simply add a logging function or implement complex logic here.
 
 **Example:**
 {{< highlight filename="Filter.py" >}}
@@ -333,7 +333,7 @@ Please use the *Module Search* with the prefix *Test* for more examples.
 
 ## Summary
 * User interfaces and several module panels can be created for each macro module.
-* You can create a panel, define inputs and outputs as well as interactions, in your \*.script* file in {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} by using the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html" "MeVisLab Definition Language (MDL)">}}.
+* You can create a panel, define inputs and outputs as well as interactions, in your *\*.script* file in {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} by using the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html" "MeVisLab Definition Language (MDL)">}}.
 * Module interactions can be implemented using commands, which are linked to Python functions.
 * You can implement field listeners, which trigger actions after a field value changes.
 
