@@ -17,7 +17,7 @@ In this example you are re-creating your application installer after changing th
 
 ## Steps to do
 ### Update the \*.mlinstall file
-You do not need to use the Project Wizard now, because you already have a valid \*.mlinstall file. The location should be in your package, then *.\Configuration\Installers\TutorialSummary*. Open the file in any text editor and search for the *$VERSION 0.5*. Change the version to something else, in our case we now have our first major release 1.0.
+You do not need to use the Project Wizard now, because you already have a valid \*.mlinstall file. The location should be in your package, under *.\Configuration\Installers\TutorialSummary*. Open the file in any text editor and search for the *$VERSION 0.5*. Change the version to something else, in our case we now have our first major release 1.0.
 
 {{<alert class="info" caption="Info">}}
 You can also run the Project Wizard again but keep in mind that manual changes on your \*.mlinstall file might be overwritten. The wizard re-creates your \*.mlinstall file whereas the ToolRunner just uses it.

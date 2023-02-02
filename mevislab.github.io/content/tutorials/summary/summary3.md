@@ -213,7 +213,7 @@ Add the field to the *Settings* UI and define *step = 0.1* and *slider = True*.
 
 Define a field *isoValueImage* in the *Parameters* section and set *internalName = IsoSurfaceImage.isoValue*,  *type = Integer*,  *min = 1* and  *max = 1000*.
 
-In *Settings* section of the UI, set *step = 2* and *slider = True*.
+In the *Settings* section of the UI, set *step = 2* and *slider = True*.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan

@@ -65,6 +65,6 @@ If you want to write an additional Python test case, you can also do that.
 
 ## Summary
 * Your application can be updated by modifying the Macro Module and/or internal network of your application
-* Any changes will be applied in your installable executable in the next example
+* Any changes will be applied to your installable executable in the next example
 
 {{< networkfile "examples/summary/TutorialSummaryUpdated.zip" >}}

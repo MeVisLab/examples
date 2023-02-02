@@ -115,12 +115,12 @@ def setMarkerPosition(vector):
 ```
 {{</highlight>}}
 
-The *setMarkerPosition* function gets a 3-dimensional vector and sets the *markerPosition* field of our module. Then the *applyMarker* trigger is touched. As the region growing algorithm might need some time to segment, we need to wait until the *outSegmentationMask* output field is valid, means there is a valid segmentation mask at the segmentation mask output of our Macro Module.
+The *setMarkerPosition* function gets a 3-dimensional vector and sets the *markerPosition* field of our module. Then the *applyMarker* trigger is touched. As the region growing algorithm might need some time to segment, we need to wait until the *outSegmentationMask* output field is valid, meaning that there is a valid segmentation mask at the segmentation mask output of our Macro Module.
 
 Finally, we need to reset the application to its initial state, so that each test case has the initial start conditions of the application. A test case should never depend on another test case so that they all can be executed exclusively.
 
 Example:
-Having one test case for the requirement to load images and one for setting the marker depending on the image to be loaded by previous test case, you will never be able to execute the marker test case without executing the load image first.
+Having one test case for the requirement to load images and one for setting the marker depending on the image to be loaded by the previous test case, you will never be able to execute the marker test case without executing the load image first.
 
 {{< highlight filename="<TEST_CASE_NAME>.py" >}}
 ```Python
@@ -185,7 +185,7 @@ def TEST_RegionGrowing():
 {{</highlight>}}
 
 ##### Requirement 4.2: It shall be possible to define a threshold for the RegionGrowing algorithm
-For the threshold of the region growing it makes sense to extend previous test case instead of writing a new one. We already have a segmentation based on the default threshold value and can just change the threshold and compare the resulting volumes.
+For the threshold of the region growing it makes sense to extend the previous test case instead of writing a new one. We already have a segmentation based on the default threshold value and can just change the threshold and compare the resulting volumes.
 
 Increasing the threshold shall result in larger volumes, decreasing shall result in smaller values.
 
@@ -265,14 +265,14 @@ def TEST_OverlayColor():
 ```
 {{</highlight>}}
 
-Again, we reset the application to an initial state, load the image and set a marker. We remember the initial color and set a new color for our Macro Module. Then we check if the new color differs the old color and if the colors used by the internal modules `SoWEMRendererSegmentation` and `SoView2DOverlay` changed to our new color.
+Again, we reset the application to an initial state, load the image and set a marker. We remember the initial color and set a new color for our Macro Module. Then we check if the new color differs from the old color and if the colors used by the internal modules `SoWEMRendererSegmentation` and `SoView2DOverlay` changed to our new color.
 
-In the end an image comparison is done for the 3D rendering using the old and the new color. The images shall differ.
+Finally an image comparison is done for the 3D rendering using the old and the new color. The images shall differ.
 
 The call *MLAB.processInventorQueue()* is sometimes necessary if an inventor scene changed via Python scripting, because the viewers might not update immediately after changing the field. MeVisLab is now forced to process the queue in inventor and to update the renderings.
 
 #### Requirement 8: The total volume of the segmented area shall be calculated and shown (in ml)
-For the correctness of the volume calculation, we added the `CalculateVolume` module to our test network. The volume given by our macro is compared to the volume of the segmentation from output *outSegmentationMask* calculated by the `CalculateVolume`module.
+For the correctness of the volume calculation, we added the `CalculateVolume` module to our test network. The volume given by our macro is compared to the volume of the segmentation from output *outSegmentationMask* calculated by the `CalculateVolume` module.
 
 {{< highlight filename="<TEST_CASE_NAME>.py" >}}
 ```Python
@@ -308,9 +308,9 @@ def TEST_VolumeCalculation():
 ##### Requirement 9.1: Original data
 ##### Requirement 9.2: Segmentation results
 ##### Requirement 9.3: All
-In the end, we want to develop a testcase for the 3D toggling of the view. We can not exactly test if the rendering is correct, therefore we will check if the 3D rendering image changes when toggling the 3D view. We will use the modules `OffscreenRenderer`, `ImageCompare` and `SoCameraInteraction` we added to our test network.
+In the end, we want to develop a testcase for the 3D toggling of the view. We can not exactly test if the rendering is correct, therefore we will check if the 3D rendering image changes when toggling the 3D view. We will use the modules `OffscreenRenderer`, `ImageCompare` and `SoCameraInteraction` which we added to our test network.
 
-Initially, without any marker and segmentation, the views *Both* and *Head* 
+Initially, without any marker and segmentation, the views *Both* and *Head* show the same result. After adding a marker, we are going to test if different views result in different images.
 
 {{< highlight filename="<TEST_CASE_NAME>.py" >}}
 ```Python
@@ -365,12 +365,12 @@ The MeVisLab TestCaseManager sorts your test cases alphabetically. Your test cas
 
 ![TestCaseManager Sorting](/images/tutorials/summary/Example4_6.png "TestCaseManager Sorting")
 
-Executing all testcases results in exactly this order. If you want to change the sorting order - for example in this case it makes sense to test the possibility of region growing before testing the color of the resulting overlay - you can just add numeric prefixes to your test cases. This might look like this then:
+Generally, test cases should not depend on each other and the order of their execution does not matter. Sometimes it makes sense though to execute tests in a certain order, for example for performance reasons. In this case you can add numeric prefixes to your test cases. This might look like this then:
 
 ![TestCaseManager Custom Sorting](/images/tutorials/summary/Example4_7.png "TestCaseManager Custom Sorting")
 
 ### Not testable requirements
-As already mentioned, some requirements can not be tested in an automated environment. Human eyes cannot be replaced completely.
+As already mentioned, some requirements can not be tested in an automated environment. Human eyesight cannot be replaced completely.
 
 In our application, the following tests have not been tested automatically:
 * Requirement 2: The application shall provide a 2D and a 3D viewer.
