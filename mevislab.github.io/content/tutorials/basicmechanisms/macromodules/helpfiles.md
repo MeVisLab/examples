@@ -30,7 +30,7 @@ We will start by creating a help file using the build in text editor {{< docuLin
 
 ![Creation of module help](/images/tutorials/basicmechanics/GUI_06.png "Creation of module help")
 
-{{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MeVisLab MATE">}} opens. An .mhelp file (*Filter.mhelp*) is created automatically and is stored in the folder your macro module `Filter` is stored in. You can find the folder structure in MATE on the left side. Editing the text field, you can edit the help file. 
+{{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MeVisLab MATE">}} opens. An \*.mhelp file (*Filter.mhelp*) is created automatically and is stored in the folder your macro module `Filter` is stored in. You can find the folder structure in MATE on the left side. Editing the text field, you can edit the help file. 
 
 [//]: <> (MVL-653)
 
@@ -68,7 +68,7 @@ Depending on the way the macro module was created, more or less features are aut
 {{</alert>}}
 
 ### Creation of an example network
-To add an example network to your module, you need to add a reference to the respective *.mlab* file to the module definition file (.def). Open the file *Filter.def*. You can find the line *exampleNetwork     = "$(LOCAL)/networks/FilterExample.mlab"*, which defines the reference to the *.mlab* file containing the example network. Per default the name of the example network is *ModulenameExample.mlab*. An *.mlab* file containing only the module Filter is created insight the folder *networks*.
+To add an example network to your module, you need to add a reference to the respective *\*.mlab* file to the module definition file (.def). Open the file *Filter.def*. You can find the line *exampleNetwork     = "$(LOCAL)/networks/FilterExample.mlab"*, which defines the reference to the *\*.mlab* file containing the example network. Per default the name of the example network is *ModulenameExample.mlab*. An *\*.mlab* file containing only the module Filter is created insight the folder *networks*.
 
 It is possible that the reference to the example network or the file *FilterExample.mlab* is missing. One reason could be, that its creation was not selected when creating the macro module. In this case, add the reference and the file manually.
 

@@ -1,7 +1,7 @@
 ---
 title: "Chapter V: Data Objects"
 date: 2022-06-15T08:56:33+02:00
-status: "open"
+status: "OK"
 draft: false
 tags: ["Beginner", "Tutorial", "Data Objects", "2D", "Contours", "3D", "Surfaces"]
 menu: 

@@ -1,7 +1,7 @@
 ---
 title: "Example 1: 3D Printing in MeVisLab"
 date: 2022-06-15T08:56:33+02:00
-status: "open"
+status: "OK"
 draft: false
 tags: ["Beginner", "Tutorial", "assimp", "3D", "3D Printing", "stl"]
 menu: 
@@ -14,7 +14,7 @@ menu:
 # Example 1: 3D Printing in MeVisLab
 
 ## Introduction
-This example uses the assimp library to load a 3D file and save the file as *.stl for 3D printing.
+This example uses the assimp library to load a 3D file and save the file as \*.stl for 3D printing.
 
 ## Steps to do
 ### Develop your network
@@ -39,10 +39,10 @@ You can also define a material for your sphere but what we wanted to show is: Yo
 
 ![Cow and red Sphere in SoExaminerViewer](/images/tutorials/thirdparty/CowAndSphere_red.png "Cow and red Sphere in SoExaminerViewer")
 
-### Save your scene as *.stl file for 3D Printing
+### Save your scene as \*.stl file for 3D Printing
 Add a `SoSceneWriter` module to your workspace. The `SoExaminerViewer` has a hidden output which can be shown on pressing {{<keyboard "SPACE">}}. Connect the `SoSceneWriter` to the output.
 
-Name your output *.stl file and select *Stl Ascii* as output format so that we can inspect the result afterwards.
+Name your output \*.stl file and select *Stl Ascii* as output format so that we can inspect the result afterwards.
 
 ![SoSceneWriter](/images/tutorials/thirdparty/SoSceneWriter.png "SoSceneWriter")
 
@@ -52,15 +52,15 @@ The `SoSceneWriter` can save node color information when saving in Inventor (ASC
 There are [tools](https://www.patrickmin.com/meshconv/) to convert from at least VRML to STL available for free.
 {{</alert>}}
 
-Write your Scene and open the resulting file in your preferred editor. As an alternative, you can also open the file in an *.stl file reader like Microsoft 3D-Viewer.
+Write your Scene and open the resulting file in your preferred editor. As an alternative, you can also open the file in an \*.stl file reader like Microsoft 3D-Viewer.
 
 ![Microsoft 3D-Viewer](/images/tutorials/thirdparty/Microsoft_3D_Viewer.png "Microsoft 3D-Viewer")
 
 ### Load the file again
-For loading your *.stl file, you can use a `SoSceneLoader` and a `SoExaminerViewer`. 
+For loading your \*.stl file, you can use a `SoSceneLoader` and a `SoExaminerViewer`. 
 
 {{<alert class="info" caption="Info">}}
-More information about the *.stl format can be found [here](https://en.wikipedia.org/wiki/STL_(file_format))
+More information about the \*.stl format can be found [here](https://en.wikipedia.org/wiki/STL_(file_format))
 {{</alert>}}
 
 ![SoSceneLoader](/images/tutorials/thirdparty/SoSceneLoader_2.png "SoSceneLoader")

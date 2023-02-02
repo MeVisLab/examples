@@ -1,7 +1,7 @@
 ---
 title: "Example 5: Clip Planes"
 date: 2022-06-15T08:56:33+02:00
-status: "open"
+status: "OK"
 draft: false
 tags: ["Advanced", "Tutorial", "Image Processing", "3D", "Clip Planes"]
 menu: 

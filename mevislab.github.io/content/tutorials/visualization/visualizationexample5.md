@@ -1,7 +1,7 @@
 ---
 title: "Example 5: Volume rendering and interactions"
 date: 2022-06-15T08:56:33+02:00
-status: "open"
+status: "OK"
 draft: false
 tags: ["Beginner", "Tutorial", "Visualization", "3D", "Volume Rendering", "GVR", "LUT"]
 menu: 
@@ -12,6 +12,9 @@ menu:
     parent: "visualization"
 ---
 # Example 5: Volume rendering and interactions {#TutorialVisualizationExample6}
+
+{{< youtube "QViPqXs2LHc" >}}
+
 ## Introduction
 In this example we like to convert a scan of a head into a 3D scene-object. The scene-object allows to add some textures, interactions and animations.
 

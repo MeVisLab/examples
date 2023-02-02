@@ -82,7 +82,7 @@ The module `RunPythonScript` allows to execute Python scripts from within a MeVi
 
 #### Module interactions via Python scripting
 
-You can reference to a Python function inside a *.script* file of a macro module. With this, you can for example execute a Python function, whenever you open a panel, define the action which is executed when pressing a button or specify the command triggered by a [field listener](tutorials/basicmechanisms/macromodules/scriptingexample2). An example for module interactions via Python scripting is given in the same example.
+You can reference to a Python function inside a *\*.script* file of a macro module. With this, you can for example execute a Python function, whenever you open a panel, define the action which is executed when pressing a button or specify the command triggered by a [field listener](tutorials/basicmechanisms/macromodules/scriptingexample2). An example for module interactions via Python scripting is given in the same example.
 
 ## Tips and tricks
 #### Scripting Assistant
@@ -102,4 +102,4 @@ See the following examples for Python Scripting:
 
 * Python can be used to access, create and process networks, modules, fields and panels.
 * You can use Python via different scripting consoles.
-* You can also define module costume module interactions by referencing to Python functions from the *.script* file
+* You can also define custom module interactions by referencing to Python functions from the *\*.script* file

@@ -1,7 +1,7 @@
 ---
 title: "Example 4: Display 2D images in Open Inventor SoRenderArea"
 date: 2022-06-15T08:56:33+02:00
-status: "open"
+status: "OK"
 draft: false
 tags: ["Beginner", "Tutorial", "Visualization", "2D", "3D", "Open Inventor"]
 menu: 
