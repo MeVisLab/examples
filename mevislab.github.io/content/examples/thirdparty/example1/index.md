@@ -1,7 +1,7 @@
 ---
-title: "ThirdParty Example 1: OpenCV Webcam access"
+title: "OpenCV Webcam access"
 date: 2022-06-15T08:56:33+02:00
-draft: false
+category: "thirdparty"
 ---
 
 # ThirdParty Example 1: OpenCV Webcam access

@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Example 2: Python scripting"
+title: "Python scripting"
+category: "basic_mechanisms"
 ---
 
 # Example 2: Python scripting

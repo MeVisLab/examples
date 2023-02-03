@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Example 3: Creating a simple application"
+title: "Creating a simple application"
+category: "basic_mechanisms"
 ---
 
 # Example 3: Creating a simple application

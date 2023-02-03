@@ -1,7 +1,7 @@
 ---
-title: "Testing Example 3: Iterative tests in MeVisLab with Screenshots"
+title: "Iterative tests in MeVisLab with Screenshots"
 date: 2022-06-15T08:56:33+02:00
-draft: false
+category: "testing"
 ---
 
 # Testing Example 3: Iterative tests in MeVisLab with Screenshots

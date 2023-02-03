@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <div class="container">
-  <h1 class="my-3">About this document</h3>
+  <h1 class="my-3">About this document</h1>
 
   <p>We received a lot of feedback regarding our documentation and that it is not easy to get a starting point for the first steps in MeVisLab.</p>
   <p>After lots of internal and external discussions we decided to create a <a href="/tutorials">Step-by-Step Tutorial</a> in addition to our existing <a href="https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/GettingStarted/index.html">Getting Started Manual</a>.</p>
@@ -12,6 +12,17 @@
   <p>In addition to the tutorials, we also created a space for <a href="/examples" target="_self" title="MeVisLab Examples">Example Networks</a> in MeVisLab which have been posted in the <a href="https://forum.mevislab.de" target="_blank" title="MeVisLab Forum">forum</a> or elsewhere. These examples show one possible solution for a specific topic and have been categorized the same way as the tutorials.</p>
   <p>In case you have additional tutorials or examples you want us to add, you can add them to our repository at <a href="https://github.com/MeVisLab/examples" target="_blank" title="MeVisLab Examples repository">GitHub</a> and create a merge request. Please make sure to provide a markdown file with a short explanation and a screenshot of your network.</p>
   <p>Many tutorials are also available on <b>YouTube</b>. For details, see our <a href="https://www.youtube.com/channel/UCUGi64NseroIGjga8l7EX8g" target="_blank">MeVisLab channel</a>.</p>
+  <div class="alert alert-info" role="alert">
+    <h4 class="my-3">News:</h4>
+    <p>
+      {{ $currentIndex := 1 }}
+      {{ range ( where .Site.RegularPages.ByDate "Kind" "page" | last 5 ) }}
+        <p>{{ $currentIndex }}) {{ .Date.Format "2006-01-02" }} [{{ .Parent.Title }}]: <a href="{{ .Permalink }}" class="alert-link">{{ .Title }}</a></p>
+        {{ $currentIndex = add $currentIndex 1 }}
+      {{ end }}
+    </p>
+  </div>
 </div>
-
+<br />
+<br />
 {{ end }}

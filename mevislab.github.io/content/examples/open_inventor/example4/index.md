@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Open Inventor Example 4: Camera interaction with collision detection"
+title: "Camera interaction with collision detection"
+category: "open_inventor"
 ---
 
 # Open Inventor Example 4: Camera interaction with collision detection

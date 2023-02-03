@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Image Processing Example 5: Clip Planes"
+title: "Clip Planes"
+category: "image_processing"
 ---
 
 # Image Processing Example 5: Clip Planes

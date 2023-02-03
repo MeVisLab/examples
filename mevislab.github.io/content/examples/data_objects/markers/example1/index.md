@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Marker Example 1: Distance between markers"
+title: "Distance between markers"
+category: "data_objects"
 ---
 
 # Marker Example 1: Distance between markers

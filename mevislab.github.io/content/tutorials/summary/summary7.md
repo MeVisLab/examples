@@ -1,6 +1,6 @@
 ---
-title: "Example 7: Refine - Re-Build Installer"
-date: 2022-06-15T08:56:33+02:00
+title: "Step 7: Refine - Re-Build Installer"
+date: "2023-01-21"
 status: "open"
 draft: false
 tags: ["Advanced", "Tutorial", "Prototyping", "Tool Runner", "Installer"]
@@ -11,9 +11,9 @@ menu:
     weight: 835
     parent: "summary"
 ---
-# Example 7: Refine - Re-Build Installer
+# Step 7: Refine - Re-Build Installer
 ## Introduction
-In this example you are re-creating your application installer after changing the UI in previous [Example 6: Refine - Update Application](/tutorials/summary/summary6/).
+In this step you are re-creating your application installer after changing the UI in previous [Step 6: Refine - Update Application](/tutorials/summary/summary6/).
 
 ## Steps to do
 ### Update the \*.mlinstall file

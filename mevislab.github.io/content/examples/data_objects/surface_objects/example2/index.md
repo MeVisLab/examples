@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Surface Example 2: Processing and modification of WEMs"
+title: "Processing and modification of WEMs"
+category: "data_objects"
 ---
 
 # Surface Example 2: Processing and modification of WEMs

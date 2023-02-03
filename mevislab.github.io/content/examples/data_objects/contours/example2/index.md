@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Contour Example 2: Contour interpolation"
+title: "Contour interpolation"
+category: "data_objects"
 ---
 
 # Contour Example 2: Contour interpolation

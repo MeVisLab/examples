@@ -11,9 +11,4 @@ menu:
 ---
 
 ## Visualization Examples:
-[Synchronous view of two images](/examples/visualization/example1/)  
-[Creating a magnifier](/examples/visualization/example2/)  
-[Image overlays](/examples/visualization/example3/)  
-[Display images converted to Open Inventor scene objects](/examples/visualization/example4/)  
-[Volume rendering and interactions](/examples/visualization/example5/)  
-
+{{< childpages >}}

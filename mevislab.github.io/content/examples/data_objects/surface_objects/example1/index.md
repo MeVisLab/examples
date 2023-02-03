@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Surface Example 1: Creation of WEMs"
+title: "Creation of WEMs"
+category: "data_objects"
 ---
 
 # Surface Example 1: Creation of WEMs

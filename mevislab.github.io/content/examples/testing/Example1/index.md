@@ -1,7 +1,7 @@
 ---
-title: "Testing Example 1: Writing a simple test case in MeVisLab"
+title: "Writing a simple test case in MeVisLab"
 date: 2022-06-15T08:56:33+02:00
-draft: false
+category: "testing"
 ---
 
 # Testing Example 1: Writing a simple test case in MeVisLab

@@ -1,6 +1,6 @@
 ---
-title: "Example 6: Refine - Update Application"
-date: 2022-06-15T08:56:33+02:00
+title: "Step 6: Refine - Update Application"
+date: "2023-01-20"
 status: "open"
 draft: false
 tags: ["Advanced", "Tutorial", "Prototyping"]
@@ -11,9 +11,9 @@ menu:
     weight: 830
     parent: "summary"
 ---
-# Example 6: Refine - Update Application
+# Step 6: Refine - Update Application
 ## Introduction
-In previous examples you developed an application which can be installed on your customers systems for usage. In this example we are going to integrate simple feedback into our executable and re-create the installer.
+In previous step you developed an application which can be installed on your customers systems for usage. In this step we are going to integrate simple feedback into our executable and re-create the installer.
 
 We want to show you how easy it is to update your application using MeVisLab.
 
@@ -65,6 +65,6 @@ If you want to write an additional Python test case, you can also do that.
 
 ## Summary
 * Your application can be updated by modifying the Macro Module and/or internal network of your application
-* Any changes will be applied to your installable executable in the next example
+* Any changes will be applied to your installable executable in the next step
 
 {{< networkfile "examples/summary/TutorialSummaryUpdated.zip" >}}

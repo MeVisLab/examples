@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Example 1: Panel for the contour filter"
+title: "Panel for the contour filter"
+category: "basic_mechanisms"
 ---
 
 # Example 1: Panel for the contour filter

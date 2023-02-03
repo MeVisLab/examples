@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Contour Example 5: Contours and ghosting"
+title: "Contours and ghosting"
+category: "data_objects"
 ---
 
 # Contour Example 5: Contours and ghosting

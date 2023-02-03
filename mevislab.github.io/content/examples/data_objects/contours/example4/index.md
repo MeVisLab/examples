@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Contour Example 4: Annotation of images"
+title: "Annotation of images"
+category: "data_objects"
 ---
 
 # Contour Example 4: Annotation of images

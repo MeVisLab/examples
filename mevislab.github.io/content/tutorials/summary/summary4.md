@@ -1,6 +1,6 @@
 ---
-title: "Example 4: Review - Automated Tests"
-date: 2022-06-15T08:56:33+02:00
+title: "Step 4: Review - Automated Tests"
+date: "2023-01-18"
 status: "open"
 draft: false
 tags: ["Advanced", "Tutorial", "Prototyping", "Automated Tests", "Python"]
@@ -11,21 +11,21 @@ menu:
     weight: 820
     parent: "summary"
 ---
-# Example 4: Review - Automated Tests
+# Step 4: Review - Automated Tests
 ## Introduction
-In the previous chapters you developed a Macro Module with User Interface and Python scripting. In this example you will see how to implement an automated test to verify and validate the Requirements defined in [Overview](/tutorials/summary).
+In the previous chapters you developed a Macro Module with User Interface and Python scripting. In this step you will see how to implement an automated test to verify and validate the Requirements defined in [Overview](/tutorials/summary).
 
 ## Steps to do
 ### Create a test network using your Macro Module
 Create a new and empty network and save it as \*.mlab file. Remember the location.
 
-Use Module Search and add your Macro Module developed in previous examples to your Workspace.
+Use Module Search and add your Macro Module developed in previous steps to your Workspace.
 
 ![Macro Module](/images/tutorials/summary/Example4_1.png "Macro Module")
 
 You can see that the module does not have any inputs or outputs. You cannot connect it to other modules. For testing purposes it makes sense to provide the viewers and images as outputs so that you can use them for generating screenshots.
 
-Open the \*.script file in MATE as already explained in [Example 3](/tutorials/summary/summary3). In the *Outputs* section, add the following:
+Open the \*.script file in MATE as already explained in [Step 3](/tutorials/summary/summary3). In the *Outputs* section, add the following:
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -326,32 +326,32 @@ def TEST_Toggle3DVolumes():
   reset()
   loadImage(path_to_image)
   # Without marker, the content of the 3D viewer should be the same for File and All
-  ctx.field("NetworkTest.selected3DView").value = "Both"
+  ctx.field("TutorialSummary.selected3DView").value = "Both"
   MLAB.processInventorQueue()
   ctx.field("SoCameraInteraction.viewFromLeft").touch()
   MLAB.processInventorQueue()
   ctx.field("OffscreenRenderer.update").touch()
-  ctx.field("NetworkTest.selected3DView").value = "File"
+  ctx.field("TutorialSummary.selected3DView").value = "File"
   MLAB.processInventorQueue()
   ctx.field("OffscreenRenderer1.update").touch()
   ctx.field("ImageCompare.compare").touch()
   ASSERT_TRUE(ctx.field("ImageCompare.testPassed").value)
   # With marker, the content of the 3D viewer should be different
   setMarkerPosition(marker_location)
-  ctx.field("NetworkTest.selected3DView").value = "Both"
+  ctx.field("TutorialSummary.selected3DView").value = "Both"
   MLAB.processInventorQueue()
   ctx.field("OffscreenRenderer.update").touch()
-  ctx.field("NetworkTest.selected3DView").value = "File"
+  ctx.field("TutorialSummary.selected3DView").value = "File"
   ctx.field("OffscreenRenderer1.update").touch()
   MLAB.processInventorQueue()
   ctx.field("ImageCompare.compare").touch()
   ASSERT_FALSE(ctx.field("ImageCompare.testPassed").value)
-  ctx.field("NetworkTest.selected3DView").value = "Segmented"
+  ctx.field("TutorialSummary.selected3DView").value = "Segmented"
   ctx.field("OffscreenRenderer1.update").touch()
   MLAB.processInventorQueue()
   ctx.field("ImageCompare.compare").touch()
   ASSERT_FALSE(ctx.field("ImageCompare.testPassed").value)
-  ctx.field("NetworkTest.selected3DView").value = "Both"
+  ctx.field("TutorialSummary.selected3DView").value = "Both"
   ctx.field("OffscreenRenderer.update").touch()
   MLAB.processInventorQueue()
   ctx.field("ImageCompare.compare").touch()

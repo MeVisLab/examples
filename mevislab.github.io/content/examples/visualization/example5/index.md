@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Visualization Example 5: Volume rendering and interactions"
+title: "Volume rendering and interactions"
+category: "visualization"
 ---
 
 # Visualization Example 5: Volume rendering and interactions

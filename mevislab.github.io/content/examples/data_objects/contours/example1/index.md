@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Contour Example 1: Creation of Contours"
+title: "Creation of Contours"
+category: "data_objects"
 ---
 
 # Contour Example 1: Creation of Contours

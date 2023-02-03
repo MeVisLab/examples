@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Open Inventor Example 1: Open Inventor objects"
+title: "Open Inventor objects"
+category: "open_inventor"
 ---
 
 # Open Inventor Example 1: Open Inventor objects

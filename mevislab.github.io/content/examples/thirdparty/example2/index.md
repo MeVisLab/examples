@@ -1,7 +1,7 @@
 ---
-title: "ThirdParty Example 2: Face detection in OpenCV"
+title: "Face detection in OpenCV"
 date: 2022-06-15T08:56:33+02:00
-draft: false
+category: "thirdparty"
 ---
 
 # ThirdParty Example 2: Face detection in OpenCV
