@@ -1,6 +1,6 @@
 ---
-title: "Example 1: Prototyping - Develop your Network"
-date: 2022-06-15T08:56:33+02:00
+title: "Step 1: Prototyping - Develop your Network"
+date: "2023-01-15"
 status: "open"
 draft: false
 tags: ["Advanced", "Tutorial", "Prototyping"]
@@ -11,7 +11,7 @@ menu:
     weight: 805
     parent: "summary"
 ---
-# Example 1: Prototyping - Develop your Network
+# Step 1: Prototyping - Develop your Network
 ## Introduction
 In this example, we will develop a network which fulfills the requirements from the [overview page](/tutorials/summary#DevelopNetwork). The network will be developed by re-using existing modules and defining basic field values.
 

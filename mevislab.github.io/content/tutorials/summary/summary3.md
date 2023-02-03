@@ -1,6 +1,6 @@
 ---
-title: "Example 3: Prototyping - User Interface and Python scripting"
-date: 2022-06-15T08:56:33+02:00
+title: "Step 3: Prototyping - User Interface and Python scripting"
+date: "2023-01-17"
 status: "open"
 draft: false
 tags: ["Advanced", "Tutorial", "Prototyping", "User Interface", "Python"]
@@ -11,9 +11,9 @@ menu:
     weight: 815
     parent: "summary"
 ---
-# Example 3: Prototyping - User Interface and Python scripting
+# Step 3: Prototyping - User Interface and Python scripting
 ## Introduction
-In this example, we will develop a user interface and add Python scripting to the Macro Module you created in [Example 2](/tutorials/summary/summary2).
+In this step, we will develop a user interface and add Python scripting to the Macro Module you created in [Step 2](/tutorials/summary/summary2).
 
 ## Steps to do
 ### Develop the User Interface

@@ -25,8 +25,8 @@ Free evaluation licenses of the **MeVisLab ApplicationBuilder**, time-limited to
 {{</alert>}}
 
 ## Prototype
-### Example 1: Develop your network {#DevelopNetwork}
-In the first example, you are developing an application based on the following requirements:
+### Step 1: Develop your network {#DevelopNetwork}
+In the first step, you are developing an application based on the following requirements:
 * **Requirement 1**: The application shall be able to load DICOM data.
 * **Requirement 2**: The application shall provide a 2D and a 3D viewer.
 * **Requirement 3**: The 2D viewer shall display the loaded images
@@ -43,26 +43,26 @@ In the first example, you are developing an application based on the following r
   * **Requirement 9.2**: Segmentation results
   * **Requirement 9.3**: All
 
-### Example 2: Create your Macro Module
+### Step 2: Create your Macro Module
 Your network will be encapsulated in a Macro Module for later application development. For details about Macro Modules, see [Example 2.2: Global Macro Modules](/tutorials/basicmechanisms/macromodules/globalmacromodules/).
 
-### Example 3: Develop a User Interface and add Python Scripting {#UIDesign}
-Develop the UI and Python Scripts based on your requirements from Example 1. The resulting UI will look like below mockup:
+### Step 3: Develop a User Interface and add Python Scripting {#UIDesign}
+Develop the UI and Python Scripts based on your requirements from Step 1. The resulting UI will look like below mockup:
 
 ![User Interface Design](/images/tutorials/summary/UIMockUp.png "User Interface Design")
 
 ## Review
-### Example 4: Write automated tests for your Macro Module
-Test your Macro Module in MeVisLab. Your requirements from Example 1 are translated into test cases written in Python. The fields accessible via Python as defined in Example 2 shall be used to test your application.
+### Step 4: Write automated tests for your Macro Module
+Test your Macro Module in MeVisLab. Your requirements from Step 1 are translated into test cases written in Python. The fields accessible via Python as defined in Step 2 shall be used to test your application.
 
-### Example 5: Create an installable executable
+### Step 5: Create an installable executable
 Create a standalone application by using the **MeVisLab ApplicationBuilder** and install the application on another system.
 
 ## Refine
-### Example 6: Update your network and Macro Module
-Integrate feedback from customers having installed your executable and adapt your test cases from Example 4.
+### Step 6: Update your network and Macro Module
+Integrate feedback from customers having installed your executable and adapt your test cases from Step 4.
 
-### Example 7: Update your installable executable
+### Step 7: Update your installable executable
 Re-build your executable and release a new version of your application.
 
 The above loop can easily be repeated until your product completely fulfills your defined requirements.

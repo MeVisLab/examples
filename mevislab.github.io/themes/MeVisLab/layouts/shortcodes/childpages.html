@@ -1,0 +1,9 @@
+<p><b>The following examples are available:</b></p>
+{{ $currentPage := .Page.File.TranslationBaseName }}
+{{ $currentIndex := 1 }}
+{{ range .Site.Pages }}
+    {{ if eq .Params.category $currentPage }}
+    [{{ $currentIndex }}] <a href="{{ .Permalink }}">{{ .Title }}</a><br/>
+    {{ $currentIndex = add $currentIndex 1 }}
+    {{ end }}
+{{ end }}

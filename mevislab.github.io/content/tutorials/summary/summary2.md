@@ -1,6 +1,6 @@
 ---
-title: "Example 2: Prototyping - Create a Macro Module"
-date: 2022-06-15T08:56:33+02:00
+title: "Step 2: Prototyping - Create a Macro Module"
+date: "2023-01-16"
 status: "open"
 draft: false
 tags: ["Advanced", "Tutorial", "Prototyping", "Macro Modules"]
@@ -11,12 +11,12 @@ menu:
     weight: 810
     parent: "summary"
 ---
-# Example 2: Prototyping - Create a Macro Module
+# Step 2: Prototyping - Create a Macro Module
 ## Introduction
 In this example, we encapsulate the previously developed prototype network into a Macro Module for future application development and automated testing.
 
 ## Steps to do
-Make sure to have your *.mlab file from previous [Example 1](/tutorials/summary/summary1/) available.
+Make sure to have your *.mlab file from previous [Step 1](/tutorials/summary/summary1/) available.
 
 ### Package creation
 Packages are described in detail in [Example 2.1: Package creation](/tutorials/basicmechanisms/macromodules/package/). If you already have your own package, you can skip this part and continue creating a Macro Module.
@@ -36,7 +36,7 @@ Select the created package and click *Next*.
 
 ![Macro Module wizard](/images/tutorials/summary/Example2_3.png "Macro Module wizard")
 
-Select your \*.mlab file from [Example 1](/tutorials/summary/summary1/) and check *Add Python file*. Click *Next*.
+Select your \*.mlab file from [Step 1](/tutorials/summary/summary1/) and check *Add Python file*. Click *Next*.
 
 ![Macro Module wizard](/images/tutorials/summary/Example2_4.png "Macro Module wizard")
 
@@ -77,10 +77,10 @@ MacroModule TutorialSummary {
 An *externalDefinition* to a script file is also added (see below for the \*.script file).
 
 #### MeVisLab Network (\*.mlab) file
-The \*.mlab file is a copy of the \*.mlab file you developed in [Example 1](/tutorials/summary/summary1/) and re-used in the wizard. In the next chapters, this file will be used as *internal network*. 
+The \*.mlab file is a copy of the \*.mlab file you developed in [Step 1](/tutorials/summary/summary1/) and re-used in the wizard. In the next chapters, this file will be used as *internal network*. 
 
 #### Python (\*.py) file
-The initial \*.py file only contains the import of MeVisLab specific objects and functions. In the future examples, we will add functionalities to our application in Python.
+The initial \*.py file only contains the import of MeVisLab specific objects and functions. In the future steps, we will add functionalities to our application in Python.
 
 {{< highlight filename="<MACRO_NAME>.py" >}}
 ```Python
@@ -117,7 +117,7 @@ We did not define inputs or outputs. You cannot connect your module to others. I
 
 ![Automatic Panel](/images/tutorials/summary/Example2_8.png "Automatic Panel")
 
-Right-click on your module allows you to open the internal network as developed in [Example 1](/tutorials/summary/summary1/).
+Right-click on your module allows you to open the internal network as developed in [Step 1](/tutorials/summary/summary1/).
 
 ## Summary
 * Macro Modules encapsulate an entire MeVisLab network including all modules.
