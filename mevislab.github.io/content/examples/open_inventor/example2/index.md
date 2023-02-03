@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Open Inventor Example 2: Mouse interactions in an Open Inventor scene"
+title: "Mouse interactions in an Open Inventor scene"
+category: "open_inventor"
 ---
 
 # Open Inventor Example 2: Mouse interactions in an Open Inventor scene

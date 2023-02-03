@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Contour Example 3: 2D and 3D visualization of contours"
+title: "2D and 3D visualization of contours"
+category: "data_objects"
 ---
 
 # Contour Example 3: 2D and 3D visualization of contours

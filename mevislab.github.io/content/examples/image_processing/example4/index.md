@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Image Processing Example 4: Subtract 3D objects"
+title: "Subtract 3D objects"
+category: "image_processing"
 ---
 
 # Image Processing Example 4: Subtract 3D objects

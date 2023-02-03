@@ -11,6 +11,4 @@ menu:
 ---
 
 ## Testing Examples:
-[Writing a simple test case in MeVisLab](/examples/testing/example1/)  
-[Profiling in MeVisLab](/examples/testing/example2/)  
-[Iterative tests in MeVisLab with Screenshots](/examples/testing/example3/)  
+{{< childpages >}}

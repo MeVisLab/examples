@@ -11,4 +11,4 @@ menu:
 ---
 
 ## ThirdParty Examples:
-[OpenCV](/examples/thirdparty/example1/)  
+{{< childpages >}}

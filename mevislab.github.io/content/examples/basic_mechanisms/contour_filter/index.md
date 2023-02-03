@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Example 1: Contour Filter"
+title: "Contour Filter"
+category: "basic_mechanisms"
 ---
 
 # Example 1: Contour Filter

@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Image Processing Example 2: Masking images"
+title: "Masking images"
+category: "image_processing"
 ---
 
 # Image Processing Example 2: Masking images

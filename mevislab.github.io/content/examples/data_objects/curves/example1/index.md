@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Curves Example 1: Drawing curves"
+title: "Drawing curves"
+category: "data_objects"
 ---
 
 # Marker Example 1: Distance between markers

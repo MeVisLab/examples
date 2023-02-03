@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Surface Example 5: WEM - Primitive Value Lists"
+title: "WEM - Primitive Value Lists"
+category: "data_objects"
 ---
 
 # Surface Example 5: WEM - Primitive Value Lists

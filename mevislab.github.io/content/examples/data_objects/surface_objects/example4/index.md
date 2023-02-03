@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Surface Example 4: Interactively moving WEM"
+title: "Interactively moving WEM"
+category: "data_objects"
 ---
 
 # Surface Example 4: Interactively moving WEM

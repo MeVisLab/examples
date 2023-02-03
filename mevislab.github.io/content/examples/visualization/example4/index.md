@@ -1,8 +1,7 @@
 ---
 layout: post
-title: "Visualization Example 4: Display images converted to Open Inventor scene objects"
-draft: false
-status: "OK"
+title: "Display images converted to Open Inventor scene objects"
+category: "visualization"
 ---
 
 # Visualization Example 4: Display images converted to Open Inventor scene objects

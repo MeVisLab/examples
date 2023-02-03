@@ -11,7 +11,4 @@ menu:
 ---
 
 ## Open Inventor Examples:
-[Open Inventor objects](/examples/open_inventor/example1/)  
-[Mouse interactions in an Open Inventor scene](/examples/open_inventor/example2/)  
-[Camera interaction with collision detection](/examples/open_inventor/example4/)  
-
+{{< childpages >}}

@@ -1,8 +1,7 @@
 ---
 layout: post
-title: "Visualization Example 3: Image overlays"
-draft: false
-status: "OK"
+title: "Image overlays"
+category: "visualization"
 ---
 
 # Visualization Example 3: Image overlays
