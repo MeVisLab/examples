@@ -13,6 +13,9 @@ menu:
 ---
 
 # Example 1: Arithmetic operations on two images
+
+{{< youtube "ToTQ3XRPmlk" >}}
+
 ## Introduction
 We are using the `Arithmetic2` module to apply basic scalar functions on two images. The module provides 2 inputs for images and 1 output image for the result.
 

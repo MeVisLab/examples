@@ -3,7 +3,7 @@ title: "Example 4: Display 2D images in Open Inventor SoRenderArea"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
-tags: ["Beginner", "Tutorial", "Visualization", "2D", "3D", "Open Inventor"]
+tags: ["Beginner", "Tutorial", "Visualization", "2D", "3D", "Open Inventor", "Snapshots", "Movies"]
 menu: 
   main:
     identifier: "visualization_example4"
@@ -12,6 +12,9 @@ menu:
     parent: "visualization"
 ---
 # Example 4: Display images converted to Open Inventor scene objects {#TutorialVisualizationExample4}
+
+{{< youtube "WaD6zuvVNek" >}}
+
 ## Introduction
 In the previous example you learned how to use the module `SoView2DOverlay` together with a `View2D`. MeVisLab provides a whole family of `SoView2D*` modules (`SoView2DOverlay`, `SoView2DRectangle`, `SoView2DGrid`, ...). All these modules create or interact with scene objects and are based on the module `SoView2D`, which can convert a voxel-image into a scene object. In this example, you will get to know some members of the `SoView2D`-family.
 
