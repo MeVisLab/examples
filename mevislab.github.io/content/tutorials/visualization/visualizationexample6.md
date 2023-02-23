@@ -1,9 +1,9 @@
 ---
 title: "Example 6: MeVis Path Tracer"
-date: 2022-06-15T08:56:33+02:00
+date: "2023-02-23"
 status: "OK"
 draft: false
-tags: ["Beginner", "Tutorial", "Visualization", "3D", "Volume Rendering", "Path Tracer"]
+tags: ["Advanced", "Tutorial", "Visualization", "3D", "Volume Rendering", "Path Tracer"]
 menu: 
   main:
     identifier: "visualization_example6"
@@ -20,14 +20,18 @@ The MeVis Path Tracer offers a Monte Carlo Path Tracing framework running on CUD
 CUDA is a parallel computing platform and programming model created by NVIDIA. For further information, see [NVIDIA website](https://blogs.nvidia.com/blog/2012/09/10/what-is-cuda-2/).
 {{</alert>}}
 
+{{< imagegallery 5 "/images/tutorials/visualization/pathtracer" "PathTracer1" "PathTracer2" "PathTracer3" "PathTracer4" "PathTracer5" >}}
+
 The `SoPathTracer` module implements the main renderer (like the `SoGVRVolumeRenderer`). It collects all `SoPathTracer*` extensions (on its left side) in the scene and renders them. Picking is also supported, but currently only the first hit position. It supports an arbitrary number of objects with different orientation and bounding boxes.
 
 ## Path Tracing
 Path Tracing allows interactive, photorealistic 3D environments with dynamic light and shadow, reflections and refractions.
 
-In the beginning, 3D images have been generated as seen from a single viewpoint. A mapping has been done from scene geometry in 3D to a pixel on the screen. The color of each pixel on screen has been assigned by a pixel shader. A pixel shader is able to take into account physical effects such as light position. Computation is very fast but the results do not include effects such as shadows, illumination and indirect lightning.
+Traditional volume rendering is a technique used to visualize 3D volumetric data by rendering 2D images of the data from different viewpoints. It typically uses a transfer function that maps the scalar values of the volume to colors and opacities, which are then used to create a 2D image of the volume. This technique can produce visually pleasing images of volumetric data, but it can struggle with complex lighting and shadow effects, and it may not accurately capture the scattering and absorption of light within the volume.
 
-Todays rendering is based on tracing light paths. Objects in a 3D scene contribute illumination to every other object. The illumination can be emitted from a light source or reflected by a surface. Illumination coming from surfaces must scatter in a particular direction that is some function of the incoming direction of the arriving illumination, and the outgoing direction being sampled ([Wikipedia - Path Tracing](https://en.wikipedia.org/wiki/Path_tracing)).
+Monte Carlo path tracing is a technique used to simulate the behavior of light in a scene by tracing rays of light as they bounce around the scene and interact with objects. It uses statistical methods to simulate the behavior of light, making it more accurate than traditional volume rendering for simulating the scattering and absorption of light within the volume. However, path tracing can be computationally expensive, as it requires many iterations to produce a high-quality image.
+
+[Ray tracing](https://en.wikipedia.org/wiki/Ray_tracing_(graphics)) is a technique for modeling light transport. It follows all light rays throughout the entire scene. Depending on the scene this takes a lot of time to fully compute the resulting pixels. Other than ray tracing, path tracing only traces the most likely path of the light by using the [Monte Carlo method](https://en.wikipedia.org/wiki/Monte_Carlo_method). Computation is much faster but the results are comparable.
 
 {{<alert class="info" caption="Extra Infos">}}
 For more information about Path Tracing, see the [NVIDIA website](https://blogs.nvidia.com/blog/2022/03/23/what-is-path-tracing/).
@@ -48,7 +52,7 @@ There are various extensions that can be used.
 
 * [SoPathTracerMaskVolume](https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Standard/Documentation/Publish/ModuleReference/SoPathTracerMaskVolume.html#SoPathTracerMaskVolume) can be used to mask voxels in [SoPathTracerVolume](https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Standard/Documentation/Publish/ModuleReference/SoPathTracerVolume.html#SoPathTracerVolume) volumes
   * Allows to load a 8bit mask volume
-  * THe mask volume can be used by any volume or instance
+  * The mask volume can be used by any volume or instance
   * It allows to:
     * Change the alpha and color of inside/outside voxels
     * Change the tag value (see `SoPathTracerVolume`)
@@ -76,7 +80,7 @@ There are various extensions that can be used.
   * Allows to render an ISO surface of a volume
   * Works on volumes and instances
   * Supports opaque and transparent surfaces
-  ISO surface is rendered on-the-fly
+  * ISO surface is rendered on-the-fly
   * Hit refinement is used to provide high-quality surfaces
   * Arbitrary material can be specified
 
@@ -122,17 +126,4 @@ There are various extensions that can be used.
   * Multiple materials may be placed into the input scene of `SoPathTracerMesh` and `SoPathTracerLines`
   * Allows to override volume shader settings as well
 
-The following examples shall help you to learn how to use them.
-
-## Example images
-![MeVis Path Tracer Image 1](/images/tutorials/visualization/pathtracer/heartMasked.jpg "MeVis Path Tracer Image 1")
-![MeVis Path Tracer Image 2](/images/tutorials/visualization/pathtracer/heartMaskedDof.jpg "MeVis Path Tracer Image 2")
-![MeVis Path Tracer Image 3](/images/tutorials/visualization/pathtracer/head5.jpg "MeVis Path Tracer Image 3")
-![MeVis Path Tracer Image 4](/images/tutorials/visualization/pathtracer/liver1.jpg "MeVis Path Tracer Image 4")
-![MeVis Path Tracer Image 5](/images/tutorials/visualization/pathtracer/liverclip.jpg "MeVis Path Tracer Image 5")
-![MeVis Path Tracer Image 6](/images/tutorials/visualization/pathtracer/motor5.jpg "MeVis Path Tracer Image 6")
-![MeVis Path Tracer Image 7](/images/tutorials/visualization/pathtracer/motorCloseup4.jpg "MeVis Path Tracer Image 7")
-![MeVis Path Tracer Image 8](/images/tutorials/visualization/pathtracer/stagClip1.jpg "MeVis Path Tracer Image 8")
-![MeVis Path Tracer Image 9](/images/tutorials/visualization/pathtracer/stagPlane1.jpg "MeVis Path Tracer Image 9")
-![MeVis Path Tracer Image 10](/images/tutorials/visualization/pathtracer/tensorLines.jpg "MeVis Path Tracer Image 10")
-
+The following examples shall help you to learn how to use the modules.
