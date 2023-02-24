@@ -55,7 +55,7 @@ We are going to develop a web application, therefore we need special `RemoteRend
 ![Remote Rendering](/images/tutorials/summary/Example8_5b.png "Remote Rendering")
 
 {{<alert class="info" caption="Additional Info">}}
-We are using the hidden outputs of the `View2D` and the `SoExaminerViewer`. You can show them by pressing *SPACE* key.
+We are using the hidden outputs of the `View2D` and the `SoExaminerViewer`. You can show them by pressing the *SPACE* key.
 {{</alert>}}
 
 #### Develop the user interface
@@ -63,7 +63,7 @@ Make sure to have both macro modules visible in MeVisLab SDK, we are re-using th
 
 ![Macro Modules](/images/tutorials/summary/Example8_6.png "Macro Modules")
 
-Right-click the {{< mousebutton "right" >}} the module *TutorialSummaryBrowser* and select {{< menuitem "Related Files" "TutorialSummaryBrowser.script" >}}.
+Right-click {{< mousebutton "right" >}} the module *TutorialSummaryBrowser* and select {{< menuitem "Related Files" "TutorialSummaryBrowser.script" >}}.
 
 The file opens in MATE and you will see that it looks similar to the *\*.script* file of a normal macro module. The only difference is an additional *Web* section at the end of the file. It defines the locations of some *javascript* libraries and the *url* to be used for a preview of your website.
 
@@ -190,7 +190,7 @@ Commands {
 ```
 {{</highlight>}}
 
-Also copy the *Window* section to your web macro module. The *Box* of the *Viewing* tab needs to be modified because we are not using the `View3D` and `SoExaminerViewer` outputs anymore but the `RemoteRendering` outputs.
+Also copy the *Window* section to your web macro module. The *Box* of the *Viewing* tab needs to be modified because we are now using the `RemoteRendering` outputs instead of the `View3D` and `SoExaminerViewer` outputs.
 
 {{< highlight filename="TutorialSummaryBrowser.script" >}}
 ```Stan
