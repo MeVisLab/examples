@@ -67,7 +67,7 @@ You can preview your initial layout in MeVisLab by double-clicking your module {
 
 You can see the 4 vertical aligned parts as defined in the \*.script file. Now we are going to add the content of the Boxes.
 
-{{<alert class="info" caption="Additional">}}
+{{<alert class="info" caption="Additional Info">}}
 An overview over the existing layout elements in MeVisLab Definition Language (MDL) can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#N11695" "here" >}}
 {{</alert>}}
 
