@@ -15,7 +15,7 @@ menu:
 # Example 6.1: Volume Rendering vs. Path Tracer
 
 ## Introduction
-In this example you develop a network to show some differences between volume rendering and the MeVisLab Path Tracer. You will visualize the same scene using both 3D rendering techniques and use some of the modules for path tracing.
+In this example you develop a network to show some differences between volume rendering and the MeVisLab Path Tracer. You will visualize the same scene using both 3D rendering techniques and some of the modules for path tracing.
 
 {{<alert class="warning" caption="Attention">}}
 The MeVis Path Tracer requires an NVIDIA graphics card with CUDA support. In order to check your hardware, open MeVisLab and add a `SoPathTracer` module to your workspace. You will see a message if your hardware does not support CUDA:
