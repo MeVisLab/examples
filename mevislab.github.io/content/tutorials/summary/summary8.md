@@ -263,8 +263,8 @@ After we re-used the scripts, we now need to copy the Python functions from *Tut
 ```Python
 from mevis import *
 
-from MLABRemote import *
-setupRemoteContext(ctx)
+from MLABRemote import MLABRemote, allowedRemoteCall
+MLABRemote.setup(ctx)
 ```
 {{</highlight>}}
 
@@ -274,8 +274,8 @@ Copy the Python functions from *TutorialSummary.py* to *TutorialSummaryBrowser.p
 ```Python
 from mevis import *
 
-from MLABRemote import *
-setupRemoteContext(ctx)
+from MLABRemote import MLABRemote, allowedRemoteCall
+MLABRemote.setup(ctx)
 
 @allowedRemoteCall
 def viewSelectionChanged(field):
