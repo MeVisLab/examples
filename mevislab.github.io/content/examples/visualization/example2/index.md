@@ -1,7 +1,7 @@
 ---
-title: "Visualization Example 2: Creating a magnifier"
-categories: TUTORIAL BEGINNER
-draft: false
+layout: post
+title: "Creating a magnifier"
+category: "visualization"
 ---
 
 # Visualization Example 2: Creating a magnifier
