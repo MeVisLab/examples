@@ -13,6 +13,9 @@ menu:
 ---
 
 # Example 3: Region Growing
+
+{{< youtube "nQV2o_3BcJI" >}}
+
 ## Introduction
 A very simple approach to segment parts of an image is the region growing method. A general explanation can be found [here]("https://en.wikipedia.org/wiki/Region_growing").
 

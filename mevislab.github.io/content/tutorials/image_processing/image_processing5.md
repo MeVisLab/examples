@@ -12,7 +12,7 @@ menu:
     parent: "imageprocessing"
 ---
 
-# Example 4: Subtract 3D objects
+# Example 5: Clip Planes
 ## Introduction
 In this example, we are using the `SoGVRDrawOnPlane` module to define the currently visible slice from a 2D view as a clip plane in 3D.
 
