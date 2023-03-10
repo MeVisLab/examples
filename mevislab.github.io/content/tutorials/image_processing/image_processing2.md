@@ -13,6 +13,9 @@ menu:
 ---
 
 # Example 2: Masking images
+
+{{< youtube "k003ytr8ZQA" >}}
+
 ## Introduction
 The background of medical images is black for most cases. In case an image is inverted or window/level values are adapted, these black pixels outside clinical relevant pixels might become very bright or even white.
 
