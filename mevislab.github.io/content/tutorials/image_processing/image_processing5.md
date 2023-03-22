@@ -13,6 +13,9 @@ menu:
 ---
 
 # Example 5: Clip Planes
+
+{{< youtube "Lmt7helBl0E" >}}
+
 ## Introduction
 In this example, we are using the `SoGVRDrawOnPlane` module to define the currently visible slice from a 2D view as a clip plane in 3D.
 

@@ -13,6 +13,9 @@ menu:
 ---
 
 # Example 4: Subtract 3D objects
+
+{{< youtube "VdvErVvoq2k" >}}
+
 ## Introduction
 In this example, we load an image and render it as `WEMIsoSurface`. Then we create a 3-dimensional `SoSphere` and subtract the sphere from the initial WEM.
 
