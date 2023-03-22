@@ -29,7 +29,7 @@ The `SoExaminerViewer` shows your cube and the world coordinate system. You can 
 
 ![Initial Cube](/images/tutorials/dataobjects/surfaces/WEMExample3_2.png "Initial Cube")
 
-Scaling, rotation and translations on the cube itself can be done by using the module `SoTransformerDragger`. Additionally add a `SoTransform` module to your network. Add all modules but the `SoCoordinateSystem` to a `SoSeparator` so that transformations are not applied on the coordinate system.
+Scaling, rotation and translations on the cube itself can be done by using the module `SoTransformerDragger`. Additionally add a `SoTransform` module to your network. Add all modules but the `SoCoordinateSystem` to a `SoSeparator` so that transformations are not applied to the coordinate system.
 
 ![SoTransformerDragger and SoTransform](/images/tutorials/dataobjects/surfaces/WEMExample3_3.png "SoTransformerDragger and SoTransform")
 
@@ -62,7 +62,7 @@ Add a `WEMBulgeEditor` and a `SoWEMBulgeEditor` to your network and connect them
 
 Opening the viewer, you can still not edit the object.
 
-We need a lookup table to interact (LUT) with the WEM. Add a `WEMGenerateStatistics` between the WEMInitialize and the WEMBulgeEditor. The module `WEMGenerateStatistics` generates node, edge, and face statistics of a WEM and stores the information in the WEM's Primitive Value Lists.
+We need a lookup table (LUT) to interact with the WEM. Add a `WEMGenerateStatistics` between the WEMInitialize and the WEMBulgeEditor. The module `WEMGenerateStatistics` generates node, edge, and face statistics of a WEM and stores the information in the WEM's Primitive Value Lists.
 
 {{<alert class="info" caption="Info">}}
 More information about Primitive Value Lists (PVL) can be found in [Surface Example 5](/tutorials/dataobjects/surfaces/surfaceexample5).
