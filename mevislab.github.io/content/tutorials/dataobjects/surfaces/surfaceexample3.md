@@ -1,6 +1,6 @@
 ---
 title: "Surface Example 3: Interactions with WEM"
-date: 2022-06-15T08:56:33+02:00
+date: "2023-03-21"
 status: "OK"
 draft: false
 tags: ["Beginner", "Tutorial", "Data Objects", "3D", "Surfaces", "Meshes", "WEM"]
