@@ -17,4 +17,4 @@ In this example, we are using a `SoWEMBulgeEditor` module to modify a WEM using 
 ![Screenshot](/examples/data_objects/surface_objects/example3/image2.png)
 
 ### Download
-You can download the example network [here](/examples/data_objects/surface_objects/example3/SurfaceExample3b.mlab)
+You can download the example network [here](/examples/data_objects/surface_objects/example3/WEMExample3b.mlab)
