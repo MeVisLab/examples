@@ -3,6 +3,7 @@ title: "Example 2.5: Interactions via Python scripting"
 date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
+weight: 420
 tags: ["Beginner", "Tutorial", "Macro", "Macro Modules", "Global Macro", "Python", "Scripting"]
 menu: 
   main:

@@ -3,6 +3,7 @@ title: "Step 6: Refine - Update Application"
 date: "2023-01-20"
 status: "open"
 draft: false
+weight: 830
 tags: ["Advanced", "Tutorial", "Prototyping"]
 menu: 
   main:

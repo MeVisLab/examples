@@ -3,6 +3,7 @@ title: "Example 1.2: DICOM Coordinate Systems"
 date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
+weight: 365
 tags: ["Beginner", "Tutorial",  "Data Import", "DICOM", "Coordinate Systems"]
 menu: 
   main:

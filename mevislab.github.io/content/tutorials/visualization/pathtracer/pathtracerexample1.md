@@ -3,6 +3,7 @@ title: "Example 6.1: Volume Rendering vs. Path Tracer"
 date: "2023-02-23"
 status: "open"
 draft: false
+weight: 575
 tags: ["Advanced", "Tutorial", "Visualization", "3D", "Volume Rendering", "Path Tracer"]
 menu: 
   main:

@@ -3,6 +3,7 @@ title: "Example 3: Creating a simple application"
 date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
+weight: 445
 tags: ["Advanced", "Tutorial", "Macro", "Macro Modules", "Global Macro", "Python", "Scripting"]
 menu: 
   main:

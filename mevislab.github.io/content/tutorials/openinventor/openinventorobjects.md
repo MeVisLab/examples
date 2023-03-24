@@ -2,6 +2,7 @@
 title: "Example 1: Open Inventor Objects"
 date: 2022-06-15T08:56:33+02:00
 draft: false
+weight: 510
 status: "OK"
 tags: ["Beginner", "Tutorial", "Open Inventor", "3D"]
 menu: 

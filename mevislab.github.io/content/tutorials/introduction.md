@@ -3,6 +3,7 @@ title: "Introduction"
 date: 2022-06-15T08:56:33+02:00
 draft: false
 status: "OK"
+weight: 310
 tags: ["Tutorial", "Introduction", "Glossary", "Modules", "ML Module", "Filetypes", "UI", "Workspace", "Search"]
 menu: 
   main:

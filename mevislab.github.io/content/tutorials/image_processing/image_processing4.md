@@ -3,6 +3,7 @@ title: "Example 4: Subtract 3D objects"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 620
 tags: ["Advanced", "Tutorial", "Image Processing", "3D", "Subtraction"]
 menu: 
   main:

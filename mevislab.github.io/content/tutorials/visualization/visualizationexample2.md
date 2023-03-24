@@ -3,6 +3,7 @@ title: "Example 2: Creating a magnifier"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 560
 tags: ["Beginner", "Tutorial", "Visualization", "2D", "Magnifier"]
 menu: 
   main:

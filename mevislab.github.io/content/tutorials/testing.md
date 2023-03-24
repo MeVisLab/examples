@@ -3,6 +3,7 @@ title: "Chapter VI: Testing"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 750
 tags: ["Beginner", "Tutorial", "Testing", "Python", "Automated Tests", "Profiling", "Debugging"]
 menu: 
   main:

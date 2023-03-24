@@ -3,6 +3,7 @@ title: "Contour Example 2: Contour Interpolation"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 670
 tags: ["Beginner", "Tutorial", "Data Objects", "2D", "Contours", "CSO", "Interpolation"]
 menu: 
   main:

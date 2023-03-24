@@ -3,6 +3,7 @@ title: "Example 1: 3D Printing in MeVisLab"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 872
 tags: ["Beginner", "Tutorial", "assimp", "3D", "3D Printing", "stl"]
 menu: 
   main:

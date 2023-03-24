@@ -3,6 +3,7 @@ title: "Chapter VII: Application Development"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 800
 tags: ["Advanced", "Tutorial"]
 menu: 
   main:

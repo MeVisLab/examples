@@ -3,6 +3,7 @@ title: "Example 1: Synchronous view of two images"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 555
 tags: ["Beginner", "Tutorial", "Visualization", "2D"]
 menu: 
   main:

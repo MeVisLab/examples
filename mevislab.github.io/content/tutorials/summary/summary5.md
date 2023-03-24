@@ -3,6 +3,7 @@ title: "Step 5: Review - Installer creation"
 date: "2023-01-19"
 status: "open"
 draft: false
+weight: 825
 tags: ["Advanced", "Tutorial", "Prototyping", "Application Builder", "Installer"]
 menu: 
   main:

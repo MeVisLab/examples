@@ -3,6 +3,7 @@ title: "OpenCV"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 852
 tags: ["Advanced", "Tutorial", "OpenCV", "Python"]
 menu: 
   main:

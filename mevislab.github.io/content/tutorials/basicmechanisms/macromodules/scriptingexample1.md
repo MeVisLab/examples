@@ -3,6 +3,7 @@ title: "Example 2.5.1: The module RunPythonScript"
 date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
+weight: 430
 tags: ["Beginner", "Tutorial", "Python", "Scripting", "RunPythonScript"]
 menu: 
   main:

@@ -3,6 +3,7 @@ title: "Surface Example 4: Interactively moving WEM"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 720
 tags: ["Beginner", "Tutorial", "Data Objects", "3D", "Surfaces", "Meshes", "WEM"]
 menu: 
   main:

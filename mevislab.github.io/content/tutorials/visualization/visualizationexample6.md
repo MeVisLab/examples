@@ -3,12 +3,13 @@ title: "Example 6: MeVis Path Tracer"
 date: "2023-02-23"
 status: "OK"
 draft: false
+weight: 577
 tags: ["Advanced", "Tutorial", "Visualization", "3D", "Volume Rendering", "Path Tracer"]
 menu: 
   main:
     identifier: "visualization_example6"
     title: "Example usage of the MeVis Path Tracer"
-    weight: 575
+    weight: 577
     parent: "visualization"
 ---
 # Example 6: MeVis Path Tracer

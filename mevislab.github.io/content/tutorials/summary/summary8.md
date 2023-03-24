@@ -3,6 +3,7 @@ title: "Extra: Run your application in Browser"
 date: "2023-02-24"
 status: "open"
 draft: false
+weight: 840
 tags: ["Advanced", "Tutorial", "Prototyping", "Browser", "Web"]
 menu: 
   main:

@@ -3,6 +3,7 @@ title: "Step 7: Refine - Re-Build Installer"
 date: "2023-01-21"
 status: "open"
 draft: false
+weight: 835
 tags: ["Advanced", "Tutorial", "Prototyping", "Tool Runner", "Installer"]
 menu: 
   main:

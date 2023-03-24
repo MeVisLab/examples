@@ -3,6 +3,7 @@ title: "Example 2: Masking images"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 610
 tags: ["Beginner", "Tutorial", "Image Processing", "Mask"]
 menu: 
   main:

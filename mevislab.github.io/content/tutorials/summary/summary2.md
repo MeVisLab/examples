@@ -3,6 +3,7 @@ title: "Step 2: Prototyping - Create a Macro Module"
 date: "2023-01-16"
 status: "open"
 draft: false
+weight: 810
 tags: ["Advanced", "Tutorial", "Prototyping", "Macro Modules"]
 menu: 
   main:
