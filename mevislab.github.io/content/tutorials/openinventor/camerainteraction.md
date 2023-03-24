@@ -49,7 +49,7 @@ The viewing volume for a perspective camera is a truncated pyramid. By default, 
 
 A `SoOrthographicCamera` camera defines a parallel projection from a viewpoint.
 
-This camera does not diminish objects with distance, as an SoPerspectiveCamera does. The viewing volume for an orthographic camera is a rectangular cuboid (a box).
+This camera does not diminish objects with distance, as an SoPerspectiveCamera does. The viewing volume for an orthographic camera is a cuboid (a box).
 
 By default, the camera is located at (0,0,1) and looks along the negative z-axis; the Position and Orientation fields can be used to change these values. The Height field defines the total height of the viewing volume; this and the Aspect Ratio field determine its width.
 
