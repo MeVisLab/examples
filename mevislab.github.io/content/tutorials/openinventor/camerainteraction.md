@@ -45,11 +45,11 @@ Whenever you change the camera in the switch, you need to detect the new camera 
 
 A `SoPerspectiveCamera` camera defines a perspective projection from a viewpoint.
 
-The viewing volume for a perspective camera is a truncated right pyramid. By default, the camera is located at (0,0,1) and looks along the negative z-axis; the Position and Orientation fields can be used to change these values. The Height Angle field defines the total vertical angle of the viewing volume; this and the Aspect Ratio field determine the horizontal angle.
+The viewing volume for a perspective camera is a truncated pyramid. By default, the camera is located at (0,0,1) and looks along the negative z-axis; the Position and Orientation fields can be used to change these values. The Height Angle field defines the total vertical angle of the viewing volume; this and the Aspect Ratio field determine the horizontal angle.
 
 A `SoOrthographicCamera` camera defines a parallel projection from a viewpoint.
 
-This camera does not diminish objects with distance, as an SoPerspectiveCamera does. The viewing volume for an orthographic camera is a rectangular parallelepiped (a box).
+This camera does not diminish objects with distance, as an SoPerspectiveCamera does. The viewing volume for an orthographic camera is a rectangular cuboid (a box).
 
 By default, the camera is located at (0,0,1) and looks along the negative z-axis; the Position and Orientation fields can be used to change these values. The Height field defines the total height of the viewing volume; this and the Aspect Ratio field determine its width.
 
@@ -59,7 +59,7 @@ Add a `SoCameraWidget` and connect it to your `SoGroup`.
 
 This module shows a simple widget on an Inventor viewer that can be used to rotate, pan, or zoom the scene. You can configure the *Main Interaction* in the panel of the `SoCameraWidget`.
 
-You can also add more than one widgets to show multiple widgets in the same scene, see example network of the `SoCameraWidget` module.
+You can also add more than one widget to show multiple widgets in the same scene, see example network of the `SoCameraWidget` module.
 
 ## The `SoExaminerViewer` module
 The `SoExaminerViewer` makes some things much easier, because a camera and a light are already integrated. 
@@ -70,7 +70,7 @@ Add a `SoExaminerViewer` to your workspace and connect it to the `SoBackground`,
 
 The difference to the `SoRenderArea` can be seen immediately. You can interact with your scene and a light is available initially.
 
-The module also allows you to switch between perspective and orthographic by changing the field *cameraType*.
+The module also allows you to switch between perspective and orthographic camera by changing the field *cameraType*.
 
 {{< imagegallery 2 "/images/tutorials/openinventor" "SoExaminerViewer_Perspective" "SoExaminerViewer_Orthographic" >}}
 
