@@ -3,13 +3,13 @@ title: "Example 1.2: DICOM Coordinate Systems"
 date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
-weight: 365
+weight: 366
 tags: ["Beginner", "Tutorial",  "Data Import", "DICOM", "Coordinate Systems"]
 menu: 
   main:
     identifier: "coordinatesystems2"
     title: "The different coordinate systems in DICOM."
-    weight: 365
+    weight: 366
     parent: "data_import"
 ---
 
