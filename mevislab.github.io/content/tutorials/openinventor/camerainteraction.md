@@ -2,6 +2,7 @@
 title: "Example 3: Camera Interactions in Open Inventor"
 date: "2023-03-22"
 draft: false
+weight: 530
 status: "OK"
 tags: ["Beginner", "Tutorial", "Open Inventor", "3D", "Camera", "Perspective Camera", "Orthographic Camera"]
 menu: 

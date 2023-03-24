@@ -3,6 +3,7 @@ title: "Step 1: Prototyping - Develop your Network"
 date: "2023-01-15"
 status: "open"
 draft: false
+weight: 805
 tags: ["Advanced", "Tutorial", "Prototyping"]
 menu: 
   main:

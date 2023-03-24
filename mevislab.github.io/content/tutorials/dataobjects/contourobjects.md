@@ -3,6 +3,7 @@ title: "Contour Objects (CSO)"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 660
 tags: ["Beginner", "Tutorial", "Data Objects", "2D", "Contours", "CSO"]
 menu: 
   main:

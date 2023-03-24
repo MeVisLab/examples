@@ -3,6 +3,7 @@ title: "Example 2.3: Creation of module help"
 date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
+weight: 400
 tags: ["Beginner", "Tutorial", "Macro", "Macro Modules", "Global Macro", "Help"]
 menu: 
   main:

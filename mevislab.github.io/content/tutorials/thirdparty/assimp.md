@@ -3,6 +3,7 @@ title: "assimp"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 870
 tags: ["Beginner", "Tutorial", "assimp", "3D"]
 menu: 
   main:

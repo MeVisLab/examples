@@ -3,6 +3,7 @@ title: "Chapter IV: Image Processing"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 600
 tags: ["Beginner", "Tutorial", "Image Processing"]
 menu: 
   main:

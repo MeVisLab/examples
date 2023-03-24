@@ -3,6 +3,7 @@ title: "Surface Example 5: WEM - Primitive Value Lists"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 725
 tags: ["Advanced", "Tutorial", "Data Objects", "3D", "Surfaces", "Meshes", "WEM", "PVM", "Primitive Value Lists", "LUT"]
 menu: 
   main:

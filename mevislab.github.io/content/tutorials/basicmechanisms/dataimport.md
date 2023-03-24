@@ -3,6 +3,7 @@ title: "Example 1: Data import in MeVisLab"
 date: 2022-06-15T08:54:53+02:00
 status: "OK"
 draft: false
+weight: 360
 tags: ["Beginner", "Tutorial",  "Data Import", "DICOM"]
 menu: 
   main:

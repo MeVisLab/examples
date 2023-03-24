@@ -3,6 +3,7 @@ title: "Surface Example 1: Creation of WEMs"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 705
 tags: ["Beginner", "Tutorial", "Data Objects", "3D", "Surfaces", "Meshes", "WEM"]
 menu: 
   main:

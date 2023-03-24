@@ -2,6 +2,7 @@
 title: "Example 2: Mouse interactions in Open Inventor"
 date: 2022-06-15T08:56:33+02:00
 draft: false
+weight: 520
 status: "OK"
 tags: ["Beginner", "Tutorial", "Open Inventor", "3D", "Mouse Interactions"]
 menu: 

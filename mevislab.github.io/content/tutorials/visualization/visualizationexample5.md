@@ -3,6 +3,7 @@ title: "Example 5: Volume rendering and interactions"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 575
 tags: ["Beginner", "Tutorial", "Visualization", "3D", "Volume Rendering", "GVR", "LUT"]
 menu: 
   main:

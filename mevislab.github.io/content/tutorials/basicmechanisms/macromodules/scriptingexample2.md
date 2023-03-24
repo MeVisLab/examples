@@ -3,6 +3,7 @@ title: "Example 2.5.2: Module interactions via Python scripting"
 date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
+weight: 440
 tags: ["Advanced", "Tutorial", "Macro", "Macro Modules", "Global Macro", "Python", "Scripting"]
 menu: 
   main:

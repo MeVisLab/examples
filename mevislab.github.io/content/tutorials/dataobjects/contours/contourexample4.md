@@ -3,6 +3,7 @@ title: "Contour Example 4: Annotation of Images"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 680
 tags: ["Beginner", "Tutorial", "Data Objects", "2D", "Contours", "CSO", "Annotations"]
 menu: 
   main:

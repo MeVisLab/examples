@@ -3,6 +3,7 @@ title: "Example 2: Face Detection with OpenCV"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 856
 tags: ["Advanced", "Tutorial", "OpenCV", "Python", "WebCam", "Face Detection"]
 menu: 
   main:

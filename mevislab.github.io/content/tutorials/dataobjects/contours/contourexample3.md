@@ -3,6 +3,7 @@ title: "Contour Example 3: 2D and 3D Visualization of Contours"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 675
 tags: ["Beginner", "Tutorial", "Data Objects", "2D", "Contours", "CSO", "3D"]
 menu: 
   main:

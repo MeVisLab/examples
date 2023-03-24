@@ -3,6 +3,7 @@ title: "Example 3: Region Growing"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 615
 tags: ["Beginner", "Tutorial", "Image Processing", "Segmentation", "Region Growing"]
 menu: 
   main:

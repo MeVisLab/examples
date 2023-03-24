@@ -3,6 +3,7 @@ title: "Step 4: Review - Automated Tests"
 date: "2023-01-18"
 status: "open"
 draft: false
+weight: 820
 tags: ["Advanced", "Tutorial", "Prototyping", "Automated Tests", "Python"]
 menu: 
   main:

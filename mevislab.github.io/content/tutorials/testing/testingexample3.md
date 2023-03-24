@@ -3,6 +3,7 @@ title: "Example 3: Iterative tests in MeVisLab with Screenshots"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 765
 tags: ["Advanced", "Tutorial", "Testing", "Python", "Automated Tests", "Iterative Test", "Screenshot"]
 menu: 
   main:

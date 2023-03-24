@@ -3,6 +3,7 @@ title: "Step 3: Prototyping - User Interface and Python scripting"
 date: "2023-01-17"
 status: "open"
 draft: false
+weight: 815
 tags: ["Advanced", "Tutorial", "Prototyping", "User Interface", "Python"]
 menu: 
   main:

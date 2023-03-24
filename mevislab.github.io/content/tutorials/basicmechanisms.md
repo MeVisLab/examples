@@ -3,6 +3,7 @@ title: "Chapter I: Basic Mechanisms of MeVisLab"
 date: 2022-06-15T08:54:53+02:00
 status: "OK"
 draft: false
+weight: 350
 tags: ["Beginner", "Tutorial", "Macro", "Macro Modules", "Local Macro"]
 menu: 
   main:

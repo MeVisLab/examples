@@ -3,6 +3,7 @@ title: "Example 1: Drawing curves"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 780
 tags: ["Beginner", "Tutorial", "Data Objects", "2D", "Curves"]
 menu: 
   main:

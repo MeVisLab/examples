@@ -3,6 +3,7 @@ title: "Surface Example 3: Interactions with WEM"
 date: "2023-03-21"
 status: "OK"
 draft: false
+weight: 715
 tags: ["Beginner", "Tutorial", "Data Objects", "3D", "Surfaces", "Meshes", "WEM"]
 menu: 
   main:

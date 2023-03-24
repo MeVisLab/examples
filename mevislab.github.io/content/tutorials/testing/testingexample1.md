@@ -3,6 +3,7 @@ title: "Example 1: Writing a simple test case in MeVisLab"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
+weight: 755
 tags: ["Beginner", "Tutorial", "Testing", "Python", "Automated Tests"]
 menu: 
   main:
