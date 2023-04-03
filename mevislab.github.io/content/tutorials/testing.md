@@ -9,7 +9,7 @@ menu:
   main:
     identifier: "testing"
     title: "Testing, Profiling and Debugging in MeVisLab"
-    weight: 750
+    weight: 785
     parent: "tutorials"
 ---
 # MeVisLab Tutorial Chapter VI {#TutorialChapter6}

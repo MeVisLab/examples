@@ -9,7 +9,7 @@ menu:
   main:
     identifier: "testingexample3"
     title: "Writing an iterative test in MeVisLab"
-    weight: 765
+    weight: 795
     parent: "testing"
 ---
 # Example 3: Iterative tests in MeVisLab

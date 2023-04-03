@@ -8,4 +8,4 @@ category: "testing"
 This example shows how to write and execute test cases in MeVisLab. The Python files can be downloaded below.
 
 # Download
-You can download the Python files [here](/examples/testing/Example1/TestCases.zip)
+You can download the Python files [here](/examples/testing/example1/TestCases.zip)

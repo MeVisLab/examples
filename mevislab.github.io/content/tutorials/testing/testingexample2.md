@@ -9,7 +9,7 @@ menu:
   main:
     identifier: "testingexample2"
     title: "Enabling the profiler and inspecting the behavior of your network"
-    weight: 760
+    weight: 792
     parent: "testing"
 ---
 # Example 2: Profiling in MeVisLab

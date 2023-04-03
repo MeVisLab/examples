@@ -9,7 +9,7 @@ menu:
   main:
     identifier: "testingexample1"
     title: "Writing a simple test case for the module DicomImport in MeVisLab using Python and MeVisLab TestCenter."
-    weight: 755
+    weight: 790
     parent: "testing"
 ---
 # Example 1: Writing a simple test case in MeVisLab
