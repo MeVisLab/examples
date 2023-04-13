@@ -19,30 +19,30 @@ menu:
 
 ## Basic Mechanics of MeVisLab (Example: Building a Contour Filter) {#TutorialBasicMechanics}
 
-In this chapter you will learn the basic mechanics of the MeVisLab IDE. You will learn how to re-use existing Modules to load and view data, and you will build your first processing pipeline.
+In this chapter you will learn the basic mechanics of the MeVisLab IDE. You will learn how to re-use existing Modules to load and view data and you will build your first processing pipeline.
 
 {{<alert class="info" caption="Extra Infos">}}
-Additional information about the basics of MeVisLab are explained {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/index.html" "here">}}
+Additional information on the basics of MeVisLab are explained {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/index.html" "here">}}
 {{</alert>}}
 
 [//]: <> (MVL-651)
 
 ### Loading Data {#TutorialLoadingData}
  
-First, we need to load the data we like to work on. In MeVisLab, you usually use modules to perform specific tasks. Modules are the basic entities you will be working with. Each module has a specific functionality for processing, visualization and interaction. Connecting these modules enables the development of complex processing pipelines. You will get to know different types of modules throughout the course of this tutorial.
+First, we need to load the data we would like to work on, e.g. a CT scan. In MeVisLab, modules are used to perform their associated specific task, they are the basic entities you will be working with. Each module has a different functionality for processing, visualization and interaction. Connecting modules enables the development of complex processing pipelines. You will get to know different types of modules throughout the course of this tutorial.
 
-By now, we will load our data by using the module `ImageLoad`. You can find this module via search and add it to your Workspace.
+Starting off, we will add the module `ImageLoad` to our network to load our data. The module can be found typing its name into the search bar on the top-right corner an is added to your network by clicking it.
 
 ![Search for ImageLoad](/images/tutorials/basicmechanics/BM_01.png "Search for ImageLoad")
 
-As a next step, we like to select and load the data we like to process. Double-click the Module `ImageLoad` to open its Panel. Now, you can browse through your folders to select the data you like to open. You can find example data in the MeVisLab DemoData directory *$(InstallDir)/Packages/MeVisLab/Resources/DemoData* located in the MeVisLab installation path. Select a file, for example an MRI scan of a shoulder *Shoulder_Fracture.tif*. The image is loaded immediately and basic information of the loaded image can be seen in the Panel.
+Next, we select and load the data we´d like to process. Double-click the Module `ImageLoad` to open its Panel. You can browse through your folders to select the data you´d like to open. Example data can be found in the MeVisLab DemoData directory *$(InstallDir)/Packages/MeVisLab/Resources/DemoData* located in the MeVisLab installation path. Select a file, for example a MRI scan of a shoulder *Shoulder_Fracture.tif*. The image is loaded immediately and basic information of the loaded image can be seen in the Panel.
 
 {{<alert class="info" caption="Extra Infos">}}
-Multiple additional Modules for loading data are available such as:
-* `DicomImport` for loading DICOM Images
-* `LocalImage` for loading any image format
+There also are Modules to load multiple other formats of data. These are the most common ones:
+* `DicomImport` to load DICOM Images
+* `LocalImage` to load any image format
  
-For details about loading DICOM images, see {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch03.html" "here">}}
+For a more detailed description on loading DICOM images, look {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch03.html" "here">}}
 
 {{</alert>}}
 
