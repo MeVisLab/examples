@@ -58,9 +58,9 @@ You can now inspect your image in 2D:
 
 ![Output Inspector](/images/tutorials/basicmechanics/BM_03.png "Output Inspector")
 
-Your image does not look like this? One reason might be that the slice of the image you are looking at has no information. Click on the Output Inspector and scroll through the slices (slicing) by using the mouse wheel {{< mousebutton "middle" >}}. Still not seeing anything? Then try to adjust the contrast of the given image by keeping the right mouse button {{< mousebutton "right" >}} pressed while moving the mouse.
+Your image does not look like this? One reason might be that the slice of the image you are looking at has no information. Click on the Output Inspector and scroll through the slices (This process is called "Slicing") by using the mouse wheel {{< mousebutton "middle" >}}. Still not seeing anything? Then try to adjust the contrast of the given image by keeping the right mouse button {{< mousebutton "right" >}} pressed while moving the mouse.
 
-You are not restricted to only see your image in 2D. The Output Inspector offers a 3D View of the selected data. For this, click on the tab 3D of the Output Inspector. The 3D view of the image can be rotated by left-clicking on the image and moving the courser around. The little cube in the lower right corner of the viewer shows the orientation of the image.
+You are not restricted to 2D. The Output Inspector offers a 3D View of most loaded images. Try to click on the 3D-tab located in the Output Inspector. The 3D display of the image can be rotated by left-clicking on the image and moving the courser around. The little cube in the lower right corner of the viewer shows the orientation of the image.
 
 {{<alert class="info" caption="Notation">}}
 * A = anterior, front
@@ -71,7 +71,7 @@ You are not restricted to only see your image in 2D. The Output Inspector offers
 * F = feet
 {{</alert>}}
 
-Below the Output Inspector, you can find the Module Inspector. The Module Inspector displays properties and parameters of the selected module. Parameters are stored in so called **Fields**. Using the Module Inspector you can examine different fields of the module `ImageLoad`. The module has for example the fields *filename* (the path, the loaded image is stored in) and *sizeX*, *sizeY*, *sizeZ* (the size of the loaded image).
+Below the Output Inspector, you´ll find the Module Inspector. The Module Inspector displays properties and parameters of the selected Module. Parameters are stored in so called **Fields**. Using the Module Inspector you can examine different fields of your `ImageLoad`-Module. The module has, for example, the fields *filename* (the path, the loaded image is stored in), as well as *sizeX*, *sizeY* and *sizeZ* (the size of the loaded image).
 
 ![Module Inspector](/images/tutorials/basicmechanics/BM_04.png "Module Inspector")
 
