@@ -125,11 +125,11 @@ To compare the processed and unprocessed image, click on the output connector of
 
 You can also inspect changes between a processed and unprocessed image by adding a second or even third viewer (to make it gradient) to your network. We will be using a second 'View2D'-module. Notice how the second Viewer is numbered for you to be able to distinguish them better. It might be important to know at this point, that numerous connections can be established from one output-connector but an input-connector can only receive one stream of data. Please connect the module `ImageLoad` to the second viewer to display the images twice. You can now scroll through the slices of both viewers and inspect the images.
 
-![Multiple Viewer](/images/tutorials/basicmechanics/BM_10.png "Multiple Viewer")
+![Multiple Viewers](/images/tutorials/basicmechanics/BM_10.png "Multiple Viewers")
 
 ### Parameter Connection for Synchronization {#TutorialParameterConnection}
 
-In our example you can scroll through the slices of both viewers independently. To inspect the effect of the filter, it would be helpful to synchronize both viewers in a way, that both show the same slices.
+You´re now able to scroll through the slices of the image in two separate windows. To examine the effect of the filter even better, we will now synchronize both viewers.
 
 We already know data connections between module inputs and outputs. Besides module connections, it is also possible to connect module fields via a parameter connection. The values of connected fields are synchronized, that means when changing the value of one field, all fields connected to this field will be adapted to the same value.
 
