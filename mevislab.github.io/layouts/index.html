@@ -39,7 +39,7 @@ Find some interesting links below if you feel like you are ready for a quick sta
     <p>
       {{ $currentIndex := 1 }}
       {{ range ( where .Site.RegularPages.ByDate "Kind" "page" | last 5 ) }}
-        <p>{{ $currentIndex }}) {{ .Date.Format "2006-01-02" }} [{{ .Parent.Title }}]: <a href="{{ .Permalink }}" class="alert-link">{{ .Title }}</a></p>
+        <p>{{ $currentIndex }})  [{{ .Parent.Title }}]: <a href="{{ .Permalink }}" class="alert-link">{{ .Title }}</a></p>
         {{ $currentIndex = add $currentIndex 1 }}
       {{ end }}
     </p>
