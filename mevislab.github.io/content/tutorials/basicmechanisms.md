@@ -104,26 +104,26 @@ By dragging the connection away from either the input or the output connector, t
 Connections between compatible outputs and inputs are established automatically if two Modules get close enough to each other.
 
 {{<alert class="info" caption="Extra Infos">}}
-Connecting, Disconnecting, Moving and Replacing Connections is explained {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s04.html" "here" >}}
+Connecting, Disconnecting, Moving and Replacing Connections is furtherly explained {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s04.html" "here" >}}
 {{</alert>}}
 
 [//]: <> (MVL-653)
 
 ### Image Processing {#TutorialImageProcessing}
 
-Next, we like to add a processing step to our network. We like to smooth the image using an average kernel. In order to do that, search for the module `Convolution` and add it to the workspace. Delete the established connection from the module `ImageLoad` to the module `View2D` by clicking on the connection and pressing {{< keyboard "DEL" >}}. Now, you can build new connections from the module `ImageLoad` to the module `Convolution` and from this module to `View2D`.
+We are processing our image as a next step. An average kernel will be used to smooth the image out. Add the `Convolution`-Module to your workspace and disconnect the 'View2D'-Module from the 'ImageLoad'-Module by clicking on the connection and pressing {{< keyboard "DEL" >}}. Now, you can build new connections from the module `ImageLoad` to the module `Convolution` and the 'Convolution'-Module to `View2D`.
 
 ![Convolution Module](/images/tutorials/basicmechanics/BM_08.png "Convolution Module")
 
-Double-click the module `Convolution` to open its panel. The panel allows configurations of the module. You can adjust parameters or in this case select a kernel, for example the *3x3 Avarage Kernel*.
+Open the panel of the 'Convolution'-Module by double-clicking it. The panel allows configuration of the module. You can adjust parameters or select a kernel. We will be using the *3x3 Avarage Kernel* for now.
 
 ![Select a Kernel](/images/tutorials/basicmechanics/BM_09.png "Select a Kernel")
 
 The module `View2D` is now displaying the smoothed image.
 
-To see the difference between the processed and the unprocessed image, click on the output of the module `ImageLoad` to view the original image in the Output Inspector. The great thing about the Output Inspector is that it can display the output of any connector in the process chain (as long as a format is used, the inspector can interpret). Simply click the connector or connection to find out more about the module output.
+To compare the processed and unprocessed image, click on the output connector of the module `ImageLoad` to display the original image in the Output Inspector. The Output Inspectors greatest advantage is, that it´s able to display the output of any connector in the process chain (as long as an intrepretable format is used). Simply click the connector or connection to find out more about the modules output.
 
-There is another way of inspecting the difference between the processed and the unprocessed image. Add a second viewer module `View2D` to your workspace. The new module gets a different name: `View2D1`. It is possible to establish numerous connections from one module output to different other module inputs, but a module input can only receive one connection. Connect the module `ImageLoad` to the second viewer to display two images at the same time. You can scroll through the slices of both viewers and inspect the images.
+You can also inspect changes between a processed and unprocessed image by adding a second or even third viewer (to make it gradient) to your network. We will be using a second 'View2D'-module. Notice how the second Viewer is numbered for you to be able to distinguish them better. It might be important to know at this point, that numerous connections can be established from one output-connector but an input-connector can only receive one stream of data. Please connect the module `ImageLoad` to the second viewer to display the images twice. You can now scroll through the slices of both viewers and inspect the images.
 
 ![Multiple Viewer](/images/tutorials/basicmechanics/BM_10.png "Multiple Viewer")
 
