@@ -77,31 +77,31 @@ Below the Output Inspector, you´ll find the Module Inspector. The Module Inspec
 
 ### Viewer {#TutorialViewer}
 
-Instead of using the Output Inspector to inspect images, it is sensible to add a viewer to the network. Search for the module `View2D` and add it to your workspace. Most modules have different connectors. Data were transmitted via output connectors on the top side of a module and can be received by other modules via input connectors on the bottom side of the module.
+Instead of using the Output Inspector to inspect images, we´d suggest to add another viewer to the network. Search for the Module `View2D` and add it to your workspace. Most modules have different connector options. Data is generally transmitted from the top side of a module to another modules bottom side.
 
-The module `View2D` has one input connector for the voxel-images on the bottom side (triangle) and three other possible inputs (half-circles), which will be explained later on. In general, module outputs can be connected to module inputs with the same symbol and thus transmit information and data between modules.
+The module `View2D` has one input connector for voxel-images (triangle-shaped) and three other possible input connectors (Shaped like half-circles) on the bottom. The half-circle-shaped input connectors will be explained later on. Generally, module outputs can be connected to module inputs with the same symbol and thus transmit information and data between those modules.
 
 ![2D Viewer](/images/tutorials/basicmechanics/BM_05.png "2D Viewer")
 
-You can now add the loaded image to the viewer by connecting the image output of the module `ImageLoad` with the image input of the module `View2D`. This is done as follows:
+You can now display the loaded image in the newly added viewer-module by connecting the output of the module `ImageLoad` to the input connector of the module `View2D`. Follow these steps to do so:
 
 1.  Click the output connector of `ImageLoad`.
 
 2.  Keep the left mouse button {{< mousebutton "left" >}} pressed while dragging the connection to the input connector of `View2D` (white line).
 
-3.  Check that the connection is well-defined (green line).
+3.  Check if the connection is well-defined (green line).
 
-4.  At the input connector of `View2D`, release the mouse button and establish the connection (blue line).
+4.  Release the mouse-button on the input connector of your 'View2D'-module to establish the connection. 
 
 ![Establish connection](/images/tutorials/basicmechanics/BM_06.png "Establish connection")
 
-Although the connection is established, no image rendering has started yet. To initialize rendering, open the `View2D` panel by double-clicking the module `View2D` in your network. Similar to the Output Inspector, you can scroll through the slices and change the contrast. By pressing the {{< keyboard "A" >}} you can switch the annotation mode.
+Although the connection is established, no image rendering has started yet. To initialize rendering, open the `View2D` panel by double-clicking on the module. Similar to the Output Inspector, you can scroll through the slices and set different levels of contrast. The amount of displayed annotations is altered by pressing {{< keyboard "A" >}} on the keyboard (annotation-mode).
 
 ![View2D Panel](/images/tutorials/basicmechanics/BM_07.png "View2D Panel")
 
-You can also disconnect the Modules by dragging the connection away from the input or output connector of the Modules.
+By dragging the connection away from either the input or the output connector, the connection is interrupted.
 
-Connections between compatible outputs and inputs are established automatically in case 2 Modules are moved close enough to each other.
+Connections between compatible outputs and inputs are established automatically if two Modules get close enough to each other.
 
 {{<alert class="info" caption="Extra Infos">}}
 Connecting, Disconnecting, Moving and Replacing Connections is explained {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s04.html" "here" >}}
