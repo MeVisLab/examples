@@ -2,6 +2,7 @@
 title: "Overview"
 date: 2022-06-15T08:54:53+02:00
 draft: false
+headless: true
 ---
 ## Glossary
 A Glossary containing most definitions and descriptions of terms used in this document can be found [here](/tutorials/introduction/#tutorial_glossary).

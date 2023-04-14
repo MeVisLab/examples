@@ -1,3 +1,7 @@
+---
+title: "Leftcolumn"
+---
+
 ## Symbols
 We embedded three symbols, referencing additional info, tasks and warnings.
 ### Info
