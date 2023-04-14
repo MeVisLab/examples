@@ -1,0 +1,62 @@
+{{ define "main" }}
+<div class="container pb-5 pt-3">
+
+  <div class="container-fluid overflow-hidden">
+    <div class="row vh-auto overflow-auto">
+      <div class="col d-flex flex-column h-sm-auto">
+          <div class="col px-6">
+      {{- with .Params.tags -}}
+        {{- if ge (len .) 1 -}}
+            {{- range . -}}
+              {{ $tagstring := lower . }}
+              {{ $tagstring := replace $tagstring " " "-" }}
+              {{ if eq . "Beginner" }}
+            <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-success">{{ . }}</span></a>
+              {{ else if eq . "Advanced" }}
+              <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-warning">{{ . }}</span></a>
+              {{ else if eq . "Expert" }}
+              <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-danger">{{ . }}</span></a>
+              {{ else }}
+              <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-secondary">{{ . }}</span></a>
+              {{ end }}
+
+            {{ end -}}
+        {{- end -}}
+    {{- end -}}
+    {{ .Content }}
+          </div>
+        
+          </div>
+          {{- partial "nextprev.html" . -}}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+const body_element = document.querySelector('html body');
+const modal_div = document.createElement("div");
+let modal_window = document.body.appendChild(modal_div);
+let modal_html = '<div class="modal fade" id="lightboxModalFullscreen" tabindex="-1" aria-labelledby="lightboxModalFullscreenLabel" aria-hidden="true"><div class="modal-dialog modal-fullscreen" data-bs-dismiss="modal" aria-label="Close"><div class="modal-content border-0"><div class="modal-body d-flex align-self-center align-items-center justify-content-center"><div class="modal-custom"><img src="" id="LightboxCanvas" class="img-fluid" data-bs-dismiss="modal" aria-label="Close" /><figcaption id="LightboxCaption" class="figure-caption"></figcaption></div></div></div></div></div>'
+modal_window.innerHTML = modal_html;
+
+Array.from(document.querySelectorAll('[data-modal*="bs-lightbox"]')).forEach((href) => {
+  href.setAttribute('data-bs-toggle','modal');
+  href.setAttribute('data-bs-target','#lightboxModalFullscreen');
+  href.addEventListener('click', (e)=>{
+        const target_href = href.getAttribute('href');
+        const target_alt = href.getAttribute('title');
+        document.getElementById('LightboxCanvas').src = target_href;
+        document.getElementById('LightboxCaption').innerHTML = target_alt;
+        e.preventDefault();
+        console.log(target_href);
+  })
+})
+
+hljs.addPlugin(
+  new CopyButtonPlugin({
+    hook: (text, el) => text,
+  })
+);
+
+</script>
+{{ end }}

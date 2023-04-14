@@ -56,7 +56,7 @@ sectionPagesMenu = "main"
 [[menu.main]]
     identifier = "about"
     title = "Overview"
-    url = "/about/"
+    url = "/about/about"
     weight = 200
 
 [[menu.main]]
