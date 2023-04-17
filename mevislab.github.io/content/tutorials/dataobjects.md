@@ -19,7 +19,7 @@ MeVisLab provides pre-defined data objects, e. g.
 * [Surface Objects (Winged Edge Meshes or WEMs)](/tutorials/dataobjects/surfaces/surfaceobjects) 
   Description
 and
-* [Markers](/tutorials/dataobjects/markers/markers)
+* [Markers](/tutorials/dataobjects/markerobjects)
   Description.
 
 Differences, advantages and disadvantages of each above mentioned data-object type will be covered in the following specified chapters, where you will build example networks, covering some of the most common functionalities. 
