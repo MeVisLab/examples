@@ -196,9 +196,13 @@ More information on module groups can be found {{< docuLinks "/Resources/Documen
 
 ### Macro-Modules {#TutorialMacroModules}
 
- To condense our filter into one single module, we will now be creating a Macro out of it. You have probably already noticed how the modules differ in color. Each color represents a special type of module. The blue modules are called ML-Modules, they process voxel-images. Green modules are OpenInventor-modules, they enable visual 3D scene graphs. The brown modules are called Macro-modules. Macro-modules encapsulate a whole network in a single module. You can right-click on a Macro-module to open the context menu and select *Show Internal Network* to see the internal network structure. In addition, Macro-modules enable the implementation of custom functionalities via python scripting.
-
-We now like to condense the modules forming the contour filter into one single macro module. To do that, right-click on the group-title and select *Convert To Local Macro*. Now, you need to select a name for your macro module and finish the creation of the module. With this you create a local macro module. Local macro modules can only be used in your current network.
+You have probably already noticed how the modules differ in color. Each color represents another type of module:
+  
+  * The blue modules are called ML-Modules, they process voxel-images. 
+  * Green modules are OpenInventor-modules, they enable visual 3D scene graphs. 
+  * The brown modules are called Macro-modules. Macro-modules encapsulate a whole network in a single module. 
+  
+To condense our filter into one single module, we will now be creating a Macro-module out of it. To do that, right-click on the group-title and select *Convert To Local Macro*. Now, you need to select a name for your macro module and finish the creation of the module. With this you create a local macro module. Local macro modules can only be used in your current network.
 
 ![Convert to Local Macro](/images/tutorials/basicmechanics/BM_21.png "Convert to Local Macro")
 ![Your first Local Macro](/images/tutorials/basicmechanics/BM_22.png "Your first Local Macro")
