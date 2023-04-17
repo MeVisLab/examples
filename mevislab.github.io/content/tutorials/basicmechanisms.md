@@ -12,14 +12,11 @@ menu:
     weight: 350
     parent: "tutorials"
 ---
-
-# MeVisLab Tutorial Chapter I {#TutorialChapter1}
-
-{{< youtube "hRspMChITE4">}}
-
 ## Basic Mechanics of MeVisLab (Example: Building a Contour Filter) {#TutorialBasicMechanics}
 
 In this chapter you will learn the basic mechanics of the MeVisLab IDE. You will learn how to re-use existing Modules to load and view data and you will build your first processing pipeline.
+
+{{< youtube "hRspMChITE4">}}
 
 {{<alert class="info" caption="Extra Infos">}}
 Additional information on the basics of MeVisLab are explained {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/index.html" "here">}}
