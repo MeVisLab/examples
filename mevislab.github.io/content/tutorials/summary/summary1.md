@@ -126,4 +126,4 @@ Now the 3D visualization uses the same color as the 2D overlay.
 * You now built a network providing the basic functionalities of your application.
 * Actions inside your application need to be executed by changing fields in your network or by manually touching a trigger.
 
-{{< networkfile "examples/summary/Tutorial_Summary.mlab" >}}
+{{< networkfile "examples/summary/TutorialSummary.mlab" >}}
