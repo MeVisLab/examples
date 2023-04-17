@@ -13,7 +13,6 @@ menu:
     parent: "dataobjects"
 ---
 # Markers in MeVisLab {#MarkersInMeVisLab}
-## Introduction
 In MeVisLab you can equip images and other data objects with markers. In this example you will see how to create, process and use markers.
 
 ## Marker Creation and Rendering
