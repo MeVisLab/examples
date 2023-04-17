@@ -1,15 +1,30 @@
 name: github pages
 
 on:
-  pull_request:
+  pull_request:  # preview for PR (deleted on closing the PR)
   push:
     branches:
-      - main  # Set a branch to deploy
+      - main  # main deploy
 
 jobs:
   deploy:
     runs-on: ubuntu-22.04
+    env:
+      PR_PATH: pull/${{github.event.number}}
     steps:
+      - name: Comment on PR
+        uses: hasura/comment-progress@v2.2.0
+        if: github.ref != 'refs/heads/main'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          number: ${{ github.event.number }}
+          id: deploy-preview
+          message: "Starting deployment of preview ⏳..."
+
+      - name: Set domain
+        run: echo "DOMAIN=${{ github.actor }}.github.io" >> $GITHUB_ENV
+
       - uses: actions/checkout@v3
         with:
           submodules: true  # Fetch Hugo themes (true OR recursive)
@@ -21,26 +36,56 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
+      - name: Set production base URL
+        run: echo "BASE_URL=https://${{ env.DOMAIN }}/${{ github.event.repository.name }}/" >> $GITHUB_ENV
+
       - name: Install Dependencies
-        working-directory: ./mevislab.github.io
+        working-directory: ./${{ env.DOMAIN }}
         run: npm install
-        
-      - name: Build
-        working-directory: ./mevislab.github.io
-        run: hugo --minify --baseURL https://mevislab.github.io/examples/ -d public
+
+      - name: Build website
+        working-directory: ./${{ env.DOMAIN }}
+        run: hugo --minify --baseURL "${{ env.BASE_URL }}"
+        env:
+          HUGO_ENV: production
 
       - name: Check HTML
         uses: chabad360/htmlproofer@master
         with:
-          directory: "./mevislab.github.io/public"
+          directory: "./${{ env.DOMAIN }}/public"
           arguments: --only-4xx --assume-extension --empty-alt-ignore
         continue-on-error: true
 
-      - name: Deploy
+      - name: Deploy main branch
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.PUBLISH_TOKEN }}
-          publish_dir: ./mevislab.github.io/public
-          
-          
+          publish_dir: ./${{ env.DOMAIN }}/public
+
+      - name: Set base URL for preview if PR
+        if: github.ref != 'refs/heads/main'
+        run: echo "BASE_URL=https://${{ env.DOMAIN }}/${{ github.event.repository.name }}/${{ env.PR_PATH}}/" >> $GITHUB_ENV
+
+      - name: Build PR preview website
+        if: github.ref != 'refs/heads/main'
+        run: hugo --minify --baseURL "${{ env.BASE_URL }}"
+        env:
+          HUGO_ENV: staging
+
+      - name: Deploy to PR preview
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref != 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./${{ env.DOMAIN }}/public
+
+      - name: Update comment
+        uses: hasura/comment-progress@v2.2.0
+        if: github.ref != 'refs/heads/main'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          number: ${{ github.event.number }}
+          id: deploy-preview
+          message: "A preview of ${{ github.event.after }} is uploaded and can be seen here:\n\n ✨ ${{ env.BASE_URL }} ✨\n\nChanges may take a few minutes to propagate. Since this is a preview of production, content with `draft: true` will not be rendered. The source is here: https://github.com/${{ github.repository }}/tree/gh-pages/${{ env.PR_PATH }}/"
