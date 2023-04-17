@@ -22,6 +22,6 @@ enable for geometrical figures (like cubes) to be generated and manipulated.
 * [Markers](/tutorials/dataobjects/markerobjects) <br>
 used to mark specific data or aspects of an image and allow to process those later on.
 * [Curves](tutorials/dataobjects/curves) <br>
-can print the results of a function into a a diagram.
+can print the results of a function as two-dimensional mathematical graphs into a a diagram.
 
 Usage, advantages and disadvantages of each above mentioned data-object type will be covered in the following specified chapters, where you will build example networks, covering some of the most common use-cases. 
