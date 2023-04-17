@@ -35,11 +35,11 @@ It is possible to convert other data objects into markers and also to convert ma
 It is, for example, possible to set markers by using the `MaskToMarkers`-module and later on generate a surface object from a list of markers, using the `MaskToSurface`-module. Marker conversion can also be done by various other modules, listed in [/Modules/Geometry/Markers].
 {{</alert>}}
 
-Build the following network. Press the *Reload* buttons of the modules `MaskToMarkers` and `MarkersToSurface` to enable the conversion. Now you can see both, the markers and the created surface in the module `SoExaminerViewer`. Use the toggle options of `SoToggle` and `SoWEMRenderer` to enable/disable the visualization of markers and surface.
+Learn how to convert markers by building the following network. Press the *Reload* buttons of the modules `MaskToMarkers` and `MarkersToSurface` to enable the conversion. Now you can see both the markers and the created surface in the module `SoExaminerViewer`. Use the toggle options of `SoToggle` and `SoWEMRenderer` to enable/disable the visualization of markers and surface.
 
 ![Convert Markers](/images/tutorials/dataobjects/markers/DO_Markers_02.png "Convert Markers")
 
-## Exercises
+## Exercise
 Get the HU value of the image at your markers location.
 
 ## Summary
