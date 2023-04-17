@@ -12,8 +12,6 @@ menu:
     weight: 650
     parent: "tutorials"
 ---
-# MeVisLab Tutorial Chapter V {#TutorialChapter5}
-
 ## Data Objects in MeVisLab {#TutorialDataObjects}
 
 MeVisLab provides a lot of pre-defined data objects for usage such as [Contours](/tutorials/dataobjects/contours/contour-objects), [Surface Objects (WEMs)](/tutorials/dataobjects/surfaces/surfaceobjects) and [Markers](/tutorials/dataobjects/markers/markers).
