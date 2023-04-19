@@ -9,29 +9,51 @@ menu:
     weight: 649
     parent: "examples"
 ---
+### Structure
 
-## How to use the available examples:
-The examples provided on this site are (normally) either \*.mlab files or *.zip archives. Sometimes there are also Python (\*.py) or Script (\*.script) files. This page shall explain how to use them in your local MeVisLab installation.
+Each tutorial chapter was used as an umbrella theme to structure related examples, that are linked in a list. 
+After clicking any of the linked examples, you will be forwarded to a short description of the feature and have the option to download the resource that produces your desired effect.
+
+The deposited files are usually either \*.mlab files or \*.zip archives. You will find a short tutorial on how to add those files into your MeVisLab application, to work with them, below.
 
 ### MeVisLab (\*.mlab) files
-MeVisLab files are networks stored as \*.mlab file. They can be opened in MeVisLab via double-click {{<mousebutton "left" >}} or via {{< menuitem "File" "Open">}}.
+MeVisLab files are networks stored as \*.mlab files. <br>
+
+{{<alert class="info" caption="Info">}}
+Double clicking the left mouse-button within your MeVisLab workspace works as a shortcut to open files. 
+{{</alert>}}
+
+Files can also be opened using the menu option {{< menuitem "File" "Open">}}.
 
 ### Archives (\*.zip files)
-Archives are mostly Macro Modules. They require a user package. See [Example 2.1: Package creation](/tutorials/basicmechanisms/macromodules/package/) for more information about MeVisLab packages.
+Archives mostly contain Macro Modules. <br>
+To use those Macro Modules, you will need to know how to handle user packages. 
 
-Having a package, the examples can be extracted into the directory of your package. Make sure to keep the directory structure inside the package so that the examples are loaded correctly.
+{{<alert class="check" caption="Check">}}
+See [Example 2.1: Package creation](/tutorials/basicmechanisms/macromodules/package/) for more information on packages in MeVisLab.
+{{</alert>}}
 
-The directory structure of a MeVisLab package looks like this:
+The contents can be extracted into the directory of your package. Make sure to keep the directorys file structure for the examples to be loaded and displayed correctly.
+
+A typical file structure of a MeVisLab package looks like this:
 ![Package directory structure](/images/examples/howto_1.png "Package directory structure")
 
-In this example, we have the package *TutorialSummary* in the package group *MeVis*. A package normally at least contains a *Projects* directory. This directory should include your Macro Modules. If you extract a \*.zip file of a Macro Module, the *Projects* folder of your package should be the target directory.
+The package *TutorialSummary* within the package group *MeVis* is shown above. A package normally at least contains a *Projects* directory, which is where the Macro Modules are located. When extracting the contents of a \*.zip file, the *Projects* folder of your package should be the target directory.
 
-In some cases we also provide test cases. Extract them into a directory *TestCases*.
+Sometimes we even provide test cases. Extract them into the *TestCases* directory.
 ![Package directory structure](/images/examples/howto_2.png "Package directory structure")
 
-In case the directories do not exist, for example in an empty package, you can create them. Make sure to use the same names for the *Projects* and *TestCases* directories.
+{{<alert class="info" caption="Notice">}}
+Feel free to create certain files if they do not exist yet, but make sure to name them conforming the directory file structure shown above.
+{{</alert>}}
 
-Back in MeVisLab, you might need to reload the module cache after extracting the example. Open {{< menuitem "Extras" "Reload Module Database (Clear Cache)" >}}.
+Continuing on your MeVisLab workspace: You might need to reload the module cache after adding Macro Modules out of \*.zip archives for them to be displayed and ready to be used. To do so, open {{< menuitem "Extras" "Reload Module Database (Clear Cache)" >}}.
 
 ### Python (\*.py) or Script (\*.script) files
-Sometimes we provide Python or Script files. Make sure to follow the steps of the tutorial and then paste the content of the provided files into your file. Python and Script files without having a Macro Module or test case do not make sense in MeVisLab, therefore the tutorial needs to be done first.
+In the rare case that a \*.py or \*.script file is provided, make sure to firstly follow the tutorials related to Macro Modules and testcases. 
+
+{{<alert class="warning" caption="Warning">}}
+The integration of Pythonscripts might not add a lot of value for someone that lacks the knowledge conveyed by the tutorials.
+{{</alert>}}
+
+
