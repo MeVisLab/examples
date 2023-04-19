@@ -1,6 +1,25 @@
 {{ define "main" }}
 <div class = "flexbox">
     <div style="margin-left: 100px; margin-right: 50px">
+      
+      {{- with .Params.tags -}}
+    {{- if ge (len .) 1 -}}
+        {{- range . -}}
+          {{ $tagstring := lower . }}
+          {{ $tagstring := replace $tagstring " " "-" }}
+          {{ if eq . "Beginner" }}
+        <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-success">{{ . }}</span></a>
+          {{ else if eq . "Advanced" }}
+          <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-warning">{{ . }}</span></a>
+          {{ else if eq . "Expert" }}
+          <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-danger">{{ . }}</span></a>
+          {{ else }}
+          <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-secondary">{{ . }}</span></a>
+          {{ end }}
+          {{ end -}}
+    {{- end -}}
+{{- end -}}
+
       <h2>Glossary</h2>
       <p>
         A Glossary containing most definitions of terms used in this document can be found
@@ -47,30 +66,9 @@
       As their level of difficulty gradually rises and treated aspects build up on another, we recommend to follow the tutorials in their listed order, descending from top to bottom.
       </p>
     </div>
-    {{- with .Params.tags -}}
-        {{- if ge (len .) 1 -}}
-            {{- range . -}}
-              {{ $tagstring := lower . }}
-              {{ $tagstring := replace $tagstring " " "-" }}
-              {{ if eq . "Beginner" }}
-            <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-success">{{ . }}</span></a>
-              {{ else if eq . "Advanced" }}
-              <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-warning">{{ . }}</span></a>
-              {{ else if eq . "Expert" }}
-              <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-danger">{{ . }}</span></a>
-              {{ else }}
-              <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-secondary">{{ . }}</span></a>
-              {{ end }}
-              {{ end -}}
-        {{- end -}}
-    {{- end -}}
 
-  
-  {{- partial "nextprev.html" . -}}
   <div style="margin-left: 50px; margin-right: 100px">
-
     {{.Content}}
-
   </div>
 </div>
 
@@ -100,6 +98,6 @@
       hook: (text, el) => text,
     })
   );
-  
   </script>
+  {{- partial "nextprev.html" . -}}
   {{ end }}

@@ -3,6 +3,13 @@ title: "Overview"
 date: 2022-06-15T08:54:53+02:00
 draft: false
 status: "OK"
+weight: 200
+tags: ["Symbols", "Glossary", "Overview"]
+menu: 
+  main:
+    identifier: "about"
+    title: "Overview"
+    weight: 200
 ---
 ## Symbols
 We embedded three symbols, referencing additional info, tasks and warnings:

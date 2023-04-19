@@ -1,9 +1,8 @@
 {{ define "main" }}
 <div class = "flexbox">
-    <div style="margin-left: 100px; margin-right: 50px">
-      CONTENT
-    </div>
-    {{- with .Params.tags -}}
+
+    <div style ="width: 60%">
+      {{- with .Params.tags -}}
         {{- if ge (len .) 1 -}}
             {{- range . -}}
               {{ $tagstring := lower . }}
@@ -20,14 +19,16 @@
               {{ end -}}
         {{- end -}}
     {{- end -}}
-
-  
-  {{- partial "nextprev.html" . -}}
-  <div style="margin-left: 50px; margin-right: 100px">
-    GLOSSARY IN SPECIAL TAG
+      {{.Content}}
+    </div>
+    
+  <div style = "width: auto">
+    <details>
+      <summary>Glossary</summary>
+      <p> Hier steht ausklappbarer Inhalt drin.</p>
+    </details>
   </div>
 </div>
-
 
 <script>
   const body_element = document.querySelector('html body');
@@ -56,4 +57,5 @@
   );
   
   </script>
+  {{- partial "nextprev.html" . -}}
   {{ end }}
