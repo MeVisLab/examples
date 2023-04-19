@@ -2,6 +2,7 @@
 title: "Overview"
 date: 2022-06-15T08:54:53+02:00
 draft: false
+status: "OK"
 ---
 ## Symbols
 We embedded three symbols, referencing additional info, tasks and warnings:

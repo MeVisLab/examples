@@ -3,14 +3,8 @@ title: "Glossary"
 date: 2023-04-19T08:56:33+02:00
 draft: false
 status: "OK"
-weight: 315
-tags: ["Search", "Glossary", "Usability"]
-menu: 
-  main:
-    identifier: "glossary"
-    title: "Glossary"
-    weight: 315
-    parent: "tutorials"
+weight: 250
+tags: ["Search", "Glossary", "Usability", "Definitions", "Descriptions", "Terms"]
 ---
 
 {{< bootstrap-table table_class="table table-striped" >}}
@@ -43,4 +37,17 @@ menu:
 | `GVR` | Giga Voxel Renderer (GVR) |
 | `Lookup Table (LUT)` | |
 | `Package` | |
+{{< /bootstrap-table >}}
+
+### Filetypes 
+{{< bootstrap-table table_class="table table-striped" >}}
+| <div style="width:230px">Extension</div> | Description |
+| --- | --- |
+| `.mlab` | Network file, includes all information about the network\'s modules, their settings, their connections, and module groups. Networks developed by using the `MeVisLab SDK` are stored as `.mlab` file and can only be opened having a valid SDK license. |
+| `.def` | Module definition file, necessary for a module to be added to the common MeVisLab module database. May also include all MDL script parts (if they are not sourced out to the `.script` file). |
+| `.script` | `MDL` script file, typically includes the user interface definition for panels. See [Chapter GUI Development](./tutorials/basicmechanisms/macromodules/guidesign#Example_Paneldesign "GUI Development") for an example on GUI programming. |
+| `.mlimage` | MeVisLab internal image format for 6D images saved with all DICOM tags, lossless compression, and in all data types. |
+| `.mhelp` | File with descriptions of all fields and the use of a module, edit- and creatable by using `MATE`. See [Help files](./tutorials/basicmechanisms/macromodules/helpfiles "Help files") for details. |
+| `.py` | Python file, used for scripting in macro modules. See [Python scripting](./tutorials/basicmechanisms/macromodules/pythonscripting#TutorialPythonScripting "Python scripting") for an example on macro programming. |
+| `.dcm` | DCM part of the imported DICOM file, see [Importing DICOM Data](./tutorials/basicmechanisms/dataimport#DICOMImport "Importing DICOM Data"). |
 {{< /bootstrap-table >}}
