@@ -50,7 +50,7 @@ Feel free to create certain files if they do not exist yet, but make sure to nam
 Continuing on your MeVisLab workspace: You might need to reload the module cache after adding Macro Modules out of \*.zip archives for them to be displayed and ready to be used. To do so, open {{< menuitem "Extras" "Reload Module Database (Clear Cache)" >}}.
 
 ### Python (\*.py) or Script (\*.script) files
-In the rare case that a \*.py or \*.script file is provided, make sure to firstly follow the tutorials related to Macro Modules and testcases. 
+In the rare case that a \*.py or \*.script file is provided, make sure to firstly follow the tutorials related to Macro Modules and test cases. 
 
 {{<alert class="warning" caption="Warning">}}
 The integration of Pythonscripts might not add a lot of value for someone that lacks the knowledge conveyed by the tutorials.
