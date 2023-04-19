@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class = "flexbox">
-    <div style="margin-left: 100px; margin-right: 25px">
+    <div style="margin-left: 100px; margin-right: 50px">
       <h2>Glossary</h2>
       <p>
         A Glossary containing most definitions of terms used in this document can be found
@@ -40,10 +40,11 @@
             <a href="tutorials/thirdparty/">Chapter VIII: ThirdParty Components</a>
         </li>
       </ul>
+      Each of these chapters provide examples you can try yourself, detailed explanations on used Macro Modules and (if existent) links to related tutorials 
+      on <a href="https://www.youtube.com/channel/UCUGi64NseroIGjga8l7EX8g">YouTube</a>.
       </p>
       <p>
-      Each of these chapters provide examples you can try yourself, detailed explanations on the used macromodules and (if existent) links to related tutorials 
-      on <a href="https://www.youtube.com/channel/UCUGi64NseroIGjga8l7EX8g">YouTube</a>.
+      As their level of difficulty gradually rises and treated aspects build up on another, we recommend to follow the tutorials in their listed order, descending from top to bottom.
       </p>
     </div>
     {{- with .Params.tags -}}
@@ -66,7 +67,7 @@
 
   
   {{- partial "nextprev.html" . -}}
-  <div style="margin-left: 25px; margin-right: 100px">
+  <div style="margin-left: 50px; margin-right: 100px">
 
     {{.Content}}
 
