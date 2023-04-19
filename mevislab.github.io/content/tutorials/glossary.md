@@ -4,7 +4,7 @@ date: 2023-04-19T08:56:33+02:00
 draft: false
 status: "OK"
 weight: 250
-tags: ["Search", "Glossary", "Usability", "Definitions", "Descriptions", "Terms"]
+tags: ["Search", "Glossary", "Usability", "Definitions", "Descriptions", "Terms", "Abbreviations", "Components"]
 ---
 ### Abbreviations
 {{< bootstrap-table table_class="table table-striped" >}}
