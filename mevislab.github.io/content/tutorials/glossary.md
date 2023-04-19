@@ -28,7 +28,7 @@ tags: ["Search", "Glossary", "Usability", "Definitions", "Descriptions", "Terms"
 | `.dcm` | DCM part of the imported DICOM file, see [Importing DICOM Data](./tutorials/basicmechanisms/dataimport#DICOMImport "Importing DICOM Data"). |
 {{< /bootstrap-table >}}
 
-### Components MeVisLab
+### Components of MeVisLab
 {{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:230px">Component</div> | Description |
 | --- | --- |
