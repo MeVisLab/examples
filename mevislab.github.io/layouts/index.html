@@ -1,6 +1,7 @@
 {{ define "main" }}
-<br />
-<div class="container">
+<div class="flexbox">
+<div style="width: 60%">
+<h3>Learn to use MeVisLab</h3>
 <p>
   After receiving a lot of useful feedback regarding the MeVisLab documentation, we decided to provide you with simple yet well-thought-out tutorials and common examples to allow you
   to gain profiency in the usage of MeVisLab quickly and easily. <br> <br>
@@ -22,9 +23,11 @@ Find some interesting links below if you feel like you are ready for a quick sta
 </p>
 <p>Discern how many of our tutorials are on <a href="https://www.youtube.com/channel/UCUGi64NseroIGjga8l7EX8g">YouTube</a> as well.</p>
 <p> Lastly: We implemented a basic search functionality for you to search for terms within our tutorial page.</p>
+</div>
 
-<div class="alert alert-info" role="alert">
-  <h4 class="my-3">News:</h4>
+<div class="alert alert-info" role="alert" style="width:fit-content">
+
+  <h4>Recent Additions:</h4>
     <p>
       {{ $currentIndex := 1 }}
       {{ range ( where .Site.RegularPages.ByDate "Kind" "page" | last 5 ) }}
@@ -34,6 +37,5 @@ Find some interesting links below if you feel like you are ready for a quick sta
     </p>
 </div>
 </div>
-<br />
 
 {{ end }}
