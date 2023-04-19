@@ -1,15 +1,13 @@
 {{ define "main" }}
-
 <div class = "container">
-
-  <div class = "col-md-5" id="listOfChaptersInOverview">
-    <h2>Glossary</h2>
-    <p>
-      A Glossary containing most definitions of terms used in this document can be found
-      <a href="/tutorials/introduction/#tutorial_glossary">here</a>.
-    </p>
-    <h2>Tutorials</h2>
-    <p>
+    <div style="float:left; width:50%" id="listOfChaptersInOverview">
+      <h2>Glossary</h2>
+      <p>
+        A Glossary containing most definitions of terms used in this document can be found
+        <a href="/tutorials/introduction/#tutorial_glossary">here</a>.
+      </p>
+      <h2>Tutorials</h2>
+      <p>
       The following chapters are currently available: <br/>
       <ul style="list-style-type: square">
         <li>
@@ -42,12 +40,12 @@
             <a href="tutorials/thirdparty/">Chapter VIII: ThirdParty Components</a>
         </li>
       </ul>
-    </p>
-    <p>
+      </p>
+      <p>
       Each of these chapters provide examples you can try yourself, detailed explanations on the used macromodulesand (if existent) links to related tutorials 
       on <a href="https://www.youtube.com/channel/UCUGi64NseroIGjga8l7EX8g">YouTube</a>.
-    </p>
-
+      </p>
+    </div>
     {{- with .Params.tags -}}
         {{- if ge (len .) 1 -}}
             {{- range . -}}
@@ -66,14 +64,13 @@
         {{- end -}}
     {{- end -}}
 
-  </div>
+  
   {{- partial "nextprev.html" . -}}
-  <div class = "col-md-5" id="symbolsAndKeyboardShortcutsInOverview">
+  <div style="float:right; width:50%" id="symbolsAndKeyboardShortcutsInOverview">
 
     {{.Content}}
 
   </div>
-  
 </div>
 
 
