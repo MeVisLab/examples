@@ -6,9 +6,31 @@ status: "OK"
 weight: 250
 tags: ["Search", "Glossary", "Usability", "Definitions", "Descriptions", "Terms"]
 ---
-
+### Abbreviations
 {{< bootstrap-table table_class="table table-striped" >}}
-| <div style="width:230px">Term</div> | Description |
+| <div style="width:230px">Abbreviation</div> | Meaning |
+| --- | --- |
+| `CSO` | Contour Segmentation Objects (CSOs) |
+| `WEM` | Winged Edge Meshes (WEMs) |
+| `GVR` | Giga Voxel Renderer (GVR) |
+{{< /bootstrap-table >}}
+
+### Filetypes 
+{{< bootstrap-table table_class="table table-striped" >}}
+| <div style="width:230px">Extension</div> | Description |
+| --- | --- |
+| `.mlab` | Network file, includes all information about the network\'s modules, their settings, their connections, and module groups. Networks developed by using the `MeVisLab SDK` are stored as `.mlab` file and can only be opened having a valid SDK license. |
+| `.def` | Module definition file, necessary for a module to be added to the common MeVisLab module database. May also include all MDL script parts (if they are not sourced out to the `.script` file). |
+| `.script` | `MDL` script file, typically includes the user interface definition for panels. See [Chapter GUI Development](./tutorials/basicmechanisms/macromodules/guidesign#Example_Paneldesign "GUI Development") for an example on GUI programming. |
+| `.mlimage` | MeVisLab internal image format for 6D images saved with all DICOM tags, lossless compression, and in all data types. |
+| `.mhelp` | File with descriptions of all fields and the use of a module, edit- and creatable by using `MATE`. See [Help files](./tutorials/basicmechanisms/macromodules/helpfiles "Help files") for details. |
+| `.py` | Python file, used for scripting in macro modules. See [Python scripting](./tutorials/basicmechanisms/macromodules/pythonscripting#TutorialPythonScripting "Python scripting") for an example on macro programming. |
+| `.dcm` | DCM part of the imported DICOM file, see [Importing DICOM Data](./tutorials/basicmechanisms/dataimport#DICOMImport "Importing DICOM Data"). |
+{{< /bootstrap-table >}}
+
+### Components MeVisLab
+{{< bootstrap-table table_class="table table-striped" >}}
+| <div style="width:230px">Component</div> | Description |
 | --- | --- |
 | `MeVisLab` | MeVisLab consists of the `MeVisLab SDK` and the `MeVisLab ApplicationBuilder`. |
 | `MeVisLab SDK` | The MeVisLab Software Development Kit (SDK) is the `MeVisLab IDE` including the text editor `MATE` and any tools integrated for debugging, testing and profiling. |
@@ -16,6 +38,12 @@ tags: ["Search", "Glossary", "Usability", "Definitions", "Descriptions", "Terms"
 | `MeVisLab IDE` | The MeVisLab Integrated Development Environment (IDE) is your starting point whenever you are working with MeVisLab. It provides a programming interface and an advanced text editor. |
 | `MeVisLab MATE` | The Advanced Text Editor (MATE) is an integrated text editor for Python and `MDL` development in MeVisLab. It provides auto-completion and syntax highlighting, as well as debugging functionalities. |
 | `MDL` | The MeVisLab Definition Language (MDL) is the language for developing basic User Interfaces for `Networks` and `Modules` in MeVisLab. |
+{{< /bootstrap-table >}}
+
+### MeVisLab Terminology and Concepts
+{{< bootstrap-table table_class="table table-striped" >}}
+| <div style="width:230px">Term</div> | Description |
+| --- | --- |
 | `Module` | A Module is a single instance providing encapsulated functionalities for a specific purpose. MeVisLab provides thousands of such pre-defined Modules and you can develop your own Modules for extending functionalities. Modules provide inputs and outputs for connections in a `Network` and/or one or more `Panels` for interacting. |
 | `Panel` | A Panel is a User Interface providing possibilities to interact with MeVisLab. |
 | `Field` | Parameters of Modules are called fields. Several different types of fields are available such as numbers, text, trigger buttons, etc. Publicly accessible fields can be modified in the `Module Inspector` or Panel of the selected Module.         |
@@ -32,22 +60,7 @@ tags: ["Search", "Glossary", "Usability", "Definitions", "Descriptions", "Terms"
 | `Debug Output` | The Debug Output shows debugging messages of your `Modules` and the `MeVisLab IDE`. |
 | `Open Inventor` | Open Inventor Modules process and render 3D scene objects and enable image interactions. |
 | `Scene Objects` | |
-| `CSO` | Contour Segmentation Objects (CSOs) |
-| `WEM` | Winged Edge Meshes (WEMs) |
-| `GVR` | Giga Voxel Renderer (GVR) |
 | `Lookup Table (LUT)` | |
 | `Package` | |
 {{< /bootstrap-table >}}
 
-### Filetypes 
-{{< bootstrap-table table_class="table table-striped" >}}
-| <div style="width:230px">Extension</div> | Description |
-| --- | --- |
-| `.mlab` | Network file, includes all information about the network\'s modules, their settings, their connections, and module groups. Networks developed by using the `MeVisLab SDK` are stored as `.mlab` file and can only be opened having a valid SDK license. |
-| `.def` | Module definition file, necessary for a module to be added to the common MeVisLab module database. May also include all MDL script parts (if they are not sourced out to the `.script` file). |
-| `.script` | `MDL` script file, typically includes the user interface definition for panels. See [Chapter GUI Development](./tutorials/basicmechanisms/macromodules/guidesign#Example_Paneldesign "GUI Development") for an example on GUI programming. |
-| `.mlimage` | MeVisLab internal image format for 6D images saved with all DICOM tags, lossless compression, and in all data types. |
-| `.mhelp` | File with descriptions of all fields and the use of a module, edit- and creatable by using `MATE`. See [Help files](./tutorials/basicmechanisms/macromodules/helpfiles "Help files") for details. |
-| `.py` | Python file, used for scripting in macro modules. See [Python scripting](./tutorials/basicmechanisms/macromodules/pythonscripting#TutorialPythonScripting "Python scripting") for an example on macro programming. |
-| `.dcm` | DCM part of the imported DICOM file, see [Importing DICOM Data](./tutorials/basicmechanisms/dataimport#DICOMImport "Importing DICOM Data"). |
-{{< /bootstrap-table >}}
