@@ -15,7 +15,7 @@ Points out a related task.
 {{</alert>}}
 ### Warning
 {{<alert class="warning" caption="Warning">}}
-Hints common mistakes or things that shouldn't be done.
+Hints common mistakes or steps you should consider in beforehand.
 {{</alert>}}
 
 ## Keyboard Shortcuts
