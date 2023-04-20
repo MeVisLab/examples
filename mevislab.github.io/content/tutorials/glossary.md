@@ -8,7 +8,7 @@ tags: ["Search", "Glossary", "Usability", "Definitions", "Descriptions", "Terms"
 ---
 ### Abbreviations
 {{< bootstrap-table table_class="table table-striped" >}}
-| <div style="width:230px">Abbreviation</div> | Meaning |
+| <div>Abbreviation</div> | Meaning |
 | --- | --- |
 | `CSO` | Contour Segmentation Objects (CSOs) |
 | `WEM` | Winged Edge Meshes (WEMs) |
@@ -17,7 +17,7 @@ tags: ["Search", "Glossary", "Usability", "Definitions", "Descriptions", "Terms"
 
 ### Filetypes 
 {{< bootstrap-table table_class="table table-striped" >}}
-| <div style="width:230px">Extension</div> | Description |
+| <div>Extension</div> | Description |
 | --- | --- |
 | `.mlab` | Network file, includes all information about the network\'s modules, their settings, their connections, and module groups. Networks developed by using the `MeVisLab SDK` are stored as `.mlab` file and can only be opened having a valid SDK license. |
 | `.def` | Module definition file, necessary for a module to be added to the common MeVisLab module database. May also include all MDL script parts (if they are not sourced out to the `.script` file). |
@@ -30,7 +30,7 @@ tags: ["Search", "Glossary", "Usability", "Definitions", "Descriptions", "Terms"
 
 ### Components of MeVisLab
 {{< bootstrap-table table_class="table table-striped" >}}
-| <div style="width:230px">Component</div> | Description |
+| <div>Component</div> | Description |
 | --- | --- |
 | `MeVisLab` | MeVisLab consists of the `MeVisLab SDK` and the `MeVisLab ApplicationBuilder`. |
 | `MeVisLab SDK` | The MeVisLab Software Development Kit (SDK) is the `MeVisLab IDE` including the text editor `MATE` and any tools integrated for debugging, testing and profiling. |
@@ -42,7 +42,7 @@ tags: ["Search", "Glossary", "Usability", "Definitions", "Descriptions", "Terms"
 
 ### MeVisLab Terminology and Concepts
 {{< bootstrap-table table_class="table table-striped" >}}
-| <div style="width:230px">Term</div> | Description |
+| <div>Term</div> | Description |
 | --- | --- |
 | `Module` | A Module is a single instance providing encapsulated functionalities for a specific purpose. MeVisLab provides thousands of such pre-defined Modules and you can develop your own Modules for extending functionalities. Modules provide inputs and outputs for connections in a `Network` and/or one or more `Panels` for interacting. |
 | `Panel` | A Panel is a User Interface providing possibilities to interact with MeVisLab. |
