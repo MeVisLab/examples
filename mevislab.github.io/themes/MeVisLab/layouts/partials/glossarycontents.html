@@ -1,0 +1,265 @@
+<!--Abbreviation Section-->
+<!--WARNING: Contents are only copied - NOT revised.-->
+<h3>Abbreviations</h3>
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Abbreviation</th>
+      <th scope="col">Meaning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CSO</td>
+      <td>Contour Segmented Objects</td>
+    </tr>
+    <tr>
+      <td>WEM</td>
+      <td>Winged Edge Meshes</td>
+    </tr>
+    <tr>
+      <td>GVR</td>
+      <td>Giga Voxel Renderer</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--List of Filetypes-->
+
+ <h3>Filetypes</h3>
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Extension</th>
+      <th scope="col">Description of Filetype</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>.mlab</td>
+      <td>
+        Network file, includes all information about the network's modules, their settings, their connections, and module groups. 
+        Networks developed by using the MeVisLab SDK are stored as .mlab file and can only be opened having a valid SDK license.
+    </td>
+    </tr>
+    <tr>
+      <td>.def</td>
+      <td>
+        Module definition file, necessary for a module to be added to the common MeVisLab module database. 
+        May also include all MDL script parts (if they are not sourced out to the .script file).
+      </td>
+    </tr>
+    <tr>
+      <td>.script</td>
+      <td>
+        MDL script file, typically includes the user interface definition for panels. 
+        See <a href="/examples/tutorials/basicmachanisms/macromodules/guidesign/#Example_Paneldesign">Chapter GUI Development</a> for further information.
+      </td>
+    </tr>
+    <tr>
+      <td>.mlimage</td>
+      <td>
+        MeVisLab internal image format for 6D images saved with all DICOM tags, lossless compression, and in all data types.
+      </td>
+    </tr>
+    <tr>
+      <td>.mhelp</td>
+      <td>
+        File with descriptions of all fields and the use of a module, edit- and creatable by using MATE. 
+        See <a href="/examples/tutorials/basicmechanisms/macromodules/helpfiles/">Help Files</a> for details.
+      </td>
+    </tr>
+    <tr>
+      <td>.py</td>
+      <td>
+        Python file, used for scripting in macro modules.
+        See <a href="/examples/tutorials/basicmechanisms/macromodules/pythonscripting/#TutorialPythonScripting">Python Scripting</a> for a tutorial on Macro programming.
+      </td>
+    </tr>
+    <tr>
+      <td>.dcm</td>
+      <td>DCM part of the imported DICOM file, see <a href="/examples/tutorials/basicmechanisms/dataimport/#DICOMImport">Importing DICOM<a>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--Components of MeVisLab-->
+
+<h3>Components of MeVisLab</h3>
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Component</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>MeVisLab</td>
+      <td>
+        MeVisLab consists of the MeVisLab SDK and the MeVisLab ApplicationBuilder.
+     </td>
+    </tr>
+    <tr>
+      <td>MeVisLab SDK</td>
+      <td>
+        The MeVisLab Software Development Kit (SDK) is the MeVisLab IDE including the text editor MATE and 
+        any tools integrated for debugging, testing and profiling.
+      </td>
+    </tr>
+    <tr>
+      <td>MeVisLab ApplicationBuilder</td>
+      <td>
+        The MeVisLab ApplicationBuilder allows you to generate installable executables from 
+        your developed networks and applications. These executables can be delivered to customers.
+    </td>
+    </tr>
+    <tr>
+      <td>MeVisLab IDE</td>
+      <td>
+        The MeVisLab Integrated Development Environment (IDE) is your starting point whenever you are 
+        working with MeVisLab. It provides a programming interface and an advanced text editor.
+      </td>
+    </tr>
+    <tr>
+      <td>MeVisLab MATE</td>
+      <td>
+        The Advanced Text Editor (MATE) is an integrated text editor for Python and MDL development in MeVisLab. 
+        It provides auto-completion and syntax highlighting, as well as debugging functionalities.
+      </td>
+    </tr>
+    <tr>
+      <td>MDL</td>
+      <td>
+        The MeVisLab Definition Language (MDL) is the language for developing basic
+        User Interfaces for Networks and Modules in MeVisLab.
+    </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--MeVisLab Terminology and Concepts-->
+
+<h3>MeVisLab Terminology and Concepts</h3>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Term</th>
+        <th scope="col">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Module</td>
+        <td>
+            A Module is a single instance providing encapsulated functionalities for a specific purpose. 
+            MeVisLab provides thousands of such pre-defined Modules and you can develop your own Modules for extending functionalities.
+            Modules provide inputs and outputs for connections in a Network and/or one or more Panels for interacting.
+       </td>
+      </tr>
+      <tr>
+        <td>Panel</td>
+        <td>
+            A Panel is a User Interface providing possibilities to interact with MeVisLab.
+        </td>
+      </tr>
+      <tr>
+        <td>Field</td>
+        <td>
+            Parameters of Modules are called fields. Several different types of fields are available such as numbers, 
+            text, trigger buttons, etc. Publicly accessible fields can be modified in the Module Inspector or Panel of the selected Module.
+      </td>
+      </tr>
+      <tr>
+        <td>Macro Module</td>
+        <td>
+            Macro Modules encapsulate Networks including input and output into a single Module. 
+            In order to see whats inside a Macro Module, you can open the Context Menu via Right-Click and select [ Show Internal Network ]. 
+            You can choose to create Local Macros and Global Macros.
+        </td>
+      </tr>
+      <tr>
+        <td>Local Macro (Module)</td>
+        <td>
+            Local Macros are only available in your currently opened Network. 
+            You cannot use the Module Search in MeVisLab to find Local Macros.
+        </td>
+      </tr>
+      <tr>
+        <td>Global Macro (Module)</td>
+        <td>
+            Global Macros are integrated into MeVisLab and can be used in any future Networks. 
+            They are available in Module search.
+      </td>
+      </tr>
+      <tr>
+        <td>Network</td>
+        <td>
+            A Network defines at least two connected Modules.
+      </td>
+      </tr>
+      <tr>
+        <td>Example Network</td>
+        <td>
+            Each Module provides an Example Network to see how it can be used. 
+            Right-Click on the Module and select Help > Show Example Network
+      </td>
+      </tr>
+      <tr>
+        <td>Output Inspector</td>
+        <td>
+            The Output Inspector is a quick preview of the output of a specific Module. 
+            The output can be an image or any other user defined output format.
+      </td>
+      </tr>
+      <tr>
+        <td>Module Inspector</td>
+        <td>
+            The Module Inspector shows publicly available properties of the selected module and their current values. 
+            Changes in Module Inspector are applied on the fly.
+      </td>
+      </tr>
+      <tr>
+        <td>Workspace</td>
+        <td>
+            The Workspace is the area where you can add and connect Modules. Multiple Networks are organized in separate Tabs.
+      </td>
+      </tr>
+      <tr>
+        <td>Views Area</td>
+        <td>
+            The right side of the MeVisLab IDE provides a space to add several predefined panels like Output- and Module inspectors.
+      </td>
+      </tr>
+      <tr>
+        <td>Debug Output</td>
+        <td>
+            The Debug Output shows debugging messages of your Modules and the MeVisLab IDE.
+      </td>
+      </tr>
+      <tr>
+        <td>Open Inventor</td>
+        <td>
+            Open Inventor Modules process and render 3D scene objects and enable image interactions.
+      </td>
+      </tr>
+      <tr>
+        <td>Scene Object</td>
+        <td>
+          <!--currently empty!-->
+      </td>
+      </tr>
+      <tr>
+        <td>Lookup Table (LUT)</td>
+        <td>
+          <!--currently empty-->
+      </td>
+      </tr>
+      <tr>
+        <td>Package</td>
+        <td>
+          <!--currently empty-->
+      </td>
+      </tr>
+    </tbody>
+  </table>
