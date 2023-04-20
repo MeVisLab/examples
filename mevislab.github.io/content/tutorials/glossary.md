@@ -6,4 +6,5 @@ status: "OK"
 weight: 250
 tags: ["Search", "Glossary", "Usability", "Definitions", "Descriptions", "Terms", "Abbreviations", "Components"]
 ---
+## Glossary
 {{<embed file="/layouts/partials/glossarycontents.html">}}
