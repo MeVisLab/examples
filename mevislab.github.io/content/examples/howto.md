@@ -53,7 +53,7 @@ Continuing on your MeVisLab workspace: You might need to reload the module cache
 In the rare case that a \*.py or \*.script file is provided, make sure to firstly follow the tutorials related to Macro modules and test cases. 
 
 {{<alert class="warning" caption="Warning">}}
-The integration of Pythonscripts might not add a lot of value for someone that lacks the knowledge conveyed by the tutorials.
+The integration of Python scripts might not add a lot of value for someone that lacks the knowledge conveyed by the tutorials.
 {{</alert>}}
 
 
