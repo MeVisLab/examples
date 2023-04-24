@@ -5,11 +5,6 @@ draft: false
 status: "OK"
 weight: 200
 tags: ["Symbols", "Glossary", "Overview"]
-menu: 
-  main:
-    identifier: "about"
-    title: "Overview"
-    weight: 200
 ---
 ## Symbols
 We embedded three symbols, referencing additional info, tasks and warnings:
@@ -20,7 +15,7 @@ Provides additional links or info on the current topic.
 Points out a related task.
 {{</alert>}}
 {{<alert class="warning" caption="Warning">}}
-Hints common mistakes or steps you should consider in beforehand.
+Hints common mistakes or steps you should consider beforehand.
 {{</alert>}}
 
 ## Keyboard Shortcuts
