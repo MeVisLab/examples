@@ -8,7 +8,7 @@ tags: ["Beginner", "Tutorial", "Macro", "Macro modules", "Local Macro"]
 menu: 
   main:
     identifier: "basicmechanisms"
-    title: "Examples explaining the basic mechanisms of MeVisLab like using Modules and connecting them to Networks for viewing images."
+    title: "Examples explaining the basic mechanisms of MeVisLab like using modules and connecting them to Networks for viewing images."
     weight: 350
     parent: "tutorials"
 ---
@@ -35,7 +35,7 @@ Starting off, we will add the module `ImageLoad` to our network to load our data
 Next, we select and load the data we´d like to process. Double-click the Module `ImageLoad` to open its Panel. You can browse through your folders to select the data you´d like to open. Example data can be found in the MeVisLab DemoData directory *$(InstallDir)/Packages/MeVisLab/Resources/DemoData* located in the MeVisLab installation path. Select a file, for example an MRI scan of a shoulder *Shoulder_Fracture.tif*. The image is loaded immediately and basic information of the loaded image can be seen in the Panel.
 
 {{<alert class="info" caption="Extra Infos">}}
-There also are Modules to load multiple other formats of data. These are the most common ones:
+There also are modules to load multiple other formats of data. These are the most common ones:
 * `DicomImport` to load DICOM Images
 * `LocalImage` to load any image format
  
@@ -47,7 +47,7 @@ For a more detailed description on loading DICOM images, look {{< docuLinks "/Re
 
 ### The Output-Inspector and the Module Inspector {#The_Output_Inspector_and_the_Module_Inspector}
 
-To inspect and visualize the loaded data, we can use the Output Inspector located in the {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch04s09.html" "Views" >}} area. You can already interact with the image using the Mouse wheel {{< mousebutton "middle" >}} and Mouse Buttons {{< mousebutton "left" >}} / {{< mousebutton "right" >}}. To preview the image, click on the triangle on the top side of the Module `ImageLoad`, which offers the Modules output. All Module outputs can be found at the top side of the respective Module. 
+To inspect and visualize the loaded data, we can use the Output Inspector located in the {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch04s09.html" "Views" >}} area. You can already interact with the image using the Mouse wheel {{< mousebutton "middle" >}} and Mouse Buttons {{< mousebutton "left" >}} / {{< mousebutton "right" >}}. To preview the image, click on the triangle on the top side of the Module `ImageLoad`, which offers the modules output. All Module outputs can be found at the top side of the respective Module. 
 
 You can now inspect your image in 2D:
 
@@ -98,7 +98,7 @@ Although the connection is established, no image rendering has started yet. To i
 
 By dragging the connection away from either the input or the output connector, the connection is interrupted.
 
-Connections between compatible outputs and inputs are established automatically if two Modules get close enough to each other.
+Connections between compatible outputs and inputs are established automatically if two modules get close enough to each other.
 
 {{<alert class="info" caption="Extra Infos">}}
 Connecting, Disconnecting, Moving and Replacing Connections is furtherly explained {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s04.html" "here" >}}
@@ -175,7 +175,7 @@ If you'd like to know more about specific modules, search for help. You can do t
 
 To be able to better distinguish the image processing pipeline, you can encapsulate it in a group: Select the three modules, for example by dragging a selection rectangle around them. Then right-click the selection to open the context menu and select {{< menuitem "Add to New Group" >}}.
 
-![Add Modules to new Group](/images/tutorials/basicmechanics/BM_19.png "Add to new Group")
+![Add modules to new Group](/images/tutorials/basicmechanics/BM_19.png "Add to new Group")
 
 Enter a name for the new group, for example *Filter*. The new group is created and displayed as a green rectangle. The group allows for quick interactions with all its modules.
 
@@ -218,12 +218,12 @@ More information on Macro modules can be found {{< docuLinks "/Resources/Documen
 [//]: <> (MVL-651)
 
 ## Summary
-* MeVisLab provides pre-defined Modules you can re-use and connect for building more or less complex networks.
+* MeVisLab provides pre-defined modules you can re-use and connect for building more or less complex networks.
 * Each Module output can be previewed by using the Output Inspector.
 * Each Module provides Example Networks to explain their usage.
 * Parameters of each Module can be changed in the Module Inspector or Automatic Panel of the Module.
 * Parameter connections can be established to synchronize the values of these parameters.
-* Modules can be clustered. Clustered Modules can be encapsulated into local or global Macro modules.
+* Modules can be clustered. Clustered modules can be encapsulated into local or global Macro modules.
 * Macro modules encapsulate networks. Internal networks can be shown and modified. Any changes of the internal network are applied to the Macro module.
 
 {{< networkfile "examples/basic_mechanisms/contour_filter/ContourFilter.zip" >}}
