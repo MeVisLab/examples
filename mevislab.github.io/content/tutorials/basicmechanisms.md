@@ -195,16 +195,16 @@ More information on module groups can be found {{< docuLinks "/Resources/Documen
 
 You have probably already noticed how the modules differ in color. Each color represents another type of module:
   
-  * The blue modules are called MLmodules, they process voxel images. 
-  * Green modules are OpenInventor-modules, they enable visual 3D scene graphs. 
-  * The brown modules are called Macro modules. Macro modules encapsulate a whole network in a single module. 
+  * The blue modules are called ML modules, they process voxel images. 
+  * Green modules are OpenInventor modules, they enable visual 3D scene graphs. 
+  * The brown modules are called macro modules. Macro modules encapsulate a whole network in a single module. 
   
-To condense our filter into one single module, we will now be creating a Macro module out of it. To do that, right-click on the group-title and select *Convert To Local Macro*. Name your new Macro module and finish. You just created a local Macro module. Local Macro modules can only be used in the network they were created in.
+To condense our filter into one single module, we will now be creating a macro module out of it. To do that, right-click on the group-title and select *Convert To Local Macro*. Name your new macro module and finish. You just created a local macro module. Local macro modules can only be used in the network they were created in.
 
 ![Convert to Local Macro](/images/tutorials/basicmechanics/BM_21.png "Convert to Local Macro")
 ![Your first Local Macro](/images/tutorials/basicmechanics/BM_22.png "Your first Local Macro")
 
-Right-click the Macro module and select *Show Internal Network* to inspect and change the internal network. You can change the properties of the new Macro module by changing the properties in the internal network. You can, for example, right-click the module `Convolution` and change the kernel. These changes will be preserved.
+Right-click the macro module and select *Show Internal Network* to inspect and change the internal network. You can change the properties of the new macro module by changing the properties in the internal network. You can, for example, right-click the module `Convolution` and change the kernel. These changes will be preserved.
 
 ![Internal Network of your Local Macro](/images/tutorials/basicmechanics/BM_23.png "Internal Network of your local Macro")
 
@@ -212,18 +212,18 @@ Right-click the Macro module and select *Show Internal Network* to inspect and c
 
 {{<alert class="info" caption="Extra Infos">}}
 Module handling is explained {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s09.html" "here" >}}
-More information on Macro modules can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch09.html" "here" >}}
+More information on macro modules can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch09.html" "here" >}}
 {{</alert>}}
 
 [//]: <> (MVL-651)
 
 ## Summary
 * MeVisLab provides pre-defined modules you can re-use and connect for building more or less complex networks.
-* Each Module output can be previewed by using the Output Inspector.
-* Each Module provides Example Networks to explain their usage.
-* Parameters of each Module can be changed in the Module Inspector or Automatic Panel of the Module.
+* Each modules output can be previewed by using the Output Inspector.
+* Each module provides example networks to explain their usage.
+* Parameters of each module can be changed in the Module Inspector or Automatic Panel of the module.
 * Parameter connections can be established to synchronize the values of these parameters.
-* Modules can be clustered. Clustered modules can be encapsulated into local or global Macro modules.
-* Macro modules encapsulate networks. Internal networks can be shown and modified. Any changes of the internal network are applied to the Macro module.
+* Modules can be clustered. Clustered modules can be encapsulated into local or global macro modules.
+* Macro modules encapsulate networks. Internal networks can be shown and modified. Any changes of the internal network are applied to the macro module.
 
 {{< networkfile "examples/basic_mechanisms/contour_filter/ContourFilter.zip" >}}
