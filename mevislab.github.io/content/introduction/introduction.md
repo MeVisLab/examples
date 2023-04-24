@@ -92,7 +92,7 @@ Here a list of the most important file types:
 {{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:230px">Extension</div> | Description |
 | --- | --- |
-| `.mlab` | Network file, includes all information about the network\'s modules, their settings, their connections, and module groups. Networks developed by using the `MeVisLab SDK` are stored as `.mlab` file and can only be opened having a valid SDK license. |
+| `.mlab` | Network file, includes all information about the networks modules, their settings, their connections, and module groups. Networks developed by using the `MeVisLab SDK` are stored as `.mlab` file and can only be opened having a valid SDK license. |
 | `.def` | Module definition file, necessary for a module to be added to the common MeVisLab module database. May also include all MDL script parts (if they are not sourced out to the `.script` file). |
 | `.script` | `MDL` script file, typically includes the user interface definition for panels. See [Chapter GUI Development](./tutorials/basicmechanisms/macromodules/guidesign#Example_Paneldesign "GUI Development") for an example on GUI programming. |
 | `.mlimage` | MeVisLab internal image format for 6D images saved with all DICOM tags, lossless compression, and in all data types. |
