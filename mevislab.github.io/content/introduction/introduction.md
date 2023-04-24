@@ -8,7 +8,7 @@ tags: ["Tutorial", "Introduction", "Glossary", "Modules", "ML Module", "Filetype
 menu: 
   main:
     identifier: "tutorial_introduction"
-    title: "Overview of MeVisLab Tutorials and general information about User Interface, Modules, types of Modules, searching for Modules and Glossary including filetypes."
+    title: "Overview of MeVisLab Tutorials and general information about User Interface, modules, types of modules, searching for modules and Glossary including filetypes."
     weight: 310
     parent: "tutorials"
 ---
@@ -69,12 +69,12 @@ First, start MeVisLab IDE. After the Welcome Screen, the standard user interface
 
 By default, MeVisLab starts with an empty workspace. The workspace is
 the place for developing and editing Networks via visual programming.
-Networks of Modules form the basis for all processing and visualization
+Networks of modules form the basis for all processing and visualization
 pipelines.
 
 #### Views Area
 
-The standard Views Area contains the [Output Inspector and the Module Inspector](./tutorials/basicmechanisms#The_Output_Inspector_and_the_Module_Inspector "Output Inspector and the Module Inspector"). With the help of the Output Inspector, you can visualize the Module output.
+The standard Views Area contains the [Output Inspector and Module Inspector](./tutorials/basicmechanisms#The_Output_Inspector_and_the_Module_Inspector "Output Inspector and Module Inspector"). With the help of the Output Inspector, you can visualize the modules output.
 
 Further information of each module, like information about module parameters, can be found using the module Inspector.
 
@@ -120,12 +120,12 @@ distinguished by their colors:
 
 If a module is invalid, it is displayed in bright red. This might happen if the module itself is not available on your system.
 
-### Invalid Modules
+### Invalid modules
 
 {{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:330px">Appearance</div> | Explanation |
 | --- | --- |
-| ![Invalid Module](/images/tutorials/introduction/MLMModuleStateInvalid.png "Invalid Module") | Invalid module |
+| ![Invalid module](/images/tutorials/introduction/MLMModuleStateInvalid.png "Invalid module") | Invalid module |
   ![Macro State Invalid](/images/tutorials/introduction/MLMModuleStateMacroInvalidModule.png "Macro State Invalid") | Macro containing an invalid module |
 {{< /bootstrap-table >}}
 

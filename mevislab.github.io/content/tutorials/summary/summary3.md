@@ -342,7 +342,7 @@ Commands {
 ```
 {{</highlight>}}
 
-Right-click {{< mousebutton "right" >}} the command and select {{< menuitem "Create Python Function 'viewSelectionChanged'" >}}. MATE automatically opens the Python file of your Macro module and creates a function *viewSelectionChanged*.
+Right-click {{< mousebutton "right" >}} the command select {{< menuitem "Create Python Function 'viewSelectionChanged'" >}}. MATE automatically opens the Python file of your Macro module and creates a function *viewSelectionChanged*.
 
 {{< highlight filename="<MACRO_NAME>.py" >}}
 ```Python

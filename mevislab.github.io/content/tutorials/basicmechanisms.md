@@ -28,11 +28,11 @@ Additional information on the basics of MeVisLab are explained {{< docuLinks "/R
  
 First, we need to load the data we would like to work on, e.g. a CT scan. In MeVisLab, modules are used to perform their associated specific task, they are the basic entities you will be working with. Each module has a different functionality for processing, visualization and interaction. Connecting modules enables the development of complex processing pipelines. You will get to know different types of modules throughout the course of this tutorial.
 
-Starting off, we will add the module `ImageLoad` to our network to load our data. The module can be found typing its name into the search bar on the top-right corner an is added to your network by clicking it.
+Starting off, we will add the module `ImageLoad` to our network to load our data. The module can be found by typing its name into the search bar on the top-right corner and is added to your network by clicking it.
 
 ![Search for ImageLoad](/images/tutorials/basicmechanics/BM_01.png "Search for ImageLoad")
 
-Next, we select and load the data we´d like to process. Double-click the Module `ImageLoad` to open its Panel. You can browse through your folders to select the data you´d like to open. Example data can be found in the MeVisLab DemoData directory *$(InstallDir)/Packages/MeVisLab/Resources/DemoData* located in the MeVisLab installation path. Select a file, for example a MRI scan of a shoulder *Shoulder_Fracture.tif*. The image is loaded immediately and basic information of the loaded image can be seen in the Panel.
+Next, we select and load the data we´d like to process. Double-click the Module `ImageLoad` to open its Panel. You can browse through your folders to select the data you´d like to open. Example data can be found in the MeVisLab DemoData directory *$(InstallDir)/Packages/MeVisLab/Resources/DemoData* located in the MeVisLab installation path. Select a file, for example an MRI scan of a shoulder *Shoulder_Fracture.tif*. The image is loaded immediately and basic information of the loaded image can be seen in the Panel.
 
 {{<alert class="info" caption="Extra Infos">}}
 There also are Modules to load multiple other formats of data. These are the most common ones:
@@ -47,7 +47,7 @@ For a more detailed description on loading DICOM images, look {{< docuLinks "/Re
 
 ### The Output-Inspector and the Module Inspector {#The_Output_Inspector_and_the_Module_Inspector}
 
-To inspect and visualize the loaded data, we can use the Output Inspector located in the {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch04s09.html" "Views" >}} area. You can already interact with the image using the Mouse-Wheel {{< mousebutton "middle" >}} and Mouse Buttons {{< mousebutton "left" >}} / {{< mousebutton "right" >}}. To preview the image, click on the triangle on the top side of the Module `ImageLoad`, which offers the Modules output. All Module outputs can be found at the top side of the respective Module. 
+To inspect and visualize the loaded data, we can use the Output Inspector located in the {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch04s09.html" "Views" >}} area. You can already interact with the image using the Mouse wheel {{< mousebutton "middle" >}} and Mouse Buttons {{< mousebutton "left" >}} / {{< mousebutton "right" >}}. To preview the image, click on the triangle on the top side of the Module `ImageLoad`, which offers the Modules output. All Module outputs can be found at the top side of the respective Module. 
 
 You can now inspect your image in 2D:
 
@@ -68,7 +68,7 @@ You are not restricted to 2D. The Output Inspector offers a 3D View of most load
 * F = feet
 {{</alert>}}
 
-Below the Output Inspector, you´ll find the Module Inspector. The Module Inspector displays properties and parameters of the selected Module. Parameters are stored in so called **Fields**. Using the Module Inspector you can examine different fields of your `ImageLoad`-Module. The module has, for example, the fields *filename* (the path, the loaded image is stored in), as well as *sizeX*, *sizeY* and *sizeZ* (the size of the loaded image).
+Below the Output Inspector, you´ll find the Module Inspector. The Module Inspector displays properties and parameters of the selected Module. Parameters are stored in so called **Fields**. Using the Module Inspector you can examine different fields of your `ImageLoad`module. The module has, for example, the fields *filename* (the path, the loaded image is stored in), as well as *sizeX*, *sizeY* and *sizeZ* (the size of the loaded image).
 
 ![Module Inspector](/images/tutorials/basicmechanics/BM_04.png "Module Inspector")
 
@@ -80,7 +80,7 @@ The module `View2D` has one input connector for voxel images (triangle-shaped) 
 
 ![2D Viewer](/images/tutorials/basicmechanics/BM_05.png "2D Viewer")
 
-You can now display the loaded image in the newly added viewer-module by connecting the output of the module `ImageLoad` to the input connector of the module `View2D`. Follow these steps to do so:
+You can now display the loaded image in the newly added viewer module by connecting the output of the module `ImageLoad` to the input connector of the module `View2D`. Follow these steps to do so:
 
 1.  Click the output connector of `ImageLoad`.
 
@@ -88,7 +88,7 @@ You can now display the loaded image in the newly added viewer-module by connect
 
 3.  Check if the connection is well-defined (green line).
 
-4.  Release the mouse button on the input connector of your 'View2D'-module to establish the connection. 
+4.  Release the mouse button on the input connector of your `View2D`-module to establish the connection. 
 
 ![Establish connection](/images/tutorials/basicmechanics/BM_06.png "Establish connection")
 
@@ -108,19 +108,19 @@ Connecting, Disconnecting, Moving and Replacing Connections is furtherly explain
 
 ### Image Processing {#TutorialImageProcessing}
 
-An average kernel will be used to smooth the image out as our next step will be to actually process our image. Add the `Convolution`-Module to your workspace and disconnect the 'View2D'-Module from the 'ImageLoad'-Module by clicking on the connection and pressing {{< keyboard "DEL" >}}. Now, you can build new connections from the module `ImageLoad` to the module `Convolution` and the 'Convolution'-Module to `View2D`.
+An average kernel will be used to smooth the image out as our next step will be to actually process our image. Add the `Convolution`module to your workspace and disconnect the `View2D`module from the 'ImageLoad'module by clicking on the connection and pressing {{< keyboard "DEL" >}}. Now, you can build new connections from the module `ImageLoad` to the module `Convolution` and the `Convolution`module to `View2D`.
 
 ![Convolution Module](/images/tutorials/basicmechanics/BM_08.png "Convolution Module")
 
-Open the panel of the 'Convolution'-Module by double-clicking it. The panel allows configuration of the module. You can adjust parameters or select a kernel. We will be using the *3x3 Avarage Kernel* for now.
+Open the panel of the `Convolution`module by double-clicking it. The panel allows configuration of the module. You can adjust parameters or select a kernel. We will be using the *3x3 Avarage Kernel* for now.
 
 ![Select a Kernel](/images/tutorials/basicmechanics/BM_09.png "Select a Kernel")
 
 The module `View2D` is now displaying the smoothed image.
 
-To compare the processed and unprocessed image, click on the output connector of the module `ImageLoad` to display the original image in the Output Inspector. The Output Inspectors greatest advantage is, that it's able to display the output of any connector in the process chain (as long as an intrepretable format is used). Simply click the connector or connection to find out more about the modules output.
+To compare the processed and unprocessed image, click on the output connector of the module `ImageLoad` to display the original image in the Output Inspector. The Output Inspectors greatest advantage is, that it's able to display the output of any connector in the process chain (as long as an interpretable format is used). Simply click the connector or connection to find out more about the modules output.
 
-You can also inspect changes between a processed and unprocessed image by adding a second or even third viewer (to make it gradient) to your network. We will be using a second 'View2D'-module. Notice how the second Viewer is numbered for you to be able to distinguish them better. It might be important to know at this point, that numerous connections can be established from one output-connector but an input-connector can only receive one stream of data. Please connect the module `ImageLoad` to the second viewer to display the images twice. You can now scroll through the slices of both viewers and inspect the images.
+You can also inspect changes between a processed and unprocessed image by adding a second or even third viewer (to make it gradient) to your network. We will be using a second `View2D`-module. Notice how the second Viewer is numbered for you to be able to distinguish them better. It might be important to know at this point, that numerous connections can be established from one output-connector but an input-connector can only receive one stream of data. Please connect the module `ImageLoad` to the second viewer to display the images twice. You can now scroll through the slices of both viewers and inspect the images.
 
 ![Multiple Viewers](/images/tutorials/basicmechanics/BM_10.png "Multiple Viewers")
 
@@ -195,7 +195,7 @@ More information on module groups can be found {{< docuLinks "/Resources/Documen
 
 You have probably already noticed how the modules differ in color. Each color represents another type of module:
   
-  * The blue modules are called ML-Modules, they process voxel images. 
+  * The blue modules are called MLmodules, they process voxel images. 
   * Green modules are OpenInventor-modules, they enable visual 3D scene graphs. 
   * The brown modules are called Macro modules. Macro modules encapsulate a whole network in a single module. 
   
