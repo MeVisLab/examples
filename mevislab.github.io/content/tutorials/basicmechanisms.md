@@ -108,7 +108,7 @@ Connecting, Disconnecting, Moving and Replacing Connections is furtherly explain
 
 ### Image Processing {#TutorialImageProcessing}
 
-An average kernel will be used to smooth the image out as our next step will be to actually process our image. Add the `Convolution`module to your workspace and disconnect the `View2D`module from the 'ImageLoad'module by clicking on the connection and pressing {{< keyboard "DEL" >}}. Now, you can build new connections from the module `ImageLoad` to the module `Convolution` and the `Convolution`module to `View2D`.
+An average kernel will be used to smooth the image out as our next step will be to actually process our image. Add the `Convolution`module to your workspace and disconnect the `View2D`module from the `ImageLoad`module by clicking on the connection and pressing {{< keyboard "DEL" >}}. Now, you can build new connections from the module `ImageLoad` to the module `Convolution` and the `Convolution`module to `View2D`.
 
 ![Convolution Module](/images/tutorials/basicmechanics/BM_08.png "Convolution Module")
 
@@ -130,7 +130,7 @@ You´re now able to scroll through the slices of the image in two separate windo
 
 We already know data connections between module inputs and outputs. Besides module connections, it is also possible to connect the fields within the panels of the modules via parameter connection. The values of connected fields are synchronized, which means that the changing value of one field will be adapted to all other connected fields.
 
-In order to practise establishing parameter connections, add the 'SyncFloat' module to your workspace.
+In order to practise establishing parameter connections, add the ´SyncFloat´ module to your workspace.
 
 ![SyncFloat Module](/images/tutorials/basicmechanics/BM_11.png "SyncFloat Module")
 
@@ -165,7 +165,7 @@ It is also possible to use the pre-defined module 'SynchroView2D' to accomplish 
 
 ### Grouping Modules {#TutorialGroupingModules}
 
-A contour-filter can be created based on our previously created network. To finalize the filter, add the modules `Arithmetic2` and `Morphology` to your workspace and connect the modules as shown below. Double-click the module `Arithmetic2` to open its panel. Change the field *Function* of the module `Arithmetic2` to use the function *subtract* in the panel of the module. The contour filter is done now. You can inspect each processing step using the Output Inspector by clicking on the input and output connectors of the respective modules. The final results can be displayed using the viewer modules. If necessary, adjust the contrast by pressing the right-key and moving the cursor.
+A contour filter can be created based on our previously created network. To finalize the filter, add the modules `Arithmetic2` and `Morphology` to your workspace and connect the modules as shown below. Double-click the module `Arithmetic2` to open its panel. Change the field *Function* of the module `Arithmetic2` to use the function *subtract* in the panel of the module. The contour filter is done now. You can inspect each processing step using the Output Inspector by clicking on the input and output connectors of the respective modules. The final results can be displayed using the viewer modules. If necessary, adjust the contrast by pressing the right-key and moving the cursor.
 
 ![Grouping Modules](/images/tutorials/basicmechanics/BM_17.png "Grouping Modules")
 
