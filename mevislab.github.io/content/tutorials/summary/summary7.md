@@ -48,4 +48,4 @@ The new installed application now provides your new UI element for defining the 
 
 ## Summary
 * Updates of your application installer can be applied by using the MeVisLab ToolRunner
-* The executable can be updated on your customers system(s) and your changes on the Macro Module and network(s) are applied
+* The executable can be updated on your customers system(s) and your changes on the Macro module and network(s) are applied

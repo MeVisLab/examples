@@ -1,55 +1,55 @@
 ---
-title: "Step 2: Prototyping - Create a Macro Module"
+title: "Step 2: Prototyping - Create a Macro module"
 date: "2023-01-16"
 status: "open"
 draft: false
 weight: 810
-tags: ["Advanced", "Tutorial", "Prototyping", "Macro Modules"]
+tags: ["Advanced", "Tutorial", "Prototyping", "Macro modules"]
 menu: 
   main:
     identifier: "summaryexample2"
-    title: "Create a Macro Module from your network."
+    title: "Create a Macro module from your network."
     weight: 810
     parent: "summary"
 ---
-# Step 2: Prototyping - Create a Macro Module
+# Step 2: Prototyping - Create a Macro module
 ## Introduction
-In this example, we encapsulate the previously developed prototype network into a Macro Module for future application development and automated testing.
+In this example, we encapsulate the previously developed prototype network into a Macro module for future application development and automated testing.
 
 ## Steps to do
 Make sure to have your *.mlab file from previous [Step 1](/tutorials/summary/summary1/) available.
 
 ### Package creation
-Packages are described in detail in [Example 2.1: Package creation](/tutorials/basicmechanisms/macromodules/package/). If you already have your own package, you can skip this part and continue creating a Macro Module.
+Packages are described in detail in [Example 2.1: Package creation](/tutorials/basicmechanisms/macromodules/package/). If you already have your own package, you can skip this part and continue creating a Macro module.
 
 Open Project Wizard via {{< menuitem "File" "Run Project Wizard..." >}} and select *New Package*. Run the Wizard and enter details of your new package and click *Create*.
 
 ![Package wizard](/images/tutorials/summary/Example2_1.png "Package wizard")
 
-MeVisLab reloads and you can start creating your Macro Module.
+MeVisLab reloads and you can start creating your Macro module.
 
-### Create a Macro Module
-Open Project Wizard via {{< menuitem "File" "Run Project Wizard..." >}} and select *Macro Module*. Run the Wizard and enter details of your new Macro Module. 
+### Create a Macro module
+Open Project Wizard via {{< menuitem "File" "Run Project Wizard..." >}} and select *Macro module*. Run the Wizard and enter details of your new Macro module. 
 
-![Macro Module wizard](/images/tutorials/summary/Example2_2.png "Macro Module wizard")
+![Macro module wizard](/images/tutorials/summary/Example2_2.png "Macro module wizard")
 
 Select the created package and click *Next*.
 
-![Macro Module wizard](/images/tutorials/summary/Example2_3.png "Macro Module wizard")
+![Macro module wizard](/images/tutorials/summary/Example2_3.png "Macro module wizard")
 
 Select your \*.mlab file from [Step 1](/tutorials/summary/summary1/) and check *Add Python file*. Click *Next*.
 
-![Macro Module wizard](/images/tutorials/summary/Example2_4.png "Macro Module wizard")
+![Macro module wizard](/images/tutorials/summary/Example2_4.png "Macro module wizard")
 
-You do not have to define fields of your Macro Module now, we will do that later. Click *Create*. The Windows Explorer opens showing the directory of your Macro Module. It should be the same directory you selected for your Package.
+You do not have to define fields of your Macro module now, we will do that later. Click *Create*. The Windows Explorer opens showing the directory of your Macro module. It should be the same directory you selected for your Package.
 
-### Directory Structure of a Macro Module
-The directory structure for a Macro Module is as follows:
+### Directory Structure of a Macro module
+The directory structure for a Macro module is as follows:
 * From Package Wizard:
   * Package target directory is the root directory of the module
   * The next directory is the package group and package name
-* From Macro Module Wizard:
-  * The name of the Macro Module defines the directory containing all files of your module
+* From Macro module Wizard:
+  * The name of the Macro module defines the directory containing all files of your module
   * An additional directory *Modules* is created containing the following files:
     * <MACRO_NAME>.def
     * <MACRO_NAME>.mlab
@@ -59,14 +59,14 @@ The directory structure for a Macro Module is as follows:
 ![Directory Structure](/images/tutorials/summary/Example2_6.png "Directory Structure")
 
 #### Definition (\*.def) file
-The initial \*.def file contains information you entered into the Wizard for the Macro Module.
+The initial \*.def file contains information you entered into the Wizard for the Macro module.
 
 {{< highlight filename="<MACRO_NAME>.def" >}}
 ```Stan
 MacroModule TutorialSummary {
   genre              = "VisualizationMain"
   author             = "MeVis Medical Solutions AG"
-  comment            = "Macro Module for MeVisLab Tutorials"
+  comment            = "Macro module for MeVisLab Tutorials"
   keywords           = "2D 3D RegionGrowing"
   seeAlso            = ""
    
@@ -90,7 +90,7 @@ from mevis import *
 {{</highlight>}}
 
 #### Script (\*.script) file
-The script (\*.script) file defines fields accessible from outside the Macro Module, inputs and outputs and allows you to develop a User Interface for your prototype and your final application.
+The script (\*.script) file defines fields accessible from outside the Macro module, inputs and outputs and allows you to develop a User Interface for your prototype and your final application.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -109,7 +109,7 @@ Commands {
 
 The source also defines your Python file to be used when calling functions and events from the User Interface.
 
-### Using your Macro Module
+### Using your Macro module
 As you created a global macro Module, you can search for it in the MeVisLab *Module Search*.
 
 ![Module Search](/images/tutorials/summary/Example2_7.png "Module Search")
@@ -121,7 +121,7 @@ We did not define inputs or outputs. You cannot connect your module to others. I
 Right-click on your module allows you to open the internal network as developed in [Step 1](/tutorials/summary/summary1/).
 
 ## Summary
-* Macro Modules encapsulate an entire MeVisLab network including all modules.
+* Macro modules encapsulate an entire MeVisLab network including all modules.
 * The internal network can be shown (and edited) via right-click {{< mousebutton "right" >}} {{< menuitem "Show Internal Network" >}}
 * The Wizard already creates the necessary folder structure and generates files for User Interface and Python development.
 

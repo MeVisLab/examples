@@ -22,8 +22,8 @@ Your customer requests an additional requirement to define the transparency of y
 * **Requirement 5.2**: It shall be possible to define the alpha value of the overlay
 
 ## Steps to do
-### Adapt your Macro Module
-Use the module search to add your Macro Module to your workspace. We need an additional UI element for setting the alpha value of the overlay.
+### Adapt your Macro module
+Use the module search to add your Macro module to your workspace. We need an additional UI element for setting the alpha value of the overlay.
 
 Right-click {{< mousebutton "right" >}} your module and select {{< menuitem "Related Files" "<MACRO_NAME>.script" >}}.
 
@@ -65,7 +65,7 @@ You can also update your Python files for new or updated requirements. In this e
 If you want to write an additional Python test case, you can also do that.
 
 ## Summary
-* Your application can be updated by modifying the Macro Module and/or internal network of your application
+* Your application can be updated by modifying the Macro module and/or internal network of your application
 * Any changes will be applied to your installable executable in the next step
 
 {{< networkfile "examples/summary/TutorialSummaryUpdated.zip" >}}

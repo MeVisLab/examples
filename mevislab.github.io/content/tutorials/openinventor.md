@@ -16,7 +16,7 @@ menu:
 # Open Inventor Modules {#TutorialOpenInventorModules}
 ## Introduction
 
-Besides blue modules (ML Modules) and brown macro modules, there is a third type of modules, called Open Inventor modules. These modules are green and start with the letters `So\*` (for Scene Objects). Open Inventor Modules process and render 3D scene objects and enable image interactions. Scene objects are transmitted via round input and output connectors. With the help of these modules, Open Inventor scenes can be implemented.
+Besides blue modules (ML Modules) and brown Macro modules, there is a third type of modules, called Open Inventor modules. These modules are green and start with the letters `So\*` (for Scene Objects). Open Inventor Modules process and render 3D scene objects and enable image interactions. Scene objects are transmitted via round input and output connectors. With the help of these modules, Open Inventor scenes can be implemented.
 
 This chapter will start with an example Open Inventor scene. Explanations to Open Inventor scenes will follow the example.
 

@@ -14,10 +14,10 @@ menu:
 ---
 # Step 5: Review - Installer creation
 ## Introduction
-Your Macro Module has been tested manually and/or automatically? Then you should create your first installable executable and deliver it to your customer(s) for final evaluation.
+Your Macro module has been tested manually and/or automatically? Then you should create your first installable executable and deliver it to your customer(s) for final evaluation.
 
 {{<alert class="warning" caption="Licensing">}}
-This step requires a valid **MeVisLab ApplicationBuilder** license. It extends the **MeVisLab SDK** so that you can generate an installer of your developed Macro Module.
+This step requires a valid **MeVisLab ApplicationBuilder** license. It extends the **MeVisLab SDK** so that you can generate an installer of your developed Macro module.
 Free evaluation licenses of the **MeVisLab ApplicationBuilder**, time-limited to 3 months, can be requested at [sales(at)mevislab.de](mailto://sales@mevislab.de).
 {{</alert>}}
 
@@ -38,7 +38,7 @@ Download and install/extract *NSIS* and *Dependency Walker* or *Dependencies*. A
 Restart MeVisLab and open Project Wizard again. All required tools should now be available.
 
 ### Use MeVisLab Project Wizard to generate the installer
-Select your Macro Module and the package and click *Next*.
+Select your Macro module and the package and click *Next*.
 
 ![Welcome](/images/tutorials/summary/Example5_3.png "Welcome")
 

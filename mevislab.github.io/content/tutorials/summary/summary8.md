@@ -14,7 +14,7 @@ menu:
 ---
 # Extra: Run your application in Browser
 ## Introduction
-This step explains how to run your developed application in a browser. The MeVisLab network remains the same, only some adaptations are necessary for running any Macro Module in a browser window.
+This step explains how to run your developed application in a browser. The MeVisLab network remains the same, only some adaptations are necessary for running any Macro module in a browser window.
 
 {{<alert class="warning" caption="Licensing">}}
 This step requires a valid **MeVisLab Webtoolkit** license. It extends the **MeVisLab SDK** so that you can develop web macro modules.
@@ -24,25 +24,25 @@ Free evaluation licenses of the **MeVisLab Webtoolkit**, time-limited to 3 month
 ## Steps to do
 Make sure to have your macro module from previous [Step 2](/tutorials/summary/summary2/) available.
 
-### Create a Web Macro Module
-Open Project Wizard via {{< menuitem "File" "Run Project Wizard..." >}} and select *Web Macro Module*. Run the Wizard and enter details of your new Macro Module.
+### Create a Web Macro module
+Open Project Wizard via {{< menuitem "File" "Run Project Wizard..." >}} and select *Web Macro module*. Run the Wizard and enter details of your new Macro module.
 
-![Web Macro Module wizard](/images/tutorials/summary/Example8_1.png "Web Macro Module wizard")
+![Web Macro module wizard](/images/tutorials/summary/Example8_1.png "Web Macro module wizard")
 
 Run the wizard and enter details of your web macro module.
 
-![Web Macro Module properties](/images/tutorials/summary/Example8_2.png "Web Macro Module properties")
+![Web Macro module properties](/images/tutorials/summary/Example8_2.png "Web Macro module properties")
 
 Click *Next* and select optional web plugin features. Click *Create*.
 
-![Web Macro Module](/images/tutorials/summary/Example8_3.png "Web Macro Module")
+![Web Macro module](/images/tutorials/summary/Example8_3.png "Web Macro module")
 
 The folder of your project automatically opens in explorer window.
 
-### Using your Web Macro Module
+### Using your Web Macro module
 As you created a global web macro Module, you can search for it in the MeVisLab *Module Search*. In case the module cannot be found, select {{< menuitem "Extras" "Reload Module Database (Clear Cache)" >}}.
 
-![Web Macro Module](/images/tutorials/summary/Example8_4.png "Web Macro Module")
+![Web Macro module](/images/tutorials/summary/Example8_4.png "Web Macro module")
 
 The internal network of your module is empty. We will re-use the internal network of your macro module developed in [Step 2](/tutorials/summary/summary2/).
 
@@ -62,7 +62,7 @@ We are using the hidden outputs of the `View2D` and the `SoExaminerViewer`. You 
 #### Develop the user interface
 Make sure to have both macro modules visible in MeVisLab SDK, we are re-using the *\*.script* and *\*.py* files developed in [Step 3](/tutorials/summary/summary3/).
 
-![Macro Modules](/images/tutorials/summary/Example8_6.png "Macro Modules")
+![Macro modules](/images/tutorials/summary/Example8_6.png "Macro modules")
 
 Right-click {{< mousebutton "right" >}} the module *TutorialSummaryBrowser* and select {{< menuitem "Related Files" "TutorialSummaryBrowser.script" >}}.
 
@@ -158,11 +158,11 @@ Interface {
 
 Reloading your web macro in MeVisLab SDK now shows the same outputs as the original macro module. The only difference is the type of your output. It changed from MLImage and Inventor Scene to MLBase from your `RemoteRendering` modules.
 
-![Macro Modules](/images/tutorials/summary/Example8_7.png "Macro Modules")
+![Macro modules](/images/tutorials/summary/Example8_7.png "Macro modules")
 
 The internal network of your web macro should look like this:
 
-![Macro Modules](/images/tutorials/summary/Example8_8.png "Macro Modules")
+![Macro modules](/images/tutorials/summary/Example8_8.png "Macro modules")
 
 You can emulate the final viewer by adding a `RemoteRenderingClient` module to the outputs of your web macro.
 

@@ -4,7 +4,7 @@ date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
 weight: 440
-tags: ["Advanced", "Tutorial", "Macro", "Macro Modules", "Global Macro", "Python", "Scripting"]
+tags: ["Advanced", "Tutorial", "Macro", "Macro modules", "Global Macro", "Python", "Scripting"]
 menu: 
   main:
     identifier: "scriptingexample2"
@@ -18,13 +18,13 @@ menu:
 
 ## Introduction
 
-In this example, you will learn how to add Python scripting to your User Interface. The network used in [Chapter V](tutorials/dataobjects/contours/contourexample5/) will be used for creating the Macro Module.
+In this example, you will learn how to add Python scripting to your User Interface. The network used in [Chapter V](tutorials/dataobjects/contours/contourexample5/) will be used for creating the Macro module.
 
 ## Steps to do
 ### Creating the macro module
 First, we condense the example network into a macro module and then we create a panel for that module. To create a macro module use the
 Project Wizard, which you find under {{< menuitem "File" "Run Project Wizard" >}}. Select
-*Macro Module* and press *Run*.
+*Macro module* and press *Run*.
 
 Now, you have to edit:
 1.  Name: The name of your module

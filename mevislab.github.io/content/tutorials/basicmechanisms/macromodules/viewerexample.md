@@ -4,7 +4,7 @@ date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
 weight: 445
-tags: ["Advanced", "Tutorial", "Macro", "Macro Modules", "Global Macro", "Python", "Scripting"]
+tags: ["Advanced", "Tutorial", "Macro", "Macro modules", "Global Macro", "Python", "Scripting"]
 menu: 
   main:
     identifier: "viewerexample"
@@ -14,7 +14,7 @@ menu:
 ---
 # Example 3: Creating a simple application
 ## Introduction
-In the previous examples, you already learned how to create Macro Modules, user interfaces and how to interact with your UI via Python scripting.
+In the previous examples, you already learned how to create Macro modules, user interfaces and how to interact with your UI via Python scripting.
 
 In this example, you will learn how to create a simple Prototype application in MeVisLab including a User Interface with 2D and 3D viewer. You will learn how to implement field listeners and react on events.
 
@@ -33,14 +33,14 @@ Opening your viewers should now show the images in 2D and 3D.
 ### Save your network
 Now, save your network as *\*.mlab* file and remember the location.
 
-### Create a Macro Module
-Open the Project Wizard via {{< menuitem "File" "Run Project Wizard" >}} and run Wizard for a *Macro Module*. Name your module *MyViewerApplication*, enter your details and click *Next >*.
+### Create a Macro module
+Open the Project Wizard via {{< menuitem "File" "Run Project Wizard" >}} and run Wizard for a *Macro module*. Name your module *MyViewerApplication*, enter your details and click *Next >*.
 
 ![Module Properties](images/tutorials/basicmechanics/SimpleApp_03.png "Module Properties")
 
 On the next screen, make sure to add a Python file and use the existing network you previously saved. Click *Next >*.
 
-![Macro Module Properties](images/tutorials/basicmechanics/SimpleApp_04.png "Macro Module Properties")
+![Macro module Properties](images/tutorials/basicmechanics/SimpleApp_04.png "Macro module Properties")
 
 You can leave all fields empty for now and just click *Create*.
 
@@ -53,7 +53,7 @@ MeVisLab reloads its internal database and you can open a new Tab. Search for yo
 In case you double-click {{< mousebutton "left" >}} your module now, you will see the *Automatic Panel* only showing the name of your module, because we did not add any own *Window* until now.
 
 ### Develop your User Interface
-Before adding your own UI, open internal network of your Macro Module via right-click {{< mousebutton "right" >}} and {{< menuitem "Show Internal Network" >}}. Open the panel of your `ImageLoad` module and set filename to an empty string (clear). This is necessary for later.
+Before adding your own UI, open internal network of your Macro module via right-click {{< mousebutton "right" >}} and {{< menuitem "Show Internal Network" >}}. Open the panel of your `ImageLoad` module and set filename to an empty string (clear). This is necessary for later.
 
 Now, right-click on your *MyViewerApplication* and select {{< menuitem "Related Files" "MyViewerApplication.script" >}}
 

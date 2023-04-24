@@ -76,7 +76,7 @@ pipelines.
 
 The standard Views Area contains the [Output Inspector and the Module Inspector](./tutorials/basicmechanisms#The_Output_Inspector_and_the_Module_Inspector "Output Inspector and the Module Inspector"). With the help of the Output Inspector, you can visualize the Module output.
 
-Further information of each module, like information about Module parameters, can be found using the Module Inspector.
+Further information of each module, like information about module parameters, can be found using the module Inspector.
 
 #### Debug Output
 
@@ -107,7 +107,7 @@ Within the concept of MeVisLab the basic entities we are working with
 a graphical representation of modules having their specific functions
 for image processing, image visualization, and image interaction.
 
-The three basic module types (ML, Open Inventor and Macro Module) are
+The three basic module types (ML, Open Inventor and Macro module) are
 distinguished by their colors:
 
 {{< bootstrap-table table_class="table table-striped" >}}
@@ -115,7 +115,7 @@ distinguished by their colors:
 | --- | --- | --- |
 | ML Module (blue) | ![ML Module](/images/tutorials/introduction/MLMModuleML.png "ML Module") | Page-based, demand-driven processing of voxels |
 | Open Inventor Module (green) | ![Open Inventor Module](/images/tutorials/introduction/MLMModuleSo.png "Open Inventor Module") | Visual scene graphs (3D); naming convention: all modules starting with *So* (for **s**cene **o**bject) |
-| Macro Module (brown) | ![Macro Module](/images/tutorials/introduction/MLMModuleMacro.png "Macro Module") | Combination of other module types, allowing implementing hierarchies and scripted interaction |
+| Macro module (brown) | ![Macro module](/images/tutorials/introduction/MLMModuleMacro.png "Macro module") | Combination of other module types, allowing implementing hierarchies and scripted interaction |
 {{< /bootstrap-table >}}
 
 If a module is invalid, it is displayed in bright red. This might happen if the module itself is not available on your system.
@@ -142,15 +142,15 @@ Each module provides a context menu to get additional information.
 
 ![Context Menu of a module](/images/tutorials/introduction/ModuleContextMenu.png "Context Menu of a module")
 
-* **Show Internal Network:** Macro Modules provide an entry to open the internal network. You can see what happens inside a Macro Module. This network may also contain other Macro Modules.
+* **Show Internal Network:** Macro modules provide an entry to open the internal network. You can see what happens inside a Macro module. This network may also contain other Macro modules.
 * **Show Window:** In case a module does not provide an own User Interface, you will see the Automatic Panel of the module showing the name. Modules may additionally have one or more Windows to be opened. You can also open the Scripting Console of a module to use Python.
 * **Instance Name:** You can also edit or copy the instance name. Editing is useful if you have the same module multiple times in one network. You should give the modules a useful name to access and distinguish them in Python. Copying the name is useful if you want to access the module in Python. You will have the correct name in your clipboard for usage in Python.
 * **Help:** The menu entry Help provides access to the Module Help pages and to an Example Network where the module is used. This example network often helps to understand which additional modules are necessary for usage.
-* **Extras:** Automated tests written for the specific module can be executed here. You can also run this Module in a separate process.
-* **Reload Definition:** In case you are currently working on a Module, you may need to reload the definition so that your changes are applied on the Module (for example attached Python scripts).
+* **Extras:** Automated tests written for the specific module can be executed here. You can also run this module in a separate process.
+* **Reload Definition:** In case you are currently working on a module, you may need to reload the definition so that your changes are applied on the module (for example attached Python scripts).
 * **Related Files:** Related files allows a quick access to the modules *\*.script* or *\*.py* files. The files are automatically opened in MATE for editing.
-* **Show Enclosing Folder:** This entry opens the directory where your Module has been stored.
-* **Grouping:** Multiple Modules can be Grouped and the groups can be named. This makes sense to structure your network for a better overview. In addition to that, grouped Modules can be converted to local- or global Macro Modules easily.
+* **Show Enclosing Folder:** This entry opens the directory where your module has been stored.
+* **Grouping:** Multiple modules can be Grouped and the groups can be named. This makes sense to structure your network for a better overview. In addition to that, grouped modules can be converted to local- or global Macro modules easily.
 
 ### Module Connectors {#Module_Connectors}
 Most modules have connectors which are displayed on the module. These represent the inputs (bottom) and outputs (top) of modules.
@@ -176,10 +176,10 @@ For more information about connector and connection types click {{< docuLinks "/
 For more information about connecting, disconnecting, moving, and replacing connections click {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s04.html" "here" >}}
 {{</alert>}}
 
-### Macro Modules {#Macro_Modules}
+### Macro modules {#Macro_Modules}
 
 {{<alert class="info" caption="More Information">}}
-More information about creating Macro Modules is available in [Tutorial Chapter I - Example 2.2](/tutorials/basicmechanisms/macromodules/globalmacromodules) 
+More information about creating Macro modules is available in [Tutorial Chapter I - Example 2.2](/tutorials/basicmechanisms/macromodules/globalmacromodules) 
 {{</alert>}}
 ### Searching and Adding Modules {#Searching_and_Adding_Modules}
 

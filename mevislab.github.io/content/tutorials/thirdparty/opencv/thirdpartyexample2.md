@@ -23,7 +23,7 @@ The Python code used in this example has been taken from [Towards Data Science](
 
 ## Steps to do
 ### Open Example 1
-Add the Macro Module developed in [Example 1](/tutorials/thirdparty/opencv/thirdpartyexample1) to your workspace.
+Add the Macro module developed in [Example 1](/tutorials/thirdparty/opencv/thirdpartyexample1) to your workspace.
 
 ### Download trained classifier XML file
 Initially you need to download the trained classifier XML file. It is available in the [OpenCV GitHub repository](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml). Save the file somewhere and remember the path for later usage in Python.
@@ -73,7 +73,7 @@ def releaseCamera(_):
 ```
 {{</highlight>}}
 
-Opening your Macro Module and pressing *Start* should now open your WebCam stream and an additional OpenCV window which shows a blue rectangle around a detected face.
+Opening your Macro module and pressing *Start* should now open your WebCam stream and an additional OpenCV window which shows a blue rectangle around a detected face.
 
 ![Face Detection in MeVisLab using OpenCV](/images/tutorials/thirdparty/bigbang.png "Face Detection in MeVisLab using OpenCV")
 

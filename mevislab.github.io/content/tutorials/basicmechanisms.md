@@ -4,7 +4,7 @@ date: 2022-06-15T08:54:53+02:00
 status: "OK"
 draft: false
 weight: 350
-tags: ["Beginner", "Tutorial", "Macro", "Macro Modules", "Local Macro"]
+tags: ["Beginner", "Tutorial", "Macro", "Macro modules", "Local Macro"]
 menu: 
   main:
     identifier: "basicmechanisms"
@@ -14,7 +14,7 @@ menu:
 ---
 ## Basic Mechanics of MeVisLab (Example: Building a Contour Filter) {#TutorialBasicMechanics}
 
-In this chapter you will learn the basic mechanics of the MeVisLab IDE. You will learn how to re-use existing Modules to load and view data and you will build your first processing pipeline.
+In this chapter you will learn the basic mechanisms of the MeVisLab IDE. You will learn how to re-use existing modules to load and view data and you will build your first processing pipeline.
 
 {{< youtube "hRspMChITE4">}}
 
@@ -76,7 +76,7 @@ Below the Output Inspector, you´ll find the Module Inspector. The Module Inspec
 
 Instead of using the Output Inspector to inspect images, we´d suggest to add another viewer to the network. Search for the Module `View2D` and add it to your workspace. Most modules have different connector options. Data is generally transmitted from the top side of a module to another modules bottom side.
 
-The module `View2D` has one input connector for voxel-images (triangle-shaped) and three other possible input connectors (Shaped like half-circles) on the bottom. The half-circle-shaped input connectors will be explained later on. Generally, module outputs can be connected to module inputs with the same symbol and thus transmit information and data between those modules.
+The module `View2D` has one input connector for voxel images (triangle-shaped) and three other possible input connectors (Shaped like half-circles) on the bottom. The half-circle-shaped input connectors will be explained later on. Generally, module outputs can be connected to module inputs with the same symbol and thus transmit information and data between those modules.
 
 ![2D Viewer](/images/tutorials/basicmechanics/BM_05.png "2D Viewer")
 
@@ -88,7 +88,7 @@ You can now display the loaded image in the newly added viewer-module by connect
 
 3.  Check if the connection is well-defined (green line).
 
-4.  Release the mouse-button on the input connector of your 'View2D'-module to establish the connection. 
+4.  Release the mouse button on the input connector of your 'View2D'-module to establish the connection. 
 
 ![Establish connection](/images/tutorials/basicmechanics/BM_06.png "Establish connection")
 
@@ -191,20 +191,20 @@ More information on module groups can be found {{< docuLinks "/Resources/Documen
 
 [//]: <> (MVL-653)
 
-### Macro-Modules {#TutorialMacroModules}
+### Macro modules {#TutorialMacroModules}
 
 You have probably already noticed how the modules differ in color. Each color represents another type of module:
   
-  * The blue modules are called ML-Modules, they process voxel-images. 
+  * The blue modules are called ML-Modules, they process voxel images. 
   * Green modules are OpenInventor-modules, they enable visual 3D scene graphs. 
-  * The brown modules are called Macro-modules. Macro-modules encapsulate a whole network in a single module. 
+  * The brown modules are called Macro modules. Macro modules encapsulate a whole network in a single module. 
   
-To condense our filter into one single module, we will now be creating a Macro-module out of it. To do that, right-click on the group-title and select *Convert To Local Macro*. Name your new Macro-module and finish. You just created a local Macro-module. Local Macro-modules can only be used in the network they were created in.
+To condense our filter into one single module, we will now be creating a Macro module out of it. To do that, right-click on the group-title and select *Convert To Local Macro*. Name your new Macro module and finish. You just created a local Macro module. Local Macro modules can only be used in the network they were created in.
 
 ![Convert to Local Macro](/images/tutorials/basicmechanics/BM_21.png "Convert to Local Macro")
 ![Your first Local Macro](/images/tutorials/basicmechanics/BM_22.png "Your first Local Macro")
 
-Right-click the Macro-module and select *Show Internal Network* to inspect and change the internal network. You can change the properties of the new Macro-module by changing the properties in the internal network. You can, for example, right-click the module `Convolution` and change the kernel. These changes will be preserved.
+Right-click the Macro module and select *Show Internal Network* to inspect and change the internal network. You can change the properties of the new Macro module by changing the properties in the internal network. You can, for example, right-click the module `Convolution` and change the kernel. These changes will be preserved.
 
 ![Internal Network of your Local Macro](/images/tutorials/basicmechanics/BM_23.png "Internal Network of your local Macro")
 
@@ -212,7 +212,7 @@ Right-click the Macro-module and select *Show Internal Network* to inspect and c
 
 {{<alert class="info" caption="Extra Infos">}}
 Module handling is explained {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s09.html" "here" >}}
-More information on Macro-modules can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch09.html" "here" >}}
+More information on Macro modules can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch09.html" "here" >}}
 {{</alert>}}
 
 [//]: <> (MVL-651)
@@ -223,7 +223,7 @@ More information on Macro-modules can be found {{< docuLinks "/Resources/Documen
 * Each Module provides Example Networks to explain their usage.
 * Parameters of each Module can be changed in the Module Inspector or Automatic Panel of the Module.
 * Parameter connections can be established to synchronize the values of these parameters.
-* Modules can be clustered. Clustered Modules can be encapsulated into local or global Macro-modules.
-* Macro-modules encapsulate networks. Internal networks can be shown and modified. Any changes of the internal network are applied to the Macro-module.
+* Modules can be clustered. Clustered Modules can be encapsulated into local or global Macro modules.
+* Macro modules encapsulate networks. Internal networks can be shown and modified. Any changes of the internal network are applied to the Macro module.
 
 {{< networkfile "examples/basic_mechanisms/contour_filter/ContourFilter.zip" >}}

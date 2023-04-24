@@ -4,15 +4,15 @@ date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
 weight: 410
-tags: ["Beginner", "Tutorial", "Macro", "Macro Modules", "Global Macro", "User Interface", "GUI"]
+tags: ["Beginner", "Tutorial", "Macro", "Macro modules", "Global Macro", "User Interface", "GUI"]
 menu: 
   main:
     identifier: "gui_development"
-    title: "Custom User Interfaces for Macro Modules."
+    title: "Custom User Interfaces for Macro modules."
     weight: 410
     parent: "macro_modules"
 ---
-# Example 2.4: Building a Panel Layout: Interactions with Macro Modules
+# Example 2.4: Building a Panel Layout: Interactions with Macro modules
 
 {{< youtube "tdQUkkROWBg">}}
 
