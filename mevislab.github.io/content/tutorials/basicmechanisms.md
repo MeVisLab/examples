@@ -47,7 +47,7 @@ For a more detailed description on loading DICOM images, look {{< docuLinks "/Re
 
 ### The Output-Inspector and the Module Inspector {#The_Output_Inspector_and_the_Module_Inspector}
 
-To inspect and visualize the loaded data, we can use the Output Inspector located in the {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch04s09.html" "Views" >}} area. You can already interact with the image using the Mouse wheel {{< mousebutton "middle" >}} and Mouse Buttons {{< mousebutton "left" >}} / {{< mousebutton "right" >}}. To preview the image, click on the triangle on the top side of the Module `ImageLoad`, which offers the modules output. All Module outputs can be found at the top side of the respective Module. 
+To inspect and visualize the loaded data, we can use the Output Inspector located in the {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch04s09.html" "Views" >}} area. You can already interact with the image using the mouse wheel {{< mousebutton "middle" >}} and mouse buttons {{< mousebutton "left" >}} / {{< mousebutton "right" >}}. To preview the image, click on the triangle on the top side of the Module `ImageLoad`, which offers the modules output. All module outputs can be found at the top side of the respective module. 
 
 You can now inspect your image in 2D:
 
@@ -68,13 +68,13 @@ You are not restricted to 2D. The Output Inspector offers a 3D View of most load
 * F = feet
 {{</alert>}}
 
-Below the Output Inspector, you´ll find the Module Inspector. The Module Inspector displays properties and parameters of the selected Module. Parameters are stored in so called **Fields**. Using the Module Inspector you can examine different fields of your `ImageLoad`module. The module has, for example, the fields *filename* (the path, the loaded image is stored in), as well as *sizeX*, *sizeY* and *sizeZ* (the size of the loaded image).
+Below the Output Inspector, you'll find the Module Inspector. The Module Inspector displays properties and parameters of the selected module. Parameters are stored in so called **Fields**. Using the Module Inspector you can examine different fields of your `ImageLoad`module. The module has, for example, the fields *filename* (the path, the loaded image is stored in), as well as *sizeX*, *sizeY* and *sizeZ* (the size of the loaded image).
 
 ![Module Inspector](/images/tutorials/basicmechanics/BM_04.png "Module Inspector")
 
 ### Viewer {#TutorialViewer}
 
-Instead of using the Output Inspector to inspect images, we´d suggest to add another viewer to the network. Search for the Module `View2D` and add it to your workspace. Most modules have different connector options. Data is generally transmitted from the top side of a module to another modules bottom side.
+Instead of using the Output Inspector to inspect images, we'd suggest to add another viewer to the network. Search for the Module `View2D` and add it to your workspace. Most modules have different connector options. Data is generally transmitted from the top side of a module to another modules bottom side.
 
 The module `View2D` has one input connector for voxel images (triangle-shaped) and three other possible input connectors (Shaped like half-circles) on the bottom. The half-circle-shaped input connectors will be explained later on. Generally, module outputs can be connected to module inputs with the same symbol and thus transmit information and data between those modules.
 
@@ -112,21 +112,21 @@ An average kernel will be used to smooth the image out as our next step will be 
 
 ![Convolution Module](/images/tutorials/basicmechanics/BM_08.png "Convolution Module")
 
-Open the panel of the `Convolution`module by double-clicking it. The panel allows configuration of the module. You can adjust parameters or select a kernel. We will be using the *3x3 Avarage Kernel* for now.
+Open the panel of the `Convolution`module by double-clicking it. The panel allows configuration of the module. You can adjust parameters or select a kernel. We will be using the *3x3 Average Kernel* for now.
 
 ![Select a Kernel](/images/tutorials/basicmechanics/BM_09.png "Select a Kernel")
 
 The module `View2D` is now displaying the smoothed image.
 
-To compare the processed and unprocessed image, click on the output connector of the module `ImageLoad` to display the original image in the Output Inspector. The Output Inspectors greatest advantage is, that it's able to display the output of any connector in the process chain (as long as an interpretable format is used). Simply click the connector or connection to find out more about the modules output.
+To compare the processed and unprocessed image, click on the output connector of the module `ImageLoad` to display the original image in the Output Inspector. The Output Inspectors greatest advantage is, that it's able to display the output of any connector in the process chain (as long as an interpretable format is used). Simply click the connector or connection to find out more about the module output.
 
-You can also inspect changes between a processed and unprocessed images by adding a second or even third viewer to your network."Layers" of applied changes can be inspected next to each other using more than one viewer and placing as well as connecting them accordingly.  We will be using a second `View2D`-module. Notice how the second Viewer is numbered for you to be able to distinguish them better. It might be important to know at this point, that numerous connections can be established from one output-connector but an input-connector can only receive one stream of data. Please connect the module `ImageLoad` to the second viewer to display the images twice. You can now scroll through the slices of both viewers and inspect the images.
+You can also inspect changes between processed (output connector) and unprocessed (input connector) images by adding a second or even third viewer to your network."Layers" of applied changes can be inspected next to each other using more than one viewer and placing as well as connecting them accordingly.  We will be using a second `View2D`-module. Notice how the second Viewer is numbered for you to be able to distinguish them better. It might be important to know at this point, that numerous connections can be established from one output-connector but an input-connector can only receive one stream of data. Please connect the module `ImageLoad` to the second viewer to display the images twice. You can now scroll through the slices of both viewers and inspect the images.
 
 ![Multiple Viewers](/images/tutorials/basicmechanics/BM_10.png "Multiple Viewers")
 
 ### Parameter Connection for Synchronization {#TutorialParameterConnection}
 
-You´re now able to scroll through the slices of the image in two separate windows. To examine the effect of the filter even better, we will now synchronize both viewers.
+You're now able to scroll through the slices of the image in two separate windows. To examine the effect of the filter even better, we will now synchronize both viewers.
 
 We already know data connections between module inputs and outputs. Besides module connections, it is also possible to connect the fields within the panels of the modules via parameter connection. The values of connected fields are synchronized, which means that the changing value of one field will be adapted to all other connected fields.
 
@@ -141,7 +141,7 @@ Right-click the viewer `View2D` to open its context menu and select {{< menuitem
 
 Doing so shows all parameter fields of the module `View2D`.
 
-Search for the field *startSlice*. The field indicates which slice is currently shown in the Viewer. If you scroll through the slices of an image the value of *startSlice* changes.
+Search for the field *startSlice*. The field indicates which slice is currently shown in the viewer. If you scroll through the slices of an image the value of *startSlice* changes.
 
 Now, double-click the module `SyncFloat` to open its panel.
 
@@ -161,7 +161,7 @@ As a result, scrolling through the slices with the mouse wheel {{< mousebutton "
 
 ![Your final Network](/images/tutorials/basicmechanics/BM_16.png "Your final Network")
 
-It is also possible to use the pre-defined module 'SynchroView2D' to accomplish a similar result.(`SynchroView2D`s usage is futherly described in [this chapter](/tutorials/visualization/visualizationexample1/) ).
+It is also possible to use the pre-defined module ´SynchroView2D´ to accomplish a similar result.(`SynchroView2D`s usage is futherly described in [this chapter](/tutorials/visualization/visualizationexample1/) ).
 
 ### Grouping Modules {#TutorialGroupingModules}
 
