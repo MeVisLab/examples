@@ -219,7 +219,7 @@ More information on macro modules can be found {{< docuLinks "/Resources/Documen
 
 ## Summary
 * MeVisLab provides pre-defined modules you can re-use and connect for building more or less complex networks.
-* Each modules output can be previewed by using the Output Inspector.
+* Each module's output can be previewed using the Output Inspector.
 * Each module provides example networks to explain their usage.
 * Parameters of each module can be changed in the Module Inspector or Automatic Panel of the module.
 * Parameter connections can be established to synchronize the values of these parameters.
