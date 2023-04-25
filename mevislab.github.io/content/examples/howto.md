@@ -35,7 +35,7 @@ See [Example 2.1: Package creation](/tutorials/basicmechanisms/macromodules/pack
 
 The contents can be extracted into the directory of your package. Make sure to keep the directory's structure for the examples to be loaded and displayed correctly.
 
-A typical file structure of a MeVisLab package looks like this:
+The typical directory structure of a MeVisLab package looks like this:
 ![Package directory structure](/images/examples/howto_1.png "Package directory structure")
 
 The package *TutorialSummary* within the package group *MeVis* is shown above. A package normally at least contains a *Projects* directory, which is where the Macro modules are located. When extracting the contents of a \*.zip file, the *Projects* folder of your package should be the target directory.
