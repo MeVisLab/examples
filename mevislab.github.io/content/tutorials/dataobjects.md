@@ -20,7 +20,7 @@ which are three-dimensional objects encapsulating formerly defined contours with
 * [Surface Objects (Winged Edge Meshes or WEMs)](/tutorials/dataobjects/surfaces/surfaceobjects) <br>
  represent the surface of geometrical figures and allow the user to manipulate them.
 * [Markers](/tutorials/dataobjects/markerobjects) <br>
-used to mark specific locations or aspects of an image and allow to process those later on.
+are used to mark specific locations or aspects of an image and allow to process those later on.
 * [Curves](tutorials/dataobjects/curves) <br>
 can print the results of a function as two-dimensional mathematical graphs into a a diagram.
 
