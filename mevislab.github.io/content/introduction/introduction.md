@@ -101,7 +101,7 @@ Here a list of the most important file types:
 | `.dcm` | DCM part of the imported DICOM file, see [Importing DICOM Data](./tutorials/basicmechanisms/dataimport#DICOMImport "Importing DICOM Data"). |
 {{< /bootstrap-table >}}
 
-### Types of Modules {#Module_Types}
+### Types of modules {#Module_Types}
 
 Within the concept of MeVisLab the basic entities we are working with
 a graphical representation of modules having their specific functions
@@ -113,8 +113,8 @@ distinguished by their colors:
 {{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:230px">Type</div> | <div style="width:430px">Look</div> | Characteristics |
 | --- | --- | --- |
-| ML Module (blue) | ![ML Module](/images/tutorials/introduction/MLMModuleML.png "ML Module") | Page-based, demand-driven processing of voxels |
-| Open Inventor Module (green) | ![Open Inventor Module](/images/tutorials/introduction/MLMModuleSo.png "Open Inventor Module") | Visual scene graphs (3D); naming convention: all modules starting with *So* (for **s**cene **o**bject) |
+| ML module (blue) | ![ML module](/images/tutorials/introduction/MLMModuleML.png "ML module") | Page-based, demand-driven processing of voxels |
+| Open Inventor module (green) | ![Open Inventor module](/images/tutorials/introduction/MLMModuleSo.png "Open Inventor module") | Visual scene graphs (3D); naming convention: all modules starting with *So* (for **s**cene **o**bject) |
 | Macro module (brown) | ![Macro module](/images/tutorials/introduction/MLMModuleMacro.png "Macro module") | Combination of other module types, allowing implementing hierarchies and scripted interaction |
 {{< /bootstrap-table >}}
 
@@ -145,7 +145,7 @@ Each module provides a context menu to get additional information.
 * **Show Internal Network:** Macro modules provide an entry to open the internal network. You can see what happens inside a Macro module. This network may also contain other Macro modules.
 * **Show Window:** In case a module does not provide an own User Interface, you will see the Automatic Panel of the module showing the name. Modules may additionally have one or more Windows to be opened. You can also open the Scripting Console of a module to use Python.
 * **Instance Name:** You can also edit or copy the instance name. Editing is useful if you have the same module multiple times in one network. You should give the modules a useful name to access and distinguish them in Python. Copying the name is useful if you want to access the module in Python. You will have the correct name in your clipboard for usage in Python.
-* **Help:** The menu entry Help provides access to the Module Help pages and to an Example Network where the module is used. This example network often helps to understand which additional modules are necessary for usage.
+* **Help:** The menu entry Help provides access to the Module Help pages and to an example network where the module is used. This example network often helps to understand which additional modules are necessary for usage.
 * **Extras:** Automated tests written for the specific module can be executed here. You can also run this module in a separate process.
 * **Reload Definition:** In case you are currently working on a module, you may need to reload the definition so that your changes are applied on the module (for example attached Python scripts).
 * **Related Files:** Related files allows a quick access to the modules *\*.script* or *\*.py* files. The files are automatically opened in MATE for editing.
@@ -179,7 +179,7 @@ For more information about connecting, disconnecting, moving, and replacing conn
 ### Macro modules {#Macro_Modules}
 
 {{<alert class="info" caption="More Information">}}
-More information about creating Macro modules is available in [Tutorial Chapter I - Example 2.2](/tutorials/basicmechanisms/macromodules/globalmacromodules) 
+More information about creating macro modules is available in [Tutorial Chapter I - Example 2.2](/tutorials/basicmechanisms/macromodules/globalmacromodules) 
 {{</alert>}}
 ### Searching and Adding Modules {#Searching_and_Adding_Modules}
 

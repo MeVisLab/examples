@@ -63,7 +63,7 @@ The initial \*.def file contains information you entered into the Wizard for the
 
 {{< highlight filename="<MACRO_NAME>.def" >}}
 ```Stan
-MacroModule TutorialSummary {
+Macro module TutorialSummary {
   genre              = "VisualizationMain"
   author             = "MeVis Medical Solutions AG"
   comment            = "Macro module for MeVisLab Tutorials"
@@ -110,7 +110,7 @@ Commands {
 The source also defines your Python file to be used when calling functions and events from the User Interface.
 
 ### Using your Macro module
-As you created a global macro Module, you can search for it in the MeVisLab *Module Search*.
+As you created a global macro module, you can search for it in the MeVisLab *Module Search*.
 
 ![Module Search](/images/tutorials/summary/Example2_7.png "Module Search")
 

@@ -32,7 +32,7 @@ Starting off, we will add the module `ImageLoad` to our network to load our data
 
 ![Search for ImageLoad](/images/tutorials/basicmechanics/BM_01.png "Search for ImageLoad")
 
-Next, we select and load the data we'd like to process. Double-click the Module `ImageLoad` to open its panel. You can browse through your folders to select the data you'd like to open. Example data can be found in the MeVisLab DemoData directory *$(InstallDir)/Packages/MeVisLab/Resources/DemoData* located in the MeVisLab installation path. Select a file, for example an MRI scan of a shoulder *Shoulder_Fracture.tif*. The image is loaded immediately and basic information of the loaded image can be seen in the Panel.
+Next, we select and load the data we'd like to process. Double-click the module `ImageLoad` to open its panel. You can browse through your folders to select the data you'd like to open. Example data can be found in the MeVisLab DemoData directory *$(InstallDir)/Packages/MeVisLab/Resources/DemoData* located in the MeVisLab installation path. Select a file, for example an MRI scan of a shoulder *Shoulder_Fracture.tif*. The image is loaded immediately and basic information of the loaded image can be seen in the Panel.
 
 {{<alert class="info" caption="Extra Infos">}}
 There also are modules to load multiple other formats of data. These are the most common ones:
@@ -74,7 +74,7 @@ Below the Output Inspector, you'll find the Module Inspector. The Module Inspect
 
 ### Viewer {#TutorialViewer}
 
-Instead of using the Output Inspector to inspect images, we'd suggest to add another viewer to the network. Search for the Module `View2D` and add it to your workspace. Most modules have different connector options. Data is generally transmitted from the top side of a module to another modules bottom side.
+Instead of using the Output Inspector to inspect images, we'd suggest to add another viewer to the network. Search for the module `View2D` and add it to your workspace. Most modules have different connector options. Data is generally transmitted from the top side of a module to another modules bottom side.
 
 The module `View2D` has one input connector for voxel images (triangle-shaped) and three other possible input connectors (Shaped like half-circles) on the bottom. The half-circle-shaped input connectors will be explained later on. Generally, module outputs can be connected to module inputs with the same symbol and thus transmit information and data between those modules.
 
@@ -163,11 +163,11 @@ As a result, scrolling through the slices with the mouse wheel {{< mousebutton "
 
 It is also possible to use the pre-defined module ´SynchroView2D´ to accomplish a similar result.(`SynchroView2D`s usage is futherly described in [this chapter](/tutorials/visualization/visualizationexample1/) ).
 
-### Grouping Modules {#TutorialGroupingModules}
+### Grouping modules {#TutorialGroupingModules}
 
 A contour filter can be created based on our previously created network. To finalize the filter, add the modules `Arithmetic2` and `Morphology` to your workspace and connect the modules as shown below. Double-click the module `Arithmetic2` to open its panel. Change the field *Function* of the module `Arithmetic2` to use the function *subtract* in the panel of the module. The contour filter is done now. You can inspect each processing step using the Output Inspector by clicking on the input and output connectors of the respective modules. The final results can be displayed using the viewer modules. If necessary, adjust the contrast by pressing the right-key and moving the cursor.
 
-![Grouping Modules](/images/tutorials/basicmechanics/BM_17.png "Grouping Modules")
+![Grouping modules](/images/tutorials/basicmechanics/BM_17.png "Grouping modules")
 
 If you'd like to know more about specific modules, search for help. You can do this by right-clicking the module and select help, which offers an example network and further information about the selected module in particular.
 
@@ -175,7 +175,7 @@ If you'd like to know more about specific modules, search for help. You can do t
 
 To be able to better distinguish the image processing pipeline, you can encapsulate it in a group: Select the three modules, for example by dragging a selection rectangle around them. Then right-click the selection to open the context menu and select {{< menuitem "Add to New Group" >}}.
 
-![Add modules to new Group](/images/tutorials/basicmechanics/BM_19.png "Add to new Group")
+![Add modules to new group](/images/tutorials/basicmechanics/BM_19.png "Add to new group")
 
 Enter a name for the new group, for example *Filter*. The new group is created and displayed as a green rectangle. The group allows for quick interactions with all its modules.
 

@@ -84,7 +84,7 @@ To create your own User Interface, we need to create a {{< docuLinks "/Resources
 
 Initially, we call the window *MyWindowTitle*, which can be used to reference this window.
 
-Double-clicking {{< mousebutton "left" >}} on your Module now opens your first self developed User Interface.
+Double-clicking {{< mousebutton "left" >}} on your module now opens your first self developed User Interface.
 
 [//]: <> (MVL-653)
 {{< highlight filename="Filter.script" >}}
@@ -184,7 +184,7 @@ a Table, a Grid, a Button, \... . To find out more, take a look into the {{< doc
 Until now, we learned how to create the layout of a panel. As a next step, we like to get an overview over interactions.
 
 {{<alert class="info" caption="Extra Infos">}}
-You can add the Module `GUIExample` to your workspace and play around with is.
+You can add the module `GUIExample` to your workspace and play around with is.
 {{</alert>}}
 
 #### Access to existing fields of the internal network
@@ -288,7 +288,7 @@ Commands {
 {{</highlight>}}
 
 {{<alert class="info" caption="Infos">}}
-The section Source should already be available and generated automatically in case you enable the Wizard to add a Python file to your Module.
+The section Source should already be available and generated automatically in case you enable the Wizard to add a Python file to your module.
 {{</alert>}}
 
 [//]: <> (MVL-653)

@@ -40,7 +40,7 @@ Click *Next* and select optional web plugin features. Click *Create*.
 The folder of your project automatically opens in explorer window.
 
 ### Using your Web Macro module
-As you created a global web macro Module, you can search for it in the MeVisLab *Module Search*. In case the module cannot be found, select {{< menuitem "Extras" "Reload Module Database (Clear Cache)" >}}.
+As you created a global web macro module, you can search for it in the MeVisLab *Module Search*. In case the module cannot be found, select {{< menuitem "Extras" "Reload Module Database (Clear Cache)" >}}.
 
 ![Web Macro module](/images/tutorials/summary/Example8_4.png "Web Macro module")
 
