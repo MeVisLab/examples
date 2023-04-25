@@ -33,7 +33,7 @@ To use those Macro modules, you will need to know how to handle user packages.
 See [Example 2.1: Package creation](/tutorials/basicmechanisms/macromodules/package/) for more information on packages in MeVisLab.
 {{</alert>}}
 
-The contents can be extracted into the directory of your package. Make sure to keep the directorys structure for the examples to be loaded and displayed correctly.
+The contents can be extracted into the directory of your package. Make sure to keep the directory's structure for the examples to be loaded and displayed correctly.
 
 A typical file structure of a MeVisLab package looks like this:
 ![Package directory structure](/images/examples/howto_1.png "Package directory structure")
