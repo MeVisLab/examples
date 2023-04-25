@@ -1,51 +1,48 @@
 {{ define "main" }}
-<div class = "flexbox">
 
-    <div style ="width: 60%">
-      {{- with .Params.tags -}}
-        {{- if ge (len .) 1 -}}
-            {{- range . -}}
-              {{ $tagstring := lower . }}
-              {{ $tagstring := replace $tagstring " " "-" }}
-              {{ if eq . "Beginner" }}
-            <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-success">{{ . }}</span></a>
-              {{ else if eq . "Advanced" }}
-              <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-warning">{{ . }}</span></a>
-              {{ else if eq . "Expert" }}
-              <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-danger">{{ . }}</span></a>
-              {{ else }}
-              <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-secondary">{{ . }}</span></a>
-              {{ end }}
-              {{ end -}}
-        {{- end -}}
+<div class="row">
+  <div class="col">
+    {{- with .Params.tags -}}
+    {{- if ge (len .) 1 -}}
+        {{- range . -}}
+          {{ $tagstring := lower . }}
+          {{ $tagstring := replace $tagstring " " "-" }}
+          {{ if eq . "Beginner" }}
+          <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-success">{{ . }}</span></a>
+          {{ else if eq . "Advanced" }}
+          <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-warning">{{ . }}</span></a>
+          {{ else if eq . "Expert" }}
+          <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-danger">{{ . }}</span></a>
+          {{ else }}
+          <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-secondary">{{ . }}</span></a>
+          {{ end }}
+          {{ end -}}
     {{- end -}}
-      {{.Content}}
-    </div>
-    
-  <div class="accordion">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Glossary
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          {{ partial "glossarycontents.html" . }}
+{{- end -}}
+  {{.Content}}
+  </div>
+  <div class="col-auto">
+    <div class="accordion">
+      <div class="accordion-item">
+        <h2>
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Glossary
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            {{ partial "glossarycontents.html" . }}
         </div>
       </div>
     </div>
-
-
-  <!--div class="col">
-    <details>
-      <summary>Glossary</summary>
-        {{ partial "glossarycontents.html" . }}
-    </details>
   </div>
-</div-->
+</div>
 
 
+<!--Umbruch-->
+<div class="w-100"></div>
+
+<div style="width: 100%">
 <script>
   const body_element = document.querySelector('html body');
   const modal_div = document.createElement("div");
@@ -74,4 +71,6 @@
   
   </script>
   {{- partial "nextprev.html" . -}}
+</div>
+</div>
   {{ end }}
