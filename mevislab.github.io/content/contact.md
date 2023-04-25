@@ -15,5 +15,5 @@ Searching for a forum to ask your specific MeVisLab questions? Having trouble wi
 General questions regarding MeVisLab? Don't hesitate to contact the [MeVisLab Team](mailto://info@mevislab.de).
 
 #### YouTube
-Also: If you haven´t yet - have a look at our [YouTube Channel](https://www.youtube.com/channel/UCUGi64NseroIGjga8l7EX8g). You will find a variety of helpful tutorials provided to you by the MeVisLab Team.
+Also: If you haven't yet - have a look at our [YouTube Channel](https://www.youtube.com/channel/UCUGi64NseroIGjga8l7EX8g). You will find a variety of helpful tutorials provided to you by the MeVisLab Team.
 
