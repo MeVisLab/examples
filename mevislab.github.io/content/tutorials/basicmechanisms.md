@@ -47,7 +47,7 @@ For a more detailed description on loading DICOM images, look {{< docuLinks "/Re
 
 ### The Output-Inspector and the Module Inspector {#The_Output_Inspector_and_the_Module_Inspector}
 
-To inspect and visualize the loaded data, we can use the Output Inspector located in the {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch04s09.html" "Views" >}} area. You can already interact with the image using the mouse wheel {{< mousebutton "middle" >}} and mouse buttons {{< mousebutton "left" >}} / {{< mousebutton "right" >}}. To preview the image, click on the triangle on the top side of the Module `ImageLoad`, which offers the modules output. All module outputs can be found at the top side of the respective module. 
+To inspect and visualize the loaded data, we can use the Output Inspector located in the {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch04s09.html" "Views" >}} area. You can already interact with the image using the mouse wheel {{< mousebutton "middle" >}} and mouse buttons {{< mousebutton "left" >}} / {{< mousebutton "right" >}}. To preview the image, click on the triangle on the top side of the module `ImageLoad`, which offers the module's output. All module outputs can be found at the top side of the respective module. 
 
 You can now inspect your image in 2D:
 
