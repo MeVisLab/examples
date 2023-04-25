@@ -32,7 +32,7 @@ Starting off, we will add the module `ImageLoad` to our network to load our data
 
 ![Search for ImageLoad](/images/tutorials/basicmechanics/BM_01.png "Search for ImageLoad")
 
-Next, we select and load the data we´d like to process. Double-click the Module `ImageLoad` to open its Panel. You can browse through your folders to select the data you´d like to open. Example data can be found in the MeVisLab DemoData directory *$(InstallDir)/Packages/MeVisLab/Resources/DemoData* located in the MeVisLab installation path. Select a file, for example an MRI scan of a shoulder *Shoulder_Fracture.tif*. The image is loaded immediately and basic information of the loaded image can be seen in the Panel.
+Next, we select and load the data we'd like to process. Double-click the Module `ImageLoad` to open its panel. You can browse through your folders to select the data you'd like to open. Example data can be found in the MeVisLab DemoData directory *$(InstallDir)/Packages/MeVisLab/Resources/DemoData* located in the MeVisLab installation path. Select a file, for example an MRI scan of a shoulder *Shoulder_Fracture.tif*. The image is loaded immediately and basic information of the loaded image can be seen in the Panel.
 
 {{<alert class="info" caption="Extra Infos">}}
 There also are modules to load multiple other formats of data. These are the most common ones:
