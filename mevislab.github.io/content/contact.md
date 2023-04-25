@@ -9,7 +9,7 @@ draft: false
 Having any questions on MeVisLab Licensing? Please contact the [MeVisLab Sales Team](mailto://sales@mevislab.de)
 
 #### MeVisLab forum
-Searching for a Forum to ask your specific MeVisLab questions? Having trouble with functionalities? Ask [here](https://forum.mevislab.de)! Someone else might know the answer. If not - one of our developers will help you out!
+Searching for a forum to ask your specific MeVisLab questions? Having trouble with functionalities? Ask [here](https://forum.mevislab.de)! Someone else might know the answer. If not - one of our developers will help you out!
 
 #### General Questions
 General questions regarding MeVisLab? Don't hesitate to contact the [MeVisLab Team](mailto://info@mevislab.de).
