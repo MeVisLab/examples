@@ -17,7 +17,7 @@ menu:
 
 ## Introduction {#tutorial_introduction}
 
-Welcome to MeVisLab!
+Welcome to [MeVisLab](/tutorials/glossary/#mevislab)!
 
 MeVisLab is a development environment for rapid prototyping and product
 development of medical and industrial imaging applications. It includes
