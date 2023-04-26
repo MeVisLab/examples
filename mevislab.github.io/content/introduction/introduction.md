@@ -19,6 +19,10 @@ menu:
 
 Welcome to [MeVisLab](/tutorials/glossary/#mevislab)!
 
+Let's see if it is possible to link the glossary contents and trigger the accordion to open:
+Welcome to [MeVisLab](/introduction/introduction/#mevislab)! 
+Does not work :(((
+
 MeVisLab is a development environment for rapid prototyping and product
 development of medical and industrial imaging applications. It includes
 a *Software Development Kit (SDK)* and an *ApplicationBuilder* for deploying
