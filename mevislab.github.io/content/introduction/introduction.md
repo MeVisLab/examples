@@ -13,29 +13,22 @@ menu:
     parent: "tutorials"
 ---
 
-# MeVisLab Tutorial {#tutorial_main}
+## Tutorial Introduction {#tutorial_introduction} 
 
-## Introduction {#tutorial_introduction}
-
-Welcome to [MeVisLab](/tutorials/glossary/#mevislab)!
-
-Let's see if it is possible to link the glossary contents and trigger the accordion to open:
-Welcome to [MeVisLab](/introduction/introduction/#mevislab)! 
-Does not work :(((
+Welcome to [MeVisLab](/glossary/#mevislab)!
 
 MeVisLab is a development environment for rapid prototyping and product
 development of medical and industrial imaging applications. It includes
-a *Software Development Kit (SDK)* and an *ApplicationBuilder* for deploying
-your applications to end-customers.
+a [*Software Development Kit (SDK)*](/glossary/#mevislab-sdk) and an [*ApplicationBuilder*](/glossary/#mevislab-apk) for deploying your applications to end-customers.
 
-The *MeVisLab SDK* consists of an *Integrated Development Environment (IDE)*
-for visual programming and the advanced text editor *MATE* for Python
+The *MeVisLab SDK* consists of an [*Integrated Development Environment (IDE)*](/glossary/#mevislab-ide)
+for visual programming and the advanced text editor [*MATE*](/glossary/#mevislab-mate) for Python
 scripting including code completion, debugging, profiling and automated
 test development or execution.
 
-You can re-use thousands of pre-defined *Modules* for image processing
+You can re-use thousands of pre-defined [*Modules*](/glossary/#module) for image processing
 (2D up to 6D images) and visualization. You will get a quick
-introduction into the available modules and example networks in the following tutorials.
+introduction into the available modules and [example networks](/glossary/#example-network) in the following tutorials.
 
 More than 20 years of experience and development made MeVisLab one of
 the most powerful development platforms for medical image processing.
@@ -52,7 +45,7 @@ the MeVisLab SDK and try to implement each step yourself. You will learn
 new mechanics and possibilities in MeVisLab step-by-step. Additional
 information and links are provided in colored boxes.
 
-The tutorials are divided into chapters for a specific topic. Each chapter contains one or more example(s).
+The tutorials are divided into chapters by their specific topic. Each chapter contains at least one example.
 
 ### Installation and first start
 Right after installation of MeVisLab, you will find some new icons on your Desktop (if selected during setup).
@@ -71,20 +64,20 @@ First, start MeVisLab IDE. After the Welcome Screen, the standard user interface
 
 #### Workspace
 
-By default, MeVisLab starts with an empty workspace. The workspace is
+By default, MeVisLab starts with an empty [workspace](/glossary/#workspace). The workspace is
 the place for developing and editing Networks via visual programming.
 Networks of modules form the basis for all processing and visualization
 pipelines.
 
 #### Views Area
 
-The standard Views Area contains the [Output Inspector and Module Inspector](./tutorials/basicmechanisms#The_Output_Inspector_and_the_Module_Inspector "Output Inspector and Module Inspector"). With the help of the Output Inspector, you can visualize the modules output.
+The standard [Views Area](/glossary/#views-area) contains the [Output Inspector and Module Inspector](./tutorials/basicmechanisms#The_Output_Inspector_and_the_Module_Inspector "Output Inspector and Module Inspector"). With the help of the Output Inspector, you can visualize the modules output.
 
-Further information of each module, like information about module parameters, can be found using the module Inspector.
+Further information on each module, e. g. about [module parameters](/glossary/#field), can be found using the [Module Inspector](/glossary/#module-inspector).
 
 #### Debug Output
 
-In the Debug Output, you can find any debugging information about
+In the [Debug Output](/glossary/#debug-output), you can find any debugging information about
 your MeVisLab installation.
 
 The MeVisLab IDE and the layout is completely configurable. You can
@@ -111,7 +104,7 @@ Within the concept of MeVisLab the basic entities we are working with
 a graphical representation of modules having their specific functions
 for image processing, image visualization, and image interaction.
 
-The three basic module types (ML, Open Inventor and Macro module) are
+The three basic module types (ML, [Open Inventor](/glossary/#open-inventor) and [macro module](/glossary/#macro-module)) are
 distinguished by their colors:
 
 {{< bootstrap-table table_class="table table-striped" >}}
@@ -198,7 +191,7 @@ There are several ways to add a module to the current network, for example:
 Both the {{< menuitem "Modules" >}} menu and the Module Browser display all available modules. The modules are sorted hierarchically by topics and by module
 name, as given in the file `Genre.def`.
 
-Therefore, both places are a good starting point when in need of a specific function, like an image load module.
+Therefore, both places are a good starting point when in need of a specific function, like an `ImageLoad` module.
 
 ![Modules Menu and Module Browser](/images/tutorials/introduction/GSExampleNetworkViewImage01c.png "Modules Menu and Module Browser")
 
@@ -208,7 +201,7 @@ default Internet browser) or the module files (in MATE, the in-built
 text editor).
 
 {{<alert class="info" caption="Note">}}
-For a module to get listed, it has to be available in the SDK distribution or in your user-defined packages. If in doubt or missing something, check out the loaded packages in the Preferences.
+For a module to get listed, it has to be available in the SDK distribution or in your user-defined [packages](/glossary/#package). If in doubt or missing something, check out the loaded packages in the Preferences.
 
 For details on packages, see [Package Creation](/tutorials/basicmechanisms/macromodules/package/).
 {{</alert>}}
