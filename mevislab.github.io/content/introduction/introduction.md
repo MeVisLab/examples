@@ -17,24 +17,25 @@ menu:
 
 Welcome to [MeVisLab](/glossary/#mevislab)!
 
+More than 20 years of experience and the continuous implementation of adaptations made MeVisLab one of
+the most powerful development platforms for medical image processing.
+Several applications and their prototypes are based on or could be realized because of
+MeVisLab, including software assistants for neuro-imaging, dynamic image
+analysis, surgery planning, and cardiovascular analysis.
+
 MeVisLab is a development environment for rapid prototyping and product
 development of medical and industrial imaging applications. It includes
 a [*Software Development Kit (SDK)*](/glossary/#mevislab-sdk) and an [*ApplicationBuilder*](/glossary/#mevislab-apk) for deploying your applications to end-customers.
 
-The *MeVisLab SDK* consists of an [*Integrated Development Environment (IDE)*](/glossary/#mevislab-ide)
+In turn, the *MeVisLab SDK* consists of an [*Integrated Development Environment (IDE)*](/glossary/#mevislab-ide)
 for visual programming and the advanced text editor [*MATE*](/glossary/#mevislab-mate) for Python
-scripting including code completion, debugging, profiling and automated
+scripting, including code completion, debugging, profiling and automated
 test development or execution.
 
 You can re-use thousands of pre-defined [*Modules*](/glossary/#module) for image processing
-(2D up to 6D images) and visualization. You will get a quick
-introduction into the available modules and [example networks](/glossary/#example-network) in the following tutorials.
+(2D up to 6D images) and visualization, combine them or even build your own.
 
-More than 20 years of experience and development made MeVisLab one of
-the most powerful development platforms for medical image processing.
-Several prototypes and applications have been realized on the basis of
-MeVisLab, including software assistants for neuro-imaging, dynamic image
-analysis, surgery planning, and cardiovascular analysis.
+A quick introduction on available modules and [example networks](/glossary/#example-network) will be given in the following tutorials.
 
 #### How to read this tutorial:
 
@@ -54,7 +55,7 @@ Right after installation of MeVisLab, you will find some new icons on your Deskt
 
 Use the top middle icon to start the MeVisLab IDE. You can also start the integrated text editor MATE or the ToolRunner. For this tutorial, you will generally require the IDE.
 
-You can also use the *QuickStart* icons but any packages developed yourself during these tutorials will not be loaded, so you should not use this for now.
+You can also use the *QuickStart* icons but any packages developed yourself during these tutorials will not be loaded, so you should not use them for now.
 
 ### MeVisLab IDE User Interface {#tutorial_ide}
 
@@ -66,7 +67,7 @@ First, start MeVisLab IDE. After the Welcome Screen, the standard user interface
 
 By default, MeVisLab starts with an empty [workspace](/glossary/#workspace). The workspace is
 the place for developing and editing Networks via visual programming.
-Networks of modules form the basis for all processing and visualization
+Networks of modules form the base of all processing and visualization
 pipelines.
 
 #### Views Area
@@ -112,7 +113,7 @@ distinguished by their colors:
 | --- | --- | --- |
 | ML module (blue) | ![ML module](/images/tutorials/introduction/MLMModuleML.png "ML module") | Page-based, demand-driven processing of voxels |
 | Open Inventor module (green) | ![Open Inventor module](/images/tutorials/introduction/MLMModuleSo.png "Open Inventor module") | Visual scene graphs (3D); naming convention: all modules starting with *So* (for **s**cene **o**bject) |
-| Macro module (brown) | ![Macro module](/images/tutorials/introduction/MLMModuleMacro.png "Macro module") | Combination of other module types, allowing implementing hierarchies and scripted interaction |
+| Macro module (brown) | ![Macro module](/images/tutorials/introduction/MLMModuleMacro.png "Macro module") | Combination of other module types, allowing the implementation of hierarchies and scripted interaction |
 {{< /bootstrap-table >}}
 
 If a module is invalid, it is displayed in bright red. This might happen if the module itself is not available on your system.
