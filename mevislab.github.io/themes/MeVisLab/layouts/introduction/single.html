@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="container">
 <div class="row">
-  <div class="col w-100">
+  <div class="col w-100 p-3">
   {{- with .Params.tags -}}
   {{- if ge (len .) 1 -}}
       {{- range . -}}
