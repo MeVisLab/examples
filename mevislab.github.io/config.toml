@@ -71,6 +71,12 @@ canonifyURLs = true
     weight = 600
 
 [[menu.main]]
+    identifier = "glossary"
+    title = "Glossary"
+    url = "/glossary/"
+    weight = 950
+
+[[menu.main]]
     identifier = "contact"
     title = "Contact"
     url = "/contact/"
