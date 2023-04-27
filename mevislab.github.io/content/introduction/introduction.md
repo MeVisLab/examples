@@ -214,7 +214,8 @@ default Internet browser) or the module files (in MATE, the in-built
 text editor).
 
 {{<alert class="check" caption="Check">}}
-For a module to be listed, it has to be available in the [SDK](/glossary/#mevislab-sdk) or in your self-defined [packages](/glossary/#package). A detailed tutorial on how to create packages, can be found [here](/tutorials/basicmechanisms/macromodules/package/). If in doubt or missing something, check out the loaded packages in the preferences. 
+For a module to be listed, it has to be available in the [SDK](/glossary/#mevislab-sdk) or in your self-defined 
+[packages](/glossary/#package). A detailed tutorial on how to create packages, can be found [here](/tutorials/basicmechanisms/macromodules/package/). If in doubt or missing something, check out the loaded packages in the preferences. 
 {{</alert>}}
 
 Usually the quickest way to add modules to a network is the quick search in the menu bar. It offers you the possibility to search for modules by module name. By default, the search will also be extended to keywords and substrings and is case-insensitive. To change these settings, click the magnifier button for the search options.
