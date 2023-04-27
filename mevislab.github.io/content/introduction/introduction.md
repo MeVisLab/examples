@@ -19,7 +19,7 @@ Welcome to [MeVisLab](/glossary/#mevislab)!
 
 More than 20 years of experience and the continuous implementation of adaptations made MeVisLab one of
 the most powerful development platforms for medical image processing.
-Several applications and their prototypes are based on or could be realized because of
+Several applications and their prototypes are based on and could be realized because of
 MeVisLab, including software assistants for neuro-imaging, dynamic image
 analysis, surgery planning, and cardiovascular analysis.
 
@@ -29,96 +29,101 @@ a [*Software Development Kit (SDK)*](/glossary/#mevislab-sdk) and an [*Applicati
 
 In turn, the *MeVisLab SDK* consists of an [*Integrated Development Environment (IDE)*](/glossary/#mevislab-ide)
 for visual programming and the advanced text editor [*MATE*](/glossary/#mevislab-mate) for Python
-scripting, including code completion, debugging, profiling and automated
-test development or execution.
+scripting, providing code completion, debugging, profiling and automated
+test development as well as execution.
 
 You can re-use thousands of pre-defined [*Modules*](/glossary/#module) for image processing
 (2D up to 6D images) and visualization, combine them or even build your own.
 
 A quick introduction on available modules and [example networks](/glossary/#example-network) will be given in the following tutorials.
 
-#### How to read this tutorial:
+### Structure and usage of provided tutorials
 
-This tutorial is a hands-on training. You will learn basic mechanics and
-features of MeVisLab. We will start by explaining the user interface and
-end building our own web-applications. While reading the tutorial, open
-the MeVisLab SDK and try to implement each step yourself. You will learn
-new mechanics and possibilities in MeVisLab step-by-step. Additional
-information and links are provided in colored boxes.
+This tutorial is a hands-on training. You will learn about basic mechanics and
+features of MeVisLab. 
 
-The tutorials are divided into chapters by their specific topic. Each chapter contains at least one example.
+Starting with this introduction, we will be leading you through all relevant aspects of the user interface,
+commonly used functionalities and provide you with all the basic knowledge you need to build your own web applications.
 
-### Installation and first start
+Additional information is accessible through embedded links, forwarding you to a related glossary entry or tutorial and shortcuts, advice and hints will be highlighted as shown [here](/about/about/).
+
+The tutorials are divided into chapters by their topic and each chapter contains at least one example for you to try.
+You find them at the end of the tutorial or, also sorted by chapters, under the menu entry [Examples](/examples/howto).
+The examples under the designated menu entry are more suitable if you already have a little experience and rather search for inspiration than for explanations.  
+
+### Starting MeVisLab for the first time
+
 Right after installation of MeVisLab, you will find some new icons on your Desktop (if selected during setup).
 
 ![MeVisLab Desktop Icons](images/tutorials/basicmechanics/WindowsIcons.png "MeVisLab Desktop Icons (Windows)")
 
 Use the top middle icon to start the MeVisLab IDE. You can also start the integrated text editor MATE or the ToolRunner. For this tutorial, you will generally require the IDE.
 
-You can also use the *QuickStart* icons but any packages developed yourself during these tutorials will not be loaded, so you should not use them for now.
+{{<alert class="warning" caption="Warning">}}
+Maybe postpone the usage of the *QuickStart* icons as they can cause created packages not to be loaded.
+{{</alert>}}
 
 ### MeVisLab IDE User Interface {#tutorial_ide}
 
-First, start MeVisLab IDE. After the Welcome Screen, the standard user interface opens.
+First, start the MeVisLab IDE. After the Welcome Screen, the standard user interface opens.
 
 ![MeVisLab IDE User Interface](/images/tutorials/introduction/IDE1.png "MeVisLab IDE User Interface")
 
 #### Workspace
 
-By default, MeVisLab starts with an empty [workspace](/glossary/#workspace). The workspace is
-the place for developing and editing Networks via visual programming.
-Networks of modules form the base of all processing and visualization
-pipelines.
+By default, MeVisLab starts with an empty [workspace](/glossary/#workspace). 
+
+This is where you will be developing and editing networks. Networks essentially form the base of all processing and visualization pipelines, so the workspace is, where the visual programming is done. 
 
 #### Views Area
 
 The standard [Views Area](/glossary/#views-area) contains the [Output Inspector and Module Inspector](./tutorials/basicmechanisms#The_Output_Inspector_and_the_Module_Inspector "Output Inspector and Module Inspector"). With the help of the Output Inspector, you can visualize the modules output.
 
+{{<alert class="info" caption="Info">}}
 Further information on each module, e. g. about [module parameters](/glossary/#field), can be found using the [Module Inspector](/glossary/#module-inspector).
+{{</alert>}}
 
 #### Debug Output
 
-In the [Debug Output](/glossary/#debug-output), you can find any debugging information about
-your MeVisLab installation.
+Debugging information can be found using the [Debug Output](/glossary/#debug-output).
 
-The MeVisLab IDE and the layout is completely configurable. You can
+The MeVisLab IDE and its layout are completely configurable. You can
 rearrange the items and add new views via {{< menuitem "Main Menu" "View" "Views" >}}.
 
-### Filetypes in MeVisLab
+### Filetypes used in, for and with MeVisLab
 
-Here a list of the most important file types:
 {{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:230px">Extension</div> | Description |
 | --- | --- |
-| `.mlab` | Network file, includes all information about the networks modules, their settings, their connections, and module groups. Networks developed by using the `MeVisLab SDK` are stored as `.mlab` file and can only be opened having a valid SDK license. |
+| `.mlab` | Network file, includes all information about the networks modules, their settings, their connections, and module groups. Networks developed using the `MeVisLab SDK` are stored as `.mlab` files and can only be opened having a valid SDK license. |
 | `.def` | Module definition file, necessary for a module to be added to the common MeVisLab module database. May also include all MDL script parts (if they are not sourced out to the `.script` file). |
-| `.script` | `MDL` script file, typically includes the user interface definition for panels. See [Chapter GUI Development](./tutorials/basicmechanisms/macromodules/guidesign#Example_Paneldesign "GUI Development") for an example on GUI programming. |
+| `.script` | `MDL` script file, typically includes the user interface definition of panels. See [Chapter GUI Development](./tutorials/basicmechanisms/macromodules/guidesign#Example_Paneldesign "GUI Development") for an example on GUI programming. |
 | `.mlimage` | MeVisLab internal image format for 6D images saved with all DICOM tags, lossless compression, and in all data types. |
-| `.mhelp` | File with descriptions of all fields and the use of a module, edit- and creatable by using `MATE`. See [Help files](./tutorials/basicmechanisms/macromodules/helpfiles "Help files") for details. |
+| `.mhelp` | File with descriptions of all fields and possible use-cases of a module, edit- and creatable by using `MATE`. See [Help files](./tutorials/basicmechanisms/macromodules/helpfiles "Help files") for details. |
 | `.py` | Python file, used for scripting in macro modules. See [Python scripting](./tutorials/basicmechanisms/macromodules/pythonscripting#TutorialPythonScripting "Python scripting") for an example on macro programming. |
 | `.dcm` | DCM part of the imported DICOM file, see [Importing DICOM Data](./tutorials/basicmechanisms/dataimport#DICOMImport "Importing DICOM Data"). |
 {{< /bootstrap-table >}}
 
-### Types of modules {#Module_Types}
+### Module types {#Module_Types}
 
-Within the concept of MeVisLab the basic entities we are working with
-a graphical representation of modules having their specific functions
-for image processing, image visualization, and image interaction.
+{{<alert class="info" caption="Info">}}
+[Modules](/glossary/#module) are the basic entities the MeVisLab concept is built upon. <br>
+They provide the funtionalities to process, display and interact with images.
+{{</alert>}}
 
-The three basic module types (ML, [Open Inventor](/glossary/#open-inventor) and [macro module](/glossary/#macro-module)) are
-distinguished by their colors:
+The three existing module types (ML, [Open Inventor](/glossary/#open-inventor) and [macro module](/glossary/#macro-module)) can be distinguished by their colors:
 
 {{< bootstrap-table table_class="table table-striped" >}}
-| <div style="width:230px">Type</div> | <div style="width:430px">Look</div> | Characteristics |
+| <div style="width:230px">Type</div> | <div style="width:430px">Appearance</div> | Characteristics |
 | --- | --- | --- |
-| ML module (blue) | ![ML module](/images/tutorials/introduction/MLMModuleML.png "ML module") | Page-based, demand-driven processing of voxels |
-| Open Inventor module (green) | ![Open Inventor module](/images/tutorials/introduction/MLMModuleSo.png "Open Inventor module") | Visual scene graphs (3D); naming convention: all modules starting with *So* (for **s**cene **o**bject) |
-| Macro module (brown) | ![Macro module](/images/tutorials/introduction/MLMModuleMacro.png "Macro module") | Combination of other module types, allowing the implementation of hierarchies and scripted interaction |
+| ML module (blue) | ![ML module](/images/tutorials/introduction/MLMModuleML.png "ML module") | Page-based, demand-driven processing of voxels. |
+| Open Inventor module (green) | ![Open Inventor module](/images/tutorials/introduction/MLMModuleSo.png "Open Inventor module") | Visual scene graphs (3D). Usually starting with *So* (for **S**cene **o**bject) as a naming convention. |
+| Macro module (brown) | ![Macro module](/images/tutorials/introduction/MLMModuleMacro.png "Macro module") | Combination of other module types, allowing the implementation of hierarchies and scripted interaction. |
 {{< /bootstrap-table >}}
 
-If a module is invalid, it is displayed in bright red. This might happen if the module itself is not available on your system.
-
 ### Invalid modules
+
+If a module is invalid, it is displayed in bright red. This might happen if the module itself is not available for your system.
 
 {{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:330px">Appearance</div> | Explanation |
@@ -127,70 +132,77 @@ If a module is invalid, it is displayed in bright red. This might happen if the 
   ![Macro State Invalid](/images/tutorials/introduction/MLMModuleStateMacroInvalidModule.png "Macro State Invalid") | Macro containing an invalid module |
 {{< /bootstrap-table >}}
 
-The number of warning and error messages that are being printed to the
-debug console are listed in the upper right corner of the module. Once
-the debug console is cleared, the warning and error indicators at the
-module are also cleared. If the module produces information messages,
-their number is printed in gray at this position. This enables a network
-or module developer to find the modules in a network that produce
-messages quickly.
+As you can see, the number of warning and error messages that are being printed to the
+debug console are listed in the upper right corner of the module. This is intentional, as it enables the developer to quickly find the module causing the errors. 
 
-### Module context menu
-Each module provides a context menu to get additional information.
+{{<alert class="check" caption="Check">}}
+Once the debug console is cleared, the warning and error indicators next to the
+module are also cleared.
+{{</alert>}}
+
+Informational messages are indicated in a similar matter on the same spot, but in a subtle grey color.
+
+### Module interactions through the Context Menu
+Each module has a context menu, providing the following options:
 
 ![Context Menu of a module](/images/tutorials/introduction/ModuleContextMenu.png "Context Menu of a module")
 
-* **Show Internal Network:** Macro modules provide an entry to open the internal network. You can see what happens inside a Macro module. This network may also contain other Macro modules.
-* **Show Window:** In case a module does not provide an own User Interface, you will see the Automatic Panel of the module showing the name. Modules may additionally have one or more Windows to be opened. You can also open the Scripting Console of a module to use Python.
-* **Instance Name:** You can also edit or copy the instance name. Editing is useful if you have the same module multiple times in one network. You should give the modules a useful name to access and distinguish them in Python. Copying the name is useful if you want to access the module in Python. You will have the correct name in your clipboard for usage in Python.
-* **Help:** The menu entry Help provides access to the Module Help pages and to an example network where the module is used. This example network often helps to understand which additional modules are necessary for usage.
+* **Show Internal Network:** [Macro modules](/glossary/#macro-module) provide an entry to open the internal network. You can see what happens inside a macro module. The internal network may also contain other macro modules.
+* **Show Window:** If a module does not provide an User Interface, you will see the automatic panel, showing the module's name. Modules may additionally have one or more windows which can be opened. You can also open the Scripting Console of a module to integrate Python.
+* **Instance Name:** You can edit or copy the instance name. Renaming can be useful if the same module appears more than once in one network and/or if you want to access and distinguish the modules in your Python script. 
+* **Help:** The menu entry Help provides access to the Module Help pages and to an example network where the module is used. This example network often helps to understand which additional modules can be added to create your desired effect.
 * **Extras:** Automated tests written for the specific module can be executed here. You can also run this module in a separate process.
 * **Reload Definition:** In case you are currently working on a module, you may need to reload the definition so that your changes are applied on the module (for example attached Python scripts).
-* **Related Files:** Related files allows a quick access to the modules *\*.script* or *\*.py* files. The files are automatically opened in MATE for editing.
-* **Show Enclosing Folder:** This entry opens the directory where your module has been stored.
-* **Grouping:** Multiple modules can be Grouped and the groups can be named. This makes sense to structure your network for a better overview. In addition to that, grouped modules can be converted to local- or global Macro modules easily.
+* **Related Files:** Related files allows a quick access to the modules *\*.script* or *\*.py* files. The files are automatically opened in [MATE](/glossary/#mevislab-mate) for editing.
+* **Show Enclosing Folder:** This entry opens the directory where your module is stored.
+* **Grouping:** Multiple modules can be clustered and the groups can be named. This adds clarity to the structure of your network. In addition to that, grouped modules can be converted to local- or global macro modules easily.
 
-### Module Connectors {#Module_Connectors}
-Most modules have connectors which are displayed on the module. These represent the inputs (bottom) and outputs (top) of modules.
+### Input and Output Connectors {#Module_Connectors}
+As the creation of a network requires connected modules, each module has input and output connectors, located on their top and bottom side. Data is transmitted from the output connector on the top side of one module to the input connector on another module's bottom side.
 
-In MeVisLab, three types of connectors are defined.
+Once again, three types can be distinguished:
 
 {{< bootstrap-table table_class="table table-striped" >}}
-| <div style="width:330px">Look</div> | <div style="width:130px">Appearance</div> | Definition |
+| <div style="width:330px">Appearance</div> | <div style="width:130px">Shape</div> | Definition |
 | --- | --- | --- |
 | ![Triangle](/images/tutorials/introduction/MLMConnectorTriangle.png "Triangle - ML Image") | triangle | ML images |
 | ![Circle](/images/tutorials/introduction/MLMConnectorHalfCircle.png "Circle - Inventor Scene") | half-circle | Inventor scene |
-| ![Square](/images/tutorials/introduction/MLMConnectorSquare.png "Square - Base Object") | square | Base objects: pointers to data structures |
+| ![Square](/images/tutorials/introduction/MLMConnectorSquare.png "Square - Base Object") | square | Base objects: Pointers to data structures |
 {{< /bootstrap-table >}}
 
-By connecting these connectors and therefore establishing a so-called data connection, image data, or Open Inventor information is transported from one module to one or more others.
+{{<alert class="info" caption="Info">}}
+A connection can be established by dragging one module close to the other. 
+{{</alert>}}
 
-Besides connecting connectors, basically any field of modules can be connected to other compatible fields of modules with a parameter connection.
+Some modules even contain hidden connectors in addition to the ones displayed on the module's surface. Click on the workspace and press {{< keyboard "SPACE" >}} to see the hidden connectors as well as the internal networks of each module. You can now also use the hidden connectors for building connections.
 
-Some modules contain hidden connectors in addition to the ones you can see when adding a module to the workspace. Click on the workspace and press {{< keyboard "SPACE" >}} to see the hidden connectors as well as the internal networks of each module. You can now use the hidden connectors for building connections.
+For more information about connectors and different types of connections click {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s03.html" "here" >}}. <br>
+If you want to know more about establishing, interrupting, moving and replacing connections, have a look at {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s04.html" "this." >}}
 
-{{<alert class="info" caption="Extra Infos">}}
-For more information about connector and connection types click {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s03.html" "here" >}}
-For more information about connecting, disconnecting, moving, and replacing connections click {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s04.html" "here" >}}
+### Parameter Connections
+Besides through a module's input and output connectors, connections can also be established between parameters in the module's panel. 
+
+{{<alert class="check" caption="Check">}}
+An exemplary use-case for a parameter connection is synchronization. Have a look [here](/tutorials/basicmechanisms/#TutorialParameterConnection).
 {{</alert>}}
 
 ### Macro modules {#Macro_Modules}
 
-{{<alert class="info" caption="More Information">}}
-More information about creating macro modules is available in [Tutorial Chapter I - Example 2.2](/tutorials/basicmechanisms/macromodules/globalmacromodules) 
+{{<alert class="info" caption="Info">}}
+The creation of macros is furtherly explained in [Tutorial Chapter I - Example 2.2](/tutorials/basicmechanisms/macromodules/globalmacromodules) 
 {{</alert>}}
-### Searching and Adding Modules {#Searching_and_Adding_Modules}
 
-There are several ways to add a module to the current network, for example:
--   via the menu bar, entry {{< menuitem "Modules" >}}.
--   via the menu bar, {{< menuitem "Quick Search" >}}.
+### Adding modules to your workspace {#Searching_and_Adding_Modules}
+
+There are several ways to add a module to your current network:
+-   via the menu bar entry {{< menuitem "Modules" >}}.
+-   via {{< menuitem "Quick Search" >}}.
 -   via the View Module Search.
 -   via the View Module Browser.
 -   via copy and paste from another network.
 -   by scripting, see the {{< docuLinks "/Resources/Documentation/Publish/SDK/ScriptingReference/index.html" "Scripting Reference" >}}
 
-Both the {{< menuitem "Modules" >}} menu and the Module Browser display all available modules. The modules are sorted hierarchically by topics and by module
-name, as given in the file `Genre.def`.
+Both the menu entry{{< menuitem "Modules" >}} and the Module Browser display all available modules. The modules are sorted hierarchically by topic and name, as defined in the file `Genre.def`.
 
 Therefore, both places are a good starting point when in need of a specific function, like an `ImageLoad` module.
 
@@ -201,21 +213,19 @@ entries, open the context menu and, for example, open the help (in your
 default Internet browser) or the module files (in MATE, the in-built
 text editor).
 
-{{<alert class="info" caption="Note">}}
-For a module to get listed, it has to be available in the SDK distribution or in your user-defined [packages](/glossary/#package). If in doubt or missing something, check out the loaded packages in the Preferences.
-
-For details on packages, see [Package Creation](/tutorials/basicmechanisms/macromodules/package/).
+{{<alert class="check" caption="Check">}}
+For a module to be listed, it has to be available in the [SDK](/glossary/#mevislab-sdk) or in your self-defined [packages](/glossary/#package). A detailed tutorial on how to create packages, can be found [here](/tutorials/basicmechanisms/macromodules/package/). If in doubt or missing something, check out the loaded packages in the preferences. 
 {{</alert>}}
 
 Usually the quickest way to add modules to a network is the quick search in the menu bar. It offers you the possibility to search for modules by module name. By default, the search will also be extended to keywords and substrings and is case-insensitive. To change these settings, click the magnifier button for the search options.
 
-{{<alert class="info" caption="Tip">}}
-The quick search field does not need to have the focus. Any time you enter something in the MeVisLab GUI while not being in a dialog window, this will be entered into the quick search automatically.
-{{</alert>}}
-
 ![Quick Search Options](/images/tutorials/introduction/MLMQuickSearch.png "Quick Search Options")
 
-To search for a module to load an image, you could either type *load* or *image*. Let us go with the second option this time. While typing *image*, the possible results appear. Use the {{< keyboard "ArrowUp" >}} or {{< keyboard "ArrowDown" >}} keys on your keyboard to move to one of the listed modules. The module's About information will appear next to it, allowing you to decide if this is the right module for you.
+{{<alert class="info" caption="Info">}}
+Any time you enter something in the MeVisLab GUI while not being in a dialog window, your entry will be put into the quick search automatically.
+{{</alert>}}
+
+ Use the {{< keyboard "ArrowUp" >}} and {{< keyboard "ArrowDown" >}} keys on your keyboard to move to one of the listed modules. The module's decription will appear next to it, allowing you to decide if this is the right module for your use-case.
 
 ![Quick Search Results](/images/tutorials/introduction/GSExampleNetworkViewImage02.png "Quick Search Results")
 
