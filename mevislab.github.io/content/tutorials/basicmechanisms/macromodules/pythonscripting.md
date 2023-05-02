@@ -38,7 +38,7 @@ In the *Scripting Console*, you can add and connect modules using the following 
 
 * *ctx.addModule("*< ModuleName >*")* : Add the desired module to your workspace.
 * *ctx.field("* < ModuleName.FieldName> *")* : Access a field of a module.
-* *ctx.field("* < ModuleInput > *").conntectFrom("* < ModuleOutput > *")* : Draw a connection from one module's output to another module's input.
+* *ctx.field("* < ModuleInput > *").connectFrom("* < ModuleOutput > *")* : Draw a connection from one module's output to another module's input.
 
 In this case we added the modules `DicomImport` and `View2D` to the workspace and connected both modules.
 

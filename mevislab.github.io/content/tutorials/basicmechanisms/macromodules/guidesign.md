@@ -36,7 +36,7 @@ The *Automatic Panel* contains fields, as well as module in and outputs. In this
 
 ![Automatic Panel](/images/tutorials/basicmechanics/GUI_10.png "Automatic Panel")
 
-To add and edit a panel, open the context menu and select {{< menuitem "Related Files" "Filter.script" >}}. The text-editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the file *Filter.script*, which you can edit to define a custom User Interface for the Module.
+To add and edit a panel, open the context menu and select {{< menuitem "Related Files" "Filter.script" >}}. The text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the file *Filter.script*, which you can edit to define a custom User Interface for the Module.
 
 ![Module script file](/images/tutorials/basicmechanics/GUI_11.png "Module script file")
 

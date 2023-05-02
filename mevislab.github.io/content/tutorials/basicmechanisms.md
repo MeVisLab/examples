@@ -68,7 +68,7 @@ You are not restricted to 2D. The Output Inspector offers a 3D View of most load
 * F = feet
 {{</alert>}}
 
-Below the Output Inspector, you'll find the Module Inspector. The Module Inspector displays properties and parameters of the selected module. Parameters are stored in so called **Fields**. Using the Module Inspector you can examine different fields of your `ImageLoad`module. The module has, for example, the fields *filename* (the path, the loaded image is stored in), as well as *sizeX*, *sizeY* and *sizeZ* (the size of the loaded image).
+Below the Output Inspector, you'll find the Module Inspector. The Module Inspector displays properties and parameters of the selected module. Parameters are stored in so called **Fields**. Using the Module Inspector you can examine different fields of your `ImageLoad` module. The module has, for example, the fields *filename* (the path, the loaded image is stored in), as well as *sizeX*, *sizeY* and *sizeZ* (the size of the loaded image).
 
 ![Module Inspector](/images/tutorials/basicmechanics/BM_04.png "Module Inspector")
 
@@ -112,7 +112,7 @@ An average kernel will be used to smooth the image out as our next step will be 
 
 ![Convolution Module](/images/tutorials/basicmechanics/BM_08.png "Convolution Module")
 
-Open the panel of the `Convolution`module by double-clicking it. The panel allows configuration of the module. You can adjust parameters or select a kernel. We will be using the *3x3 Average Kernel* for now.
+Open the panel of the `Convolution` module by double-clicking it. The panel allows configuration of the module. You can adjust parameters or select a kernel. We will be using the *3x3 Average Kernel* for now.
 
 ![Select a Kernel](/images/tutorials/basicmechanics/BM_09.png "Select a Kernel")
 
@@ -130,7 +130,7 @@ You're now able to scroll through the slices of the image in two separate window
 
 We already know data connections between module inputs and outputs. Besides module connections, it is also possible to connect the fields within the panels of the modules via parameter connection. The values of connected fields are synchronized, which means that the changing value of one field will be adapted to all other connected fields.
 
-In order to practise establishing parameter connections, add the ´SyncFloat´ module to your workspace.
+In order to practise establishing parameter connections, add the `SyncFloat` module to your workspace.
 
 ![SyncFloat Module](/images/tutorials/basicmechanics/BM_11.png "SyncFloat Module")
 
@@ -161,11 +161,11 @@ As a result, scrolling through the slices with the mouse wheel {{< mousebutton "
 
 ![Your final Network](/images/tutorials/basicmechanics/BM_16.png "Your final Network")
 
-It is also possible to use the pre-defined module ´SynchroView2D´ to accomplish a similar result.(`SynchroView2D`s usage is futherly described in [this chapter](/tutorials/visualization/visualizationexample1/) ).
+It is also possible to use the pre-defined module `SynchroView2D` to accomplish a similar result.(`SynchroView2D`'s usage is futherly described in [this chapter](/tutorials/visualization/visualizationexample1/) ).
 
 ### Grouping modules {#TutorialGroupingModules}
 
-A contour filter can be created based on our previously created network. To finalize the filter, add the modules `Arithmetic2` and `Morphology` to your workspace and connect the modules as shown below. Double-click the module `Arithmetic2` to open its panel. Change the field *Function* of the module `Arithmetic2` to use the function *subtract* in the panel of the module. The contour filter is done now. You can inspect each processing step using the Output Inspector by clicking on the input and output connectors of the respective modules. The final results can be displayed using the viewer modules. If necessary, adjust the contrast by pressing the right-key and moving the cursor.
+A contour filter can be created based on our previously created network. To finalize the filter, add the modules `Arithmetic2` and `Morphology` to your workspace and connect the modules as shown below. Double-click the module `Arithmetic2` to open its panel. Change the field *Function* of the module `Arithmetic2` to use the function *subtract* in the panel of the module. The contour filter is done now. You can inspect each processing step using the Output Inspector by clicking on the input and output connectors of the respective modules. The final results can be displayed using the viewer modules. If necessary, adjust the contrast by pressing the right arrow key and moving the cursor.
 
 ![Grouping modules](/images/tutorials/basicmechanics/BM_17.png "Grouping modules")
 
@@ -199,7 +199,7 @@ You have probably already noticed how the modules differ in color. Each color re
   * Green modules are OpenInventor modules, they enable visual 3D scene graphs. 
   * The brown modules are called macro modules. Macro modules encapsulate a whole network in a single module. 
   
-To condense our filter into one single module, we will now be creating a macro module out of it. To do that, right-click on the group-title and select *Convert To Local Macro*. Name your new macro module and finish. You just created a local macro module. Local macro modules can only be used in the network they were created in.
+To condense our filter into one single module, we will now be creating a macro module out of it. To do that, right-click on the group title and select *Convert To Local Macro*. Name your new macro module and finish. You just created a local macro module. Local macro modules can only be used in the network they were created in.
 
 ![Convert to Local Macro](/images/tutorials/basicmechanics/BM_21.png "Convert to Local Macro")
 ![Your first Local Macro](/images/tutorials/basicmechanics/BM_22.png "Your first Local Macro")
