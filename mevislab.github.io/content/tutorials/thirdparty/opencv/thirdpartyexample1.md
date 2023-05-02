@@ -4,7 +4,7 @@ date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
 weight: 855
-tags: ["Advanced", "Tutorial", "OpenCV", "Python", "WebCam", "Macro", "Macro Modules", "Global Macro"]
+tags: ["Advanced", "Tutorial", "OpenCV", "Python", "WebCam", "Macro", "Macro modules", "Global Macro"]
 menu: 
   main:
     identifier: "thirdpartyexample1"
@@ -29,15 +29,15 @@ The viewer is empty because the image needs to be set via Python scripting.
 More information about the `PythonImage` module can be found {{< docuLinks "/Standard/Documentation/Publish/ModuleReference/PythonImage.html" "here" >}}
 {{</alert>}}
 
-### Create a Macro Module
-Now you need to create a Macro Module from your network. You can either group your modules, create a local Macro and convert it to a global Macro Module, or you use the Project Wizard and load your \*.mlab file.
+### Create a macro module
+Now you need to create a macro module from your network. You can either group your modules, create a local macro and convert it to a global macro module, or you use the Project Wizard and load your \*.mlab file.
 
 {{<alert class="info" caption="Info">}}
-A tutorial how to create your own Macro Modules can be found in [Example 2.2: Global Macro Modules](/tutorials/basicmechanisms/macromodules/globalmacromodules "Example 2.2: Global Macro Modules"). Make sure to add a Python file to your Macro Module.
+A tutorial how to create your own macro modules can be found in [Example 2.2: Global Macro modules](/tutorials/basicmechanisms/macromodules/globalmacromodules "Example 2.2: Global Macro modules"). Make sure to add a Python file to your macro module.
 {{</alert>}}
 
 ### Add the View2D to your UI
-Next, we need to add the `View2D` to a Window of your Macro Module. Right click on your module {{< mousebutton "right" >}}, open the context menu and select {{< menuitem "Related Files" "<YOUR_MODULE_NAME>.script" >}}. The text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the \*.script file of your module.
+Next, we need to add the `View2D` to a Window of your macro module. Right click on your module {{< mousebutton "right" >}}, open the context menu and select {{< menuitem "Related Files" "<YOUR_MODULE_NAME>.script" >}}. The text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the \*.script file of your module.
 
 Add the following to your file:
 {{< highlight filename="<YOUR_MODULE_NAME>.script" >}}
@@ -181,7 +181,7 @@ def stopCapture():
 
 As we started a timer in our network context which updates the image every 0.1 seconds, we just stop this timer and the camera is paused.
 
-In the end, we need to release the camera whenever you close the Window of your Macro Module.
+In the end, we need to release the camera whenever you close the Window of your Macro module.
 {{< highlight filename="<YOUR_MODULE_NAME>.py" >}}
 ```Python
 ...
@@ -199,7 +199,7 @@ def releaseCamera(_):
 
 Again, the timers are removed, all interfaces are reset and the camera is released. The light indicating WebCam usage should turn off.
 
-Opening your Macro Module via double-click {{< mousebutton "left" >}} should now allow to start and pause your WebCam video in MeVisLab. You can modify your internal network using a `Convolution` filter module or any other module available in MeVisLab for modifying the stream on the fly.
+Opening your macro module via double-click {{< mousebutton "left" >}} should now allow to start and pause your WebCam video in MeVisLab. You can modify your internal network using a `Convolution` filter module or any other module available in MeVisLab for modifying the stream on the fly.
 
 ## Summary
 * The `PythonImage` module allows to use Python for defining the image output

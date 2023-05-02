@@ -8,7 +8,7 @@ category: "basic_mechanisms"
 This example shows how to create module interactions via Python scripting.
 
 ## Summary
-A new Macro Module `IsoCSOs` is created providing 2 viewers in the internal network. One `View2D` and one `SoExaminerViewer`. Both viewers are added to the custom user interface of the module.
+A new Macro module `IsoCSOs` is created providing 2 viewers in the internal network. One `View2D` and one `SoExaminerViewer`. Both viewers are added to the custom user interface of the module.
 
 Additional Buttons for Browsing directories and creating contours (`CSOIsoGenerator`) are added calling Python functions to explain how Python can be used in MeVisLab. In the end, a field listener is implemented calling a Python function whenever a field of the internal network changes. This is used to colorize the contours under the mouse.
 

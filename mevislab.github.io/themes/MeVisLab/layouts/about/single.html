@@ -1,0 +1,103 @@
+{{ define "main" }}
+<div class = "flexbox p-3">
+    <div style="margin-left: 100px; margin-right: 50px">
+      
+      {{- with .Params.tags -}}
+    {{- if ge (len .) 1 -}}
+        {{- range . -}}
+          {{ $tagstring := lower . }}
+          {{ $tagstring := replace $tagstring " " "-" }}
+          {{ if eq . "Beginner" }}
+        <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-success">{{ . }}</span></a>
+          {{ else if eq . "Advanced" }}
+          <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-warning">{{ . }}</span></a>
+          {{ else if eq . "Expert" }}
+          <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-danger">{{ . }}</span></a>
+          {{ else }}
+          <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-secondary">{{ . }}</span></a>
+          {{ end }}
+          {{ end -}}
+    {{- end -}}
+{{- end -}}
+
+      <h2>Glossary</h2>
+      <p>
+        A Glossary containing most definitions of terms used in this document can be found
+        <a href="/glossary">here</a>.
+      </p>
+      <h2>Tutorials</h2>
+      <p>
+      The following chapters are currently available: <br/>
+      <ul style="list-style-type: square">
+        <li>
+          <a href="tutorials/basicmechanisms/">Chapter I: Basic Mechanisms of MeVisLab</a>
+        </li>
+        <ul style="list-style-type: square">
+          <li>
+            <a href="tutorials/basicmechanisms/macromodules/">Macros and Module Interactions via Python</a>
+          </li>
+        </ul>
+        <li>
+            <a href="tutorials/openinventor/">Chapter II: Open Inventor</a>
+        </li>
+        <li>
+            <a href="tutorials/visualization/">Chapter III: Visualization</a>
+        </li>
+        <li>
+            <a href="tutorials/image_processing/">Chapter IV: Image Processing</a>
+        </li>
+        <li>
+            <a href="tutorials/dataobjects/">Chapter V: Data Objects</a>
+        </li>
+        <li>
+            <a href="tutorials/testing/">Chapter VI: Testing</a>
+        </li>
+        <li>
+            <a href="tutorials/summary/">Chapter VII: Application Development</a>
+        </li>
+        <li>
+            <a href="tutorials/thirdparty/">Chapter VIII: ThirdParty Components</a>
+        </li>
+      </ul>
+      Each of these chapters provides examples you can try yourself, detailed explanations on used Macro modules and (if existent) links to related tutorials 
+      on <a href="https://www.youtube.com/channel/UCUGi64NseroIGjga8l7EX8g">YouTube</a>.
+      </p>
+      <p>
+      As their level of difficulty gradually rises and treated aspects build up on another, we recommend to follow the tutorials in their listed order, descending from top to bottom.
+      </p>
+    </div>
+
+  <div style="margin-left: 50px; margin-right: 100px">
+    {{.Content}}
+  </div>
+</div>
+
+
+<script>
+  const body_element = document.querySelector('html body');
+  const modal_div = document.createElement("div");
+  let modal_window = document.body.appendChild(modal_div);
+  let modal_html = '<div class="modal fade" id="lightboxModalFullscreen" tabindex="-1" aria-labelledby="lightboxModalFullscreenLabel" aria-hidden="true"><div class="modal-dialog modal-fullscreen" data-bs-dismiss="modal" aria-label="Close"><div class="modal-content border-0"><div class="modal-body d-flex align-self-center align-items-center justify-content-center"><div class="modal-custom"><img src="" id="LightboxCanvas" class="img-fluid" data-bs-dismiss="modal" aria-label="Close" /><figcaption id="LightboxCaption" class="figure-caption"></figcaption></div></div></div></div></div>'
+  modal_window.innerHTML = modal_html;
+  
+  Array.from(document.querySelectorAll('[data-modal*="bs-lightbox"]')).forEach((href) => {
+    href.setAttribute('data-bs-toggle','modal');
+    href.setAttribute('data-bs-target','#lightboxModalFullscreen');
+    href.addEventListener('click', (e)=>{
+          const target_href = href.getAttribute('href');
+          const target_alt = href.getAttribute('title');
+          document.getElementById('LightboxCanvas').src = target_href;
+          document.getElementById('LightboxCaption').innerHTML = target_alt;
+          e.preventDefault();
+          console.log(target_href);
+    })
+  })
+  
+  hljs.addPlugin(
+    new CopyButtonPlugin({
+      hook: (text, el) => text,
+    })
+  );
+  </script>
+  {{- partial "nextprev.html" . -}}
+  {{ end }}

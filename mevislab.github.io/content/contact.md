@@ -1,17 +1,19 @@
 ---
-title: "Contact Us"
+title: "Contact"
 date: 2022-06-15T08:54:53+02:00
 draft: false
 ---
-# Contact Us
-## General Questions
-For general questions regarding MeVisLab and especially for feedback on this documentation, please contact [info(at)mevislab.de](mailto://info@mevislab.de).
+### Feedback is valuable and always appreciated! 
 
-## Licensing
-For sales information regarding licenses, please contact [sales(at)mevislab.de](mailto://sales@mevislab.de).
+#### MeVisLab Licensing
+Having any questions on MeVisLab Licensing? Please contact the [MeVisLab Sales Team](mailto://sales@mevislab.de)
 
-## Online Forum
-Additional support is available in the [MeVisLab Forum](https://forum.mevislab.de).
+#### MeVisLab forum
+Searching for a forum to ask your specific MeVisLab questions? Having trouble with functionalities? Ask [here](https://forum.mevislab.de)! Someone else might know the answer. If not - one of our developers will help you out!
 
-## YouTube
-In addition to that, you can also have a look at our [YouTube channel](https://www.youtube.com/channel/UCUGi64NseroIGjga8l7EX8g).
+#### General Questions
+General questions regarding MeVisLab? Don't hesitate to contact the [MeVisLab Team](mailto://info@mevislab.de).
+
+#### YouTube
+Also: If you haven't yet - have a look at our [YouTube Channel](https://www.youtube.com/channel/UCUGi64NseroIGjga8l7EX8g). You will find a variety of helpful tutorials provided to you by the MeVisLab Team.
+

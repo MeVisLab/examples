@@ -4,15 +4,15 @@ date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
 weight: 410
-tags: ["Beginner", "Tutorial", "Macro", "Macro Modules", "Global Macro", "User Interface", "GUI"]
+tags: ["Beginner", "Tutorial", "Macro", "Macro modules", "Global Macro", "User Interface", "GUI"]
 menu: 
   main:
     identifier: "gui_development"
-    title: "Custom User Interfaces for Macro Modules."
+    title: "Custom User Interfaces for Macro modules."
     weight: 410
     parent: "macro_modules"
 ---
-# Example 2.4: Building a Panel Layout: Interactions with Macro Modules
+# Example 2.4: Building a Panel Layout: Interactions with Macro modules
 
 {{< youtube "tdQUkkROWBg">}}
 
@@ -36,7 +36,7 @@ The *Automatic Panel* contains fields, as well as module in and outputs. In this
 
 ![Automatic Panel](/images/tutorials/basicmechanics/GUI_10.png "Automatic Panel")
 
-To add and edit a panel, open the context menu and select {{< menuitem "Related Files" "Filter.script" >}}. The text-editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the file *Filter.script*, which you can edit to define a custom User Interface for the Module.
+To add and edit a panel, open the context menu and select {{< menuitem "Related Files" "Filter.script" >}}. The text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the file *Filter.script*, which you can edit to define a custom User Interface for the Module.
 
 ![Module script file](/images/tutorials/basicmechanics/GUI_11.png "Module script file")
 
@@ -84,7 +84,7 @@ To create your own User Interface, we need to create a {{< docuLinks "/Resources
 
 Initially, we call the window *MyWindowTitle*, which can be used to reference this window.
 
-Double-clicking {{< mousebutton "left" >}} on your Module now opens your first self developed User Interface.
+Double-clicking {{< mousebutton "left" >}} on your module now opens your first self developed User Interface.
 
 [//]: <> (MVL-653)
 {{< highlight filename="Filter.script" >}}
@@ -184,7 +184,7 @@ a Table, a Grid, a Button, \... . To find out more, take a look into the {{< doc
 Until now, we learned how to create the layout of a panel. As a next step, we like to get an overview over interactions.
 
 {{<alert class="info" caption="Extra Infos">}}
-You can add the Module `GUIExample` to your workspace and play around with is.
+You can add the module `GUIExample` to your workspace and play around with is.
 {{</alert>}}
 
 #### Access to existing fields of the internal network
@@ -288,7 +288,7 @@ Commands {
 {{</highlight>}}
 
 {{<alert class="info" caption="Infos">}}
-The section Source should already be available and generated automatically in case you enable the Wizard to add a Python file to your Module.
+The section Source should already be available and generated automatically in case you enable the Wizard to add a Python file to your module.
 {{</alert>}}
 
 [//]: <> (MVL-653)

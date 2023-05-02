@@ -24,7 +24,7 @@ image.
 ### Develop your network
 Use the network from the [contour example 2](/tutorials/dataobjects/contours/contourexample2) and add the modules `VoxelizeCSO`,
 `SoView2DOverlay` and `View2D` to your workspace. Connect the module as
-shown. The module `VoxelizeCSO` allows to convert CSOs into voxel-images.
+shown. The module `VoxelizeCSO` allows to convert CSOs into voxel images.
 
 ![Data Objects Contours Example 3](/images/tutorials/dataobjects/contours/DO3_02.png "Data Objects Contours Example 3")
 

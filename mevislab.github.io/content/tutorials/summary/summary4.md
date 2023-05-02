@@ -8,21 +8,21 @@ tags: ["Advanced", "Tutorial", "Prototyping", "Automated Tests", "Python"]
 menu: 
   main:
     identifier: "summaryexample4"
-    title: "Test your Macro Module in MeVisLab. Your requirements are translated into test cases written in Python."
+    title: "Test your Macro module in MeVisLab. Your requirements are translated into test cases written in Python."
     weight: 820
     parent: "summary"
 ---
 # Step 4: Review - Automated Tests
 ## Introduction
-In the previous chapters you developed a Macro Module with User Interface and Python scripting. In this step you will see how to implement an automated test to verify and validate the Requirements defined in [Overview](/tutorials/summary).
+In the previous chapters you developed a Macro module with User Interface and Python scripting. In this step you will see how to implement an automated test to verify and validate the Requirements defined in [Overview](/tutorials/summary).
 
 ## Steps to do
-### Create a test network using your Macro Module
+### Create a test network using your Macro module
 Create a new and empty network and save it as \*.mlab file. Remember the location.
 
-Use Module Search and add your Macro Module developed in previous steps to your Workspace.
+Use Module Search and add your Macro module developed in previous steps to your Workspace.
 
-![Macro Module](/images/tutorials/summary/Example4_1.png "Macro Module")
+![Macro module](/images/tutorials/summary/Example4_1.png "Macro module")
 
 You can see that the module does not have any inputs or outputs. You cannot connect it to other modules. For testing purposes it makes sense to provide the viewers and images as outputs so that you can use them for generating screenshots.
 
@@ -42,14 +42,14 @@ Interface {
 ```
 {{</highlight>}}
 
-![Macro Module with outputs](/images/tutorials/summary/Example4_2.png "Macro Module with outputs")
+![Macro module with outputs](/images/tutorials/summary/Example4_2.png "Macro module with outputs")
 
-You can now add a viewer or any other module to your Macro Module and use them for testing. In our example, we add a `CalculateVolume` module to the segmentation mask and a `SoCameraInteraction` with two `OffscreenRenderer` modules to the 3D output. In the end, we need an `ImageCompare` module to compare expected and real image in our test.
+You can now add a viewer or any other module to your Macro module and use them for testing. In our example, we add a `CalculateVolume` module to the segmentation mask and a `SoCameraInteraction` with two `OffscreenRenderer` modules to the 3D output. In the end, we need an `ImageCompare` module to compare expected and real image in our test.
 
 ![Test Network](/images/tutorials/summary/Example4_3.png "Test Network")
 
 ### Create test case
-Open MeVisLab TestCaseManager via {{< menuitem "File" "Run TestCaseManager..." >}}. On tab *Test Creation* define a name of your test case, for example *TutorialSummaryTest*. Select Type as *Macros*, define the package and use the same as for your Macro Module, select *Import Network* and Select your saved \*.mlab file from the step above. Click *Create*.
+Open MeVisLab TestCaseManager via {{< menuitem "File" "Run TestCaseManager..." >}}. On tab *Test Creation* define a name of your test case, for example *TutorialSummaryTest*. Select Type as *Macros*, define the package and use the same as for your Macro module, select *Import Network* and Select your saved \*.mlab file from the step above. Click *Create*.
 
 ![Test Creation](/images/tutorials/summary/Example4_4.png "Test Creation")
 
@@ -82,7 +82,7 @@ We define the path to a file to be loaded. The function *loadImage* sets the *op
 
 The arrays for the marker location and color will be used later.
 
-Next we need a function to check if the loaded image available at the first output of our Macro Module (*out2D*) is valid.
+Next we need a function to check if the loaded image available at the first output of our Macro module (*out2D*) is valid.
 
 {{< highlight filename="<TEST_CASE_NAME>.py" >}}
 ```Python
@@ -98,7 +98,7 @@ def isImageValid():
 ```
 {{</highlight>}}
 
-We also need to set a marker in our Macro Module.
+We also need to set a marker in our Macro module.
 
 {{< highlight filename="<TEST_CASE_NAME>.py" >}}
 ```Python
@@ -116,7 +116,7 @@ def setMarkerPosition(vector):
 ```
 {{</highlight>}}
 
-The *setMarkerPosition* function gets a 3-dimensional vector and sets the *markerPosition* field of our module. Then the *applyMarker* trigger is touched. As the region growing algorithm might need some time to segment, we need to wait until the *outSegmentationMask* output field is valid, meaning that there is a valid segmentation mask at the segmentation mask output of our Macro Module.
+The *setMarkerPosition* function gets a 3-dimensional vector and sets the *markerPosition* field of our module. Then the *applyMarker* trigger is touched. As the region growing algorithm might need some time to segment, we need to wait until the *outSegmentationMask* output field is valid, meaning that there is a valid segmentation mask at the segmentation mask output of our Macro module.
 
 Finally, we need to reset the application to its initial state, so that each test case has the initial start conditions of the application. A test case should never depend on another test case so that they all can be executed exclusively.
 
@@ -133,7 +133,7 @@ def reset():
 ```
 {{</highlight>}}
 
-For a reset, we just touch the *resetApplication* field of our Macro Module `TutorialSummary`.
+For a reset, we just touch the *resetApplication* field of our Macro module `TutorialSummary`.
 
 #### Requirement 1: The application shall be able to load DICOM data
 The first requirement we want to test is the possibility to load DICOM data. After setting the file to be loaded, the output provides a valid image. Resetting the application shall unload the image.
@@ -266,7 +266,7 @@ def TEST_OverlayColor():
 ```
 {{</highlight>}}
 
-Again, we reset the application to an initial state, load the image and set a marker. We remember the initial color and set a new color for our Macro Module. Then we check if the new color differs from the old color and if the colors used by the internal modules `SoWEMRendererSegmentation` and `SoView2DOverlay` changed to our new color.
+Again, we reset the application to an initial state, load the image and set a marker. We remember the initial color and set a new color for our Macro module. Then we check if the new color differs from the old color and if the colors used by the internal modules `SoWEMRendererSegmentation` and `SoView2DOverlay` changed to our new color.
 
 Finally an image comparison is done for the 3D rendering using the old and the new color. The images shall differ.
 
@@ -399,8 +399,8 @@ Logging.showFile("Link to screenshot file", result)
 {{</highlight>}}
 
 ## Summary
-* Define accessible fields for Macro Modules so that they can be set in Python tests
-* Add outputs to your Macro Modules for automated testing and connecting testing modules
+* Define accessible fields for Macro modules so that they can be set in Python tests
+* Add outputs to your Macro modules for automated testing and connecting testing modules
 * Testcase numbering allows you to sort them and define execution order
 
 {{<alert class="info" caption="Info">}}

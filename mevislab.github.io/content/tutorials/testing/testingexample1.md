@@ -70,7 +70,7 @@ The *filePath* defines the DICOM files to load by using the `DicomImport` module
 
 The *OpenFiles* function defines the `DicomImport` field *inputMode* to be a *Directory*. In case you want to open single files, set this field value to *Files*. Then the *source* field is set to your previously defined *filePath*. After clicking *triggerImport*, the `DicomImport` module needs some time to load all images in the directory and process the DICOM tree. We have to wait until the field *ready* is *TRUE*. While the import is not ready, we wait for 1 millisecond and check again.
 
-*MLAB.processEvents()* lets MeVisLab continue execution while waiting for the `DicomImport`to be ready.
+*MLAB.processEvents()* lets MeVisLab continue execution while waiting for the `DicomImport` to be ready.
 
 In case you get error messages in MeVisLab console about invalid DICOM tags, you can ignore these errors by calling *Base.ignoreWarningAndError(MLAB.processEvents)* instead of *MLAB.processEvents()*.
 
@@ -92,7 +92,7 @@ After the test finished execution, the ReportViewer opens automatically showing 
 
 
 ### Writing a test for global macro modules
-Writing automated tests for global macro modules works a little different. If you create a global macro module from your above network (for details, see [Example 2.2: Global Macro Modules](/tutorials/basicmechanisms/macromodules/globalmacromodules/)), the Python script remains the same, just the module access differs. You always need the name of your macro module as a prefix.
+Writing automated tests for global macro modules works a little different. If you create a global macro module from your above network (for details, see [Example 2.2: Global Macro modules](/tutorials/basicmechanisms/macromodules/globalmacromodules/)), the Python script remains the same, just the module access differs. You always need the name of your macro module as a prefix.
 
 {{< highlight filename="NetworkTestCase.py" >}}
 ```Python

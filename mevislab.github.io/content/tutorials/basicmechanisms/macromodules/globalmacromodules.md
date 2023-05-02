@@ -1,19 +1,19 @@
 ---
-title: "Example 2.2: Creation of Global Macro Modules"
+title: "Example 2.2: Creation of Global Macro modules"
 date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
 weight: 390
-tags: ["Beginner", "Tutorial", "Macro", "Macro Modules", "Global Macro"]
+tags: ["Beginner", "Tutorial", "Macro", "Macro modules", "Global Macro"]
 menu: 
   main:
     identifier: "globalmacromodules"
-    title: "Creation of Global Macro Modules from local Macro and via Project Wizard"
+    title: "Creation of Global Macro modules from local Macro and via Project Wizard"
     weight: 390
     parent: "macro_modules"
 ---
 
-# Example 2.2: Global Macro Modules
+# Example 2.2: Global Macro modules
 
 {{< youtube "M4HnA0d1V5k">}}
 
@@ -54,7 +54,7 @@ Make sure to chose *Directory Structure* as *self-contained*. This makes sure th
 ![Create global macro module](/images/tutorials/basicmechanics/GUI_04.png "Create global macro module")
 
 ### Use the Project Wizard to create global macro modules
-Instead of converting a local macro module into a global macro module, you can also use the *Project Wizard* to create new macro modules. Open the Project Wizard via {{< menuitem "File" "Run Project Wizard ..." >}}. Then, select {{< menuitem "Modules (Scripting)" "Macro Module" >}} and *Run Wizard*.
+Instead of converting a local macro module into a global macro module, you can also use the *Project Wizard* to create new macro modules. Open the Project Wizard via {{< menuitem "File" "Run Project Wizard ..." >}}. Then, select {{< menuitem "Modules (Scripting)" "Macro module" >}} and *Run Wizard*.
 
 ### Define module properties
 

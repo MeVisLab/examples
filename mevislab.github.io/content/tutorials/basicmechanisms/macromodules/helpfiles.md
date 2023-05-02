@@ -4,7 +4,7 @@ date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
 weight: 400
-tags: ["Beginner", "Tutorial", "Macro", "Macro Modules", "Global Macro", "Help"]
+tags: ["Beginner", "Tutorial", "Macro", "Macro modules", "Global Macro", "Help"]
 menu: 
   main:
     identifier: "helpfiles"
@@ -14,7 +14,7 @@ menu:
 ---
 # Example 2.3: Creation of module help
 
-Generating help of a Macro Module is part of the video about Macro Modules from [Example 2: Creation of Global Macro Modules](/tutorials/basicmechanisms/macromodules/globalmacromodules)
+Generating help of a Macro module is part of the video about Macro modules from [Example 2: Creation of Global Macro modules](/tutorials/basicmechanisms/macromodules/globalmacromodules)
 {{< youtube "M4HnA0d1V5k">}}
 
 ## Introduction

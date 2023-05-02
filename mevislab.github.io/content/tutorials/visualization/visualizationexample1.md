@@ -20,7 +20,7 @@ The module `SynchroView2D` provides two 2D viewers that are synchronized.
 
 As in Tutorial [Chapter 1 - Basic Mechanics of MeVisLab](/tutorials/basicmechanisms/#TutorialParameterConnection), the processed and the unprocessed image can be displayed simultaneously. Scrolling through one image automatically changes the slices of both viewers, so slices with the same slice number are shown in both images.
 
-The difference is that we are now using an already existing Module named `SynchroView2D`.
+The difference is that we are now using an already existing module named `SynchroView2D`.
 
 {{<alert class="info" caption="Extra Infos">}}
 
