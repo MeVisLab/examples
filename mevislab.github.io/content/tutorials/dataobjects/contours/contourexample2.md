@@ -13,6 +13,9 @@ menu:
     parent: "contours"
 ---
 # Contour Example 2: Creating Contours using Live Wire and Interpolation {#TutorialContoursExample2}
+
+{{< youtube "l2ih_maKfSw">}}
+
 ## Introduction
 
 In this example, we like to create CSOs using the **Live Wire
