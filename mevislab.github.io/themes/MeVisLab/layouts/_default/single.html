@@ -1,11 +1,6 @@
 {{ define "main" }}
-
-<div class="container pb-5 pt-3">
-
-  <div class="container-fluid overflow-hidden">
-    <div class="row vh-auto overflow-auto">
-      <div class="col d-flex flex-column h-sm-auto">
-          <div class="col px-6">
+<div class="d-flex p-3">
+  <div class="p-3">
       {{- with .Params.tags -}}
         {{- if ge (len .) 1 -}}
             {{- range . -}}
@@ -25,12 +20,9 @@
         {{- end -}}
     {{- end -}}
     {{ .Content }}
-          </div>
-          {{- partial "nextprev.html" . -}}
-      </div>
-    </div>
   </div>
 </div>
+
 <script>
 const body_element = document.querySelector('html body');
 const modal_div = document.createElement("div");
@@ -58,4 +50,5 @@ hljs.addPlugin(
 );
 
 </script>
+{{- partial "nextprev.html" . -}}
 {{ end }}

@@ -1,24 +1,24 @@
 {{ define "main" }}
-<div class = "flexbox p-3">
-    <div style="margin-left: 100px; margin-right: 50px">
+<div class="d-flex p-3">
+    <div class="p-3">
       
       {{- with .Params.tags -}}
-    {{- if ge (len .) 1 -}}
-        {{- range . -}}
-          {{ $tagstring := lower . }}
-          {{ $tagstring := replace $tagstring " " "-" }}
-          {{ if eq . "Beginner" }}
+        {{- if ge (len .) 1 -}}
+          {{- range . -}}
+            {{ $tagstring := lower . }}
+            {{ $tagstring := replace $tagstring " " "-" }}
+            {{ if eq . "Beginner" }}
         <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-success">{{ . }}</span></a>
-          {{ else if eq . "Advanced" }}
-          <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-warning">{{ . }}</span></a>
-          {{ else if eq . "Expert" }}
-          <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-danger">{{ . }}</span></a>
-          {{ else }}
-          <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-secondary">{{ . }}</span></a>
-          {{ end }}
+            {{ else if eq . "Advanced" }}
+        <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-warning">{{ . }}</span></a>
+            {{ else if eq . "Expert" }}
+        <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-danger">{{ . }}</span></a>
+            {{ else }}
+        <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-secondary">{{ . }}</span></a>
+            {{ end }}
           {{ end -}}
-    {{- end -}}
-{{- end -}}
+        {{- end -}}
+      {{- end -}}
 
       <h2>Glossary</h2>
       <p>
@@ -67,7 +67,7 @@
       </p>
     </div>
 
-  <div style="margin-left: 50px; margin-right: 100px">
+  <div class="p-3">
     {{.Content}}
   </div>
 </div>
