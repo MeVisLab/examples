@@ -14,6 +14,9 @@ menu:
 ---
 
 # Contour Example 1: Creation of Contours {#TutorialContoursExample1}
+
+{{< youtube "ygYJMmQ95v8">}}
+
 ## Introduction
 
 We like to start with the creation of CSOs. To create CSOs, you need a `SoCSO*`-Editor. There are several different editors, which can be used to create CSOs (see [here](tutorials/dataobjects/contourobjects#CSOEditors)). Some of them are introduced in this example.
