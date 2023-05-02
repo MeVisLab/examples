@@ -1,8 +1,8 @@
 {{ define "main" }}
-<div class = "flexbox p-3">
-  <div style="margin-left: 100px; margin-right: 50px">
+<div class="d-flex p-3">
+  <div class="p-3 w-75">
   {{- with .Params.tags -}}
-  {{- if ge (len .) 1 -}}
+    {{- if ge (len .) 1 -}}
       {{- range . -}}
         {{ $tagstring := lower . }}
         {{ $tagstring := replace $tagstring " " "-" }}
@@ -16,21 +16,23 @@
         <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-secondary">{{ . }}</span></a>
         {{ end }}
         {{ end -}}
+    {{- end -}}
   {{- end -}}
-{{- end -}}
 
   {{.Content}}
   </div>
-    <div class="accordion">
-      <div class="accordion-item" style="position: sticky; top: 0px">
+  <div class="p-3 w-25">
+    <div class="accordion sticky-top">
+      <div class="accordion-item">
         <h2>
-          <button class="accordion-button collapsed my-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
             <b>Glossary</b>
           </button>
         </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div id="collapseTwo" class="accordion-collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
           <div class="accordion-body">
             {{ partial "glossarycontents.html" . }}
+          </div>
         </div>
       </div>
     </div>
@@ -38,10 +40,6 @@
 </div>
 
 <!--Umbruch-->
-
-<div class="w-100"></div>
-
-<div style="width: 100%">
 <script>
   const body_element = document.querySelector('html body');
   const modal_div = document.createElement("div");
@@ -70,6 +68,4 @@
   
   </script>
   {{- partial "nextprev.html" . -}}
-</div>
-</div>
   {{ end }}

@@ -201,22 +201,22 @@
                   {{ .Title }}
                 </a>
             
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu" style="z-index:1800">
                   {{ range .Children }}
                     {{ if .HasChildren }}
                     <li>
                       <a class="dropdown-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">{{ .Name }} &raquo;</a>
-                      <ul class="dropdown-menu dropdown-submenu">
+                      <ul class="dropdown-menu dropdown-submenu" style="z-index:1800">
                       {{ range .Children }}
                       {{ if .HasChildren }}
                       <li>
                         <a class="dropdown-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">{{ .Name }} &raquo;</a>
-                        <ul class="dropdown-menu dropdown-submenu">
+                        <ul class="dropdown-menu dropdown-submenu" style="z-index:1800">
                         {{ range .Children }}
                         {{ if .HasChildren }}
                         <li>
                           <a class="dropdown-item {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">{{ .Name }} &raquo;</a>
-                          <ul class="dropdown-menu dropdown-submenu">
+                          <ul class="dropdown-menu dropdown-submenu" style="z-index:1800">
                           {{ range .Children }}
                             <li>
                               <a class="dropdown-item" href="{{ .URL }}">{{ .Name }}</a>
@@ -268,7 +268,7 @@
       </div>
     </div>
     
-    <div class="autocomplete-dropdown-container" id="custom-search-results" data-popper-placement="bottom" style="width: 100px; position: absolute; inset: 0px 0px auto 0px; margin-left: 4px; transform: translate3d(400px, 60px, 0px);">
+    <div class="autocomplete-dropdown-container" id="custom-search-results" data-popper-placement="bottom" style="width: 100px; position: absolute; inset: 0px 0px auto 0px; margin-left: 4px; transform: translate3d(400px, 60px, -1px); z-index: 1800">
       <div class="dropdown-menu dropdown-submenu">
       </div>
     </div>
@@ -315,7 +315,7 @@
         err_filefailed : '<p style="text-align: center;color: red;">Error.</p>',
         res_one_item   : '<p><em>[CNT] RESULT</em></p>',
         res_more_items : '<p><em>[CNT] RESULTS</em></p>',
-        res_out_top    : '<ul class="dropdown-menu show">',
+        res_out_top    : '<ul class="dropdown-menu show" style="z-index:1800">',
         res_out_bottom : '</ul>',
         res_item_tpl   : '<a class="dropdown-item" href="[URL]">[TITLE]</a>',
         add_searchlink : '<p></p>'
