@@ -46,11 +46,10 @@ For our tutorials, we need to install *torch* and *torchvision*. Enter *torch to
 
 {{<alert class="info" caption="Info">}}
 We are using the CPU version of PyTorch for our tutorials, because it shall be possible to execute all steps without having a large GPU. In case you have a GPU with CUDA support, you can install the necessary packages by using the PyTorch documentation available [here](https://pytorch.org/get-started/locally "PyTorch documentation").
-torch torchvision --index-url https://download.pytorch.org/whl/cu117
 {{</alert>}}
 
 Example for CUDA support:
-{{< highlight filename="Command: pip install" >}}
+{{< highlight filename="Command" >}}
 ```txt
 torch torchvision --index-url https://download.pytorch.org/whl/cu117
 
@@ -59,6 +58,8 @@ torch torchvision --index-url https://download.pytorch.org/whl/cu117
 
 {{<alert class="info" caption="Attention">}}
 If you are behind a proxy, you may have to set the **HTTP_PROXY** and **HTTPS_PROXY** environment variables to the hostname and port of your proxy. These are used by pip when accessing the internet.
+
+Alternatively you can also add a parameter to *pip install* command: *--proxy https://proxy:port*
 {{</alert>}}
 
 ![Install torch and torchvision](/images/tutorials/thirdparty/pytorch_example1_4.png "Install torch and torchvision")
