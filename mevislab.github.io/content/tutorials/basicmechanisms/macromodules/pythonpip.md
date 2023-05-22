@@ -43,6 +43,8 @@ The module `PythonPip` can be found via module search. It provides a user interf
 
 Select the package to install the Python package into, write the name of the package and click install.
 
+In case you want to install a specific version, you can also use *<PACKAGE>==1.2.0*
+
 {{<alert class="info" caption="Attention">}}
 We strongly recommend to install the packages into a MeVisLab user package. This has many advantages:
 * User packages can be updated without administrator privileges
@@ -68,3 +70,6 @@ The commandline option does not provide the possibility to install into a specif
 {{</alert>}}
 
 In [Example 1: Install PyTorch by using the PythonPip module](/tutorials/thirdparty/pytorch/pytorchexample1/) we are installing PyTorch to use it in MeVisLab scripting.
+
+## Summary
+* The module `PythonPip` allows you to install additional Python packages for using them in MeVisLab

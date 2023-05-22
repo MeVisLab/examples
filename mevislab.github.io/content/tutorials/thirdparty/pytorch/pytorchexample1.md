@@ -3,21 +3,21 @@ title: "Example 1: Install PyTorch by using the PythonPip module"
 date: 2023-05-16
 status: "OK"
 draft: false
-weight: 855
+weight: 860
 tags: ["Advanced", "Tutorial", "PyTorch", "Python", "PythonPip", "AI"]
 menu: 
   main:
     identifier: "pytorchexample1"
     title: "Install PyTorch by using the PythonPip module."
-    weight: 893
+    weight: 860
     parent: "pytorch"
 ---
 # Example 1: Install PyTorch by using the PythonPip module
 
 ## Introduction
-The module `PythonPip` allows you to install additional Python packages to be used in MeVisLab. You should not use the general Python *pip* command, because MeVisLab will not know these packages and they cannot be used in MeVisLab directly.
+The module `PythonPip` allows you to install additional Python packages to be used in MeVisLab. You should not use the general Python *pip* command from locally installed Python, because MeVisLab will not know these packages and they cannot be used in MeVisLab directly.
 
-The module either allows to install packages into the global MeVisLab installation directory, or into your defined user package. We will use the user package directory, because then the installed packages remain available in your packages even if you uninstall or update MeVisLab. In addition to that, no administrative rights are necessary if you install into a user directory.
+The module either allows to install packages into the global MeVisLab installation directory, or into your defined user package. We will use the user package directory, because then the installed packages remain available in your packages even if you uninstall or update MeVisLab. In addition to that, no administrative rights are necessary if you did install MeVisLab for all users.
 
 {{<alert class="warning" caption="Warning">}}
 Installing additional Python packages into MeVisLab by using the `PythonPip` module requires administrative rights if you do not install into a user package. In addition to that, the installed packages are removed when uninstalling MeVisLab.
@@ -57,7 +57,7 @@ torch torchvision --index-url https://download.pytorch.org/whl/cu117
 {{</highlight>}}
 
 {{<alert class="info" caption="Attention">}}
-If you are behind a proxy, you may have to set the **HTTP_PROXY** and **HTTPS_PROXY** environment variables to the hostname and port of your proxy. These are used by pip when accessing the internet.
+If you are behind a proxy server, you may have to set the **HTTP_PROXY** and **HTTPS_PROXY** environment variables to the hostname and port of your proxy. These are used by pip when accessing the internet.
 
 Alternatively you can also add a parameter to *pip install* command: *--proxy https://proxy:port*
 {{</alert>}}
