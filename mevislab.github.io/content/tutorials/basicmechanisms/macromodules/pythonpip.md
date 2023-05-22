@@ -20,9 +20,7 @@ The `PythonPip` module allows to work with the Python package manager pip. It ca
 
 It provides the full Python package eco-system to MeVisLab, but it has some drawbacks:
 
-* packages can contain C-Extensions (since we use the same MSVC compiler resp. same GCC settings as Python 3 itself)
-* *but* you can only install packages that do not interfere with packages or DLLs that are already part of MeVisLab
-* this means that installing packages with C-Extensions might work in many circumstances, but is not guaranteed to work
+* packages can contain C-Extensions (since we use the same MSVC compiler resp. same GCC settings as Python 3 itself), *but* you can only install packages that do not interfere with packages or DLLs that are already part of MeVisLab. This means that installing packages with C-Extensions might work in many circumstances, but is not guaranteed to work
 * **all installed packages with C-Extensions are release only**, so you can only import them in a release MeVisLab (under Windows)
 
 {{<alert class="info" caption="Attention">}}
