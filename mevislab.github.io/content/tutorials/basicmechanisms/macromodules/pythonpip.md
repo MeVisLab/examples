@@ -50,7 +50,7 @@ We strongly recommend to install the packages into a MeVisLab user package. This
 * User packages remain available after uninstalling and/or updating MeVisLab
 * It is possible to install multiple versions of the Python packages into different user packages. Possible conflicts will be shown in the `PythonPip` module panel.
 
-The only disadvantage being that Python commands will not be recognized outside of MeVisLab by default. 
+The only disadvantage: Python commands will not be recognized outside of MeVisLab by default. 
 {{</alert>}}
 
 Thirdparty information and *\*.mli* files are updated automatically.

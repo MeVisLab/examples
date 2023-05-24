@@ -18,7 +18,7 @@ menu:
 The module `PythonPip` allows you to install additional Python packages to be used in MeVisLab. 
 
 {{<alert class="warning" caption="Warning">}}
-You should not use the general Python *pip* command from locally installed Python, because MeVisLab will not know these packages and they cannot be used in MeVisLab directly.
+You should not use the general Python *pip* command from a locally installed Python, because MeVisLab will not know these packages and they cannot be used in MeVisLab directly.
 {{</alert>}}
 
 The module either allows to install packages into the global MeVisLab installation directory, or into your defined user package. We will use the user package directory, because then the installed packages remain available in your packages even if you uninstall or update MeVisLab. In addition to that, no administrative rights are necessary if you did install MeVisLab for all users.

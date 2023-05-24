@@ -18,7 +18,7 @@ menu:
 This tutorial is based on [Example 2: Face Detection with OpenCV](/tutorials/thirdparty/opencv/thirdpartyexample2 "Example 2: Face Detection with OpenCV"). You can re-use some of the scripts already developed in the other tutorial.
 
 ## Steps to do
-Add the macro module developed in previous example to your workspace.
+Add the macro module developed in the previous example to your workspace.
 
 ![WebCamTest module](/images/tutorials/thirdparty/pytorch_example3_1.png "WebCamTest module")
 
@@ -26,25 +26,25 @@ Open the internal network of the module via middle mouse button {{< mousebutton 
 
 ![Show Enclosing Folder](/images/tutorials/thirdparty/pytorch_example3_2.png "Show Enclosing Folder")
 
-The explorer opens showing the files of your macro module. Copy the *\*.mlab* file somewhere you can remember.
+The file browser opens showing the files of your macro module. Copy the *\*.mlab* file somewhere you can remember.
 
 ### Create the macro module
-Open the the Project Wizard via {{< menuitem "File" "Run Project Wizard">}} and select *Macro Module*. Click *Run Wizard*.showing the internal network.
+Open the the Project Wizard via {{< menuitem "File" "Run Project Wizard">}} and select *Macro Module*. Click *Run Wizard*.
 
 ![Project Wizard](/images/tutorials/thirdparty/pytorch_example3_3.png "Project Wizard")
 
-Define module properties as seen below, you can chose any name you like. Click *Next*.
+Define the module properties as shown below, though you can chose your own name. Click *Next*.
 
 ![Module Properties](/images/tutorials/thirdparty/pytorch_example3_4.png "Module Properties")
 
-Define macro module properties and select the copied *\*.mlab* file. Make sure to add a Python file and click *Next*.
+Define the module properties and select the copied *\*.mlab* file. Make sure to add a Python file and click *Next*.
 
 ![Macro Module Properties](/images/tutorials/thirdparty/pytorch_example3_5.png "Macro Module Properties")
 
 Leave the module field reference as is and click *Create*. Close Project Wizard and select {{< menuitem "Extras" "Reload Module Database (Clear Cache)">}}.
 
 ### Re-use script and Python code
-Open the script file of the `WebCamTest` module and copy to your new PyTorch module. The result should be something like this:
+Open the script file of the `WebCamTest` module and copy the contents to your new PyTorch module. The result should be something like this:
 
 {{< highlight filename="PyTorchSegmentationExample.script" >}}
 ```Stan

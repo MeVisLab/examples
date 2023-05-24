@@ -36,7 +36,7 @@ PyTorch is not directly integrated into MeVisLab. These tutorials additionally e
 * remove red eyes from images taken using flash,
 * follow eye movements,
 * recognize scenery and
-* establish markers to overlay it with augmented reality, etc.
+* establish markers to overlay with augmented reality, etc.
 
 ### assimp
 The [THE ASSET IMPORTER LIBRARY](http://www.assimp.org/) supports loading and processing geometric scenes from various well known 3D formats. MeVisLab uses assimp to import these files and use the scenes directly in MeVisLab.
@@ -52,6 +52,6 @@ The tutorials available here shall provide examples how to integrate AI into MeV
 [Matplotlib](https://matplotlib.org/) is a library for creating static, animated, and interactive visualizations in Python.
 
 * Create publication quality plots.
-* Make interactive figures that can zoom, pan, update.
+* Make interactive figures that can be zoomed, panned and updated.
 * Customize visual style and layout.
 * Export to many file formats.

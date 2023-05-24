@@ -5,7 +5,7 @@ category: "thirdparty"
 ---
 
 # ThirdParty Example 5: Segmentation in webcam stream by using PyTorch
-This macro module segments a person in a webcam stream by using a pre trained network from PyTorch (torchvision).
+This macro module segments a person shown in a webcam stream by using a pre-trained network from PyTorch (torchvision).
 
 ![Screenshot](/images/tutorials/thirdparty/pytorch_example3_10.png)
 
