@@ -206,6 +206,4 @@ Opening your macro module via double-click {{< mousebutton "left" >}} should now
 * OpenCV can be used in MeVisLab via Python scripting
 * Images and videos from OpenCV can be used in MeVisLab networks
 
-{{<alert class="info" caption="Info">}}
-You can download the Python file [here](/examples/thirdparty/example1/OpenCVExample.zip)
-{{</alert>}}
+{{< networkfile "examples/thirdparty/example1/OpenCVExample.zip" >}}

@@ -324,6 +324,4 @@ The final result of the segmentation should be a semi-transparent red overlay of
 * PyTorch trained networks can be used directly in MeVisLab via `PythonImage` module.
 * You can integrate AI algorithms into your MeVisLab networks.
 
-{{<alert class="info" caption="Info">}}
-You can download the Python file [here](/examples/thirdparty/pytorch1/PyTorchSegmentationExample.zip)
-{{</alert>}}
+{{< networkfile "examples/thirdparty/pytorch1/PyTorchSegmentationExample.zip" >}}
