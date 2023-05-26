@@ -14,9 +14,7 @@ menu:
 ---
 # Matplotlib
 
-Matplotlib, introduced by John Hunter in 2002 and initially released in 2003, is a comprehensive data visualization library in Python. It is widely used among the scientific world as it is easy to grasp for beginners and provides high quality plots and images, that are widely customizable. 
-
-The documentation on Matplotlib along with general examples, cheat sheets and a starting guide can be found [here](https://matplotlib.org/).
+Matplotlib, introduced by John Hunter in 2002 and initially released in 2003, is a comprehensive data visualization library in Python. It is widely used among the scientific world as it is easy to grasp for beginners and provides high quality plots and images, that are widely customizable. The documentation on Matplotlib along with general examples, cheat sheets and a starting guide can be found [here](https://matplotlib.org/).
 
 As MeVisLab supports the integration of Python scripts e. g. for test automation, Matplotlib can be used to visualize any data you might want to see. 
 
