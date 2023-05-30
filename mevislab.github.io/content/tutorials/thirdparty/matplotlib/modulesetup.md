@@ -71,7 +71,7 @@ Click the "Reload" button that is located above the script for the .py file to b
 ![MATE](/images/tutorials/thirdparty/Matplotlib5.png)
 
 {{<alert class="info" caption="Info">}}
-The [MDL Reference](https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/MDLReference/index.html) is a very handy tool for this and surely also for following projects. 
+The [MDL Reference](https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/MDLReference/index.html) is a very handy tool for this and certainly also for following projects. 
 {{</alert>}}
 
 You have now created your own module and enabled the .script file (hence the GUI or panel later on) to access functions and methods written in the .py file. 
