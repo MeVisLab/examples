@@ -1,3 +1,4 @@
+---
 title: "Example 2: Plotting in 2D"
 date: 2023-05-30
 status: "OK"
@@ -13,5 +14,9 @@ menu:
 ---
 # Example 2: Plotting in 2D
 
-## Instroduction 
+## Introduction 
+
+In this tutorial, we will equip the macro module we created in the [previous tutorial](/tutorials/thirdparty/matplotlib/modulesetup.md) with a responsive and interactable panel to plot grayscale distributions of single slices as well as defined sequences of slices in 2D.
+
+## Steps to do
 
