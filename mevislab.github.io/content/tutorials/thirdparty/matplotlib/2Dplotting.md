@@ -16,7 +16,7 @@ menu:
 
 ## Introduction 
 
-In this tutorial, we will equip the macro module we created in the [previous tutorial](/examples/tutorials/thirdparty/matplotlib/modulesetup.md/) with a responsive and interactable panel to plot grayscale distributions of single slices as well as defined sequences of slices in 2D.
+In this tutorial, we will equip the macro module we created in the [previous tuturial](/tutorials/thirdparty/matplotlib/modulesetup) with a responsive and interactable panel to plot grayscale distributions of single slices as well as defined sequences of slices in 2D.
 
 ## Steps to do
 
@@ -205,7 +205,7 @@ And then add this to your box titled "Sequence":
                 command = "click3D"}
 ``` {{</highlight>}}
 
-Lastly, put this under your boxes, but above the empty element in the vertical alignment:
+Lastly, put this under your two boxes, but above the empty element in the vertical alignment:
 {{< highlight filename = "BaseNetwork.script">}}
 ```Stan
   Field "Histogram.binSize"{
@@ -215,3 +215,101 @@ Lastly, put this under your boxes, but above the empty element in the vertical a
 
 If you followed all of the listed steps, your panel preview should look like this and display all the current parameter values. 
 ![Adapted macro panel](/images/tutorials/thirdparty/Matplotlib10.PNG)
+
+We can now work on the functions that visualize the data as plots on the Matplotlib canvas. 
+You will have noticed how all of the buttons in the .script file have a command. Whenever that button is clicked, its designated command is executed. However, for any of the via command referenced functions to work, we need one that ensures, that the plots are shown on the integrated Matplotlib canvas. We will start with that one.
+
+{{< highlight filename = "BaseNetwork.py">}}
+```Stan
+def initFigure(control):
+  figure = control.object().figure()
+
+def clearFigure():
+  control = ctx.control("canvas").object()
+  control.figure().clear()
+``` {{</highlight>}}
+
+Now that this is prepared and ready, we can add the functions to extract the data:
+
+{{< highlight filename = "BaseNetwork.py">}}
+```Stan
+def getX():
+  x = ctx.field("Histogram.outputHistogramCurve").object().getXValues()
+  stringx = ",".join([str(i) for i in x])
+  splittingx = stringx.split(",")
+  global xs
+  xs = [float(s) for s in splittingx]
+   
+def getY():
+  y = ctx.field("Histogram.outputHistogramCurve").object().getYValues()
+  stringy = ",".join([str(i) for i in y])
+  splittingy = stringy.split(",")
+  global ys
+  ys = [float(s) for s in splittingy] 
+``` {{</highlight>}}
+
+And lastly enable the plotting of a single slice as well as a sequence in 2D through our panel by adding the code below. 
+
+{{< highlight filename = "BaseNetwork.py">}}
+```Stan
+def singleSlice2D():
+  ctx.field("SubImage.z").value = endSlice
+  click2D()
+
+def plotSequence():
+  clearFigure()
+  figure = ctx.control("canvas").object().figure()
+  values = [i for i in range(startSlice, lastSlice)]
+  sub = 410
+  if len(values)<=4:
+    for i in values:      
+      sub = sub +1
+      ctx.field("SubImage.z").value = i
+      ctx.field("SubImage.sz").value = i
+      getY()
+      getX()
+      subplot = figure.add_subplot(sub)
+      subplot.bar(xs,ys,bins,color='r', label=f'Slice {i}')
+      subplot.legend()
+    figure.canvas.draw()
+  else:
+    for i in values:
+      ctx.field("SubImage.z").value = i
+      ctx.field("SubImage.sz").value = i
+      getX()
+      getY()
+      subplot = figure.add_subplot(111)
+      subplot.plot(xs, ys,bins,label=f'Slice {i}')
+      subplot.legend()
+    figure.canvas.draw()
+
+def click2D():
+  clearFigure()
+  figure = ctx.control("canvas").object().figure()
+  
+  if startSlice == endSlice:
+    getX()
+    getY()
+    subplot = figure.add_subplot(111)
+    subplot.bar(xs,ys,bins, color = 'b',label = f"Slice {endSlice}")
+    subplot.legend()
+    subplot.plot()
+    figure.canvas.draw()
+  else:
+    plotSequence()
+``` {{</highlight>}}
+
+You should now be able to reproduce results like these: 
+
+![Single Slice 2D](/images/tutorials/thirdparty/Matplotlib13.PNG "2D plot of slice 28")
+![Small Sequence 2D](/images/tutorials/thirdparty/Matplotlib11.PNG "Small sequence in 2D")
+![Sequence in 2D](/images/tutorials/thirdparty/Matplotlib12.PNG "Sequence in 2D")
+
+You can download the .py as well as the .script file below if you want. 
+{{< py "/tutorials/thirdparty/matplotlib/BaseNetwork.py" >}}
+{{< script "/tutorials/thirdparty/matplotlib/BaseNetwork.script" >}}
+
+### Summary 
++ Functions are connected to fields of the panel through commands
++ The panel preview in MATE can be used to alter positioning of panel components without touching the code
++ An "expand" statement can help the positioning of components in the panel
