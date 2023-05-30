@@ -170,4 +170,48 @@ Commands {
 } 
 ``` {{</highlight>}}
 
+To see if all of this is working, we need to embed fields into our panel. 
+Put this inside of the box titled "Single Slice":
 
+{{< highlight filename = "BaseNetwork.script">}}
+```Stan
+ Field "SubImage.sz"{
+                title = "Plot slice"
+            }
+              Button  { title = "in 2D"
+                command = "singleSlice2D"
+              }
+              Button {
+                title = "in 3D"
+                command = "singleSlice3D"
+          }
+              Empty{}
+``` {{</highlight>}}
+
+And then add this to your box titled "Sequence":
+
+{{< highlight filename = "BaseNetwork.script">}}
+```Stan
+ Field "SubImage.z"{
+                title = "From slice"
+              }
+              Field "SubImage.sz"{
+                title = "To slice"
+              }
+              Button{ title = "Plot 2D"
+                command = "click2D"
+              }
+              Button{ title = "Plot 3D"
+                command = "click3D"}
+``` {{</highlight>}}
+
+Lastly, put this under your boxes, but above the empty element in the vertical alignment:
+{{< highlight filename = "BaseNetwork.script">}}
+```Stan
+  Field "Histogram.binSize"{
+          title = "Bin size"
+        }
+``` {{</highlight>}}
+
+If you followed all of the listed steps, your panel preview should look like this and display all the current parameter values. 
+![Adapted macro panel](/images/tutorials/thirdparty/Matplotlib10.PNG)
