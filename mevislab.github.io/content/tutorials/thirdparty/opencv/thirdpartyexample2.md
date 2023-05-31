@@ -3,13 +3,13 @@ title: "Example 2: Face Detection with OpenCV"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
-weight: 856
+weight: 857
 tags: ["Advanced", "Tutorial", "OpenCV", "Python", "WebCam", "Face Detection"]
 menu: 
   main:
     identifier: "thirdpartyexample2"
     title: "Enhance OpenCV WebCam example and build a face detection using MeVisLab, OpenCV and Python."
-    weight: 856
+    weight: 857
     parent: "opencv"
 ---
 # Example 2: Face Detection with OpenCV

@@ -115,7 +115,4 @@ Create a global macro module and implement the following test objectives for bot
 * Tests can be executed on networks and macro modules
 * The test results are shown in a ReportViewer
 
-
-{{<alert class="info" caption="Info">}}
-You can download the Python files [here](/examples/testing/example1/TestCases.zip)
-{{</alert>}}
+{{< networkfile "examples/testing/example1/TestCases.zip" >}}

@@ -3,13 +3,13 @@ title: "Example 1: 3D Printing in MeVisLab"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
-weight: 872
+weight: 862
 tags: ["Beginner", "Tutorial", "assimp", "3D", "3D Printing", "stl"]
 menu: 
   main:
     identifier: "assimpexample1"
     title: "Open a 3D file and save the file or 3D scene as *.stl file for 3D printing."
-    weight: 872
+    weight: 862
     parent: "assimp"
 ---
 # Example 1: 3D Printing in MeVisLab
