@@ -27,4 +27,4 @@ In the following tutorial pages on Matplotlib, you will be shown how to create a
 + The module that is adapted during the tutorials is set up in the [Example 1: Module Setup](/tutorials/thirdparty/matplotlib/modulesetup) tutorial.
 + The panel and two dimensional plotting functionality is added in [Example 2: 2D Plotting](/tutorials/thirdparty/matplotlib/2dplotting).
 + In [Example 3: Slice Comparison](/tutorials/thirdparty/matplotlib/slicecomparison) the comparison between two chosen slices is enabled by overlaying their grayscale distributions. 
-+ [Example 4: 3D Plotting]() adds an additional three dimensional plotting functionality to the panel.
++ [Example 4: 3D Plotting](/tutorials/thirdparty/matplotlib/3dplotting) adds an additional three dimensional plotting functionality to the panel.
