@@ -1,5 +1,5 @@
 ---
-title: "Example 2: Plotting in 2D"
+title: "Example 2: 2D Plotting"
 date: 2023-05-30
 status: "OK"
 draft: false
@@ -8,11 +8,11 @@ tags: ["Advanced", "Tutorial", "Matplotlib", "Visualization"]
 menu: 
   main:
     identifier: "matplotlibexample2"
-    title: "Example 2: 2D Histogram Plotting"
+    title: "Example 2: 2D Plotting"
     weight: 882
     parent: "matplotlib"
 ---
-# Example 2: Plotting in 2D
+# Example 2: 2D Plotting
 
 ## Introduction 
 
