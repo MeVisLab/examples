@@ -236,16 +236,14 @@ Now that this is prepared and ready, we can add the functions to extract the dat
 def getX():
   x = ctx.field("Histogram.outputHistogramCurve").object().getXValues()
   stringx = ",".join([str(i) for i in x])
-  splittingx = stringx.split(",")
-  global xs
-  xs = [float(s) for s in splittingx]
+  xValues = stringx.split(",")
+  return [float(s) for s in xValues]
    
 def getY():
   y = ctx.field("Histogram.outputHistogramCurve").object().getYValues()
   stringy = ",".join([str(i) for i in y])
-  splittingy = stringy.split(",")
-  global ys
-  ys = [float(s) for s in splittingy] 
+  yValues = stringy.split(",")
+  return [float(s) for s in yValues]  
 ``` {{</highlight>}}
 
 And lastly enable the plotting of a single slice as well as a sequence in 2D through our panel by adding the code below. 
@@ -266,32 +264,25 @@ def plotSequence():
       sub = sub +1
       ctx.field("SubImage.z").value = i
       ctx.field("SubImage.sz").value = i
-      getY()
-      getX()
       subplot = figure.add_subplot(sub)
-      subplot.bar(xs,ys,bins,color='r', label=f'Slice {i}')
-      subplot.legend()
-    figure.canvas.draw()
+      subplot.bar(getX(), getY(), bins, color='r', label=f'Slice {i}')
   else:
     for i in values:
       ctx.field("SubImage.z").value = i
       ctx.field("SubImage.sz").value = i
-      getX()
-      getY()
-      subplot = figure.add_subplot(111)
-      subplot.plot(xs, ys,bins,label=f'Slice {i}')
-      subplot.legend()
-    figure.canvas.draw()
+      subplot = figure.add_subplot()
+      subplot.plot(getX(), getY(), bins)
+  ctx.field("SubImage.z").value = values[0]
+  subplot.legend([f'Slice {i}' for i in values])
+  figure.canvas.draw()
 
 def click2D():
   clearFigure()
   figure = ctx.control("canvas").object().figure()
   
   if startSlice == endSlice:
-    getX()
-    getY()
     subplot = figure.add_subplot(111)
-    subplot.bar(xs,ys,bins, color = 'b',label = f"Slice {endSlice}")
+    subplot.bar(getX(), getY(), bins, color = 'b', label = f"Slice {endSlice}")
     subplot.legend()
     subplot.plot()
     figure.canvas.draw()
