@@ -16,7 +16,7 @@ menu:
 
 ## Introduction 
 
-In this tutorial, we will equip the macro module we created in the [previous tuturial](/tutorials/thirdparty/matplotlib/modulesetup) with a responsive and interactable panel to plot grayscale distributions of single slices as well as defined sequences of slices in 2D.
+In this tutorial, we will equip the macro module we created in the [previous tutorial](/tutorials/thirdparty/matplotlib/modulesetup) with a responsive and interactable panel to plot grayscale distributions of single slices as well as defined sequences of slices in 2D.
 
 ## Steps to do
 
@@ -217,7 +217,7 @@ If you followed all of the listed steps, your panel preview should look like thi
 ![Adapted macro panel](/images/tutorials/thirdparty/Matplotlib10.PNG)
 
 We can now work on the functions that visualize the data as plots on the Matplotlib canvas. 
-You will have noticed how all of the buttons in the .script file have a command. Whenever that button is clicked, its designated command is executed. However, for any of the via command referenced functions to work, we need one that ensures, that the plots are shown on the integrated Matplotlib canvas. We will start with that one.
+You will have noticed how all of the buttons in the .script file have a command. Whenever that button is clicked, its designated command is executed. However, for any of the functions referenced via command to work, we need one that ensures, that the plots are shown on the integrated Matplotlib canvas. We will start with that one.
 
 {{< highlight filename = "BaseNetwork.py">}}
 ```Stan
@@ -310,6 +310,6 @@ You can download the .py as well as the .script file below if you want.
 {{< script "/tutorials/thirdparty/matplotlib/BaseNetwork.script" >}}
 
 ### Summary 
-+ Functions are connected to fields of the panel through commands
++ Functions are connected to fields of the panel via commands
 + The panel preview in MATE can be used to alter positioning of panel components without touching the code
 + An "expand" statement can help the positioning of components in the panel
