@@ -4,7 +4,7 @@ date: 2023-05-31
 status: "OK"
 draft: false
 weight: 883
-tags: ["Advanced", "Tutorial", "Matplotlib", "Visualization"]
+tags: ["Beginner", "Tutorial", "Matplotlib", "Visualization"]
 menu: 
   main:
     identifier: "matplotlibexample3"
