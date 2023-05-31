@@ -20,9 +20,9 @@ We will adapt the previously created macro module to be able to overlay two defi
 + The module we are adapting has been set up in the [Example 1: Module Setup](/tutorials/thirdparty/matplotlib/modulesetup) tutorial.
 + The panel and two dimensional plotting functionality has been added in [Example 2: 2D Plotting](/tutorials/thirdparty/matplotlib/2dplotting).
 
-
-
 ## Steps to do
+At first, we will extend the panel: Open your `BaseNetwork` macro module within an empty MeVisLab workspace and select the .script file from its related files. 
+
 
 
 
