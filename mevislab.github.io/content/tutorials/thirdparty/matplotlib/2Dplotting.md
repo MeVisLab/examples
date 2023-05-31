@@ -24,7 +24,7 @@ Open the module definition folder of your macro module and the related .script f
 
 ![MATE Preview](/images/tutorials/thirdparty/Matplotlib7.png)
 
-Drag the small Preview window the bottom right corner of your window where it does not bother you. We will now be adding contents to be displayed there. 
+Drag the small Preview window to the bottom right corner of your window where it does not bother you. We will now be adding contents to be displayed there. 
 
 Adding the following code to your .script file will open a panel window if the macro module is clicked.
 This new panel window contains a Matplotlib canvas where the plots will be displayed later on as well as two prepared boxes that we will add functions to in the next step.
