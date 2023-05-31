@@ -294,7 +294,7 @@ You should now be able to reproduce results like these:
 
 ![Single Slice 2D](/images/tutorials/thirdparty/Matplotlib13.PNG "2D plot of slice 28")
 ![Small Sequence 2D](/images/tutorials/thirdparty/Matplotlib11.PNG "Small sequence in 2D")
-![Sequence in 2D](/images/tutorials/thirdparty/Matplotlib12.PNG "Sequence in 2D")
+![Sequence in 2D](/images/tutorials/thirdparty/Matplotlib122.PNG "Sequence in 2D")
 
 You can download the .py as well as the .script file below if you want. 
 {{< py "/tutorials/thirdparty/matplotlib/BaseNetwork.py" >}}
