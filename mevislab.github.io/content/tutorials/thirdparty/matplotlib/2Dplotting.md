@@ -65,7 +65,7 @@ This new panel window contains a Matplotlib canvas where the plots will be displ
 Letting a box expand on the x- or y-axis or adding an empty object do so contributes to the panel looking a certain way and helps the positioning of the elements. You can also try to vary the positioning by adding or removing expand-statements or moving boxes from a vertical to a horizontal alignment. Hover over the boxes in the preview to explore the concept.
 
 {{<alert class="info" caption="Info">}}
-You can click and hold onto a box to move it within the Previw. Your code will automatically be changed according to the new positioning.
+You can click and hold onto a box to move it within the Preview. Your code will automatically be changed according to the new positioning.
 {{</alert>}}
 
 **Now, we need to identify which module parameters we want to be able to access from the panel of our macro:**
