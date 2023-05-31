@@ -183,7 +183,7 @@ Put this inside of the box titled "Single Slice":
               }
               Button {
                 title = "in 3D"
-                command = "singleSlice3D"
+                command = "click3D"
           }
               Empty{}
 ``` {{</highlight>}}
@@ -293,7 +293,7 @@ def click2D():
 You should now be able to reproduce results like these: 
 
 ![Single Slice 2D](/images/tutorials/thirdparty/Matplotlib13.PNG "2D plot of slice 28")
-![Small Sequence 2D](/images/tutorials/thirdparty/Matplotlib112.PNG "Small sequence in 2D")
+![Small Sequence 2D](/images/tutorials/thirdparty/Matplotlib112.PNG "Smaller sequences are displayed as multiple single slice plots.")
 ![Sequence in 2D](/images/tutorials/thirdparty/Matplotlib122.PNG "Sequence in 2D")
 
 {{<alert class="info" caption="Info">}}
