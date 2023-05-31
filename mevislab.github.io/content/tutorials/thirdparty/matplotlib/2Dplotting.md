@@ -293,12 +293,15 @@ def click2D():
 You should now be able to reproduce results like these: 
 
 ![Single Slice 2D](/images/tutorials/thirdparty/Matplotlib13.PNG "2D plot of slice 28")
-![Small Sequence 2D](/images/tutorials/thirdparty/Matplotlib11.PNG "Small sequence in 2D")
+![Small Sequence 2D](/images/tutorials/thirdparty/Matplotlib112.PNG "Small sequence in 2D")
 ![Sequence in 2D](/images/tutorials/thirdparty/Matplotlib122.PNG "Sequence in 2D")
 
-You can download the .py as well as the .script file below if you want. 
+{{<alert class="info" caption="Info">}}
+Notice how the bin size affects the plots appearance.
+{{</alert>}}
+
+You can download the .py file below if you want. 
 {{< py "/tutorials/thirdparty/matplotlib/BaseNetwork.py" >}}
-{{< script "/tutorials/thirdparty/matplotlib/BaseNetwork.script" >}}
 
 ### Summary 
 + Functions are connected to fields of the panel via commands
