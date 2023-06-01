@@ -97,15 +97,11 @@ def comparison():
   values = [startSlice, endSlice]
   ctx.field("SubImage.z").value = values[0]
   ctx.field("SubImage.sz").value = values[0]
-  global y1
   y1 = getY()
-  global x1
   x1 = getX()
   ctx.field("SubImage.z").value = values[1]
   ctx.field("SubImage.sz").value = values[1]
-  global y2
   y2 = getY()
-  global x2
   x2 = getX()
   
   subplot = figure.add_subplot(211)
