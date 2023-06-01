@@ -1,5 +1,14 @@
+{{ $filename := .Get 0 }}
+
 <div class="alert alert-secondary d-flex align-items-center" role="alert">
     <div>
+{{ if strings.HasSuffix $filename "mlab" }}
+{{ $src := "/favicon.ico" }}
         <img width="24px" src="/favicon.ico" />&nbsp;&nbsp;&nbsp;Download .mlab file <a href="{{ .Site.BaseURL }}{{.Get 0}}" target="_blank">here</a>.
+{{ else if strings.HasSuffix $filename "py" }}
+        <img width="24px" src="/python.png" />&nbsp;&nbsp;&nbsp;Download Python file <a href="{{ .Site.BaseURL }}{{.Get 0}}" target="_blank">here</a>.
+{{ else if strings.HasSuffix $filename "zip" }}
+        <img width="24px" src="/archive.png" />&nbsp;&nbsp;&nbsp;Download Archive <a href="{{ .Site.BaseURL }}{{.Get 0}}" target="_blank">here</a>.
+{{ end }}
     </div>
 </div>

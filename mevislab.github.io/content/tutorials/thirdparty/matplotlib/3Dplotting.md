@@ -61,4 +61,4 @@ You cannot zoom into 3D plots on a Matplotlib canvas. Try changing the viewing a
 ![Single Slice 3D](/images/tutorials/thirdparty/Matplotlib29.PNG)
 
 You can download the .py file below if you want.
-{{< py "/tutorials/thirdparty/matplotlib/BaseNetwork3D.py" >}}
+{{< networkfile "/tutorials/thirdparty/matplotlib/BaseNetwork3D.py" >}}
