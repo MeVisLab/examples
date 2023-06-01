@@ -18,7 +18,7 @@ menu:
 
 ## Introduction
 
-In this example, we like to use the created CSOs to display an overlay.
+In this example, we'd like to use the created CSOs to display an overlay.
 This allows us to mark one of two lungs. In addition to
 that, we will display the whole segmented lobe of the lung in a 3D
 image.
