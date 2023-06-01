@@ -28,15 +28,11 @@ def click3D():
   clearFigure()
   figure = ctx.control("canvas").object().figure()
   
-  global values
   values = [i for i in range(startSlice, lastSlice)]
   
   if startSlice == endSlice:
     subplot = figure.add_subplot(111, projection='3d')
-    z = 0
-    dx = 1
-    dy = 1
-    subplot.bar3d(getX(),startSlice,z,dx,dy,getY())
+    subplot.bar3d(x=getX(), y=startSlice, z=0, dx=1, dy=1, dz=getY())
     subplot.set_yticks(np.arange(startSlice, endSlice))
     subplot.set_title(f'Slice {startSlice}')
     figure.canvas.draw()
@@ -44,14 +40,11 @@ def click3D():
     clearFigure()
     figure = ctx.control("canvas").object().figure()
     subplot= figure.add_subplot(111, projection='3d')
-    z = 0
-    dx = 1
-    dy = 1
     labels = [f'Slice {i}' for i in values]
     for i in values:
       ctx.field("SubImage.z").value = i
       ctx.field("SubImage.sz").value = i
-      subplot.bar3d(getX(), i, z, dx, dy, getY())
+      subplot.bar3d(x=getX(), y=i, z=0, dx=1, dy=1, dz=getY())
       subplot.set_yticks(values)
     subplot.set_title(f'Sequence from {values[0]} to {lastSlice}')
     ctx.field("SubImage.z").value = values[0]
@@ -60,9 +53,12 @@ def click3D():
 
 After saving, you should be able to reproduce results like these:
 
-![Single Slice 3D](/images/tutorials/thirdparty/Matplotlib27.PNG)
-![Single Slice 3D](/images/tutorials/thirdparty/Matplotlib29.PNG)
-
 {{<alert class="warning" caption="Warning">}}
 You cannot zoom into 3D plots on a Matplotlib canvas. Try changing the viewing angle instead.
 {{</alert>}}
+
+![Single Slice 3D](/images/tutorials/thirdparty/Matplotlib27.PNG)
+![Single Slice 3D](/images/tutorials/thirdparty/Matplotlib29.PNG)
+
+You can download the .py file below if you want.
+{{< py "/tutorials/thirdparty/matplotlib/BaseNetwork3D.py" >}}
