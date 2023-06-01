@@ -519,12 +519,14 @@ Opening the window of your Macro module in MeVisLab now provides all functionali
 ![Final Macro module](/images/tutorials/summary/Example3_5.png "Final Macro module")
 
 ### MeVisLab GUI Editor
+MATE provides a powerful GUI Editor showing a preview of your current user interface and allowing to re-order elements in the UI via drag and drop. In MATE open {{< menuitem "Extras" "Enable GUI Editor" >}}.
 
 ![MeVisLab GUI Editor](/images/tutorials/summary/Example3_4b.png "MeVisLab GUI Editor")
 
 Changing the layout via drag and drop automatically adapts your *\*.script* file. Save and Reload the script and your changes are applied.
 
 {{<alert class="info" caption="Info">}}
+If the GUI Editor is not shown in MATE, make sure to check *[View &rarr; Preview]*.
 {{</alert>}}
 
 ## Final Script and Python files
