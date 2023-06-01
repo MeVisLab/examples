@@ -1,5 +1,5 @@
 ---
-title: "Example 2: Plotting in 2D"
+title: "Example 2: 2D Plotting"
 date: 2023-05-30
 status: "OK"
 draft: false
@@ -8,11 +8,11 @@ tags: ["Advanced", "Tutorial", "Matplotlib", "Visualization"]
 menu: 
   main:
     identifier: "matplotlibexample2"
-    title: "Example 2: 2D Histogram Plotting"
+    title: "Example 2: 2D Plotting"
     weight: 882
     parent: "matplotlib"
 ---
-# Example 2: Plotting in 2D
+# Example 2: 2D Plotting
 
 ## Introduction 
 
@@ -24,7 +24,7 @@ Open the module definition folder of your macro module and the related .script f
 
 ![MATE Preview](/images/tutorials/thirdparty/Matplotlib7.png)
 
-Drag the small Preview window the bottom right corner of your window where it does not bother you. We will now be adding contents to be displayed there. 
+Drag the small Preview window to the bottom right corner of your window where it does not bother you. We will now be adding contents to be displayed there. 
 
 Adding the following code to your .script file will open a panel window if the macro module is clicked.
 This new panel window contains a Matplotlib canvas where the plots will be displayed later on as well as two prepared boxes that we will add functions to in the next step.
@@ -65,7 +65,7 @@ This new panel window contains a Matplotlib canvas where the plots will be displ
 Letting a box expand on the x- or y-axis or adding an empty object do so contributes to the panel looking a certain way and helps the positioning of the elements. You can also try to vary the positioning by adding or removing expand-statements or moving boxes from a vertical to a horizontal alignment. Hover over the boxes in the preview to explore the concept.
 
 {{<alert class="info" caption="Info">}}
-You can click and hold onto a box to move it within the Previw. Your code will automatically be changed according to the new positioning.
+You can click and hold onto a box to move it within the Preview. Your code will automatically be changed according to the new positioning.
 {{</alert>}}
 
 **Now, we need to identify which module parameters we want to be able to access from the panel of our macro:**
@@ -183,7 +183,7 @@ Put this inside of the box titled "Single Slice":
               }
               Button {
                 title = "in 3D"
-                command = "singleSlice3D"
+                command = "click3D"
           }
               Empty{}
 ``` {{</highlight>}}
@@ -293,7 +293,7 @@ def click2D():
 You should now be able to reproduce results like these: 
 
 ![Single Slice 2D](/images/tutorials/thirdparty/Matplotlib13.PNG "2D plot of slice 28")
-![Small Sequence 2D](/images/tutorials/thirdparty/Matplotlib112.PNG "Small sequence in 2D")
+![Small Sequence 2D](/images/tutorials/thirdparty/Matplotlib112.PNG "Smaller sequences are displayed as multiple single slice plots.")
 ![Sequence in 2D](/images/tutorials/thirdparty/Matplotlib122.PNG "Sequence in 2D")
 
 {{<alert class="info" caption="Info">}}

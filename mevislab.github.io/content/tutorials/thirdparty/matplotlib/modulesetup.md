@@ -1,5 +1,5 @@
 ---
-title: "Example 1: Setting up the module"
+title: "Example 1: Module Setup"
 date: 2023-05-26
 status: "OK"
 draft: false
@@ -8,12 +8,12 @@ tags: ["Beginner", "Tutorial", "Matplotlib", "Visualization"]
 menu: 
   main:
     identifier: "matplotlibexample1"
-    title: "Example 1: Setting up the module"
+    title: "Example 1: Module Setup"
     weight: 881
     parent: "matplotlib"
 ---
 
-# Example 1: Setting up the module
+# Example 1: Module Setup
 
 ## Introduction
 
