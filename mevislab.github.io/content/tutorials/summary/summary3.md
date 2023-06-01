@@ -4,7 +4,7 @@ date: "2023-01-17"
 status: "open"
 draft: false
 weight: 815
-tags: ["Advanced", "Tutorial", "Prototyping", "User Interface", "Python"]
+tags: ["Advanced", "Tutorial", "Prototyping", "User Interface", "Python", "GUI Editor"]
 menu: 
   main:
     identifier: "summaryexample3"
@@ -517,6 +517,17 @@ Add the field to the Info section of your window.
 Opening the window of your Macro module in MeVisLab now provides all functionalities we wanted to achieve. You can also play around in the window and define some additional Boxes or MDL controls but the basic application prototype is now done.
 
 ![Final Macro module](/images/tutorials/summary/Example3_5.png "Final Macro module")
+
+### MeVisLab GUI Editor
+MATE provides a powerful GUI Editor showing a preview of your current user interface and allowing to re-order elements in the UI via drag and drop. In MATE open {{< menuitem "Extras" "Enable GUI Editor" >}}.
+
+![MeVisLab GUI Editor](/images/tutorials/summary/Example3_4b.png "MeVisLab GUI Editor")
+
+Changing the layout via drag and drop automatically adapts your *\*.script* file. Save and Reload the script and your changes are applied.
+
+{{<alert class="info" caption="Info">}}
+If the GUI Editor is not shown in MATE, make sure to check *[View &rarr; Preview]*.
+{{</alert>}}
 
 ## Final Script and Python files
 {{< highlight filename="<MACRO_NAME>.script" >}}
