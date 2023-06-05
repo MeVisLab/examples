@@ -20,7 +20,7 @@ In this tutorial, we will equip the macro module we created in the [Example 1: M
 
 ## Steps to do 
 
-The fields and commands needed have already been prepared in the second tutorial. We will just have to modify our .py file a little to make them usable. Integrate the following code into your .py file:
+The fields and commands needed have already been prepared in the second tutorial. We will just have to modify our .py file a little to make them usable. Integrate the following code into your .py file and import numpy.
 
 {{< highlight filename = "BaseNetwork.py">}}
 ```Stan
