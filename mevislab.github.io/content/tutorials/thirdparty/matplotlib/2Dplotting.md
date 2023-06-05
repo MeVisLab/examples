@@ -301,7 +301,7 @@ Notice how the bin size affects the plots appearance.
 {{</alert>}}
 
 You can download the .py file below if you want. 
-{{< py "/tutorials/thirdparty/matplotlib/BaseNetwork.py" >}}
+{{< networkfile "/tutorials/thirdparty/matplotlib/BaseNetwork.py" >}}
 
 ### Summary 
 + Functions are connected to fields of the panel via commands
