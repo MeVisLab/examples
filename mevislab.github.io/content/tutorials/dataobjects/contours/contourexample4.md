@@ -13,6 +13,9 @@ menu:
     parent: "contours"
 ---
 # Contour Example 4: Annotation of Images {#TutorialContoursExample4}
+
+{{< youtube "bT2ZprYcuOU">}}
+
 ## Introduction
 In this example we like to calculate the volume of our object, in this
 case the part of the lunge we have segmented. 
