@@ -13,6 +13,9 @@ menu:
     parent: "contours"
 ---
 # Contour Example 5: Visualizing Contours and Images {#TutorialContoursExample5}
+
+{{< youtube "6fHmy57P3yQ">}}
+
 ## Introduction
 
 In this example, we like to automatically create CSOs based on a predefined iso value. 
