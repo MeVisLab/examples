@@ -17,7 +17,7 @@ menu:
 {{< youtube "-KnZ5a27T0c">}}
 
 ## Introduction
-In this example you will learn how to create a Winged Edge Mesh (WEM). There are several ways how to create WEMs, a few of them are shown in this example. Instead of creating WEMs, it is also possible to load existing WEMs. This was already shown in [Surface Objects (WEM)](tutorials/dataobjects/surfaceobjects) chapter.
+In this example you will learn how to create a Winged Edge Mesh (WEM). There are several approaches on creating WEMs, a few of them are shown in this example. Instead of creating WEMs, they can also be imported, see chapter [Surface Objects (WEM)](tutorials/dataobjects/surfaceobjects).
 
 ## Steps to do
 

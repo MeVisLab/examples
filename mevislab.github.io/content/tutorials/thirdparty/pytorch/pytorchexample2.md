@@ -26,7 +26,7 @@ The coordinates in PyTorch are also a little different than in MeVisLab, therefo
 
 ![OrthoSwapFlip module](/images/tutorials/thirdparty/pytorch_example2_2.png "OrthoSwapFlip module").
 
-You can use the Output Inspector to see the changes on the images after applying resampling and swap/flip.
+You can use the Output Inspector to see the changes on the images after applying the resample and a swap or flip.
 
 {{< imagegallery 3 "images/tutorials/thirdparty/" "Original" "Resample3D" "OrthoSwapFlip">}}
 
@@ -66,7 +66,7 @@ Commands {
 ```
 {{</highlight>}}
 
-In MATE, Right-click {{< mousebutton "right" >}} the Project Workspace and add a new file *DemoAI.py* to your project. The workspace now contains an empty Python file.
+In MATE, right-click {{< mousebutton "right" >}} the Project Workspace and add a new file *DemoAI.py* to your project. The workspace now contains an empty Python file.
 
 ![Project Workspace](/images/tutorials/thirdparty/pytorch_example2_5.png "Project Workspace").
 
@@ -83,12 +83,12 @@ Add a `LoadBase` module and connect it to a `SoMLLUT` module. The `SoMLLUT` need
 ![Final network](/images/tutorials/thirdparty/pytorch_example2_7.png "Final network").
 
 {{<alert class="info" caption="Info">}}
-If you have less than 16GB RAM, you should add a `SubImage` module between the `OrthoSwapFlip` and the `Resample3D` module. You should configure less slices in z-direction to prevent your system from getting out of memory.
+If you have less than 16GB RAM, you should add a `SubImage` module between the `OrthoSwapFlip` and the `Resample3D` module. You should configure less slices in z-direction to prevent your system from running out of memory.
 
 ![SubImage module](/images/tutorials/thirdparty/pytorch_example2_7b.png "SubImage module").
 {{</alert>}}
 
-Inspect the output of the `LoadBase` module in Output Inspector to see if the lookup table has been loaded correctly.
+Inspect the output of the `LoadBase` module in the Output Inspector to see if the lookup table has been loaded correctly.
 
 ![LUT in LoadBase](/images/tutorials/thirdparty/pytorch_example2_8.png "LUT in LoadBase").
 
@@ -145,7 +145,7 @@ def onStart():
 {{</highlight>}}
 
 {{<alert class="warning" caption="Warning">}}
-Executing your script for the first time, you will get a ScriptError message in MeVisLab console. This only happens because the file of the trained network is missing and downloaded initially. You can ignore the message.
+When executing your script for the first time, you will get a ScriptError message in MeVisLab console. This only happens because the file of the trained network is missing and downloaded initially. You can ignore the message.
 {{</alert>}}
 
 {{<alert class="info" caption="Info">}}
@@ -153,9 +153,9 @@ The script uses the CPU, in case you want to use CUDA, you can replace the line 
 {{</alert>}}
 
 The function does the following:
-* Get the input image from `PythonImage` module
+* Get the input image of the module `PythonImage`
 * Normalize the input image
-* Convert the image into torch tensor of size: [Batch, Channel, z, y, x]
+* Convert the image into a torch tensor of size: [Batch, Channel, z, y, x]
 * Load and prepare AI model
 * Set output image to module output
 
