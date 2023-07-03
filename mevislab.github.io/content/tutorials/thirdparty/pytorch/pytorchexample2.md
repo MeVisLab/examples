@@ -26,7 +26,7 @@ The coordinates in PyTorch are also a little different than in MeVisLab, therefo
 
 ![OrthoSwapFlip module](/images/tutorials/thirdparty/pytorch_example2_2.png "OrthoSwapFlip module").
 
-You can use the Output Inspector to see the changes on the images after applying resampling and swap/flip.
+You can use the Output Inspector to see the changes on the images after applying the resample and a swap or flip.
 
 {{< imagegallery 3 "images/tutorials/thirdparty/" "Original" "Resample3D" "OrthoSwapFlip">}}
 
@@ -66,7 +66,7 @@ Commands {
 ```
 {{</highlight>}}
 
-In MATE, Right-click {{< mousebutton "right" >}} the Project Workspace and add a new file *DemoAI.py* to your project. The workspace now contains an empty Python file.
+In MATE, right-click {{< mousebutton "right" >}} the Project Workspace and add a new file *DemoAI.py* to your project. The workspace now contains an empty Python file.
 
 ![Project Workspace](/images/tutorials/thirdparty/pytorch_example2_5.png "Project Workspace").
 
