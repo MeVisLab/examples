@@ -1,5 +1,5 @@
 ---
-title: "Example 2: TBD"
+title: "Example 2: Brain Parcellation using PyTorch"
 date: 2023-06-30
 status: "OK"
 draft: false
@@ -8,11 +8,11 @@ tags: ["Advanced", "Tutorial", "PyTorch", "Python", "PythonPip", "AI"]
 menu: 
   main:
     identifier: "pytorchexample2"
-    title: "TBD"
+    title: "Brain Parcellation using PyTorch"
     weight: 873
     parent: "pytorch"
 ---
-# Example 2: TBD
+# Example 2: Brain Parcellation using PyTorch
 
 ## Introduction
 In this example, you are using a pre-trained PyTorch deep learning model (HighRes3DNet) to perform a full brain parcellation. HighRes3DNet is a 3D residual network presented by Li et al. in [On the Compactness, Efficiency, and Representation of 3D Convolutional Networks: Brain Parcellation as a Pretext Task](https://link.springer.com/chapter/10.1007/978-3-319-59050-9_28).
@@ -30,7 +30,7 @@ You can use the Output Inspector to see the changes on the images after applying
 
 {{< imagegallery 3 "images/tutorials/thirdparty/" "Original" "Resample3D" "OrthoSwapFlip">}}
 
-Add an `OrthoView2D` to your network and save the *\*.mlab* file.
+Add an `OrthoView2D` module to your network and save the *\*.mlab* file.
 
 ![OrthoView2D module](/images/tutorials/thirdparty/pytorch_example2_3.png "OrthoView2D module").
 
@@ -41,7 +41,7 @@ Our new module does not provide an input or output.
 
 ![DemoAI local macro](/images/tutorials/thirdparty/pytorch_example2_4.png "DemoAI local macro").
 
-### Add Interfaces to your local macro
+### Adding an interface to the local macro
 Right-click {{< mousebutton "right" >}} the local macro and select {{< menuitem "Related Files" "DemoAI.script">}}. MATE opens showing the *\*.script* file of our module. Add an input *Field* of type *Image*, an output *Field* using the *internalName* of the output of our `PythonImage` and a *Trigger* to start the segmentation.
 
 You should also already add a Python file in the *Commands* section.
@@ -70,7 +70,7 @@ In MATE, right-click {{< mousebutton "right" >}} the Project Workspace and add a
 
 ![Project Workspace](/images/tutorials/thirdparty/pytorch_example2_5.png "Project Workspace").
 
-Change to MeVisLab IDE, right-click {{< mousebutton "right" >}} the local macro and select {{< menuitem "Reload Definition">}}. Your new input and output interfaces are now available and you can connect images to your module.
+Change to MeVisLab IDE, right-click {{< mousebutton "right" >}} the local macro and select {{< menuitem "Reload Definition">}}. Your new input and output interface are now available and you can connect images to your module.
 
 ![DemoAI local macro with interfaces](/images/tutorials/thirdparty/pytorch_example2_6.png "DemoAI local macro with interfaces").
 
@@ -83,7 +83,7 @@ Add a `LoadBase` module and connect it to a `SoMLLUT` module. The `SoMLLUT` need
 ![Final network](/images/tutorials/thirdparty/pytorch_example2_7.png "Final network").
 
 {{<alert class="info" caption="Info">}}
-If you have less than 16GB RAM, you should add a `SubImage` module between the `OrthoSwapFlip` and the `Resample3D` module. You should configure less slices in z-direction to prevent your system from running out of memory.
+If your PC is equipped with less than 16GBs of RAM/working memory we recommend to add a `SubImage` module between the `OrthoSwapFlip` and the `Resample3D` module. You should configure less slices in z-direction to prevent your system from running out of memory.
 
 ![SubImage module](/images/tutorials/thirdparty/pytorch_example2_7b.png "SubImage module").
 {{</alert>}}
@@ -93,9 +93,9 @@ Inspect the output of the `LoadBase` module in the Output Inspector to see if th
 ![LUT in LoadBase](/images/tutorials/thirdparty/pytorch_example2_8.png "LUT in LoadBase").
 
 ### Write Python script
-You now have to execute the pre-trained PyTorch network on your image. Right-click {{< mousebutton "right" >}} the local macro and select {{< menuitem "Related Files" "DemoAI.script">}}. We want to call a Python function whenever the *Trigger* of your module has been touched.
+You can now execute the pre-trained PyTorch network on your image. Right-click {{< mousebutton "right" >}} the local macro and select {{< menuitem "Related Files" "DemoAI.script">}}. The Python function is supposed to be called whenever the *Trigger* is touched.
 
-Add the following to your *Commands* section:
+Add the following code to your Commands section:
 
 {{< highlight filename="DemoAI.script" >}}
 ```Stan
@@ -107,7 +107,7 @@ Commands {
 ```
 {{</highlight>}}
 
-The *FieldListener* always calls the Python function *onStart* when the *Trigger* *start* has been touched. We now need to implement the Python function. Right-click {{< mousebutton "right" >}} the command *onStart* and select {{< menuitem "Create Python Function 'onStart'">}}.
+The *FieldListener* always calls the Python function *onStart* when the *Trigger* *start* is touched. We now need to implement the Python function. Right-click {{< mousebutton "right" >}} the command *onStart* and select {{< menuitem "Create Python Function 'onStart'">}}.
 
 The Python file opens automatically and the function is created. 
 
