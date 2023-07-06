@@ -42,13 +42,6 @@ Array.from(document.querySelectorAll('[data-modal*="bs-lightbox"]')).forEach((hr
         console.log(target_href);
   })
 })
-
-hljs.addPlugin(
-  new CopyButtonPlugin({
-    hook: (text, el) => text,
-  })
-);
-
 </script>
 {{- partial "nextprev.html" . -}}
 {{ end }}

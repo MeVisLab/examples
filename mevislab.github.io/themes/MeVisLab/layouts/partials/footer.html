@@ -10,4 +10,13 @@
   {{ $js := slice $bootstrap | resources.Concat "js/bundle.js" | resources.Minify }}
 
   <script src="{{$js.RelPermalink}}" defer></script>
+  <script>
+      hljs.highlightAll();
+      
+      hljs.configure({
+          ignoreUnescapedHTML: true
+      });
+
+      hljs.addPlugin(new CopyButtonPlugin());
+  </script>
 </footer>
