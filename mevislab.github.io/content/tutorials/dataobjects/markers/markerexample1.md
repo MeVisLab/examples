@@ -47,6 +47,12 @@ We like to calculate the minimum and maximum distance of the green marker to all
 To automatically update the calculation when placing a new marker, we need to tell the module `DistanceFromXMarkerList` **when** a new green marker is placed. Open the panels of `DistanceFromXMarkerList` and `GreenMarker` and draw a parameter connection from the field *Currently busy* in the panel of `GreenMarker` to *Calculate Distance* in the panel of `DistanceFromXMarkerList`. If you now place a new green marker, the distance from the new green marker to all red markers is automatically calculated.
 ![Calculation of Distance between Markers](/images/tutorials/dataobjects/markers/DO_Markers_07.png "Calculation of Distance between Markers")
 
+{{<alert class="info" caption="Additional Information">}}
+Another example for using a `SoView2DMarkerEditor` module can be found at [Image Processing - Example 3: Region Growing](/tutorials/image_processing/image_processing3 "Image Processing - Example 3: Region Growing")
+{{</alert>}}
+
+
+
 ## Summary
 * Markers can be created using `SoView2DMarkerEditor`
 * Markers can be stored and managed using `XMarkerListContainer`
