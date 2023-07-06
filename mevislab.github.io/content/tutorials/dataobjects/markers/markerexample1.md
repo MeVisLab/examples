@@ -51,8 +51,6 @@ To automatically update the calculation when placing a new marker, we need to te
 Another example for using a `SoView2DMarkerEditor` module can be found at [Image Processing - Example 3: Region Growing](/tutorials/image_processing/image_processing3 "Image Processing - Example 3: Region Growing")
 {{</alert>}}
 
-
-
 ## Summary
 * Markers can be created using `SoView2DMarkerEditor`
 * Markers can be stored and managed using `XMarkerListContainer`

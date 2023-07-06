@@ -130,6 +130,10 @@ Also add another title to your curves and define a third style.
 
 ![Multiple tables as input](/images/tutorials/dataobjects/curves/Multiple_tables.png "Multiple tables as input")
 
+{{<alert class="info" caption="Additional Information">}}
+For more complex visualizations, you can also use Matplotlib. See examples at [Thirdparty - Matplotlib](/tutorials/thirdparty/matplotlib "Thirdparty - Matplotlib").
+{{</alert>}}
+
 ## Summary
 * Curves can be created to draw 2-dimensional diagrams
 * The `StylePalette` allows you to define the appearance of a curve
