@@ -16,6 +16,10 @@ menu:
 # Example 1: Data Import in MeVisLab
 MeVisLab provides several pre-defined modules to import data for processing in your networks.
 
+{{<alert class="info" caption="Extra Infos">}}
+The easiest way to load data in MeVisLab is to drag and drop the file into the MeVisLab workspace. MeVisLab will try to find a module which is able to load your file automatically.
+{{</alert>}}
+
 This chapter explains the basic data formats and modules to use in your network:
 * [Images](/tutorials/basicmechanisms/dataimport#ImageImport)
 * [DICOM Data](/tutorials/basicmechanisms/dataimport#DICOMImport)
