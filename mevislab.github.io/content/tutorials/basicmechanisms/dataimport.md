@@ -16,18 +16,22 @@ menu:
 # Example 1: Data Import in MeVisLab
 MeVisLab provides several pre-defined modules to import data for processing in your networks.
 
-This chapter explains the basic data formats and modules to use in your network:
+{{<alert class="info" caption="Extra Infos">}}
+The easiest way to load data in MeVisLab is to drop the file onto the MeVisLab workspace. MeVisLab will try to find a module that is capable of loading your file automatically.
+{{</alert>}}
+
+These chapters explain the data formats and modules related to this example:
 * [Images](/tutorials/basicmechanisms/dataimport#ImageImport)
 * [DICOM Data](/tutorials/basicmechanisms/dataimport#DICOMImport)
 * [Segmentations / 2D Contours](/tutorials/basicmechanisms/dataimport#2DContours)
 * [3D Data / Meshes](/tutorials/basicmechanisms/dataimport#3DMeshes)
 
 {{<alert class="info" caption="Extra Infos">}}
-More detailed explanations for loading images in MeVisLab can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch03.html" "here" >}}
+Detailed explanations on loading images onto your MeVisLab workspace can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch03.html" "here" >}}
 {{</alert>}}
 
 ## Images {#ImageImport}
-A very simple module for loading images is the `ImageLoad` module.
+A good option to load images is the `ImageLoad` module.
 ![ImageLoad Module](/images/tutorials/basicmechanics/ImageLoad.png "ImageLoad Module")
 
 The `ImageLoad` module can import the following formats:
