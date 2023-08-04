@@ -4,11 +4,16 @@ title: "Creation of Contours"
 category: "data_objects"
 ---
 
-# Contour Example 1: Creation of Contours
-This example shows how to create CSOs using SoCSOEditor modules.
+# Contour Example 1: Creation of contours
+Contours are stored as CSOs or Contour Segmented Objects in MeVisLab.
+This example highlights ways of creating CSOs using modules of the `SoCSOEditor` group.
 
-## Summary
-Contours (in MeVisLab CSO's) can be created by many modules, such as:
+{{<alert class="info" caption="Info">}}
+You may want to look at the glossary entry on [*CSOs*](/glossary/#contour-segmented-objects).
+{{</alert>}}
+
+The `SoCSOEditor` module group contains several modules, some of which are listed right below:
+
 * `SoCSOPointEditor`
 * `SoCSOAngleEditor`
 * `SoCSOArrowEditor`
@@ -21,9 +26,18 @@ Contours (in MeVisLab CSO's) can be created by many modules, such as:
 * `SoCSOIsoEditor`
 * `SoCSOLiveWireEditor`
 
-Whenever creating contours, they are managed and temporarily stored by a `CSOManager`. In this example, contours are created and colors and styles of these CSOs are customized by using a `SoCSOVisualizationSettings` module.
+{{<alert class="info" caption="Info">}}
+Whenever Contour Segmented Objects are created, they are temporarily stored by and can be managed with the `CSOManager`. 
+{{</alert>}}
+
+In this example, contours are created and colors and styles of these CSOs are customized by using the `SoCSOVisualizationSettings` module.
 
 ![Screenshot](/examples/data_objects/contours/example1/image.png)
 
+## Summary
++ Contours are stored as their own abstract data type called Contour Segmented Objects (Often abbreviated to *CSO*).
++ The `SoEditor` module group contains several useful modules to create, interact with or modify CSOs.
++ Created CSOs are temporarily stored and can be managed using the `CSOManager`.
+
 # Download
-You can download the example network [here](/examples/data_objects/contours/example1/ContourExample1.mlab)
+The example network can be downloaded [here](/examples/data_objects/contours/example1/ContourExample1.mlab)
