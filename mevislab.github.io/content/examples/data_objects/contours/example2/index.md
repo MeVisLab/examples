@@ -5,7 +5,7 @@ category: "data_objects"
 ---
 
 # Contour Example 2: Contour interpolation
-This example shows how to interpolate CSOs over slices.
+This example shows how to interpolate CSOs across slices.
 
 ## Summary
 In this example, semi-automatic countours are created using the `SoCSOLiveWireEditor` module and their depiction is modified using the `SoCSOVisualizationSettings` module.
