@@ -5,14 +5,14 @@ category: "data_objects"
 ---
 
 # Contour Example 3: 2D and 3D visualization of contours
-This example shows how to display CSOs in 2D as an overlay. In addition, the CSOs are displayed in 3D.
+This example shows how to display CSOs in 2D as an overlay and additionally how the CSOs are displayed in 3D.
 
 ## Summary
-Images are loaded by using a `LocalImage` module and visualized in a 2D viewer. A `SoCSOLiveWireEditor` is added to draw contours on the images. The `CSOSliceInterpolator` generates additional contours between the manual CSOs by using a linear interpolation.
+Images are loaded by using a `LocalImage` module and displayed in a 2D viewer. A `SoCSOLiveWireEditor` is added to draw contours on the images. The `CSOSliceInterpolator` generates additional contours between the manual CSOs by using linear interpolation.
 
-The module `VoxelizeCSO` is used to create a 3-dimensional voxel mask of the contours which can be used as overlay on the images in a `View2D`. The `SoView2DOverlay` module defines the color and transparency of the overlay.
+The module `VoxelizeCSO` is used to create a three-dimensional voxel mask of the contours which can be used as an overlay on the images in a `View2D` panel. The `SoView2DOverlay` module defines the color and opacity of the overlay.
 
-In the end, a `View3D` is used to visualize the voxel mask in 3D.
+Lastly the panel of the `View3D` module is used to visualize the voxel mask in 3D.
 
 ![Screenshot](/examples/data_objects/contours/example3/image.png)
 
