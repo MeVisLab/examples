@@ -5,7 +5,8 @@ category: "basic_mechanisms"
 ---
 
 # Example 3: Creating a simple application
-In this example, you will learn how to create a simple Prototype application in MeVisLab including a User Interface with 2D and 3D viewer.
+In this example, you will learn how to create a simple prototype application in MeVisLab including a user interface (UI) with 2D and 3D viewers.
+
 ![Screenshot](/examples/basic_mechanisms/viewer_application/image.png)
 
 # Download
