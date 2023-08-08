@@ -5,7 +5,7 @@ category: "data_objects"
 ---
 
 # Contour Example 1: Creation of contours
-Contours are stored as CSOs or Contour Segmented Objects in MeVisLab.
+Contours are stored as Contour Segmented Objects (CSOs) in MeVisLab.
 This example highlights ways of creating CSOs using modules of the `SoCSOEditor` group.
 
 {{<alert class="info" caption="Info">}}
