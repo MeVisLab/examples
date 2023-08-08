@@ -35,6 +35,7 @@ In this example, contours are created and colors and styles of these CSOs are cu
 ![Screenshot](/examples/data_objects/contours/example1/image.png)
 
 ## Summary
++ Contours are stored as their own abstract data type called Contour Segmented Objects (Often abbreviated to *CSO*).
 + The `SoEditor` module group contains several useful modules to create, interact with or modify CSOs.
 + Created CSOs are temporarily stored and can be managed using the `CSOManager`.
 
