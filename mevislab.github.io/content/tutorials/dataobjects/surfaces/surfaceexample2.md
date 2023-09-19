@@ -13,6 +13,9 @@ menu:
     parent: "surfaces"
 ---
 # Surface Example 2: Processing and Modification of WEM
+
+{{< youtube "lVbldzanvfE">}}
+
 ## Introduction
 In this example, you will learn how to modify and process WEMs.
 
