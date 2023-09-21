@@ -14,6 +14,8 @@ menu:
 ---
 # Surface Example 3: Interactions with WEM
 
+{{< youtube "YDOEqCOmUFw">}}
+
 ## Introduction
 In these examples, we are showing 2 different possibilities to interact with a WEM:
 * Scale, rotate and move a WEM in a scene
