@@ -108,7 +108,7 @@ rearrange the items and add new views via {{< menuitem "Main Menu" "View" "Views
 
 {{<alert class="info" caption="Info">}}
 [Modules](/glossary/#module) are the basic entities the MeVisLab concept is built upon. <br>
-They provide the funtionalities to process, display and interact with images.
+They provide the functionalities to process, display and interact with images.
 {{</alert>}}
 
 The three existing module types (ML, [Open Inventor](/glossary/#open-inventor) and [macro module](/glossary/#macro-module)) can be distinguished by their colors:

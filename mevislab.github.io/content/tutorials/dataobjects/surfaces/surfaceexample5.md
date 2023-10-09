@@ -14,6 +14,8 @@ menu:
 ---
 # Surface Example 5: WEM - Primitive Value Lists
 
+{{< youtube "Rap1RY6l5Cc">}}
+
 ## Introduction
 WEMs do not only contain the coordinates of nodes and surfaces, they can also contain additional information. These information are stored in so called *Primitive Value Lists* (PVLs). Every node, every surface and every edge can contains such a list. In these lists, you can for example store the color of the node or specific patient information. These information can be used for visualization or for further statistical analysis.
 

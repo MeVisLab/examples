@@ -14,6 +14,8 @@ menu:
 ---
 # Surface Example 4: Interactively moving WEM
 
+{{< youtube "WKiCddNGKrw">}}
+
 ## Introduction
 
 In this example, we like to interactively move WEMs using `SoDragger` modules insight a viewer.
