@@ -55,7 +55,7 @@ Each `SoCSO*Editor` requires a `SoView2DCSOExtensibleEditor` which manages attac
 
 The appearance of the CSO can be defined by using a `SoCSOVisualizationSettings` module.
 
-CSOs can also be grouped together. The following image shows two different CSO groups. Groups can be used to organize CSOs, in this case to distinguish the CSOs of the right and the left lung. [Here](/tutorials/dataobjects/contours/contours/contourexample2/) you can find more information about CSO Groups.
+CSOs can also be grouped together. The following image shows two different CSO groups. Groups can be used to organize CSOs, in this case to distinguish the CSOs of the right and the left lung. [Here](/tutorials/dataobjects/contours/contourexample2/) you can find more information about CSO Groups.
 
 ![CSO Groups](/images/tutorials/dataobjects/contours/DO2_11_2.png "CSO Groups")
 
