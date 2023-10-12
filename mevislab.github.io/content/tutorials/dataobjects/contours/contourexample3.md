@@ -37,9 +37,9 @@ The result can be seen in `View2D1`.
 
 ![Overlay](/images/tutorials/dataobjects/contours/DO3_03.png "Overlay")
 
-Next, we like to inspect the marked lobe of the lunge. This means, we
+Next, we like to inspect the marked lobe of the lung. This means, we
 like to inspect the object, build out of CSOs. In order to do that, add
-the `View3D` module. The 3D version of your lung can be seen in the
+the `View3D` module. The 3D version of the lung can be seen in the
 viewer.
 
 ![Additional 3D Viewer](/images/tutorials/dataobjects/contours/DO3_04.png "Additional 3D Viewer")
