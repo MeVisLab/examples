@@ -77,7 +77,7 @@ You can see 2 curves. The second and third columns are printed as separate curve
 If the flag *Split columns into data sets* is set to *TRUE*, then a table with more than two columns is split into different *CurveData* objects. This gives the user the possibility to assign a different style and title for each series.
 
 ### Titles and styles
-Let's do this. Open the panel of the `SoDiagram2D` module and check *Draw legend*. Enter *"Curve1 Curve2"* into the *Title(s)* text box and click *Update* {{<mousebutton "left">}}.
+Let's do this. Open the panel of the `SoDiagram2D` module and check *Draw legend*. Enter *"Curve1 Curve2"* into the *Title(s)* text box of the `CurveCreator` module and click *Update* {{<mousebutton "left">}}.
 
 ![SoRenderArea with Legend](/images/tutorials/dataobjects/curves/SoRenderArea2.png "SoRenderArea with Legend")
 
@@ -138,5 +138,9 @@ For more complex visualizations, you can also use Matplotlib. See examples at [T
 * Curves can be created to draw 2-dimensional diagrams
 * The `StylePalette` allows you to define the appearance of a curve
 * Details of the different curves can be visualized by using the `SoDiagram2D` module
+
+{{<alert class="info" caption="Additional Information">}}
+The attached example network shows the curves after clicking *Update* on `CurveCreator` module.
+{{</alert>}}
 
 {{< networkfile "examples/data_objects/curves/example1/Curves.mlab" >}}

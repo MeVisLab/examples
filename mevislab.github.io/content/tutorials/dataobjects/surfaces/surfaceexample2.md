@@ -39,6 +39,8 @@ Now, we like to calculate the distance between our two WEMs. In order to do this
 #### Annotations in 3D
 As a last step, we like to draw the calculated distances as annotations into the image. This is a little bit tricky as we need the module `SoView2DAnnotation` to create annotations in a 3D viewer. Add and connect the following modules as shown. What is done here? We use the module `SoView2D` to display a 2D image in the `SoExaminerViewer`, in addition to the WEMs we already see in the viewer. We do not see an additional image in the viewer, as we chose no proper input image to the module `SoView2D` using the module `ConstantImage` with value 0. Thus, we pretend to have a 2D image, which we can annotate. Now, we use the module `SoView2DAnnotation` to annotate the pretended-2D-image, displayed in the viewer of `SoExaminerViewer`. We already used the module `SoView2DAnnotation` in [Contour Example 4](tutorials/dataobjects/contours/contourexample4/).
 
+In the `SoView2D` module, you need to uncheck the option *Draw image data*.
+
 ![Annotation modules](/images/tutorials/dataobjects/surfaces/DO7_05.png "Annotation modules")
 
 Now, change the *Annotation Mode* to *User*, as we like to insert custom annotations. In addition, disable to *Show vertical ruler*.
@@ -66,4 +68,4 @@ Now, you can see the result in the viewer. If the annotations are not visible, p
 * To create annotations in 3D, the module `SoView2DAnnotation` can be used, when adapted to be used in combination with a 3D viewer. 
 
 
-{{< networkfile "examples/data_objects/surface_objects/example1/SurfaceExample1.mlab" >}}
+{{< networkfile "examples/data_objects/surface_objects/example2/SurfaceExample2.mlab" >}}

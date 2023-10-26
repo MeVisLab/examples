@@ -37,6 +37,10 @@ It is, for example, possible to set markers by using the `MaskToMarkers`-module 
 
 Learn how to convert markers by building the following network. Press the *Reload* buttons of the modules `MaskToMarkers` and `MarkersToSurface` to enable the conversion. Now you can see both the markers and the created surface in the module `SoExaminerViewer`. Use the toggle options of `SoToggle` and `SoWEMRenderer` to enable or disable the visualization of markers and surface.
 
+{{<alert class="info" caption="Info">}}
+Make sure to set *Lower Threshold* of the `MaskToMarkers` module to 1000 so that the 3D object is rendered correctly.
+{{</alert>}}
+
 ![Convert Markers](/images/tutorials/dataobjects/markers/DO_Markers_02.png "Convert Markers")
 
 ## Exercise
