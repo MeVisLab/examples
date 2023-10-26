@@ -42,7 +42,7 @@ Add a list for test data to be used as input and a prefix for the path of the te
 {{< highlight filename="IterativeTestCase.py" >}}
 ```Python
 from mevis import *
-from TestSupport import Base, Fields, ScreenShot
+from TestSupport import Base, Fields, ScreenShot, Logging
 from TestSupport.Macros import *
 
 patientPathPrefix = "$(DemoDataPath)/BrainMultiModal/"

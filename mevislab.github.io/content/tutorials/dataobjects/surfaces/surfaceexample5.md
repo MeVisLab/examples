@@ -72,7 +72,7 @@ You can now interactively drag the WEM insight the viewer.
 
 ![Dragging the WEM](/images/tutorials/dataobjects/surfaces/DO12_11.png "Dragging the WEM")
 
-At last, exchange the module `WEMInitialize` with `WEMLoad` and load *venus.off*. You can decrease the *Face Alpha* in the panel of `SoWEMRenderer1` to make that WEM transparent.
+At last, exchange the `WEMInitialize` module showing the cube with `WEMLoad` and load *venus.off*. You can decrease the *Face Alpha* in the panel of `SoWEMRenderer1` to make that WEM transparent.
 
 ![WEM transparency](/images/tutorials/dataobjects/surfaces/DO12_12.png "WEM transparency")
 

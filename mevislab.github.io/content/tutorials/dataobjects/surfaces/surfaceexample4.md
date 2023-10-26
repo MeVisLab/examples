@@ -80,6 +80,8 @@ We need to change the size of `SoCube1` and `SoCube2` to form planes, which cove
 
 ![Interactive dragging of objects](/images/tutorials/dataobjects/surfaces/DO10_09.png "Interactive dragging of objects")
 
+Change width, height and depth of the 3 cubes so that each of them represents one plane. The values need to be set to (0, 2, 2), (2, 0, 2) and (2, 2, 0). 
+
 As a next step, we like to make sure, that all planes always intersect the object, even though the object is moved. To to this, we need to synchronize the field *Translation* of all `SoMIDraggerContainer` modules and the module `WEMModify`. Draw parameter connections from one *Translation* field to the next, as shown below.
 
 ![Interactive dragging of objects](/images/tutorials/dataobjects/surfaces/DO10_10.png "Interactive dragging of objects")

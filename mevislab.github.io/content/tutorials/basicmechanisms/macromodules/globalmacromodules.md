@@ -49,6 +49,8 @@ right-click {{< mousebutton "right" >}} the macro module to open the context men
 
 {{<alert class="info" caption="Info">}}
 Make sure to chose *Directory Structure* as *self-contained*. This makes sure that all files of your module are stored in a single directory.
+
+Also keep in mind that Python files are only created automatically if selected in the Project Wizard. Converting a local macro to a global macro does NOT create a Python file automatically.
 {{</alert>}}
 
 ![Create global macro module](/images/tutorials/basicmechanics/GUI_04.png "Create global macro module")

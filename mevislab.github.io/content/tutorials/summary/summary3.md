@@ -320,9 +320,9 @@ Python scripting is always necessary in case you do not want to re-use an existi
 Events can be raised by the user (i.e. by clicking a button) or by the application itself (i.e. when the window is opened).
 
 #### 3D visualization selection
-You will now add a selection possibility for the 3D viewer. This allows you to define the visibility of the 3D objects Image, Segmentation or Both.
+You will now add a selection possibility for the 3D viewer. This allows you to define the visibility of the 3D objects File, Segmented or Both.
 
-Add another field to your *Parameters* section. Define the field as *selected3DView* and set *type = Enum* and *values =Segmentation,Image,Both*.
+Add another field to your *Parameters* section. Define the field as *selected3DView* and set *type = Enum* and *values =Segmented,File,Both*.
 
 Add a *ComboBox* to your *Settings* and use the field name defined above. Set *alignX = Left* and *editable = False* and open the *Window* of the Macro module in MeVisLab.
 
@@ -349,9 +349,9 @@ Right-click {{< mousebutton "right" >}} the command select {{< menuitem "Create 
 from mevis import *
 
 def viewSelectionChanged(field):
-  if field.value == "Segmentation":
+  if field.value == "Segmented":
     ctx.field("SoSwitch.whichChild").value = 0
-  if field.value == "Image":
+  if field.value == "File":
     ctx.field("SoSwitch.whichChild").value = 1
   if field.value == "Both":
     ctx.field("SoSwitch.whichChild").value = 2
@@ -667,9 +667,9 @@ Window {
 from mevis import *
 
 def viewSelectionChanged(field):
-  if field.value == "Segmentation":
+  if field.value == "Segmented":
     ctx.field("SoSwitch.whichChild").value = 0
-  if field.value == "Image":
+  if field.value == "File":
     ctx.field("SoSwitch.whichChild").value = 1
   if field.value == "Both":
     ctx.field("SoSwitch.whichChild").value = 2

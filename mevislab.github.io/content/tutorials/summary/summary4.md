@@ -170,6 +170,7 @@ def TEST_RegionGrowing():
   ASSERT_EQ(region_growing_voxels, 0)
   ASSERT_EQ(region_growing_volume, 0)
   # Set marker and expect volumes and voxels to be larger than 0
+  reset()
   setMarkerPosition(marker_location)
   region_growing_voxels = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
   region_growing_volume = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
@@ -386,7 +387,7 @@ The results of your tests are shown in a Report Viewer. You can also export the 
 ![ReportViewer](/images/tutorials/summary/Example4_8.png "ReportViewer")
 
 ### Screenshots
-You can also add screenshots of your inventor scene to the report. Add the following to your Python script and a Snapshot of your 3D scene is attached to your test report:
+You can also add screenshots of your inventor scene to the report. Add the following to your Python script wherever you want to capture the content of the `SoCameraInteraction` module and a Snapshot of your 3D scene is attached to your test report:
 
 {{< highlight filename="<TEST_CASE_NAME>.py" >}}
 ```Python
