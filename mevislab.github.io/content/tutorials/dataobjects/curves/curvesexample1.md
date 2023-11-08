@@ -13,6 +13,9 @@ menu:
     parent: "curves"
 ---
 # Example 1: Drawing curves
+
+{{< youtube "sj6muyInkRc">}}
+
 ## Introduction
 
 In this example, you will draw one or more curves into a diagram and define different styles for the curves.
