@@ -14,6 +14,9 @@ menu:
 ---
 
 # Example 3: Camera Interactions in Open Inventor {#CameraInteraction}
+
+{{< youtube "J6qtN8QfPEc" >}}
+
 ## Introduction
 In this example, we are learning the basic principles of camera interactions in Open Inventor. We will show the difference between a `SoRenderArea` and a `SoExaminerViewer` and use different modules of the `SoCamera*` group.
 
