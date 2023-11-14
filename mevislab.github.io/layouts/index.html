@@ -30,8 +30,8 @@
     <h4>Recent Additions:</h4>
       <p>
       {{ $currentIndex := 1 }}
-      {{ range ( where .Site.RegularPages.ByDate "Kind" "page" | last 5 ) }}
-        <p>{{ $currentIndex }}  [{{ .Parent.Title }}]: <a href="{{ .Permalink }}" class="alert-link">{{ .Title }}</a></p>
+      {{ range ( where .Site.RegularPages.ByDate.Reverse "Kind" "page" | first 5 ) }}
+        <p>[{{ .Date.Format "2006-01-01" }}]: <a href="{{ .Permalink }}" class="alert-link">{{ .Title }}</a></p>
         {{ $currentIndex = add $currentIndex 1 }}
       {{ end }}
       </p>
