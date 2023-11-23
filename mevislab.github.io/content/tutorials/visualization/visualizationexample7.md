@@ -15,7 +15,7 @@ menu:
 # Example 7: Add 3D viewer to OrthoView2D {#TutorialVisualizationExample7}
 
 ## Introduction
-In this example we like to use the `OrthoView2D` module and add a 3D viewer to the layout *Cube*.
+In this example we will use the `OrthoView2D` module and add a 3D viewer to the layout *Cube*.
 
 ## Steps to do
 ### Develop your network
@@ -39,15 +39,15 @@ You can see your `View3D` being visible in the bottom right segment of the layou
 
 ![Define viewport region](/images/tutorials/image_processing/network_example7_5.png "Define viewport region")
 
-The `View3D` image is now rendered to the top left segment of the `OrthoView2D` because the module `SoViewportRegion` renders a sub graph into a specified viewport region (VPR). The problem is: We cannot rotate and pan the 3D object, because there is no camera interaction anymore after adding the `SoViewportRegion`. The camera interaction is taken by the `View3D` module before the viewport is taken.
+The `View3D` image is now rendered to the top left segment of the `OrthoView2D`, because the module `SoViewportRegion` renders a sub graph into a specified viewport region (VPR). The problem is: We cannot rotate and pan the 3D object, because there is no camera interaction available after adding the `SoViewportRegion`. The camera interaction is consumed by the `View3D` module before it can be used by the viewport.
 
 Add a `SoCameraInteraction` module between the `View3D` and the `SoViewportRegion`. You can now interact with your 3D scene but the rotation is not executed on the center of the object. Trigger *ViewAll* on your `SoCameraInteraction` module.
 
 ![SoCameraInteraction](/images/tutorials/image_processing/network_example7_6.png "SoCameraInteraction")
 
-You finally added the `View3D` to the `OrthoView2D`. We have another problem now. If you change the layout to something different than *LAYOUT_CUBE_EQUAL*, the 3D content remains visible.
+You have now successfully added the `View3D` to the `OrthoView2D`, but there is still a problem remaining: If you change the layout to something different than *LAYOUT_CUBE_EQUAL*, the 3D content remains visible.
 
-We can use a `StringUtils` to resolve that. Set *Operation* to *Compare* and draw a parameter connection from the field *OrthoView2D.layout* to the field *StringUtils.string1*. The currently selected layout is written as *String A*. Enter *LAYOUT_CUBE_EQUAL* as *String B*. Now, draw a parameter connection from the field *StringUtils.boolResult* to the field *SoViewportRegion.on*.
+We can use a `StringUtils` module to resolve that. Set *Operation* to *Compare* and draw a parameter connection from the field *OrthoView2D.layout* to the field *StringUtils.string1*. The currently selected layout is displayed as *String A*. Enter *LAYOUT_CUBE_EQUAL* as *String B*. Now, draw a parameter connection from the field *StringUtils.boolResult* to the field *SoViewportRegion.on*.
 
 ![StringUtils](/images/tutorials/image_processing/network_example7_7.png "StringUtils")
 
