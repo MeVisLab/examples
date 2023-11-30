@@ -1,6 +1,6 @@
 ---
 title: "Tips and Tricks"
-date: 2023-11-13
+date: 2023-11-29
 status: "OK"
 draft: false
 weight: 890
@@ -19,6 +19,7 @@ This chapter shows some features and functionalities which are helpful but do no
 
 * [Using Snippets](/tutorials/shorts#snippets)
 * [Scripting Assistant](/tutorials/shorts#scriptingassistant)
+* [User Scripts](/tutorials/shorts#user_scripts)
 
 ## Using Snippets {#snippets}
 
@@ -47,3 +48,63 @@ Open {{< menuitem "View" "Views" "Scripting Assistant">}}. A new panel is shown.
 If you now interact with a network, module or macro module, your user interactions are converted into Python calls. You can see the calls in the panel of the Scripting Assistant and copy and paste them for your Python script.
 
 ![Scripting Assistant](/images/tutorials/ScriptingAssistant_Panel.png "Scripting Assistant")
+
+## User Scripts {#user_scripts}
+
+User scripts allow you to call any Python code from the main menu entry {{< menuitem "Scripting">}}. MeVisLab already comes with some user scripts you can try. You can also view the sources for example code via right-click {{< mousebutton "right" >}} on the menu entry under {{< menuitem "Scripting">}}.
+
+This example shows you how to change the color of the MeVisLab IDE to a dark mode.
+
+Right-click {{< mousebutton "right" >}} menu entry {{< menuitem "Scripting" "Utilities" "Close Unselected Panels">}} and select *Edit User Script*. The Python file opens in *MATE*. Right-click {{< mousebutton "right" >}} on the tab in the editor and select *Show Enclosing Folder*.
+
+The opened directory contains all available user scripts. Add a new file *MyScripts.def* and open the file in *MATE*.
+
+Enter the following:
+{{< highlight filename="MyScripts.def" >}}
+```Stan
+UserIDEActions {
+  Action "Set Dark Theme" {
+    name       = changeTheme
+    userScript = $(LOCAL)/changeTheme.py
+    statusTip  = "Change Theme to dark mode."
+    accel      = "ctrl+F9"
+  }
+
+}
+
+UserIDEMenus {
+  SubMenu "Theme" {
+    ActionReference = changeTheme
+  }
+}
+```
+{{</highlight>}}
+
+We define an action *Set Dark Theme*, which is added to the submenu *Theme* in the MeVisLab IDE menu item {{< menuitem "Scripting">}}. The action is named *changeTheme* and a reference to a Python script is added as *$(LOCAL)/changeTheme.py*. We also defined a keyboard shortcut {{< keyboard "ctrl+F9" >}}.
+
+Change to MeVisLab IDE and select menu item {{< menuitem "Extras" "Reload Module Database (Clear Cache)">}}. Open the menu item {{< menuitem "Scripting">}}. You can see the new submenu {{< menuitem "Theme" "Set Dark Theme">}}. If you select this entry, you get an error in MeVisLab console: *Could not locate user script: .../changeTheme.py*
+
+We did not yet create the Python file containing the code of your script.
+
+Open the directory where your *MyScripts.def* file is located and create a new Python file *changeTheme.py*. Open the file in *MATE* and enter the following:
+
+{{< highlight filename="changeTheme.py" >}}
+```Python
+from PythonQt.QtGui import QApplication, QColor, QPalette
+
+fgColor = QColor("#888888")
+bgColor = QColor("#333333")
+palette = QApplication.palette()
+palette.setColor(QPalette.Window, bgColor)
+palette.setColor(QPalette.Background, bgColor)
+palette.setColor(QPalette.Base, bgColor)
+palette.setColor(QPalette.Button, bgColor)
+palette.setColor(QPalette.WindowText, fgColor)
+palette.setColor(QPalette.Text, fgColor)
+QApplication.setPalette(palette)
+```
+{{</highlight>}}
+
+This script defines the color of the MeVisLab user interface elements. You can define other colors and more items, this is just an example of what you can do with user scripts.
+
+Switch back to the MeVisLab IDE and select the menu item {{< menuitem "Extras" "Reload Module Database (Clear Cache)">}} again. The colors of the MeVisLab IDE change as defined in our Python script. This change persists until you restart MeVisLab and can always be repeated by selecting the menu entry or the keyboard shortcut {{< keyboard "ctrl+F9" >}}.
