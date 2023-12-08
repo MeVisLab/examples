@@ -140,7 +140,7 @@ This modified script ensures that the Skeleton's property **Label** is utilized 
 
 {{</alert>}}
 
-Now, let's visualize the impact of the modifications in the script. After executing the updated network, head to the `SoLUTEditor` module in the interface. Once there, navigate to the `Range` tab and tweak the `New Range Max` to `10`.
+Now, let's visualize the impact of the modifications in the script. After executing the updated network, head to the `SoLUTEditor` module in the interface. Once there, navigate to the *Range* tab and tweak the *New Range Max* to *10*.
 
 With these adjustments made, click on *Apply New Range*. Immediately, you'll observe a dynamic transformation in the color representation of the vessel visualization. This alteration, driven by the minimal distance, enhances the clarity and informativeness of the displayed vascular structures. Take this opportunity to explore and analyze the results, providing valuable insights into the intricacies of the vessel system.
 
