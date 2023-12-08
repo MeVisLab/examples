@@ -13,6 +13,9 @@ menu:
     parent: "summary"
 ---
 # Step 1: Prototyping - Develop your Network
+
+{{< youtube "-hbddg0bXcA" >}}
+
 ## Introduction
 In this example, we will develop a network which fulfills the requirements from the [overview page](/tutorials/summary#DevelopNetwork). The network will be developed by re-using existing modules and defining basic field values.
 
