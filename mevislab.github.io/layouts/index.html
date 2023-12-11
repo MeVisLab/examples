@@ -25,19 +25,18 @@
     <p> Lastly: We implemented a basic search functionality for you to search for terms within our tutorial page.</p>
   </div>
 
-  <div class="p-3 w-25"><div class="card bg-light mb-3">
+  <div class="p-3 w-25">
     <div class="card bg-light mb-3">
       <div class="card-header"><b>Recent Additions:</b></div>
-        <div class="card-body">
+      <div class="card-body">
       {{ range ( where .Site.RegularPages.ByDate.Reverse "Kind" "page" | first 5 ) }}
         <p>[{{ .Date.Format "2006-01-02" }}]: <a href="{{ .Permalink }}" class="alert-link">{{ .Title }}</a></p>
       {{ end }}
-        </div>
       </div>
     </div>
     <div class="card bg-light mb-3">
       <div class="card-header"><b>Tags:</b></div>
-        <div class="card-body">
+      <div class="card-body">
         {{ range .Site.Taxonomies.tags }}
           {{ if lt .Count 2 }}
 							<a style="font-size: 10px" href="{{ $.Site.BaseURL }}tags/{{ .Page.Title | urlize | lower }}" class="card-text"> {{ .Page.Title | title }} <span class="" style="color: #AAA; font-size: 12px; text-decoration: none; font-weight: normal;">({{ .Count }})</span></a>
@@ -61,7 +60,7 @@
 							<a style="font-size: 22px" href="{{ $.Site.BaseURL }}tags/{{ .Page.Title | urlize | lower }}" class="card-text"> {{ .Page.Title | title }} <span class="" style="color: #AAA; font-size: 12px; text-decoration: none; font-weight: normal;">({{ .Count }})</span></a>
 						{{end}}
         {{ end }}
-        </div>
+      </div>
     </div>
   </div> 
 </div>
