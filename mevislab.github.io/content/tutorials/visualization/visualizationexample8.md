@@ -20,7 +20,7 @@ In this tutorial, we are using an input mask to create a vessel centerline using
 ## Steps to do
 ### Develop your network
 
-Load your tree mask ML image using the `LocalImage` module. Then connect the output to the `DtfSkeletonization` module as seen below. Adjust parameters if needed and press the *Open* button to obtain the skeleton and a graph with distinct node and edge IDs.
+Load your tree mask ML image using the `LocalImage` module. Then connect the output to the `DtfSkeletonization` module as seen below. Press the *Load* button to obtain the skeleton and a graph with distinct node and edge IDs.
 
 ![LocalImage](/images/tutorials/visualization/V8_1.png "LocalImage")
 
@@ -184,4 +184,18 @@ With these adjustments made, click on *Apply New Range*. Immediately, you'll obs
 Here in the 2D Viewers, you can also notice that the small vessels are red and the big ones are green.
 
 ![ 2D Viewers](/images/tutorials/visualization/V8_2DViewers.png "2D Viewers") 
+
+### Tipp 
+
+If you have a NIFTI file and want to convert it into an ML image. Therefore, Load your tree mask NIfTI file using the *itkFileImageReader* module. Adjust parameters if needed and press the *Open* button. Then connect the output to *BoundingBox*, which scans the input automatically and calculates all its voxels. Finally, you need *MLImageFormatSave* to save it as a file including user defined information and ML image properties, that is clearly much smaller than a NIFTI file. 
+
+![ How to](/images/tutorials/visualization/V8_ConvertToMlImage.png "How to") 
+
+## Summary
+* Vessel centreline can be created using `DtfSkeletonization`
+* Vascular structures can be visualized in 3D using `SoVascularSystem`
+* It has several display modes available and other adjustments ragrading the coloring and point size
+* The labels about skeleton and vessel voxels can be converted into a volume using `GraphToVolume`
+* To perform volume rendering on 3D images you can use `SoGVRVolumeRenderer`
+* You can visualize vessels based on their radius using  Python scripting 
 
