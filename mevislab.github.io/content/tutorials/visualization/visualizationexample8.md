@@ -35,11 +35,11 @@ Next, access the `DtfSkeletonization` module's panel and activate *Update skelet
 ![DtfSkeletonization](/images/tutorials/visualization/V8_02.png "DtfSkeletonization")
 
 
-To see the changes, click on the output of the LocalImage module. You'll find the ML image in the output inspector.
+To see the changes, click first on the output of the LocalImage module to see the original image. You'll find the ML image in the output inspector.
 
 ![Output of DtfSkeletonization of LocalImage](/images/tutorials/visualization/V8_MLImage.png "Output of DtfSkeletonization of LocalImage")
 
-And if you click on the output of the `DtfSkeletonization` module this ML image will be shown.
+And if you click on the output of the `DtfSkeletonization` module this ML image will be shown. The DtfSkeletonization module computes the skeletonization of the original image. The topology of the initial mask is preserved, vessel centerline extraction has been done. Erosion distances are coded in mm in the output image.
 
 ![Output of DtfSkeletonization](/images/tutorials/visualization/V8_MLImage1.png "Output of DtfSkeletonization")
 
@@ -50,7 +50,7 @@ This helps compare the characteristics before and after using other modules like
 
 {{</alert>}}
 
-By connecting `DtfSkeletonization` to `GraphToVolume` you effectively convert the information about skeleton and vessel voxels into a volume and you are essentially making a clearer picture of the skeleton and vessels in the ML image.
+By connecting `DtfSkeletonization` to `GraphToVolume` you effectively creat a new volume that includes the labels of the skeleton and the vessel voxel and you are essentially making a clearer picture of the skeleton and vessels in the ML image.
 
 
 
@@ -62,7 +62,7 @@ Recognize that each graph edge comprises Skeletons (positions along the middle o
 
 ![GraphToVolume](/images/tutorials/visualization/V8_03.png "GraphToVolume")
 
-Now, connect the modules as illustrated in the example network image to ensure a proper flow of data and operations. The `SoLUTEditor` module enables interactive editing of color lookup tables, producing MLLUT and SoMLLUT objects. We connect it with `View2D` and `SoExaminerViewer` modules to set lookup tables in an Open Inventor scene, primarily designed for dynamic adjustments. On the other hand, the SoGVRVolumeRenderer module serves as a core tool for high-quality Volume Rendering of 3D/4D images using an octree-based approach and accepts an ML image as main volume dataset.
+Now, connect the modules as illustrated in the example network image to ensure a proper flow of data and operations. The `SoLUTEditor` module enables interactive editing of color lookup tables, producing MLLUT and SoMLLUT objects. We connect it with the `View2D` and `SoExaminerViewer` modules to set lookup tables in an Open Inventor scene, primarily designed for dynamic adjustments. On the other hand, the SoGVRVolumeRenderer module serves as a core tool for high-quality Volume Rendering of 3D/4D images using an octree-based approach and accepts an ML image as main volume dataset.
 
 ![Example Network](/images/tutorials/visualization/V8_04.png "Example Network")
 
@@ -112,7 +112,10 @@ Proceed to explore some customization options with the `SoGVRVolumeRenderer` mod
 
 Open the `SoLUTEditor` module to establish a connection between voxel values (edge IDs) and their respective colors. Keep in mind the concept of color interpolation, where not every ID is assigned a unique color.
 
-Now, choose your preferred colors and navigate to the *Range* tab. Set the *New Range Max* setting to *160* beacause we have 165 edges and need a unique color for each edge. Click on *Apply new Range* to ensure your color selections are applied. Execute the network to witness the 3D mask come to life, with distinct colors representing various graph node/edge IDs.
+Now, choose your preferred colors and navigate to the *Range* tab. Set the *New Range Max* setting to *160*, beacause we have 153 edges and need a unique color for each edge. Click on *Apply new Range* to ensure your color selections are applied. Execute the network to witness the 3D mask come to life, with distinct colors representing various graph node/edge IDs.
+
+![SoLUTEditor](/images/tutorials/visualization/V8_SoLUTEditor.png "SoLUTEditor")
+
 
 By the end of this process, you'll have two images at your dispose. 
 
@@ -120,13 +123,24 @@ By the end of this process, you'll have two images at your dispose.
 
 ### Interaction with the Generated Vascular System Using SoVascularSystem
 
-If you wish to engage with the generated vascular system interactively, the `SoVascularSystem` module is your gateway to seamless exploration and interaction. Add it to your MeVisLab SDK and Connect it to your `DtfSkeletonization` module. But first, you may need to connect it to an extra `SoExaminerViewer1` to observe the dirfferece wenn using this module. 
+In comparison to the `SoGVRVolumeRenderer`, add a `SoVascularSystem` module to your workspace. Connect it to your `DtfSkeletonization` module and to the `SoLUTEditor` as seen below. Add another `SoExaminerViewer` for comparing the 2 visualization. The same `SoBackground` can be added to your new scene.
 
 ![ EditedNetwork](/images/tutorials/visualization/V8_SoVascularSystem.png " EditedNetwork")
 
-You can also connect the camera positions of your both `SoExaminerViewer` modules with a syntaxfloat as shown bellow to move them simultaneously. 
+Draw parameter connections from one `SoExaminerViewer` to the other. Use the fields seen below to synchronize your camera interaction.
 
-![ Camera positions](/images/tutorials/visualization/V8_SyntaxFloat.png " Camera positions")
+![ Camera positions](/images/tutorials/visualization/V8_SyncFloat.png " Camera positions")
+
+Connect the backwards direction of the two `SoExaminerViewer` by using a `SyncFloat` module.
+
+
+{{<alert class="info" caption="Extra Infos">}}
+
+To establish connections between fields with the type *Float*, you can use the *SyncFloat* module. For fields containing vector or rotation data, the appropriate connection can be achieved using the *SyncVector* module. Ensure they are moving concurrently.
+
+{{</alert>}}
+
+![ SyncFloat & SyncVector](/images/tutorials/visualization/V8_SyncFloat_Network.png " SyncFloat & SyncVector")
 
 Now you can notice the difference between the two modules. We use `SoVascularSystem` for a smoother and visually pleasing viewer, while the `SoGVRVolumeRenderer`, despite having many steps, provides precise results and is better suited for calculating totale volume and similiar metrics. 
 
@@ -175,7 +189,7 @@ This modified script ensures that the Skeleton's property **Label** is utilized 
 
 {{</alert>}}
 
-Now, let's visualize the impact of the modifications in the script. After executing the updated network, head to the `SoLUTEditor` module in the interface. Once there, navigate to the *Range* tab and tweak the *New Range Max* to *10*. Choose red for the small distance and green for the large.
+Now, let's visualize the impact of the modifications in the script. After executing the updated network, head to the `SoLUTEditor` module in the interface. Once there, navigate to the *Range* tab and tweak the *New Range Max* to *10*, beacause the maximum of the MinDistance is between 9 and 10. Choose red for the small distance and green for the large.
 
 With these adjustments made, click on *Apply New Range*. Immediately, you'll observe a dynamic transformation in the color representation of the vessel visualization. This alteration, driven by the minimal distance, enhances the clarity and informativeness of the displayed vascular structures. Take this opportunity to explore and analyze the results, providing valuable insights into the intricacies of the vessel system.
 
@@ -199,3 +213,5 @@ If you have a NIFTI file and want to convert it into an ML image. Therefore, Loa
 * To perform volume rendering on 3D images you can use `SoGVRVolumeRenderer`
 * You can visualize vessels based on their radius using  Python scripting 
 
+{{< networkfile "examples/visualization/example8/VisualizationExample8.mlab" >}}
+{{< networkfile "examples/visualization/example8/VisualizationExample8_01.mlab" >}}
