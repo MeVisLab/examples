@@ -26,7 +26,7 @@ Load your tree mask ML image using the `LocalImage` module. Then connect the out
 
 {{<alert class="info" caption="Extra Infos">}}
 
-Please be aware that a sample tree mask file is included as an attachment for this example
+The used sample tree mask is available for download [here](/examples/visualization/example8/EditedImage.mlimage)
 
 {{</alert>}}
 
@@ -104,7 +104,7 @@ After pressing *Execute*, the network should resemble the image below:
 
 ![Initial Skeletonization Results (Without Colors)](/images/tutorials/visualization/V8_06.png "Initial Skeletonization Results (Without Colors)")
 
-Proceed to explore some customization options with the `SoGVRVolumeRenderer` module. Open its panel in the *Main* tab, and for a more illuminated rendering, select *Illuminated* as the *Render Mode*. Adjust the *Quality* setting to *0.10* for enhanced visuals. Head over to the *Illumination* tab and implement these changes as demonstrated below.
+Proceed to explore some customization options with the `SoGVRVolumeRenderer` module. Open its panel in the *Main* tab, select *Illuminated* as the *Render Mode*. Adjust the *Quality* setting to *0.10* for enhanced visuals. Head over to the *Illumination* tab and implement these changes as demonstrated below.
 
 ![SoGVRVolumeRenderer](/images/tutorials/visualization/V8_07.png "SoGVRVolumeRenderer")
 
