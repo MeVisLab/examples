@@ -20,7 +20,7 @@ In this tutorial, we are using an input mask to create a vessel centerline using
 ## Steps to do
 ### Develop your network
 
-Load the example [tree mask](/examples/visualization/example8/EditedImage.mlimage) by using the `LocalImage` module. Connect the output to a `DtfSkeletonization` module as seen below. The initial output of the `DtfSkeletonization` module is empty. Press the *Load* button to calculate the skeleton and the erosion distances.
+Load the example [tree mask](/examples/visualization/example8/EditedImage.mlimage) by using the `LocalImage` module. Connect the output to a `DtfSkeletonization` module as seen below. The initial output of the `DtfSkeletonization` module is empty. Press the *Update* button to calculate the skeleton and the erosion distances.
 
 ![Network](/images/tutorials/visualization/V8_1.png "Network")
 
@@ -36,7 +36,7 @@ You can use the *Output Inspector* to see the 3D graph.
 
 ![Graph output of DtfSkeletonization](/images/tutorials/visualization/V8_MLImage.png "Graph output of DtfSkeletonization")
 
-If you want to visualize your graph in 3D, you should connect a `GraphToVolume` module to the `DtfSkeletonization` module. The result is a 3D volume of your graph which you can connect to any 2D or 3D viewer. Add a `View2D` module to the `GraphToVolume` module and update the volume.
+If you want to visualize your graph, you should connect a `GraphToVolume` module to the `DtfSkeletonization` module. The result is a 2D or 3D volume of your graph which you can connect to any 2D or 3D viewer. Add a `View2D` and a `View3D` module to the `GraphToVolume` module and update the volume.
 
 ![GraphToVolume](/images/tutorials/visualization/V8_03.png "GraphToVolume")
 
@@ -90,7 +90,7 @@ We now want the edge ID to be used for coloring each of the skeletons differentl
 
 ![SoLUTEditor](/images/tutorials/visualization/V8_05_LUT.png "SoLUTEditor")
 
-The `SoGVRVolumeRenderer` module also needs a different setting. Open its panel in the *Main* tab, select *Illuminated* as the *Render Mode*. Adjust the *Quality* setting to *0.10*. Change to the *Illumination* tab and define below parameters:
+The `SoGVRVolumeRenderer` module also needs a different setting. Open its panel in the *Main* tab, select *Illuminated* as the *Render Mode*. Adjust the *Quality* setting to *0.10*. On tab *Advanced*, set *Filter Volume Data* to *Nearest*. Change to the *Illumination* tab and define below parameters:
 
 {{<imagegallery 2 "/images/tutorials/visualization" "SoGVRVolumeRendererMain" "SoGVRVolumeRendererIllumination">}}
 
@@ -118,7 +118,7 @@ Your viewers now show a different color for each skeleton, based on our LUT.
 
 ![View2D and SoExaminerViewer](/images/tutorials/visualization/V8_05_Viewer.png "View2D and SoExaminerViewer")
 
-### Interaction with the Generated Vascular System Using SoVascularSystem
+### Render Vascular System Using SoVascularSystem
 The `SoVascularSystem` module is optimized for rendering vascular structures. In comparison to the `SoGVRVolumeRenderer` module, it allows to render the surface, the skeleton or points of the structure in an open inventor scene graph. Interactions with edges of the graph are also already implemented.
 
 Add a `SoVascularSystem` module to your workspace. Connect it to your `DtfSkeletonization` module and to the `SoLUTEditor` as seen below. Add another `SoExaminerViewer` for comparing the two visualization. The same `SoBackground` can be added to your new scene.
@@ -199,6 +199,7 @@ If you have a NIFTI file, convert it into an ML image. Load your tree mask NIfTI
 ![NIFTI file conversion](/images/tutorials/visualization/V8_ConvertToMlImage.png "NIFTI file conversion") 
 {{</alert>}}
 
+### Mouse clicks on vessel graph
 Open the *Interaction* tab of the `SoVascularSystem` module. In `SoExaminerViewer` module, change to *Pick Mode* and click into your vessel structure. The panel of the `SoVascularSystem` module shows all information about the hit of your click in the vessel tree.
 
 ![Getting the click point in a vascular tree](/images/tutorials/visualization/V8_Interactions.png "Getting the click point in a vascular tree") 
