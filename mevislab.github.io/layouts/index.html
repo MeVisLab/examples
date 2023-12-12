@@ -25,14 +25,42 @@
     <p> Lastly: We implemented a basic search functionality for you to search for terms within our tutorial page.</p>
   </div>
 
-  <div class="p-3">
-    <div class="alert alert-info" role="alert">
-    <h4>Recent Additions:</h4>
-      <p>
+  <div class="p-3 w-25">
+    <div class="card bg-light mb-3">
+      <div class="card-header"><b>Recent Additions:</b></div>
+      <div class="card-body">
       {{ range ( where .Site.RegularPages.ByDate.Reverse "Kind" "page" | first 5 ) }}
         <p>[{{ .Date.Format "2006-01-02" }}]: <a href="{{ .Permalink }}" class="alert-link">{{ .Title }}</a></p>
       {{ end }}
-      </p>
+      </div>
+    </div>
+    <div class="card bg-light mb-3">
+      <div class="card-header"><b>Tags:</b></div>
+      <div class="card-body">
+        {{ range .Site.Taxonomies.tags }}
+          {{ if lt .Count 2 }}
+							<a style="font-size: 10px" href="{{ $.Site.BaseURL }}tags/{{ .Page.Title | urlize | lower }}" class="card-text"> {{ .Page.Title | title }} <span class="" style="color: #AAA; font-size: 12px; text-decoration: none; font-weight: normal;">({{ .Count }})</span></a>
+						{{ else if le .Count 3}}
+							<a style="font-size: 12px" href="{{ $.Site.BaseURL }}tags/{{ .Page.Title | urlize | lower }}" class="card-text"> {{ .Page.Title | title }} <span class="" style="color: #AAA; font-size: 12px; text-decoration: none; font-weight: normal;">({{ .Count }})</span></a>
+						{{ else if le .Count 5}}
+							<a style="font-size: 14px" href="{{ $.Site.BaseURL }}tags/{{ .Page.Title | urlize | lower }}" class="card-text"> {{ .Page.Title | title }} <span class="" style="color: #AAA; font-size: 12px; text-decoration: none; font-weight: normal;">({{ .Count }})</span></a>
+						{{ else if le .Count 7}}
+							<a style="font-size: 16px" href="{{ $.Site.BaseURL }}tags/{{ .Page.Title | urlize | lower }}" class="card-text"> {{ .Page.Title | title }} <span class="" style="color: #AAA; font-size: 12px; text-decoration: none; font-weight: normal;">({{ .Count }})</span></a>
+						{{ else if le .Count 9}}
+							<a style="font-size: 17px" href="{{ $.Site.BaseURL }}tags/{{ .Page.Title | urlize | lower }}" class="card-text"> {{ .Page.Title | title }} <span class="" style="color: #AAA; font-size: 12px; text-decoration: none; font-weight: normal;">({{ .Count }})</span></a>
+						{{ else if le .Count 11}}
+							<a style="font-size: 18px" href="{{ $.Site.BaseURL }}tags/{{ .Page.Title | urlize | lower }}" class="card-text"> {{ .Page.Title | title }} <span class="" style="color: #AAA; font-size: 12px; text-decoration: none; font-weight: normal;">({{ .Count }})</span></a>
+						{{ else if le .Count 15}}
+							<a style="font-size: 19px" href="{{ $.Site.BaseURL }}tags/{{ .Page.Title | urlize | lower }}" class="card-text"> {{ .Page.Title | title }} <span class="" style="color: #AAA; font-size: 12px; text-decoration: none; font-weight: normal;">({{ .Count }})</span></a>
+						{{ else if le .Count 30}}
+							<a style="font-size: 20px" href="{{ $.Site.BaseURL }}tags/{{ .Page.Title | urlize | lower }}" class="card-text"> {{ .Page.Title | title }} <span class="" style="color: #AAA; font-size: 12px; text-decoration: none; font-weight: normal;">({{ .Count }})</span></a>
+						{{ else if le .Count 60}}
+							<a style="font-size: 21px" href="{{ $.Site.BaseURL }}tags/{{ .Page.Title | urlize | lower }}" class="card-text"> {{ .Page.Title | title }} <span class="" style="color: #AAA; font-size: 12px; text-decoration: none; font-weight: normal;">({{ .Count }})</span></a>
+						{{ else if le .Count 120}}
+							<a style="font-size: 22px" href="{{ $.Site.BaseURL }}tags/{{ .Page.Title | urlize | lower }}" class="card-text"> {{ .Page.Title | title }} <span class="" style="color: #AAA; font-size: 12px; text-decoration: none; font-weight: normal;">({{ .Count }})</span></a>
+						{{end}}
+        {{ end }}
+      </div>
     </div>
   </div> 
 </div>
