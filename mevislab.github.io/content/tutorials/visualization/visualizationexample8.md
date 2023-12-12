@@ -199,7 +199,7 @@ If you have a NIFTI file, convert it into an ML image. Load your tree mask NIfTI
 ![NIFTI file conversion](/images/tutorials/visualization/V8_ConvertToMlImage.png "NIFTI file conversion") 
 {{</alert>}}
 
-### Mouse clicks on vessel graph
+### Mouse Clicks on Vessel Graph
 Open the *Interaction* tab of the `SoVascularSystem` module. In `SoExaminerViewer` module, change to *Pick Mode* and click into your vessel structure. The panel of the `SoVascularSystem` module shows all information about the hit of your click in the vessel tree.
 
 ![Getting the click point in a vascular tree](/images/tutorials/visualization/V8_Interactions.png "Getting the click point in a vascular tree") 
