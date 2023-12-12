@@ -1,22 +1,36 @@
 // MDL v1 utf8
-mevislabVersion = 3.7.2.12
+mevislabVersion = 3.7.1.15
 network  {
   watchlist = ""
 }
-module DtfSkeletonization {
+module LocalImage {
   internal  {
-    frame = "856 562 160 56"
+    frame = "457 565 176 72"
     moduleGroupName = ""
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "2400 496 329 309"
-        sizeHint = "327 309"
+        geometry = "718 498 485 144"
+        sizeHint = "485 144"
         wasOpen = no
       }
-      window _scriptingconsole {
-        geometry = "2580 380 600 500"
-        sizeHint = "256 192"
+    }
+  }
+  fields  {
+    instanceName = LocalImage
+    name = $(HOME)/Downloads/EditedImage.mlimage
+    autoLoad = TRUE
+  }
+}
+module DtfSkeletonization {
+  internal  {
+    frame = "465 445 160 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "582 571 331 309"
+        sizeHint = "329 309"
         wasOpen = no
       }
     }
@@ -29,39 +43,250 @@ module DtfSkeletonization {
     cavityVolume = 10
     maxDistance = 10000
     useMaxDistance = FALSE
-    autoUpdateMode = Off
-    skeletonOnly = FALSE
+    autoUpdateMode = AutoUpdate
+    skeletonOnly = TRUE
   }
 }
 module GraphToVolume {
   internal  {
-    frame = "921 447 152 56"
+    frame = "493 325 152 56"
     moduleGroupName = ""
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "2492 579 303 142"
-        sizeHint = "298 142"
+        geometry = "813 499 294 142"
+        sizeHint = "294 142"
         wasOpen = no
       }
     }
   }
   fields  {
     instanceName = GraphToVolume
-    fillValue = -1
+    fillValue = 0
     writeMode = SkeletonAndVesselVoxels
     outputIntegerImage = TRUE
   }
 }
+module View2D {
+  internal  {
+    frame = "517 141 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "398 489 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 152
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 0
+    lutWidth = 0.945000052452087
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module SoExaminerViewer {
+  internal  {
+    frame = "883 152 136 56"
+    moduleGroupName = SoGVRVolumeRenderer
+    windows  {
+      window _viewer {
+        geometry = "1021 275 400 364"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "627 295 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoExaminerViewer
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    border = FALSE
+    background = "0 0 0"
+    transparency = BLEND
+    antialiasing = FALSE
+    antialiasingNumPasses = 1
+    useSampleBuffers = FALSE
+    numSamples = 8
+    grabKeyFocus = TRUE
+    enableKeyCommands = TRUE
+    snapshotFormat = SNAPSHOT_RGB
+    outputAviFile = ""
+    autoRedrawWhenRecording = TRUE
+    frameRate = 7
+    frameRateAvi = 15
+    outputSnapshotFile = none
+    outputSnapshotFileWritten = none
+    autoIncreaseFile = TRUE
+    showSnapshotWithShell = FALSE
+    snapCount = 0
+    inputDevicesList = ""
+    headlight = TRUE
+    decoration = TRUE
+    popupMenuEnabled = FALSE
+    viewing = TRUE
+    autoClipping = TRUE
+    drawStyle = VIEW_AS_IS
+    interactiveDrawStyle = VIEW_LOW_COMPLEXITY
+    viewAllFlag = FALSE
+    initialCameraOrientation = CAMERA_KEEP_AS_IS
+    applyCameraOrientation = CAMERA_KEEP_AS_IS
+    cameraType = CAMERA_PERSPECTIVE
+    autoApplyUserSettingOrientation = FALSE
+    userSettingOrientation = "0 0 1 0"
+    automaticViewAll = FALSE
+    storeCurrentState = TRUE
+    saveCamera = TRUE
+    cursor = TRUE
+    isCameraStored = TRUE
+    perspective = TRUE
+    stereoViewing = FALSE
+    stereoOffset = 3
+    height = 0.78539819
+    position = "-43.7488861083984 254.221633911133 3.87284851074219"
+    orientation = "-0.721965730190277 0.305457204580307 0.620855391025543 1.66561126708984"
+    nearDistance = 156.93349
+    farDistance = 345.79996
+    focalDistance = 251.27263
+    forceRedrawOnInteraction = FALSE
+    button1events = TO_VIEWER
+    button2events = TO_VIEWER
+    button3events = TO_VIEWER
+    keyEvents = TO_VIEWER
+    animationEnabled = FALSE
+    feedback = FALSE
+    feedbackSize = 32
+    mouseInteraction = ""
+    rotationAxis = "0 1 0"
+    rotationAngle = 360
+    rotationSteps = 80
+    recordRotation = TRUE
+    wheelZoomEnabled = TRUE
+    wheelRotationEnabled = TRUE
+  }
+}
+module SoBackground {
+  internal  {
+    frame = "775 288 112 56"
+    moduleGroupName = SoGVRVolumeRenderer
+  }
+  fields  {
+    instanceName = SoBackground
+    rotate = TRUE
+    flip = FALSE
+    on = TRUE
+    depthBuffer = TRUE
+  }
+}
+module SoLUTEditor {
+  internal  {
+    frame = "899 288 104 56"
+    moduleGroupName = SoGVRVolumeRenderer
+    windows  {
+      window _default {
+        geometry = "539 380 518 450"
+        sizeHint = "518 450"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoLUTEditor
+    rangeMin = 0
+    rangeMax = 10
+    viewMin = 0
+    viewMax = 10
+    window = 1
+    level = 0.5
+    allowNewPoints = TRUE
+    updateLutWhileDragging = TRUE
+    relativeLut = FALSE
+    colorInterpolation = InterpolateRGB
+    colorPoints = "[ 0 0 0 0, 9.99999974737875e-06 1 0 0, 5.5 0.933332979679108 1 0, 10 0.186666592955589 1 0.0533333607017994 ]"
+    alphaPoints = "[ 0 0, 9.99999974737875e-06 1, 5.5 1, 10 1 ]"
+    alphaFactor = 1
+    newRangeMin = 0
+    newRangeMax = 10
+    newRangeMode = ClipFormerLUT
+    colorEditorHeight = 24
+    showColorEditor = TRUE
+    showAlphaEditor = TRUE
+    markerRadius = 4
+    selectedMarkerRadius = 6
+    snapMarkerRadius = 10
+    alphaLineWidth = 2
+    backgroundColor = "0.800000011920929 0.800000011920929 0.800000011920929"
+    marginColor = "0.830999970436096 0.815999984741211 0.783999979496002"
+    borderColor = "0 0 0"
+    alphaLineColor = "0 0 0"
+    histogramColor = "0.400000005960464 0.400000005960464 0.400000005960464"
+    drawColoredMarkers = TRUE
+    markerColor = "1 1 1"
+    selectedMarkerColor = "1 0.5 0.5"
+    selectedTriangleSize = 8
+    triangleSize = 6
+    useAntiAliasing = TRUE
+  }
+}
 module RunPythonScript {
   internal  {
-    frame = "1129 477 160 56"
+    frame = "841 485 160 56"
     moduleGroupName = ""
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "3077 152 621 377"
-        sizeHint = "621 300"
+        geometry = "931 636 623 300"
+        sizeHint = "623 300"
         wasOpen = no
       }
     }
@@ -121,8 +346,7 @@ module RunPythonScript {
     initCode = "# For backward compatibility, set up CTX as alias for ctx
 CTX = ctx # ctx is the network's context, not RunPythonScript's"
     wakeUpCode = ""
-    code = "*
-ctx.field("DtfSkeletonization.update").touch()
+    code = "*ctx.field("DtfSkeletonization.update").touch()
 
 graph = ctx.field("DtfSkeletonization.outBase1").object()
 if graph is not None:
@@ -130,21 +354,13 @@ if graph is not None:
   print('Num edges', len(graph.getEdges()))
   for edge in graph.getEdges():
     end_node = edge.getEndNode()
-    for skeleton in edge.getSkeletons():      
+    for skeleton in edge.getSkeletons():
       if label not in skeleton.properties:
-        skeleton.createPropertyDouble(label, edge.getId())
-      skeleton.setProperty(label, edge.getId())
-  
-  ctx.field("GraphToVolume.update").touch()
+        skeleton.createPropertyDouble(label, skeleton.getProperty("MinDistance"))
+      skeleton.setProperty(label, skeleton.getProperty("MinDistance"))
 
-  
-
-  ctx.field("SoVascularSystem.apply").touch()
-
- 
-  
-
-*"
+ctx.field("GraphToVolume.update").touch()
+ctx.field("SoVascularSystem.apply").touch()*"
     finalizeCode = ""
     showFields = FALSE
     showInitCode = FALSE
@@ -154,317 +370,121 @@ if graph is not None:
     showConsole = FALSE
   }
 }
-module SoBackground {
+module SoGVRVolumeRenderer {
   internal  {
-    frame = "693 332 112 56"
-    moduleGroupName = ""
-  }
-  fields  {
-    instanceName = SoBackground
-    rotate = TRUE
-    flip = FALSE
-    on = TRUE
-    depthBuffer = TRUE
-  }
-}
-module LocalImage {
-  internal  {
-    frame = "848 677 176 72"
-    moduleGroupName = ""
+    frame = "1035 296 200 56"
+    moduleGroupName = SoGVRVolumeRenderer
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "2351 539 488 144"
-        sizeHint = "488 144"
+        geometry = "260 207 386 560"
+        sizeHint = "386 560"
         wasOpen = no
       }
     }
   }
   fields  {
-    instanceName = LocalImage
-    name = $(NETWORK)/EditedImage.mlimage
-    autoLoad = TRUE
-  }
-}
-module SoLUTEditor {
-  internal  {
-    frame = "798 447 104 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "2604 526 520 450"
-        sizeHint = "520 450"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = SoLUTEditor
-    rangeMin = 0
-    rangeMax = 160
-    viewMin = 0
-    viewMax = 160
-    window = 1
-    level = 0.5
-    allowNewPoints = TRUE
-    updateLutWhileDragging = TRUE
-    relativeLut = FALSE
-    colorInterpolation = InterpolateRGB
-    colorPoints = "[ 0 0 0 0, 0.00015999999595806 0.988235294818878 1 0, 80.8213577270508 1 0.466666668653488 0, 117.618072509766 0 0 1, 160 0.0784313753247261 1 0 ]"
-    alphaPoints = "[ 0 0, 0.00015999999595806 1, 80.8213577270508 1, 117.618072509766 1, 160 1 ]"
-    alphaFactor = 1
-    newRangeMin = 0
-    newRangeMax = 160
-    newRangeMode = ClipFormerLUT
-    colorEditorHeight = 24
-    showColorEditor = TRUE
-    showAlphaEditor = TRUE
-    markerRadius = 4
-    selectedMarkerRadius = 6
-    snapMarkerRadius = 10
-    alphaLineWidth = 2
-    backgroundColor = "0.800000011920929 0.800000011920929 0.800000011920929"
-    marginColor = "0.830999970436096 0.815999984741211 0.783999979496002"
-    borderColor = "0 0 0"
-    alphaLineColor = "0 0 0"
-    histogramColor = "0.400000005960464 0.400000005960464 0.400000005960464"
-    drawColoredMarkers = TRUE
-    markerColor = "1 1 1"
-    selectedMarkerColor = "1 0.5 0.5"
-    selectedTriangleSize = 8
-    triangleSize = 6
-    useAntiAliasing = TRUE
-  }
-}
-module SoVascularSystem {
-  internal  {
-    frame = "824 332 136 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "1335 340 373 625"
-        sizeHint = "369 607"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = SoVascularSystem
-    interactionProviderID = ""
-    autoApply = TRUE
-    complexity = 0.5999999
-    pointSize = 1
-    lineWidth = 1
-    textureScaleX = 0.5
-    textureScaleY = 0.5
-    recursionDepth = -1
-    showLines = FALSE
-    labelMode = GENERAL_LABEL
-    textureMode = SIZE_ALMOST_EQUAL
-    textureCoordinateMode = FOR_ALL_ELEMENTS
-    radiusMode = MIN_DIST
-    displayMode = DISPLAY_SURFACE
-    radiusScale = 1.9
-    radiusFixedSize = 1
-    visible = TRUE
-    texture = FALSE
-    numSmoothingPasses = 3
-    overallSmoothness = 0.69999999
-    smoothIndependently = FALSE
-    radiusSmoothness = 0.69999999
-    skeletonSmoothness = 0.69999999
-    endCapScaling = 1
-    useGeneralColor = FALSE
-    generalColor = "1 1 1"
-    useIntegerLUT = FALSE
-    useAlternativeTransparency = TRUE
-    alternativeTransparencyColor = "0 0 0"
-    selectedCoordinate = "-33.2610168457031 54.6330642700195 -157.388977050781"
-    snapMode = SNAP_TO_SKELETON
-    enableSelection = TRUE
-    continuousHitCheck = FALSE
-    cursorShape = CROSS_CURSOR
-    enableInteractivePreviewMode = FALSE
-    enableRecursiveHighlighting = FALSE
-    highlightMode = HIGHLIGHT_OFF
-    interactivePreviewColor = "1 0 0"
-    interactivePreviewAlpha = 0.5
-    selectionTolerance = 2
-    numSkeletonsSmartSnap = 5
-    useMinRadiusCutOff = FALSE
-    minRadiusCutOffValue = 52
-    cutOffColor = "1 0.333333343267441 1"
-    cutOffAlpha = 1
-    useDirectGraph = TRUE
-    workDirectlyOnInputGraph = TRUE
-    useSkeletonColors = FALSE
-  }
-}
-module View2D {
-  internal  {
-    frame = "1035 217 120 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "290 606 400 395"
-        sizeHint = "400 400"
-        wasOpen = no
-      }
-      window _automatic {
-        geometry = "2630 330 500 600"
-        sizeHint = "260 223"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = View2D
-    inventorInputOn = TRUE
-    inventorOutputOn = FALSE
-    view2DExtensionsOn = TRUE
-    startSlice = 161
-    numSlices = 1
-    numXSlices = 1
-    sliceStep = 1
-    slab = 1
-    blendMode = BLEND_REPLACE
-    timePoint = 0
-    maxTimePoint = 0
-    filterMode = FILTER_LINEAR
-    standardKeys = TRUE
-    cineMode = CINE_ZT
-    cineDirection = CINE_FORWARD
-    cineRepeat = CINE_ONCE
-    cineSpeed = 0.1
-    cineAlwaysReset = TRUE
-    snapToCenter = TRUE
-    zoomMode = VIEW2D_AUTO_ZOOM
-    unzoomOnImageChange = FALSE
-    sliceZoom = 1
-    sliceZoomSynced = 1
-    baseColor = "1 1 1"
-    margin = "2 2"
-    sliceOrigin = "0 0"
-    useShaders = TRUE
-    useManagedInteraction = FALSE
-    lutCenter = -0.5
-    lutWidth = 1
-    annotationOn = TRUE
-    annotationMode = ANNO_MODE_AUTO
-    annotationSizeMode = ANNO_SHOW_DETAILED
-    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
-    annotationFontSize = ANNO_SIZE_AUTO
-    annoCoords = Voxel
-    annoCTValue = AsIs
-    borderOn = FALSE
-    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
-    valueHighPrecision = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
-    maxPrecision = 4
-    enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
-  }
-}
-module SoExaminerViewer {
-  internal  {
-    frame = "880 217 136 56"
-    moduleGroupName = ""
-    windows  {
-      window _viewer {
-        geometry = "2837 655 400 405"
-        sizeHint = "400 400"
-        wasOpen = no
-      }
-      window _automatic {
-        geometry = "2652 242 486 598"
-        sizeHint = "260 223"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = SoExaminerViewer
+    instanceName = SoGVRVolumeRenderer
     renderCaching = AUTO
     boundingBoxCaching = AUTO
     renderCulling = AUTO
     pickCulling = AUTO
-    border = FALSE
-    background = "0 0 0"
-    transparency = BLEND
-    antialiasing = FALSE
-    antialiasingNumPasses = 1
-    useSampleBuffers = FALSE
-    numSamples = 8
-    grabKeyFocus = TRUE
-    enableKeyCommands = TRUE
-    snapshotFormat = SNAPSHOT_RGB
-    outputAviFile = ""
-    autoRedrawWhenRecording = TRUE
-    frameRate = 7
-    frameRateAvi = 15
-    outputSnapshotFile = none
-    outputSnapshotFileWritten = none
-    autoIncreaseFile = TRUE
-    showSnapshotWithShell = FALSE
-    snapCount = 0
-    inputDevicesList = ""
-    headlight = TRUE
-    decoration = TRUE
-    popupMenuEnabled = FALSE
-    viewing = TRUE
-    autoClipping = TRUE
-    drawStyle = VIEW_AS_IS
-    interactiveDrawStyle = VIEW_LOW_COMPLEXITY
-    viewAllFlag = FALSE
-    initialCameraOrientation = CAMERA_KEEP_AS_IS
-    applyCameraOrientation = CAMERA_KEEP_AS_IS
-    cameraType = CAMERA_PERSPECTIVE
-    autoApplyUserSettingOrientation = FALSE
-    userSettingOrientation = "0 0 1 0"
-    automaticViewAll = FALSE
-    storeCurrentState = TRUE
-    saveCamera = TRUE
-    cursor = TRUE
-    isCameraStored = TRUE
-    perspective = TRUE
-    stereoViewing = FALSE
-    stereoOffset = 3
-    height = 1595.6335
-    position = "793.153015136719 571.251098632813 -38.6670989990234"
-    orientation = "-0.333824127912521 -0.65720146894455 -0.675757110118866 3.83753371238708"
-    nearDistance = 860.30023
-    farDistance = 1066.2917
-    focalDistance = 963.00446
-    forceRedrawOnInteraction = FALSE
-    button1events = TO_VIEWER
-    button2events = TO_VIEWER
-    button3events = TO_VIEWER
-    keyEvents = TO_VIEWER
-    animationEnabled = FALSE
-    feedback = FALSE
-    feedbackSize = 32
-    mouseInteraction = ""
-    rotationAxis = "0 1 0"
-    rotationAngle = 360
-    rotationSteps = 80
-    recordRotation = TRUE
-    wheelZoomEnabled = TRUE
-    wheelRotationEnabled = TRUE
+    on = TRUE
+    autoLoad = TRUE
+    interactiveQuality = 0.096900001
+    staticQuality = 0.096900001
+    interactiveSamplingRate = 1
+    staticSamplingRate = 1
+    blendMode = Blend
+    octreeNodeSize = NODE_SIZE_32
+    octreeParentComputationMethod = Rank
+    octreeParentComputationRank = 4
+    currentTimePoint = 0
+    maxTimePoint = 0
+    force8bit = FALSE
+    filterVolumeData = FilterNearest
+    filterLut = TRUE
+    subVolumeStartX = 0
+    subVolumeStartY = 0
+    subVolumeStartZ = 0
+    subVolumeEndX = 240
+    subVolumeEndY = 146
+    subVolumeEndZ = 323
+    zbuffer = TRUE
+    permitClipping = TRUE
+    drawOnPlanes = TRUE
+    sizeOutputX = 240
+    sizeOutputY = 146
+    sizeOutputZ = 323
+    incrementalUpdate = TRUE
+    highQualityStaticUpdate = FALSE
+    staticRenderingAfterInteractionOnly = FALSE
+    adaptQualityToWindowSize = TRUE
+    rayCastTextureStorage = RayCastTextureStorage_Auto
+    renderMode = Illuminated
+    greyCenter = 0.052999999
+    greyWidth = 1
+    greyInvert = FALSE
+    alphaCenter = 0.47400001
+    alphaWidth = 0.421
+    alphaInvert = FALSE
+    colorFactor = "0.0588235296308994 0.501960813999176 1"
+    alphaFactor = 0.088
+    enhancementAlphaMix = 0
+    boundaryEnhancement = FALSE
+    boundaryEnhancementFactor = 0
+    boundaryEnhancementExponent = 0.1
+    boundaryEnhancementGradientBias = 1
+    silhouetteEnhancement = FALSE
+    silhouetteEnhancementExponent = 1
+    silhouetteEnhancementFactor = 1
+    toneShading = FALSE
+    toneShadingWarmColor = "0.298039227724075 0.298039227724075 0.298039227724075"
+    toneShadingColdColor = "0 0 0.400000005960464"
+    toneShadingWarmDiffuse = 0.105
+    toneShadingColdDiffuse = 0.2
+    toneShadingAngle = 45
+    materialAmbient = 0.384
+    materialDiffuse = 1
+    materialSpecular = 0.986
+    materialSpecularity = 23.6
+    reduceLightingOnLowGradientMagnitude = FALSE
+    light1Enabled = TRUE
+    light1DiffuseIntensity = 1
+    light1SpecularIntensity = 0.13699999
+    light1Color = "1 1 1"
+    light1PolarPhi = -9
+    light1PolarRho = 0
+    light2Enabled = FALSE
+    light2DiffuseIntensity = 1
+    light2SpecularIntensity = 1
+    light2Color = "1 1 1"
+    light2PolarPhi = 45
+    light2PolarRho = 45
+    light3Enabled = FALSE
+    light3DiffuseIntensity = 1
+    light3SpecularIntensity = 1
+    light3Color = "1 1 1"
+    light3PolarPhi = -45
+    light3PolarRho = 0
+    gradientQuality = GradientQualityHigh
+    selectionAlphaThreshold = 0.2
+    selectionActive = FALSE
+    useWorldCoords = TRUE
   }
 }
 module SoExaminerViewer {
   internal  {
-    frame = "717 217 144 56"
-    moduleGroupName = ""
+    frame = "204 145 144 56"
+    moduleGroupName = SoVascularSystem
     windows  {
       window _viewer {
-        geometry = "2224 713 400 405"
+        geometry = "704 217 531 442"
         sizeHint = "400 400"
-        wasOpen = no
+        wasOpen = yes
       }
       window _automatic {
-        geometry = "2145 241 500 600"
+        geometry = "96 293 500 600"
         sizeHint = "260 223"
         wasOpen = no
       }
@@ -499,7 +519,7 @@ module SoExaminerViewer {
     headlight = TRUE
     decoration = TRUE
     popupMenuEnabled = FALSE
-    viewing = TRUE
+    viewing = FALSE
     autoClipping = TRUE
     drawStyle = VIEW_AS_IS
     interactiveDrawStyle = VIEW_LOW_COMPLEXITY
@@ -517,12 +537,12 @@ module SoExaminerViewer {
     perspective = TRUE
     stereoViewing = FALSE
     stereoOffset = 3
-    height = 1595.6335
-    position = "793.153015136719 571.251098632813 -38.6670989990234"
-    orientation = "-0.333824127912521 -0.65720146894455 -0.675757110118866 3.83753371238708"
-    nearDistance = 860.30023
-    farDistance = 1066.2917
-    focalDistance = 963.00446
+    height = 0.78539819
+    position = "-43.7488861083984 254.221633911133 3.87284851074219"
+    orientation = "-0.721965730190277 0.305457204580307 0.620855391025543 1.66561126708984"
+    nearDistance = 156.93349
+    farDistance = 345.79996
+    focalDistance = 251.27263
     forceRedrawOnInteraction = FALSE
     button1events = TO_VIEWER
     button2events = TO_VIEWER
@@ -540,237 +560,191 @@ module SoExaminerViewer {
     wheelRotationEnabled = TRUE
   }
 }
-module SoGVRVolumeRenderer {
+module SoVascularSystem {
   internal  {
-    frame = "979 332 200 56"
-    moduleGroupName = ""
-    showNetworkPanel = true
+    frame = "208 265 136 56"
+    moduleGroupName = SoVascularSystem
     windows  {
       window _default {
-        geometry = "764 350 392 560"
-        sizeHint = "392 560"
-        wasOpen = no
+        geometry = "51 221 631 607"
+        sizeHint = "366 607"
+        wasOpen = yes
       }
     }
   }
   fields  {
-    instanceName = SoGVRVolumeRenderer
-    renderCaching = AUTO
-    boundingBoxCaching = AUTO
-    renderCulling = AUTO
-    pickCulling = AUTO
-    on = TRUE
-    autoLoad = TRUE
-    interactiveQuality = 0.1
-    staticQuality = 0.1
-    interactiveSamplingRate = 1
-    staticSamplingRate = 1
-    blendMode = Blend
-    octreeNodeSize = NODE_SIZE_32
-    octreeParentComputationMethod = Rank
-    octreeParentComputationRank = 4
-    currentTimePoint = 0
-    maxTimePoint = 0
-    force8bit = FALSE
-    filterVolumeData = FilterNearest
-    filterLut = TRUE
-    subVolumeStartX = 0
-    subVolumeStartY = 0
-    subVolumeStartZ = 0
-    subVolumeEndX = 240
-    subVolumeEndY = 146
-    subVolumeEndZ = 323
-    zbuffer = TRUE
-    permitClipping = TRUE
-    drawOnPlanes = TRUE
-    sizeOutputX = 240
-    sizeOutputY = 146
-    sizeOutputZ = 323
-    incrementalUpdate = TRUE
-    highQualityStaticUpdate = FALSE
-    staticRenderingAfterInteractionOnly = FALSE
-    adaptQualityToWindowSize = TRUE
-    rayCastTextureStorage = RayCastTextureStorage_Auto
-    renderMode = Illuminated
-    greyCenter = 0.5
-    greyWidth = 0.5
-    greyInvert = FALSE
-    alphaCenter = 0.5
-    alphaWidth = 0.5
-    alphaInvert = FALSE
-    colorFactor = "1 1 1"
-    alphaFactor = 1
-    enhancementAlphaMix = 0.25
-    boundaryEnhancement = FALSE
-    boundaryEnhancementFactor = 1
-    boundaryEnhancementExponent = 1
-    boundaryEnhancementGradientBias = 0
-    silhouetteEnhancement = FALSE
-    silhouetteEnhancementExponent = 1
-    silhouetteEnhancementFactor = 1
-    toneShading = FALSE
-    toneShadingWarmColor = "0.674509823322296 0.533333361148834 0.141176477074623"
-    toneShadingColdColor = "0 0 0.400000005960464"
-    toneShadingWarmDiffuse = 0.60000002
-    toneShadingColdDiffuse = 0.2
-    toneShadingAngle = 45
-    materialAmbient = 0.384
-    materialDiffuse = 1
-    materialSpecular = 0.986
-    materialSpecularity = 23.6
-    reduceLightingOnLowGradientMagnitude = FALSE
-    light1Enabled = TRUE
-    light1DiffuseIntensity = 1
-    light1SpecularIntensity = 0.13699999
-    light1Color = "1 1 1"
-    light1PolarPhi = -9
-    light1PolarRho = 0
-    light2Enabled = FALSE
-    light2DiffuseIntensity = 1
-    light2SpecularIntensity = 1
-    light2Color = "1 1 1"
-    light2PolarPhi = 45
-    light2PolarRho = 45
-    light3Enabled = FALSE
-    light3DiffuseIntensity = 1
-    light3SpecularIntensity = 1
-    light3Color = "1 1 1"
-    light3PolarPhi = -45
-    light3PolarRho = 0
-    gradientQuality = GradientQualityHigh
-    selectionAlphaThreshold = 0.2
-    selectionActive = FALSE
-    useWorldCoords = TRUE
+    instanceName = SoVascularSystem
+    interactionProviderID = ""
+    autoApply = TRUE
+    complexity = 0.60000002
+    pointSize = 1
+    lineWidth = 1
+    textureScaleX = 0.5
+    textureScaleY = 0.5
+    recursionDepth = -1
+    showLines = FALSE
+    labelMode = GENERAL_LABEL
+    textureMode = SIZE_ALMOST_EQUAL
+    textureCoordinateMode = FOR_ALL_ELEMENTS
+    radiusMode = MIN_DIST
+    displayMode = DISPLAY_SURFACE
+    radiusScale = 1
+    radiusFixedSize = 1
+    visible = TRUE
+    texture = FALSE
+    numSmoothingPasses = 3
+    overallSmoothness = 0.69999999
+    smoothIndependently = FALSE
+    radiusSmoothness = 0.69999999
+    skeletonSmoothness = 0.69999999
+    endCapScaling = 1
+    useGeneralColor = FALSE
+    generalColor = "1 1 1"
+    useIntegerLUT = FALSE
+    useAlternativeTransparency = TRUE
+    alternativeTransparencyColor = "0 0 0"
+    selectedCoordinate = "-45.4606704711914 54.9791107177734 -162.494293212891"
+    snapMode = SNAP_TO_SKELETON
+    enableSelection = TRUE
+    continuousHitCheck = FALSE
+    cursorShape = CROSS_CURSOR
+    enableInteractivePreviewMode = FALSE
+    enableRecursiveHighlighting = TRUE
+    highlightMode = HIGHLIGHT_OFF
+    interactivePreviewColor = "1 1 0"
+    interactivePreviewAlpha = 0.5
+    selectionTolerance = 2
+    numSkeletonsSmartSnap = 5
+    useMinRadiusCutOff = FALSE
+    minRadiusCutOffValue = 1
+    cutOffColor = "1 1 1"
+    cutOffAlpha = 1
+    useDirectGraph = TRUE
+    workDirectlyOnInputGraph = TRUE
+    useSkeletonColors = FALSE
   }
 }
 module SyncFloat {
   internal  {
-    frame = "1094 102 88 56"
+    frame = "414 -61 88 56"
     moduleGroupName = Sync
     windows  {
-      window _automatic {
-        geometry = "2630 330 500 600"
-        sizeHint = "256 192"
-        wasOpen = no
-      }
       window _default {
-        geometry = "2947 309 200 94"
-        sizeHint = "132 94"
+        geometry = "1176 378 198 94"
+        sizeHint = "131 94"
         wasOpen = no
       }
     }
   }
   fields  {
     instanceName = SyncFloat
-    float1 = 1595.63354492188
-    float2 = 1595.63354492188
-    epsilon = 9.9999997e-05
-  }
-}
-module SyncFloat {
-  internal  {
-    frame = "979 102 96 56"
-    moduleGroupName = Sync
-    windows  {
-      window _default {
-        geometry = "2777 616 198 94"
-        sizeHint = "130 94"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = SyncFloat1
-    float1 = 963.004455566406
-    float2 = 963.004455566406
+    float1 = 0.785398185253143
+    float2 = 0.785398185253143
     epsilon = 9.9999997e-05
   }
 }
 module SyncVector {
   internal  {
-    frame = "864 102 96 56"
+    frame = "562 -61 96 56"
     moduleGroupName = Sync
     windows  {
       window _default {
-        geometry = "2714 550 333 160"
-        sizeHint = "333 160"
+        geometry = "1231 465 336 154"
+        sizeHint = "336 154"
         wasOpen = no
       }
     }
   }
   fields  {
     instanceName = SyncVector
-    vector1 = "793.153015136719 571.251098632813 -38.6670989990234 0"
-    vector2 = "793.153015136719 571.251098632813 -38.6670989990234 0"
+    vector1 = "-43.7488861083984 254.221633911133 3.87284851074219 0"
+    vector2 = "-43.7488861083984 254.221633911133 3.87284851074219 0"
     epsilon = 9.9999997e-05
     epsilonVec = "0.001 0.001 0.001 0.001"
     mode = EpsilonScalar
   }
 }
-module SyncFloat {
-  internal  {
-    frame = "749 102 96 56"
-    moduleGroupName = Sync
-    windows  {
-      window _default {
-        geometry = "2815 583 198 94"
-        sizeHint = "130 94"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = SyncFloat2
-    float1 = 860.300231933594
-    float2 = 860.300231933594
-    epsilon = 9.9999997e-05
-  }
-}
-module SyncFloat {
-  internal  {
-    frame = "634 102 96 56"
-    moduleGroupName = Sync
-    windows  {
-      window _default {
-        geometry = "2815 583 198 94"
-        sizeHint = "130 94"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = SyncFloat3
-    float1 = 1066.29174804688
-    float2 = 1066.29174804688
-    epsilon = 9.9999997e-05
-  }
-}
 module SyncVector {
   internal  {
-    frame = "511 102 104 56"
+    frame = "718 -53 104 56"
     moduleGroupName = Sync
     windows  {
       window _default {
-        geometry = "2714 550 333 160"
-        sizeHint = "333 160"
+        geometry = "1252 457 336 154"
+        sizeHint = "336 154"
         wasOpen = no
       }
     }
   }
   fields  {
     instanceName = SyncVector1
-    vector1 = "-0.333824127912521 -0.65720146894455 -0.675757110118866 3.83753371238708"
-    vector2 = "-0.333824127912521 -0.65720146894455 -0.675757110118866 3.83753371238708"
+    vector1 = "-0.721965730190277 0.305457204580307 0.620855391025543 1.66561126708984"
+    vector2 = "-0.721965730190277 0.305457174777985 0.620855331420898 1.66561126708984"
     epsilon = 9.9999997e-05
     epsilonVec = "0.001 0.001 0.001 0.001"
     mode = EpsilonScalar
   }
 }
+module SyncFloat {
+  internal  {
+    frame = "874 -61 96 56"
+    moduleGroupName = Sync
+    windows  {
+      window _default {
+        geometry = "1188 521 198 94"
+        sizeHint = "131 94"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SyncFloat1
+    float1 = 156.933486938477
+    float2 = 156.933486938477
+    epsilon = 9.9999997e-05
+  }
+}
+module SyncFloat {
+  internal  {
+    frame = "994 -61 96 56"
+    moduleGroupName = Sync
+    windows  {
+      window _default {
+        geometry = "1360 503 198 94"
+        sizeHint = "131 94"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SyncFloat2
+    float1 = 345.799957275391
+    float2 = 345.799957275391
+    epsilon = 9.9999997e-05
+  }
+}
+module SyncFloat {
+  internal  {
+    frame = "1114 -61 96 56"
+    moduleGroupName = Sync
+    windows  {
+      window _default {
+        geometry = "1210 503 198 94"
+        sizeHint = "131 94"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SyncFloat3
+    float1 = 251.27262878418
+    float2 = 251.27262878418
+    epsilon = 9.9999997e-05
+  }
+}
 connections  {
   DtfSkeletonization.input0 = LocalImage.outImage
   GraphToVolume.inGraph = DtfSkeletonization.outBase1
-  SoVascularSystem.inputGraph = DtfSkeletonization.outBase1
-  SoVascularSystem.inLUT = SoLUTEditor.outLUT
   View2D.inImage = GraphToVolume.output0
   View2D.inInvPostLUT = SoLUTEditor.outInventorLUT
   SoExaminerViewer.height = SoExaminerViewer1.height
@@ -780,68 +754,51 @@ connections  {
   SoExaminerViewer.farDistance = SoExaminerViewer1.farDistance
   SoExaminerViewer.focalDistance = SoExaminerViewer1.focalDistance
   SoExaminerViewer.children = "SoBackground.self SoLUTEditor.outInventorLUT SoGVRVolumeRenderer.self"
+  SoGVRVolumeRenderer.image = GraphToVolume.output0
   SoExaminerViewer1.height = SyncFloat.float2
   SoExaminerViewer1.position = SyncVector.vector2
   SoExaminerViewer1.orientation = SyncVector1.vector2
-  SoExaminerViewer1.nearDistance = SyncFloat2.float2
-  SoExaminerViewer1.farDistance = SyncFloat3.float2
-  SoExaminerViewer1.focalDistance = SyncFloat1.float2
-  SoExaminerViewer1.children = "SoBackground.self SoVascularSystem.self SoLUTEditor.outInventorLUT"
-  SoGVRVolumeRenderer.image = GraphToVolume.output0
+  SoExaminerViewer1.nearDistance = SyncFloat1.float2
+  SoExaminerViewer1.farDistance = SyncFloat2.float2
+  SoExaminerViewer1.focalDistance = SyncFloat3.float2
+  SoExaminerViewer1.children = "SoBackground.self SoVascularSystem.self"
+  SoVascularSystem.inputGraph = DtfSkeletonization.outBase1
+  SoVascularSystem.inLUT = SoLUTEditor.outLUT
   SyncFloat.float1 = SoExaminerViewer.height
-  SyncFloat1.float1 = SoExaminerViewer.focalDistance
   SyncVector.vector1 = SoExaminerViewer.position
-  SyncFloat2.float1 = SoExaminerViewer.nearDistance
-  SyncFloat3.float1 = SoExaminerViewer.farDistance
   SyncVector1.vector1 = SoExaminerViewer.orientation
+  SyncFloat1.float1 = SoExaminerViewer.nearDistance
+  SyncFloat2.float1 = SoExaminerViewer.farDistance
+  SyncFloat3.float1 = SoExaminerViewer.focalDistance
 }
 networkModel  {
   parentItems  {
     0  {
-      MLABNetworkModelItem MLABNoteItem {
-        uniqueId = 28
-        objectName = ""
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 30
+        objectName = SoGVRVolumeRenderer
         parentUniqueId = 0
-        frame = "1125 545 313 215"
-        backgroundColor  {
-          r = 252
-          g = 242
-          b = 2
-          a = 255
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
         }
-        text = "To initiate the process, click on the 'Execute' button for the RunPythonScript module.
-
-This action triggers the assignment of the edge's ID to the label of the edge's skeleton. Subsequently, this labeling is incorporated into the resulting ML image through rasterization.
-
-Feel free to proceed by executing the script for a seamless integration of edge IDs into the visualization."
-        richText = "*<html>
-  <head>
-    <style type="text/css">
-      a.headerlink {
-        visibility: hidden;
-      }
-      table {
-        border-collapse: collapse;
-      }
-    </style>
-  </head>
-  <body>
-
-  <p>To initiate the process, click on the ‘Execute’ button for the RunPythonScript module.</p>
-<p>This action triggers the assignment of the edge’s ID to the label of the edge’s skeleton. Subsequently, this labeling is incorporated into the resulting ML image through rasterization.</p>
-<p>Feel free to proceed by executing the script for a seamless integration of edge IDs into the visualization.</p>
-
-
-  </body>
-</html>*"
-        titleText = "Execution Instruction"
-        isCollapsed = False
-        drawAsComment = False
-        titleFrame = "1130 550 303 22"
       }
       MLABNetworkModelItem MLABNetworkModelItemGroup {
-        uniqueId = 108
+        uniqueId = 79
         objectName = Sync
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 98
+        objectName = SoVascularSystem
         parentUniqueId = 0
         color  {
           r = 45
