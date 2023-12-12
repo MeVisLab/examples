@@ -15,155 +15,162 @@ menu:
 # Example 8: Vessel Segmentation using SoVascularSystem {#TutorialVisualizationExample8}
 
 ## Introduction
-In this tutorial, we are using an input mask to create a vessel centerline using the `DtfSkeletonization` module and visualize the vascular structures in 3D using the `SoVascularSystem` module.
+In this tutorial, we are using an input mask to create a vessel centerline using the `DtfSkeletonization` module and visualize the vascular structures in 3D using the `SoVascularSystem` module. The second part uses the distance between centerline and surface of the vessel structures to color thin vessels red and thick vessels green.
 
 ## Steps to do
 ### Develop your network
 
-Load your tree mask ML image using the `LocalImage` module. Then connect the output to the `DtfSkeletonization` module as seen below. Press the *Load* button to obtain the skeleton and a graph with distinct node and edge IDs.
+Load the example [tree mask](/examples/visualization/example8/EditedImage.mlimage) by using the `LocalImage` module. Connect the output to a `DtfSkeletonization` module as seen below. The initial output of the `DtfSkeletonization` module is empty. Press the *Load* button to calculate the skeleton and the erosion distances.
 
-![LocalImage](/images/tutorials/visualization/V8_1.png "LocalImage")
+![Network](/images/tutorials/visualization/V8_1.png "Network")
 
-{{<alert class="info" caption="Extra Infos">}}
+Below you can see the output of the original image taken from the `LocalImage` module (left) compared to the output after calculating the skeleton via `DtfSkeletonization` module (right).
 
-The used sample tree mask is available for download [here](/examples/visualization/example8/EditedImage.mlimage)
+![Output comparison](/images/tutorials/visualization/V8_1b.png "Output comparison")
 
-{{</alert>}}
-
-Next, access the `DtfSkeletonization` module's panel and activate *Update skeleton graph* for a clear picture of how the skeletonized structures connect visually. Additionally, enable the *Compile Graph Voxels* to get details about the specific image voxels contributing to these skeletal structures. 
+The output *DtfSkeletonization.outBase1* shows nothing. Here you can find the 3-dimensional graph of the vascular structures. To generate it, open the panel of the `DtfSkeletonization` module, set *Update Mode* to *Auto Update* and select *Update skeleton graph*. Now the output additionally provides a 3D graph. Additionally, enable the *Compile Graph Voxels* to provide all object voxels at the output. 
 
 ![DtfSkeletonization](/images/tutorials/visualization/V8_02.png "DtfSkeletonization")
 
+You can use the *Output Inspector* to see the 3D graph.
 
-To see the changes, click first on the output of the LocalImage module to see the original image. You'll find the ML image in the output inspector.
+![Graph output of DtfSkeletonization](/images/tutorials/visualization/V8_MLImage.png "Graph output of DtfSkeletonization")
 
-![Output of DtfSkeletonization of LocalImage](/images/tutorials/visualization/V8_MLImage.png "Output of DtfSkeletonization of LocalImage")
-
-And if you click on the output of the `DtfSkeletonization` module this ML image will be shown. The DtfSkeletonization module computes the skeletonization of the original image. The topology of the initial mask is preserved, vessel centerline extraction has been done. Erosion distances are coded in mm in the output image.
-
-![Output of DtfSkeletonization](/images/tutorials/visualization/V8_MLImage1.png "Output of DtfSkeletonization")
-
-
-{{<alert class="info" caption="Extra Infos">}}
-
-This helps compare the characteristics before and after using other modules like `SoVascularSystem`. 
-
-{{</alert>}}
-
-By connecting `DtfSkeletonization` to `GraphToVolume` you effectively creat a new volume that includes the labels of the skeleton and the vessel voxel and you are essentially making a clearer picture of the skeleton and vessels in the ML image.
-
-
-
-{{<alert class="info" caption="Extra Infos">}}
-
-Recognize that each graph edge comprises Skeletons (positions along the middle of an edge) and Vessel Voxels (voxels linked to the nearest Skeleton in that edge).
-
-{{</alert>}}
+If you want to visualize your graph in 3D, you should connect a `GraphToVolume` module to the `DtfSkeletonization` module. The result is a 3D volume of your graph which you can connect to any 2D or 3D viewer. Add a `View2D` module to the `GraphToVolume` module and update the volume.
 
 ![GraphToVolume](/images/tutorials/visualization/V8_03.png "GraphToVolume")
 
-Now, connect the modules as illustrated in the example network image to ensure a proper flow of data and operations. The `SoLUTEditor` module enables interactive editing of color lookup tables, producing MLLUT and SoMLLUT objects. We connect it with the `View2D` and `SoExaminerViewer` modules to set lookup tables in an Open Inventor scene, primarily designed for dynamic adjustments. On the other hand, the SoGVRVolumeRenderer module serves as a core tool for high-quality Volume Rendering of 3D/4D images using an octree-based approach and accepts an ML image as main volume dataset.
+For coloring the vessels depending on their distances to the centerline, we need a `SoLUTEditor` module. Change your network to use a `SoExaminerViewer` module, a `SoLUTEditor` module and a `SoBackground` module instead of a `View3D` module.
 
-![Example Network](/images/tutorials/visualization/V8_04.png "Example Network")
+Use the `SoLUTEditor` for the `View2D`, too.
+
+![Network](/images/tutorials/visualization/V8_04.png "Network")
+
+ Open the output of the `GraphToVolume` module and inspect the images in Output Inspector. You will see that the HU value of the black background is defined as *-1*, the vessel tree is defined as *0*.
+
+![Output Inspector](/images/tutorials/visualization/V8_04_OutputInspector.png "Output Inspector")
+
+Open the Panel of the `SoLUTEditor` and select tab *Range*. Define *New Range Min* as *-1* and *New Range Max* as *0*.
+
+![SoLUTEditor Range](/images/tutorials/visualization/V8_04_Range.png "SoLUTEditor Range")
+
+Change to *Editor* tab and define the following LUT:
+
+![SoLUTEditor Editor](/images/tutorials/visualization/V8_04_Editor.png "SoLUTEditor Editor")
+
+The viewers now show your vessel graph.
+
+![View2D and SoExaminerViewer](/images/tutorials/visualization/V8_04_Viewer.png "View2D and SoExaminerViewer")
 
 ### Store Edge IDs in Skeletons with RunPythonScript
+Each edge of the calculated skeleton gets a unique ID defined by the `DtfSkeletonization` module. We now want to use this ID to define a different color for each edge of the skeleton. You can use the **Label** property of each skeleton to store the ID of the edge.
 
-The Skeletons can possess a **Label** property, which is not inherently available but can be created. Add `RunPythonScript` into your MeVisLab SDK and place the provided Python code into the RunPythonScript module in the network. Execute the network, ensuring that edge IDs are saved in the Skeletons for later use in coloring.
-
+Add a `RunPythonScript` module to your network, open the panel of the module and enter the following Python code:
 
 {{< highlight >}}
 ```Python
+ctx.field("DtfSkeletonization.update").touch()
 
+graph = ctx.field("DtfSkeletonization.outBase1").object()
+if graph is not None:
+  for edge in graph.getEdges():
+    print(edge.getId())
+  
+ctx.field("GraphToVolume.update").touch()
+```
+{{</highlight>}}
+
+First, we always want a fresh skeleton. We touch the *update* trigger of the module `DtfSkeletonization`. Then we get the graph from the *DtfSkeletonization.outBase1* output. If a valid graph is available, we walk through all edges of the graph and print the ID of each edge. In the end, we update the GraphToVolume module to get the calculated values of the Python script in the viewers. Click *Execute*.
+
+The Debug Output of the MeVisLab IDE shows a numbered list of edge IDs from 1 to 153.
+
+![RunPythonScript](/images/tutorials/visualization/V8_05.png "RunPythonScript")
+
+We now want the edge ID to be used for coloring each of the skeletons differently. Open the Panel of the `SoLUTEditor` and select tab *Range*. Define *New Range Min* as *0* and *New Range Max* as *153*. Define different colors for your LUT.
+
+![SoLUTEditor](/images/tutorials/visualization/V8_05_LUT.png "SoLUTEditor")
+
+The `SoGVRVolumeRenderer` module also needs a different setting. Open its panel in the *Main* tab, select *Illuminated* as the *Render Mode*. Adjust the *Quality* setting to *0.10*. Change to the *Illumination* tab and define below parameters:
+
+{{<imagegallery 2 "/images/tutorials/visualization" "SoGVRVolumeRendererMain" "SoGVRVolumeRendererIllumination">}}
+
+Change your Python script as follows:
+{{< highlight >}}
+```Python
 ctx.field("DtfSkeletonization.update").touch()
 
 graph = ctx.field("DtfSkeletonization.outBase1").object()
 if graph is not None:
   label = "Label"
-  print('Num edges', len(graph.getEdges()))
   for edge in graph.getEdges():
-    end_node = edge.getEndNode()
-    for skeleton in edge.getSkeletons():      
+    for skeleton in edge.getSkeletons():
       if label not in skeleton.properties:
         skeleton.createPropertyDouble(label, edge.getId())
       skeleton.setProperty(label, edge.getId())
   
-  ctx.field("GraphToVolume.update").touch()
+ctx.field("GraphToVolume.update").touch()
+```
+{{</highlight>}}
 
-  {{</highlight>}}
+In case the graph is valid, we now define a static text for the label. Instead of printing the edge ID, we also walk through each skeleton of the edge and define the property for the label using the ID of the edge as value.
 
-  
-{{<alert class="info" caption="Extra Infos">}}
+Your viewers now show a different color for each skeleton, based on our LUT.
 
-This code is essential for creating the **Label** property for Skeletons, allowing for the assignment of Edge IDs to Skeletons. It ensures the existence of the **Label** property and populates it with the corresponding IDs. This step is crucial for subsequent visualization, especially if you aim to represent graph information in the 3D mask.
-
-{{</alert>}}
-
-![RunPythonScript](/images/tutorials/visualization/V8_05.png "RunPythonScript")
-
-After pressing *Execute*, the network should resemble the image below:
-
-![Initial Skeletonization Results (Without Colors)](/images/tutorials/visualization/V8_06.png "Initial Skeletonization Results (Without Colors)")
-
-Proceed to explore some customization options with the `SoGVRVolumeRenderer` module. Open its panel in the *Main* tab, select *Illuminated* as the *Render Mode*. Adjust the *Quality* setting to *0.10* for enhanced visuals. Head over to the *Illumination* tab and implement these changes as demonstrated below.
-
-![SoGVRVolumeRenderer](/images/tutorials/visualization/V8_07.png "SoGVRVolumeRenderer")
-
-### Visualization with SoLUTEditor
-
-Open the `SoLUTEditor` module to establish a connection between voxel values (edge IDs) and their respective colors. Keep in mind the concept of color interpolation, where not every ID is assigned a unique color.
-
-Now, choose your preferred colors and navigate to the *Range* tab. Set the *New Range Max* setting to *160*, beacause we have 153 edges and need a unique color for each edge. Click on *Apply new Range* to ensure your color selections are applied. Execute the network to witness the 3D mask come to life, with distinct colors representing various graph node/edge IDs.
-
-![SoLUTEditor](/images/tutorials/visualization/V8_SoLUTEditor.png "SoLUTEditor")
-
-
-By the end of this process, you'll have two images at your dispose. 
-
-![Enhanced Skeletonization Results (With Colors)](/images/tutorials/visualization/V8_081.png "Enhanced Skeletonization Results (With Colors)")
+![View2D and SoExaminerViewer](/images/tutorials/visualization/V8_05_Viewer.png "View2D and SoExaminerViewer")
 
 ### Interaction with the Generated Vascular System Using SoVascularSystem
+The `SoVascularSystem` module is optimized for rendering vascular structures. In comparison to the `SoGVRVolumeRenderer` module, it allows to render the surface, the skeleton or points of the structure in an open inventor scene graph. Interactions with edges of the graph are also already implemented.
 
-In comparison to the `SoGVRVolumeRenderer`, add a `SoVascularSystem` module to your workspace. Connect it to your `DtfSkeletonization` module and to the `SoLUTEditor` as seen below. Add another `SoExaminerViewer` for comparing the 2 visualization. The same `SoBackground` can be added to your new scene.
+Add a `SoVascularSystem` module to your workspace. Connect it to your `DtfSkeletonization` module and to the `SoLUTEditor` as seen below. Add another `SoExaminerViewer` for comparing the two visualization. The same `SoBackground` can be added to your new scene.
+
+Uncheck *Use skeleton colors* and *Use integer LUT* on *Appearance* tab of the `SoVascularSystem` module panel.
 
 ![ EditedNetwork](/images/tutorials/visualization/V8_SoVascularSystem.png " EditedNetwork")
+
+{{<alert class="info" caption="Extra Infos">}}
+More information about the `SoVascularSystem` module can be found in the {{< docuLinks "/Standard/Documentation/Publish/ModuleReference/SoVascularSystem.html" "help page" >}} of the module.
+{{</alert>}}
 
 Draw parameter connections from one `SoExaminerViewer` to the other. Use the fields seen below to synchronize your camera interaction.
 
 ![ Camera positions](/images/tutorials/visualization/V8_SyncFloat.png " Camera positions")
 
-Connect the backwards direction of the two `SoExaminerViewer` by using a `SyncFloat` module.
-
+Connect the backwards direction of the two `SoExaminerViewer` by using multiple `SyncFloat` modules and two `SyncVector` modules for *position* and *orientation* fields.
 
 {{<alert class="info" caption="Extra Infos">}}
-
-To establish connections between fields with the type *Float*, you can use the *SyncFloat* module. For fields containing vector or rotation data, the appropriate connection can be achieved using the *SyncVector* module. Ensure they are moving concurrently.
-
+To establish connections between fields with the type *Float*, you can use the *SyncFloat* module. For fields containing vector, the appropriate connection can be achieved using the *SyncVector* module.
 {{</alert>}}
 
 ![ SyncFloat & SyncVector](/images/tutorials/visualization/V8_SyncFloat_Network.png " SyncFloat & SyncVector")
 
-Now you can notice the difference between the two modules. We use `SoVascularSystem` for a smoother and visually pleasing viewer, while the `SoGVRVolumeRenderer`, despite having many steps, provides precise results and is better suited for calculating totale volume and similiar metrics. 
+Camera interactions are now synchronized between both `SoExaminerViewer` modules.
+
+Now you can notice the difference between the two modules. We use `SoVascularSystem` for a smoother visualization of the vascular structures by using the graph as reference. The `SoGVRVolumeRenderer` renders the volume from the `GraphToVolume` module, including the visible stairs from pixel representations in the volume. 
 
 ![ SoVascularSystem & SoGVRVolumeRenderer](/images/tutorials/visualization/V8_Difference1.png " SoVascularSystem & SoGVRVolumeRenderer")
 
-the `SoVascularSystem` module have many visualization examples unlike `SoGVRVolumeRenderer`, which can just render a mask in 3D . Open `SoVascularSystem`'s panel and select *Random Points* for *Display Mode* in the *Main* tab to observe the changes. 
+The `SoVascularSystem` module has additional visualization examples unlike `SoGVRVolumeRenderer`. Open the panel of the `SoVascularSystem` module and select *Random Points* for *Display Mode* in the *Main* tab to see the difference. 
 
 ![ Random Points](/images/tutorials/visualization/V8_SoVasularSystem_DisplayMode1.png " Random Points")
 
-Change it for example to *Skeleton*, which shows only the centrelines of the vessels. 
-
+Change it to *Skeleton* to only show the centerlines/skeletons of the vessels. 
 
 ![ Skeleton](/images/tutorials/visualization/V8_SoVasularSystem_DisplayMode2.png " Skeleton")
 
+{{<alert class="warning" caption="Warning">}}
+For volume calculations, use the original image mask instead of the result from `GraphToVolume`. 
+{{</alert>}}
+
 ### Enhance Vessel Visualization Based on Distance Information
+Now that you've successfully obtained the vessel skeleton graph using `DtfSkeletonization`, let's take the next step to enhance the vessel visualization based on the radius information of the vessels. We will modify the existing code to use the minimum distance between centerline and surface of the vessels for defining the color.
 
-Now that you've successfully obtained the vessel skeleton graph using `DtfSkeletonization`, let's take the next step to enhance the vessel visualization based on the radius information. We'll modify the existing code to incorporate the Skeleton's property **Label** for storing the radius of the vessels, which will subsequently be used to color the rendering.
+The values for the provided vascular tree vary between 0 and 10mm. Therefore define the range of the `SoLUTEditor` to *New Range Min* as *1* and *New Range Max* as *10*. On *Editor* tab, define the following LUT:
 
-In your `RunPythonScript` module, replace the existing code with the following:
+![SoLUTEditor](/images/tutorials/visualization/V8_SoLUTEditor2.png "SoLUTEditor")
 
+In the `RunPythonScript` module, change the existing code to the following:
 {{< highlight >}}
 ```Python
-
 ctx.field("DtfSkeletonization.update").touch()
 
 graph = ctx.field("DtfSkeletonization.outBase1").object()
@@ -174,44 +181,32 @@ if graph is not None:
     end_node = edge.getEndNode()
     for skeleton in edge.getSkeletons():
       if label not in skeleton.properties:
-        skeleton.createPropertyDouble(label, edge.getId())
+        skeleton.createPropertyDouble(label, skeleton.getProperty("MinDistance"))
       skeleton.setProperty(label, skeleton.getProperty("MinDistance"))
 
-  ctx.field("GraphToVolume.update").touch()
-  ctx.field("SoVascularSystem.apply").touch()
+ctx.field("GraphToVolume.update").touch()
+ctx.field("SoVascularSystem.apply").touch()
+```
+{{</highlight>}}
 
-  {{</highlight>}}
+Instead of using the ID of each edge for the label property, we are now using the *MinDistance* property of the skeleton. The result is a color coded 3D visualization depending on the radius of the vessels. Small vessels are red, large vessels are green.
 
+![Radius based Visualization](/images/tutorials/visualization/V8_010new.png "Radius based Visualization") 
 
-{{<alert class="info" caption="Extra Infos">}}
+{{<alert class="info" caption="Additional Info">}}
+If you have a NIFTI file, convert it into an ML image. Load your tree mask NIfTI file using the `itkImageFileReader` module. Connect the output to a `BoundingBox` module, which removes black pixels and creates a volume without unmasked parts. In the end, add a `MLImageFormatSave` module to save it as *\*.mlimage* file. They are much smaller than a NIFTI file. 
 
-This modified script ensures that the Skeleton's property **Label** is utilized to store its distance information. The vessels will now be displayed with colors based on their minimal distance. 
-
+![NIFTI file conversion](/images/tutorials/visualization/V8_ConvertToMlImage.png "NIFTI file conversion") 
 {{</alert>}}
 
-Now, let's visualize the impact of the modifications in the script. After executing the updated network, head to the `SoLUTEditor` module in the interface. Once there, navigate to the *Range* tab and tweak the *New Range Max* to *10*, beacause the maximum of the MinDistance is between 9 and 10. Choose red for the small distance and green for the large.
+Open the *Interaction* tab of the `SoVascularSystem` module. In `SoExaminerViewer` module, change to *Pick Mode* and click into your vessel structure. The panel of the `SoVascularSystem` module shows all information about the hit of your click in the vessel tree.
 
-With these adjustments made, click on *Apply New Range*. Immediately, you'll observe a dynamic transformation in the color representation of the vessel visualization. This alteration, driven by the minimal distance, enhances the clarity and informativeness of the displayed vascular structures. Take this opportunity to explore and analyze the results, providing valuable insights into the intricacies of the vessel system.
-
-![ Enhanced_Vessel_Visualization_Result](/images/tutorials/visualization/V8_010new.png "Enhanced_Vessel_Visualization_Result") 
-
-Here in the 2D Viewers, you can also notice that the small vessels are red and the big ones are green.
-
-![ 2D Viewers](/images/tutorials/visualization/V8_2DViewers.png "2D Viewers") 
-
-### Tipp 
-
-If you have a NIFTI file and want to convert it into an ML image. Therefore, Load your tree mask NIfTI file using the *itkFileImageReader* module. Adjust parameters if needed and press the *Open* button. Then connect the output to *BoundingBox*, which scans the input automatically and calculates all its voxels. Finally, you need *MLImageFormatSave* to save it as a file including user defined information and ML image properties, that is clearly much smaller than a NIFTI file. 
-
-![ How to](/images/tutorials/visualization/V8_ConvertToMlImage.png "How to") 
+![Getting the click point in a vascular tree](/images/tutorials/visualization/V8_Interactions.png "Getting the click point in a vascular tree") 
 
 ## Summary
-* Vessel centreline can be created using `DtfSkeletonization`
-* Vascular structures can be visualized in 3D using `SoVascularSystem`
-* It has several display modes available and other adjustments ragrading the coloring and point size
-* The labels about skeleton and vessel voxels can be converted into a volume using `GraphToVolume`
-* To perform volume rendering on 3D images you can use `SoGVRVolumeRenderer`
-* You can visualize vessels based on their radius using  Python scripting 
+* Vessel centerlines can be created using a `DtfSkeletonization` module
+* Vascular structures can be visualized  using a `SoVascularSystem` module, which provides several vessel specific display modes
+* The `SoVascularSystem` module provides information about mouse clicks into a vascular tree
+* The labels of a skeleton can be used to store additional information for visualization
 
 {{< networkfile "examples/visualization/example8/VisualizationExample8.mlab" >}}
-{{< networkfile "examples/visualization/example8/VisualizationExample8_01.mlab" >}}
