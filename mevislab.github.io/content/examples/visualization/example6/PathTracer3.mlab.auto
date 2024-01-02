@@ -88,13 +88,13 @@ module LocalImage {
 }
 module SoExaminerViewer {
   internal  {
-    frame = "1213 309 152 56"
+    frame = "1533 77 136 56"
     moduleGroupName = ""
     windows  {
       window _viewer {
-        geometry = "3263 422 400 400"
+        geometry = "2716 409 400 400"
         sizeHint = "400 400"
-        wasOpen = yes
+        wasOpen = no
       }
     }
   }
@@ -146,11 +146,11 @@ module SoExaminerViewer {
     stereoViewing = FALSE
     stereoOffset = 3
     height = 0.78539819
-    position = "133.612197875977 -94.6801910400391 45.9720306396484"
-    orientation = "0.665110230445862 0.381895035505295 0.641704440116882 2.06362748146057"
-    nearDistance = 126.88335
-    farDistance = 315.49844
-    focalDistance = 221.09682
+    position = "103.482955932617 -240.319595336914 187.513122558594"
+    orientation = "0.628292739391327 0.00490141194313765 0.777961611747742 1.74143373966217"
+    nearDistance = 173.65352
+    farDistance = 462.30423
+    focalDistance = 317.83478
     forceRedrawOnInteraction = FALSE
     button1events = TO_VIEWER
     button2events = TO_VIEWER
@@ -227,6 +227,13 @@ module SoPathTracer {
   internal  {
     frame = "2169 453 112 56"
     moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "3068 486 564 416"
+        sizeHint = "564 416"
+        wasOpen = no
+      }
+    }
   }
   fields  {
     instanceName = SoPathTracer
@@ -278,7 +285,7 @@ module SoPathTracer {
 }
 module MinMaxScan {
   internal  {
-    frame = "1837 293 104 56"
+    frame = "1997 757 104 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -760,8 +767,60 @@ module LUTLoad {
     autoLoad = TRUE
   }
 }
+module AnimationRecorder {
+  internal  {
+    frame = "1365 141 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "2433 418 1228 491"
+        sizeHint = "1228 491"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = AnimationRecorder
+    filename = ""
+    writeImagesInsteadOfVideo = FALSE
+    imagesFormat = png
+    currentFrame = 0
+    cameraType = Perspective
+  }
+}
+module SoSeparator {
+  internal  {
+    frame = "1533 261 104 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SoSeparator
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+  }
+}
+module SoCameraInteraction {
+  internal  {
+    frame = "1541 165 152 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SoCameraInteraction
+    interactionProviderID = ""
+    headlight = TRUE
+    eventMode = SceneFirst
+    interactiveLowComplexity = Force
+    zoomSensitivity = 1
+    enableZoomWithMouseWheel = TRUE
+    cursorShapeRotate = ROTATE_XY_CURSOR
+    cursorShapePan = MOVE_ALL_CURSOR
+    cursorShapeZoom = MOVE_INOUT_CURSOR
+  }
+}
 connections  {
-  SoExaminerViewer.children = "SoPathTracerBackgroundLight1.self SoPathTracerAreaLight1.self SoPathTracerVolume.self SoPathTracerVolume1.self SoPathTracerVolume2.self SoPathTracer.self"
+  SoExaminerViewer.children = SoCameraInteraction.self
   SoPathTracerVolume.inMaterial = SoPathTracerMaterial.self
   SoPathTracerVolume.inLUT = LUTLoad1.outLUT
   SoPathTracerVolume.inVolume = LocalImage.outImage
@@ -773,5 +832,8 @@ connections  {
   SoPathTracerVolume2.inLUT = LUTLoad3.outLUT
   SoPathTracerVolume2.inVolume = LocalImage2.outImage
   View2D1.inImage = LocalImage2.outImage
+  AnimationRecorder.inputScene = SoSeparator.self
+  SoSeparator.children = "SoPathTracerBackgroundLight1.self SoPathTracerAreaLight1.self SoPathTracerVolume.self SoPathTracerVolume1.self SoPathTracerVolume2.self SoPathTracer.self"
+  SoCameraInteraction.inScene = SoSeparator.self
 }
 networkModel = ""

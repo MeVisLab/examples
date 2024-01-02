@@ -92,9 +92,9 @@ module SoExaminerViewer {
     moduleGroupName = ""
     windows  {
       window _viewer {
-        geometry = "3263 422 400 400"
+        geometry = "2716 409 400 400"
         sizeHint = "400 400"
-        wasOpen = yes
+        wasOpen = no
       }
     }
   }
@@ -146,11 +146,11 @@ module SoExaminerViewer {
     stereoViewing = FALSE
     stereoOffset = 3
     height = 0.78539819
-    position = "133.612197875977 -94.6801910400391 45.9720306396484"
-    orientation = "0.665110230445862 0.381895035505295 0.641704440116882 2.06362748146057"
-    nearDistance = 126.88335
-    farDistance = 315.49844
-    focalDistance = 221.09682
+    position = "103.482955932617 -240.319595336914 187.513122558594"
+    orientation = "0.628292739391327 0.00490141194313765 0.777961611747742 1.74143373966217"
+    nearDistance = 173.65352
+    farDistance = 462.30423
+    focalDistance = 317.83478
     forceRedrawOnInteraction = FALSE
     button1events = TO_VIEWER
     button2events = TO_VIEWER
@@ -227,6 +227,13 @@ module SoPathTracer {
   internal  {
     frame = "2169 453 112 56"
     moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "3068 486 564 416"
+        sizeHint = "564 416"
+        wasOpen = no
+      }
+    }
   }
   fields  {
     instanceName = SoPathTracer
@@ -758,6 +765,40 @@ module LUTLoad {
     instanceName = LUTLoad3
     filepath = $(HOME)/Downloads/LUT_Vessels.xml
     autoLoad = TRUE
+  }
+}
+module AnimationRecorder {
+  internal  {
+    frame = "901 789 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "2266 385 1228 491"
+        sizeHint = "1228 491"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = AnimationRecorder
+    filename = ""
+    writeImagesInsteadOfVideo = FALSE
+    imagesFormat = png
+    currentFrame = 0
+    cameraType = Perspective
+  }
+}
+module SoSeparator {
+  internal  {
+    frame = "1245 421 104 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SoSeparator
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
   }
 }
 connections  {
