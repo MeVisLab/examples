@@ -9,7 +9,7 @@ menu:
   main:
     identifier: "pathtracer_example1"
     title: "Comparison between Volume Rendering and MeVisLab Path Tracer"
-    weight: 575
+    weight: 578
     parent: "visualization_example6"
 ---
 # Example 6.1: Volume Rendering vs. Path Tracer
