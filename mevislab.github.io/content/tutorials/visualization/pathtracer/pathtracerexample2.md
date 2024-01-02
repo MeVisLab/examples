@@ -1,6 +1,6 @@
 ---
-title: "Example 6.1: Visualization using Path Tracer"
-date: "2023-12-21"
+title: "Example 6.2: Visualization using Path Tracer"
+date: "2024-01-02"
 status: "open"
 draft: false
 weight: 579
