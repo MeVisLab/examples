@@ -19,7 +19,7 @@ In this tutorial, our focus will be on using the `AnimationRecorder` module to g
 
 ## Steps to do
 
-Open the network of Example 6.2: Visualisation using `PathTracer`, add a `SoSeparator` and an `AnimationRecorder` into your workspace and connect them as shown down below. 
+Open the network of *Example 6.2: Visualisation using `PathTracer`*, add a `SoSeparator` and an `AnimationRecorder` into your workspace and connect them as shown down below. 
 
 `SoSeparator`’s role is to isolate and organize scene components, enabling precise control over the animation's focus without affecting the entire scene. 
 
@@ -27,16 +27,16 @@ Open the network of Example 6.2: Visualisation using `PathTracer`, add a `SoSepa
 
 ![ AnimationRecorder](/images/tutorials/visualization//pathtracer/Example9_1.png " AnimationRecorder")
 
-Define the following LUTs in `SoLUTEditor` of the knee or load this [XML file](/examples/visualization/example6/LUT_AnimationRecorder.xml) to use a pre-defined LUT.
+Define the following LUTs in `SoLUTEditor` of the knee or load this [XML file](/examples/visualization/example6/LUT_AnimationRecorder1.xml) with `LUTLoad1` to use a pre-defined LUT.
 
-![ SoLUTEditor](/images/tutorials/visualization//pathtracer/V9_2.png " SoLUTEditor")
+![ SoLUTEditor](/images/tutorials/visualization//pathtracer/V9_LUT.png " SoLUTEditor")
 
 
 Open the `AnimationRecorder` module and click on *New* to initiate a new animation, selecting a filename for the recorded video.
 
 At the bottom of the `AnimationRecorder` panel, you'll find the key frame editor, which is initially enabled. It contains the camera track with a key frame at position *0*. The key frame editor at the bottom serves as a control hub for playback and recording.
 
-![ AnimationRecorder](/images/tutorials/visualization//pathtracer/Example9_4.png " AnimationRecorder")
+![ AnimationRecorder](/images/tutorials/visualization//pathtracer/V9_AnimationRecorder.png " AnimationRecorder")
 
 Open the `AnimationRecorder` panel and locate the key frame editor. Move to the desired timepoint on the timeline, adjusting the camera to the preferred position in your 3D scene. Upon double-clicking on the timeline at the chosen timepoint, a Key frame will be added and a window labeled *Edit Camera Key Frame* will open.
 
@@ -45,7 +45,7 @@ Repeat this process for each timepoint where adjustments to the camera position 
 
 Before proceeding further, use the playback options situated at the base of the key frame editor. This allows for a quick review of the initial camera sequence, ensuring the adjustments align seamlessly for a polished transition between key frames.
 
-![ AnimationRecorder](/images/tutorials/visualization//pathtracer/V9_5.png " AnimationRecorder")
+![ AnimationRecorder](/images/tutorials/visualization//pathtracer/V9_AnimationRecorder1.png " AnimationRecorder")
 
 ## Modulating Knee Visibility with LUTRescale in Animation
 
@@ -53,19 +53,20 @@ We want to showcase the complete scene, followed by the bones and vessels, then 
 
 ![ LUTRescale](/images/tutorials/visualization//pathtracer/V9_3.png " LUTRescale")
 
+## Animate Bones and Vessels
+
 Now, let's shift our focus to highlighting bones and vessels within the animation. Right-click on the `LUTRescale` module, navigate to *Show Window*, and select *Automatic Panel*. This will bring up the control window for the ` LUTRescale` module. Find the field named *targetMax*. You can either drag or drop it directly from the *Automatic Panel*, or alternatively, locate the *Max* field in the *Output Index Range* box within the module panel and then drag and drop it onto the fields section in the `AnimationRecorder` module, specifically under the *Perspective Camera* field.
  
 By linking the *targetMax* field of the `LUTRescale` module to the `AnimationRecorder` in this manner, you establish a connection that allows you to synchronize the visibility of the knee muscles and structures in your animation. 
 
-![ LUTRescale & AnimationRecorder](/images/tutorials/visualization//pathtracer/V9_6.png " LUTRescale & AnimationRecorder")
+![ LUTRescale & AnimationRecorder](/images/tutorials/visualization//pathtracer/LUTRescale_AnimationRecorder2.png " LUTRescale & AnimationRecorder")
 
-## Animate Bones and Vessels
 
 To initiate the animation sequence, start by adding a key frame at position *0* for the *targetMax* field. Set the *Target Max* value in the *Edit Key Frame – [LUTRescale.targetMax]* window to *1*, and click on the *Store Current Field Value* button to save it.
 
 Next, proceed to add key frames at the same timepoints as the desired key frames of the *Perspective Camera* field's first sequence. For each selected key frame, progressively set values for the *Target Max* field, gradually increasing to *10*. This ensures specific synchronization between the visibility adjustments controlled by the `LUTRescale` module and the camera movements in the animation, creating a seamless transition. This gradual shift visually reveals the bones and vessels while concealing the knee structures and muscles.
 
-To seamlessly incorporate the new key frame at the same timepoints as the *Perspective Camera* field, you have two efficient options. Simply click on the key frame of the first sequence, and the line will automatically appear in the middle of the key frame. A quick double-click will effortlessly insert a key frame at precisely the same position. If you prefer more accurate adjustments, you can also set your frame manually using the *Edit Camera Key Frame - [LUTRescale.targetMax]* window. This flexibility allows for precise control over the animation timeline, ensuring key frames align precisely with your intended moments.
+To seamlessly incorporate the new key frame at the same timepoints as the *Perspective Camera* field, you have two efficient options. Simply click on the key frame of the first sequence, and the line will automatically appear in the middle of the key frame. A quick double-click will effortlessly insert a key frame at precisely the same position. If you prefer more accurate adjustments, you can also set your frame manually using the *Edit Key Frame - [LUTRescale.targetMax]* window. This flexibility allows for precise control over the animation timeline, ensuring key frames align precisely with your intended moments.
 
 ![ LUTRescale & AnimationRecorder](/images/tutorials/visualization//pathtracer/V9_7.png " LUTRescale & AnimationRecorder")
 
@@ -91,3 +92,5 @@ Finally, use the playback and recording buttons at the bottom of the key frame e
 * The `LUTRescale` module played a vital role in controlling vessel visibility and emphasizing bones.
 * Playback was utilized throughout the process for previewing and making necessary adjustments.
 * The final animation was recorded with a  duration of 45 seconds.
+
+{{< networkfile "examples/visualization/example6/AnimationRecorder.mlab" >}}

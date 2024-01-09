@@ -581,7 +581,7 @@ module AnimationRecorder {
       window _default {
         geometry = "1945 301 1228 582"
         sizeHint = "1228 491"
-        wasOpen = yes
+        wasOpen = no
       }
       window RecordingFinishedDialog {
         geometry = "3277 422 310 94"
@@ -600,7 +600,7 @@ module AnimationRecorder {
     filename = $(HOME)/Documents/Knie/AnimationRecorderTest.mlmov
     writeImagesInsteadOfVideo = FALSE
     imagesFormat = png
-    currentFrame = 1351
+    currentFrame = 1320
     cameraType = Perspective
   }
 }
@@ -643,7 +643,7 @@ module LUTLoad {
   }
   fields  {
     instanceName = LUTLoad1
-    filepath = $(HOME)/Documents/Knie/LUT_AnimationRecorder.xml
+    filepath = $(HOME)/Documents/Knie/LUT_AnimationRecorder1.xml
     autoLoad = TRUE
   }
 }
@@ -682,12 +682,12 @@ module LUTRescale {
       window _default {
         geometry = "3179 610 200 273"
         sizeHint = "200 273"
-        wasOpen = yes
+        wasOpen = no
       }
       window _automatic {
         geometry = "3178 301 500 275"
         sizeHint = "260 223"
-        wasOpen = yes
+        wasOpen = no
       }
     }
   }
