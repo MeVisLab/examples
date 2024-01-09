@@ -44,18 +44,15 @@ Close the SoExaminerViewer while using the AnimationRecorder to prevent duplicat
 
 Key Frames in the `AnimationRecorder` mark specific field values at defined timepoints. You can add key frames on the timeline by double-clicking at the chosen timepoint or right-clicking and selecting *Insert Key Frame*. Between these key frames, values are interpolated, either linearly, with splines, or not at all. In this way a Key frame will be added and a window labeled *Edit Camera Key Frame* will open.
 
+When adding a key frame at a specific timepoint, you can change the camera dynamically. This involves actions such as rotating to left or right, zooming in and out, and changing the camera's location. Within the *Edit Camera Key Frame* window save each key frame by clicking on the *Store Current Camera State* button. Preview the video to observe the camera's movement.
+
 The video settings in the `AnimationRecorder` provide essential parameters for configuring the resulting animation. You can control the *Framerate*, determining the number of frames per second in the video stream. It's important to note that altering the framerate may lead to the removal of key frames, impacting the animation's smoothness.
 
 Additionally, the *Duration* of the animation, specified as videoLength, defines how long the animation lasts in seconds. The *Video Size* determines the resolution of the resulting video, specifying how detailed the animation will be.
 
-
-
-Within the *Edit Camera Key Frame* window, set the camera position as desired. Save each key frame by clicking on the *Store Current Camera State* button.
-
 Repeat this process for each timepoint where adjustments to the camera position are needed, thus creating a sequence of key frames. 
 
-
-Before proceeding further, use the playback options situated at the base of the key frame editor. This allows for a quick review of the initial camera sequence, ensuring the adjustments align seamlessly for a polished transition between key frames.
+Before proceeding further, use the playback options situated at the base of the key frame editor. This allows for a quick preview of the initial camera sequence, ensuring the adjustments align seamlessly for a polished transition between key frames.
 
 {{<alert class="info" caption="Extra Infos">}}
 Decrease the number of iterations in the SoPathTracer module for a quicker preview if you like. Make sure to increase again, before recording the final video.
