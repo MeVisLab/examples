@@ -189,6 +189,11 @@ ctx.field("SoVascularSystem.apply").touch()
 ```
 {{</highlight>}}
 
+
+{{<alert class="warning" caption="Warning">}}
+Be aware that the *MinDistance* and *MaxDistance* values are algorithm-specific and don't precisely represent vessel diameters. The result of `DTFSkeletonization` is a vascular graph with an idealized, circular profile while in reality, the vessels have more complicated profile.
+{{</alert>}}
+
 Instead of using the ID of each edge for the label property, we are now using the *MinDistance* property of the skeleton. The result is a color coded 3D visualization depending on the radius of the vessels. Small vessels are red, large vessels are green.
 
 ![Radius based Visualization](/images/tutorials/visualization/V8_010new.png "Radius based Visualization") 
