@@ -575,7 +575,7 @@ module LUTLoad {
 }
 module AnimationRecorder {
   internal  {
-    frame = "1463 202 136 56"
+    frame = "1469 205 136 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -600,7 +600,7 @@ module AnimationRecorder {
     filename = $(HOME)/Documents/Knie/AnimationRecorderTest.mlmov
     writeImagesInsteadOfVideo = FALSE
     imagesFormat = png
-    currentFrame = 1320
+    currentFrame = 1167
     cameraType = Perspective
   }
 }
@@ -670,7 +670,7 @@ module LUTRescale {
     sourceMin = 0
     sourceMax = 2047
     targetMin = 0
-    targetMax = 1
+    targetMax = 10
     forceRelative = TRUE
   }
 }
@@ -697,7 +697,7 @@ module LUTRescale {
     sourceMin = 0
     sourceMax = 500
     targetMin = 0
-    targetMax = 1
+    targetMax = 10000
     forceRelative = TRUE
   }
 }

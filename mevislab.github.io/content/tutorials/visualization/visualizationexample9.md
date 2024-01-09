@@ -4,7 +4,7 @@ date: 2024-01-08
 status: "OK"
 draft: false
 weight: 593
-tags: ["Advanced", "Tutorial", "Visualization", "3D", "Vessel Segmentation"]
+tags: ["Advanced", "Tutorial", "Visualization", "3D", "AnimationsRecorder"]
 menu: 
   main:
     identifier: "visualization_example9"
@@ -19,11 +19,11 @@ In this tutorial, our focus will be on using the `AnimationRecorder` module to g
 
 ## Steps to do
 
-Open the network of *Example 6.2: Visualisation using `PathTracer`*, add a `SoSeparator` and an `AnimationRecorder` into your workspace and connect them as shown down below. 
+Open the network of [Example 6.2](http://localhost:1313/examples/tutorials/visualization/pathtracer/pathtracerexample2/), add a `SoSeparator` and an `AnimationRecorder` into your workspace and connect them as shown down. 
 
-`SoSeparator`’s role is to isolate and organize scene components, enabling precise control over the animation's focus without affecting the entire scene. 
+The `SoSeparator` modules role is to isolate and organize scene components, enabling precise control over the animation's focus without affecting the entire scene. 
 
-`AnimationRecorder`, equipped with a key frame editor, facilitates smooth transitions between different states of the 3D scene by allowing field additions via drag-and-drop. The tree view allows for easy reordering of fields and modules, enhancing overall organization.
+The `AnimationRecorder` module, equipped with a key frame editor, facilitates smooth transitions between different states of the 3D scene by allowing field additions via drag-and-drop. The tree view allows for easy reordering of fields and modules, enhancing overall organization.
 
 ![ AnimationRecorder](/images/tutorials/visualization//pathtracer/Example9_1.png " AnimationRecorder")
 
@@ -32,24 +32,40 @@ Define the following LUTs in `SoLUTEditor` of the knee or load this [XML file](/
 ![ SoLUTEditor](/images/tutorials/visualization//pathtracer/V9_LUT.png " SoLUTEditor")
 
 
-Open the `AnimationRecorder` module and click on *New* to initiate a new animation, selecting a filename for the recorded video.
+Open the `AnimationRecorder` module and click on *New* to initiate a new animation, selecting a filename for the recorded key frames (*.mlmov).
 
 At the bottom of the `AnimationRecorder` panel, you'll find the key frame editor, which is initially enabled. It contains the camera track with a key frame at position *0*. The key frame editor at the bottom serves as a control hub for playback and recording.
 
+{{<alert class="info" caption="Extra Infos">}}
+Close the SoExaminerViewer while using the AnimationRecorder to prevent duplicate renderings and save resources.
+{{</alert>}}
+
 ![ AnimationRecorder](/images/tutorials/visualization//pathtracer/V9_AnimationRecorder.png " AnimationRecorder")
 
-Open the `AnimationRecorder` panel and locate the key frame editor. Move to the desired timepoint on the timeline, adjusting the camera to the preferred position in your 3D scene. Upon double-clicking on the timeline at the chosen timepoint, a Key frame will be added and a window labeled *Edit Camera Key Frame* will open.
+Key Frames in the `AnimationRecorder` mark specific field values at defined timepoints. You can add key frames on the timeline by double-clicking at the chosen timepoint or right-clicking and selecting *Insert Key Frame*. Between these key frames, values are interpolated, either linearly, with splines, or not at all. In this way a Key frame will be added and a window labeled *Edit Camera Key Frame* will open.
+
+The video settings in the `AnimationRecorder` provide essential parameters for configuring the resulting animation. You can control the *Framerate*, determining the number of frames per second in the video stream. It's important to note that altering the framerate may lead to the removal of key frames, impacting the animation's smoothness.
+
+Additionally, the *Duration* of the animation, specified as videoLength, defines how long the animation lasts in seconds. The *Video Size* determines the resolution of the resulting video, specifying how detailed the animation will be.
+
+
 
 Within the *Edit Camera Key Frame* window, set the camera position as desired. Save each key frame by clicking on the *Store Current Camera State* button.
-Repeat this process for each timepoint where adjustments to the camera position are needed, thus creating a sequence of key frames. Ensure to set the *Duration* of the animation to *45* seconds. 
+
+Repeat this process for each timepoint where adjustments to the camera position are needed, thus creating a sequence of key frames. 
+
 
 Before proceeding further, use the playback options situated at the base of the key frame editor. This allows for a quick review of the initial camera sequence, ensuring the adjustments align seamlessly for a polished transition between key frames.
+
+{{<alert class="info" caption="Extra Infos">}}
+Decrease the number of iterations in the SoPathTracer module for a quicker preview if you like. Make sure to increase again, before recording the final video.
+{{</alert>}}
 
 ![ AnimationRecorder](/images/tutorials/visualization//pathtracer/V9_AnimationRecorder1.png " AnimationRecorder")
 
 ## Modulating Knee Visibility with LUTRescale in Animation
 
-We want to showcase the complete scene, followed by the bones and vessels, then only the bones, and finally the entire scene once again. Add two `LUTRescale` modules to your workspace and connect them as illustrated down below. This configuration allows you to use the `LUTRescale` to modifiy the index range of the LUT loaded with `LUTLoad`, affecting the rendering of the `SoPathTracerVolume`. The rationale behind using `LUTRescale` is to control the transparency or visibility of elements in the scene at different intervals.
+We want to showcase the complete scene, followed by the bones and vessels, then only the bones, and finally the entire scene once again. Add two `LUTRescale` modules to your workspace and connect them as illustrated down below. The rationale behind using `LUTRescale` is to control the transparency or visibility of elements in the scene at different intervals.
 
 ![ LUTRescale](/images/tutorials/visualization//pathtracer/V9_3.png " LUTRescale")
 
@@ -87,10 +103,10 @@ To feature everything again at the end, copy the initial key frame of each field
 Finally, use the playback and recording buttons at the bottom of the key frame editor to preview and record your animation.
 
 ## Summary
-* The animation was created by placing key frames strategically at different timepoints in the timeline using the `AnimationRecorder` module.
-* Smooth transitions were ensured for both camera movements and visibility adjustments.
-* The `LUTRescale` module played a vital role in controlling vessel visibility and emphasizing bones.
-* Playback was utilized throughout the process for previewing and making necessary adjustments.
-* The final animation was recorded with a  duration of 45 seconds.
+* Animations are created by strategically placing key frames at different timepoints in the timeline using the `AnimationRecorder` module.
+* Various functionalities in the animation are achieved by adding fields via drag-and-drop.
+* The visibility of elements is controlled using the `LUTRescale` module. 
+* Video settings in the `AnimationRecorder` can be adjusted to specifiy resolution, framerate, and duration of the resulting animation.
+
 
 {{< networkfile "examples/visualization/example6/AnimationRecorder.mlab" >}}
