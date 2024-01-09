@@ -17,9 +17,58 @@ menu:
 
 This chapter shows some features and functionalities which are helpful but do not provide its own tutorial.
 
+* [Keyboard Shortcuts](/tutorials/shorts#shortcuts)
 * [Using Snippets](/tutorials/shorts#snippets)
 * [Scripting Assistant](/tutorials/shorts#scriptingassistant)
 * [User Scripts](/tutorials/shorts#user_scripts)
+
+## Keyboard Shortcuts {#shortcuts}
+This is a collection of useful keyboard shortcuts in MeVisLab, hopefully it grows continuously.
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Shortcut</th>
+      <th>Functionality</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ctrl+1</td>
+      <td>Automatically arrange selection</td>
+    </tr>
+    <tr>
+      <td>Ctrl+2</td>
+      <td>Open most recent network file</td>
+    </tr>
+    <tr>
+      <td>Ctrl+3</td>
+      <td>Run most recent test case (extremely useful for developers)</td>
+    </tr>
+      <td>Ctrl+A then Ctrl+1</td>
+      <td>Layout network</td>
+    </tr>
+      <td>Ctrl+A then Tab</td>
+      <td>Layout .script file (in MATE)</td>
+    </tr>
+      <td>Ctrl+D</td>
+      <td>Duplicate currently selected module (including all field values)</td>
+    </tr>
+      <td>Ctrl+Left Mouse or Middle Mouse Button</td>
+      <td>Show Internal Network</td>
+    </tr>
+      <td>Space</td>
+      <td>Show hidden outputs</td>
+    </tr>
+      <td>Ctrl+Alt+T</td>
+      <td>Start test center</td>
+    </tr>
+      <td>Ctrl+K	</td>
+      <td>Restart MeVisLab </td>
+    </tr>
+  </tbody>
+</table>
+
+
 
 ## Using Snippets {#snippets}
 
