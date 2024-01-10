@@ -82,7 +82,6 @@ To seamlessly incorporate the new key frame at the same timepoints as the *Persp
 ![ LUTRescale & AnimationRecorder](/images/tutorials/visualization//pathtracer/V9_7.png " LUTRescale & AnimationRecorder")
 
 ## Showcasing only Bones
-
 To control the visibility of the vessels, right-click on the ` LUTRescale1` module connected to the vessels. Open the *Show Window* and select *Automatic Panel*. Drag and drop the *targetMax* field into the `AnimationRecorder` module's fields section. 
 
 ![ LUTRescale1 & AnimationRecorder](/images/tutorials/visualization//pathtracer/V9_8.png " LUTRescale1 & AnimationRecorder")
