@@ -19,7 +19,7 @@ In this tutorial, we are using the `AnimationRecorder` module to generate dynami
 
 ## Steps to do
 
-Open the network and files of [Example 6.2](/tutorials/visualization/pathtracer/pathtracerexample2/), add a `SoSeparator` module and a `AnimationRecorder` module to your workspace and connect them as shown below.
+Open the network and files of [Example 6.2](/tutorials/visualization/pathtracer/pathtracerexample2/), add a `SoSeparator` module and an `AnimationRecorder` module to your workspace and connect them as shown below.
 
 The `SoSeparator` module collects all components of our scene and provides one output to be used for the `AnimationRecorder`.
 
@@ -61,13 +61,13 @@ Decrease the number of iterations in the SoPathTracer module for a quicker previ
 
 ## Modulating Knee Visibility with LUTRescale in Animation
 
-We want show and hide the single segmentations during camera movements. Add two `LUTRescale` modules to your workspace and connect them as illustrated down below. The rationale behind using `LUTRescale` is to control the transparency or visibility of elements in the scene at different timepoints.
+We want to show and hide the single segmentations during camera movements. Add two `LUTRescale` modules to your workspace and connect them as illustrated down below. The rationale behind using `LUTRescale` is to control the transparency or visibility of elements in the scene at different timepoints.
 
 ![ LUTRescale](/images/tutorials/visualization//pathtracer/V9_3.png " LUTRescale")
 
 ## Animate Bones and Vessels
 
-Now, let's shift our focus to highlighting bones and vessels within the animation. Right-click on the `LUTRescale` module, navigate to *Show Window*, and select *Automatic Panel*. This will bring up the control window for the `LUTRescale` module. Search for the field named *targetMax*. You can either drag or drop it directly from the *Automatic Panel*, or alternatively, locate the *Max* field in the *Output Index Range* box within the module panel and then drag and drop it onto the fields section in the `AnimationRecorder` module, specifically under the *Perspective Camera* field.
+Now, let's shift our focus to highlighting bones and vessels within the animation. Right-click on the `LUTRescale` module, navigate to *Show Window*, and select *Automatic Panel*. This will bring up the control window for the `LUTRescale` module. Search for the field named *targetMax*. You can either drag and drop it directly from the *Automatic Panel*, or alternatively, locate the *Max* field in the *Output Index Range* box within the module panel and then drag and drop it onto the fields section in the `AnimationRecorder` module, specifically under the *Perspective Camera* field.
  
 By linking the *targetMax* field of the `LUTRescale` module to the `AnimationRecorder`, you establish a connection that allows you to define different values of the field for specific timepoints. The values between these timepoints can be interpolated as described above. 
 
@@ -83,7 +83,7 @@ To seamlessly incorporate the new key frame at the same timepoints as the *Persp
 
 ## Showcasing only Bones
 
-To control the visibility of the vessels, right-click on the ` LUTRescale1` module connected to the vessels. Open the *Show Window* and select *Automatic Panel*. Effortlessly drag and drop the *targetMax* field into the `AnimationRecorder` module's fields section. 
+To control the visibility of the vessels, right-click on the ` LUTRescale1` module connected to the vessels. Open the *Show Window* and select *Automatic Panel*. Drag and drop the *targetMax* field into the `AnimationRecorder` module's fields section. 
 
 ![ LUTRescale1 & AnimationRecorder](/images/tutorials/visualization//pathtracer/V9_8.png " LUTRescale1 & AnimationRecorder")
 
