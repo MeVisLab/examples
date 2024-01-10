@@ -34,7 +34,7 @@ This is a collection of useful keyboard shortcuts in MeVisLab, hopefully it grow
   <tbody>
     <tr>
       <td>Ctrl+1</td>
-      <td>Automatically arrange selection</td>
+      <td>Automatically arrange selection of modules / in the current network</td>
     </tr>
     <tr>
       <td>Ctrl+2</td>
@@ -57,7 +57,7 @@ This is a collection of useful keyboard shortcuts in MeVisLab, hopefully it grow
       <td>Show Internal Network</td>
     </tr>
       <td>Space</td>
-      <td>Show hidden outputs</td>
+      <td>Show hidden outputs of the currently selected module</td>
     </tr>
       <td>Ctrl+Alt+T</td>
       <td>Start test center</td>
