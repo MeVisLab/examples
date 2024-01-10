@@ -3,73 +3,9 @@ mevislabVersion = 3.7.2.12
 network  {
   watchlist = ""
 }
-module SoPathTracerAreaLight {
-  internal  {
-    frame = "21 549 200 56"
-    moduleGroupName = ""
-    showNetworkPanel = true
-  }
-  fields  {
-    instanceName = SoPathTracerAreaLight
-    scaleMode = ScaleToBoundingSphere
-    enabled = TRUE
-    renderSource = FALSE
-    color = "1 1 1"
-    intensity = 5
-    width = 0.5
-    height = 0.5
-    theta = 180
-    phi = 45
-    distance = 3.5
-    attachToCamera = FALSE
-    position = "0 0 0"
-    orientation = "0 0 1 0"
-    type = AreaLight_Rectangle
-    mode = DistanceAndAngles
-  }
-}
-module SoPathTracerBackgroundLight {
-  internal  {
-    frame = "5 629 232 56"
-    moduleGroupName = ""
-    showNetworkPanel = true
-  }
-  fields  {
-    instanceName = SoPathTracerBackgroundLight
-    useIBL = FALSE
-    attachToCamera = FALSE
-    renderSource = TRUE
-    renderSourceIntensity = 1
-    sRGB = TRUE
-    enabled = TRUE
-    intensity = 2
-    topColor = "0.333333343267441 0.666666686534882 0.498039215803146"
-    middleColor = "1 0.666666686534882 0.498039215803146"
-    bottomColor = "1 0.666666686534882 0"
-    rotation = "0 0 1 0"
-  }
-}
-module LUTLoad {
-  internal  {
-    frame = "61 765 88 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "2680 584 400 92"
-        sizeHint = "400 92"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = LUTLoad
-    filepath = $(HOME)/Documents/Knie/LUT_Knee.xml
-    autoLoad = TRUE
-  }
-}
 module LocalImage {
   internal  {
-    frame = "1177 557 160 72"
+    frame = "1268 547 160 72"
     moduleGroupName = ""
     showNetworkPanel = true
     windows  {
@@ -88,12 +24,17 @@ module LocalImage {
 }
 module SoExaminerViewer {
   internal  {
-    frame = "1213 309 152 56"
+    frame = "1618 202 136 56"
     moduleGroupName = ""
     windows  {
       window _viewer {
-        geometry = "2716 409 400 400"
+        geometry = "2868 319 551 449"
         sizeHint = "400 400"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "2070 157 500 600"
+        sizeHint = "260 223"
         wasOpen = no
       }
     }
@@ -146,11 +87,11 @@ module SoExaminerViewer {
     stereoViewing = FALSE
     stereoOffset = 3
     height = 0.78539819
-    position = "103.482955932617 -240.319595336914 187.513122558594"
-    orientation = "0.628292739391327 0.00490141194313765 0.777961611747742 1.74143373966217"
-    nearDistance = 173.65352
-    farDistance = 462.30423
-    focalDistance = 317.83478
+    position = "198.272399902344 -169.905090332031 110.596496582031"
+    orientation = "0.678528189659119 0.394197314977646 0.619845151901245 1.71608328819275"
+    nearDistance = 199.93915
+    farDistance = 438.40231
+    focalDistance = 319.05176
     forceRedrawOnInteraction = FALSE
     button1events = TO_VIEWER
     button2events = TO_VIEWER
@@ -170,13 +111,18 @@ module SoExaminerViewer {
 }
 module SoPathTracerVolume {
   internal  {
-    frame = "1293 437 184 56"
+    frame = "1491 432 184 56"
     moduleGroupName = ""
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "2714 377 333 506"
+        geometry = "2747 296 842 506"
         sizeHint = "333 506"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "3178 94 500 600"
+        sizeHint = "260 223"
         wasOpen = no
       }
     }
@@ -225,11 +171,11 @@ module SoPathTracerVolume {
 }
 module SoPathTracer {
   internal  {
-    frame = "2169 453 112 56"
+    frame = "2100 432 112 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "3068 486 564 416"
+        geometry = "2598 422 564 416"
         sizeHint = "564 416"
         wasOpen = no
       }
@@ -277,36 +223,24 @@ module SoPathTracer {
     bloom1FilterSize = 9
     bloom2FilterSize = 9
     bloom3FilterSize = 9
-    numBounces = 1
+    numBounces = 2
     maxIterations = 1000
     forceFullQuality = FALSE
     enableDepthBuffer = FALSE
   }
 }
-module MinMaxScan {
+module SoPathTracerAreaLight {
   internal  {
-    frame = "1837 293 104 56"
+    frame = "1264 432 208 56"
     moduleGroupName = ""
+    showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "2088 576 466 305"
-        sizeHint = "448 305"
+        geometry = "2673 379 414 503"
+        sizeHint = "414 503"
         wasOpen = no
       }
     }
-  }
-  fields  {
-    instanceName = MinMaxScan
-    updateMode = AutoUpdate
-    typeSelect = "Proposed Data Type"
-    preferredIntType = PreferUnsigned
-  }
-}
-module SoPathTracerAreaLight {
-  internal  {
-    frame = "1065 437 208 56"
-    moduleGroupName = ""
-    showNetworkPanel = true
   }
   fields  {
     instanceName = SoPathTracerAreaLight1
@@ -329,12 +263,12 @@ module SoPathTracerAreaLight {
 }
 module SoPathTracerBackgroundLight {
   internal  {
-    frame = "809 437 240 56"
+    frame = "1005 432 240 56"
     moduleGroupName = ""
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "2341 461 454 312"
+        geometry = "3190 236 454 312"
         sizeHint = "407 312"
         wasOpen = no
       }
@@ -355,31 +289,13 @@ module SoPathTracerBackgroundLight {
     rotation = "0 0 1 0"
   }
 }
-module LUTLoad {
-  internal  {
-    frame = "1069 557 88 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "2680 584 400 92"
-        sizeHint = "400 92"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = LUTLoad1
-    filepath = $(HOME)/Downloads/LUT_Original.xml
-    autoLoad = TRUE
-  }
-}
 module SoPathTracerMaterial {
   internal  {
-    frame = "901 557 152 56"
+    frame = "974 547 152 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "2071 516 374 344"
+        geometry = "2753 454 784 344"
         sizeHint = "335 344"
         wasOpen = no
       }
@@ -426,7 +342,7 @@ module SoPathTracerMaterial {
 }
 module SoPathTracerVolume {
   internal  {
-    frame = "1477 437 184 56"
+    frame = "1694 432 184 56"
     moduleGroupName = ""
     showNetworkPanel = true
   }
@@ -474,7 +390,7 @@ module SoPathTracerVolume {
 }
 module LocalImage {
   internal  {
-    frame = "1613 557 184 72"
+    frame = "1733 547 184 72"
     moduleGroupName = ""
     showNetworkPanel = true
     windows  {
@@ -493,7 +409,7 @@ module LocalImage {
 }
 module LUTLoad {
   internal  {
-    frame = "1509 565 88 56"
+    frame = "1626 547 88 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -509,70 +425,9 @@ module LUTLoad {
     autoLoad = TRUE
   }
 }
-module View2D {
-  internal  {
-    frame = "1677 437 120 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "2680 430 400 400"
-        sizeHint = "400 400"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = View2D
-    inventorInputOn = TRUE
-    inventorOutputOn = FALSE
-    view2DExtensionsOn = TRUE
-    startSlice = 45
-    numSlices = 1
-    numXSlices = 1
-    sliceStep = 1
-    slab = 1
-    blendMode = BLEND_REPLACE
-    timePoint = 0
-    maxTimePoint = 0
-    filterMode = FILTER_LINEAR
-    standardKeys = TRUE
-    cineMode = CINE_ZT
-    cineDirection = CINE_FORWARD
-    cineRepeat = CINE_ONCE
-    cineSpeed = 0.1
-    cineAlwaysReset = TRUE
-    snapToCenter = TRUE
-    zoomMode = VIEW2D_AUTO_ZOOM
-    unzoomOnImageChange = FALSE
-    sliceZoom = 1
-    sliceZoomSynced = 1
-    baseColor = "1 1 1"
-    margin = "2 2"
-    sliceOrigin = "0 0"
-    useShaders = TRUE
-    useManagedInteraction = FALSE
-    lutCenter = 63.5
-    lutWidth = 127
-    annotationOn = TRUE
-    annotationMode = ANNO_MODE_AUTO
-    annotationSizeMode = ANNO_SHOW_DETAILED
-    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
-    annotationFontSize = ANNO_SIZE_AUTO
-    annoCoords = Voxel
-    annoCTValue = AsIs
-    borderOn = FALSE
-    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
-    valueHighPrecision = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
-    maxPrecision = 4
-    enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
-  }
-}
 module SoPathTracerMaterial {
   internal  {
-    frame = "1345 565 160 56"
+    frame = "1447 547 160 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -623,9 +478,21 @@ module SoPathTracerMaterial {
 }
 module SoPathTracerVolume {
   internal  {
-    frame = "1837 437 184 56"
+    frame = "1897 432 184 56"
     moduleGroupName = ""
     showNetworkPanel = true
+    windows  {
+      window _automatic {
+        geometry = "3281 93 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+      window _default {
+        geometry = "2836 222 906 506"
+        sizeHint = "333 506"
+        wasOpen = no
+      }
+    }
   }
   fields  {
     instanceName = SoPathTracerVolume2
@@ -671,7 +538,7 @@ module SoPathTracerVolume {
 }
 module LocalImage {
   internal  {
-    frame = "1941 549 184 72"
+    frame = "2059 547 184 72"
     moduleGroupName = ""
     showNetworkPanel = true
     windows  {
@@ -688,70 +555,9 @@ module LocalImage {
     autoLoad = TRUE
   }
 }
-module View2D {
-  internal  {
-    frame = "2037 437 120 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "2680 430 400 400"
-        sizeHint = "400 400"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = View2D1
-    inventorInputOn = TRUE
-    inventorOutputOn = FALSE
-    view2DExtensionsOn = TRUE
-    startSlice = 62
-    numSlices = 1
-    numXSlices = 1
-    sliceStep = 1
-    slab = 1
-    blendMode = BLEND_REPLACE
-    timePoint = 0
-    maxTimePoint = 0
-    filterMode = FILTER_LINEAR
-    standardKeys = TRUE
-    cineMode = CINE_ZT
-    cineDirection = CINE_FORWARD
-    cineRepeat = CINE_ONCE
-    cineSpeed = 0.1
-    cineAlwaysReset = TRUE
-    snapToCenter = TRUE
-    zoomMode = VIEW2D_AUTO_ZOOM
-    unzoomOnImageChange = FALSE
-    sliceZoom = 1
-    sliceZoomSynced = 1
-    baseColor = "1 1 1"
-    margin = "2 2"
-    sliceOrigin = "0 0"
-    useShaders = TRUE
-    useManagedInteraction = FALSE
-    lutCenter = 145.349975585938
-    lutWidth = 129.412506103516
-    annotationOn = TRUE
-    annotationMode = ANNO_MODE_AUTO
-    annotationSizeMode = ANNO_SHOW_DETAILED
-    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
-    annotationFontSize = ANNO_SIZE_AUTO
-    annoCoords = Voxel
-    annoCTValue = AsIs
-    borderOn = FALSE
-    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
-    valueHighPrecision = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
-    maxPrecision = 4
-    enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
-  }
-}
 module LUTLoad {
   internal  {
-    frame = "1821 565 88 56"
+    frame = "1957 637 88 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -769,29 +575,46 @@ module LUTLoad {
 }
 module AnimationRecorder {
   internal  {
-    frame = "901 789 136 56"
+    frame = "1463 202 136 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "2266 385 1228 491"
+        geometry = "1945 301 1228 582"
         sizeHint = "1228 491"
+        wasOpen = yes
+      }
+      window RecordingFinishedDialog {
+        geometry = "3277 422 310 94"
+        sizeHint = "310 92"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "3126 229 500 600"
+        sizeHint = "260 223"
         wasOpen = no
       }
     }
   }
   fields  {
     instanceName = AnimationRecorder
-    filename = ""
+    filename = $(HOME)/Documents/Knie/AnimationRecorderTest.mlmov
     writeImagesInsteadOfVideo = FALSE
     imagesFormat = png
-    currentFrame = 0
+    currentFrame = 1351
     cameraType = Perspective
   }
 }
 module SoSeparator {
   internal  {
-    frame = "1245 421 104 56"
+    frame = "1505 317 208 56"
     moduleGroupName = ""
+    windows  {
+      window _viewer {
+        geometry = "2261 382 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
   }
   fields  {
     instanceName = SoSeparator
@@ -801,18 +624,96 @@ module SoSeparator {
     pickCulling = AUTO
   }
 }
+module LUTLoad {
+  internal  {
+    frame = "1165 629 88 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "2470 627 400 92"
+        sizeHint = "400 92"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "2100 415 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = LUTLoad1
+    filepath = $(HOME)/Documents/Knie/LUT_AnimationRecorder.xml
+    autoLoad = TRUE
+  }
+}
+module LUTRescale {
+  internal  {
+    frame = "1145 547 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "3179 572 200 273"
+        sizeHint = "200 273"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "3175 301 500 233"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = LUTRescale
+    autoSourceRange = TRUE
+    sourceMin = 0
+    sourceMax = 2047
+    targetMin = 0
+    targetMax = 1
+    forceRelative = TRUE
+  }
+}
+module LUTRescale {
+  internal  {
+    frame = "1949 565 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "3179 610 200 273"
+        sizeHint = "200 273"
+        wasOpen = yes
+      }
+      window _automatic {
+        geometry = "3178 301 500 275"
+        sizeHint = "260 223"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = LUTRescale1
+    autoSourceRange = TRUE
+    sourceMin = 0
+    sourceMax = 500
+    targetMin = 0
+    targetMax = 1
+    forceRelative = TRUE
+  }
+}
 connections  {
-  SoExaminerViewer.children = "SoPathTracerBackgroundLight1.self SoPathTracerAreaLight1.self SoPathTracerVolume.self SoPathTracerVolume1.self SoPathTracerVolume2.self SoPathTracer.self"
+  SoExaminerViewer.children = SoSeparator.self
   SoPathTracerVolume.inMaterial = SoPathTracerMaterial.self
-  SoPathTracerVolume.inLUT = LUTLoad1.outLUT
+  SoPathTracerVolume.inLUT = LUTRescale.outLUT
   SoPathTracerVolume.inVolume = LocalImage.outImage
-  MinMaxScan.input0 = LocalImage2.outImage
   SoPathTracerVolume1.inMaterial = SoPathTracerMaterial1.self
   SoPathTracerVolume1.inLUT = LUTLoad2.outLUT
   SoPathTracerVolume1.inVolume = LocalImage1.outImage
-  View2D.inImage = LocalImage1.outImage
-  SoPathTracerVolume2.inLUT = LUTLoad3.outLUT
+  SoPathTracerVolume2.inLUT = LUTRescale1.outLUT
   SoPathTracerVolume2.inVolume = LocalImage2.outImage
-  View2D1.inImage = LocalImage2.outImage
+  AnimationRecorder.inputScene = SoSeparator.self
+  SoSeparator.children = "SoPathTracerBackgroundLight1.self SoPathTracerAreaLight1.self SoPathTracerVolume.self SoPathTracerVolume1.self SoPathTracerVolume2.self SoPathTracer.self"
+  LUTRescale.inLUT = LUTLoad1.outLUT
+  LUTRescale1.inLUT = LUTLoad3.outLUT
 }
 networkModel = ""
