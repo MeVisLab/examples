@@ -13,6 +13,9 @@ menu:
     parent: "summary"
 ---
 # Step 3: Prototyping - User Interface and Python scripting
+
+{{< youtube "dOyncLUpclU" >}}
+
 ## Introduction
 In this step, we will develop a user interface and add Python scripting to the Macro module you created in [Step 2](/tutorials/summary/summary2).
 

@@ -13,6 +13,9 @@ menu:
     parent: "summary"
 ---
 # Step 2: Prototyping - Create a Macro module
+
+{{< youtube "gNlOTiEOJgU" >}}
+
 ## Introduction
 In this example, we encapsulate the previously developed prototype network into a Macro module for future application development and automated testing.
 
