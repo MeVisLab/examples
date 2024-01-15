@@ -4,7 +4,7 @@ date: 2024-01-08
 status: "OK"
 draft: false
 weight: 593
-tags: ["Advanced", "Tutorial", "Visualization", "3D", "Animation Recorder"]
+tags: ["Advanced", "Tutorial", "Visualization", "3D", "Animation Recorder", "Movies"]
 menu: 
   main:
     identifier: "visualization_example9"
