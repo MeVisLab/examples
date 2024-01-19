@@ -14,6 +14,12 @@ menu:
 ---
 # Example 6: MeVis Path Tracer
 
+<div class="alert alert-secondary d-flex align-items-center" role="alert">
+    <div>
+        <img width="100px" src="/images/youtube.svg" />&nbsp;&nbsp;<a href="https://youtube.com/shorts/U23QH2Pvwew" target="_blank"><img width="100px" src="https://img.youtube.com/vi/U23QH2Pvwew/0.jpg" /></a>&nbsp;&nbsp;&nbsp;We have a Short video showing the possibilities of the <b>MeVis Path Tracer</b> on <a href="https://youtube.com/shorts/U23QH2Pvwew" target="_blank">YouTube</a>.
+    </div>
+</div>
+
 ## Introduction
 The MeVis Path Tracer offers a Monte Carlo Path Tracing framework running on CUDA GPUs. It offers photorealistic rendering of volumes and meshes, physically based lightning with area lights and soft shadows and fully integrates into MeVisLab Open Inventor (camera, depth buffer, clipping planes, etc.).
 
