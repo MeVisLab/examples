@@ -39,7 +39,7 @@ OpenCV includes, among others, algorithms to:
 * establish markers to overlay with augmented reality
 
 ### assimp
-The [THE ASSET IMPORTER LIBRARY](http://www.assimp.org/) supports loading and processing geometric scenes from various well known 3D formats. MeVisLab uses assimp to import these files and uses the scenes directly in MeVisLab.
+The [THE ASSET IMPORTER LIBRARY](http://www.assimp.org/) supports loading and processing geometric scenes from various well known 3D formats. MeVisLab uses assimp to import these files and use the scenes directly in MeVisLab.
 
 A list of supported formats can be found [here](https://assimp-docs.readthedocs.io/en/v5.1.0/about/introduction.html).
 
