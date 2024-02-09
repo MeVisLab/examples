@@ -15,8 +15,8 @@ menu:
 # Visualization in MeVisLab {#TutorialVisualization}
 ## Introduction
 
-Images and data objects can be rendered in 2D, 3D and 4D and interacted with in several ways using a set of tools available through MeVisLab. 
-In this chapter in particular, we will focus on two- and three-dimensional visualizations and simple image interaction. 
+Images and data objects can be rendered in 2D and 3D and interacted with in several ways using a set of tools available through MeVisLab. 
+In this chapter in particular, we will focus on simple image interaction with two- and three-dimensional visualizations. 
 
 {{<alert class="info" caption="Info">}}
 Not only pixel- and voxel-based data, but also scene objects and 3D scenes can be visualized. See our tutorial on [OpenInventorModules](/tutorials/openinventor#TutorialOpenInventorModules) for further information.

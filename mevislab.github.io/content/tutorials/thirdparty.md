@@ -16,8 +16,7 @@ menu:
 # MeVisLab Tutorial Chapter VIII {#TutorialChapter8}
 
 ## Using ThirdParty software integrated into MeVisLab {#TutorialThirdParty}
-MeVisLab is equipped with a lot of useful software right out of the box, like the Insight Segmentation and Registration Toolkit (ITK) or the Visualization Toolkit (VTK). This chapter works as a guide on how to implement some third party component's functionalities to your MeVisLab projects via Python scripting. 
-
+MeVisLab is equipped with a lot of useful software right out of the box, like the Insight Segmentation and Registration Toolkit (ITK) or the Visualization Toolkit (VTK). This chapter works as a guide on how to use some of the third party components integrated in MeVisLab for your projects via Python scripting.
 {{<alert class="info" caption="Additional Information">}}
 You will also find instructions to install and use any Python package (e.g. PyTorch) in MeVisLab using the `PythonPip` module. 
 {{</alert>}}
@@ -25,7 +24,7 @@ You will also find instructions to install and use any Python package (e.g. PyTo
 ### OpenCV
 [OpenCV](https://opencv.org/ "OpenCV") (Open Source Computer Vision Library) is an open source computer vision and machine learning software library. 
 OpenCV includes, among others, algorithms to:
-* Detect and recognize faces
+* detect and recognize faces
 * Identify objects
 * Classify human actions on video
 * Track camera movements
@@ -40,7 +39,7 @@ OpenCV includes, among others, algorithms to:
 * Establish markers to overlay with augmented reality
 
 ### assimp
-The [THE ASSET IMPORTER LIBRARY](http://www.assimp.org/) supports loading and processing geometric scenes from various well known 3D formats. MeVisLab uses assimp to import these files and reuses the scenes directly in MeVisLab.
+The [THE ASSET IMPORTER LIBRARY](http://www.assimp.org/) supports loading and processing geometric scenes from various well known 3D formats. MeVisLab uses assimp to import these files and uses the scenes directly in MeVisLab.
 
 A list of supported formats can be found [here](https://assimp-docs.readthedocs.io/en/v5.1.0/about/introduction.html).
 
@@ -52,7 +51,7 @@ The tutorials available here shall provide examples on how to integrate AI into 
 ### matplotlib
 [Matplotlib](https://matplotlib.org/) is a library for creating static, animated, and interactive visualizations in Python.
 
-* Create publication quality plots
+* create publication quality plots
 * Make interactive figures that can be zoomed, panned and updated
 * Customize visual style and layout
 * Export to many file formats
