@@ -13,6 +13,9 @@ menu:
     parent: "summary"
 ---
 # Step 5: Review - Installer creation
+
+{{< youtube "64l3igSmeWY" >}}
+
 ## Introduction
 Your Macro module has been tested manually and/or automatically? Then you should create your first installable executable and deliver it to your customer(s) for final evaluation.
 
