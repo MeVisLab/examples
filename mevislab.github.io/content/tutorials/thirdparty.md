@@ -25,18 +25,18 @@ You will also find instructions to install and use any Python package (e.g. PyTo
 [OpenCV](https://opencv.org/ "OpenCV") (Open Source Computer Vision Library) is an open source computer vision and machine learning software library. 
 OpenCV includes, among others, algorithms to:
 * detect and recognize faces
-* Identify objects
-* Classify human actions on video
-* Track camera movements
-* Track moving objects
-* Extract 3D models of objects
-* Produce 3D point clouds from stereo cameras
-* Stitch images together to produce a high resolution image of an entire scene
-* Find similar images from an image database
-* Remove red eyes from images taken using flash
-* Follow eye movements
-* Recognize scenery 
-* Establish markers to overlay with augmented reality
+* identify objects
+* classify human actions on video
+* track camera movements
+* track moving objects
+* extract 3D models of objects
+* produce 3D point clouds from stereo cameras
+* stitch images together to produce a high resolution image of an entire scene
+* find similar images from an image database
+* remove red eyes from images taken using flash
+* follow eye movements
+* recognize scenery 
+* establish markers to overlay with augmented reality
 
 ### assimp
 The [THE ASSET IMPORTER LIBRARY](http://www.assimp.org/) supports loading and processing geometric scenes from various well known 3D formats. MeVisLab uses assimp to import these files and uses the scenes directly in MeVisLab.
