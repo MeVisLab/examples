@@ -92,7 +92,7 @@ After the test finished execution, the ReportViewer opens automatically showing 
 
 
 ### Writing a test for global macro modules
-Writing automated tests for global macro modules works a little different. If you create a global macro module from your above network (for details, see [Example 2.2: Global Macro modules](/tutorials/basicmechanisms/macromodules/globalmacromodules/)), the Python script remains the same, just the module access differs. You always need the name of your macro module as a prefix.
+Writing automated tests for global macro modules works a little different. If you create a global macro module from your above network (for details, see [Example 2.2: Global macro modules](/tutorials/basicmechanisms/macromodules/globalmacromodules/)), the Python script remains the same, just the module access differs. You always need the name of your macro module as a prefix.
 
 {{< highlight filename="NetworkTestCase.py" >}}
 ```Python

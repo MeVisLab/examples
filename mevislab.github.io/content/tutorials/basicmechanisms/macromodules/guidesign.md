@@ -8,11 +8,11 @@ tags: ["Beginner", "Tutorial", "Macro", "Macro modules", "Global Macro", "User I
 menu: 
   main:
     identifier: "gui_development"
-    title: "Custom User Interfaces for Macro modules."
+    title: "Custom User Interfaces for macro modules."
     weight: 410
     parent: "macro_modules"
 ---
-# Example 2.4: Building a Panel Layout: Interactions with Macro modules
+# Example 2.4: Building a Panel Layout: Interactions with macro modules
 
 {{< youtube "tdQUkkROWBg">}}
 

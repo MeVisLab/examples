@@ -201,12 +201,12 @@ You have probably already noticed how the modules differ in color. Each color re
   
 To condense our filter into one single module, we will now be creating a macro module out of it. To do that, right-click on the group title and select *Convert To Local Macro*. Name your new macro module and finish. You just created a local macro module. Local macro modules can only be used in the network they were created in.
 
-![Convert to Local Macro](/images/tutorials/basicmechanics/BM_21.png "Convert to Local Macro")
-![Your first Local Macro](/images/tutorials/basicmechanics/BM_22.png "Your first Local Macro")
+![Convert to local macro](/images/tutorials/basicmechanics/BM_21.png "Convert to local macro")
+![Your first local macro](/images/tutorials/basicmechanics/BM_22.png "Your first local macro")
 
 Right-click the macro module and select *Show Internal Network* to inspect and change the internal network. You can change the properties of the new macro module by changing the properties in the internal network. You can, for example, right-click the module `Convolution` and change the kernel. These changes will be preserved.
 
-![Internal Network of your Local Macro](/images/tutorials/basicmechanics/BM_23.png "Internal Network of your local Macro")
+![Internal Network of your local macro](/images/tutorials/basicmechanics/BM_23.png "Internal Network of your local macro")
 
 {{< youtube "VmK6qx-vKWk">}}
 
