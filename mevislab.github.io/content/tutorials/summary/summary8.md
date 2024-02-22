@@ -14,7 +14,7 @@ menu:
 ---
 # Extra: Run your application in Browser
 ## Introduction
-This step explains how to run your developed application in a browser. The MeVisLab network remains the same, only some adaptations are necessary for running any Macro module in a browser window.
+This step explains how to run your developed application in a browser. The MeVisLab network remains the same, only some adaptations are necessary for running any macro module in a browser window.
 
 {{<alert class="warning" caption="Licensing">}}
 This step requires a valid **MeVisLab Webtoolkit** license. It extends the **MeVisLab SDK** so that you can develop web macro modules.
@@ -24,25 +24,25 @@ Free evaluation licenses of the **MeVisLab Webtoolkit**, time-limited to 3 month
 ## Steps to do
 Make sure to have your macro module from previous [Step 2](/tutorials/summary/summary2/) available.
 
-### Create a Web Macro module
-Open Project Wizard via {{< menuitem "File" "Run Project Wizard..." >}} and select *Web Macro module*. Run the Wizard and enter details of your new Macro module.
+### Create a Web macro module
+Open Project Wizard via {{< menuitem "File" "Run Project Wizard..." >}} and select *Web Macro module*. Run the Wizard and enter details of your new macro module.
 
-![Web Macro module wizard](/images/tutorials/summary/Example8_1.png "Web Macro module wizard")
+![Web macro module wizard](/images/tutorials/summary/Example8_1.png "Web macro module wizard")
 
 Run the wizard and enter details of your web macro module.
 
-![Web Macro module properties](/images/tutorials/summary/Example8_2.png "Web Macro module properties")
+![Web macro module properties](/images/tutorials/summary/Example8_2.png "Web macro module properties")
 
 Click *Next* and select optional web plugin features. Click *Create*.
 
-![Web Macro module](/images/tutorials/summary/Example8_3.png "Web Macro module")
+![Web macro module](/images/tutorials/summary/Example8_3.png "Web macro module")
 
 The folder of your project automatically opens in explorer window.
 
-### Using your Web Macro module
+### Using your web macro module
 As you created a global web macro module, you can search for it in the MeVisLab *Module Search*. In case the module cannot be found, select {{< menuitem "Extras" "Reload Module Database (Clear Cache)" >}}.
 
-![Web Macro module](/images/tutorials/summary/Example8_4.png "Web Macro module")
+![Web macro module](/images/tutorials/summary/Example8_4.png "Web macro module")
 
 The internal network of your module is empty. We will re-use the internal network of your macro module developed in [Step 2](/tutorials/summary/summary2/).
 

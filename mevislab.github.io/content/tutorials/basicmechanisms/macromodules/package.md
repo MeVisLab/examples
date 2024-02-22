@@ -8,7 +8,7 @@ tags: ["Beginner", "Tutorial", "Package"]
 menu: 
   main:
     identifier: "packageCreation"
-    title: "Creation of packages necessary for Macro modules."
+    title: "Creation of packages necessary for macro modules."
     weight: 380
     parent: "macro_modules"
 ---

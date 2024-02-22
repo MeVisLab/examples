@@ -18,7 +18,7 @@ menu:
 
 ## Introduction
 
-In this example, you will learn how to add Python scripting to your User Interface. The network used in [Chapter V](tutorials/dataobjects/contours/contourexample5/) will be used for creating the Macro module.
+In this example, you will learn how to add Python scripting to your User Interface. The network used in [Chapter V](tutorials/dataobjects/contours/contourexample5/) will be used for creating the macro module.
 
 ## Steps to do
 ### Creating the macro module
