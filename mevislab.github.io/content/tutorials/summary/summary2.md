@@ -20,7 +20,7 @@ menu:
 In this example, we encapsulate the previously developed prototype network into a macro module for future application development and automated testing.
 
 ## Steps to do
-Make sure to have your *.mlab file from previous [Step 1](/tutorials/summary/summary1/) available.
+Make sure to have your *.mlab file from the previous [tutorial](/tutorials/summary/summary1/) available.
 
 ### Package creation
 Packages are described in detail in [Example 2.1: Package creation](/tutorials/basicmechanisms/macromodules/package/). If you already have your own package, you can skip this part and continue creating a macro module.
