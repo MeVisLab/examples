@@ -13,6 +13,9 @@ menu:
     parent: "summary"
 ---
 # Step 4: Review - Automated Tests
+
+{{< youtube "_wheDC8TBJQ" >}}
+
 ## Introduction
 In the previous chapters you developed a macro module with User Interface and Python scripting. In this step you will see how to implement an automated test to verify and validate the Requirements defined in [Overview](/tutorials/summary).
 
