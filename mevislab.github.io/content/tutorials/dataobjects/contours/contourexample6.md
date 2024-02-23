@@ -25,19 +25,19 @@ Add the following modules to your workspace and connect them as shown. Load the 
 
 ![Data Objects Contours Example 6](/images/tutorials/dataobjects/contours/Ex6_1.png "Data Objects Contours Example 6")
 
-The `SoView2DCSOExtensibleEditor` is like a control center for managing how CSOs are displayed. It helps us visualize CSOs in a 2D viewer, making it easy to create, edit, and view them.
+The `SoView2DCSOExtensibleEditor` manages attached CSO editors and renderers and offers an optional default renderer for all types of CSOs.
 
-The `SoCSODistanceLineEditor` is used specifically for creating and interacting with CSOs that represent single line segments. It's handy for measuring distances and offers features like snapping to specific angles for accuracy.
+The `SoCSODistanceLineEditor` renders and interactively generates CSOs that consist of a single line segment. The line segment can be rendered as an arrow; it can be used to measure distances.
 
-By using these modules, we can effectively work with CSOs in our workspace.
+The `SoCSOVisualizationSettings` module is used to adjust visual parameters like color and line style for CSOs, while the `CSOManager` module organizes CSOs and CSOGroups within a network.
+
+By using these modules, we can effectively work with CSOs in our workspace, allowing us to draw single lines, for example, to measure distances on images.
 
 ![DistanceLine](/images/tutorials/dataobjects/contours/Ex6_2.png "DistanceLine")
 
-To customize visual properties like border width, style, shadow rendering, anti-aliasing, and optional border rendering, use the attached `SoCSOVisualizationSettings` module. Check the field *Should render shadow* in the *Misc* tab to enable shadow rendering for CSOs.
+Next, we want to add a label to the distance line showing the distance between the two points of our measurement. To achieve this, we'll use the `CSOLabelRenderer` module. Begin by adding a `SoGroup` and connecting both the `CSOLabelRenderer` and the `SoCSODistanceLineEditor` to the `SoGroup`. After moving the label with mouse, the *name* will appear above the line as illustrated below. 
 
-![SoCSOVisualizationSettings](/images/tutorials/dataobjects/contours/Ex6_3.png "SoCSOVisualizationSettings")
-
-Connect the `CSOLabelRenderer` module to the `SoGroup` module, and then link the `SoGroup` to the `SoView2DCSOExtensibleEditor`. By doing so, you'll notice that labels are now directly visible in the `View2D`.
+Adding the CSOLabelRenderer, the ID of the CSO is shown next to the measurement for all previously created CSOs. All newly created CSOs will also show the ID
 
 ![CSOLabelRenderer](/images/tutorials/dataobjects/contours/Ex6_14.png "CSOLabelRenderer")
 
