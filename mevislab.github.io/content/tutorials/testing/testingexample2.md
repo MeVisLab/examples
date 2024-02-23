@@ -8,7 +8,7 @@ tags: ["Beginner", "Tutorial", "Profiling"]
 menu: 
   main:
     identifier: "testingexample2"
-    title: "Enabling the profiler and inspecting the behavior of your network"
+    title: "Enabling the MeVisLab Profiler and inspecting the behaviour of your network"
     weight: 792
     parent: "testing"
 ---
@@ -21,35 +21,34 @@ In this example, we are using the MeVisLab Profiler to inspect the memory and CP
 
 ## Steps to do
 ### Creating the network to be used for profiling
-You can open any network you like, here we are using the example network of the module `MinMaxScan` for profiling. Add the module `MinMaxScan` to your workspace and open the example network via right-click {{<mousebutton "right">}} and selecting {{<menuitem "Help" "Show Example Network">}}.
+You can open any network you like, here we are using the example network of the module `MinMaxScan` for profiling. Add the module `MinMaxScan` to your workspace, open the example network via right-click {{<mousebutton "right">}} and select {{<menuitem "Help" "Show Example Network">}}.
 
 ![MinMaxScan Example Network](/images/tutorials/testing/profiling_network.png "MinMaxScan Example Network")
 
 ### Enable Profiling
-Next, enable the MeVisLab Profiler via menu item {{<menuitem "View" "Views" "Profiling">}}. The Profiler is opened in your Views Area but can be detached and dragged over the workspace via left mouse button {{<mousebutton "left">}}.
+Next, enable the MeVisLab Profiler via menu item {{<menuitem "View" "Views" "Profiling">}}. The Profiler is opened in your Views Area but can be detached and dragged over the workspace holding the left mouse button {{<mousebutton "left">}}.
 
 ![MeVisLab Profiling](/images/tutorials/testing/Profiling.png "MeVisLab Profiling")
 
-Enable profiling by checking *Enable* in the top left corner.
+Enable profiling by checking *Enable* in the top left corner of the Profiling window.
 
 ### Inspect your network
-Now open the `View2D` via double-click and scroll through the slices. Inspect the Profiler.
+Now open the `View2D` module's panel via double-click and scroll through the slices. Inspect the Profiler.
 
 ![MeVisLab Profiling Network](/images/tutorials/testing/Profiling_Network1.png "MeVisLab Profiling Network")
 
-The Profiler shows very detailed information about each module in your network. 
+The Profiler shows detailed information about each module in your network. 
 
 {{<alert class="info" caption="Info">}}
-By default, used macro modules are not shown in the Profiler. You need to check *Show macros* first, in order to see the profiling of the `View2D` and the `LocalImage` module.
+Macro modules are not profiled on default. You can check the *Show macros* option in order to have `View2D` and `LocalImage` profiled.
+Also, filtering by module name is handy when you are working with larger networks.
 {{</alert>}}
 
-You can filter by module name in case of large networks so that you only get the information you need.
-
-The *Fields* tab shows any changes of field values in your network.
+Field values and their changes for all modules in your network can be inspected in the *Fields* tab:
 
 ![MeVisLab Profiling Fields](/images/tutorials/testing/Profiling_Network2.png "MeVisLab Profiling Fields")
 
-In addition to the Profiler view, your modules also provide a tiny bar showing the current memory and time consumption of the module.
+In addition to the Profiler window, your modules also provide a tiny bar indicating their current memory and time consumption.
 
 ![MeVisLab Profiling Module](/images/tutorials/testing/Module_Info.png "MeVisLab Profiling Module")
 
@@ -63,4 +62,4 @@ You need to uncheck the *Enable* checkbox in the top left corner to stop profili
 
 ## Summary
 * Profiling allows you to inspect the behavior of modules and networks including CPU and memory consumption.
-* Field value changes in the entire network are also shown.
+* Field value changes can be observed in the Profiler's *Fields* tab.
