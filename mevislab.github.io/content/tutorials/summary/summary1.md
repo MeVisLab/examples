@@ -23,7 +23,7 @@ In this example, we will develop a network which fulfills the requirements menti
 ### 2D viewer
 The 2D viewer shall visualize the loaded images. In addition to that, it shall be possible to click into the image to trigger a RegionGrowing algorithm to segment parts of the loaded image based on a threshold.
 
-The following requirements from [overview](/tutorials/summary#DevelopNetwork) will be implemented:
+The following requirements from the [overview](/tutorials/summary#DevelopNetwork) will be implemented:
 * **Requirement 1**: The application shall be able to load DICOM data.
 * **Requirement 3**: The 2D viewer shall display the loaded images
 * **Requirement 4**: The 2D viewer shall provide the possibility to segment parts of the image based on a RegionGrowing algorithm
@@ -49,7 +49,7 @@ The overlay is shown in white.
 Open the `SoView2DOverlay` module, change Blend Mode to *Blend* and select any color and *Alpha Factor* for your overlay. The applied changes are immediately visible. 
 ![Overlay color and transparency](/images/tutorials/summary/Example1_3.png "Overlay color and transparency")
 
-The segmented results from the `RegionGrowing` module might contain some holes because of differences in the intensity value of neighboring pixels. You can close these holes by adding a `CloseGap` module. Connect it to the `RegionGrowing` and the `SoView2DOverlay` module and configure Filter Mode as *Binary Dilatation*, Border Handling as *Pad Dst Fill* and set KernelZ to *3*.
+The segmented results from the `RegionGrowing` module might contain some holes because of differences in the intensity value of neighboring pixels. You can close these gaps by adding a `CloseGap` module. Connect it to the `RegionGrowing` and the `SoView2DOverlay` module and configure Filter Mode as *Binary Dilatation*, Border Handling as *Pad Dst Fill* and set KernelZ to *3*.
 
 Lastly, we want to calculate the volume of the segmented parts. Add a `CalculateVolume` module to the `CloseGap` module. The 2D viewer now provides the basic functionalities. 
 
