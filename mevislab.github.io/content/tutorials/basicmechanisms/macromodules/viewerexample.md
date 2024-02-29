@@ -14,7 +14,7 @@ menu:
 ---
 # Example 3: Creating a simple application
 ## Introduction
-In the previous examples, you already learned how to create Macro modules, user interfaces and how to interact with your UI via Python scripting.
+In the previous examples, you already learned how to create macro modules, user interfaces and how to interact with your UI via Python scripting.
 
 In this example, you will learn how to create a simple Prototype application in MeVisLab including a User Interface with 2D and 3D viewer. You will learn how to implement field listeners and react on events.
 
@@ -33,8 +33,8 @@ Opening your viewers should now show the images in 2D and 3D.
 ### Save your network
 Now, save your network as *\*.mlab* file and remember the location.
 
-### Create a Macro module
-Open the Project Wizard via {{< menuitem "File" "Run Project Wizard" >}} and run Wizard for a *Macro module*. Name your module *MyViewerApplication*, enter your details and click *Next >*.
+### Create a macro module
+Open the Project Wizard via {{< menuitem "File" "Run Project Wizard" >}} and run Wizard for a *macro module*. Name your module *MyViewerApplication*, enter your details and click *Next >*.
 
 ![Module Properties](images/tutorials/basicmechanics/SimpleApp_03.png "Module Properties")
 
@@ -53,7 +53,7 @@ MeVisLab reloads its internal database and you can open a new Tab. Search for yo
 In case you double-click {{< mousebutton "left" >}} your module now, you will see the *Automatic Panel* only showing the name of your module, because we did not add any own *Window* until now.
 
 ### Develop your User Interface
-Before adding your own UI, open internal network of your Macro module via right-click {{< mousebutton "right" >}} and {{< menuitem "Show Internal Network" >}}. Open the panel of your `ImageLoad` module and set filename to an empty string (clear). This is necessary for later.
+Before adding your own UI, open internal network of your macro module via right-click {{< mousebutton "right" >}} and {{< menuitem "Show Internal Network" >}}. Open the panel of your `ImageLoad` module and set filename to an empty string (clear). This is necessary for later.
 
 Now, right-click on your *MyViewerApplication* and select {{< menuitem "Related Files" "MyViewerApplication.script" >}}
 

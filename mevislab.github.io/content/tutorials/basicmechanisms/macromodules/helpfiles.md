@@ -14,7 +14,7 @@ menu:
 ---
 # Example 2.3: Creation of module help
 
-Generating help of a Macro module is part of the video about Macro modules from [Example 2: Creation of Global Macro modules](/tutorials/basicmechanisms/macromodules/globalmacromodules)
+Generating help of a macro module is part of the video about macro modules from [Example 2: Creation of global macro modules](/tutorials/basicmechanisms/macromodules/globalmacromodules)
 {{< youtube "M4HnA0d1V5k">}}
 
 ## Introduction

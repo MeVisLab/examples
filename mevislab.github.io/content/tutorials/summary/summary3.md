@@ -17,13 +17,13 @@ menu:
 {{< youtube "dOyncLUpclU" >}}
 
 ## Introduction
-In this step, we will develop a user interface and add Python scripting to the Macro module you created in [Step 2](/tutorials/summary/summary2).
+In this step, we will develop a user interface and add Python scripting to the macro module you created in [Step 2](/tutorials/summary/summary2).
 
 ## Steps to do
 ### Develop the User Interface
 A mockup of the user interface you are going to develop is available [here](/tutorials/summary#UIDesign). The interface provides the possibility to load files and shows a 2D and a 3D viewer. In addition to that, some settings and information for our final application are available.
 
-Search for your Macro module and add it to your workspace. Right-click {{< mousebutton "right">}} and select {{< menuitem "Related Files" "<MACRO_MODULE_NAME>.script" >}}.
+Search for your macro module and add it to your workspace. Right-click {{< mousebutton "right">}} and select {{< menuitem "Related Files" "<MACRO_MODULE_NAME>.script" >}}.
 
 The MeVisLab text editor MATE opens showing the \*.script file of your module.
 
@@ -163,7 +163,7 @@ The images selected in the *Source* section are shown in 2D and 3D. We simply re
 ##### Settings
 Let's define the Settings section. Once again we first define the necessary fields. For automated tests which we are going to develop later, it makes sense to make some of the fields of the internal network available from outside.
 
-The following shall be accessible as Field for our Macro module:
+The following shall be accessible as Field for our macro module:
 * Filename to be opened
 * Color of the 2D overlay and 3D segmentation
 * Transparency of the 3D image
@@ -311,7 +311,7 @@ Window {
 ```
 {{</highlight>}}
 
-Your user interface of the Macro module should now look similar to this:
+Your user interface of the macro module should now look similar to this:
 
 ![User Interface without Python Scripting](/images/tutorials/summary/Example3_4.png "User Interface without Python Scripting")
 
@@ -327,7 +327,7 @@ You will now add a selection possibility for the 3D viewer. This allows you to d
 
 Add another field to your *Parameters* section. Define the field as *selected3DView* and set *type = Enum* and *values =Segmented,File,Both*.
 
-Add a *ComboBox* to your *Settings* and use the field name defined above. Set *alignX = Left* and *editable = False* and open the *Window* of the Macro module in MeVisLab.
+Add a *ComboBox* to your *Settings* and use the field name defined above. Set *alignX = Left* and *editable = False* and open the *Window* of the macro module in MeVisLab.
 
 The values of the field can be selected, but nothing happens in our viewers. We need to implement a *FieldListener* in Python which reacts on any value changes of the field *selected3DView*.
 
@@ -345,7 +345,7 @@ Commands {
 ```
 {{</highlight>}}
 
-Right-click {{< mousebutton "right" >}} the command select {{< menuitem "Create Python Function 'viewSelectionChanged'" >}}. MATE automatically opens the Python file of your Macro module and creates a function *viewSelectionChanged*.
+Right-click {{< mousebutton "right" >}} the command select {{< menuitem "Create Python Function 'viewSelectionChanged'" >}}. MATE automatically opens the Python file of your macro module and creates a function *viewSelectionChanged*.
 
 {{< highlight filename="<MACRO_NAME>.py" >}}
 ```Python
@@ -517,7 +517,7 @@ Add one more field to your *Parameters* section and re-use the internal network 
 
 Add the field to the Info section of your window.
 
-Opening the window of your Macro module in MeVisLab now provides all functionalities we wanted to achieve. You can also play around in the window and define some additional Boxes or MDL controls but the basic application prototype is now done.
+Opening the window of your macro module in MeVisLab now provides all functionalities we wanted to achieve. You can also play around in the window and define some additional Boxes or MDL controls but the basic application prototype is now done.
 
 ![Final Macro module](/images/tutorials/summary/Example3_5.png "Final Macro module")
 
@@ -696,7 +696,7 @@ def applyPosition():
 {{</highlight>}}
 
 ## Summary
-* You now added a user interface to your Macro module.
+* You now added a user interface to your macro module.
 * The window opens automatically on double-click {{< mousebutton "right" >}}
 * Fields defined in the *Parameters* section can be modified in the MeVisLab Module Inspector
 * Python allows to implement functions executed on events raised by the user or by the application itself.
