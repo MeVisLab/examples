@@ -4,3 +4,4 @@
 /mevislab.github.io/public/*
 *.content
 mevislab.github.io/resources/_gen/assets/scss/sass
+*.json

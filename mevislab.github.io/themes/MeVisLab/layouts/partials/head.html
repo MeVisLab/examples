@@ -8,11 +8,11 @@
     <meta name="theme-color" content="#1A94D2" />
 
     <base href="{{ .Site.BaseURL }}">
-    
-    {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
 
-    {{ $style := resources.Get "sass/main.scss" | toCSS  $options | minify }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
+    {{ $opts := dict "transpiler" "libsass" "targetPath" "examples/css/style.css" "outputStyle" "compressed" }}
+    {{ with resources.Get "sass/main.scss" | toCSS $opts | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{ end }}
  
     <!-- 
         include a favicon for your site if you have it, else omit the line below 

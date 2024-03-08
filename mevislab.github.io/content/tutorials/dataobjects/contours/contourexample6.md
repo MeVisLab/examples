@@ -16,112 +16,216 @@ menu:
 
 ## Introduction
 
-In this example, we like to add a label to a contour. The label provides information about measurements and about the contour itself. The label remains connected to the contour and can be moved via mouse interactions.
+In this example, we are adding a label to a contour. The label provides information about measurements and about the contour itself. The label remains connected to the contour and can be moved via mouse interactions.
 
 ## Steps to do
 ### Develop your network
 
-Add the following modules to your workspace and connect them as shown. Load the example DICOM image *ProbandT1.dcm*.
+Add a `LocalImage` and a `View2D` module to your workspace and connect them as shown below. Load the file *ProbandT1.dcm* from MeVisLab demo data. In order to create contours (CSOs), we need a `SoView2DCSOExtensibleEditor` module. It manages attached CSO editors, renderers and offers an optional default renderer for all types of CSOs.
 
-![Data Objects Contours Example 6](/images/tutorials/dataobjects/contours/Ex6_1.png "Data Objects Contours Example 6")
+The first CSO we want to create is a distance line. Add a `SoCSODistanceLineEditor` to the `SoView2DCSOExtensibleEditor`. It renders and interactively generates CSOs that consist of a single line segment. The line segment can be rendered as an arrow; it can be used to measure distances.
 
-The `SoView2DCSOExtensibleEditor` manages attached CSO editors and renderers and offers an optional default renderer for all types of CSOs.
+We are going to add some more editors later. In order to have the same look and feel for all types of CSOs, add a `SoCSOVisualizationSettings` module as seen below. The module is used to adjust visual parameters like color and line style for CSOs. Also add a `CSOManager` module to organize CSOs and CSOGroups within a network.
 
-The `SoCSODistanceLineEditor` renders and interactively generates CSOs that consist of a single line segment. The line segment can be rendered as an arrow; it can be used to measure distances.
+![Initial Network](/images/tutorials/dataobjects/contours/Ex6_1.png "Initial Network")
 
-The `SoCSOVisualizationSettings` module is used to adjust visual parameters like color and line style for CSOs, while the `CSOManager` module organizes CSOs and CSOGroups within a network.
+We are now able to create lines in the `View2D`. You can also modify the lines by dragging the seed points to a different location.
 
-By using these modules, we can effectively work with CSOs in our workspace, allowing us to draw single lines, for example, to measure distances on images.
+![SoCSODistanceLineEditor](/images/tutorials/dataobjects/contours/Ex6_2.png "SoCSODistanceLineEditor")
 
-![DistanceLine](/images/tutorials/dataobjects/contours/Ex6_2.png "DistanceLine")
+The created lines do neither provide any details about the length of your measurement, nor a unique ID to identify it in case of multiple CSOs.
 
-Next, we want to add a label to the distance line showing the distance between the two points of our measurement. To achieve this, we'll use the `CSOLabelRenderer` module. Begin by adding a `SoGroup` and connecting both the `CSOLabelRenderer` and the `SoCSODistanceLineEditor` to the `SoGroup`. After moving the label with mouse, the *name* will appear above the line as illustrated below. 
-
-Adding the CSOLabelRenderer, the ID of the CSO is shown next to the measurement for all previously created CSOs. All newly created CSOs will also show the ID
+Add a `CSOLabelRenderer` module to your network and connect it to a `SoGroup`. Also connect your `SoCSODistanceLineEditor` to the `SoGroup` as seen below. The *ID* of each CSO appears next to your distance lines. Moving the ID also shows the *name* of the contour.
 
 ![CSOLabelRenderer](/images/tutorials/dataobjects/contours/Ex6_14.png "CSOLabelRenderer")
 
-The `CSOLabelRenderer` module is responsible for rendering labels for CSOs in the medical imaging context. These labels can be configured using Python scripting.
+We now want to customize the details to be shown for each distance line. Open the panel of the `CSOLabelRenderer`. You can see the two parameters *labelString* and *labelName*. The *labelString* is set to the *ID* of the CSO. The *labelName* is set to a static text and the *label* property of the CSO. The label can be defined in the module `CSOManager`. You can do this, but we are not defining a name for each contour in this example.
 
-To ensure synchronization between modules and specify the active editor for creating *distanceLine* CSOs, we need to set the same *Extension Id* in both the `SoCSODistanceLineEditor` and `SoView2DCSOExtensibleEditor` modules. In the `SoView2DCSOExtensibleEditor` module, navigate to the *General* tab and locate the *Creator Extension Id* field. Here, input the same *Extension Id* used in the `SoCSODistanceLineEditor` module. This ensures proper coordination and enables the creation of new *distanceline* CSOs using the designated editor.
-
-![Setting Extension Id in SoView2DCSOExtensibleEditor](/images/tutorials/dataobjects/contours/Example6_5.png "Setting Extension Id in SoView2DCSOExtensibleEditor")
-
-When connected to a `SoView2DCSOExtensibleEditor`, the `CSOLabelRenderer` module allows access to the currently rendered CSO. Python scripting is used to configure the labels and to define the properties of the label displayed for each CSO in the viewer. *labelString* is set to the unique ID of each CSO, while *labelName* combines the word *name* with the label assigned to the CSO. *deviceOffsetX* and *deviceOffsetY* determine the label's position relative to the CSO, both set to 0 for direct overlay. The labeling displaying the number 1 represent a default label because no specific name is provided for the CSO.
-
-Replace the default *Label Code* with the following script:
-
-{{< highlight filename="" >}}
+Enter the following to the panel of the `CSOLabelRenderer` module:
+{{< highlight filename="CSOLabelRenderer" >}}
 ```Python
-if cso.getSubType() == 'distanceLine':
-    labelString = 'Length: ' + str(cso.getLength())
-    labelName = 'Distance '
-else:
-    labelString = ''
-    labelName = ''
+labelString = 'Length: ' + str(cso.getLength())
+labelName = 'Distance: '
 labelName += str(cso.getId())
-labelCaption = labelName + ":  "
-
+deviceOffsetX = 0
+deviceOffsetY = 0
 ```
 {{</highlight>}}
 
-This script will ensure that the label displays the length of the line for *distanceLine* CSOs and remains empty for other CSO types.
+We are setting the *labelName* to a static text showing the type of the CSO and the unique *ID* of the contour. We also define the *labelString* to the static description of the measurement and the *length* parameter of the CSO.
 
-![Labeled DistanceLine in View2D](/images/tutorials/dataobjects/contours/Ex6_11.png "Labeled DistanceLine in View2D")
+![labelString and labelName](/images/tutorials/dataobjects/contours/Example6_5.png "labelString and labelName")
 
-In the `CSOLabelRenderer` panel, head to the *Options* tab. Here, you can fine-tune various settings to enhance the appearance of CSO labels. Set the *Label Border Margin X* to *5* to create a margin around selected CSOs. Increase the *Font Size* to *15* for larger and more readable text. Additionally, adjust the *Min Connecting Line Length* to *15* to specify a minimum distance for drawing connecting lines, maintaining a clean and organized layout. 
+You can also round the length by using:
+{{< highlight filename="CSOLabelRenderer" >}}
+```Python
+labelString = 'Length: ' + str(round(cso.getLength(), 2)) + ' mm'
+```
+{{</highlight>}}
 
-![CSOLabelRendering Options](/images/tutorials/dataobjects/contours/Ex6_6.png "CSOLabelRendering Options")
+In order to see all possible parameters of a CSO, add a `CSOInfo` module to your network and connect it to the `CSOManager`. The geometric informations of the selected CSO from `CSOManager` can be seen there.
 
-Now, let's proceed with another type of CSO and follow similar steps. Add the `SoCSORectangleEditor` module to your workspace and connect it to the `SoGroup` module.
+![CSOInfo](/images/tutorials/dataobjects/contours/Ex6_CSOInfo.png "CSOInfo")
 
-![SoCSORectangleEditor](/images/tutorials/dataobjects/contours/Ex6_7.png "SoCSORectangleEditor")
+For labels shown on greyscale images, it makes sense to add a shadow to your labels. Open the panel of the `SoCSOVisualizationSettings` module and on tab *Misc* check option *Should render shadow*. This increases readability of your labels.
 
-Ensure to update the *Creator Extension Id* field in the `SoView2DCSOExtensibleEditor` module with the *Extension Id* of the `SoCSORectangleEditor` module.
+{{< imagegallery 2 "/images/tutorials/dataobjects/contours/" "Ex6_NoShadow" "Ex6_Shadow" >}}
+
+If you want to define your static text as a parameter in multiple labels, you can open the panel of the `CSOLabelRenderer` module and define text as User Data. The values can then be used in Python via *userData*.
+
+![User Data](/images/tutorials/dataobjects/contours/Ex6_Parameters.png "User Data")
+
+You can also add multiple CSO editors to see the different options. Add the `SoCSORectangleEditor` module to your workspace and connect it to the `SoGroup` module. As we now have two different editors, we need to tell the `CSOLabelRenderer` which CSO to be rendered how. Open the panel of the `SoCSODistanceLineEditor`. You can see the field *Extension Id* set to *distanceLine*. Open the panel of the `SoCSORectangleEditor`. You can see the field *Extension Id* set to *rectangle*.
+
+![Extension ID](/images/tutorials/dataobjects/contours/Ex6_ExtensionID.png "Extension ID")
+
+We currently defined the *labelName* and *labelString* for the distance line. If we want to define different labels for different types of CSOs, we have to change the `CSOLabelRenderer` Python script. Open the panel of the `CSOLabelRenderer` and change the Python code to the following:
+
+{{< highlight filename="CSOLabelRenderer" >}}
+```Python
+if cso.getSubType() == 'distanceLine':
+  labelString = userData0 + str(round(cso.getLength(), 2)) + ' mm'
+  labelName = userData1
+  labelName += str(cso.getId())
+elif cso.getSubType() == 'rectangle':
+  labelString = userData0 + str(round(cso.getLength(), 2)) + ' mm\n'
+  labelString += userData2 + str(round(cso.getArea(), 2)) + ' mm^2'
+  labelName = userData3
+  labelName += str(cso.getId())
+deviceOffsetX = 0
+deviceOffsetY = 0
+```
+{{</highlight>}}
+
+![SoCSORectangleEditor](/images/tutorials/dataobjects/contours/Ex6_LineAndRectangle.png "SoCSORectangleEditor")
+
+If you now draw new CSOs, you will notice that you still always create distance lines. Open the panel of the `SoView2DCSOExtensibleEditor`. You can see that the *Creator Extension Id* is set to *__default*. By default, the first found eligible editor is used to create a new CSO. In our case this is the `SoCSODistanceLineEditor`.
+
+![SoCSORectangleEditor](/images/tutorials/dataobjects/contours/Ex6_DefaultExtension.png "SoCSORectangleEditor")
+
+Change *Creator Extension Id* to *rectangle*.
 
 ![SoCSORectangleEditor & SoView2DCSOExtensibleEditor ](/images/tutorials/dataobjects/contours/Ex6_8.png "SoCSORectangleEditor & SoView2DCSOExtensibleEditor")
 
-Open the `CSOLabelRenderer` panel and add similar script as for the *distanceLine* subtype, but include *Area* calculation as well, since we are dealing with a rectangle.
-
-{{< highlight filename="" >}}
-```Python
-...
-elif cso.getSubType() == 'rectangle':
-    labelString = str('Length: ') + str(cso.getLength()) + '\n'
-    labelString += str('Area: ') + str(cso.getArea()) + '\n'
-    labelName = 'Rectangle '
-...
-```
-{{</highlight>}}
+Newly created CSOs are now rectangles. The label values are shown as defined in the `CSOLabelRenderer` and show the length and the area of the rectangle.
 
 ![Labeled Rectangle in View2D](/images/tutorials/dataobjects/contours/Ex6_9.png "Labeled Rectangle in View2D")
 
 {{<alert class="info" caption="Extra Infos">}}
-
 The *Length* attribute in the context of rectangles represents the perimeter of the rectangle, calculated as *2a + 2b*, where *a* and *b* are the lengths of the two sides of the rectangle.
-
 {{</alert>}}
 
-Connect the `CSOInfo` module to the `CSOManager` module in your network. Then, navigate to the *Geometry* tab to access detailed information about the width (*PCA X EXT*) and height (*PCA Y EXT*) of the rectangles. 
+You will find a lot more information in the `CSOInfo` module for your rectangles. The exact meaning of the values for each type of CSO is explained in the table below.
 
 ![CSOInfo](/images/tutorials/dataobjects/contours/Ex6_10.png "CSOInfo")
 
-
-To define label placement, connect a `CSOLabelPlacementLocal` module to your `CSOLaberRenderer`. This offers three positioning options: *Seed Point*, where labels align with the right-most seed point; *Path Point*, aligning with the right-most path point; or *Seed or Path Point*, which considers both for optimal placement. 
-
-![CSOLabelPlacementLocal](/images/tutorials/dataobjects/contours/Ex6_13.png "CSOLabelPlacementLocal")
-
-{{<alert class="info" caption="Extra Infos">}}
-
-When working with an ellipse, the *length* means the perimeter around its curved edge, not its width or height. Unlike a rectangle, an ellipse doesn't have sharp corners, so its *length* is the total distance around its outer curve. You calculate it by adding twice the length of its longer side (called the major axis, represented by *a*) and twice the length of its shorter side (called the minor axis, represented by *b*), often denoted as *2πa + 2πb*. 
-
-{{</alert>}}
+## Parameters and meanings for all CSO types
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>CSO Editor</th>
+      <th>PCA X Ext.</th>
+      <th>PCA Y Ext.</th>
+      <th>PCA Z Ext.</th>
+      <th>Length</th>
+      <th>Area</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>SoCSOPointEditor</td>
+      <td>n.a.</td>
+      <td>n.a.</td>
+      <td>n.a.</td>
+      <td>n.a.</td>
+      <td>n.a.</td>
+    </tr>
+    <tr>
+      <td>SoCSOAngleEditor</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SoCSOArrowEditor</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SoCSODistanceLineEditor</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Length (in mm)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SoCSODistancePolylineEditor</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Length of all lines (in mm)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SoCSOEllipseEditor</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Perimeter (in mm)</td>
+      <td>Area (in mm2)</td>
+    </tr>
+    <tr>
+      <td>SoCSORectangleEditor</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Length of all sides (in mm)</td>
+      <td>Area (in mm2)</td>
+    </tr>
+    <tr>
+      <td>SoCSOSplineEditor</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SoCSOPolygonEditor</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>Length of all lines (in mm)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SoCSOIsoEditor</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>SoCSOLiveWireEditor</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
 
 ## Summary
-* Labels can be added to contours using the `CSOLabelRenderer` module. 
+* Custom labels can be added to contours using the `CSOLabelRenderer` module. 
 * Python scripting is used within the `CSOLabelRenderer` module to customize label content based on CSO types.
-* Visiual properties can be adjusted within the `CSOLabelRenderer` and the `SoCSOVisualizationSettings` modules to improve label visibility and appearance. 
-* `SoView2DCSOExtensibleEditor` and `SoCSODistanceLineEditor` are interduced for managing and interacting with CSOs. 
-* Label placement strategies for CSOs can be defined using the `CSOLabelPlacementLocal` module.
+* Visual properties can be adjusted within the `CSOLabelRenderer` and the `SoCSOVisualizationSettings` modules to improve label visibility and appearance.
 
 {{< networkfile "examples/data_objects/contours/example6/ContourExample6.mlab" >}} 
