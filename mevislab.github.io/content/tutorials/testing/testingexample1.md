@@ -17,7 +17,7 @@ menu:
 {{< youtube "DqpVaKai_00" >}}
 
 ## Introduction
-In this example, you will learn how to write an automated test for a simple network using the `DicomImport`, `MinMaxScan` and `View3D` modules. You can write test cases for any other module and network yourself.
+In this example, you will learn how to write an automated test for a simple network using the `DicomImport`, `MinMaxScan` and `View3D` modules. Afterwards, you will be able to write test cases for any other module and network yourself.
 
 ## Steps to do
 ### Creating the network to be used for testing
@@ -28,16 +28,21 @@ Add the following modules to your workspace and connect them as seen below:
 Save your network as *NetworkTestCase.mlab*.
 
 ## Test creation
-Open MeVisLab TestCaseManager via menu {{<menuitem "File" "Run TestCaseManager" >}}. The following window will appear.
+Open the MeVisLab TestCaseManager via menu {{<menuitem "File" "Run TestCaseManager" >}}. The following window will appear.
 
 ![TestCaseManager window ](/images/tutorials/testing/testCaseManagerWindow.png "TestCaseManager window ")
 
-On *Test Creation* tab, enter the details of your test case as seen below. Make sure to have a package available already. For details about packages, see ([Example 2.1: Package creation](./tutorials/basicmechanisms/macromodules/package/)).
-Select the just saved network *NetworkTestCase.mlab*.
+Change to the *Test Creation* tab and enter details of your test case as seen below. Make sure to have a package available already. 
+
+{{<alert class="info" caption="Info">}}
+Details on package creation can be found in [Example 2.1: Package creation](./tutorials/basicmechanisms/macromodules/package/).
+{{</alert>}}
+
+Select your saved *NetworkTestCase.mlab* file.
 
  ![Test Creation window ](/images/tutorials/testing/TestCreation.png "Test Creation window ")
 
-Click *Create*. The MeVisLab text editor MATE opens automatically showing the Python file of your test. Create your first test function in Python:
+Click *Create*. The MeVisLab text editor MATE will automatically open and display the Python file of your test. Add the below listed code to the Python file.
 
 {{< highlight filename="NetworkTestCase.py" >}}
 ```Python
@@ -66,33 +71,33 @@ def TEST_DicomImport():
 ```
 {{</highlight>}}
 
-The *filePath* defines the DICOM files to load by using the `DicomImport` module. When calling the function *TEST_DicomImport*, an expected value of *1.0* is defined. Then, the DICOM files are opened.
+The *filePath* variable defines the absolute path to the DICOM files that will be given to *source* field of the `DicomImport` module in the second step of the *OpenFiles* function. 
 
-The *OpenFiles* function defines the `DicomImport` field *inputMode* to be a *Directory*. In case you want to open single files, set this field value to *Files*. Then the *source* field is set to your previously defined *filePath*. After clicking *triggerImport*, the `DicomImport` module needs some time to load all images in the directory and process the DICOM tree. We have to wait until the field *ready* is *TRUE*. While the import is not ready, we wait for 1 millisecond and check again.
+The *OpenFiles* function first defines the `DicomImport` field *inputMode* to be a *Directory*. If you want to open single files, set this field's value to *Files*. Then the *source* field is set to your previously defined *filePath*. After clicking *triggerImport*, the `DicomImport` module needs some time to load all images in the directory and process the DICOM tree. We have to wait until the field *ready* is *TRUE*. While the import is not ready yet, we wait for 1 millisecond at a time and check again. *MLAB.processEvents()* lets MeVisLab continue execution while waiting for the `DicomImport` to be ready.
 
-*MLAB.processEvents()* lets MeVisLab continue execution while waiting for the `DicomImport` to be ready.
+When calling the function *TEST_DicomImport*, an expected value of *1.0* is defined. Then, the DICOM files are opened.
 
-In case you get error messages in MeVisLab console about invalid DICOM tags, you can ignore these errors by calling *Base.ignoreWarningAndError(MLAB.processEvents)* instead of *MLAB.processEvents()*.
+{{<alert class="check" caption="Check">}}
+Call *Base.ignoreWarningAndError(MLAB.processEvents)* instead of *MLAB.processEvents()* if you receive error messages regarding invalid DICOM tags.
+{{</alert>}}
 
-After the field *ready* is true, the test touches the *selectNextItem* trigger, so that the first images of the patient are selected and shown. The additional log message only writes the source directory for information purposes into the MeVisLab console.
+When *ready* is true, the test touches the *selectNextItem* trigger, so that the first images of the patient are selected and shown. The source directory will be written on the console as an additional log message for informative purposes. 
 
-Back to the *TEST_DicomImport()* function, we get the current value of the field *progress* from the `DicomImport`. This field shows the progress as number between 0 and 1.
-
-In the end, we check if *currentValue* and *expectedValue* of the progress are equal.
+The value of our `DicomImport`s *progress* field is saved as the *currentValue* variable and compared to the *expectedValue* variable by calling *ASSERT_FLOAT_EQ(expectedValue,currentValue)* to determine if the DICOM import has finished (*currentValue* and *expectedValue* are equal) or not. 
 
 ### Run your test case
 
-After finishing the code, open the TestCase Manager und run your test.
+Open the TestCase Manager und run your test by selecting your test case and clicking on the *Play* button in the bottom right corner.
 
 ![Run Test Case](/images/tutorials/testing/runTestCase.png "Run Test Case")
 
-After the test finished execution, the ReportViewer opens automatically showing the results of your test.
+After execution, the ReportViewer will open automatically displaying your test's results.
 
 ![ReportViewer](/images/tutorials/testing/successTestCase.png "ReportViewer")
 
 
 ### Writing a test for global macro modules
-Writing automated tests for global macro modules works a little different. If you create a global macro module from your above network (for details, see [Example 2.2: Global Macro modules](/tutorials/basicmechanisms/macromodules/globalmacromodules/)), the Python script remains the same, just the module access differs. You always need the name of your macro module as a prefix.
+Please observe that field access through Python scripting works differently for global macros. Instead of accessing a field directly by calling their respective module, the module itself needs to be accessed as part of the global macro first.
 
 {{< highlight filename="NetworkTestCase.py" >}}
 ```Python
@@ -104,15 +109,21 @@ Writing automated tests for global macro modules works a little different. If yo
 ```
 {{</highlight>}}
 
+*Imagine unpeeled nuts in a bag as a concept - the field as a nut, their module as their nutshell and the bag as the global macro.* 
+
+{{<alert class="info" caption="Info">}}
+[Example 2.2: Global macro modules](/tutorials/basicmechanisms/macromodules/globalmacromodules/) provides additional info on global macro modules and their creation.
+{{</alert>}}
+
 ## Exercise
-Create a global macro module and implement the following test objectives for both (network and macro module) 
-* check, if the file exists.
-* check, if the max value of file is greater than zero.
-* check, if the `View3D`-Input and `DicomImport`-output have the same data.
+Create a global macro module and implement the following test objectives for both (network and macro module): 
+* Check, if the file exists.
+* Check, if the max value of file is greater than zero.
+* Check, if the `View3D`-Input and `DicomImport`-output have the same data.
 
 ## Summary
-* MeVisLab provides a TestCenter for writing automated tests in Python
-* Tests can be executed on networks and macro modules
-* The test results are shown in a ReportViewer
+* MeVisLab provides a TestCenter for writing automated tests in Python.
+* Tests can be executed on networks and macro modules.
+* The test results are shown in a ReportViewer.
 
 {{< networkfile "examples/testing/example1/TestCases.zip" >}}

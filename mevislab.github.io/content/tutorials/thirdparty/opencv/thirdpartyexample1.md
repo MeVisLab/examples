@@ -33,7 +33,7 @@ More information about the `PythonImage` module can be found {{< docuLinks "/Sta
 Now you need to create a macro module from your network. You can either group your modules, create a local macro and convert it to a global macro module, or you use the Project Wizard and load your \*.mlab file.
 
 {{<alert class="info" caption="Info">}}
-A tutorial how to create your own macro modules can be found in [Example 2.2: Global Macro modules](/tutorials/basicmechanisms/macromodules/globalmacromodules "Example 2.2: Global Macro modules"). Make sure to add a Python file to your macro module.
+A tutorial how to create your own macro modules can be found in [Example 2.2: Global macro modules](/tutorials/basicmechanisms/macromodules/globalmacromodules "Example 2.2: Global macro modules"). Make sure to add a Python file to your macro module.
 {{</alert>}}
 
 ### Add the View2D to your UI
@@ -181,7 +181,7 @@ def stopCapture():
 
 As we started a timer in our network context which updates the image every 0.1 seconds, we just stop this timer and the camera is paused.
 
-In the end, we need to release the camera whenever you close the Window of your Macro module.
+In the end, we need to release the camera whenever you close the Window of your macro module.
 {{< highlight filename="<YOUR_MODULE_NAME>.py" >}}
 ```Python
 ...

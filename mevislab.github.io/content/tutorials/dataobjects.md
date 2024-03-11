@@ -22,6 +22,6 @@ which are three-dimensional objects encapsulating formerly defined contours with
 * [Markers](/tutorials/dataobjects/markerobjects) <br>
 are used to mark specific locations or aspects of an image and allow to process those later on.
 * [Curves](tutorials/dataobjects/curves) <br>
-can print the results of a function as two-dimensional mathematical graphs into a a diagram.
+can print the results of a function as two-dimensional mathematical graphs into a diagram.
 
-Usage, advantages and disadvantages of each above mentioned data object type will be covered in the following specified chapters, where you will build example networks, covering some of the most common use cases. 
+Usage, advantages and disadvantages of each above mentioned data object type will be covered in the following specified chapters, where you will be building example networks for some of the most common use cases. 

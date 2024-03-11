@@ -1,5 +1,5 @@
 ---
-title: "Example 2.2: Creation of Global Macro modules"
+title: "Example 2.2: Creation of global macro modules"
 date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
@@ -8,12 +8,12 @@ tags: ["Beginner", "Tutorial", "Macro", "Macro modules", "Global Macro"]
 menu: 
   main:
     identifier: "globalmacromodules"
-    title: "Creation of Global Macro modules from local Macro and via Project Wizard"
+    title: "Creation of global macro modules from a local macro using the Project Wizard"
     weight: 390
     parent: "macro_modules"
 ---
 
-# Example 2.2: Global Macro modules
+# Example 2.2: Global macro modules
 
 {{< youtube "M4HnA0d1V5k">}}
 
