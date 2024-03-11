@@ -161,15 +161,15 @@ Switch back to the MeVisLab IDE and select the menu item {{< menuitem "Extras" "
 
 ## Show status of module in- and output {#mlimagestate}
 
-Especially in large networks it is useful to see the state of the in- and output connectors of a module. By default, the module connectors do not show if data is available. Below image shows a `DicomImport` module and a `View2D` module where no data is loaded.
+Especially in large networks it is useful to see the state of the input and output connectors of a module. By default, the module connectors do not show if data is available. Below image shows a `DicomImport` module and a `View2D` module where no data is loaded.
 
 ![No status on connector](/images/tutorials/LMIMageState_Off.png "No status on connector")
 
-In MeVisLab preferences dialog, you can see a checkbox *Show ML image state*. By default, the setting is *Off*.
+In the MeVisLab preferences dialog, you can see a checkbox *Show ML image state*. By default, the setting is *Off*.
 
 ![Show ML image state](/images/tutorials/LMIMageState.png "Show ML image state")
 
-After enabling *Show ML image state*, your network changes and the in- and output connectors appear red in case no data is available at the output.
+After enabling *Show ML image state*, your network changes and the input and output connectors appear red in case no data is available at the output.
 
 ![No data on connector](/images/tutorials/LMIMageState_On_1.png "No data on connector")
 

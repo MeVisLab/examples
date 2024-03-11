@@ -44,9 +44,8 @@ We now want to customize the details to be shown for each distance line. Open th
 Enter the following to the panel of the `CSOLabelRenderer` module:
 {{< highlight filename="CSOLabelRenderer" >}}
 ```Python
-labelString = 'Length: ' + str(cso.getLength())
-labelName = 'Distance: '
-labelName += str(cso.getId())
+labelString = f"Length {cso.getLength()}"  
+labelName = f"Distance: {cso.getID:.2f}"
 deviceOffsetX = 0
 deviceOffsetY = 0
 ```
@@ -59,7 +58,7 @@ We are setting the *labelName* to a static text showing the type of the CSO and 
 You can also round the length by using:
 {{< highlight filename="CSOLabelRenderer" >}}
 ```Python
-labelString = 'Length: ' + str(round(cso.getLength(), 2)) + ' mm'
+labelString = f'Length: {cso.getLength():.2f} mm'
 ```
 {{</highlight>}}
 
@@ -67,7 +66,7 @@ In order to see all possible parameters of a CSO, add a `CSOInfo` module to your
 
 ![CSOInfo](/images/tutorials/dataobjects/contours/Ex6_CSOInfo.png "CSOInfo")
 
-For labels shown on greyscale images, it makes sense to add a shadow to your labels. Open the panel of the `SoCSOVisualizationSettings` module and on tab *Misc* check option *Should render shadow*. This increases readability of your labels.
+For labels shown on greyscale images, it makes sense to add a shadow. Open the panel of the `SoCSOVisualizationSettings` module and on tab *Misc* check the option *Should render shadow*. This increases the readability of your labels.
 
 {{< imagegallery 2 "/images/tutorials/dataobjects/contours/" "Ex6_NoShadow" "Ex6_Shadow" >}}
 
@@ -75,7 +74,7 @@ If you want to define your static text as a parameter in multiple labels, you ca
 
 ![User Data](/images/tutorials/dataobjects/contours/Ex6_Parameters.png "User Data")
 
-You can also add multiple CSO editors to see the different options. Add the `SoCSORectangleEditor` module to your workspace and connect it to the `SoGroup` module. As we now have two different editors, we need to tell the `CSOLabelRenderer` which CSO to be rendered how. Open the panel of the `SoCSODistanceLineEditor`. You can see the field *Extension Id* set to *distanceLine*. Open the panel of the `SoCSORectangleEditor`. You can see the field *Extension Id* set to *rectangle*.
+You can also add multiple CSO editors to see the different options. Add the `SoCSORectangleEditor` module to your workspace and connect it to the `SoGroup` module. As we now have two different editors, we need to tell the `CSOLabelRenderer` which CSO is to be rendered. Open the panel of the `SoCSODistanceLineEditor`. You can see the field *Extension Id* set to *distanceLine*. Open the panel of the `SoCSORectangleEditor`. You can see the field *Extension Id* set to *rectangle*.
 
 ![Extension ID](/images/tutorials/dataobjects/contours/Ex6_ExtensionID.png "Extension ID")
 
@@ -84,12 +83,12 @@ We currently defined the *labelName* and *labelString* for the distance line. If
 {{< highlight filename="CSOLabelRenderer" >}}
 ```Python
 if cso.getSubType() == 'distanceLine':
-  labelString = userData0 + str(round(cso.getLength(), 2)) + ' mm'
+  labelString =  f'{userData0} {cso.getLength():.2f} mm'
   labelName = userData1
   labelName += str(cso.getId())
 elif cso.getSubType() == 'rectangle':
-  labelString = userData0 + str(round(cso.getLength(), 2)) + ' mm\n'
-  labelString += userData2 + str(round(cso.getArea(), 2)) + ' mm^2'
+  labelString = f'{userData0} {cso.getLength():.2f} mm\n'
+  labelString += f'{userData2} {cso.getArea():.2f} mm^2'
   labelName = userData3
   labelName += str(cso.getId())
 deviceOffsetX = 0
