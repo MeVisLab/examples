@@ -45,7 +45,7 @@ Enter the following to the panel of the `CSOLabelRenderer` module:
 {{< highlight filename="CSOLabelRenderer" >}}
 ```Python
 labelString = f"Length {cso.getLength()}"  
-labelName = f"Distance: {cso.getId:.2f}"
+labelName = f"Distance: {cso.getId()}"
 deviceOffsetX = 0
 deviceOffsetY = 0
 ```
