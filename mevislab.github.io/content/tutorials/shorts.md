@@ -21,6 +21,7 @@ This chapter shows some features and functionalities which are helpful but do no
 * [Using Snippets](/tutorials/shorts#snippets)
 * [Scripting Assistant](/tutorials/shorts#scriptingassistant)
 * [User Scripts](/tutorials/shorts#user_scripts)
+* [Show status of module in- and output](/tutorials/shorts#mlimagestate)
 
 ## Keyboard Shortcuts {#shortcuts}
 This is a collection of useful keyboard shortcuts in MeVisLab, hopefully it grows continuously.
@@ -157,3 +158,21 @@ QApplication.setPalette(palette)
 This script defines the color of the MeVisLab user interface elements. You can define other colors and more items, this is just an example of what you can do with user scripts.
 
 Switch back to the MeVisLab IDE and select the menu item {{< menuitem "Extras" "Reload Module Database (Clear Cache)">}} again. The colors of the MeVisLab IDE change as defined in our Python script. This change persists until you restart MeVisLab and can always be repeated by selecting the menu entry or the keyboard shortcut {{< keyboard "ctrl+F9" >}}.
+
+## Show status of module in- and output {#mlimagestate}
+
+Especially in large networks it is useful to see the state of the input and output connectors of a module. By default, the module connectors do not show if data is available. Below image shows a `DicomImport` module and a `View2D` module where no data is loaded.
+
+![No status on connector](/images/tutorials/LMIMageState_Off.png "No status on connector")
+
+In the MeVisLab preferences dialog, you can see a checkbox *Show ML image state*. By default, the setting is *Off*.
+
+![Show ML image state](/images/tutorials/LMIMageState.png "Show ML image state")
+
+After enabling *Show ML image state*, your network changes and the input and output connectors appear red in case no data is available at the output.
+
+![No data on connector](/images/tutorials/LMIMageState_On_1.png "No data on connector")
+
+After loading a valid DICOM directory, the connectors providing a valid ML image appear green. The previously red outputs are beige again, showing there is data available.
+
+![No data on connector](/images/tutorials/LMIMageState_On_2.png "No data on connector")
