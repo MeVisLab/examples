@@ -1,20 +1,74 @@
 // MDL v1 utf8
-mevislabVersion = 3.7.75.qt6_update.119
+mevislabVersion = 3.7.2.12
 network  {
   watchlist = ""
 }
-module LocalImage {
+module View2D {
   internal  {
-    frame = "785 253 144 72"
+    frame = "851 18 120 56"
     moduleGroupName = ""
-    showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "2631 556 496 148"
-        sizeHint = "496 148"
-        wasOpen = no
+        geometry = "983 196 753 595"
+        sizeHint = "400 400"
+        wasOpen = yes
       }
     }
+  }
+  fields  {
+    instanceName = View2D
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 40
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 439.962493896484
+    lutWidth = 932.865600585938
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    maxPrecision = 4
+    enableSlicing = TRUE
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module LocalImage {
+  internal  {
+    frame = "729 133 144 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
   }
   fields  {
     instanceName = LocalImage
@@ -24,12 +78,12 @@ module LocalImage {
 }
 module SoView2DCSOExtensibleEditor {
   internal  {
-    frame = "949 253 200 56"
+    frame = "892 133 200 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "2743 563 392 375"
-        sizeHint = "392 375"
+        geometry = "764 388 392 365"
+        sizeHint = "392 365"
         wasOpen = no
       }
     }
@@ -58,7 +112,7 @@ module SoView2DCSOExtensibleEditor {
     renderOnSlab = FALSE
     clipToSlice = FALSE
     cursorShape = UNDEFINED_CURSOR
-    creatorExtensionId = rectangle
+    creatorExtensionId = __default
     alwaysCreateNewCSOs = FALSE
     alwaysModifyExistingCSOs = FALSE
     keyCommandsEnabled = TRUE
@@ -73,16 +127,9 @@ module SoView2DCSOExtensibleEditor {
 }
 module CSOManager {
   internal  {
-    frame = "721 381 144 72"
+    frame = "640 264 144 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
-      window _default {
-        geometry = "2015 143 707 574"
-        sizeHint = "707 574"
-        wasOpen = no
-      }
-    }
   }
   fields  {
     instanceName = CSOManager
@@ -151,7 +198,7 @@ module CSOManager {
     listSingleRemoveEmptyGroupHandling = RemoveAlways
     listDefaultRemoveEmptyGroupHandling = RemoveAlways
     enableUndoRedo = TRUE
-    numUndos = 16
+    numUndos = 2
     numRedos = 0
     undoStackLimit = 16
     useSelectionCSONotification = FALSE
@@ -178,7 +225,7 @@ module CSOManager {
     notificationTabSelected = FALSE
     defaultTabSelected = FALSE
     csoCommonTabSelected = FALSE
-    csoVisualsTabSelected = TRUE
+    csoVisualsTabSelected = FALSE
     groupCommonTabSelected = FALSE
     groupVisualsTabSelected = FALSE
     groupMiscTabSelected = FALSE
@@ -193,15 +240,8 @@ module CSOManager {
 }
 module SoCSODistanceLineEditor {
   internal  {
-    frame = "889 517 176 56"
+    frame = "881 389 176 56"
     moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "2467 277 393 434"
-        sizeHint = "393 434"
-        wasOpen = no
-      }
-    }
   }
   fields  {
     instanceName = SoCSODistanceLineEditor
@@ -251,23 +291,14 @@ module SoCSODistanceLineEditor {
     densityFactor = 0.1
   }
 }
-module SoGroup {
-  internal  {
-    frame = "889 381 128 56"
-    moduleGroupName = ""
-  }
-  fields  {
-    instanceName = SoGroup
-  }
-}
 module SoCSOVisualizationSettings {
   internal  {
-    frame = "1029 381 184 56"
+    frame = "998 264 184 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "2469 182 379 767"
-        sizeHint = "379 767"
+        geometry = "774 198 525 745"
+        sizeHint = "372 745"
         wasOpen = no
       }
     }
@@ -391,12 +422,12 @@ module SoCSOVisualizationSettings {
 }
 module CSOLabelRenderer {
   internal  {
-    frame = "1081 517 144 56"
+    frame = "705 389 144 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "2784 230 453 584"
-        sizeHint = "453 584"
+        geometry = "734 292 453 557"
+        sizeHint = "453 557"
         wasOpen = no
       }
     }
@@ -407,35 +438,33 @@ module CSOLabelRenderer {
     allowModification = TRUE
     shouldRender = TRUE
     shouldDrawLabelBorderForSelectedCSO = TRUE
-    labelBorderMarginX = 5
+    labelBorderMarginX = 2
     labelBorderMarginY = 2
-    currentCSOId = 1
-    labelName = "Rectangle 1"
-    labelCaption = "Rectangle 1:  "
-    labelString = "Length: 157.26258850097656
-Area: 1524.5530167283853
-"
-    labelCode = "*if cso.getSubType() == 'distanceLine':
-    labelString = 'Length: ' + str(cso.getLength())
-    labelName = 'Distance '
+    currentCSOId = 2
+    labelName = "Rectangle 2"
+    labelCaption = ""
+    labelString = "Length:  158.79 mm
+Area:  1546.56 mm^2"
+    labelCode = "if cso.getSubType() == 'distanceLine':
+  labelString =  f'{userData0} {cso.getLength():.2f} mm'
+  labelName = userData1
+  labelName += str(cso.getId())
 elif cso.getSubType() == 'rectangle':
-    labelString = str('Length: ') + str(cso.getLength()) + '\\n'
-    labelString += str('Area: ') + str(cso.getArea()) + '\\n'
-    labelName = 'Rectangle '
-else:
-    labelString = ''
-    labelName = ''
-labelName += str(cso.getId())
-labelCaption = labelName + ":  "*"
+  labelString = f'{userData0} {cso.getLength():.2f} mm\\n'
+  labelString += f'{userData2} {cso.getArea():.2f} mm^2'
+  labelName = userData3
+  labelName += str(cso.getId())
+deviceOffsetX = 0
+deviceOffsetY = 0"
     shouldRenderLabelName = TRUE
-    shouldDrawConnectingLine = TRUE
+    shouldDrawConnectingLine = FALSE
     shouldHighlightBorderOnMouseOver = TRUE
     connectingLineAlpha = 0.40000001
-    minConnectingLineLength = 15
+    minConnectingLineLength = 3
     drawConnectingLineToCenterOfCSO = FALSE
     deviceOffsetX = 0
     deviceOffsetY = 0
-    fontSize = 15
+    fontSize = 12
     movePossible = OPEN_HAND_CURSOR
     movePerform = CLOSED_HAND_CURSOR
     scaleNCursor = MOVE_VERT_CURSOR
@@ -448,10 +477,10 @@ labelCaption = labelName + ":  "*"
     scaleNECursor = MOVE_BDIAG_CURSOR
     allowLabelResize = FALSE
     shouldDrawResizeHandlers = FALSE
-    userData0 = ""
-    userData1 = ""
-    userData2 = ""
-    userData3 = ""
+    userData0 = "Length: "
+    userData1 = "Distance Line"
+    userData2 = "Area: "
+    userData3 = "Rectangle "
     userData4 = ""
     userData5 = ""
     userData6 = ""
@@ -464,17 +493,57 @@ labelCaption = labelName + ":  "*"
     shouldShowLabelStringOfOutputInfoLabel = TRUE
   }
 }
+module SoGroup {
+  internal  {
+    frame = "857 269 80 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SoGroup
+  }
+}
+module CSOInfo {
+  internal  {
+    frame = "617 133 80 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = CSOInfo
+    updateMode = AutoUpdate
+    autoApply = FALSE
+    csoShowMode = LastSelected
+    csoShowByIndexOrId = 0
+    csoShowPrivateValues = TRUE
+    groupShowMode = LastSelected
+    groupShowByIndexOrId = 0
+    shouldGenerateCSOStringOutput = FALSE
+    shouldGenerateCSOGroupStringOutput = FALSE
+    showCSOType = TRUE
+    showCSOSubType = TRUE
+    showCSOCreatorId = TRUE
+    showCSODescription = FALSE
+    showCSONumSeedPoints = TRUE
+    showCSONumPathPoints = TRUE
+    showCSOLength = FALSE
+    showCSOArea = FALSE
+    showCSOGrouping = TRUE
+    showCSOClosedState = TRUE
+    showCSOInPlane = TRUE
+    showCSOSelfIntersecting = FALSE
+    showGroupDescription = FALSE
+    showGroupNumCSO = TRUE
+    showGroupCSOIds = TRUE
+    listenToRepaintNotifications = FALSE
+    listenToFinishingNotifications = TRUE
+    listenToSelectionChangedNotifications = TRUE
+    listenToCSOCurrentlyUnderMouseNotifications = TRUE
+  }
+}
 module SoCSORectangleEditor {
   internal  {
-    frame = "713 517 160 56"
+    frame = "1081 389 160 56"
     moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "2001 220 341 252"
-        sizeHint = "341 252"
-        wasOpen = no
-      }
-    }
   }
   fields  {
     instanceName = SoCSORectangleEditor
@@ -513,142 +582,13 @@ module SoCSORectangleEditor {
     densityFactor = 0.1
   }
 }
-module CSOInfo {
-  internal  {
-    frame = "665 253 80 72"
-    moduleGroupName = ""
-    showNetworkPanel = true
-    windows  {
-      window _default {
-        geometry = "2046 195 366 745"
-        sizeHint = "366 870"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = CSOInfo
-    updateMode = AutoUpdate
-    autoApply = FALSE
-    csoShowMode = LastSelected
-    csoShowByIndexOrId = 0
-    csoShowPrivateValues = TRUE
-    groupShowMode = LastSelected
-    groupShowByIndexOrId = 0
-    shouldGenerateCSOStringOutput = FALSE
-    shouldGenerateCSOGroupStringOutput = FALSE
-    showCSOType = TRUE
-    showCSOSubType = TRUE
-    showCSOCreatorId = TRUE
-    showCSODescription = FALSE
-    showCSONumSeedPoints = TRUE
-    showCSONumPathPoints = TRUE
-    showCSOLength = FALSE
-    showCSOArea = FALSE
-    showCSOGrouping = TRUE
-    showCSOClosedState = TRUE
-    showCSOInPlane = TRUE
-    showCSOSelfIntersecting = FALSE
-    showGroupDescription = FALSE
-    showGroupNumCSO = TRUE
-    showGroupCSOIds = TRUE
-    listenToRepaintNotifications = FALSE
-    listenToFinishingNotifications = TRUE
-    listenToSelectionChangedNotifications = TRUE
-    listenToCSOCurrentlyUnderMouseNotifications = TRUE
-  }
-}
-module CSOLabelPlacementLocal {
-  internal  {
-    frame = "881 629 176 56"
-    moduleGroupName = ""
-    windows  {
-      window _automatic {
-        geometry = "1362 338 500 600"
-        sizeHint = "260 223"
-        wasOpen = no
-      }
-      window _default {
-        geometry = "2029 565 326 35"
-        sizeHint = "326 35"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = CSOLabelPlacementLocal
-    attachedLabelPlacement = RightmostSeedPoint
-  }
-}
-module View2D {
-  internal  {
-    frame = "861 125 120 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "2737 374 400 400"
-        sizeHint = "400 400"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = View2D
-    inventorInputOn = TRUE
-    inventorOutputOn = FALSE
-    view2DExtensionsOn = TRUE
-    startSlice = 40
-    numSlices = 1
-    numXSlices = 1
-    sliceStep = 1
-    slab = 1
-    blendMode = BLEND_REPLACE
-    timePoint = 0
-    maxTimePoint = 0
-    filterMode = FILTER_LINEAR
-    standardKeys = TRUE
-    cineMode = CINE_ZT
-    cineDirection = CINE_FORWARD
-    cineRepeat = CINE_ONCE
-    cineSpeed = 0.1
-    cineAlwaysReset = TRUE
-    snapToCenter = TRUE
-    zoomMode = VIEW2D_AUTO_ZOOM
-    unzoomOnImageChange = FALSE
-    sliceZoom = 1
-    sliceZoomSynced = 1
-    baseColor = "1 1 1"
-    margin = "2 2"
-    sliceOrigin = "0 0"
-    useShaders = TRUE
-    useManagedInteraction = FALSE
-    lutCenter = 439.962493896484
-    lutWidth = 932.865600585938
-    annotationOn = TRUE
-    annotationMode = ANNO_MODE_AUTO
-    annotationSizeMode = ANNO_SHOW_DETAILED
-    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
-    annotationFontSize = ANNO_SIZE_AUTO
-    annoCoords = Voxel
-    annoCTValue = AsIs
-    borderOn = FALSE
-    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
-    valueHighPrecision = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
-    maxPrecision = 4
-    enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
-  }
-}
 connections  {
+  View2D.inImage = LocalImage.outImage
+  View2D.inInvPreLUT = SoView2DCSOExtensibleEditor.self
   SoView2DCSOExtensibleEditor.inCSOList = CSOManager.outCSOList
   SoView2DCSOExtensibleEditor.inExtensions = SoGroup.self
   SoView2DCSOExtensibleEditor.inVisualizationSettings = SoCSOVisualizationSettings.outVisualizationSettings
-  SoGroup.children = "SoCSORectangleEditor.self SoCSODistanceLineEditor.self CSOLabelRenderer.outScene"
-  CSOLabelRenderer.inLabelPlacement = CSOLabelPlacementLocal.outPlacement
+  SoGroup.children = "CSOLabelRenderer.outScene SoCSODistanceLineEditor.self SoCSORectangleEditor.self"
   CSOInfo.inCSOList = CSOManager.outCSOList
-  View2D.inImage = LocalImage.outImage
-  View2D.inInvPreLUT = SoView2DCSOExtensibleEditor.self
 }
 networkModel = ""
