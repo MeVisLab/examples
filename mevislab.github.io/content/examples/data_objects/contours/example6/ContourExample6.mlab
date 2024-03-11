@@ -11,7 +11,7 @@ module View2D {
       window _default {
         geometry = "983 196 753 595"
         sizeHint = "400 400"
-        wasOpen = yes
+        wasOpen = no
       }
     }
   }
@@ -198,7 +198,7 @@ module CSOManager {
     listSingleRemoveEmptyGroupHandling = RemoveAlways
     listDefaultRemoveEmptyGroupHandling = RemoveAlways
     enableUndoRedo = TRUE
-    numUndos = 2
+    numUndos = 1
     numRedos = 0
     undoStackLimit = 16
     useSelectionCSONotification = FALSE
@@ -426,7 +426,7 @@ module CSOLabelRenderer {
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "734 292 453 557"
+        geometry = "549 290 453 557"
         sizeHint = "453 557"
         wasOpen = no
       }
@@ -440,20 +440,17 @@ module CSOLabelRenderer {
     shouldDrawLabelBorderForSelectedCSO = TRUE
     labelBorderMarginX = 2
     labelBorderMarginY = 2
-    currentCSOId = 2
-    labelName = "Rectangle 2"
+    currentCSOId = 1
+    labelName = "Distance Line 1"
     labelCaption = ""
-    labelString = "Length:  158.79 mm
-Area:  1546.56 mm^2"
+    labelString = "Length:  61.52 mm"
     labelCode = "if cso.getSubType() == 'distanceLine':
   labelString =  f'{userData0} {cso.getLength():.2f} mm'
-  labelName = userData1
-  labelName += str(cso.getId())
+  labelName =  f'{userData1} {cso.getId()}'
 elif cso.getSubType() == 'rectangle':
   labelString = f'{userData0} {cso.getLength():.2f} mm\\n'
   labelString += f'{userData2} {cso.getArea():.2f} mm^2'
-  labelName = userData3
-  labelName += str(cso.getId())
+  labelName =  f'{userData3} {cso.getId()}'
 deviceOffsetX = 0
 deviceOffsetY = 0"
     shouldRenderLabelName = TRUE
