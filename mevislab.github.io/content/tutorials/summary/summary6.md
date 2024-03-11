@@ -13,6 +13,9 @@ menu:
     parent: "summary"
 ---
 # Step 6: Refine - Update Application
+
+{{< youtube "1v_UyGs8W1g" >}}
+
 ## Introduction
 In previous step you developed an application which can be installed on your customers systems for usage. In this step we are going to integrate simple feedback into our executable and re-create the installer.
 
