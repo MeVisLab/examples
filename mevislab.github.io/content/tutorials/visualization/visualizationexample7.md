@@ -14,6 +14,8 @@ menu:
 ---
 # Example 7: Add 3D viewer to OrthoView2D {#TutorialVisualizationExample7}
 
+{{< youtube "vRtFcaPBAko" >}}
+
 ## Introduction
 In this example we will use the `OrthoView2D` module and add a 3D viewer to the layout *Cube*.
 

@@ -14,6 +14,8 @@ menu:
 ---
 # Example 8: Vessel Segmentation using SoVascularSystem {#TutorialVisualizationExample8}
 
+{{< youtube "tEwEgI_3ZGM" >}}
+
 ## Introduction
 In this tutorial, we are using an input mask to create a vessel centerline using the `DtfSkeletonization` module and visualize the vascular structures in 3D using the `SoVascularSystem` module. The second part uses the distance between centerline and surface of the vessel structures to color thin vessels red and thick vessels green.
 

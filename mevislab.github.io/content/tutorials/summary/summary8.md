@@ -13,6 +13,9 @@ menu:
     parent: "summary"
 ---
 # Extra: Run your application in Browser
+
+{{< youtube "XgOyeu65f7Q" >}}
+
 ## Introduction
 This step explains how to run your developed application in a browser. The MeVisLab network remains the same, only some adaptations are necessary for running any macro module in a browser window.
 

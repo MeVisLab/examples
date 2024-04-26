@@ -13,6 +13,9 @@ menu:
     parent: "summary"
 ---
 # Step 7: Refine - Re-Build Installer
+
+{{< youtube "E0GnWPXT8Og" >}}
+
 ## Introduction
 In this step you are re-creating your application installer after changing the UI in previous [Step 6: Refine - Update Application](/tutorials/summary/summary6/).
 
