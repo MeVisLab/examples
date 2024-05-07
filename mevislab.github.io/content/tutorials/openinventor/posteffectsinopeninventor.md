@@ -28,7 +28,7 @@ To incorporate DICOMs into your Open Inventor Scene, they have to be rendered as
 We don't recommend using single frame DICOMs for this example as a certain depth is required to interact with the scene objects as intended. Also make sure that the PixelData of the DICOM file you choose contains all slices of the study as it might be difficult to arrange scene objects of individual slices to resemble the originally captured study. 
 {{</alert>}}
 
-
+![From DICOM to SO](/images/tutorials/openinventor/multiframetoso.PNG "How to create a scene object out of a multiframe DICOM")
 
 
 
