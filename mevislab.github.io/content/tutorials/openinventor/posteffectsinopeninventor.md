@@ -13,13 +13,19 @@ menu:
     parent: "openinventor"
 ---
 # Example 4: Post Effects in Open Inventor
+## Introduction
+
 Up to this point, we practiced constructing Open Inventor scenes and placed three-dimensional Open Inventor objects of different colors and shapes within them.
-In this tutorial, we will go over the steps to add shadows to our 3D-objects, make them glow and vary their opacity to make them transparent. Lastly, we will incorporate DICOM data as a scene object and see how different post effects can be used on them.
+In this tutorial, we will go over the steps to add shadows to our 3D-objects, make them glow and vary their opacity to make them transparent. We will also incorporate WEMs from multi-frame DICOMs and render them as scene objects to see how different post effects can be used on them.
 
-# Introduction
+## Steps to follow
+
+### From DICOM to scene object
+
+To incorporate DICOMs into your Open Inventor Scene, they have to be rendered as Open Inventor objects, which can be done through converting them into [WEMs](/glossary/#winged-edge-meshes) first:
 
 
 
-# Steps to follow
 
-# Summary
+
+## Summary
