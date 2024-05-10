@@ -30,6 +30,11 @@ We don't recommend using single frame DICOMs for this example as a certain depth
 
 ![From DICOM to SO](/images/tutorials/openinventor/multiframetoso.PNG "How to create a scene object out of a multiframe DICOM")
 
+### Applying shading to our DICOM scene object
+
+![Shading toggled off](/images/tutorials/openinventor/shadingtoggledoff.PNG "Shading toggled off")
+![Shading toggled on](/images/tutorials/openinventor/shadingtoggledon.PNG "Shading toggled on")
+
 
 
 
