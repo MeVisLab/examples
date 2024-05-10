@@ -32,6 +32,8 @@ We don't recommend using single frame DICOMs for this example as a certain depth
 
 ### Applying shading to our DICOM scene object
 
+To apply shading to our DICOM scene object, we add a `SoShaderPipeline` and a `SoShaderPipelineCellShading` module to our network and connect their output connectors to a `SoToggle` module's input connector. Then connect the `SoToggle` module's output connector to the `SoExaminerViewer`, but on the left side of the connection to the `SoWEMRenderer` module. This way, shading can be toggled and is applied to all scene objects connected to the right of the `SoToggle` module's connection. 
+
 ![Shading toggled off](/images/tutorials/openinventor/shadingtoggledoff.PNG "Shading toggled off")
 ![Shading toggled on](/images/tutorials/openinventor/shadingtoggledon.PNG "Shading toggled on")
 
