@@ -37,7 +37,20 @@ To apply shading to our DICOM scene object, we add a `SoShaderPipeline` and a `S
 ![Shading toggled off](/images/tutorials/openinventor/shadingtoggledoff.PNG "Shading toggled off")
 ![Shading toggled on](/images/tutorials/openinventor/shadingtoggledon.PNG "Shading toggled on")
 
+### Tidying your workspace and preparing the next steps
 
+Now add a `SoPostEffectBackground` module to your workspace and connect its output connector to the `SoExaminerViewer` module's input connector. Group the modules `SoToggle`, `SoShaderPipeline` and `SoShaderPipelineCellShading` together and name the group "Toggle Shading". Then, group the modules `SoWEMRenderer`, `WEMIsoSurface` and `LocalImage` together and name the group "DICOM Object". 
+
+{{<alert class="info" caption="Info">}}
+Structuring the workspace by grouping modules based on their functionality helps to stay focused and keeps everything tidy. 
+{{</alert>}}
+
+Use a `SoPostEffectMainGeometry` module to connect both of the groups you just created to the `SoExaminerViewer` module. Lastly, add a `SoPostEffectRenderer` module to your workspace and connect its output connector to the `SoExaminerViewer` module's input connector. 
+
+
+
+
+###
 
 
 
