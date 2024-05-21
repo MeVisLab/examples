@@ -5,3 +5,10 @@
 *.content
 mevislab.github.io/resources/_gen/assets/scss/sass
 *.json
+
+# IDEs
+.settings
+.project
+.pydevproject
+.idea/
+.vscode/
