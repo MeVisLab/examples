@@ -71,6 +71,8 @@ You'll observe that the transparency setting in the `SoMaterial` module does not
  ![Geometrical Objects](/images/tutorials/openinventor/GeometryNetwork.PNG "Network with geometrical objects")
  ![Workspace](/images/tutorials/openinventor/WorkspaceGeometryNetwork.PNG "Workspace")
 
+### PostEffectGlow
+
 
 
 ## Summary
