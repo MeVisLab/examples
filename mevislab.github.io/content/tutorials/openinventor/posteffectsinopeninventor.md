@@ -51,7 +51,7 @@ Use a `SoPostEffectMainGeometry` module to connect both of the groups you just c
 
 You can now change your Open Inventor scene's background color. 
 
-### Edge-coloring
+### PostEffectEdges
 
 Add the module `SoPostEffectEdges` to your workspace and connect its output connector with the `SoExaminerViewer` module's input connector. 
 Then open its panel and choose a color. You can try different modes, sampling distances and thresholds: 
@@ -60,6 +60,17 @@ Then open its panel and choose a color. You can try different modes, sampling di
 ![Colored Edges 2](/images/tutorials/openinventor/EdgeSettings.PNG "Varying Settings of colored edges")
 ![Colored Edges 3](/images/tutorials/openinventor/EdgeSettings2.PNG "Varying Settings of colored edges")
 
-### 
+### PostEffectGeometry
+
+To include geometrical objects in your Open Inventor scene, add two `SoSeparator` modules to the workspace and connect them to the input connector of `SoPostEffectMainGeometry`. Then add a `SoMaterial`, `SoTransform` and `SoSphere` or `SoCube` module to each `SoSeparator` and adjust their size (using the panel of the `SoSphere` or `SoCube` module) and placement within the scene (using the panel of the `SoTransform` module) as you like. 
+
+{{<alert class="check" caption="Check">}}
+You'll observe that the transparency setting in the `SoMaterial` module does not apply to the geometrical objects. Add a `SoPostEffectTransparentGeometry` module to your workspace, connect its output connector to the `SoExaminerViewer` module's input connector and its input connectors to the `SoSeparator` module's output connector to create transparent geometrical objects in your scene. 
+{{</alert>}}
+
+ ![Geometrical Objects](/images/tutorials/openinventor/GeometryNetwork.PNG "Network with geometrical objects")
+ ![Workspace](/images/tutorials/openinventor/WorkspaceGeometryNetwork.PNG "Workspace")
+
+
 
 ## Summary
