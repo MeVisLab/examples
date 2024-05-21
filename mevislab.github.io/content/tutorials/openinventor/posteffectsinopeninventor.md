@@ -47,8 +47,7 @@ Structuring the workspace by grouping modules based on their functionality helps
 
 Use a `SoPostEffectMainGeometry` module to connect both of the groups you just created to the `SoExaminerViewer` module. Lastly, add a `SoPostEffectRenderer` module to your workspace and connect its output connector to the `SoExaminerViewer` module's input connector. 
 
-
-
+![Grouped](/images/tutorials/openinventor/WithGrouping.PNG "Grouped modules")
 
 ###
 
