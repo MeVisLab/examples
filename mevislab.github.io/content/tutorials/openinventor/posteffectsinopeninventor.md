@@ -51,9 +51,15 @@ Use a `SoPostEffectMainGeometry` module to connect both of the groups you just c
 
 You can now change your Open Inventor scene's background color. 
 
+### Edge-coloring
+
+Add the module `SoPostEffectEdges` to your workspace and connect its output connector with the `SoExaminerViewer` module's input connector. 
+Then open its panel and choose a color. You can try different modes, sampling distances and thresholds: 
+
+![Colored Edges](/images/tutorials/openinventor/ColoredEdges.PNG "Colored Edges")
+![Colored Edges 2](/images/tutorials/openinventor/EdgeSettings.PNG "Varying Settings of colored edges")
+![Colored Edges 3](/images/tutorials/openinventor/EdgeSettings2.PNG "Varying Settings of colored edges")
+
 ### 
-
-
-
 
 ## Summary
