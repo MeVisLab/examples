@@ -49,7 +49,9 @@ Use a `SoPostEffectMainGeometry` module to connect both of the groups you just c
 
 ![Grouped](/images/tutorials/openinventor/WithGrouping.PNG "Grouped modules")
 
-###
+You can now change your Open Inventor scene's background color. 
+
+### 
 
 
 
