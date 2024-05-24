@@ -8,7 +8,7 @@ bins = None
 def setDefaults():
     ctx.field("Histogram.xRange").value = "Dynamic Min/Max"
     ctx.field("Histogram.useZeroAsBinCenter").value = False
-    ctx.field("Histogram.binSize").value = 1.0
+    ctx.field("Histogram.binSize").value = 5.0
     ctx.field("Histogram.backgroundValue").value = False
     ctx.field("Histogram.curveType").value = "Area"
     ctx.field("Histogram.useStepFunction").value = True
@@ -46,8 +46,11 @@ def getY():
 
 
 def singleSlice2D():
+    global endSlice
+    lastSlice = endSlice
     ctx.field("SubImage.z").value = endSlice
     click2D()
+    ctx.field("SubImage.z").value = lastSlice  
 
 
 def plotSequence():
@@ -63,14 +66,15 @@ def plotSequence():
             ctx.field("SubImage.z").value = i
             ctx.field("SubImage.sz").value = i
             subplot.bar(getX(), getY(), bins, color='r', label=f'Slice {i}')
+            subplot.legend([f'Slice {i}'])
     else:
         subplot = figure.add_subplot()
         for i in values:
             ctx.field("SubImage.z").value = i
             ctx.field("SubImage.sz").value = i
             subplot.plot(getX(), getY(), bins)
+        subplot.legend([f'Slice {i}' for i in values])
     ctx.field("SubImage.z").value = values[0]
-    subplot.legend([f'Slice {i}' for i in values])
     figure.canvas.draw()
 
 
