@@ -25,30 +25,29 @@ The fields and commands needed have already been prepared in the second tutorial
 {{< highlight filename = "BaseNetwork.py">}}
 ```Stan
 def click3D():
-  clearFigure()
-  figure = ctx.control("canvas").object().figure()
-  
-  values = [i for i in range(startSlice, lastSlice)]
-  
-  if startSlice == endSlice:
-    subplot = figure.add_subplot(111, projection='3d')
-    subplot.bar3d(x=getX(), y=startSlice, z=0, dx=1, dy=1, dz=getY())
-    subplot.set_yticks(np.arange(startSlice, endSlice))
-    subplot.set_title(f'Slice {startSlice}')
-    figure.canvas.draw()
-  else:
     clearFigure()
     figure = ctx.control("canvas").object().figure()
-    subplot= figure.add_subplot(111, projection='3d')
-    labels = [f'Slice {i}' for i in values]
-    for i in values:
-      ctx.field("SubImage.z").value = i
-      ctx.field("SubImage.sz").value = i
-      subplot.bar3d(x=getX(), y=i, z=0, dx=1, dy=1, dz=getY())
-      subplot.set_yticks(values)
-    subplot.set_title(f'Sequence from {values[0]} to {lastSlice}')
-    ctx.field("SubImage.z").value = values[0]
-    figure.canvas.draw()
+
+    values = [i for i in range(startSlice, endSlice + 1)]
+
+    if startSlice == endSlice:
+        subplot = figure.add_subplot(111, projection='3d')
+        subplot.bar3d(x=getX(), y=startSlice, z=0, dx=1, dy=1, dz=getY())
+        subplot.set_yticks(np.arange(startSlice, endSlice))
+        subplot.set_title(f'Slice {startSlice}')
+        figure.canvas.draw()
+    else:
+        clearFigure()
+        figure = ctx.control("canvas").object().figure()
+        subplot = figure.add_subplot(111, projection='3d')
+        for i in values:
+            ctx.field("SubImage.z").value = i
+            ctx.field("SubImage.sz").value = i
+            subplot.bar3d(x=getX(), y=i, z=0, dx=1, dy=1, dz=getY())
+            subplot.set_yticks(values)
+        subplot.set_title(f'Sequence from {values[0]} to {endSlice}')
+        ctx.field("SubImage.z").value = values[0]
+        figure.canvas.draw()
 ``` {{</highlight>}}
 
 After saving, you should be able to reproduce results like these:
