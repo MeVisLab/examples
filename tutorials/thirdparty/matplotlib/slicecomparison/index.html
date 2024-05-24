@@ -29,49 +29,43 @@ Examples</button></h2><div id=collapseexamples class="accordion-collapse collaps
 <button id=search_submit class="btn btn-outline-light" type=submit>Search</button></form></div></div><div class=autocomplete-dropdown-container id=custom-search-results data-popper-placement=bottom style="width:100px;position:absolute;inset:0 0 auto 0;margin-left:4px;transform:translate3d(400px,60px,-1px);z-index:1800"><div class="dropdown-menu dropdown-submenu"></div></div><script>let button=document.getElementById("search_submit"),mobile_button=document.getElementById("search_submit_mobile");button.onclick=function(e){e.preventDefault();var t=document.getElementById("custom-search-field").value,n="https://mevislab.github.io/examples//search?query="+encodeURIComponent(t);location.href=n},mobile_button.onclick=function(e){e.preventDefault();var t=document.getElementById("custom-search-field-modal").value,n="https://mevislab.github.io/examples//search?query="+encodeURIComponent(t);location.href=n};let params={json_src:"https://mevislab.github.io/examples//index.json",minlength:3,defaultsearch:"AND",sort_date:"DESC",autocomplete:1,section_search:0,badwords:"and,or,but,if,when,the,a,an,one",json_wait:"<p><em>Searching...</em></p>",json_ready:"",extern_icon:" (external Link)",err_badstring:"",err_noresult:"<p><em>NO RESULTS</em></p>",err_norequest:"",err_filefailed:'<p style="text-align: center;color: red;">Error.</p>',res_one_item:"<p><em>[CNT] RESULT</em></p>",res_more_items:"<p><em>[CNT] RESULTS</em></p>",res_out_top:'<ul class="dropdown-menu show" style="z-index:1800">',res_out_bottom:"</ul>",res_item_tpl:'<a class="dropdown-item" href="[URL]">[TITLE]</a>',add_searchlink:"<p></p>"},section_trans={post:"Blog"},searchfield_weight={title:5,tags:5,summary:2,content:1}</script><script type=text/javascript src=https://mevislab.github.io/examples/js/search.js></script></nav></div><div id=content class="height-100 bg-none"><div class=p-3><div class=p-3><a href=https://mevislab.github.io/examples/tags/beginner title=Beginner><span class="badge bg-success">Beginner</span></a>
 <a href=https://mevislab.github.io/examples/tags/tutorial title=Tutorial><span class="badge bg-secondary">Tutorial</span></a>
 <a href=https://mevislab.github.io/examples/tags/matplotlib title=Matplotlib><span class="badge bg-secondary">Matplotlib</span></a>
-<a href=https://mevislab.github.io/examples/tags/visualization title=Visualization><span class="badge bg-secondary">Visualization</span></a><h1 id=example-3-slice-comparison>Example 3: Slice Comparison</h1><h2 id=introduction>Introduction</h2><p>We will adapt the previously created macro module to be able to overlay two defined slices to compare their grayscale distributions.</p><ul><li>The module we are adapting has been set up in the <a href=https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/modulesetup>Example 1: Module Setup</a> tutorial.</li><li>The panel and two dimensional plotting functionality has been added in <a href=https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/2dplotting>Example 2: 2D Plotting</a>.</li></ul><h2 id=steps-to-do>Steps to do</h2><p>At first, we will extend the panel: Open your <code>BaseNetwork</code> macro module within an empty MeVisLab workspace and select the .script file from its related files.</p><p>Add the following code into your .script file, between the &ldquo;Single Slice&rdquo; and the &ldquo;Sequence&rdquo; box.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">BaseNetwork.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>  Box{
-        title = &#34;Comparison&#34;
-        Field &#34;SubImage.z&#34; {
+<a href=https://mevislab.github.io/examples/tags/visualization title=Visualization><span class="badge bg-secondary">Visualization</span></a><h1 id=example-3-slice-comparison>Example 3: Slice Comparison</h1><h2 id=introduction>Introduction</h2><p>We will adapt the previously created macro module to be able to overlay two defined slices to compare their grayscale distributions.</p><ul><li>The module we are adapting has been set up in the <a href=https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/modulesetup>Example 1: Module Setup</a> tutorial.</li><li>The panel and two-dimensional plotting functionality has been added in [Example 2: 2D Plotting]
+(/tutorials/thirdparty/matplotlib/2dplotting).</li></ul><h2 id=steps-to-do>Steps to do</h2><p>At first, we will extend the panel: Open your <code>BaseNetwork</code> macro module within an empty MeVisLab workspace and select the .script file from its related files.</p><p>Add the following code into your .script file, between the &ldquo;Single Slice&rdquo; and the &ldquo;Sequence&rdquo; box.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">BaseNetwork.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>        Box {
+          title = &#34;Comparison&#34;
+          Field &#34;SubImage.z&#34; {
             title = &#34;Compare slice&#34;
-        }
-        Field &#34;SubImage.sz&#34; {
+          }
+          Field &#34;SubImage.sz&#34; {
             title = &#34;With slice&#34;
-        }
-        Button {
+          }
+          Button {
             title   = &#34;Plot&#34;
             command = &#34;comparison&#34;
+          }
         }
-    }
-</code></pre></div></div><p>Your panel should now be altered to look like this:</p><p><p class=page-image><a data-modal=bs-lightbox href=https://mevislab.github.io/examples/images/tutorials/thirdparty/Matplotlib14.PNG title><img class="img-fluid rounded" src=https://mevislab.github.io/examples/images/tutorials/thirdparty/Matplotlib14.PNG alt="MATE Preview"></a><figcaption class=figure-caption></figcaption></p></p><p>We will now add the &ldquo;comparison&rdquo; function, to give the &ldquo;Plot&rdquo; button in our &ldquo;Comparison&rdquo; box a purpose. To do so, change into your modules .py file and choose a cosy place for the following piece of code:</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">BaseNetwork.py</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>  def comparison():
-  clearFigure()
-  figure = ctx.control(&#34;canvas&#34;).object().figure()
-  
-  global values
-  values = [startSlice, endSlice]
-  ctx.field(&#34;SubImage.z&#34;).value = values[0]
-  ctx.field(&#34;SubImage.sz&#34;).value = values[0]
-  global y1
-  y1 = [i for i in getY()]
-  global x1
-  x1 = [i for i in getX()]
-  ctx.field(&#34;SubImage.z&#34;).value = values[1]
-  ctx.field(&#34;SubImage.sz&#34;).value = values[1]
-  global y2
-  y2 = [i for i in getY()]
-  global x2
-  x2 = [i for i in getX()]
-  
-  subplot = figure.add_subplot(211)
-  subplot.bar(x1,y1,bins,color=&#39;r&#39;, label=f&#39;Slice {values[0]}&#39;)
-  subplot = figure.add_subplot(211)
-  subplot.bar(x2,y2,bins,color=&#39;b&#39;, label=f&#39;Slice {values[1]}&#39;)
-  subplot.legend()
-  subplot.plot()
-  subplot = figure.add_subplot(212)
-  subplot.bar(x2,y2,bins,color=&#39;b&#39;, label=f&#39;Slice {values[1]}&#39;)
-  subplot = figure.add_subplot(212)
-  subplot.bar(x1,y1,bins,color=&#39;r&#39;, label=f&#39;Slice {values[0]}&#39;)
-  subplot.legend()
-  figure.canvas.draw()
-  ctx.field(&#34;SubImage.z&#34;).value = values[0]
+</code></pre></div></div><p>Your panel should now be altered to look like this:</p><p><p class=page-image><a data-modal=bs-lightbox href=https://mevislab.github.io/examples/images/tutorials/thirdparty/Matplotlib14.PNG title><img class="img-fluid rounded" src=https://mevislab.github.io/examples/images/tutorials/thirdparty/Matplotlib14.PNG alt="MATE Preview"></a><figcaption class=figure-caption></figcaption></p></p><p>We will now add the &ldquo;comparison&rdquo; function, to give the &ldquo;Plot&rdquo; button in our &ldquo;Comparison&rdquo; box a purpose. To do so, change into your modules .py file and choose a cosy place for the following piece of code:</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">BaseNetwork.py</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>def comparison():
+    clearFigure()
+    figure = ctx.control(&#34;canvas&#34;).object().figure()
+
+    values = [startSlice, endSlice]
+    ctx.field(&#34;SubImage.z&#34;).value = values[0]
+    ctx.field(&#34;SubImage.sz&#34;).value = values[0]
+    y1 = getY()
+    x1 = getX()
+    ctx.field(&#34;SubImage.z&#34;).value = values[1]
+    ctx.field(&#34;SubImage.sz&#34;).value = values[1]
+    y2 = getY()
+    x2 = getX()
+
+    subplot = figure.add_subplot(211)
+    subplot.bar(x1, y1, bins, color=&#39;r&#39;)
+    subplot.bar(x2, y2, bins, color=&#39;b&#39;)
+    subplot.legend([f&#39;Slice {i}&#39; for i in values])
+    subplot.plot()
+    subplot = figure.add_subplot(212)
+    subplot.bar(x2, y2, bins, color=&#39;b&#39;)
+    subplot.bar(x1, y1, bins, color=&#39;r&#39;)
+    subplot.legend([f&#39;Slice {i}&#39; for i in values])
+    figure.canvas.draw()
+    ctx.field(&#34;SubImage.z&#34;).value = values[0]
 </code></pre></div></div><p>You should now be able to reproduce results like these:</p><p><p class=page-image><a data-modal=bs-lightbox href=https://mevislab.github.io/examples/images/tutorials/thirdparty/Matplotlib16.PNG title><img class="img-fluid rounded" src=https://mevislab.github.io/examples/images/tutorials/thirdparty/Matplotlib16.PNG alt=Comparison></a><figcaption class=figure-caption></figcaption></p><p class=page-image><a data-modal=bs-lightbox href=https://mevislab.github.io/examples/images/tutorials/thirdparty/Matplotlib17.PNG title><img class="img-fluid rounded" src=https://mevislab.github.io/examples/images/tutorials/thirdparty/Matplotlib17.PNG alt=Comparison></a><figcaption class=figure-caption></figcaption></p></p><h3 id=summary>Summary</h3><ul><li>Grayscale distributions of two slices can be layered to compare them and make deviations noticeable</li></ul></div></div><script>const body_element=document.querySelector("html body"),modal_div=document.createElement("div");let modal_window=document.body.appendChild(modal_div),modal_html='<div class="modal fade" id="lightboxModalFullscreen" tabindex="-1" aria-labelledby="lightboxModalFullscreenLabel" aria-hidden="true"><div class="modal-dialog modal-fullscreen" data-bs-dismiss="modal" aria-label="Close"><div class="modal-content border-0"><div class="modal-body d-flex align-self-center align-items-center justify-content-center"><div class="modal-custom"><img src="" id="LightboxCanvas" class="img-fluid" data-bs-dismiss="modal" aria-label="Close" /><figcaption id="LightboxCaption" class="figure-caption"></figcaption></div></div></div></div></div>';modal_window.innerHTML=modal_html,Array.from(document.querySelectorAll('[data-modal*="bs-lightbox"]')).forEach(e=>{e.setAttribute("data-bs-toggle","modal"),e.setAttribute("data-bs-target","#lightboxModalFullscreen"),e.addEventListener("click",t=>{const n=e.getAttribute("href"),s=e.getAttribute("title");document.getElementById("LightboxCanvas").src=n,document.getElementById("LightboxCaption").innerHTML=s,t.preventDefault(),console.log(n)})})</script><hr><div class=row><div class=col><a href=https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/2dplotting/ title="Example 2: 2D Plotting" class="btn btn-outline-secondary btn-sm" role=button aria-pressed=true><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-skip-start-fill" viewBox="0 0 16 16"><path d="M4 4a.5.5.0 011 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5.0 01-1 0V4z"/></svg>&nbsp;Example 2: 2D Plotting</a></div><div class=col style=text-align:right><a href=https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/3dplotting/ title="Example 4: 3D Plotting" class="btn btn-outline-secondary btn-sm" role=button aria-pressed=true>Example 4: 3D Plotting&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentcolor" class="bi bi-skip-end-fill" viewBox="0 0 16 16"><path d="M12.5 4a.5.5.0 00-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5.0 001 0V4z"/></svg></a></div></div></div><footer class="footer fixed-bottom mt-auto py-3"><div class="row footer-text"><div class="col-12 col-md text-center text-md-left text-white">&copy; Copyright 2024 <a href=https://www.mevis.de target=_blank>MeVis Medical Solutions AG</a> | <a href=https://www.mevislab.de/imprint target=_blank>Imprint</a> | <a href=https://www.mevislab.de target=_blank>https://www.mevislab.de</a></div></div><script src=https://mevislab.github.io/examples/js/bundle.min.js defer></script><script>hljs.highlightAll(),hljs.configure({ignoreUnescapedHTML:!0}),hljs.addPlugin(new CopyButtonPlugin)</script></footer></body></html>
