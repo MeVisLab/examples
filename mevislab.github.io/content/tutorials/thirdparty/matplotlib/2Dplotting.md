@@ -31,27 +31,27 @@ This new panel window contains a Matplotlib canvas where the plots will be displ
 
 {{< highlight filename = "BaseNetwork.script">}}
 ```Stan
- Window {
-  Category{
-    Horizontal{
-      Vertical{
+Window {
+  Category {
+    Horizontal {
+      Vertical {
         expandY = True
         expandX = False
         Box {
           title= "Single Slice"
         }
-        Box{
+        Box {
           title = "Sequence"
         }
-        Empty{
+        Empty {
           expandY = True
+        }
       }
-    }
-      Box{
+      Box {
         MatplotlibCanvas {
           expandY = True
           expandX = True
-          name        = canvas
+          name = canvas
           useToolBar = True
         }
         expandY = True
@@ -87,17 +87,17 @@ To do so, we will be defining a "setDefaults" function for our module. Open the 
 
 {{< highlight filename = "BaseNetwork.py">}}
 ```Stan
- def setDefaults():
-  ctx.field("SubImage.fullSize").touch()
-  ctx.field("SubImage.autoApply").value = True
-  ctx.field("Histogram.updateMode").value = "AutoUpdate" 
-  ctx.field("Histogram.xRange").value = "Dynamic Min/Max"
-  ctx.field("Histogram.useZeroAsBinCenter").value = False
-  ctx.field("Histogram.binSize").value = 1.0
-  ctx.field("Histogram.backgroundValue").value = False
-  ctx.field("Histogram.curveType").value = "Area"
-  ctx.field("Histogram.useStepFunction").value = True
-  ctx.field("Histogram.curveStyle").value = 7
+def setDefaults():
+    ctx.field("SubImage.fullSize").touch()
+    ctx.field("SubImage.autoApply").value = True
+    ctx.field("Histogram.updateMode").value = "AutoUpdate" 
+    ctx.field("Histogram.xRange").value = "Dynamic Min/Max"
+    ctx.field("Histogram.useZeroAsBinCenter").value = False
+    ctx.field("Histogram.binSize").value = 1.0
+    ctx.field("Histogram.backgroundValue").value = False
+    ctx.field("Histogram.curveType").value = "Area"
+    ctx.field("Histogram.useStepFunction").value = True
+    ctx.field("Histogram.curveStyle").value = 7
 ``` {{</highlight>}}
 
 As it is also incredibly important, that the values of the parameters we are referencing are regularly updated, we will be setting some global values containing those values.
@@ -105,39 +105,33 @@ As it is also incredibly important, that the values of the parameters we are ref
 {{< highlight filename = "BaseNetwork.py">}}
 ```Stan
 
-firstSlice = None
 startSlice = None
-lastSlice = None
 endSlice = None
 bins = None 
-slices = None
 
 def updateSlices():
-  global firstSlice, startSlice, lastSlice, endSlice, bins, slices
-  firstSlice = ctx.field("SubImage.z").value
-  startSlice = int(ctx.field("SubImage.z").value)
-  lastSlice = int(ctx.field("SubImage.sz").value)+1
-  endSlice = int(ctx.field("SubImage.sz").value)
-  bins = ctx.field("Histogram.binSize").value
-  slices = range(startSlice, endSlice)
+    global startSlice, endSlice, bins
+    startSlice = int(ctx.field("SubImage.z").value)
+    endSlice = int(ctx.field("SubImage.sz").value)
+    bins = ctx.field("Histogram.binSize").value
 ``` {{</highlight>}}
 
 Make sure that the variable declarations as none are put above the "setDefaults" function and add the execution of the "updateSlices()" function into the "setDefaults" function, like so:
 
 {{< highlight filename = "BaseNetwork.py">}}
 ```Stan
- def setDefaults():
-  ctx.field("SubImage.fullSize").touch()
-  ctx.field("SubImage.autoApply").value = True
-  ctx.field("Histogram.updateMode").value = "AutoUpdate" 
-  ctx.field("Histogram.xRange").value = "Dynamic Min/Max"
-  ctx.field("Histogram.useZeroAsBinCenter").value = False
-  ctx.field("Histogram.binSize").value = 1.0
-  ctx.field("Histogram.backgroundValue").value = False
-  ctx.field("Histogram.curveType").value = "Area"
-  ctx.field("Histogram.useStepFunction").value = True
-  ctx.field("Histogram.curveStyle").value = 7
-  updateSlices()
+def setDefaults():
+    ctx.field("Histogram.xRange").value = "Dynamic Min/Max"
+    ctx.field("Histogram.useZeroAsBinCenter").value = False
+    ctx.field("Histogram.binSize").value = 1.0
+    ctx.field("Histogram.backgroundValue").value = False
+    ctx.field("Histogram.curveType").value = "Area"
+    ctx.field("Histogram.useStepFunction").value = True
+    ctx.field("Histogram.curveStyle").value = 7
+    ctx.field("SubImage.fullSize").touch()
+    ctx.field("SubImage.autoApply").value = True
+    ctx.field("Histogram.updateMode").value = "AutoUpdate"
+    updateSlices()
 ``` {{</highlight>}}
 
 Now we are ensuring, that the "setDefaults" function and therefore also the "updateSlices" function are executed everytime the panel is opened by setting "setDefaults" as a wake up command.
@@ -175,40 +169,44 @@ Put this inside of the box titled "Single Slice":
 
 {{< highlight filename = "BaseNetwork.script">}}
 ```Stan
- Field "SubImage.sz"{
-                title = "Plot slice"
-            }
-              Button  { title = "in 2D"
-                command = "singleSlice2D"
-              }
-              Button {
-                title = "in 3D"
-                command = "click3D"
+          Field "SubImage.sz" {
+            title = "Plot slice"
           }
-              Empty{}
+          Button {
+            title = "in 2D"
+            command = "singleSlice2D"
+          }
+          Button {
+            title = "in 3D"
+            command = "click3D"
+          }
+          Empty {}
 ``` {{</highlight>}}
 
 And then add this to your box titled "Sequence":
 
 {{< highlight filename = "BaseNetwork.script">}}
 ```Stan
- Field "SubImage.z"{
-                title = "From slice"
-              }
-              Field "SubImage.sz"{
-                title = "To slice"
-              }
-              Button{ title = "Plot 2D"
-                command = "click2D"
-              }
-              Button{ title = "Plot 3D"
-                command = "click3D"}
+          Field "SubImage.z" {
+            title = "From slice"
+          }
+          Field "SubImage.sz" {
+            title = "To slice"
+          }
+          Button {
+            title = "Plot 2D"
+            command = "click2D"
+          }
+          Button {
+            title = "Plot 3D"
+            command = "click3D"
+          }
 ``` {{</highlight>}}
 
 Lastly, put this under your two boxes, but above the empty element in the vertical alignment:
 {{< highlight filename = "BaseNetwork.script">}}
 ```Stan
-  Field "Histogram.binSize"{
+        Field "Histogram.binSize" {
           title = "Bin size"
         }
 ``` {{</highlight>}}
@@ -217,16 +215,14 @@ If you followed all of the listed steps, your panel preview should look like thi
 ![Adapted macro panel](/images/tutorials/thirdparty/Matplotlib10.PNG)
 
 We can now work on the functions that visualize the data as plots on the Matplotlib canvas. 
-You will have noticed how all of the buttons in the .script file have a command. Whenever that button is clicked, its designated command is executed. However, for any of the functions referenced via command to work, we need one that ensures, that the plots are shown on the integrated Matplotlib canvas. We will start with that one.
+You will have noticed how all of the buttons in the .script file have a command. Whenever that button is clicked, its designated command is executed.
+However, for any of the functions referenced via command to work, we need one that ensures, that the plots are shown on the integrated Matplotlib canvas. We will start with that one.
 
 {{< highlight filename = "BaseNetwork.py">}}
 ```Stan
-def initFigure(control):
-  figure = control.object().figure()
-
 def clearFigure():
-  control = ctx.control("canvas").object()
-  control.figure().clear()
+    control = ctx.control("canvas").object()
+    control.figure().clear()
 ``` {{</highlight>}}
 
 Now that this is prepared and ready, we can add the functions to extract the data:
@@ -234,16 +230,16 @@ Now that this is prepared and ready, we can add the functions to extract the dat
 {{< highlight filename = "BaseNetwork.py">}}
 ```Stan
 def getX():
-  x = ctx.field("Histogram.outputHistogramCurve").object().getXValues()
-  stringx = ",".join([str(i) for i in x])
-  xValues = stringx.split(",")
-  return [float(s) for s in xValues]
+    x = ctx.field("Histogram.outputHistogramCurve").object().getXValues()
+    stringx = ",".join([str(i) for i in x])
+    xValues = stringx.split(",")
+    return [float(s) for s in xValues]
    
 def getY():
-  y = ctx.field("Histogram.outputHistogramCurve").object().getYValues()
-  stringy = ",".join([str(i) for i in y])
-  yValues = stringy.split(",")
-  return [float(s) for s in yValues]  
+    y = ctx.field("Histogram.outputHistogramCurve").object().getYValues()
+    stringy = ",".join([str(i) for i in y])
+    yValues = stringy.split(",")
+    return [float(s) for s in yValues]  
 ``` {{</highlight>}}
 
 And lastly enable the plotting of a single slice as well as a sequence in 2D through our panel by adding the code below. 
@@ -251,43 +247,44 @@ And lastly enable the plotting of a single slice as well as a sequence in 2D thr
 {{< highlight filename = "BaseNetwork.py">}}
 ```Stan
 def singleSlice2D():
-  ctx.field("SubImage.z").value = endSlice
-  click2D()
+    ctx.field("SubImage.z").value = endSlice
+    click2D()
 
 def plotSequence():
-  clearFigure()
-  figure = ctx.control("canvas").object().figure()
-  values = [i for i in range(startSlice, lastSlice)]
-  sub = 410
-  if len(values)<=4:
-    for i in values:      
-      sub = sub +1
-      ctx.field("SubImage.z").value = i
-      ctx.field("SubImage.sz").value = i
-      subplot = figure.add_subplot(sub)
-      subplot.bar(getX(), getY(), bins, color='r', label=f'Slice {i}')
-  else:
-    for i in values:
-      ctx.field("SubImage.z").value = i
-      ctx.field("SubImage.sz").value = i
-      subplot = figure.add_subplot()
-      subplot.plot(getX(), getY(), bins)
-  ctx.field("SubImage.z").value = values[0]
-  subplot.legend([f'Slice {i}' for i in values])
-  figure.canvas.draw()
+    clearFigure()
+    figure = ctx.control("canvas").object().figure()
+    values = [i for i in range(startSlice, endSlice + 1)]
+    if len(values) <= 4:
+        # adapt the height of the subplot to the number of plots
+        sub = 100 * len(values) + 11
+        for i in values:
+            subplot = figure.add_subplot(sub)
+            sub += 1
+            ctx.field("SubImage.z").value = i
+            ctx.field("SubImage.sz").value = i
+            subplot.bar(getX(), getY(), bins, color='r', label=f'Slice {i}')
+    else:
+        subplot = figure.add_subplot()
+        for i in values:
+            ctx.field("SubImage.z").value = i
+            ctx.field("SubImage.sz").value = i
+            subplot.plot(getX(), getY(), bins)
+    ctx.field("SubImage.z").value = values[0]
+    subplot.legend([f'Slice {i}' for i in values])
+    figure.canvas.draw()
 
 def click2D():
-  clearFigure()
-  figure = ctx.control("canvas").object().figure()
-  
-  if startSlice == endSlice:
-    subplot = figure.add_subplot(111)
-    subplot.bar(getX(), getY(), bins, color = 'b', label = f"Slice {endSlice}")
-    subplot.legend()
-    subplot.plot()
-    figure.canvas.draw()
-  else:
-    plotSequence()
+    clearFigure()
+    figure = ctx.control("canvas").object().figure()
+
+    if startSlice == endSlice:
+        subplot = figure.add_subplot(111)
+        subplot.bar(getX(), getY(), bins, color='b', label=f"Slice {endSlice}")
+        subplot.legend()
+        subplot.plot()
+        figure.canvas.draw()
+    else:
+        plotSequence()
 ``` {{</highlight>}}
 
 You should now be able to reproduce results like these: 
