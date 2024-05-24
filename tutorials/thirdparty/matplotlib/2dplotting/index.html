@@ -69,7 +69,7 @@ But there are a few other module parameters that must be set beforehand to make 
     ctx.field(&#34;Histogram.updateMode&#34;).value = &#34;AutoUpdate&#34; 
     ctx.field(&#34;Histogram.xRange&#34;).value = &#34;Dynamic Min/Max&#34;
     ctx.field(&#34;Histogram.useZeroAsBinCenter&#34;).value = False
-    ctx.field(&#34;Histogram.binSize&#34;).value = 1.0
+    ctx.field(&#34;Histogram.binSize&#34;).value = 5.0
     ctx.field(&#34;Histogram.backgroundValue&#34;).value = False
     ctx.field(&#34;Histogram.curveType&#34;).value = &#34;Area&#34;
     ctx.field(&#34;Histogram.useStepFunction&#34;).value = True
@@ -87,7 +87,7 @@ def updateSlices():
 </code></pre></div></div><p>Make sure that the variable declarations as none are put above the &ldquo;setDefaults&rdquo; function and add the execution of the &ldquo;updateSlices()&rdquo; function into the &ldquo;setDefaults&rdquo; function, like so:</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">BaseNetwork.py</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>def setDefaults():
     ctx.field(&#34;Histogram.xRange&#34;).value = &#34;Dynamic Min/Max&#34;
     ctx.field(&#34;Histogram.useZeroAsBinCenter&#34;).value = False
-    ctx.field(&#34;Histogram.binSize&#34;).value = 1.0
+    ctx.field(&#34;Histogram.binSize&#34;).value = 5.0
     ctx.field(&#34;Histogram.backgroundValue&#34;).value = False
     ctx.field(&#34;Histogram.curveType&#34;).value = &#34;Area&#34;
     ctx.field(&#34;Histogram.useStepFunction&#34;).value = True
@@ -161,8 +161,11 @@ def getY():
     yValues = stringy.split(&#34;,&#34;)
     return [float(s) for s in yValues]  
 </code></pre></div></div><p>And lastly enable the plotting of a single slice as well as a sequence in 2D through our panel by adding the code below.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">BaseNetwork.py</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>def singleSlice2D():
+    global endSlice
+    lastSlice = endSlice
     ctx.field(&#34;SubImage.z&#34;).value = endSlice
     click2D()
+    ctx.field(&#34;SubImage.z&#34;).value = lastSlice  
 
 def plotSequence():
     clearFigure()
@@ -177,14 +180,15 @@ def plotSequence():
             ctx.field(&#34;SubImage.z&#34;).value = i
             ctx.field(&#34;SubImage.sz&#34;).value = i
             subplot.bar(getX(), getY(), bins, color=&#39;r&#39;, label=f&#39;Slice {i}&#39;)
+            subplot.legend([f&#39;Slice {i}&#39;])
     else:
         subplot = figure.add_subplot()
         for i in values:
             ctx.field(&#34;SubImage.z&#34;).value = i
             ctx.field(&#34;SubImage.sz&#34;).value = i
             subplot.plot(getX(), getY(), bins)
+        subplot.legend([f&#39;Slice {i}&#39; for i in values])
     ctx.field(&#34;SubImage.z&#34;).value = values[0]
-    subplot.legend([f&#39;Slice {i}&#39; for i in values])
     figure.canvas.draw()
 
 def click2D():
