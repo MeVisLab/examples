@@ -22,17 +22,17 @@ In this tutorial, we will go over the steps to add shadows to our 3D-objects, ma
 
 ### From DICOM to scene object
 
-To incorporate DICOMs into your Open Inventor Scene, they have to be rendered as Open Inventor objects, which can be done through converting them into [WEMs](/glossary/#winged-edge-meshes) first. Begin by adding the modules `LocalImage`, `WEMIsoSurface` and `SoWEMRenderer` to your workspace. Open the panel of the `LocalImage` module, browse your files and choose a DICOM with multiple frames as input data. Connect the `LocalImage` module's output connector to `WEMIsoSurface` module's input connector to create a WEM of the study's surface. Then connect the `WEMIsoSurface` module's output connector to the `SoWEMRenderer` module's input connector to render a scene object, that can be displayed by adding a `SoExaminerViewer` module to the workspace and connecting the `SoWEMRenderer` module's output connector to its input connector. 
+To incorporate DICOMs into your Open Inventor Scene, they have to be rendered as Open Inventor objects, which can be done by converting them into [WEMs](/glossary/#winged-edge-meshes) first. Begin by adding the modules `LocalImage`, `WEMIsoSurface` and `SoWEMRenderer` to your workspace. Open the panel of the `LocalImage` module, browse your files and choose a DICOM with multiple frames as input data. Connect the `LocalImage` module's output connector to `WEMIsoSurface` module's input connector to create a WEM of the study's surface. Then connect the `WEMIsoSurface` module's output connector to the `SoWEMRenderer` module's input connector to render a scene object, that can be displayed by adding a `SoExaminerViewer` module to the workspace and connecting the `SoWEMRenderer` module's output connector to its input connector. 
 
 {{<alert class="check" caption="Check">}}
-We don't recommend using single frame DICOMs for this example as a certain depth is required to interact with the scene objects as intended. Also make sure that the PixelData of the DICOM file you choose contains all slices of the study as it might be difficult to arrange scene objects of individual slices to resemble the originally captured study. 
+We don't recommend using single frame DICOMs for this example as a certain depth is required to interact with the scene objects as intended. Also make sure that the pixel data of the DICOM file you choose contains all slices of the study, as it might be difficult to arrange scene objects of individual slices to resemble the originally captured study. 
 {{</alert>}}
 
-![From DICOM to SO](/images/tutorials/openinventor/multiframetoso.PNG "How to create a scene object out of a multiframe DICOM")
+![From DICOM to SO](/images/tutorials/openinventor/multiframetoso.PNG "How to create a scene object out of a multi-frame DICOM")
 
 ### PostEffectShader
 
-To apply shading to our DICOM scene object, we add a `SoShaderPipeline` and a `SoShaderPipelineCellShading` module to our network and connect their output connectors to a `SoToggle` module's input connector. Then connect the `SoToggle` module's output connector to the `SoExaminerViewer`, but on the left side of the connection to the `SoWEMRenderer` module. This way, shading can be toggled and is applied to all scene objects connected to the right of the `SoToggle` module's connection. 
+To apply shading to our DICOM scene object, add a `SoShaderPipeline` and a `SoShaderPipelineCellShading` module to our network and connect their output connectors to a `SoToggle` module's input connector. Then connect the `SoToggle` module's output connector to the `SoExaminerViewer`, but on the left side of the connection to the `SoWEMRenderer` module. This way, shading can be toggled and is applied to all scene objects connected to the right of the `SoToggle` module's connection. 
 
 ![Shading toggled off](/images/tutorials/openinventor/shadingtoggledoff.PNG "Shading toggled off")
 ![Shading toggled on](/images/tutorials/openinventor/shadingtoggledon.PNG "Shading toggled on")
@@ -78,7 +78,7 @@ To put a soft glow on the geometrical scene objects, the module `SoPostEffectGlo
 ![Glow](/images/tutorials/openinventor/SoPostEffectGlow.PNG "Applied SoPostEffectGlow")
 
 ## Summary
-* Multiframe DICOMs can be rendered to be scene objects by converting them into WEMs first
+* Multi-frame DICOM images can be rendered to be scene objects by converting them into WEMs first
 * Open Inventor scenes can be augmented by adding PostEffects to scene objects
 
 {{< networkfile "examples/open_inventor/PostEffectsInOpenInventor.mlab" >}}
