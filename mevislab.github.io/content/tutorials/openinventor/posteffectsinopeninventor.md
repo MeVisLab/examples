@@ -30,7 +30,7 @@ We don't recommend using single frame DICOMs for this example as a certain depth
 
 ![From DICOM to SO](/images/tutorials/openinventor/multiframetoso.PNG "How to create a scene object out of a multiframe DICOM")
 
-### Applying shading to our DICOM scene object
+### PostEffectShader
 
 To apply shading to our DICOM scene object, we add a `SoShaderPipeline` and a `SoShaderPipelineCellShading` module to our network and connect their output connectors to a `SoToggle` module's input connector. Then connect the `SoToggle` module's output connector to the `SoExaminerViewer`, but on the left side of the connection to the `SoWEMRenderer` module. This way, shading can be toggled and is applied to all scene objects connected to the right of the `SoToggle` module's connection. 
 
@@ -73,6 +73,9 @@ You'll observe that the transparency setting in the `SoMaterial` module does not
 
 ### PostEffectGlow
 
+To put a soft glow on the geometrical scene objects, the module `SoPostEffectGlow` can be added to the workspace. 
+
+![Glow](/images/tutorials/openinventor/SoPostEffectGlow.PNG "Applied SoPostEffectGlow")
 
 
 ## Summary
