@@ -80,3 +80,5 @@ To put a soft glow on the geometrical scene objects, the module `SoPostEffectGlo
 ## Summary
 * Multiframe DICOMs can be rendered to be scene objects by converting them into WEMs first
 * Open Inventor scenes can be augmented by adding PostEffects to scene objects
+
+{{< networkfile "examples/open_inventor/PostEffectsInOpenInventor.mlab" >}}
