@@ -77,5 +77,6 @@ To put a soft glow on the geometrical scene objects, the module `SoPostEffectGlo
 
 ![Glow](/images/tutorials/openinventor/SoPostEffectGlow.PNG "Applied SoPostEffectGlow")
 
-
 ## Summary
+* Multiframe DICOMs can be rendered to be scene objects by converting them into WEMs first
+* Open Inventor scenes can be augmented by adding PostEffects to scene objects
