@@ -4,7 +4,7 @@ date: 2024-05-03T10:52:33+02:00
 draft: false
 weight: 540
 status: "OK"
-tags: ["Intermediate", "Tutorial", "Open Inventor", "Post Effects"]
+tags: ["Advanced", "Tutorial", "Open Inventor", "Post Effects"]
 menu: 
   main:
     identifier: "posteffectsinopeninventor"
