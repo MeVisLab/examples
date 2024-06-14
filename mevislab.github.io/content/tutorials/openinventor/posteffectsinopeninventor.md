@@ -38,8 +38,8 @@ Consider adding a `View2D` and an `Info` module to your `LocalImage` module's ou
 
 To apply shading to our DICOM scene object, add a `SoShaderPipeline` and a `SoShaderPipelineCellShading` module to our network and connect their output connectors to a `SoToggle` module's input connector. Then connect the `SoToggle` module's output connector to the `SoExaminerViewer`, but on the left side of the connection to the `SoWEMRenderer` module. This way, shading can be toggled and is applied to all scene objects connected to the right of the `SoToggle` module's connection. 
 
-![Shading toggled off](/images/tutorials/openinventor/shadingtoggledoff.PNG "Shading toggled off")
-![Shading toggled on](/images/tutorials/openinventor/shadingtoggledon.PNG "Shading toggled on")
+![Shading toggled off](/images/tutorials/openinventor/shadingtoggled1.PNG "Shading toggled off")
+![Shading toggled on](/images/tutorials/openinventor/shadingtoggledon1.PNG "Shading toggled on")
 
 ### Tidying your workspace and preparing the next steps
 
@@ -51,7 +51,7 @@ Structuring the workspace by grouping modules based on their functionality helps
 
 Use a `SoPostEffectMainGeometry` module to connect both of the groups you just created to the `SoExaminerViewer` module. Lastly, add a `SoPostEffectRenderer` module to your workspace and connect its output connector to the `SoExaminerViewer` module's input connector. 
 
-![Grouped](/images/tutorials/openinventor/WithGrouping.PNG "Grouped modules")
+![Grouped](/images/tutorials/openinventor/GroupedModules.PNG "Grouped modules")
 
 You can now change your Open Inventor scene's background color. 
 
@@ -60,9 +60,9 @@ You can now change your Open Inventor scene's background color.
 Add the module `SoPostEffectEdges` to your workspace and connect its output connector with the `SoExaminerViewer` module's input connector. 
 Then open its panel and choose a color. You can try different modes, sampling distances and thresholds: 
 
-![Colored Edges](/images/tutorials/openinventor/ColoredEdges.PNG "Colored Edges")
-![Colored Edges 2](/images/tutorials/openinventor/EdgeSettings.PNG "Varying Settings of colored edges")
-![Colored Edges 3](/images/tutorials/openinventor/EdgeSettings2.PNG "Varying Settings of colored edges")
+![Colored Edges](/images/tutorials/openinventor/Edges1.PNG "Colored Edges")
+![Colored Edges 2](/images/tutorials/openinventor/Edges2.PNG "Varying Settings of colored edges")
+![Colored Edges 3](/images/tutorials/openinventor/Edges3.PNG "Varying Settings of colored edges")
 
 ### PostEffectGeometry
 
