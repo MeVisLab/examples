@@ -30,6 +30,10 @@ We don't recommend using single frame DICOMs for this example as a certain depth
 
 ![From DICOM to SO](/images/tutorials/openinventor/multiframetoso.PNG "How to create a scene object out of a multi-frame DICOM")
 
+{{<alert class="info" caption="Info">}}
+Consider adding a `View2D` and an `Info` module to your `LocalImage` module's output connector to be able to compare the rendered object with the original image and adapt the ISO values to minimize noise.
+{{</alert>}}
+
 ### PostEffectShader
 
 To apply shading to our DICOM scene object, add a `SoShaderPipeline` and a `SoShaderPipelineCellShading` module to our network and connect their output connectors to a `SoToggle` module's input connector. Then connect the `SoToggle` module's output connector to the `SoExaminerViewer`, but on the left side of the connection to the `SoWEMRenderer` module. This way, shading can be toggled and is applied to all scene objects connected to the right of the `SoToggle` module's connection. 
