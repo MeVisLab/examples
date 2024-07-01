@@ -14,6 +14,8 @@ menu:
 ---
 # Example 9: Creating Dynamic 3D Animations using AnimationRecorder {#TutorialVisualizationExample9}
 
+{{< youtube "Sxfwwm6BGnA" >}}
+
 ## Introduction
 In this tutorial, we are using the `AnimationRecorder` module to generate dynamic and visually appealing animations of our 3D scenes. We will be recording a video of the results of our previous project, particularly the detailed visualizations of the muscles, bones and blood vessels created using `PathTracer`.
 
