@@ -72,17 +72,16 @@ To include geometrical objects in your Open Inventor scene, add two `SoSeparator
 You'll observe that the transparency setting in the `SoMaterial` module does not apply to the geometrical objects. Add a `SoPostEffectTransparentGeometry` module to your workspace, connect its output connector to the `SoExaminerViewer` module's input connector and its input connectors to the `SoSeparator` module's output connector to create transparent geometrical objects in your scene. 
 {{</alert>}}
 
- ![Geometrical Objects](/images/tutorials/openinventor/GeometryNetwork.PNG "Network with geometrical objects")
- ![Workspace](/images/tutorials/openinventor/WorkspaceGeometryNetwork.PNG "Workspace")
+ ![Workspace](/images/tutorials/openinventor/WorkspaceAndNetwork.PNG "Workspace")
 
 ### PostEffectGlow
 
 To put a soft glow on the geometrical scene objects, the module `SoPostEffectGlow` can be added to the workspace. 
 
-![Glow](/images/tutorials/openinventor/SoPostEffectGlow.PNG "Applied SoPostEffectGlow")
+![Glow](/images/tutorials/openinventor/WorkspaceWithGlow.PNG "Applied SoPostEffectGlow")
 
 ## Summary
 * Multi-frame DICOM images can be rendered to be scene objects by converting them into WEMs first
 * Open Inventor scenes can be augmented by adding PostEffects to scene objects
 
-{{< networkfile "examples/open_inventor/PostEffectsInOpenInventor.mlab" >}}
+{{< networkfile "examples/open_inventor/PostEffectTutorial.mlab" >}}
