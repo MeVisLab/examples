@@ -30,12 +30,16 @@ We don't recommend using single frame DICOMs for this example as a certain depth
 
 ![From DICOM to SO](/images/tutorials/openinventor/multiframetoso.PNG "How to create a scene object out of a multi-frame DICOM")
 
+{{<alert class="info" caption="Info">}}
+Consider adding a `View2D` and an `Info` module to your `LocalImage` module's output connector to be able to compare the rendered object with the original image and adapt the ISO values to minimize noise.
+{{</alert>}}
+
 ### PostEffectShader
 
 To apply shading to our DICOM scene object, add a `SoShaderPipeline` and a `SoShaderPipelineCellShading` module to our network and connect their output connectors to a `SoToggle` module's input connector. Then connect the `SoToggle` module's output connector to the `SoExaminerViewer`, but on the left side of the connection to the `SoWEMRenderer` module. This way, shading can be toggled and is applied to all scene objects connected to the right of the `SoToggle` module's connection. 
 
-![Shading toggled off](/images/tutorials/openinventor/shadingtoggledoff.PNG "Shading toggled off")
-![Shading toggled on](/images/tutorials/openinventor/shadingtoggledon.PNG "Shading toggled on")
+![Shading toggled off](/images/tutorials/openinventor/shadingtoggled1.PNG "Shading toggled off")
+![Shading toggled on](/images/tutorials/openinventor/shadingtoggledon1.PNG "Shading toggled on")
 
 ### Tidying your workspace and preparing the next steps
 
@@ -47,7 +51,7 @@ Structuring the workspace by grouping modules based on their functionality helps
 
 Use a `SoPostEffectMainGeometry` module to connect both of the groups you just created to the `SoExaminerViewer` module. Lastly, add a `SoPostEffectRenderer` module to your workspace and connect its output connector to the `SoExaminerViewer` module's input connector. 
 
-![Grouped](/images/tutorials/openinventor/WithGrouping.PNG "Grouped modules")
+![Grouped](/images/tutorials/openinventor/GroupedModules.PNG "Grouped modules")
 
 You can now change your Open Inventor scene's background color. 
 
@@ -56,9 +60,9 @@ You can now change your Open Inventor scene's background color.
 Add the module `SoPostEffectEdges` to your workspace and connect its output connector with the `SoExaminerViewer` module's input connector. 
 Then open its panel and choose a color. You can try different modes, sampling distances and thresholds: 
 
-![Colored Edges](/images/tutorials/openinventor/ColoredEdges.PNG "Colored Edges")
-![Colored Edges 2](/images/tutorials/openinventor/EdgeSettings.PNG "Varying Settings of colored edges")
-![Colored Edges 3](/images/tutorials/openinventor/EdgeSettings2.PNG "Varying Settings of colored edges")
+![Colored Edges](/images/tutorials/openinventor/Edges1.PNG "Colored edges")
+![Colored Edges 2](/images/tutorials/openinventor/Edges2.PNG "Varying settings of colored edges")
+![Colored Edges 3](/images/tutorials/openinventor/Edges3.PNG "Varying settings of colored edges")
 
 ### PostEffectGeometry
 
@@ -68,17 +72,16 @@ To include geometrical objects in your Open Inventor scene, add two `SoSeparator
 You'll observe that the transparency setting in the `SoMaterial` module does not apply to the geometrical objects. Add a `SoPostEffectTransparentGeometry` module to your workspace, connect its output connector to the `SoExaminerViewer` module's input connector and its input connectors to the `SoSeparator` module's output connector to create transparent geometrical objects in your scene. 
 {{</alert>}}
 
- ![Geometrical Objects](/images/tutorials/openinventor/GeometryNetwork.PNG "Network with geometrical objects")
- ![Workspace](/images/tutorials/openinventor/WorkspaceGeometryNetwork.PNG "Workspace")
+ ![Workspace](/images/tutorials/openinventor/WorkspaceAndNetwork.PNG "Workspace")
 
 ### PostEffectGlow
 
 To put a soft glow on the geometrical scene objects, the module `SoPostEffectGlow` can be added to the workspace. 
 
-![Glow](/images/tutorials/openinventor/SoPostEffectGlow.PNG "Applied SoPostEffectGlow")
+![Glow](/images/tutorials/openinventor/WorkspaceWithGlow.PNG "Applied SoPostEffectGlow")
 
 ## Summary
 * Multi-frame DICOM images can be rendered to be scene objects by converting them into WEMs first
 * Open Inventor scenes can be augmented by adding PostEffects to scene objects
 
-{{< networkfile "examples/open_inventor/PostEffectsInOpenInventor.mlab" >}}
+{{< networkfile "examples/open_inventor/PostEffectTutorial.mlab" >}}
