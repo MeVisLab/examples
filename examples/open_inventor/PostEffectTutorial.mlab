@@ -1,16 +1,16 @@
 // MDL v1 utf8
-mevislabVersion = 4.0.70.2362
+mevislabVersion = 4.0.70.2449
 network  {
   watchlist = ""
 }
 module SoExaminerViewer {
   internal  {
-    frame = "539 160 184 56"
+    frame = "621 157 184 56"
     moduleGroupName = ""
     windows  {
       window _viewer {
-        geometry = "463 380 831 536"
-        relativePosition = "-0.0422 -0.1716"
+        geometry = "2137 600 831 536"
+        relativePosition = "-0.1703 0.0181"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -66,8 +66,8 @@ module SoExaminerViewer {
     height = 591.39911
     position = "278.234436035156 -531.928466796875 107.573722839355"
     orientation = "0.00399280060082674 -0.736900866031647 0.675989031791687 3.16513538360596"
-    nearDistance = 634.83606
-    farDistance = 1073.5072
+    nearDistance = 515.45874
+    farDistance = 1036.6166
     focalDistance = 866.16901
     forceRedrawOnInteraction = FALSE
     button1events = TO_VIEWER
@@ -88,33 +88,33 @@ module SoExaminerViewer {
 }
 module LocalImage {
   internal  {
-    frame = "204 726 128 72"
+    frame = "236 720 184 72"
     moduleGroupName = "DICOM Object"
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "2204 833 480 212"
-        relativePosition = "-0.2271 0.2190"
+        geometry = "2202 833 480 212"
+        relativePosition = "-0.2281 0.2190"
         sizeHint = "480 148"
-        wasOpen = no
+        wasOpen = yes
       }
     }
   }
   fields  {
     instanceName = LocalImage
-    name = Z:/multi-frame/Siemens_Toshiba/96/IM36.dcm
+    name = $(DemoDataPath)/Shoulder_Fracture.dcm
     autoLoad = TRUE
   }
 }
 module WEMIsoSurface {
   internal  {
-    frame = "192 595 152 72"
+    frame = "252 589 152 72"
     moduleGroupName = "DICOM Object"
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "1987 685 417 351"
-        relativePosition = "-0.3562 0.0914"
+        geometry = "1985 685 417 351"
+        relativePosition = "-0.3573 0.0914"
         sizeHint = "417 351"
         wasOpen = no
       }
@@ -150,7 +150,7 @@ module WEMIsoSurface {
 }
 module SoWEMRenderer {
   internal  {
-    frame = "188 464 160 72"
+    frame = "248 458 160 72"
     moduleGroupName = "DICOM Object"
     showNetworkPanel = true
     windows  {
@@ -202,7 +202,7 @@ module SoWEMRenderer {
 }
 module SoToggle {
   internal  {
-    frame = "-100 464 120 56"
+    frame = "-54 458 120 56"
     moduleGroupName = "Toggle Shading"
     showNetworkPanel = true
     windows  {
@@ -222,7 +222,7 @@ module SoToggle {
 }
 module SoShaderPipelineCellShading {
   internal  {
-    frame = "-63 579 192 56"
+    frame = "-17 573 192 56"
     moduleGroupName = "Toggle Shading"
     windows  {
       window _default {
@@ -242,7 +242,7 @@ module SoShaderPipelineCellShading {
 }
 module SoShaderPipeline {
   internal  {
-    frame = "-210 579 128 56"
+    frame = "-164 573 128 56"
     moduleGroupName = "Toggle Shading"
     windows  {
       window _default {
@@ -262,12 +262,12 @@ module SoShaderPipeline {
 }
 module SoPostEffectBackground {
   internal  {
-    frame = "161 275 168 56"
+    frame = "237 261 168 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "647 714 361 152"
-        relativePosition = "-1.0688 0.1164"
+        geometry = "646 714 361 152"
+        relativePosition = "-1.0693 0.1164"
         sizeHint = "329 152"
         wasOpen = no
       }
@@ -278,13 +278,13 @@ module SoPostEffectBackground {
     enabled = TRUE
     bufferName = colorBuffer
     mode = Gradient
-    startColor = "0.294117659330368 0.274509817361832 0.250980406999588"
+    startColor = "0 0.666666686534882 0.498039215803146"
     endColor = "1 0.458823531866074 0.945098042488098"
   }
 }
 module SoPostEffectMainGeometry {
   internal  {
-    frame = "348 275 184 56"
+    frame = "429 261 184 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -315,33 +315,16 @@ module SoPostEffectMainGeometry {
     auxiliaryBufferType = RGBA8
   }
 }
-module SoPostEffectRenderer {
-  internal  {
-    frame = "1069 277 152 56"
-    moduleGroupName = ""
-  }
-  fields  {
-    instanceName = SoPostEffectRenderer
-    debugBuffers = FALSE
-    debugTempBuffers = FALSE
-    debugProfiling = FALSE
-    debugPixels = FALSE
-    debugBufferName = ""
-    enableStencilBuffers = TRUE
-    superSampling = SuperSampling_Off
-    colorPrecision = Int8
-  }
-}
 module SoPostEffectEdges {
   internal  {
-    frame = "781 277 136 56"
+    frame = "869 261 136 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "698 497 440 317"
-        relativePosition = "-0.0219 -0.0707"
-        sizeHint = "264 317"
-        wasOpen = no
+        geometry = "2394 756 442 317"
+        relativePosition = "-0.1380 0.1526"
+        sizeHint = "266 317"
+        wasOpen = yes
       }
     }
   }
@@ -352,19 +335,19 @@ module SoPostEffectEdges {
     normalBufferName = normalBuffer
     emissiveBufferName = emissiveBuffer
     depthBufferName = depthBuffer
-    edgeColor = "0.250980406999588 0.705882370471954 0.729411780834198"
+    edgeColor = "0.831372559070587 0.0549019612371922 0.160784319043159"
     samplingDistance = 2
-    normalAngleThreshold = 163.7
-    depthSensitivity = 6.71
+    normalAngleThreshold = 180
+    depthSensitivity = 9.04
     exponent = 1
-    blur = FALSE
-    blurKernelSize = 9
+    blur = TRUE
+    blurKernelSize = 30
     mode = SobelDepth
   }
 }
 module SoSeparator {
   internal  {
-    frame = "752 464 128 56"
+    frame = "515 451 128 56"
     moduleGroupName = "Geometry 1"
   }
   fields  {
@@ -377,12 +360,12 @@ module SoSeparator {
 }
 module SoMaterial {
   internal  {
-    frame = "760 579 96 56"
+    frame = "486 571 96 56"
     moduleGroupName = "Geometry 1"
     windows  {
       window _materialeditor {
-        geometry = "192 187 211 188"
-        relativePosition = "-0.3448 -0.3379"
+        geometry = "2111 187 211 188"
+        relativePosition = "-0.3453 -0.3379"
         sizeHint = "211 188"
         wasOpen = no
       }
@@ -395,17 +378,17 @@ module SoMaterial {
     specularColor = "0.352941006422043 0.580392003059387 0.650979995727539"
     emissiveColor = "0.768626987934113 0.764706015586853 0.847059011459351"
     shininess = 0
-    transparency = 0.465999990701675
+    transparency = 1
   }
 }
 module SoTransform {
   internal  {
-    frame = "875 579 104 56"
+    frame = "602 579 104 56"
     moduleGroupName = "Geometry 1"
     windows  {
       window _default {
-        geometry = "100 526 440 173"
-        relativePosition = "-0.3333 -0.0457"
+        geometry = "2019 525 440 173"
+        relativePosition = "-0.3339 -0.0466"
         sizeHint = "440 173"
         wasOpen = no
       }
@@ -413,113 +396,16 @@ module SoTransform {
   }
   fields  {
     instanceName = SoTransform
-    translation = "40 300 200"
+    translation = "70 70 75"
     rotation = "0 0 1 0"
     scaleFactor = "1 1 1"
     scaleOrientation = "0 0 1 0"
     center = "5 5 1"
   }
 }
-module SoCube {
-  internal  {
-    frame = "998 579 80 56"
-    moduleGroupName = "Geometry 1"
-    windows  {
-      window _default {
-        geometry = "596 705 198 97"
-        relativePosition = "-0.1380 0.1086"
-        sizeHint = "117 97"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = SoCube
-    width = 20
-    height = 20
-    depth = 350
-  }
-}
-module SoSeparator {
-  internal  {
-    frame = "605 464 128 56"
-    moduleGroupName = "Geometry 1"
-  }
-  fields  {
-    instanceName = SoSeparator1
-    renderCaching = AUTO
-    boundingBoxCaching = AUTO
-    renderCulling = AUTO
-    pickCulling = AUTO
-  }
-}
-module SoMaterial {
-  internal  {
-    frame = "407 579 96 56"
-    moduleGroupName = "Geometry 1"
-    windows  {
-      window _materialeditor {
-        geometry = "761 652 211 188"
-        relativePosition = "-0.0484 0.0629"
-        sizeHint = "211 188"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = SoMaterial1
-    ambientColor = "0.184313997626305 0.882353007793427 0.992156982421875"
-    diffuseColor = "0.164706006646156 0.145098000764847 0.67451000213623"
-    specularColor = "0.533333003520966 0.615685999393463 0.874509990215302"
-    emissiveColor = "0.690195977687836 0.65490198135376 0.737254977226257"
-    shininess = 0.200000002980232
-    transparency = 0.465999990701675
-  }
-}
-module SoTransform {
-  internal  {
-    frame = "522 579 112 56"
-    moduleGroupName = "Geometry 1"
-    windows  {
-      window _default {
-        geometry = "657 331 440 173"
-        relativePosition = "-0.0432 -0.2138"
-        sizeHint = "440 173"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = SoTransform1
-    translation = "40 300 375"
-    rotation = "0 0 1 0"
-    scaleFactor = "1 1 1"
-    scaleOrientation = "0 0 1 0"
-    center = "0 0 0"
-  }
-}
-module SoSphere {
-  internal  {
-    frame = "653 579 88 56"
-    moduleGroupName = "Geometry 1"
-    windows  {
-      window _default {
-        geometry = "883 570 198 120"
-        relativePosition = "0.0115 -0.0078"
-        sizeHint = "153 120"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = SoSphere
-    radius = 20
-    subdivision = 0
-  }
-}
 module SoPostEffectTransparentGeometry {
   internal  {
-    frame = "551 275 224 56"
+    frame = "633 261 224 56"
     moduleGroupName = ""
     windows  {
       window _default {
@@ -549,7 +435,7 @@ module SoPostEffectTransparentGeometry {
 }
 module SoSeparator {
   internal  {
-    frame = "1240 464 128 56"
+    frame = "986 443 128 56"
     moduleGroupName = "Geometry 2"
     windows  {
       window _viewer {
@@ -570,7 +456,7 @@ module SoSeparator {
 }
 module SoMaterial {
   internal  {
-    frame = "1137 579 96 56"
+    frame = "883 558 96 56"
     moduleGroupName = "Geometry 2"
     windows  {
       window _materialeditor {
@@ -593,20 +479,20 @@ module SoMaterial {
 }
 module SoTransform {
   internal  {
-    frame = "1252 579 112 56"
+    frame = "998 558 112 56"
     moduleGroupName = "Geometry 2"
     windows  {
       window _default {
-        geometry = "571 580 440 173"
-        relativePosition = "-0.0880 0.0009"
+        geometry = "2488 579 440 173"
+        relativePosition = "-0.0896 0.0000"
         sizeHint = "440 173"
-        wasOpen = no
+        wasOpen = yes
       }
     }
   }
   fields  {
     instanceName = SoTransform2
-    translation = "98 300 175"
+    translation = "5 75 80"
     rotation = "0 0 1 0"
     scaleFactor = "1 1 1"
     scaleOrientation = "0 0 1 0"
@@ -615,32 +501,51 @@ module SoTransform {
 }
 module SoCube {
   internal  {
-    frame = "1383 579 88 56"
+    frame = "1129 558 88 56"
     moduleGroupName = "Geometry 2"
     windows  {
       window _default {
-        geometry = "810 768 198 97"
-        relativePosition = "-0.0266 0.1629"
+        geometry = "2727 766 198 97"
+        relativePosition = "-0.0281 0.1612"
         sizeHint = "117 97"
-        wasOpen = no
+        wasOpen = yes
       }
     }
   }
   fields  {
     instanceName = SoCube1
-    width = 300
-    height = 350
-    depth = 450
+    width = 60
+    height = 150
+    depth = 150
+  }
+}
+module SoSphere {
+  internal  {
+    frame = "722 571 88 56"
+    moduleGroupName = "Geometry 1"
+    windows  {
+      window _default {
+        geometry = "2800 570 198 120"
+        relativePosition = "0.0099 -0.0078"
+        sizeHint = "153 120"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoSphere
+    radius = 35
+    subdivision = 0
   }
 }
 module SoPostEffectGlow {
   internal  {
-    frame = "929 277 128 56"
+    frame = "1017 261 128 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "1030 437 341 315"
-        relativePosition = "0.1255 -0.1224"
+        geometry = "2654 624 341 315"
+        relativePosition = "-0.0286 0.0388"
         sizeHint = "341 315"
         wasOpen = no
       }
@@ -658,9 +563,26 @@ module SoPostEffectGlow {
     blurKernelSize = 32
     sampleDistance = 1
     blurIterations = 1
-    intensity = 3
+    intensity = 1
     resizeMode = Average2x2
-    blendMode = Screen
+    blendMode = Add
+  }
+}
+module SoPostEffectRenderer {
+  internal  {
+    frame = "1157 261 152 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SoPostEffectRenderer
+    debugBuffers = FALSE
+    debugTempBuffers = FALSE
+    debugProfiling = FALSE
+    debugPixels = FALSE
+    debugBufferName = ""
+    enableStencilBuffers = TRUE
+    superSampling = SuperSampling_Off
+    colorPrecision = Int8
   }
 }
 connections  {
@@ -668,9 +590,8 @@ connections  {
   WEMIsoSurface.input0 = LocalImage.outImage
   SoWEMRenderer.inWEM = WEMIsoSurface.outWEM
   SoToggle.children = "SoShaderPipeline.self SoShaderPipelineCellShading.self"
-  SoPostEffectMainGeometry.children = "SoToggle.self SoWEMRenderer.self SoSeparator.self SoSeparator1.self"
-  SoSeparator.children = "SoMaterial.self SoTransform.self SoCube.self"
-  SoSeparator1.children = "SoMaterial1.self SoTransform1.self SoSphere.self"
+  SoPostEffectMainGeometry.children = "SoToggle.self SoWEMRenderer.self SoSeparator.self"
+  SoSeparator.children = "SoMaterial.self SoTransform.self SoSphere.self"
   SoPostEffectTransparentGeometry.children = SoSeparator2.self
   SoSeparator2.children = "SoMaterial2.self SoTransform2.self SoCube1.self"
 }
