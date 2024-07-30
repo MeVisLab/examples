@@ -14,6 +14,8 @@ menu:
 ---
 # Contour Example 6: Adding Labels to Contours {#TutorialContoursExample6}
 
+{{< youtube "-ACAoeK2Fm8">}}
+
 ## Introduction
 
 In this example, we are adding a label to a contour. The label provides information about measurements and about the contour itself. The label remains connected to the contour and can be moved via mouse interactions.
