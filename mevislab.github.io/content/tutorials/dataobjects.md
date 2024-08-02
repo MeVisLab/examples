@@ -15,9 +15,9 @@ menu:
 ## Data Objects in MeVisLab {#TutorialDataObjects}
 
 MeVisLab provides pre-defined data objects, e. g.
-* [Contour Segmented Objects (CSOs)](/tutorials/dataobjects/contours/contour-objects) <br>
+* [Contour Segmented Objects (CSOs)](/tutorials/dataobjects/contourobjects) <br>
 which are three-dimensional objects encapsulating formerly defined contours within images.
-* [Surface Objects (Winged Edge Meshes or WEMs)](/tutorials/dataobjects/surfaces/surfaceobjects) <br>
+* [Surface Objects (Winged Edge Meshes or WEMs)](/tutorials/dataobjects/surfaceobjects) <br>
  represent the surface of geometrical figures and allow the user to manipulate them.
 * [Markers](/tutorials/dataobjects/markerobjects) <br>
 are used to mark specific locations or aspects of an image and allow to process those later on.
