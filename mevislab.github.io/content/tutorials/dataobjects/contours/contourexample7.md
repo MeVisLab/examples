@@ -87,52 +87,52 @@ Define a function *setupCSOList*.
 {{< highlight filename="csoList.py" >}}
 ```Python
 def setupCSOList():
-  csoList = _getCSOList()
-  csoList.removeAll()
-  csoGroupSmall = csoList.addGroup("small")
-  csoGroupLarge = csoList.addGroup("large")
+    csoList = _getCSOList()
+    csoList.removeAll()
+    csoGroupSmall = csoList.addGroup("small")
+    csoGroupLarge = csoList.addGroup("large")
 
-  csoGroupSmall.setUsePathPointColor(True)
-  csoGroupSmall.setPathPointColor((0,0,1))
+    csoGroupSmall.setUsePathPointColor(True)
+    csoGroupSmall.setPathPointColor((0,0,1))
 
-  csoGroupLarge.setUsePathPointColor(True)
-  csoGroupLarge.setPathPointColor((1,0,0))
+    csoGroupLarge.setUsePathPointColor(True)
+    csoGroupLarge.setPathPointColor((1,0,0))
 
 def _getCSOList():
-  return ctx.field("CSOListContainer.outCSOList").object()
+    return ctx.field("CSOListContainer.outCSOList").object()
 ```
 {{</highlight>}}
 
 The function gets the current CSOList from the output field of the `CSOListContainer`. Initially it should be empty. If not, we want to start with an empty list, therefore we remove all existing CSOs.
 
-We also create two new csoLists. One list for small contours, one list for larger contours, depending on the defined *areaThreshold* from the modules parameter.
+We also create two new CSO lists: one list for small contours, one list for larger contours, depending on the defined *areaThreshold* from the modules parameter.
 
-We also want to define different colors for the CSOs in the lists. Small contours shall be drawn green, large contours shall be red.
+Additionally, we also want to define different colors for the CSOs in the lists. Small contours shall be drawn green, large contours shall be red.
 
 In order to listen for changes on the contours, we need to register for notifications. Create a new function *registerForNotification*.
 
 {{< highlight filename="csoList.py" >}}
 ```Python
 def registerForNotification():
-  csoList = _getCSOList()
-  csoList.registerForNotification(csoList.NOTIFICATION_CSO_FINISHED, ctx, "csoFinished")
+    csoList = _getCSOList()
+    csoList.registerForNotification(csoList.NOTIFICATION_CSO_FINISHED, ctx, "csoFinished")
 
 def csoFinished(_arg):
-  csoList = _getCSOList()
-  for cso in csoList.getCSOs():
-    cso.removeFromAllGroups()
-    csoArea = cso.getArea()
-    csoGroup = csoList.getGroupByLabel("large")
-    if csoArea <= _getAreaThreshold():
-      csoGroup = csoList.getGroupByLabel("small")
-    csoGroup.addCSO(cso.getId())
+    csoList = _getCSOList()
+    for cso in csoList.getCSOs():
+      cso.removeFromAllGroups()
+      csoArea = cso.getArea()
+      csoGroup = csoList.getGroupByLabel("large")
+      if csoArea <= _getAreaThreshold():
+        csoGroup = csoList.getGroupByLabel("small")
+      csoGroup.addCSO(cso.getId())
 
 def _getAreaThreshold():
-  return ctx.field("areaThreshold").value
+    return ctx.field("areaThreshold").value
 ```
 {{</highlight>}}
 
-The function gets all currently existing CSOs from the `CSOListContainer`. Then, we register for notifications on this list. Whenever the notification *NOTIFICATION_CSO_FINISHED* is raised in the current context, we call the function *csoFinished*.
+The function gets all currently existing CSOs from the `CSOListContainer`. Then, we register for notifications on this list. Whenever the notification *NOTIFICATION_CSO_FINISHED* is sent in the current context, we call the function *csoFinished*.
 
 The *csoFinished* function again needs all existing contours. We walk through all single CSOs in the list and remove it from all groups. As we do not know which CSO has been changed from the notification, we evaluate the area of each CSO and add them to the correct list again.
 
@@ -143,40 +143,40 @@ Now we can call our functions in the *initCSOList* function and test our module.
 {{< highlight filename="csoList.py" >}}
 ```Python
 def initCSOList():
-  setupCSOList()
-  registerForNotification()
+    setupCSOList()
+    registerForNotification()
 
 def setupCSOList():
-  csoList = _getCSOList()
-  csoList.removeAll()
-  csoGroupSmall = csoList.addGroup("small")
-  csoGroupLarge = csoList.addGroup("large")
+    csoList = _getCSOList()
+    csoList.removeAll()
+    csoGroupSmall = csoList.addGroup("small")
+    csoGroupLarge = csoList.addGroup("large")
 
-  csoGroupSmall.setUsePathPointColor(True)
-  csoGroupSmall.setPathPointColor((0,1,0))
+    csoGroupSmall.setUsePathPointColor(True)
+    csoGroupSmall.setPathPointColor((0,1,0))
 
-  csoGroupLarge.setUsePathPointColor(True)
-  csoGroupLarge.setPathPointColor((1,0,0))
+    csoGroupLarge.setUsePathPointColor(True)
+    csoGroupLarge.setPathPointColor((1,0,0))
 
 def registerForNotification():
-  csoList = _getCSOList()
-  csoList.registerForNotification(csoList.NOTIFICATION_CSO_FINISHED, ctx, "csoFinished")
+    csoList = _getCSOList()
+    csoList.registerForNotification(csoList.NOTIFICATION_CSO_FINISHED, ctx, "csoFinished")
 
 def csoFinished(_arg):
-  csoList = _getCSOList()
-  for cso in csoList.getCSOs():
-    cso.removeFromAllGroups()
-    csoArea = cso.getArea()
-    csoGroup = csoList.getGroupByLabel("large")
-    if csoArea <= _getAreaThreshold():
-      csoGroup = csoList.getGroupByLabel("small")
-    csoGroup.addCSO(cso.getId())
+    csoList = _getCSOList()
+    for cso in csoList.getCSOs():
+      cso.removeFromAllGroups()
+      csoArea = cso.getArea()
+      csoGroup = csoList.getGroupByLabel("large")
+      if csoArea <= _getAreaThreshold():
+        csoGroup = csoList.getGroupByLabel("small")
+      csoGroup.addCSO(cso.getId())
 
 def _getAreaThreshold():
-  return ctx.field("areaThreshold").value
+    return ctx.field("areaThreshold").value
 
 def _getCSOList():
-  return ctx.field("CSOListContainer.outCSOList").object()
+    return ctx.field("CSOListContainer.outCSOList").object()
 ```
 {{</highlight>}}
 
