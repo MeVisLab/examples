@@ -120,12 +120,12 @@ def registerForNotification():
 def csoFinished(_arg):
     csoList = _getCSOList()
     for cso in csoList.getCSOs():
-      cso.removeFromAllGroups()
-      csoArea = cso.getArea()
-      csoGroup = csoList.getGroupByLabel("large")
-      if csoArea <= _getAreaThreshold():
-        csoGroup = csoList.getGroupByLabel("small")
-      csoGroup.addCSO(cso.getId())
+        cso.removeFromAllGroups()
+        csoArea = cso.getArea()
+        csoGroup = csoList.getGroupByLabel("large")
+        if csoArea <= _getAreaThreshold():
+            csoGroup = csoList.getGroupByLabel("small")
+        csoGroup.addCSO(cso.getId())
 
 def _getAreaThreshold():
     return ctx.field("areaThreshold").value
@@ -165,12 +165,12 @@ def registerForNotification():
 def csoFinished(_arg):
     csoList = _getCSOList()
     for cso in csoList.getCSOs():
-      cso.removeFromAllGroups()
-      csoArea = cso.getArea()
-      csoGroup = csoList.getGroupByLabel("large")
-      if csoArea <= _getAreaThreshold():
-        csoGroup = csoList.getGroupByLabel("small")
-      csoGroup.addCSO(cso.getId())
+        cso.removeFromAllGroups()
+        csoArea = cso.getArea()
+        csoGroup = csoList.getGroupByLabel("large")
+        if csoArea <= _getAreaThreshold():
+            csoGroup = csoList.getGroupByLabel("small")
+        csoGroup.addCSO(cso.getId())
 
 def _getAreaThreshold():
     return ctx.field("areaThreshold").value
