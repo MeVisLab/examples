@@ -84,12 +84,12 @@ Create Python Function initCSOList
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>csoFinished</span>(_arg):
 </span></span><span style=display:flex><span>    csoList <span style=color:#f92672>=</span> _getCSOList()
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> cso <span style=color:#f92672>in</span> csoList<span style=color:#f92672>.</span>getCSOs():
-</span></span><span style=display:flex><span>      cso<span style=color:#f92672>.</span>removeFromAllGroups()
-</span></span><span style=display:flex><span>      csoArea <span style=color:#f92672>=</span> cso<span style=color:#f92672>.</span>getArea()
-</span></span><span style=display:flex><span>      csoGroup <span style=color:#f92672>=</span> csoList<span style=color:#f92672>.</span>getGroupByLabel(<span style=color:#e6db74>&#34;large&#34;</span>)
-</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span> csoArea <span style=color:#f92672>&lt;=</span> _getAreaThreshold():
-</span></span><span style=display:flex><span>        csoGroup <span style=color:#f92672>=</span> csoList<span style=color:#f92672>.</span>getGroupByLabel(<span style=color:#e6db74>&#34;small&#34;</span>)
-</span></span><span style=display:flex><span>      csoGroup<span style=color:#f92672>.</span>addCSO(cso<span style=color:#f92672>.</span>getId())
+</span></span><span style=display:flex><span>        cso<span style=color:#f92672>.</span>removeFromAllGroups()
+</span></span><span style=display:flex><span>        csoArea <span style=color:#f92672>=</span> cso<span style=color:#f92672>.</span>getArea()
+</span></span><span style=display:flex><span>        csoGroup <span style=color:#f92672>=</span> csoList<span style=color:#f92672>.</span>getGroupByLabel(<span style=color:#e6db74>&#34;large&#34;</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> csoArea <span style=color:#f92672>&lt;=</span> _getAreaThreshold():
+</span></span><span style=display:flex><span>            csoGroup <span style=color:#f92672>=</span> csoList<span style=color:#f92672>.</span>getGroupByLabel(<span style=color:#e6db74>&#34;small&#34;</span>)
+</span></span><span style=display:flex><span>        csoGroup<span style=color:#f92672>.</span>addCSO(cso<span style=color:#f92672>.</span>getId())
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_getAreaThreshold</span>():
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;areaThreshold&#34;</span>)<span style=color:#f92672>.</span>value
@@ -116,12 +116,12 @@ Create Python Function initCSOList
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>csoFinished</span>(_arg):
 </span></span><span style=display:flex><span>    csoList <span style=color:#f92672>=</span> _getCSOList()
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> cso <span style=color:#f92672>in</span> csoList<span style=color:#f92672>.</span>getCSOs():
-</span></span><span style=display:flex><span>      cso<span style=color:#f92672>.</span>removeFromAllGroups()
-</span></span><span style=display:flex><span>      csoArea <span style=color:#f92672>=</span> cso<span style=color:#f92672>.</span>getArea()
-</span></span><span style=display:flex><span>      csoGroup <span style=color:#f92672>=</span> csoList<span style=color:#f92672>.</span>getGroupByLabel(<span style=color:#e6db74>&#34;large&#34;</span>)
-</span></span><span style=display:flex><span>      <span style=color:#66d9ef>if</span> csoArea <span style=color:#f92672>&lt;=</span> _getAreaThreshold():
-</span></span><span style=display:flex><span>        csoGroup <span style=color:#f92672>=</span> csoList<span style=color:#f92672>.</span>getGroupByLabel(<span style=color:#e6db74>&#34;small&#34;</span>)
-</span></span><span style=display:flex><span>      csoGroup<span style=color:#f92672>.</span>addCSO(cso<span style=color:#f92672>.</span>getId())
+</span></span><span style=display:flex><span>        cso<span style=color:#f92672>.</span>removeFromAllGroups()
+</span></span><span style=display:flex><span>        csoArea <span style=color:#f92672>=</span> cso<span style=color:#f92672>.</span>getArea()
+</span></span><span style=display:flex><span>        csoGroup <span style=color:#f92672>=</span> csoList<span style=color:#f92672>.</span>getGroupByLabel(<span style=color:#e6db74>&#34;large&#34;</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> csoArea <span style=color:#f92672>&lt;=</span> _getAreaThreshold():
+</span></span><span style=display:flex><span>            csoGroup <span style=color:#f92672>=</span> csoList<span style=color:#f92672>.</span>getGroupByLabel(<span style=color:#e6db74>&#34;small&#34;</span>)
+</span></span><span style=display:flex><span>        csoGroup<span style=color:#f92672>.</span>addCSO(cso<span style=color:#f92672>.</span>getId())
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_getAreaThreshold</span>():
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;areaThreshold&#34;</span>)<span style=color:#f92672>.</span>value
