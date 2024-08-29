@@ -55,7 +55,20 @@ Show Scripting Console
 Show Window
 &rarr;
 Scripting Console
-]</i>. You can work in the context (<em>ctx.</em>) of this module.</p><h4 id=module-runpythonscript>Module <code>RunPythonScript</code></h4><p>The module <code>RunPythonScript</code> allows to execute Python scripts from within a MeVisLab network. You can draw parameter connection from modules to <code>RunPythonScript</code> and back, to process parameter fields using Python scripting. An example for the usage of <code>RunPythonScript</code> can be found <a href=../scriptingexample1/>here</a>.</p><h4 id=module-interactions-via-python-scripting>Module interactions via Python scripting</h4><p>You can reference to a Python function inside a <em>*.script</em> file of a macro module. With this, you can for example execute a Python function, whenever you open a panel, define the action which is executed when pressing a button or specify the command triggered by a <a href=tutorials/basicmechanisms/macromodules/scriptingexample2>field listener</a>. An example for module interactions via Python scripting is given in the same example.</p><h2 id=tips-and-tricks>Tips and tricks</h2><h4 id=scripting-assistant>Scripting Assistant</h4><p>Under <i>[
+]</i>. You can work in the context (<em>ctx.</em>) of this module.</p><h4 id=module-runpythonscript>Module <code>RunPythonScript</code></h4><p>The module <code>RunPythonScript</code> allows to execute Python scripts from within a MeVisLab network. You can draw parameter connection from modules to <code>RunPythonScript</code> and back, to process parameter fields using Python scripting. An example for the usage of <code>RunPythonScript</code> can be found <a href=../scriptingexample1/>here</a>.</p><h4 id=module-interactions-via-python-scripting>Module interactions via Python scripting</h4><p>You can reference to a Python function inside a <em>*.script</em> file of a macro module. With this, you can for example execute a Python function, whenever you open a panel, define the action which is executed when pressing a button or specify the command triggered by a <a href=tutorials/basicmechanisms/macromodules/scriptingexample2>field listener</a>. An example for module interactions via Python scripting is given in the same example.</p><h4 id=python-scripting-in-network-files-mlab>Python scripting in network files (*.mlab)</h4><p>If you do not want to create a macro module, you can also execute Python scripts in a network file (*.mlab). Save your network using a defined name, for example <em>mytest.mlab</em>. Then create a *.script and a *.py file in the same directory, using the same names (<em>mytest.script</em> and <em>mytest.py</em>).</p><p>Open the *.script file and add a <em>Commands</em> section defining the name of the Python file.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">IsoCSOs.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Commands {
+  source = $(LOCAL)/mytest.py
+}
+</code></pre></div></div><p>Now you can enter your Python code to the file <em>mytest.py</em>, for example:</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">IsoCSOs.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#75715e># Optional, only necessary if you want to call functions in your network</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># from mevis import *</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;Hello&#34;</span>)
+</span></span></code></pre></div></div></div><p>If you now use the menu item <i>[
+Scripting
+&rarr;
+Start Network Script
+]</i>, the script can be executed inside your network. You can also use the keyboard shortcut
+<kbd>ctrl+R
+</kbd>.</p><h2 id=tips-and-tricks>Tips and tricks</h2><h4 id=scripting-assistant>Scripting Assistant</h4><p>Under <i>[
 View
 &rarr;
 Views
