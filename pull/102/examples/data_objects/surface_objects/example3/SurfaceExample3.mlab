@@ -1,0 +1,216 @@
+// MDL v1 utf8
+mevislabVersion = 3.6.90.1503
+network  {
+  watchlist = ""
+}
+module SoCube {
+  internal  {
+    frame = "939 488 80 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SoCube
+    width = 2
+    height = 2
+    depth = 2
+  }
+}
+module SoExaminerViewer {
+  internal  {
+    frame = "695 258 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _viewer {
+        geometry = "492 219 594 513"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoExaminerViewer
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    border = FALSE
+    background = "0 0 0"
+    transparency = BLEND
+    antialiasing = FALSE
+    antialiasingNumPasses = 1
+    useSampleBuffers = FALSE
+    numSamples = 8
+    grabKeyFocus = TRUE
+    enableKeyCommands = TRUE
+    snapshotFormat = SNAPSHOT_RGB
+    outputAviFile = ""
+    autoRedrawWhenRecording = TRUE
+    frameRate = 7
+    frameRateAvi = 15
+    outputSnapshotFile = none
+    outputSnapshotFileWritten = none
+    autoIncreaseFile = TRUE
+    showSnapshotWithShell = FALSE
+    snapCount = 0
+    inputDevicesList = ""
+    headlight = TRUE
+    decoration = TRUE
+    popupMenuEnabled = FALSE
+    viewing = TRUE
+    autoClipping = TRUE
+    drawStyle = VIEW_AS_IS
+    interactiveDrawStyle = VIEW_LOW_COMPLEXITY
+    viewAllFlag = FALSE
+    initialCameraOrientation = CAMERA_KEEP_AS_IS
+    applyCameraOrientation = CAMERA_KEEP_AS_IS
+    cameraType = CAMERA_PERSPECTIVE
+    autoApplyUserSettingOrientation = FALSE
+    userSettingOrientation = "0 0 1 0"
+    automaticViewAll = FALSE
+    storeCurrentState = TRUE
+    saveCamera = TRUE
+    cursor = TRUE
+    isCameraStored = TRUE
+    perspective = TRUE
+    stereoViewing = FALSE
+    stereoOffset = 3
+    height = 0.78539819
+    position = "0.605737805366516 4.25993824005127 -0.523797750473022"
+    orientation = "-0.0609904490411282 0.792590916156769 0.606695830821991 2.96317386627197"
+    nearDistance = 1.701928
+    farDistance = 5.0946631
+    focalDistance = 4.5260668
+    forceRedrawOnInteraction = FALSE
+    button1events = TO_VIEWER
+    button2events = TO_VIEWER
+    button3events = TO_VIEWER
+    keyEvents = TO_VIEWER
+    animationEnabled = FALSE
+    feedback = FALSE
+    feedbackSize = 32
+    mouseInteraction = ""
+    rotationAxis = "0 1 0"
+    rotationAngle = 360
+    rotationSteps = 80
+    recordRotation = TRUE
+    wheelZoomEnabled = TRUE
+    wheelRotationEnabled = TRUE
+  }
+}
+module SoBackground {
+  internal  {
+    frame = "506 488 112 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SoBackground
+    rotate = TRUE
+    flip = FALSE
+    on = TRUE
+    depthBuffer = TRUE
+  }
+}
+module SoCoordinateSystem {
+  internal  {
+    frame = "772 373 152 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1257 478 426 221"
+        sizeHint = "426 221"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoCoordinateSystem
+    strideMode = AUTO
+    userStride = 10
+    endTickMode = ROUND_UP
+    axisColor = "1 1 1"
+    axisAlpha = 1
+    tickColor = "1 1 1"
+    tickAlpha = 1
+    numbersFontColor = "1 1 1"
+    numbersFontAlpha = 1
+    lettersFontColor = "1 1 1"
+    lettersFontAlpha = 1
+    useTextShadow = TRUE
+    textShadowColor = "0 0 0"
+    fontSize = 10
+    lettersFontSizeOffset = 2
+    arrowLengthFactor = 2
+    letterOffsetFactor = 2
+    useVoxelAlignedBoundingBox = FALSE
+    userScale = "2 2 2"
+    userTranslate = "0 0 0"
+    userTransformMode = USER_TRANSFORM_INSTEAD_OF_INPUT
+  }
+}
+module SoTransformerDragger {
+  internal  {
+    frame = "637 488 160 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "65 451 468 277"
+        sizeHint = "390 277"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoTransformerDragger
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    enable = TRUE
+    translation = "0.575970470905304 0.79032176733017 -0.0234815254807472"
+    scaleFactor = "0.257518440485001 0.257518976926804 0.257518529891968"
+    rotation = "0.942373633384705 -0.318271845579147 0.1031259521842 2.54888367652893"
+    minDiscRotDot = 0.025
+  }
+}
+module SoTransform {
+  internal  {
+    frame = "816 488 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "573 461 441 162"
+        sizeHint = "441 162"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoTransform
+    translation = "0.575970470905304 0.79032176733017 -0.0234815254807472"
+    rotation = "0.942373633384705 -0.318271845579147 0.1031259521842 2.54888367652893"
+    scaleFactor = "0.257518440485001 0.257518976926804 0.257518529891968"
+    scaleOrientation = "0 0 1 0"
+    center = "0 0 0"
+  }
+}
+module SoSeparator {
+  internal  {
+    frame = "601 373 152 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SoSeparator
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+  }
+}
+connections  {
+  SoExaminerViewer.children = "SoSeparator.self SoCoordinateSystem.self"
+  SoTransform.translation = SoTransformerDragger.translation
+  SoTransform.rotation = SoTransformerDragger.rotation
+  SoTransform.scaleFactor = SoTransformerDragger.scaleFactor
+  SoSeparator.children = "SoBackground.self SoTransformerDragger.self SoTransform.self SoCube.self"
+}
+networkModel = ""
