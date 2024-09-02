@@ -22,6 +22,7 @@ This chapter shows some features and functionalities which are helpful but do no
 * [Scripting Assistant](/tutorials/shorts#scriptingassistant)
 * [User Scripts](/tutorials/shorts#user_scripts)
 * [Show status of module in- and output](/tutorials/shorts#mlimagestate)
+* [Module suggestion of module in- and output](/tutorials/shorts#modulesuggest)
 
 ## Keyboard Shortcuts {#shortcuts}
 This is a collection of useful keyboard shortcuts in MeVisLab, hopefully it grows continuously.
@@ -65,6 +66,10 @@ This is a collection of useful keyboard shortcuts in MeVisLab, hopefully it grow
     </tr>
       <td>Ctrl+K	</td>
       <td>Restart MeVisLab </td>
+    </tr>
+    </tr>
+      <td>Ctrl+R</td>
+      <td>Run script file with the same name of your network file if available in the same directory.</td>
     </tr>
   </tbody>
 </table>
@@ -176,3 +181,17 @@ After enabling *Show ML image state*, your network changes and the input and out
 After loading a valid DICOM directory, the connectors providing a valid ML image appear green. The previously red outputs are beige again, showing there is data available.
 
 ![No data on connector](/images/tutorials/LMIMageState_On_2.png "No data on connector")
+
+## Module suggestion of module in- and output {#modulesuggest}
+
+{{< youtube "q_cw583EE_s" >}}
+
+MeVisLab provides a functionality to suggest frequently used modules for the selected output in your network.
+
+Especially for new users learning MeVisLab, it makes sense to enable the module suggestion via menu item {{< menuitem "Scripting" "Module Suggest" "Module Suggest (toggle)">}}.
+
+If you now select an input or output, MeVisLab shows the modules that have been frequently used for this connector in our example networks.
+
+![Module suggestion](/images/tutorials/ModuleSuggest.png "Module suggestion")
+
+You can toggle through the suggestions via keyboard shortcut {{< keyboard "," >}} or {{< keyboard "shift+," >}}.
