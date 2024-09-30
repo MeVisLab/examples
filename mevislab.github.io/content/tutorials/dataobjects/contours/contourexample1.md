@@ -65,6 +65,10 @@ to form the CSO. Double--click to finish the CSO.
 ![SoSCOPolygonEditor](/images/tutorials/dataobjects/contours/DO1_08.png "SoSCOPolygonEditor")
 ![SoCSOSplineEditor](/images/tutorials/dataobjects/contours/DO1_09.png "SoCSOSplineEditor")
 
+### Draw filled CSOs
+If you want to fill the shapes, you can simply add a `SoCSOFillingRenderer` module to your `SoView2DCSOExtensibleEditor`.
+![SoCSOFillingRenderer](/images/tutorials/dataobjects/contours/DO1_09_filled.png "SoCSOFillingRenderer")
+
 ## Exercises
 Create CSOs with green color and ellipsoid shapes.
 
