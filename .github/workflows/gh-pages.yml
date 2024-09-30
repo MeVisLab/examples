@@ -9,11 +9,14 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-22.04
+    permissions:
+      contents: write
     env:
       PR_PATH: pull/${{github.event.number}}
     steps:
       - name: Comment on PR
-        uses: hasura/comment-progress@v2.2.0
+        uses: hasura/comment-progress@v2.3.0
+        continue-on-error: true
         if: github.ref != 'refs/heads/main'
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -85,6 +88,7 @@ jobs:
 
       - name: Update comment
         uses: hasura/comment-progress@v2.2.0
+        continue-on-error: true
         if: github.ref != 'refs/heads/main'
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
