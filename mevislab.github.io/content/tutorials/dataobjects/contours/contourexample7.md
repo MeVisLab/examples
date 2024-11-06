@@ -14,6 +14,8 @@ menu:
 ---
 # Contour Example 7: Using the CSOListContainer {#TutorialContoursExample7}
 
+{{< youtube "-4quJcvvt-GQ">}}
+
 ## Introduction
 
 In this example, we are using the module `CSOListContainer` instead of the `CSOManager`. The `CSOManager` is a heavy weight, UI driven module. You can use it to see all of your CSOs, CSOLists and CSOGroups in the module panel. The `CSOListContainer` is a light weight module with focus on Python scripting. We recommend to use this module for final application development, because Python provides much more flexibility in handling CSO objects.
