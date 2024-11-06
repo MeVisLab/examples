@@ -27,10 +27,11 @@ canonifyURLs = true
         block = true
         title = true
 
-[Author]
-  name = "MeVis Medical Solutions AG"
-  copyright = "{year}"
-  website = "https://www.mevis.de"
+[params]
+  [params.author]
+    name = "MeVis Medical Solutions AG"
+    copyright = "{year}"
+    website = "https://www.mevis.de"
 
 [module]
   [[module.mounts]]
