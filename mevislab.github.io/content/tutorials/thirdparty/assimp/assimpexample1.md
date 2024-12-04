@@ -14,6 +14,8 @@ menu:
 ---
 # Example 1: 3D Printing in MeVisLab
 
+{{< youtube "82ysCYNTyso">}}
+
 ## Introduction
 This example uses the assimp library to load a 3D file and save the file as \*.stl for 3D printing.
 
