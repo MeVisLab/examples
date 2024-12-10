@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-22.04
     env:
       PR_PATH: pull/${{github.event.number}}
+    permissions:
+      contents: write
     steps:
       - name: Comment on PR
         uses: hasura/comment-progress@v2.3.0
@@ -61,7 +63,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
         with:
-          github_token: ${{ secrets.PUBLISH_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./${{ env.DOMAIN }}/public
 
       - name: Set base URL for preview if PR
