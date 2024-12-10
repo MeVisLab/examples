@@ -14,7 +14,7 @@ menu:
 ---
 # Contour Example 7: Using the CSOListContainer {#TutorialContoursExample7}
 
-{{< youtube "-4quJcvvt-GQ">}}
+{{< youtube "4quJcvvt-GQ">}}
 
 ## Introduction
 
