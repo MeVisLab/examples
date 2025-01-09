@@ -73,7 +73,13 @@ You can now use the controls of the *Debugging* panels to step through your code
 
 Select *Watches* panel and enter **item.text(1)**. Again copy any tag name in MeVisLab `DicomTagBrowser` module. You will see that MATE shows an error. The reason is that the execution stops before executing the current line of code. Your Python code in line 180 defines the variable *item*, and therefore it is not yet defined at this moment. 
 
-Use the *Debugging* panel or press {{< keyboard "F10" >}}. Your debugger jumps to the next line (181) and the variable *item* is defined. You can see the value of the *Tag Name* you just copied.
+Use the *Debugging* panel or press {{< keyboard "F10" >}}. Your debugger jumps to the next line (181) and the variable *item* is defined. You can see the value of the *Tag Name* you just copied. You can add any variables you are interested in the same way.
+
+![Watches panel](/images/tutorials/basicmechanics/Debug7b.png "Watches panel")
+
+The *Variables* panel now shows all currently available local and global variables including their value(s). The *Stack Trace* panel shows that the *copyCurrentTagName* function has been called after the *DicomTagBrowser.MenuItem.command* from the \*.script file of the `DicomTagBrowser` module.
+
+![Variables/Watches panel](/images/tutorials/basicmechanics/Debug7a.png "Variables/Watches panel")
 
 ## Conditions for Breakpoints
 You can also define conditions for your breakpoints. Remove breakpoint in line 180 and set a new one in line 181. In case you only want to stop the execution of your script if a specific condition is met, right click {{< mousebutton "right" >}} on your breakpoint and select {{< menuitem "Set Condition for Breakpoint" >}}. A dialog opens where you can define your condition. Enter **item.text(1) == 'SOPClassUID'** as condition.
