@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-22.04
     env:
       PR_PATH: pull/${{github.event.number}}
-    permissions:
-      contents: write
+    permissions: write-all
     steps:
       - name: Comment on PR
+        continue-on-error: true
         uses: hasura/comment-progress@v2.3.0
         if: github.ref != 'refs/heads/main'
         with:
@@ -86,6 +86,7 @@ jobs:
           destination_dir: ${{ env.PR_PATH }}
 
       - name: Update comment
+        continue-on-error: true
         uses: hasura/comment-progress@v2.3.0
         if: github.ref != 'refs/heads/main'
         with:
