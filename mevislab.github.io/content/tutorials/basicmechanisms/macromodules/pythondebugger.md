@@ -13,6 +13,9 @@ menu:
     parent: "basicmechanisms"
 ---
 # Example 5: Debugging Python files in MATE
+
+{{< youtube "ccLDQUrlzjU">}}
+
 ## Introduction
 MeVisLab provides the powerful integrated text editor MATE. By default, MATE is used to create/edit files like Python scripts. In this tutorial, we want to show you how to debug Python scripts in MeVisLab. 
 
