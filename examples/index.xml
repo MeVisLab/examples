@@ -999,7 +999,7 @@
  [12] &lt;a href="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example5/">WEM - Primitive Value Lists&lt;/a>&lt;br/></description></item><item><title>Face detection in OpenCV</title><link>https://mevislab.github.io/examples/examples/thirdparty/example2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/examples/thirdparty/example2/</guid><description>&lt;h1 id="thirdparty-example-2-face-detection-in-opencv">ThirdParty Example 2: Face detection in OpenCV&lt;/h1>
 &lt;p>This Python file shows how to access the webcam and detect faces in the video stream via OpenCV.&lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the Python files &lt;a href="https://mevislab.github.io/examples/examples/thirdparty/example2/FaceDetection.py">here&lt;/a>&lt;/p></description></item><item><title>Image Processing</title><link>https://mevislab.github.io/examples/examples/image_processing/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/examples/image_processing/</guid><description>&lt;h2 id="image-processing-examples">Image Processing Examples:&lt;/h2>
+&lt;p>You can download the Python files &lt;a href="https://mevislab.github.io/examples/thirdparty/example2/FaceDetection.py">here&lt;/a>&lt;/p></description></item><item><title>Image Processing</title><link>https://mevislab.github.io/examples/examples/image_processing/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/examples/image_processing/</guid><description>&lt;h2 id="image-processing-examples">Image Processing Examples:&lt;/h2>
 &lt;p>&lt;b>The following examples are available:&lt;/b>&lt;/p>
 
 
@@ -1968,7 +1968,7 @@
  [4] &lt;a href="https://mevislab.github.io/examples/examples/open_inventor/example1/">Open Inventor objects&lt;/a>&lt;br/></description></item><item><title>OpenCV Webcam access</title><link>https://mevislab.github.io/examples/examples/thirdparty/example1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/examples/thirdparty/example1/</guid><description>&lt;h1 id="thirdparty-example-1-opencv-webcam-access">ThirdParty Example 1: OpenCV Webcam access&lt;/h1>
 &lt;p>This Python file shows how to access the webcam via OpenCV and use the video via &lt;code>PythonImage&lt;/code> module in MeVisLab.&lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the Python files &lt;a href="https://mevislab.github.io/examples/examples/thirdparty/example1/OpenCVExample.zip">here&lt;/a>&lt;/p></description></item><item><title>Profiling in MeVisLab</title><link>https://mevislab.github.io/examples/examples/testing/example2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/examples/testing/example2/</guid><description>&lt;h1 id="testing-example-2-profiling-in-mevislab">Testing Example 2: Profiling in MeVisLab&lt;/h1>
+&lt;p>You can download the Python files &lt;a href="https://mevislab.github.io/examples/thirdparty/example1/OpenCVExample.zip">here&lt;/a>&lt;/p></description></item><item><title>Profiling in MeVisLab</title><link>https://mevislab.github.io/examples/examples/testing/example2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/examples/testing/example2/</guid><description>&lt;h1 id="testing-example-2-profiling-in-mevislab">Testing Example 2: Profiling in MeVisLab&lt;/h1>
 &lt;p>This example shows how to use the Profiling View in MeVisLab.&lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
 &lt;p>n.a.&lt;/p></description></item><item><title>PyTorch segmentation</title><link>https://mevislab.github.io/examples/examples/thirdparty/pytorch1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/examples/thirdparty/pytorch1/</guid><description>&lt;h1 id="thirdparty-example-5-segmentation-in-webcam-stream-by-using-pytorch">ThirdParty Example 5: Segmentation in webcam stream by using PyTorch&lt;/h1>
@@ -1979,7 +1979,7 @@
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the Python files &lt;a href="https://mevislab.github.io/examples/examples/thirdparty/pytorch1/PyTorchSegmentationExample.zip">here&lt;/a>&lt;/p></description></item><item><title>Testing Examples</title><link>https://mevislab.github.io/examples/examples/testing/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/examples/testing/</guid><description>&lt;h2 id="testing-examples">Testing Examples:&lt;/h2>
+&lt;p>You can download the Python files &lt;a href="https://mevislab.github.io/examples/thirdparty/pytorch1/PyTorchSegmentationExample.zip">here&lt;/a>&lt;/p></description></item><item><title>Testing Examples</title><link>https://mevislab.github.io/examples/examples/testing/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/examples/testing/</guid><description>&lt;h2 id="testing-examples">Testing Examples:&lt;/h2>
 &lt;p>&lt;b>The following examples are available:&lt;/b>&lt;/p>
 
 
@@ -3280,7 +3280,7 @@ After clicking any of the linked examples, you will be forwarded to a short desc
  [6] &lt;a href="https://mevislab.github.io/examples/examples/visualization/example6/">Volume Rendering vs. Path Tracing&lt;/a>&lt;br/></description></item><item><title>Writing a simple test case in MeVisLab</title><link>https://mevislab.github.io/examples/examples/testing/example1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/examples/testing/example1/</guid><description>&lt;h1 id="testing-example-1-writing-a-simple-test-case-in-mevislab">Testing Example 1: Writing a simple test case in MeVisLab&lt;/h1>
 &lt;p>This example shows how to write and execute test cases in MeVisLab. The Python files can be downloaded below.&lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the Python files &lt;a href="https://mevislab.github.io/examples/examples/testing/example1/TestCases.zip">here&lt;/a>&lt;/p></description></item><item><title>2D and 3D visualization of contours</title><link>https://mevislab.github.io/examples/examples/data_objects/contours/example3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/data_objects/contours/example3/</guid><description>&lt;h1 id="contour-example-3-2d-and-3d-visualization-of-contours">Contour Example 3: 2D and 3D visualization of contours&lt;/h1>
+&lt;p>You can download the Python files &lt;a href="https://mevislab.github.io/examples/testing/example1/TestCases.zip">here&lt;/a>&lt;/p></description></item><item><title>2D and 3D visualization of contours</title><link>https://mevislab.github.io/examples/examples/data_objects/contours/example3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/data_objects/contours/example3/</guid><description>&lt;h1 id="contour-example-3-2d-and-3d-visualization-of-contours">Contour Example 3: 2D and 3D visualization of contours&lt;/h1>
 &lt;p>This example shows how to display CSOs in 2D as an overlay and additionally how the CSOs are displayed in 3D.&lt;/p>
 &lt;h2 id="summary">Summary&lt;/h2>
 &lt;p>Images are loaded by using a &lt;code>LocalImage&lt;/code> module and displayed in a 2D viewer. A &lt;code>SoCSOLiveWireEditor&lt;/code> is added to draw contours on the images. The &lt;code>CSOSliceInterpolator&lt;/code> generates additional contours between the manual CSOs by using linear interpolation.&lt;/p>
@@ -3291,59 +3291,59 @@ After clicking any of the linked examples, you will be forwarded to a short desc
 &lt;h2 id="scale-rotate-and-move-a-wem-in-a-scene">Scale, rotate and move a WEM in a scene&lt;/h2>
 &lt;p>In this example, we are using a &lt;code>SoTransformerDragger&lt;/code> module to apply transformations on a 3D WEM object via mouse interactions.
 &lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example3/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example3/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/data_objects/surface_objects/example3/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/data_objects/surface_objects/example3/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h3 id="download">Download&lt;/h3>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example3/SurfaceExample3.mlab">here&lt;/a>&lt;/p>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/data_objects/surface_objects/example3/SurfaceExample3.mlab">here&lt;/a>&lt;/p>
 &lt;h2 id="interactively-modify-wems">Interactively modify WEMs&lt;/h2>
 &lt;p>In this example, we are using a &lt;code>SoWEMBulgeEditor&lt;/code> module to modify a WEM using the mouse.
 &lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example3/image2.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example3/image2.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/data_objects/surface_objects/example3/image2.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/data_objects/surface_objects/example3/image2.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h3 id="download-1">Download&lt;/h3>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example3/WEMExample3b.mlab">here&lt;/a>&lt;/p></description></item><item><title>Arithmetic operations on two images</title><link>https://mevislab.github.io/examples/examples/image_processing/example1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/image_processing/example1/</guid><description>&lt;h1 id="image-processing-example-1-arithmetic-operations-on-two-images">Image Processing Example 1: Arithmetic operations on two images&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/data_objects/surface_objects/example3/WEMExample3b.mlab">here&lt;/a>&lt;/p></description></item><item><title>Arithmetic operations on two images</title><link>https://mevislab.github.io/examples/examples/image_processing/example1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/image_processing/example1/</guid><description>&lt;h1 id="image-processing-example-1-arithmetic-operations-on-two-images">Image Processing Example 1: Arithmetic operations on two images&lt;/h1>
 &lt;p>In this example, we apply scalar functions on two images like Add, Multiply, Subtract, etc.&lt;/p>
 &lt;h2 id="summary">Summary&lt;/h2>
 &lt;p>We are loading two images by using the &lt;code>LocalImage&lt;/code> module and show them in a &lt;code>SynchroView2D&lt;/code>. In addition to that, both images are used for arithmetic processing in the module &lt;code>Arithmetic2&lt;/code>.&lt;/p>
 &lt;p>&lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/image_processing/example1/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/image_processing/example1/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/image_processing/example1/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/image_processing/example1/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/image_processing/example1/BasicFilter.mlab">here&lt;/a>&lt;/p></description></item><item><title>Camera interaction with collision detection</title><link>https://mevislab.github.io/examples/examples/open_inventor/example4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/open_inventor/example4/</guid><description>&lt;h1 id="open-inventor-example-4-camera-interaction-with-collision-detection">Open Inventor Example 4: Camera interaction with collision detection&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/image_processing/example1/BasicFilter.mlab">here&lt;/a>&lt;/p></description></item><item><title>Camera interaction with collision detection</title><link>https://mevislab.github.io/examples/examples/open_inventor/example4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/open_inventor/example4/</guid><description>&lt;h1 id="open-inventor-example-4-camera-interaction-with-collision-detection">Open Inventor Example 4: Camera interaction with collision detection&lt;/h1>
 &lt;p>This example shows how to implement a camera flight using keyboard shortcuts. Collisions with anatomical structures are detected and the flight stops. In addition to that, the camera object and direction is rendered in another viewer.&lt;/p>
 &lt;p>This example has been taken from the &lt;a href="https://forum.mevislab.de/index.php?topic=3947.0" target="_blank" rel="noopener">MeVisLab forum&lt;/a>.&lt;/p>
 &lt;h2 id="summary">Summary&lt;/h2>
 &lt;p>A local macro &lt;code>flightControl&lt;/code> allows you to navigate with the camera through the scene.&lt;/p>
 &lt;p>&lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/open_inventor/example4/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/open_inventor/example4/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/open_inventor/example4/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/open_inventor/example4/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p></description></item><item><title>Camera Interactions in Open Inventor</title><link>https://mevislab.github.io/examples/examples/open_inventor/example3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/open_inventor/example3/</guid><description>&lt;h1 id="open-inventor-example-3-camera-interactions-in-open-inventor">Open Inventor Example 3: Camera Interactions in Open Inventor&lt;/h1>
 &lt;p>This example shows different options for using a camera and different viewers in Open Inventor.&lt;/p>
 &lt;h2 id="summary">Summary&lt;/h2>
 &lt;p>We will show the difference between a &lt;code>SoRenderArea&lt;/code> and a &lt;code>SoExaminerViewer&lt;/code> and use different modules of the &lt;code>SoCamera*&lt;/code> group.&lt;/p>
 &lt;p>&lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/open_inventor/example3/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/open_inventor/example3/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/open_inventor/example3/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/open_inventor/example3/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/open_inventor/example3/CameraInteractions.mlab">here&lt;/a>&lt;/p></description></item><item><title>Clip Planes</title><link>https://mevislab.github.io/examples/examples/image_processing/example5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/image_processing/example5/</guid><description>&lt;h1 id="image-processing-example-5-clip-planes">Image Processing Example 5: Clip Planes&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/open_inventor/example3/CameraInteractions.mlab">here&lt;/a>&lt;/p></description></item><item><title>Clip Planes</title><link>https://mevislab.github.io/examples/examples/image_processing/example5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/image_processing/example5/</guid><description>&lt;h1 id="image-processing-example-5-clip-planes">Image Processing Example 5: Clip Planes&lt;/h1>
 &lt;p>In this example, we are using the currently visible slice from a 2D view as a clip plane in 3D.&lt;/p>
 &lt;h2 id="summary">Summary&lt;/h2>
 &lt;p>We are loading images by using the &lt;code>LocalImage&lt;/code> module and render them as a 2-dimensional image stack &lt;code>SoRenderArea&lt;/code>. The displayed slice is used to create a 3D plane/clip plane in a &lt;code>SoExaminerViewer&lt;/code>.&lt;/p>
 &lt;p>&lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/image_processing/example5/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/image_processing/example5/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/image_processing/example5/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/image_processing/example5/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/image_processing/example4/ImageProcessingExample5.mlab">here&lt;/a>&lt;/p></description></item><item><title>Contour Filter</title><link>https://mevislab.github.io/examples/examples/basic_mechanisms/contour_filter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/basic_mechanisms/contour_filter/</guid><description>&lt;h1 id="example-1-contour-filter">Example 1: Contour Filter&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/image_processing/example4/ImageProcessingExample5.mlab">here&lt;/a>&lt;/p></description></item><item><title>Contour Filter</title><link>https://mevislab.github.io/examples/examples/basic_mechanisms/contour_filter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/basic_mechanisms/contour_filter/</guid><description>&lt;h1 id="example-1-contour-filter">Example 1: Contour Filter&lt;/h1>
 &lt;p>This example shows how to create a contour filter.&lt;/p>
 &lt;h1 id="summary">Summary&lt;/h1>
 &lt;p>Images are loaded via &lt;code>ImageLoad&lt;/code> module and visualized unchanged in a &lt;code>View2D&lt;/code> module &lt;em>View2D1&lt;/em>.
@@ -3358,20 +3358,20 @@ Additionally the images are modified by a local macro module &lt;code>Filter&lt;
 &lt;p>In this example, the &lt;code>CSOIsoGenerator&lt;/code> is used to generate contours based on a given ISO value of the image. Contours are generated in the image where the given ISO value is close to the one configured. These contours are stored in the &lt;code>CSOManager&lt;/code> and ghosting is activated in the &lt;code>SoCSOVisualizationSettings&lt;/code>.&lt;/p></description></item><item><title>Creating a magnifier</title><link>https://mevislab.github.io/examples/examples/visualization/example2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/visualization/example2/</guid><description>&lt;h1 id="visualization-example-2-creating-a-magnifier">Visualization Example 2: Creating a magnifier&lt;/h1>
 &lt;p>This example shows how to create a magnifier. Using the module &lt;code>SubImage&lt;/code> a fraction of the original image can be extracted and enlarged.
 &lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/visualization/example2/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/visualization/example2/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/visualization/example2/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/visualization/example2/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/visualization/example2/VisualizationExample2.mlab">here&lt;/a>&lt;/p></description></item><item><title>Creating a simple application</title><link>https://mevislab.github.io/examples/examples/basic_mechanisms/viewer_application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/basic_mechanisms/viewer_application/</guid><description>&lt;h1 id="example-3-creating-a-simple-application">Example 3: Creating a simple application&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/visualization/example2/VisualizationExample2.mlab">here&lt;/a>&lt;/p></description></item><item><title>Creating a simple application</title><link>https://mevislab.github.io/examples/examples/basic_mechanisms/viewer_application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/basic_mechanisms/viewer_application/</guid><description>&lt;h1 id="example-3-creating-a-simple-application">Example 3: Creating a simple application&lt;/h1>
 &lt;p>In this example, you will learn how to create a simple prototype application in MeVisLab including a user interface (UI) with 2D and 3D viewers.&lt;/p>
 &lt;p>&lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/basic_mechanisms/viewer_application/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/basic_mechanisms/viewer_application/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/basic_mechanisms/viewer_application/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/basic_mechanisms/viewer_application/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/basic_mechanisms/viewer_application/viewerexample.mlab">here&lt;/a>&lt;/p></description></item><item><title>Creation of Contours</title><link>https://mevislab.github.io/examples/examples/data_objects/contours/example1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/data_objects/contours/example1/</guid><description>&lt;h1 id="contour-example-1-creation-of-contours">Contour Example 1: Creation of contours&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/basic_mechanisms/viewer_application/viewerexample.mlab">here&lt;/a>&lt;/p></description></item><item><title>Creation of Contours</title><link>https://mevislab.github.io/examples/examples/data_objects/contours/example1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/data_objects/contours/example1/</guid><description>&lt;h1 id="contour-example-1-creation-of-contours">Contour Example 1: Creation of contours&lt;/h1>
 &lt;p>Contours are stored as Contour Segmented Objects (CSOs) in MeVisLab.
 This example highlights ways of creating CSOs using modules of the &lt;code>SoCSOEditor&lt;/code> group.&lt;/p>
 
@@ -3400,72 +3400,72 @@ This example highlights ways of creating CSOs using modules of the &lt;code>SoCS
 &lt;p>The &lt;code>SoCSOEditor&lt;/code> module group contains several modules, some of which are listed right below:&lt;/p></description></item><item><title>Creation of WEMs</title><link>https://mevislab.github.io/examples/examples/data_objects/surface_objects/example1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/data_objects/surface_objects/example1/</guid><description>&lt;h1 id="surface-example-1-creation-of-wems">Surface Example 1: Creation of WEMs&lt;/h1>
 &lt;p>This example shows how to create WEMs out of voxel images and CSOs.
 &lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example1/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example1/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/data_objects/surface_objects/example1/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/data_objects/surface_objects/example1/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example1/SurfaceExample1.mlab">here&lt;/a>&lt;/p></description></item><item><title>Display images converted to Open Inventor scene objects</title><link>https://mevislab.github.io/examples/examples/visualization/example4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/visualization/example4/</guid><description>&lt;h1 id="visualization-example-4-display-images-converted-to-open-inventor-scene-objects">Visualization Example 4: Display images converted to Open Inventor scene objects&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/data_objects/surface_objects/example1/SurfaceExample1.mlab">here&lt;/a>&lt;/p></description></item><item><title>Display images converted to Open Inventor scene objects</title><link>https://mevislab.github.io/examples/examples/visualization/example4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/visualization/example4/</guid><description>&lt;h1 id="visualization-example-4-display-images-converted-to-open-inventor-scene-objects">Visualization Example 4: Display images converted to Open Inventor scene objects&lt;/h1>
 &lt;p>This example shows how to convert images to Open Inventor scene objects using the module &lt;code>SoView2D&lt;/code> and modules based on &lt;code>SoView2D&lt;/code>.
 &lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/visualization/example4/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/visualization/example4/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/visualization/example4/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/visualization/example4/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/visualization/example4/VisualizationExample4.mlab">here&lt;/a>&lt;/p></description></item><item><title>Distance between markers</title><link>https://mevislab.github.io/examples/examples/data_objects/markers/example1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/data_objects/markers/example1/</guid><description>&lt;h1 id="marker-example-1-distance-between-markers">Marker Example 1: Distance between markers&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/visualization/example4/VisualizationExample4.mlab">here&lt;/a>&lt;/p></description></item><item><title>Distance between markers</title><link>https://mevislab.github.io/examples/examples/data_objects/markers/example1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/data_objects/markers/example1/</guid><description>&lt;h1 id="marker-example-1-distance-between-markers">Marker Example 1: Distance between markers&lt;/h1>
 &lt;p>This examples shows how to create markers in a viewer and measure their distance.
 &lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/data_objects/markers/example1/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/data_objects/markers/example1/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/data_objects/markers/example1/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/data_objects/markers/example1/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/data_objects/markers/example1/Marker_Example1.mlab">here&lt;/a>&lt;/p></description></item><item><title>Drawing curves</title><link>https://mevislab.github.io/examples/examples/data_objects/curves/example1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/data_objects/curves/example1/</guid><description>&lt;h1 id="curves-example-drawing-curves">Curves Example: Drawing curves&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/data_objects/markers/example1/Marker_Example1.mlab">here&lt;/a>&lt;/p></description></item><item><title>Drawing curves</title><link>https://mevislab.github.io/examples/examples/data_objects/curves/example1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/data_objects/curves/example1/</guid><description>&lt;h1 id="curves-example-drawing-curves">Curves Example: Drawing curves&lt;/h1>
 &lt;p>This examples shows how to create and render curves.
 &lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/data_objects/curves/example1/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/data_objects/curves/example1/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/data_objects/curves/example1/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/data_objects/curves/example1/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/data_objects/curves/example1/Curves.mlab">here&lt;/a>&lt;/p></description></item><item><title>Image overlays</title><link>https://mevislab.github.io/examples/examples/visualization/example3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/visualization/example3/</guid><description>&lt;h1 id="visualization-example-3-image-overlays">Visualization Example 3: Image overlays&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/data_objects/curves/example1/Curves.mlab">here&lt;/a>&lt;/p></description></item><item><title>Image overlays</title><link>https://mevislab.github.io/examples/examples/visualization/example3/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/visualization/example3/</guid><description>&lt;h1 id="visualization-example-3-image-overlays">Visualization Example 3: Image overlays&lt;/h1>
 &lt;p>This example shows the creation of an overlay. Using the module &lt;code>SoView2DOverlay&lt;/code>, an overlay can be blended over a 2D image.
 &lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/visualization/example3/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/visualization/example3/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/visualization/example3/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/visualization/example3/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/visualization/example3/VisualizationExample3.mlab">here&lt;/a>&lt;/p></description></item><item><title>Interactively moving WEM</title><link>https://mevislab.github.io/examples/examples/data_objects/surface_objects/example4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/data_objects/surface_objects/example4/</guid><description>&lt;h1 id="surface-example-4-interactively-moving-wem">Surface Example 4: Interactively moving WEM&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/visualization/example3/VisualizationExample3.mlab">here&lt;/a>&lt;/p></description></item><item><title>Interactively moving WEM</title><link>https://mevislab.github.io/examples/examples/data_objects/surface_objects/example4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/data_objects/surface_objects/example4/</guid><description>&lt;h1 id="surface-example-4-interactively-moving-wem">Surface Example 4: Interactively moving WEM&lt;/h1>
 &lt;p>This example shows how to use dragger modules, to modify objects in a 3D viewer.
 &lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example4/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example4/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/data_objects/surface_objects/example4/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/data_objects/surface_objects/example4/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example4/SurfaceExample4.zip">here&lt;/a>&lt;/p></description></item><item><title>Masking images</title><link>https://mevislab.github.io/examples/examples/image_processing/example2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/image_processing/example2/</guid><description>&lt;h1 id="image-processing-example-2-masking-images">Image Processing Example 2: Masking images&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/data_objects/surface_objects/example4/SurfaceExample4.zip">here&lt;/a>&lt;/p></description></item><item><title>Masking images</title><link>https://mevislab.github.io/examples/examples/image_processing/example2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/image_processing/example2/</guid><description>&lt;h1 id="image-processing-example-2-masking-images">Image Processing Example 2: Masking images&lt;/h1>
 &lt;p>In this example, we create a simple mask on an image, so that background pixels are not affected by changes of the window/level values.&lt;/p>
 &lt;h2 id="summary">Summary&lt;/h2>
 &lt;p>We are loading images by using the &lt;code>LocalImage&lt;/code> module and show them in a &lt;code>SynchroView2D&lt;/code>. The same image is shown in the right viewer of the &lt;code>SynchroView2D&lt;/code> but with a &lt;code>Threshold&lt;/code> based &lt;code>Mask&lt;/code>.&lt;/p>
 &lt;p>&lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/image_processing/example2/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/image_processing/example2/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/image_processing/example2/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/image_processing/example2/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/image_processing/example2/ImageMask.mlab">here&lt;/a>&lt;/p></description></item><item><title>Mouse interactions in an Open Inventor scene</title><link>https://mevislab.github.io/examples/examples/open_inventor/example2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/open_inventor/example2/</guid><description>&lt;h1 id="open-inventor-example-2-mouse-interactions-in-an-open-inventor-scene">Open Inventor Example 2: Mouse interactions in an Open Inventor scene&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/image_processing/example2/ImageMask.mlab">here&lt;/a>&lt;/p></description></item><item><title>Mouse interactions in an Open Inventor scene</title><link>https://mevislab.github.io/examples/examples/open_inventor/example2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/open_inventor/example2/</guid><description>&lt;h1 id="open-inventor-example-2-mouse-interactions-in-an-open-inventor-scene">Open Inventor Example 2: Mouse interactions in an Open Inventor scene&lt;/h1>
 &lt;p>This example shows how to implement object interactions.&lt;/p>
 &lt;h2 id="summary">Summary&lt;/h2>
 &lt;p>A &lt;code>SoExaminerViewer&lt;/code> is used to render a &lt;code>SoCube&lt;/code> object. The &lt;code>SoMouseGrabber&lt;/code> is used to identify mouse interactions in the viewer and to resize the cube.&lt;/p>
 &lt;p>&lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/open_inventor/example2/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/open_inventor/example2/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/open_inventor/example2/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/open_inventor/example2/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/open_inventor/example2/OpenInventorExample2.mlab">here&lt;/a>&lt;/p></description></item><item><title>Open Inventor objects</title><link>https://mevislab.github.io/examples/examples/open_inventor/example1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/open_inventor/example1/</guid><description>&lt;h1 id="open-inventor-example-1-open-inventor-objects">Open Inventor Example 1: Open Inventor objects&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/open_inventor/example2/OpenInventorExample2.mlab">here&lt;/a>&lt;/p></description></item><item><title>Open Inventor objects</title><link>https://mevislab.github.io/examples/examples/open_inventor/example1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/open_inventor/example1/</guid><description>&lt;h1 id="open-inventor-example-1-open-inventor-objects">Open Inventor Example 1: Open Inventor objects&lt;/h1>
 &lt;p>In this example a simple Open Inventor scene is created. The Open Inventor scene shows three objects of different color and shape.&lt;/p>
 &lt;h2 id="summary">Summary&lt;/h2>
 &lt;p>A &lt;code>SoExaminerViewer&lt;/code> is used to render open inventor scenes in 3D. The &lt;code>SoBackground&lt;/code> module defines the background of the whole scene.&lt;/p>
@@ -3476,12 +3476,12 @@ This example highlights ways of creating CSOs using modules of the &lt;code>SoCS
 &lt;p>In this example we update the &lt;em>*.script&lt;/em> file of the &lt;code>Filter&lt;/code> module to display the kernel selection field of the &lt;code>Convolution&lt;/code> module within its network.&lt;/p></description></item><item><title>Processing and modification of WEMs</title><link>https://mevislab.github.io/examples/examples/data_objects/surface_objects/example2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/data_objects/surface_objects/example2/</guid><description>&lt;h1 id="surface-example-2-processing-and-modification-of-wems">Surface Example 2: Processing and modification of WEMs&lt;/h1>
 &lt;p>This example shows how to process and modify WEMs using the modules &lt;code>WEMModify&lt;/code>, &lt;code>WEMSmooth&lt;/code> and &lt;code>WEMSurfaceDistance&lt;/code>.
 &lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example2/DO7_03.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example2/DO7_03.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/data_objects/surface_objects/example2/DO7_03.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/data_objects/surface_objects/example2/DO7_03.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example2/SurfaceExample2.mlab">here&lt;/a>&lt;/p></description></item><item><title>Python scripting</title><link>https://mevislab.github.io/examples/examples/basic_mechanisms/macro_modules_and_module_interaction/example2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/basic_mechanisms/macro_modules_and_module_interaction/example2/</guid><description>&lt;h1 id="example-2-python-scripting">Example 2: Python scripting&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/data_objects/surface_objects/example2/SurfaceExample2.mlab">here&lt;/a>&lt;/p></description></item><item><title>Python scripting</title><link>https://mevislab.github.io/examples/examples/basic_mechanisms/macro_modules_and_module_interaction/example2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/basic_mechanisms/macro_modules_and_module_interaction/example2/</guid><description>&lt;h1 id="example-2-python-scripting">Example 2: Python scripting&lt;/h1>
 &lt;p>This example shows how to create module interactions via Python scripting.&lt;/p>
 &lt;h2 id="summary">Summary&lt;/h2>
 &lt;p>A new macro module &lt;code>IsoCSOs&lt;/code> is created providing two viewers in its internal network, &lt;code>View2D&lt;/code> and &lt;code>SoExaminerViewer&lt;/code>. Both viewers are included in the panel of the module.&lt;/p>
@@ -3493,41 +3493,41 @@ This example highlights ways of creating CSOs using modules of the &lt;code>SoCS
 &lt;h2 id="summary">Summary&lt;/h2>
 &lt;p>We are loading images by using the &lt;code>LocalImage&lt;/code> module and render them as a 3D scene in a &lt;code>SoExaminerViewer&lt;/code>. We also add a sphere which is then subtracted from the original image.&lt;/p>
 &lt;p>&lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/image_processing/example4/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/image_processing/example4/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/image_processing/example4/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/image_processing/example4/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/image_processing/example4/Subtract3DObjects.mlab">here&lt;/a>&lt;/p></description></item><item><title>Synchronous view of two images</title><link>https://mevislab.github.io/examples/examples/visualization/example1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/visualization/example1/</guid><description>&lt;h1 id="visualization-example-1-synchronous-view-of-two-images">Visualization Example 1: Synchronous view of two images&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/image_processing/example4/Subtract3DObjects.mlab">here&lt;/a>&lt;/p></description></item><item><title>Synchronous view of two images</title><link>https://mevislab.github.io/examples/examples/visualization/example1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/visualization/example1/</guid><description>&lt;h1 id="visualization-example-1-synchronous-view-of-two-images">Visualization Example 1: Synchronous view of two images&lt;/h1>
 &lt;p>This very simple example shows how to load an image and apply a basic &lt;code>Convolution&lt;/code> filter to the image. The image with and without filter is shown in a Viewer and scrolling is synchronized so that the same slice is shown for both images.&lt;/p>
 &lt;p>&lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/visualization/example1/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/visualization/example1/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/visualization/example1/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/visualization/example1/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/visualization/example1/VisualizationExample1.mlab">here&lt;/a>&lt;/p></description></item><item><title>Volume rendering and interactions</title><link>https://mevislab.github.io/examples/examples/visualization/example5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/visualization/example5/</guid><description>&lt;h1 id="visualization-example-5-volume-rendering-and-interactions">Visualization Example 5: Volume rendering and interactions&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/visualization/example1/VisualizationExample1.mlab">here&lt;/a>&lt;/p></description></item><item><title>Volume rendering and interactions</title><link>https://mevislab.github.io/examples/examples/visualization/example5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/visualization/example5/</guid><description>&lt;h1 id="visualization-example-5-volume-rendering-and-interactions">Visualization Example 5: Volume rendering and interactions&lt;/h1>
 &lt;p>This example shows the volume rendering of a scan. The texture of the volume is edited and animations are implemented.
 &lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/visualization/example5/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/visualization/example5/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/visualization/example5/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/visualization/example5/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/visualization/example5/VisualizationExample5.mlab">here&lt;/a>&lt;/p></description></item><item><title>Volume Rendering vs. Path Tracing</title><link>https://mevislab.github.io/examples/examples/visualization/example6/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/visualization/example6/</guid><description>&lt;h1 id="visualization-example-61-volume-rendering-vs-path-tracing">Visualization Example 6.1: Volume Rendering vs. Path Tracing&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/visualization/example5/VisualizationExample5.mlab">here&lt;/a>&lt;/p></description></item><item><title>Volume Rendering vs. Path Tracing</title><link>https://mevislab.github.io/examples/examples/visualization/example6/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/visualization/example6/</guid><description>&lt;h1 id="visualization-example-61-volume-rendering-vs-path-tracing">Visualization Example 6.1: Volume Rendering vs. Path Tracing&lt;/h1>
 &lt;p>This example shows a comparison between Volume Rendering and Path Tracing. The same scene is rendered and the camera interactions in both viewers are synchronized.
 &lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/visualization/example6/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/visualization/example6/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/visualization/example6/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/visualization/example6/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/visualization/example6/pathtracer1.mlab">here&lt;/a>&lt;/p></description></item><item><title>WEM - Primitive Value Lists</title><link>https://mevislab.github.io/examples/examples/data_objects/surface_objects/example5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/data_objects/surface_objects/example5/</guid><description>&lt;h1 id="surface-example-5-wem---primitive-value-lists">Surface Example 5: WEM - Primitive Value Lists&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/visualization/example6/pathtracer1.mlab">here&lt;/a>&lt;/p></description></item><item><title>WEM - Primitive Value Lists</title><link>https://mevislab.github.io/examples/examples/data_objects/surface_objects/example5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/data_objects/surface_objects/example5/</guid><description>&lt;h1 id="surface-example-5-wem---primitive-value-lists">Surface Example 5: WEM - Primitive Value Lists&lt;/h1>
 &lt;p>This example shows how to use Primitive Value Lists (PVLs). With the help of PVLs the distance between the surfaces of WEMs is color coded.
 &lt;p class="page-image">
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example5/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example5/image.png" alt="Screenshot" />&lt;/a>
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/data_objects/surface_objects/example5/image.png" title="">&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/data_objects/surface_objects/example5/image.png" alt="Screenshot" />&lt;/a>
  &lt;figcaption class="figure-caption">&lt;/figcaption>
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/examples/data_objects/surface_objects/example5/SurfaceExample5.mlab">here&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/data_objects/surface_objects/example5/SurfaceExample5.mlab">here&lt;/a>&lt;/p></description></item></channel></rss>
