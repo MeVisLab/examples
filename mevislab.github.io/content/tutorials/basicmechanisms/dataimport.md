@@ -26,6 +26,8 @@ These chapters explain the data formats and modules related to this example:
 * [Segmentations / 2D Contours](/tutorials/basicmechanisms/dataimport#2DContours)
 * [3D Data / Meshes](/tutorials/basicmechanisms/dataimport#3DMeshes)
 
+Example files and images can be found in your MeVisLab installation directory under Packages > MeVisLab > Resources > DemoData
+
 {{<alert class="info" caption="Extra Infos">}}
 Detailed explanations on loading images onto your MeVisLab workspace can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch03.html" "here" >}}
 {{</alert>}}
