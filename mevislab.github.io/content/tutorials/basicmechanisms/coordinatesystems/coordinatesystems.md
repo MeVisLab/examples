@@ -38,7 +38,7 @@ You can show the world coordinates in MeVisLab by using the following example ne
 
 ![World Coordinates in MeVisLab](/images/tutorials/basicmechanics/WorldCoordinates.png "World Coordinates in MeVisLab")
 
-The `ConstantImage` module generates an artificial image with a certain size, data type and a constant fill value. The origin of the image is at the origin of the world coordinate system, therefore the `SoCoordinateSystem` module shows the world coordinate system.
+The `ConstantImage` module generates an artificial image with a certain size, data type and a constant fill value. The origin of the image is at the origin of the world coordinate system, therefore the `SoCoordinateSystem` module shows the world coordinate system. In order to have a larger z-axis, open the panel of the `ConstantImage` module and set *IMage Size* for *Z* to *256*.
 
 ![ConstantImage Info](/images/tutorials/basicmechanics/ConstantImageInfo.png "ConstantImage Info")
 
