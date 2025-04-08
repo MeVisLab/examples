@@ -49,7 +49,7 @@
  &lt;td>Start test center&lt;/td>
  &lt;/tr>
  &lt;td>Ctrl+K	&lt;/td>
- &lt;td>Restart MeVisLab &lt;/td>
+ &lt;td>Restart MeVisLab with current network(s)&lt;/td>
  &lt;/tr>
  &lt;/tr>
  &lt;td>Ctrl+R&lt;/td>
