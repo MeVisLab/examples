@@ -65,7 +65,7 @@ This is a collection of useful keyboard shortcuts in MeVisLab, hopefully it grow
       <td>Start test center</td>
     </tr>
       <td>Ctrl+K	</td>
-      <td>Restart MeVisLab </td>
+      <td>Restart MeVisLab with current network(s)</td>
     </tr>
     </tr>
       <td>Ctrl+R</td>
