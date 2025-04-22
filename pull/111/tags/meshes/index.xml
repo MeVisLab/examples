@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Meshes on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/111/tags/meshes/</link><description>Recent content in Meshes on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 21 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/111/tags/meshes/index.xml" rel="self" type="application/rss+xml"/><item><title>Surface Objects (WEM)</title><link>https://mevislab.github.io/examples/pull/111/tutorials/dataobjects/surfaceobjects/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/111/tutorials/dataobjects/surfaceobjects/</guid><description>&lt;h1 id="WEMs">Surface Objects (WEMs)&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In MeVisLab it is possible to create, visualize, process and manipulate surface objects, also known as polygon meshes. Here, we call surface objects &lt;em>Winged Edge Mesh&lt;/em>, in short WEM. In this chapter you will get an introduction into WEMs. In addition, you will find examples on how to work with WEMs. For more information on WEMs take a look at the 
+&lt;a href="https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/ToolBoxReference/WEMDataStructure.html" target="_blank">MeVislab Toolbox Reference&lt;/a>
+
+. If you like to know which WEM formats can be imported into MeVisLab, take a look at the assimp documentation &lt;a href="https://github.com/assimp/assimp" target="_blank" rel="noopener">here&lt;/a>.&lt;/p></description></item><item><title>Surface Example 1: Creation of WEMs</title><link>https://mevislab.github.io/examples/pull/111/tutorials/dataobjects/surfaces/surfaceexample1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/111/tutorials/dataobjects/surfaces/surfaceexample1/</guid><description>&lt;h1 id="surface-example-1-create-winged-edge-mesh-out-of-voxel-images-and-csos">Surface Example 1: Create Winged Edge Mesh out of voxel images and CSOs&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/111/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=-KnZ5a27T0c" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/-KnZ5a27T0c/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=-KnZ5a27T0c" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example you will learn how to create a Winged Edge Mesh (WEM). There are several approaches on creating WEMs, a few of them are shown in this example. Instead of creating WEMs, they can also be imported, see chapter &lt;a href="tutorials/dataobjects/surfaceobjects">Surface Objects (WEM)&lt;/a>.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="from-image-to-surface-generating-wems-out-of-voxel-images">From image to surface: Generating WEMs out of voxel images&lt;/h3>
+&lt;p>At first, we will create a WEM out of a voxel image using the module &lt;code>WEMIsoSurface&lt;/code>. Add and connect the shown modules. Load the image &lt;em>$(DemoDataPath)/Bone.tiff&lt;/em> and set the &lt;em>Iso Min. Value&lt;/em> in the panel of &lt;code>WEMIsoSurface&lt;/code> to 1200. Tick the box &lt;em>Use image max. value&lt;/em>. The module &lt;code>WEMIsoSurface&lt;/code> creates surface objects out of all voxels with an Iso value equal or above 1200 (and smaller than the image max value). The module &lt;code>SoWEMRenderer&lt;/code> can now be used to generate an Open Inventor scene, which can be displayed by the module &lt;code>SoExaminerViewer&lt;/code>.&lt;/p></description></item><item><title>Surface Example 2: Processing and Modification of WEM</title><link>https://mevislab.github.io/examples/pull/111/tutorials/dataobjects/surfaces/surfaceexample2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/111/tutorials/dataobjects/surfaces/surfaceexample2/</guid><description>&lt;h1 id="surface-example-2-processing-and-modification-of-wem">Surface Example 2: Processing and Modification of WEM&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/111/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=lVbldzanvfE" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/lVbldzanvfE/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=lVbldzanvfE" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example, you will learn how to modify and process WEMs.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;h4 id="modification-of-wems">Modification of WEMs&lt;/h4>
+&lt;p>Use the module &lt;code>WEMLoad&lt;/code> to load the file &lt;em>venus.off&lt;/em>. Then add and connect the shown modules. We like to display the WEM &lt;em>venus&lt;/em> two times, one time this WEM is modified. You can use the module &lt;code>WEMModify&lt;/code> to apply modifications. In its panel, change the scale and the size of the WEM. Now you see two times the &lt;code>venus&lt;/code> next to each other.&lt;/p></description></item><item><title>Surface Example 3: Interactions with WEM</title><link>https://mevislab.github.io/examples/pull/111/tutorials/dataobjects/surfaces/surfaceexample3/</link><pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/111/tutorials/dataobjects/surfaces/surfaceexample3/</guid><description>&lt;h1 id="surface-example-3-interactions-with-wem">Surface Example 3: Interactions with WEM&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/111/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=YDOEqCOmUFw" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/YDOEqCOmUFw/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=YDOEqCOmUFw" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In these examples, we are showing 2 different possibilities to interact with a WEM:&lt;/p>
+&lt;ul>
+&lt;li>Scale, rotate and move a WEM in a scene&lt;/li>
+&lt;li>Modify a WEM in a scene&lt;/li>
+&lt;/ul>
+&lt;h3 id="scale-rotate-and-move-a-wem-in-a-scene">Scale, rotate and move a WEM in a scene&lt;/h3>
+&lt;p>We are using a &lt;code>SoTransformerDragger&lt;/code> module to apply transformations on a 3D WEM object via mouse interactions.&lt;/p></description></item><item><title>Surface Example 4: Interactively moving WEM</title><link>https://mevislab.github.io/examples/pull/111/tutorials/dataobjects/surfaces/surfaceexample4/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/111/tutorials/dataobjects/surfaces/surfaceexample4/</guid><description>&lt;h1 id="surface-example-4-interactively-moving-wem">Surface Example 4: Interactively moving WEM&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/111/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=WKiCddNGKrw" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/WKiCddNGKrw/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=WKiCddNGKrw" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example, we like to interactively move WEMs using &lt;code>SoDragger&lt;/code> modules insight a viewer.&lt;/p>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;h3 id="interactively-translating-objects-in-3d-using-sodragger-modules">Interactively translating objects in 3D using SoDragger modules&lt;/h3>
+&lt;p>Add and connect the following modules as shown. In the panel of the module &lt;code>WEMInitialize&lt;/code> select the &lt;em>Model&lt;/em> &lt;em>Octasphere&lt;/em>. After that, open the viewer &lt;code>SoExaminerViewer&lt;/code> and make sure to select the &lt;em>Interaction Mode&lt;/em>. Now, you are able to click on the presented &lt;em>Octaspehere&lt;/em> and move it alongside one axis. The following modules are involved in the interactions:&lt;/p></description></item><item><title>Surface Example 5: WEM - Primitive Value Lists</title><link>https://mevislab.github.io/examples/pull/111/tutorials/dataobjects/surfaces/surfaceexample5/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/111/tutorials/dataobjects/surfaces/surfaceexample5/</guid><description>&lt;h1 id="surface-example-5-wem---primitive-value-lists">Surface Example 5: WEM - Primitive Value Lists&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/111/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=Rap1RY6l5Cc" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/Rap1RY6l5Cc/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=Rap1RY6l5Cc" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>WEMs do not only contain the coordinates of nodes and surfaces, they can also contain additional information. These information are stored in so called &lt;em>Primitive Value Lists&lt;/em> (PVLs). Every node, every surface and every edge can contains such a list. In these lists, you can for example store the color of the node or specific patient information. These information can be used for visualization or for further statistical analysis.&lt;/p></description></item></channel></rss>

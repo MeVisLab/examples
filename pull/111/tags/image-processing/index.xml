@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Image Processing on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/111/tags/image-processing/</link><description>Recent content in Image Processing on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:56:33 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/111/tags/image-processing/index.xml" rel="self" type="application/rss+xml"/><item><title>Chapter IV: Image Processing</title><link>https://mevislab.github.io/examples/pull/111/tutorials/image_processing/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/111/tutorials/image_processing/</guid><description>&lt;h1 id="TutorialImageProcessing">Image Processing in MeVisLab&lt;/h1>
+&lt;p>Digital image processing is the use of a digital computer to process digital images through an algorithm (see &lt;a href="https://en.wikipedia.org/wiki/Digital_image_processing" target="_blank" rel="noopener">Wikipedia&lt;/a>).&lt;/p>
+&lt;p>MeVisLab provides multiple modules for image processing tasks, such as:&lt;/p>
+&lt;ul>
+&lt;li>Filters&lt;/li>
+&lt;li>Masks&lt;/li>
+&lt;li>Transformations&lt;/li>
+&lt;li>Arithmetics&lt;/li>
+&lt;li>Statistics&lt;/li>
+&lt;/ul>
+&lt;p>For details about Image Processing in MeVisLab, see the 
+&lt;a href="https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/GettingStarted/ch06.html#FOImageProcessing" target="_blank">MeVisLab Documentation&lt;/a>
+
+&lt;/p>
+&lt;p>In this chapter, you will find some examples for different types of image processing in MeVisLab.&lt;/p></description></item><item><title>Example 1: Arithmetic operations on two images</title><link>https://mevislab.github.io/examples/pull/111/tutorials/image_processing/image_processing1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/111/tutorials/image_processing/image_processing1/</guid><description>&lt;h1 id="example-1-arithmetic-operations-on-two-images">Example 1: Arithmetic operations on two images&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/111/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=ToTQ3XRPmlk" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/ToTQ3XRPmlk/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=ToTQ3XRPmlk" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>We are using the &lt;code>Arithmetic2&lt;/code> module to apply basic scalar functions on two images. The module provides 2 inputs for images and 1 output image for the result.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>Add two &lt;code>LocalImage&lt;/code> modules to your workspace for the input images. Select &lt;em>$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm&lt;/em> and &lt;em>$(DemoDataPath)/BrainMultiModal/ProbandT2.dcm&lt;/em> from MeVisLab demo data and add a &lt;code>SynchroView2D&lt;/code> to your network.&lt;/p></description></item><item><title>Example 2: Masking images</title><link>https://mevislab.github.io/examples/pull/111/tutorials/image_processing/image_processing2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/111/tutorials/image_processing/image_processing2/</guid><description>&lt;h1 id="example-2-masking-images">Example 2: Masking images&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/111/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=k003ytr8ZQA" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/k003ytr8ZQA/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=k003ytr8ZQA" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>The background of medical images is black for most cases. In case an image is inverted or window/level values are adapted, these black pixels outside clinical relevant pixels might become very bright or even white.&lt;/p>
+&lt;p>Being in a dark room using a large screen, the user might be blended by these large white regions.&lt;/p>
+&lt;p>Image masking is a very good way to select a defined region where image processing shall be applied. A mask allows to define a region (the masked region) to allow image modifications whereas pixels outside the mask remain unchanged.&lt;/p></description></item><item><title>Example 3: Region Growing</title><link>https://mevislab.github.io/examples/pull/111/tutorials/image_processing/image_processing3/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/111/tutorials/image_processing/image_processing3/</guid><description>&lt;h1 id="example-3-region-growing">Example 3: Region Growing&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/111/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=nQV2o_3BcJI" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/nQV2o_3BcJI/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=nQV2o_3BcJI" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>A very simple approach to segment parts of an image is the region growing method. A general explanation can be found &lt;a href="%22https://en.wikipedia.org/wiki/Region_growing%22">here&lt;/a>.&lt;/p>
+&lt;p>In this example, you will segment the brain of an image and show the segmentation results as an overlay on the original image.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>Add a &lt;code>LocalImage&lt;/code> module to your workspace and select load &lt;em>$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm&lt;/em>. Add a &lt;code>View2D&lt;/code> module and connect both as seen below.&lt;/p></description></item><item><title>Example 4: Subtract 3D objects</title><link>https://mevislab.github.io/examples/pull/111/tutorials/image_processing/image_processing4/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/111/tutorials/image_processing/image_processing4/</guid><description>&lt;h1 id="example-4-subtract-3d-objects">Example 4: Subtract 3D objects&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/111/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=VdvErVvoq2k" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/VdvErVvoq2k/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=VdvErVvoq2k" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example, we load an image and render it as &lt;code>WEMIsoSurface&lt;/code>. Then we create a 3-dimensional &lt;code>SoSphere&lt;/code> and subtract the sphere from the initial WEM.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>Add a &lt;code>LocalImage&lt;/code> module to your workspace and select load &lt;em>$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm&lt;/em>. Add a &lt;code>WEMIsoSurface&lt;/code>, a &lt;code>SoWEMRenderer&lt;/code>, a &lt;code>SoBackground&lt;/code> and a &lt;code>SoExaminerViewer&lt;/code> module and connect them as seen below. Make sure to configure the &lt;code>WEMIsoSurface&lt;/code> to use a &lt;em>Iso Min. Value&lt;/em> of 420 and a &lt;em>Voxel Sampling&lt;/em> 1.&lt;/p></description></item><item><title>Example 5: Clip Planes</title><link>https://mevislab.github.io/examples/pull/111/tutorials/image_processing/image_processing5/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/111/tutorials/image_processing/image_processing5/</guid><description>&lt;h1 id="example-5-clip-planes">Example 5: Clip Planes&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/111/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=Lmt7helBl0E" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/Lmt7helBl0E/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=Lmt7helBl0E" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example, we are using the &lt;code>SoGVRDrawOnPlane&lt;/code> module to define the currently visible slice from a 2D view as a clip plane in 3D.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>First we need to develop the network to scroll through the slices. Add a &lt;code>LocalImage&lt;/code> module to your workspace and select the file &lt;em>ProbandT1&lt;/em> from MeVisLab demo data.&lt;/p></description></item></channel></rss>
