@@ -26,11 +26,11 @@ We will demonstrate how to:
 ## Prepare your network
 
 ### Displaying three images in one panel
-Add an `ImageLoad` module to your workspace and select 3D image like *./MeVisLab/Resources/DemoData/MRI_Head.tif* from MeVisLab demo data directory. Connect an `OrthoReformat3` module and add three `View2D` modules.
+Add an `ImageLoad` module to your workspace and select a 3D image like *./MeVisLab/Resources/DemoData/MRI_Head.tif* from the MeVisLab demo data directory. Connect an `OrthoReformat3` module and add three `View2D` modules.
 
 ![Image Display Setup](/images/tutorials/basicmechanics/E6_1.png "Image Display Setup")
 
-Opening the three `View2D` module panels now show the data in 3 orthogonal views. The module `OrthoReformat3` transforms the input image (by rotating and/or flipping) into the three main views commonly used.
+Opening the three `View2D` module panels now shows the data in 3 orthogonal views. The module `OrthoReformat3` transforms the input image (by rotating and/or flipping) into the three main views commonly used.
 
 ![3 Views in 3 Viewers](/images/tutorials/basicmechanics/E6_2.png "3 Views in 3 Viewers")
 
@@ -42,9 +42,9 @@ Add three `SoViewportRegion` modules and connect each one to a `View2D` module. 
 
 Add a `SoRenderArea` for your final result to the network and connect all three `SoViewportRegion` modules to it.
 
-The result is, that all of your viewers are initially above each other in the bottom right corner.
+The result is that all of your viewers are initially displayed on top of each other in the bottom right corner.
 
-![All three viewers over each other](/images/tutorials/basicmechanics/E6_4.png "All three viewers over each other")
+![All three viewers on top of each other](/images/tutorials/basicmechanics/E6_4.png "All three viewers on top of each other")
 
 This happens, because all three `SoViewportRegion` modules have the same settings for position and height or width.
 
@@ -52,10 +52,11 @@ This happens, because all three `SoViewportRegion` modules have the same setting
 
 The `SoViewportRegion` module allows to define the X- and Y-position and the width and height of the image in the `SoRenderArea` module.
 
-Values can be in pixels or as fractions from 0 to 1.
-* 0 means the start of the render area
+Values can be in pixels or as fractions from 0 to 1:
+
+* 0 means the start of the render area (depending on the reference)
 * 0.5 means the center of the render area
-* 1 means the end of the render area
+* 1 means the end of the render area  (depending on the reference)
 
 We want to create a layout with the following setting:
 * Axial view on the left side
@@ -114,7 +115,7 @@ In the next example, the `SoRenderArea` will display four views at the same time
 
 ![3D View Layout](/images/tutorials/basicmechanics/E6_11.png "3D View Layout")
 
-These views will be arranged in a single panel, split into two sides, with each side showing two images. To add the 3D view, insert a `View3D` module and connect it to the `ImageLoad` module. Then connect the `View3D` to `SoCameraInteraction`, connect that to another `SoViewportRegion3`, and finally to `SoRenderArea`.
+These views will be arranged in a single panel, split into two sides, with each side showing two images. To add the 3D view, insert a `View3D` module and connect it to the `ImageLoad` module. Then connect the `View3D` to `SoCameraInteraction`, connect that to another `SoViewportRegion`, and finally to `SoRenderArea`.
 
 ![3D View Network](/images/tutorials/basicmechanics/E6_10.png "3D View Network")
 
@@ -153,7 +154,7 @@ You will see that the orientation cube of the 3D viewer appears in the bottom ri
 ![Final Network](/images/tutorials/basicmechanics/E6_13.png "Final Network")
 
 ## Exercise
-You can play around the different `SoViewportRegion` modules to create your own layouts by setting the values a little different.
+You can play around with the different `SoViewportRegion` modules to create your own layouts by setting the values a little different.
 
 ![Exercise](/images/tutorials/basicmechanics/E6_14.png "Exercise")
 
