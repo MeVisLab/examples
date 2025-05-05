@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GVR on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/112/tags/gvr/</link><description>Recent content in GVR on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:56:33 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/112/tags/gvr/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 5: Volume rendering and interactions</title><link>https://mevislab.github.io/examples/pull/112/tutorials/visualization/visualizationexample5/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/112/tutorials/visualization/visualizationexample5/</guid><description>&lt;h1 id="TutorialVisualizationExample6">Example 5: Volume rendering and interactions&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/112/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=QViPqXs2LHc" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/QViPqXs2LHc/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=QViPqXs2LHc" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example we like to convert a scan of a head into a 3D scene-object. The scene-object allows to add some textures, interactions and animations.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>Implement the following network and open the image &lt;em>$(DemoDataPath)/BrainMultiModal/ProbandT1.tif&lt;/em>.&lt;/p>
+&lt;p>&lt;p class="page-image">
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/pull/112/images/tutorials/visualization/V6_01.png" title="SoGVRVolumeRenderer">&lt;img id="SoGVRVolumeRenderer" class="img-fluid rounded" src="https://mevislab.github.io/examples/pull/112/images/tutorials/visualization/V6_01.png" alt="SoGVRVolumeRenderer" title="SoGVRVolumeRenderer" />&lt;/a>
+ &lt;figcaption class="figure-caption">SoGVRVolumeRenderer&lt;/figcaption>
+&lt;/p>
+&lt;/p>
+&lt;p>The module &lt;code>SoGVRVolumeRenderer&lt;/code> allows volume rendering of 3D and 4D images.&lt;/p></description></item></channel></rss>
