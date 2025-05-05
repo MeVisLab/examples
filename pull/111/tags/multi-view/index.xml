@@ -9,4 +9,4 @@
 &lt;/ul>
 &lt;h2 id="prepare-your-network">Prepare your network&lt;/h2>
 &lt;h3 id="displaying-three-images-in-one-panel">Displaying three images in one panel&lt;/h3>
-&lt;p>Add an &lt;code>ImageLoad&lt;/code> module to your workspace and select 3D image like &lt;em>./MeVisLab/Resources/DemoData/MRI_Head.tif&lt;/em> from MeVisLab demo data directory. Connect an &lt;code>OrthoReformat3&lt;/code> module and add three &lt;code>View2D&lt;/code> modules.&lt;/p></description></item></channel></rss>
+&lt;p>Add an &lt;code>ImageLoad&lt;/code> module to your workspace and select a 3D image like &lt;em>./MeVisLab/Resources/DemoData/MRI_Head.tif&lt;/em> from the MeVisLab demo data directory. Connect an &lt;code>OrthoReformat3&lt;/code> module and add three &lt;code>View2D&lt;/code> modules.&lt;/p></description></item></channel></rss>
