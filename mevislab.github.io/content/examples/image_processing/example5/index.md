@@ -13,4 +13,4 @@ We are loading images by using the `LocalImage` module and render them as a 2-di
 ![Screenshot](/examples/image_processing/example5/image.png)
 
 # Download
-You can download the example network [here](/examples/image_processing/example4/ImageProcessingExample5.mlab)
+You can download the example network [here](/examples/image_processing/example4/.mlab)
