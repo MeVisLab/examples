@@ -545,17 +545,15 @@ In this chapter in particular, we will focus on simple image interaction with tw
 &lt;h2 id="steps-to-do">Steps to do&lt;/h2>
 &lt;h3 id="develop-your-network">Develop your network&lt;/h3>
 &lt;p>First we need to develop the network to scroll through the slices. Add a &lt;code>LocalImage&lt;/code> module to your workspace and select the file &lt;em>ProbandT1&lt;/em> from MeVisLab demo data.&lt;/p></description></item><item><title>Example 6: DICOM RT Visualization in MeVisLab – RTSTRUCT and RTDOSE Workflow</title><link>https://mevislab.github.io/examples/pull/112/tutorials/image_processing/image_processing6/</link><pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/112/tutorials/image_processing/image_processing6/</guid><description>&lt;h1 id="example-6-dicom-rt-visualization-in-mevislab--rtstruct-and-rtdose-workflow">Example 6: DICOM RT Visualization in MeVisLab – RTSTRUCT and RTDOSE Workflow&lt;/h1>
-&lt;h2 id="abstract">Abstract&lt;/h2>
+&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>This tutorial explains how to load and visualize DICOM RT data in MeVisLab step by step. You will learn how to:&lt;/p>
 &lt;ul>
 &lt;li>Load CT and RTSTRUCT data.&lt;/li>
 &lt;li>Visualize RTSTRUCTs as colored CSOs.&lt;/li>
-&lt;li>Show labels next to each RTSTRUCT contour.
-We use the &lt;code>ExtractRTStruct&lt;/code> module and explain each step in a simple way with screenshots.&lt;/li>
+&lt;li>Show labels next to each RTSTRUCT contour.&lt;/li>
 &lt;/ul>
-&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>In this example, we are using the &lt;code>SoGVRDrawOnPlane&lt;/code> module to define the currently visible slice from a 2D view as a clip plane in 3D.
-DICOM RT files are essential in radiotherapy planning. They include:&lt;/p></description></item><item><title>Chapter V: Data Objects</title><link>https://mevislab.github.io/examples/pull/112/tutorials/dataobjects/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/112/tutorials/dataobjects/</guid><description>&lt;h2 id="TutorialDataObjects">Data Objects in MeVisLab&lt;/h2>
+&lt;p>We use the &lt;code>ExtractRTStruct&lt;/code> module and explain each step in a simple way, with supporting screenshots.&lt;/p>
+&lt;p>&lt;code>DICOM RT (Radiotherapy)&lt;/code> files are essential in radiotherapy treatment planning. They include:&lt;/p></description></item><item><title>Chapter V: Data Objects</title><link>https://mevislab.github.io/examples/pull/112/tutorials/dataobjects/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/112/tutorials/dataobjects/</guid><description>&lt;h2 id="TutorialDataObjects">Data Objects in MeVisLab&lt;/h2>
 &lt;p>MeVisLab provides pre-defined data objects, e. g.&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://mevislab.github.io/examples/pull/112/tutorials/dataobjects/contourobjects">Contour Segmented Objects (CSOs)&lt;/a> &lt;br>

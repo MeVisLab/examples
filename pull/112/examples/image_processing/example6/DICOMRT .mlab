@@ -5,20 +5,14 @@ network  {
 }
 module DicomImport {
   internal  {
-    frame = "273 693 144 56"
+    frame = "545 613 144 56"
     moduleGroupName = ""
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "2051 281 722 632"
-        relativePosition = "-0.2432 -0.2543"
+        geometry = "2855 261 722 632"
+        relativePosition = "0.1750 -0.2726"
         sizeHint = "722 632"
-        wasOpen = no
-      }
-      window Configuration {
-        geometry = "2619 468 520 324"
-        relativePosition = "-0.0005 -0.0929"
-        sizeHint = "520 324"
         wasOpen = no
       }
     }
@@ -29,7 +23,7 @@ module DicomImport {
     files = ""
     inputMode = Directory
     enableRecursiveSearch = TRUE
-    selectedItem = 3
+    selectedItem = 8
     logLevel = Warning
     useSortPartConfigFile = FALSE
     sortPartConfigFile = ""
@@ -110,14 +104,108 @@ module DicomImport {
     splitTimePoints = FALSE
   }
 }
-module SoView2DCSOExtensibleEditor {
+module View2D {
   internal  {
-    frame = "613 29 200 56"
+    frame = "589 -11 120 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "2678 442 392 375"
-        relativePosition = "-0.0031 -0.1155"
+        geometry = "2709 255 400 399"
+        relativePosition = "0.0151 -0.2778"
+        sizeHint = "400 400"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = View2D
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    view2DExtensionsOn = TRUE
+    startSlice = 89
+    numSlices = 1
+    numXSlices = 1
+    sliceStep = 1
+    slab = 1
+    blendMode = BLEND_REPLACE
+    timePoint = 0
+    maxTimePoint = 0
+    filterMode = FILTER_LINEAR
+    standardKeys = TRUE
+    cineMode = CINE_ZT
+    cineDirection = CINE_FORWARD
+    cineRepeat = CINE_ONCE
+    cineSpeed = 0.1
+    cineAlwaysReset = TRUE
+    snapToCenter = TRUE
+    zoomMode = VIEW2D_AUTO_ZOOM
+    unzoomOnImageChange = FALSE
+    sliceZoom = 1
+    sliceZoomSynced = 1
+    baseColor = "1 1 1"
+    margin = "2 2"
+    sliceOrigin = "0 0"
+    useShaders = TRUE
+    useManagedInteraction = FALSE
+    lutCenter = 397284480
+    lutWidth = 794568768
+    annotationOn = TRUE
+    annotationMode = ANNO_MODE_AUTO
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
+    annotationFontSize = ANNO_SIZE_AUTO
+    annoCoords = Voxel
+    annoCTValue = AsIs
+    borderOn = FALSE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    valueHighPrecision = TRUE
+    maxPrecision = 4
+    enableSlicing = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    useRelativeLUTIfNoInputImage = TRUE
+  }
+}
+module DicomImportExtraOutput {
+  internal  {
+    frame = "729 389 208 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "2539 413 399 35"
+        relativePosition = "-0.0734 -0.1406"
+        sizeHint = "397 35"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = DicomImportExtraOutput
+    selectedItem = 6
+  }
+}
+module ExtractRTStruct {
+  internal  {
+    frame = "757 229 152 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = ExtractRTStruct
+    maxPointDistance = 0
+    levelPlanarCSOs = TRUE
+    updateMode = AUTO_UPDATE
+  }
+}
+module SoView2DCSOExtensibleEditor {
+  internal  {
+    frame = "765 109 200 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "2683 443 392 375"
+        relativePosition = "-0.0005 -0.1146"
         sizeHint = "392 375"
         wasOpen = no
       }
@@ -161,210 +249,77 @@ module SoView2DCSOExtensibleEditor {
     updateImageStatisticsOnFinishInteraction = FALSE
   }
 }
-module View2D {
+module CSOLabelRenderer {
   internal  {
-    frame = "333 -99 120 56"
+    frame = "953 229 144 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "759 208 773 631"
-        relativePosition = "0.0969 -0.3186"
-        sizeHint = "400 400"
+        geometry = "2525 218 453 584"
+        relativePosition = "-0.0667 -0.3099"
+        sizeHint = "453 584"
         wasOpen = no
       }
     }
   }
   fields  {
-    instanceName = View2D
-    inventorInputOn = TRUE
-    inventorOutputOn = FALSE
-    view2DExtensionsOn = TRUE
-    startSlice = 201
-    numSlices = 1
-    numXSlices = 1
-    sliceStep = 1
-    slab = 1
-    blendMode = BLEND_REPLACE
-    timePoint = 0
-    maxTimePoint = 0
-    filterMode = FILTER_LINEAR
-    standardKeys = TRUE
-    cineMode = CINE_ZT
-    cineDirection = CINE_FORWARD
-    cineRepeat = CINE_ONCE
-    cineSpeed = 0.1
-    cineAlwaysReset = TRUE
-    snapToCenter = TRUE
-    zoomMode = VIEW2D_AUTO_ZOOM
-    unzoomOnImageChange = FALSE
-    sliceZoom = 1
-    sliceZoomSynced = 1
-    baseColor = "1 1 1"
-    margin = "2 2"
-    sliceOrigin = "0 0"
-    useShaders = TRUE
-    useManagedInteraction = FALSE
-    lutCenter = 1239.71606445313
-    lutWidth = 1884.04479980469
-    annotationOn = TRUE
-    annotationMode = ANNO_MODE_AUTO
-    annotationSizeMode = ANNO_SHOW_DETAILED
-    annotationCol = "0.899999976158142 0.899999976158142 0.899999976158142"
-    annotationFontSize = ANNO_SIZE_AUTO
-    annoCoords = Voxel
-    annoCTValue = AsIs
-    borderOn = FALSE
-    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
-    valueHighPrecision = TRUE
-    maxPrecision = 4
-    enableSlicing = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
-    useRelativeLUTIfNoInputImage = TRUE
-  }
-}
-module SoCSOVisualizationSettings {
-  internal  {
-    frame = "773 469 184 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "1301 327 379 767"
-        relativePosition = "0.2766 -0.2153"
-        sizeHint = "379 767"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = SoCSOVisualizationSettings
-    autoApply = TRUE
-    shouldUseAntiAliasing = TRUE
-    globalAlphaFactor = 1
-    showCSOsOnAllTimePoints = FALSE
-    overwriteCurrentTimePoint = FALSE
-    newCurrentTimePoint = 0
-    orientationFilterMode = ORIENTATION_MODE_ALL
-    parallelThicknessMode = PARALLEL_THICKNESS_MODE_RELATIVE_TO_SLICE
-    showParallelThickness = 0.2
-    ghostingDepthInVoxel = 0
-    voxelSlabAugment = 0
-    shouldRenderShadow = FALSE
-    shadowColor = "0 0 0"
-    shadowAlpha = 1
-    shadowLineWidth = 1
-    shouldRenderSeedPoints = TRUE
-    shouldRenderPathPoints = TRUE
-    shouldOverwriteSeedPointsSettings = FALSE
-    shouldUsePathPointColorForSeedPoints = FALSE
-    shouldRenderSeedPointsOnlyForSelectedCSOs = FALSE
-    shouldUsePathPointColorForSeedPoints = FALSE
-    shouldUseStylePaletteLookUpForSeedPoints = FALSE
-    stylePaletteLookUpSeedPoints = CSOId
-    useSeedPointOnSliceStyle = TRUE
-    useSeedPointOnSliceSize = FALSE
-    useSeedPointOnSliceColor = FALSE
-    useSeedPointOnSliceAlpha = FALSE
-    useSeedPointOnSliceLineWidth = FALSE
-    seedPointOnSliceStyle = SEED_POINT_STYLE_RECTANGLE
-    seedPointOnSliceSize = 3
-    seedPointOnSliceColor = "1 1 1"
-    seedPointOnSliceAlpha = 1
-    seedPointOnSliceLineWidth = 1
-    useSeedPointBelowSliceStyle = TRUE
-    useSeedPointBelowSliceSize = FALSE
-    useSeedPointBelowSliceColor = FALSE
-    useSeedPointBelowSliceAlpha = FALSE
-    useSeedPointBelowSliceLineWidth = FALSE
-    seedPointBelowSliceStyle = SEED_POINT_STYLE_NONE
-    seedPointBelowSliceSize = 3
-    seedPointBelowSliceColor = "1 1 1"
-    seedPointBelowSliceAlpha = 1
-    seedPointBelowSliceLineWidth = 1
-    useSeedPointAboveSliceStyle = TRUE
-    useSeedPointAboveSliceSize = FALSE
-    useSeedPointAboveSliceColor = FALSE
-    useSeedPointAboveSliceAlpha = FALSE
-    useSeedPointAboveSliceLineWidth = FALSE
-    seedPointAboveSliceStyle = SEED_POINT_STYLE_NONE
-    seedPointAboveSliceSize = 3
-    seedPointAboveSliceColor = "1 1 1"
-    seedPointAboveSliceAlpha = 1
-    seedPointAboveSliceLineWidth = 1
-    shouldOverwritePathPointsSettings = FALSE
-    shouldUseStylePaletteLookUpForPathPoints = FALSE
-    stylePaletteLookUpPathPoints = CSOId
-    usePathPointsOnSliceLineStyle = TRUE
-    usePathPointsOnSliceLineWidth = FALSE
-    usePathPointsOnSliceColor = FALSE
-    usePathPointsOnSliceAlpha = TRUE
-    pathPointsOnSliceLineStyle = PATH_POINTS_STYLE_SOLID
-    pathPointsOnSliceLineWidth = 1
-    pathPointsOnSliceColor = "1 1 1"
-    pathPointsOnSliceAlpha = 1
-    usePathPointsBelowSliceLineStyle = TRUE
-    usePathPointsBelowSliceLineWidth = FALSE
-    usePathPointsBelowSliceColor = FALSE
-    usePathPointsBelowSliceAlpha = TRUE
-    pathPointsBelowSliceLineStyle = PATH_POINTS_STYLE_DASHED
-    pathPointsBelowSliceLineWidth = 1
-    pathPointsBelowSliceColor = "1 1 1"
-    pathPointsBelowSliceAlpha = 0.5
-    usePathPointsAboveSliceLineStyle = TRUE
-    usePathPointsAboveSliceLineWidth = FALSE
-    usePathPointsAboveSliceColor = FALSE
-    usePathPointsAboveSliceAlpha = TRUE
-    pathPointsAboveSliceLineStyle = PATH_POINTS_STYLE_DASHED
-    pathPointsAboveSliceLineWidth = 1
-    pathPointsAboveSliceColor = "1 1 1"
-    pathPointsAboveSliceAlpha = 0.5
-    shouldOverwriteSelectionSettings = TRUE
-    selectedPathPointsColorMode = HIGHLIGHT_MODE_RELATIVE
-    selectedPathPointsLineWidthMode = HIGHLIGHT_MODE_RELATIVE
-    selectedPathPointsBrightenValue = 1.2
-    selectedPathPointsFixedColor = "1 1 0"
-    selectedPathPointsAlpha = 1
-    selectedPathPointsWidenValue = 1
-    selectedPathPointsFixedLineWidth = 2
-    selectedSeedPointColorMode = HIGHLIGHT_MODE_RELATIVE
-    selectedSeedPointSizeMode = HIGHLIGHT_MODE_RELATIVE
-    selectedSeedPointBrightenValue = 1.2
-    selectedSeedPointFixedColor = "1 1 0"
-    selectedSeedPointAlpha = 1
-    selectedSeedPointEnlargeValue = 1
-    selectedSeedPointFixedSize = 2
-    enableMouseOverHighlighting = TRUE
-    mouseOverPathPointsColorMode = HIGHLIGHT_MODE_RELATIVE
-    mouseOverPathPointsLineWidthMode = HIGHLIGHT_MODE_RELATIVE
-    mouseOverPathPointsBrightenValue = 1.2
-    mouseOverPathPointsFixedColor = "1 1 0"
-    mouseOverPathPointsAlpha = 1
-    mouseOverPathPointsWidenValue = 1
-    mouseOverPathPointsFixedLineWidth = 2
-    mouseOverSeedPointColorMode = HIGHLIGHT_MODE_RELATIVE
-    mouseOverSeedPointSizeMode = HIGHLIGHT_MODE_RELATIVE
-    mouseOverSeedPointBrightenValue = 1.2
-    mouseOverSeedPointFixedColor = "1 1 0"
-    mouseOverSeedPointAlpha = 1
-    mouseOverSeedPointEnlargeValue = 1
-    mouseOverSeedPointFixedSize = 2
-    visibleByMode = CSOs
-    visibleIdList = ""
-    invertVisibility = FALSE
+    instanceName = CSOLabelRenderer
+    extensionId = labelRenderer
+    allowModification = TRUE
+    shouldRender = TRUE
+    shouldDrawLabelBorderForSelectedCSO = TRUE
+    labelBorderMarginX = 2
+    labelBorderMarginY = 2
+    currentCSOId = 4501
+    labelName = "name "
+    labelCaption = ""
+    labelString = PTVRing
+    labelCode = "labelString = cso.getId()
+labelName = 'name ' + cso.getLabel()
+labelString = cso.getGroupAt(0).getLabel() 
+deviceOffsetX = 0
+deviceOffsetY = 0"
+    shouldRenderLabelName = TRUE
+    shouldDrawConnectingLine = FALSE
+    shouldHighlightBorderOnMouseOver = TRUE
+    connectingLineAlpha = 0.40000001
+    minConnectingLineLength = 3
+    drawConnectingLineToCenterOfCSO = FALSE
+    deviceOffsetX = 0
+    deviceOffsetY = 0
+    fontSize = 12
+    movePossible = OPEN_HAND_CURSOR
+    movePerform = CLOSED_HAND_CURSOR
+    scaleNCursor = MOVE_VERT_CURSOR
+    scaleNWCursor = MOVE_FDIAG_CURSOR
+    scaleWCursor = MOVE_HORI_CURSOR
+    scaleSWCursor = MOVE_BDIAG_CURSOR
+    scaleSCursor = MOVE_VERT_CURSOR
+    scaleSECursor = MOVE_FDIAG_CURSOR
+    scaleECursor = MOVE_HORI_CURSOR
+    scaleNECursor = MOVE_BDIAG_CURSOR
+    allowLabelResize = FALSE
+    shouldDrawResizeHandlers = FALSE
+    userData0 = ""
+    userData1 = ""
+    userData2 = ""
+    userData3 = ""
+    userData4 = ""
+    userData5 = ""
+    userData6 = ""
+    userData7 = ""
+    tryToPlaceLabelsWithoutOverlap = FALSE
+    detachedLabelPlacement = RelativeToCSO
+    viewerBorderHandling = ClampToViewerBorder
+    inputInfoCSOId = -1
+    inputInfoViewerId = ""
+    shouldShowLabelStringOfOutputInfoLabel = TRUE
   }
 }
 module SoCSO3DRenderer {
   internal  {
-    frame = "873 245 144 56"
+    frame = "1025 93 144 56"
     moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "820 439 274 382"
-        relativePosition = "-0.0016 -0.1181"
-        sizeHint = "274 382"
-        wasOpen = no
-      }
-    }
   }
   fields  {
     instanceName = SoCSO3DRenderer
@@ -390,12 +345,12 @@ module SoCSO3DRenderer {
 }
 module SoExaminerViewer {
   internal  {
-    frame = "877 -43 136 56"
+    frame = "1029 -27 136 56"
     moduleGroupName = ""
     windows  {
       window _viewer {
-        geometry = "2835 756 400 400"
-        relativePosition = "0.0807 0.1571"
+        geometry = "2014 228 400 400"
+        relativePosition = "-0.3469 -0.3012"
         sizeHint = "400 400"
         wasOpen = no
       }
@@ -449,11 +404,11 @@ module SoExaminerViewer {
     stereoViewing = FALSE
     stereoOffset = 3
     height = 0.78539819
-    position = "-520.999450683594 -377.356689453125 -11.6048202514648"
-    orientation = "0.78171706199646 0.000339256075676531 -0.623633205890656 2.14975357055664"
-    nearDistance = 348.28049
-    farDistance = 1002.2606
-    focalDistance = 689.92279
+    position = "-584.030151367188 -543.745544433594 -132.615020751953"
+    orientation = "0.877203702926636 -0.347087979316711 -0.331728011369705 1.80854225158691"
+    nearDistance = 501.30063
+    farDistance = 1174.1635
+    focalDistance = 837.39618
     forceRedrawOnInteraction = FALSE
     button1events = TO_VIEWER
     button2events = TO_VIEWER
@@ -473,106 +428,36 @@ module SoExaminerViewer {
 }
 module DicomImportExtraOutput {
   internal  {
-    frame = "425 549 208 72"
+    frame = "197 501 216 72"
     moduleGroupName = ""
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "2681 613 397 35"
-        relativePosition = "0.0000 0.0330"
-        sizeHint = "397 35"
-        wasOpen = no
+        geometry = "2600 689 397 35"
+        relativePosition = "-0.0422 0.0990"
+        sizeHint = "395 35"
+        wasOpen = yes
       }
     }
   }
   fields  {
-    instanceName = DicomImportExtraOutput
-    selectedItem = 2
-  }
-}
-module ExtractRTStruct {
-  internal  {
-    frame = "501 445 152 56"
-    moduleGroupName = ""
-    showNetworkPanel = true
-  }
-  fields  {
-    instanceName = ExtractRTStruct
-    maxPointDistance = 0
-    levelPlanarCSOs = TRUE
-    updateMode = AUTO_UPDATE
-  }
-}
-module CSOLabelRenderer {
-  internal  {
-    frame = "649 277 144 56"
-    moduleGroupName = ""
-    windows  {
-      window _default {
-        geometry = "1993 482 453 584"
-        relativePosition = "-0.3438 -0.0807"
-        sizeHint = "453 584"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = CSOLabelRenderer
-    extensionId = labelRenderer
-    allowModification = TRUE
-    shouldRender = TRUE
-    shouldDrawLabelBorderForSelectedCSO = TRUE
-    labelBorderMarginX = 2
-    labelBorderMarginY = 2
-    currentCSOId = 4501
-    labelName = ""
-    labelCaption = ""
-    labelString = PTVRing
-    labelCode = "labelString = cso.getGroupAt(0).getLabel()
-deviceOffsetX = 0
-deviceOffsetY = 0"
-    shouldRenderLabelName = TRUE
-    shouldDrawConnectingLine = FALSE
-    shouldHighlightBorderOnMouseOver = TRUE
-    connectingLineAlpha = 0.40000001
-    minConnectingLineLength = 3
-    drawConnectingLineToCenterOfCSO = FALSE
-    deviceOffsetX = 0
-    deviceOffsetY = 0
-    fontSize = 12
-    movePossible = OPEN_HAND_CURSOR
-    movePerform = CLOSED_HAND_CURSOR
-    scaleNCursor = MOVE_VERT_CURSOR
-    scaleNWCursor = MOVE_FDIAG_CURSOR
-    scaleWCursor = MOVE_HORI_CURSOR
-    scaleSWCursor = MOVE_BDIAG_CURSOR
-    scaleSCursor = MOVE_VERT_CURSOR
-    scaleSECursor = MOVE_FDIAG_CURSOR
-    scaleECursor = MOVE_HORI_CURSOR
-    scaleNECursor = MOVE_BDIAG_CURSOR
-    allowLabelResize = FALSE
-    shouldDrawResizeHandlers = FALSE
-    userData0 = ""
-    userData1 = ""
-    userData2 = ""
-    userData3 = ""
-    userData4 = ""
-    userData5 = ""
-    userData6 = ""
-    userData7 = ""
-    tryToPlaceLabelsWithoutOverlap = FALSE
-    detachedLabelPlacement = RelativeToCSO
-    viewerBorderHandling = ClampToViewerBorder
-    inputInfoCSOId = -1
-    inputInfoViewerId = ""
-    shouldShowLabelStringOfOutputInfoLabel = TRUE
+    instanceName = DicomImportExtraOutput1
+    selectedItem = 8
   }
 }
 module MinMaxScan {
   internal  {
-    frame = "369 197 176 72"
+    frame = "189 285 168 72"
     moduleGroupName = ""
     showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "2655 473 472 314"
+        relativePosition = "0.0057 -0.0885"
+        sizeHint = "449 314"
+        wasOpen = no
+      }
+    }
   }
   fields  {
     instanceName = MinMaxScan
@@ -581,19 +466,42 @@ module MinMaxScan {
     preferredIntType = PreferUnsigned
   }
 }
-module SoView2DOverlay {
+module Histogram {
   internal  {
-    frame = "101 349 168 56"
+    frame = "225 173 128 56"
     moduleGroupName = ""
     showNetworkPanel = true
     windows  {
       window _default {
-        geometry = "650 720 440 460"
-        relativePosition = "-0.0469 0.1259"
-        sizeHint = "440 460"
+        geometry = "2675 448 409 364"
+        relativePosition = "0.0000 -0.1102"
+        sizeHint = "409 364"
         wasOpen = no
       }
     }
+  }
+  fields  {
+    instanceName = Histogram1
+    useMask = TRUE
+    xRange = "Image Min/Max"
+    maskMode = Weights
+    curveType = Line
+    curveStyle = 0
+    curveTitle = ""
+    updateMode = Off
+    useStepFunction = FALSE
+    useZeroAsBinCenter = TRUE
+    useBackgroundValue = FALSE
+    backgroundValue = 0
+    binSize = 1
+    maxBinCount = 25000000
+  }
+}
+module SoView2DOverlay {
+  internal  {
+    frame = "405 261 168 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
   }
   fields  {
     instanceName = SoView2DOverlay
@@ -628,7 +536,7 @@ module SoView2DOverlay {
     filterMode = FILTER_LINEAR
     inheritFilterMode = TRUE
     lutPrecision = VIEW2D_LUT_AUTO
-    alphaFactor = 0.65799999
+    alphaFactor = 1
     baseColor = "1 1 1"
     useWorldCoords = TRUE
     applyLut = TRUE
@@ -637,33 +545,14 @@ module SoView2DOverlay {
     areCheckerTilesInverted = FALSE
   }
 }
-module DicomImportExtraOutput {
-  internal  {
-    frame = "-35 581 216 72"
-    moduleGroupName = ""
-    showNetworkPanel = true
-    windows  {
-      window _default {
-        geometry = "2680 613 397 35"
-        relativePosition = "-0.0005 0.0330"
-        sizeHint = "397 35"
-        wasOpen = no
-      }
-    }
-  }
-  fields  {
-    instanceName = DicomImportExtraOutput1
-    selectedItem = 4
-  }
-}
 module SoLUTEditor {
   internal  {
-    frame = "-27 205 104 56"
+    frame = "261 85 104 56"
     moduleGroupName = ""
     windows  {
       window _default {
-        geometry = "516 615 513 459"
-        relativePosition = "-0.0974 0.0347"
+        geometry = "2305 745 484 459"
+        relativePosition = "-0.1734 0.1476"
         sizeHint = "513 459"
         wasOpen = no
       }
@@ -672,17 +561,17 @@ module SoLUTEditor {
   fields  {
     instanceName = SoLUTEditor
     rangeMin = 0
-    rangeMax = 1092005
+    rangeMax = 1092000
     viewMin = 0
-    viewMax = 1092005
+    viewMax = 1092000
     window = 1
     level = 0.5
     allowNewPoints = TRUE
     updateLutWhileDragging = TRUE
     relativeLut = FALSE
     colorInterpolation = InterpolateRGB
-    colorPoints = "[ 0 0 0 0, 177450.8125 0.807843148708344 0.0980392172932625 0.952941179275513, 507327.3125 1 0 0, 841753.875 1 0.843137264251709 0, 1092005 1 1 1 ]"
-    alphaPoints = "[ 0 0, 177450.8125 0.62576687335968, 507327.3125 0.981595098972321, 841753.875 0.993865013122559, 1092005 1 ]"
+    colorPoints = "[ 0 0 0 0, 239707.3125 0 0.666666984558105 0.49803900718689, 566581 0 1 0.49803900718689, 932199 1 0.333332985639572 1, 1092000 1 1 1 ]"
+    alphaPoints = "[ 0 0.294479012489319, 239707.3125 0.607361972332001, 566581 0.932515025138855, 932199 1, 1092000 1 ]"
     alphaFactor = 1
     newRangeMin = 0
     newRangeMax = 4095
@@ -709,66 +598,28 @@ module SoLUTEditor {
 }
 module SoGroup {
   internal  {
-    frame = "41 61 128 56"
+    frame = "449 45 80 56"
     moduleGroupName = ""
   }
   fields  {
     instanceName = SoGroup
   }
 }
-module Histogram {
-  internal  {
-    frame = "-51 341 120 56"
-    moduleGroupName = ""
-    showNetworkPanel = true
-  }
-  fields  {
-    instanceName = Histogram
-    useMask = TRUE
-    xRange = "Image Min/Max"
-    maskMode = Weights
-    curveType = Line
-    curveStyle = 0
-    curveTitle = ""
-    updateMode = Off
-    useStepFunction = FALSE
-    useZeroAsBinCenter = TRUE
-    useBackgroundValue = FALSE
-    backgroundValue = 0
-    binSize = 1
-    maxBinCount = 25000000
-  }
-}
-module MinMaxScan {
-  internal  {
-    frame = "-11 469 168 72"
-    moduleGroupName = ""
-    showNetworkPanel = true
-  }
-  fields  {
-    instanceName = MinMaxScan1
-    updateMode = AutoUpdate
-    typeSelect = "Proposed Data Type"
-    preferredIntType = PreferUnsigned
-  }
-}
 connections  {
-  SoView2DCSOExtensibleEditor.inCSOList = ExtractRTStruct.outCSOList
-  SoView2DCSOExtensibleEditor.inExtensions = CSOLabelRenderer.outScene
-  SoView2DCSOExtensibleEditor.inVisualizationSettings = SoCSOVisualizationSettings.outVisualizationSettings
-  View2D.inImage = MinMaxScan.output0
+  View2D.inImage = DicomImport.output0
   View2D.inInvPreLUT = SoGroup.self
-  SoCSO3DRenderer.inCSOList = ExtractRTStruct.outCSOList
-  SoExaminerViewer.children = SoCSO3DRenderer.self
+  View2D.inInvPostLUT = SoView2DCSOExtensibleEditor.self
   DicomImportExtraOutput.inImportResult = DicomImport.outImportResult
   ExtractRTStruct.inDicom = DicomImportExtraOutput.outDicomTree
-  CSOLabelRenderer.inVisualizationSettings = SoCSOVisualizationSettings.outVisualizationSettings
-  MinMaxScan.input0 = DicomImport.output0
-  SoView2DOverlay.image = MinMaxScan1.output0
+  SoView2DCSOExtensibleEditor.inCSOList = ExtractRTStruct.outCSOList
+  SoView2DCSOExtensibleEditor.inExtensions = CSOLabelRenderer.outScene
+  SoCSO3DRenderer.inCSOList = ExtractRTStruct.outCSOList
+  SoExaminerViewer.children = SoCSO3DRenderer.self
   DicomImportExtraOutput1.inImportResult = DicomImport.outImportResult
-  SoLUTEditor.inHistogram = Histogram.outputHistogramCurve
-  SoGroup.children = "SoLUTEditor.outInventorLUT SoView2DOverlay.self SoView2DCSOExtensibleEditor.self"
-  Histogram.input0 = MinMaxScan1.output0
-  MinMaxScan1.input0 = DicomImportExtraOutput1.output0
+  MinMaxScan.input0 = DicomImportExtraOutput1.output0
+  Histogram1.input0 = MinMaxScan.output0
+  SoView2DOverlay.image = DicomImportExtraOutput1.output0
+  SoLUTEditor.inHistogram = Histogram1.outputHistogramCurve
+  SoGroup.children = "SoLUTEditor.outInventorLUT SoView2DOverlay.self"
 }
 networkModel = ""
