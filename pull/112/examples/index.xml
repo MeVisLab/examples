@@ -3427,7 +3427,7 @@ After clicking any of the linked examples, you will be forwarded to a short desc
 &lt;/p>
 &lt;/p>
 &lt;h1 id="download">Download&lt;/h1>
-&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/pull/112/examples/image_processing/example4/.mlab">here&lt;/a>&lt;/p></description></item><item><title>Contour Filter</title><link>https://mevislab.github.io/examples/pull/112/examples/basic_mechanisms/contour_filter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/112/examples/basic_mechanisms/contour_filter/</guid><description>&lt;h1 id="example-1-contour-filter">Example 1: Contour Filter&lt;/h1>
+&lt;p>You can download the example network &lt;a href="https://mevislab.github.io/examples/pull/112/examples/image_processing/example4/ImageProcessingExample5.mlab">here&lt;/a>&lt;/p></description></item><item><title>Contour Filter</title><link>https://mevislab.github.io/examples/pull/112/examples/basic_mechanisms/contour_filter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/112/examples/basic_mechanisms/contour_filter/</guid><description>&lt;h1 id="example-1-contour-filter">Example 1: Contour Filter&lt;/h1>
 &lt;p>This example shows how to create a contour filter.&lt;/p>
 &lt;h1 id="summary">Summary&lt;/h1>
 &lt;p>Images are loaded via &lt;code>ImageLoad&lt;/code> module and visualized unchanged in a &lt;code>View2D&lt;/code> module &lt;em>View2D1&lt;/em>.
