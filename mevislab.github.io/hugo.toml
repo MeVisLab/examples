@@ -28,9 +28,9 @@ canonifyURLs = true
         title = true
 
 [params]
-  [params.author]
+  copyrightyear = '{year}'
+  [params.Author]
     name = "MeVis Medical Solutions AG"
-    copyright = "{year}"
     website = "https://www.mevis.de"
 
 [module]
