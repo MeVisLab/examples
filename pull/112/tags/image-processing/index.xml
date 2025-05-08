@@ -66,9 +66,10 @@
 &lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>This tutorial explains how to load and visualize DICOM RT data in MeVisLab step by step. You will learn how to:&lt;/p>
 &lt;ul>
-&lt;li>Load CT and RTSTRUCT data.&lt;/li>
+&lt;li>Load CT and related RTSTRUCT data.&lt;/li>
 &lt;li>Visualize RTSTRUCTs as colored CSOs.&lt;/li>
-&lt;li>Show labels next to each RTSTRUCT contour.&lt;/li>
+&lt;li>Visualize RTDOSE as a colored overlay.&lt;/li>
+&lt;li>Show labels next to each RTSTRUCT contour.
+We use the &lt;code>ExtractRTStruct&lt;/code>module for this example.&lt;/li>
 &lt;/ul>
-&lt;p>We use the &lt;code>ExtractRTStruct&lt;/code> module and explain each step in a simple way, with supporting screenshots.&lt;/p>
-&lt;p>&lt;code>DICOM RT (Radiotherapy)&lt;/code> files are essential in radiotherapy treatment planning. They include:&lt;/p></description></item></channel></rss>
+&lt;p>&lt;strong>DICOM RT (Radiotherapy)&lt;/strong> files are essential in radiotherapy treatment planning. They include:&lt;/p></description></item></channel></rss>

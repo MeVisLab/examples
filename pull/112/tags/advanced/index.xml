@@ -164,12 +164,13 @@ In this tutorial, we will go over the steps to add shadows to our 3D-objects, ma
 &lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>This tutorial explains how to load and visualize DICOM RT data in MeVisLab step by step. You will learn how to:&lt;/p>
 &lt;ul>
-&lt;li>Load CT and RTSTRUCT data.&lt;/li>
+&lt;li>Load CT and related RTSTRUCT data.&lt;/li>
 &lt;li>Visualize RTSTRUCTs as colored CSOs.&lt;/li>
-&lt;li>Show labels next to each RTSTRUCT contour.&lt;/li>
+&lt;li>Visualize RTDOSE as a colored overlay.&lt;/li>
+&lt;li>Show labels next to each RTSTRUCT contour.
+We use the &lt;code>ExtractRTStruct&lt;/code>module for this example.&lt;/li>
 &lt;/ul>
-&lt;p>We use the &lt;code>ExtractRTStruct&lt;/code> module and explain each step in a simple way, with supporting screenshots.&lt;/p>
-&lt;p>&lt;code>DICOM RT (Radiotherapy)&lt;/code> files are essential in radiotherapy treatment planning. They include:&lt;/p></description></item><item><title>Contour Example 7: Using the CSOListContainer</title><link>https://mevislab.github.io/examples/pull/112/tutorials/dataobjects/contours/contourexample7/</link><pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/112/tutorials/dataobjects/contours/contourexample7/</guid><description>&lt;h1 id="TutorialContoursExample7">Contour Example 7: Using the CSOListContainer&lt;/h1>
+&lt;p>&lt;strong>DICOM RT (Radiotherapy)&lt;/strong> files are essential in radiotherapy treatment planning. They include:&lt;/p></description></item><item><title>Contour Example 7: Using the CSOListContainer</title><link>https://mevislab.github.io/examples/pull/112/tutorials/dataobjects/contours/contourexample7/</link><pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/112/tutorials/dataobjects/contours/contourexample7/</guid><description>&lt;h1 id="TutorialContoursExample7">Contour Example 7: Using the CSOListContainer&lt;/h1>
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
  &lt;div>
  &lt;img width="100px" src="https://mevislab.github.io/examples/pull/112/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=4quJcvvt-GQ" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/4quJcvvt-GQ/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=4quJcvvt-GQ" target="_blank">YouTube&lt;/a>.
