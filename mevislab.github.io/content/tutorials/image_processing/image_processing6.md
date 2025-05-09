@@ -73,7 +73,7 @@ We now want to view the CT images and the RTSTRUCT data together. The module `Di
 
 You have to select the correct index for the RTSTRUCT. In our example it is index 2.
 
-Add `DicomImportExtraOutput`module as shown in the below :
+Add `DicomImportExtraOutput`module as shown in the figure below :
 
 ![Selecting CT and RTSTRUCT in DicomImport](/images/tutorials/image_processing/SELECTINGCTRTSTRUCT.png "Selecting CT and RTSTRUCT in DicomImport")
 
@@ -121,7 +121,7 @@ Add the `SoCSO3DRenderer` module and connect it to the `ExtractRTStruc`t module.
 
 Add the `SoExaminerViewer` module and connect it to the `SoCSO3DRenderer` module.
 ( The `SoExaminerViewer` will allow you to view the 3D contours. You can rotate, zoom, and move around the 3D image.)
-The following figure is the network and the result : 
+The following figure is the network and the result: 
 
 ![3D Visualization of Contours Using SoExaminerViewe](/images/tutorials/image_processing/3D.png "3D Visualization of Contours Using SoExaminerViewe")
 
@@ -129,13 +129,13 @@ The following figure is the network and the result :
 
 ### **Visualizing RTDOSE as a Color Overlay Using LUT**
 
-Now we need to add another `DicomImportExtraOutput` module to import multiple DICOM objects ,You have to select the right index for the  example it is index 4 thats mean RTDOSE 199*115*147*1 . Add `MinMaxScan`module to scan the input image and updates the minimum and maximum values of the output image, and connect it with the `DicomImportExtraOutput` 
+Now we need to add another `DicomImportExtraOutput` module to import multiple DICOM objects, You have to select the right index for the  example it is index 4 thats mean RTDOSE 199*115*147*1 . Add `MinMaxScan`module to scan the input image and updates the minimum and maximum values of the output image, and connect it with the `DicomImportExtraOutput` 
 ![Importing RTDOSE Data and Applying MinMaxScan for Image Normalization](/images/tutorials/image_processing/minmaxscan.png "Importing RTDOSE Data and Applying MinMaxScan for Image Normalization")
 
 Add ` Histogram`  module to calculate the image's intensity distribution, and connect it with `MinMaxScan`.
 
 The `Histogram` module computes the image's intensity distribution, and is connected to the `SoLUTEditor` to modify the lookup table (LUT). The LUT is then passed to the `SoGroup`, which is connected to the `SoView2DOverlay` to blend the 2D image overlay in a 2D viewer. The `SoLUTEditor` allows interactive editing of the LUT, while `SoView2DOverlay` facilitates overlaying the modified image in a 2D scene. Note that `SoView2DOverlay` is for 2D blending, and `GVROrthoOverlay` should be used for OrthoView2D.
- The below figure is shows connnection of the network:
+ The below figure shows connnection of the network:
 
 ![Workflow for Intensity Distribution and 2D Image Overlay using LUT Editing"](/images/tutorials/image_processing/net.png "Workflow for Intensity Distribution and 2D Image Overlay using LUT Editing")
 
@@ -146,7 +146,7 @@ Now we should update the `Histogram` by pressing the update button on it.
 ![Update Histogram](/images/tutorials/image_processing/histo.png " Update Histogram")
 
 
-Now Open `SoLUTEditor`, go to ... *Range* ... *Update Range From Histogram* to apply the histogram values, as shown in the figure :
+Now open `SoLUTEditor`, go to ... *Range* ... *Update Range From Histogram* to apply the histogram values, as shown in the figure :
 
 ![SoLUTEditor Panel](/images/tutorials/image_processing/solut.png "SoLUTEditor Panel")
 
@@ -156,7 +156,7 @@ Then in the same panel from (*Editor*... *change the color of the values*) , as 
 ![SoLUTEditor Panel Editior](/images/tutorials/image_processing/editior.png " SoLUTEditor Panel Editior")
 
 
-Finally, when you press `View2D `, it will display a 2D anatomical image with a colored RTDOSE overlay, where the dose distribution is visualized using a customized Lookup Table (LUT) that clearly highlights the radiation intensity levels within the body.
+Finally, when you press `View2D`, it will display a 2D anatomical image with a colored RTDOSE overlay, where the dose distribution is visualized using a customized Lookup Table (LUT) that clearly highlights the radiation intensity levels within the body.
 
 ![Visualizing RTDOSE as a Color Overlay Using LUT](/images/tutorials/image_processing/2df.png "Visualizing RTDOSE as a Color Overlay Using LUT")
 
@@ -165,7 +165,7 @@ Finally, when you press `View2D `, it will display a 2D anatomical image with a 
 
 ## **Summary**
 
-* Load DICOM RT data including RTDOSE and RTSTRUCT .
+* Load DICOM RT data including RTDOSE and RTSTRUCT.
 * Visualize RTSTRUCTs with `ExtractRTStruct` and `CSOLabelRenderer`.
 * Display contour labels using `CSOLabelRenderer`.
 * View images in 2D (`View2D`) and 3D (`SoExaminerViewer`).
