@@ -1,7 +1,7 @@
 {{ if eq .Page.Kind "page" }}
     {{ if gt .Page.Weight 0 }}
     <hr />
-    <div class="row">
+    <div class="row" style="margin: 25px !important;">
         {{ with .Site.Pages.ByWeight.Next .}}
         <div class="col">
             <a href="{{ .Permalink }}" title="{{ .Title }}" class="btn btn-outline-secondary btn-sm" role="button" aria-pressed="true">

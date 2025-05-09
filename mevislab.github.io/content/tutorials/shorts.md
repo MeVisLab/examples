@@ -35,41 +35,52 @@ This is a collection of useful keyboard shortcuts in MeVisLab, hopefully it grow
   </thead>
   <tbody>
     <tr>
-      <td>Ctrl+1</td>
+      <td>{{< keyboard "CTRL" "1" >}}</td>
       <td>Automatically arrange selection of modules / in the current network</td>
     </tr>
     <tr>
-      <td>Ctrl+2</td>
+      <td>{{< keyboard "CTRL" "2" >}}</td>
       <td>Open most recent network file</td>
     </tr>
     <tr>
-      <td>Ctrl+3</td>
+      <td>{{< keyboard "CTRL" "3" >}}</td>
       <td>Run most recent test case (extremely useful for developers)</td>
     </tr>
-      <td>Ctrl+A then Ctrl+1</td>
+    <tr>
+      <td>{{< keyboard "CTRL" "A" >}} then {{< keyboard "CTRL" "1" >}}</td>
       <td>Layout network</td>
     </tr>
-      <td>Ctrl+A then Tab</td>
+    <tr>
+      <td>{{< keyboard "CTRL" "A" >}} then {{< keyboard "TAB" >}}</td>
       <td>Layout .script file (in MATE)</td>
     </tr>
-      <td>Ctrl+D</td>
+    <tr>
+      <td>{{< keyboard "CTRL" "D" >}}</td>
       <td>Duplicate currently selected module (including all field values)</td>
     </tr>
-      <td>Ctrl+Left Mouse or Middle Mouse Button</td>
+    <tr>
+      <td>{{< keyboard "CTRL" >}} and Left Mouse {{< mousebutton "left" >}} or Middle Mouse Button {{< mousebutton "middle" >}}</td>
       <td>Show Internal Network</td>
     </tr>
-      <td>Space</td>
+    <tr>
+      <td>{{< keyboard "SPACE" >}}</td>
       <td>Show hidden outputs of the currently selected module</td>
     </tr>
-      <td>Ctrl+Alt+T</td>
+    <tr>
+      <td>{{< keyboard "CTRL" "ALT" "T" >}}</td>
       <td>Start test center</td>
     </tr>
-      <td>Ctrl+K	</td>
+    <tr>
+      <td>{{< keyboard "CTRL" "K" >}}</td>
       <td>Restart MeVisLab with current network(s)</td>
     </tr>
-    </tr>
-      <td>Ctrl+R</td>
+    <tr>
+      <td>{{< keyboard "CTRL" "R" >}}</td>
       <td>Run script file with the same name of your network file if available in the same directory.</td>
+    </tr>
+    <tr>
+      <td>{{< keyboard "ALT" >}} Double-click {{< mousebutton "left" >}} on a module</td>
+      <td>Open automatic panel of the module.</td>
     </tr>
   </tbody>
 </table>
