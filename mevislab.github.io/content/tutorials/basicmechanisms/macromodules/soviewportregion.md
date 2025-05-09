@@ -20,8 +20,7 @@ In this guide, we will show how to use the `SoViewportRegion` module to create c
 We will demonstrate how to: 
 * Divide the render area into multiple regions. 
 * Assign different content to each region. 
-* Use alternative methods, such as SoView2D, when applicable.
-
+* Use alternative methods, such as `SoView2D`, when applicable.
 
 ## Prepare your network
 
@@ -152,6 +151,27 @@ This setup will let you interact with the 3D view and display all four views tog
 You will see that the orientation cube of the 3D viewer appears in the bottom right corner of the `SoRenderArea`. To resolve this, you can check *Render delayed paths* in the `SoViewportRegion` module of the 3D viewer.
 
 ![Final Network](/images/tutorials/basicmechanics/E6_13.png "Final Network")
+
+## Alternative using `SoView2D`
+In case you want the same dataset to be visualized in multiple viewers, the module `SoView2D` already provides this functionality.
+
+![Initial SoView2D](/images/tutorials/basicmechanics/SoView2D_1.png "Initial SoView2D")
+
+Whenever you are using the `SoView2D` module to visualize a 2D dataset, you need to add a `View2DExtensions` module and for example a `SoRenderArea` module. Without the `View2DExtensions` module, interctions like scrolling through slices or changing the window and level settings will not be possible.
+
+By default, you will see your images in a single viewer the same way as if you use the `View2D` module. The *number of columns* is defined as *1* by default. If you now change the *Number of Slices* to something like *3*, you will see 3 viewers shown in 1 column. As we can only connect one dataset, this network cannot display multiple series at the same time.
+
+![Multiple slices in SoView2D](/images/tutorials/basicmechanics/SoView2D_2.png "Multiple slices in SoView2D")
+
+Changing the *number of columns* to *3* and the *Number of Slices* to *9* results in a 3 x 3 layout.
+
+![Multiple slices and columns in SoView2D](/images/tutorials/basicmechanics/SoView2D_3.png "Multiple slices and columns in SoView2D")
+
+By default, the module shows consecutive slices with a slice step size *1*. If you change this, you can define the size of the steps between the viewers. If the resulting slice does not exist in the dataset, the viewer remains empty. 
+
+![Not existing slices](/images/tutorials/basicmechanics/SoView2D_4.png "Not existing slices")
+
+You are also able to define a slab size. This means the depth of the slab, you can either use the blend mode *Maximum* or *Blend*.
 
 ## Exercise
 You can play around with the different `SoViewportRegion` modules to create your own layouts by setting the values a little different.
