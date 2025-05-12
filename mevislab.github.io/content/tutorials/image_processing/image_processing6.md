@@ -40,7 +40,7 @@ It contains the CT, RTSTRUCT, and RTDOSE files needed for this tutorial to work 
 This data is FOR EDUCATIONAL AND SCIENTIFIC EXCHANGE ONLY – NOT FOR SALES OR PROMOTIONAL USE.
 {{</alert>}}
 
-Create new folder named *DICOM_FILES*. Extract the ZIP file into this folder.
+Create a new folder named *DICOM_FILES*. Extract the ZIP file into this folder.
 
 We will use it in this tutorial. 
 
@@ -48,13 +48,12 @@ Add the module `DicomImport` to your workspace.
 
 !["DicomImport](/images/tutorials/image_processing/Dicommm.png "DicomImport")
 
-Then click Browse and select the new folder named *DICOM_FILES* where you copied the ZIP file earlier, then press Import. You can see it in the below figure:
+Then click Browse and select the new folder named *DICOM_FILES* where you copied the content of the ZIP file earlier, then press Import. You can see it in the below figure:
 
 ![Importing DICOM RT Data from the DICOM_FILES Folder](/images/tutorials/image_processing/Import.png "Importing DICOM RT Data from the DICOM_FILES Folder")
 
 Now add a `View2D` module and connect it to `DicomImport`. 
 
-As shown in the Data Tree (middle pane), the imported DICOM RT structure includes:
 As shown in the Data Tree (middle pane), the imported DICOM RT structure includes:
 
 * **eByLuKOZoWxBUrIW** – An anonymized Patient ID.
@@ -77,7 +76,7 @@ We now want to view the CT images and the RTSTRUCT data together. The module `Di
 
 You have to select the correct index for the RTSTRUCT. In our example it is index 2.
 
-Add `DicomImportExtraOutput` module as shown in the figure below :
+Add `DicomImportExtraOutput` module as shown in the figure below:
 
 ![Selecting CT and RTSTRUCT in DicomImport](/images/tutorials/image_processing/SELECTINGCTRTSTRUCT.png "Selecting CT and RTSTRUCT in DicomImport")
 
@@ -85,7 +84,7 @@ Add `DicomImportExtraOutput` module as shown in the figure below :
 
 Now we need an `ExtractRTStruct` module to convert RTSTRUCT data into CSOs (Contour Segmentation Objects). CSOs allow MeVisLab to visualize the contours on the CT scan and to interact with them.
 
-Then coonect it with the `DicomImportExtraOutput` as shown in the figure:
+Then connect it with the `DicomImportExtraOutput` as shown in the figure:
 
 ![ExtractRTStruct vonverter](/images/tutorials/image_processing/converter.png "ExtractRTStruct converter")
 
