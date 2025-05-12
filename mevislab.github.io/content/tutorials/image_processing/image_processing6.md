@@ -8,7 +8,7 @@ tags: ["Advanced", "Tutorial", "Image Processing", "DICOM", "RTSTRUCT", "RTDOSE"
 menu: 
   main:
     identifier: "imageprocessing6"
-    title: "Step-by-Step Guide to Loading and Visualizing DICOM RT Data (RTSTRUCT & RTDOSE) in MeVisLab."
+    title: "Loading and Visualizing DICOM RT Data (RTSTRUCT & RTDOSE) in MeVisLab."
     weight: 630
     parent: "imageprocessing"
 ---
@@ -30,7 +30,7 @@ We use the `ExtractRTStruct`module for this example.
 Together, they ensure accurate and safe radiotherapy delivery.
 
 ## Prepare your network
-First, we need to download the ZIP file at **DICOM patient export**  from:
+First, we need to download the ZIP file from:
 
 https://medicalaffairs.varian.com/headandneckbilat-imrtsx2 
 
@@ -48,16 +48,15 @@ Add the module `DicomImport` to your workspace.
 
 !["DicomImport](/images/tutorials/image_processing/Dicommm.png "DicomImport")
 
-Then click Browse and select the new folder named *DICOM_FILES* where you copied the content of the ZIP file earlier, then press Import. You can see it in the below figure:
+Then click {{< mousebutton "left" >}} Browse and select the new folder named *DICOM_FILES* where you copied the content of the ZIP file earlier. Click Import {{< mousebutton "left" >}}. You can see the result after import in the below figure:
 
 ![Importing DICOM RT Data from the DICOM_FILES Folder](/images/tutorials/image_processing/Import.png "Importing DICOM RT Data from the DICOM_FILES Folder")
 
-Now add a `View2D` module and connect it to `DicomImport`. 
+Now add a `View2D` module and connect it to the `DicomImport` module. 
 
 As shown in the Data Tree (middle pane), the imported DICOM RT structure includes:
 
 * **eByLuKOZoWxBUrIW** – An anonymized Patient ID.
-
 * **0000-00-00** – Missing or anonymized Birth/Study Date.
 
 When you expand the tree view you will see: 
@@ -72,33 +71,30 @@ After connecting, open the `View2D` and click on each of these items to visualiz
 {{< imagegallery 4 "/images/tutorials/image_processing/" "RTPLAN" "RTSTRUCT" "CT512" "RTDOSE">}}
 
 Select the CT 512×512×272×1 series.
+
 We now want to view the CT images and the RTSTRUCT data together. The module `DicomImport` only allows to select one single object. In order to select more than one object, we use a `DicomImportExtraOutput` module. Select the CT series in the `DicomImport` module and the RTSTRUCT in the `DicomImportExtraOutput` module.
 
 You have to select the correct index for the RTSTRUCT. In our example it is index 2.
 
-Add `DicomImportExtraOutput` module as shown in the figure below:
-
 ![Selecting CT and RTSTRUCT in DicomImport](/images/tutorials/image_processing/SELECTINGCTRTSTRUCT.png "Selecting CT and RTSTRUCT in DicomImport")
 
-### **Visualize RTSTRUCTs as colored CSOs:**
+### Visualize RTSTRUCTs as colored CSOs
 
-Now we need an `ExtractRTStruct` module to convert RTSTRUCT data into CSOs (Contour Segmentation Objects). CSOs allow MeVisLab to visualize the contours on the CT scan and to interact with them.
+Now we need an `ExtractRTStruct` module to convert RTSTRUCT data into CSOs (Contour Segmentation Objects). CSOs in MeVisLab allow to visualize the contours on the CT scan and to interact with them.
 
 Then connect it with the `DicomImportExtraOutput` as shown in the figure:
 
 ![ExtractRTStruct vonverter](/images/tutorials/image_processing/converter.png "ExtractRTStruct converter")
 
-
-Add `SoView2DCSOExtensibleEditor` to enable visualization and interaction with the CSOs in the 2D viewer, allowing you to edit and work with the contours directly. Connect it with `View2D` and `ExtractRTStruct` modules, as shown, where `View2D` displays the CT scan with the contours.
+Add a `SoView2DCSOExtensibleEditor` module to enable visualization and interaction with the CSOs in the 2D viewer. Connect it with a `View2D` module and the `ExtractRTStruct` module. The `View2D` module shows the CT scan with the contours from the *RTSTRUCT* file.
 
 ![Connecting SoView2DCSOExtensibleEditor](/images/tutorials/image_processing/cotour.png "Connecting SoView2DCSOExtensibleEditor")
 
-There are no names for the contours by default, we want to show the names for the contour to identify the segmented structure, so we need the `CSOLabelRenderer` module to add labels (e.g., 'Bladder', 'Prostate') next to each contour, helping to clearly identify the anatomy. The figure below shows that:
+There are no names for the contours shown by default. We want to display the names for the contours available in the *RTSTRUCT* file to identify the segmented structure. Use the `CSOLabelRenderer` module to show labels (e.g., 'Bladder', 'Prostate') next to each contour. The figure below shows that:
 
 ![CSOLabelRenderer](/images/tutorials/image_processing/CSOLabelRenderer.png " CSOLabelRenderer")
 
-As you can see, the contours are labeled with numbers. We want to show the names for the contour to identify the segmented structure. To do this, open the `CSOLabelRenderer` panel — it will display the panel shown below.
-
+As you can see, the contours are labeled with numbers. The number is the internal ID of the contour. We want to show the names for the contour to identify the segmented structure. To do this, open the `CSOLabelRenderer` panel.
  
 ![CSOLabelRenderer panel](/images/tutorials/image_processing/CSOLabelRendererpanel.png "CSOLabelRenderer panel")
 
@@ -109,15 +105,19 @@ labelString = cso.getGroupAt(0).getLabel()
 ```
 {{</highlight>}}
 
-Then press apply. You can see the names of the structures next to the contours.
+Then press apply. The label of the CSO provides the name of each contour. You can see them next to the contours.
 
 ![Edited CSOLabelRenderer Panel](/images/tutorials/image_processing/contournamed.png " Edited CSOLabelRenderer Panel")
 
-### **3D Visualization of Contours Using `SoExaminerViewer`**
+{{<alert class="info" caption="Extra Information">}}
+You can use a `CSOLabelPlacementLocal` module or a `CSOLabelPlacementGlobal` module to define the locations of these labels.
+{{</alert>}}
+
+### 3D Visualization of Contours Using `SoExaminerViewer`
 
 If you want to visualize the contours in 3D, follow these steps:
 
-Add the `SoCSO3DRenderer` module and connect it to the `ExtractRTStruct` module. The `SoCSO3DRenderer` will render the contours (CSOs) in the 3D space.
+Add the `SoCSO3DRenderer` module and connect it to the `ExtractRTStruct` module. The `SoCSO3DRenderer` will render the contours (CSOs) in 3D.
 
 Add the `SoExaminerViewer` module and connect it to the `SoCSO3DRenderer` module. The `SoExaminerViewer` will allow you to view the 3D contours. You can rotate, zoom, and move around the 3D image.
 
@@ -125,17 +125,20 @@ The following figure shows the network and the result:
 
 ![3D Visualization of Contours Using SoExaminerViewe](/images/tutorials/image_processing/3D.png "3D Visualization of Contours Using SoExaminerViewe")
 
-### **Visualizing RTDOSE as a Color Overlay Using LUT**
+### Visualizing RTDOSE as a Color Overlay Using LUT
+We now ant to show the *RTDOSE* data as provided for the patient as a semi-transparent overlay.
 
-Now we need to add another `DicomImportExtraOutput` module to import multiple DICOM objects. You have to select the right index for the  example it is index 4 thats mean RTDOSE 199*115*147*1 . Add `MinMaxScan` module to scan the input image and updates the minimum and maximum values of the output image, and connect it with the `DicomImportExtraOutput`.
+Now we need to add another `DicomImportExtraOutput` module to import multiple DICOM objects. You have to select the correct index for the example. In this case, we select index 4 for the *RTDOSE* 199*115*147*1 data. Add a `MinMaxScan` module to scan the input image and calculate the minimum and maximum values of the image. Connect it with the `DicomImportExtraOutput` module.
 
 ![Importing RTDOSE Data and Applying MinMaxScan for Image Normalization](/images/tutorials/image_processing/minmaxscan.png "Importing RTDOSE Data and Applying MinMaxScan for Image Normalization")
 
-Add `Histogram` module to calculate the image's intensity distribution, and connect it with `MinMaxScan`.
+Add a `Histogram` module to calculate the image's intensity distribution, and connect it to the `MinMaxScan` module.
 
-The `Histogram` module computes the image's intensity distribution, and is connected to the `SoLUTEditor` module to modify the lookup table (LUT). The LUT is then passed to the `SoGroup` module, which is connected to the `SoView2DOverlay` module to blend the 2D image overlay in a 2D viewer. The `SoLUTEditor` module allows interactive editing of the LUT, while `SoView2DOverlay` module facilitates overlaying the modified image in a 2D scene.
+The `Histogram` module computes the image's intensity distribution and is connected to the `SoLUTEditor` module to modify the lookup table (LUT). The LUT is then passed to the `SoGroup` module, which is connected to the `SoView2DOverlay` module to blend the 2D image overlay in a 2D viewer. The `SoLUTEditor` module allows interactive editing of the LUT, while the `SoView2DOverlay` module facilitates overlaying *RTDOSE* in a 2D scene.
 
-Note that the `SoView2DOverlay` module is for 2D blending, and the `GVROrthoOverlay` module should be used for `OrthoView2D`.
+{{<alert class="info" caption="Extra Information">}}
+Note that the `SoView2DOverlay` module is for 2D blending. The `GVROrthoOverlay` module should be used for `OrthoView2D`.
+{{</alert>}}
 
 The below figure shows the connections of the network:
 
@@ -149,12 +152,11 @@ Now open `SoLUTEditor` module panel, go to *Range*, *Update Range From Histogram
 
 ![SoLUTEditor Panel](/images/tutorials/image_processing/solut.png "SoLUTEditor Panel")
 
-Then in the same panel from (*Editor*... *change the color of the values*), as shown in the figure: 
+In the same panel, on tab *Editor*, change the colors as shown in the figure: 
 
 ![SoLUTEditor Panel Editior](/images/tutorials/image_processing/editior.png " SoLUTEditor Panel Editior")
 
-
-Finally, when you press `View2D`, it will display a 2D anatomical image with a colored RTDOSE overlay, where the dose distribution is visualized using a customized Lookup Table (LUT) that clearly highlights the radiation intensity levels within the body.
+Finally, when you open the `View2D` panel, it will display a 2D anatomical image with a colored *RTDOSE* overlay, where the dose distribution is visualized using a customized Lookup Table (LUT) that clearly highlights the radiation intensity levels within the body.
 
 ![Visualizing RTDOSE as a Color Overlay Using LUT](/images/tutorials/image_processing/2df.png "Visualizing RTDOSE as a Color Overlay Using LUT")
 
