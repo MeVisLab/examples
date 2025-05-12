@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutorial on MeVisLab Examples</title><link>https://mevislab.github.io/examples/tags/tutorial/</link><description>Recent content in Tutorial on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 22 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/tags/tutorial/index.xml" rel="self" type="application/rss+xml"/><item><title>Introduction to MeVisLab</title><link>https://mevislab.github.io/examples/introduction/introduction/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/introduction/introduction/</guid><description>&lt;h2 id="tutorial_introduction">Tutorial Introduction&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutorial on MeVisLab Examples</title><link>https://mevislab.github.io/examples/tags/tutorial/</link><description>Recent content in Tutorial on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 05 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/tags/tutorial/index.xml" rel="self" type="application/rss+xml"/><item><title>Introduction to MeVisLab</title><link>https://mevislab.github.io/examples/introduction/introduction/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/introduction/introduction/</guid><description>&lt;h2 id="tutorial_introduction">Tutorial Introduction&lt;/h2>
 &lt;p>Welcome to &lt;a href="https://mevislab.github.io/examples/glossary/#mevislab">MeVisLab&lt;/a>!&lt;/p>
 &lt;p>More than 20 years of experience and the continuous implementation of adaptations made MeVisLab one of
 the most powerful development platforms for medical image processing.
@@ -544,7 +544,17 @@ In this chapter in particular, we will focus on simple image interaction with tw
 &lt;p>In this example, we are using the &lt;code>SoGVRDrawOnPlane&lt;/code> module to define the currently visible slice from a 2D view as a clip plane in 3D.&lt;/p>
 &lt;h2 id="steps-to-do">Steps to do&lt;/h2>
 &lt;h3 id="develop-your-network">Develop your network&lt;/h3>
-&lt;p>First we need to develop the network to scroll through the slices. Add a &lt;code>LocalImage&lt;/code> module to your workspace and select the file &lt;em>ProbandT1&lt;/em> from MeVisLab demo data.&lt;/p></description></item><item><title>Chapter V: Data Objects</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/</guid><description>&lt;h2 id="TutorialDataObjects">Data Objects in MeVisLab&lt;/h2>
+&lt;p>First we need to develop the network to scroll through the slices. Add a &lt;code>LocalImage&lt;/code> module to your workspace and select the file &lt;em>ProbandT1&lt;/em> from MeVisLab demo data.&lt;/p></description></item><item><title>Example 6: DICOM RT Visualization in MeVisLab – RTSTRUCT and RTDOSE Workflow</title><link>https://mevislab.github.io/examples/tutorials/image_processing/image_processing6/</link><pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/image_processing/image_processing6/</guid><description>&lt;h1 id="example-6-dicom-rt-visualization-in-mevislab--rtstruct-and-rtdose-workflow">Example 6: DICOM RT Visualization in MeVisLab – RTSTRUCT and RTDOSE Workflow&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>This tutorial explains how to load and visualize DICOM RT data in MeVisLab step by step. You will learn how to:&lt;/p>
+&lt;ul>
+&lt;li>Load CT and related RTSTRUCT data.&lt;/li>
+&lt;li>Visualize RTSTRUCTs as colored CSOs.&lt;/li>
+&lt;li>Visualize RTDOSE as a colored overlay.&lt;/li>
+&lt;li>Show labels next to each RTSTRUCT contour.
+We use the &lt;code>ExtractRTStruct&lt;/code>module for this example.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>DICOM RT (Radiotherapy)&lt;/strong> files are essential in radiotherapy treatment planning. They include:&lt;/p></description></item><item><title>Chapter V: Data Objects</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/</guid><description>&lt;h2 id="TutorialDataObjects">Data Objects in MeVisLab&lt;/h2>
 &lt;p>MeVisLab provides pre-defined data objects, e. g.&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://mevislab.github.io/examples/tutorials/dataobjects/contourobjects">Contour Segmented Objects (CSOs)&lt;/a> &lt;br>
@@ -1163,41 +1173,267 @@ If you feel like using a shortcut, you can also download the base network below 
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td>Ctrl+1&lt;/td>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ 1
+ &lt;/kbd>&lt;/td>
  &lt;td>Automatically arrange selection of modules / in the current network&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td>Ctrl+2&lt;/td>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ 2
+ &lt;/kbd>&lt;/td>
  &lt;td>Open most recent network file&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td>Ctrl+3&lt;/td>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ 3
+ &lt;/kbd>&lt;/td>
  &lt;td>Run most recent test case (extremely useful for developers)&lt;/td>
  &lt;/tr>
- &lt;td>Ctrl+A then Ctrl+1&lt;/td>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ A
+ &lt;/kbd> then 
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ 1
+ &lt;/kbd>&lt;/td>
  &lt;td>Layout network&lt;/td>
  &lt;/tr>
- &lt;td>Ctrl+A then Tab&lt;/td>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ A
+ &lt;/kbd> then 
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ TAB
+ &lt;/kbd>&lt;/td>
  &lt;td>Layout .script file (in MATE)&lt;/td>
  &lt;/tr>
- &lt;td>Ctrl+D&lt;/td>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ D
+ &lt;/kbd>&lt;/td>
  &lt;td>Duplicate currently selected module (including all field values)&lt;/td>
  &lt;/tr>
- &lt;td>Ctrl+Left Mouse or Middle Mouse Button&lt;/td>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd> and Left Mouse 
+
+&lt;img width="22px" src="https://mevislab.github.io/examples/images/lmb.svg" alt="Left Mouse Button" />
+
+
+ or Middle Mouse Button 
+
+
+
+&lt;img width="22px" src="https://mevislab.github.io/examples/images/mmb.svg" alt="Middle Mouse Button / Mouse Wheel" />
+&lt;/td>
  &lt;td>Show Internal Network&lt;/td>
  &lt;/tr>
- &lt;td>Space&lt;/td>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ SPACE
+ &lt;/kbd>&lt;/td>
  &lt;td>Show hidden outputs of the currently selected module&lt;/td>
  &lt;/tr>
- &lt;td>Ctrl+Alt+T&lt;/td>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ ALT
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ T
+ &lt;/kbd>&lt;/td>
  &lt;td>Start test center&lt;/td>
  &lt;/tr>
- &lt;td>Ctrl+K	&lt;/td>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ K
+ &lt;/kbd>&lt;/td>
  &lt;td>Restart MeVisLab with current network(s)&lt;/td>
  &lt;/tr>
- &lt;/tr>
- &lt;td>Ctrl+R&lt;/td>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ R
+ &lt;/kbd>&lt;/td>
  &lt;td>Run script file with the same name of your network file if available in the same directory.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ ALT
+ &lt;/kbd> Double-click 
+
+&lt;img width="22px" src="https://mevislab.github.io/examples/images/lmb.svg" alt="Left Mouse Button" />
+
+
+ on a module&lt;/td>
+ &lt;td>Open automatic panel of the module.&lt;/td>
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>

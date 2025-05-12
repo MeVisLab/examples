@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DICOM on MeVisLab Examples</title><link>https://mevislab.github.io/examples/tags/dicom/</link><description>Recent content in DICOM on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:58:44 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/tags/dicom/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 1: Data import in MeVisLab</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/dataimport/</link><pubDate>Wed, 15 Jun 2022 08:54:53 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/dataimport/</guid><description>&lt;h1 id="example-1-data-import-in-mevislab">Example 1: Data Import in MeVisLab&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DICOM on MeVisLab Examples</title><link>https://mevislab.github.io/examples/tags/dicom/</link><description>Recent content in DICOM on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 05 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/tags/dicom/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 1: Data import in MeVisLab</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/dataimport/</link><pubDate>Wed, 15 Jun 2022 08:54:53 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/dataimport/</guid><description>&lt;h1 id="example-1-data-import-in-mevislab">Example 1: Data Import in MeVisLab&lt;/h1>
 &lt;p>MeVisLab provides several pre-defined modules to import data for processing in your networks.&lt;/p>
 
 &lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -57,4 +57,14 @@ World coordinates also refer to the patient axes. They are:&lt;/p>
 &lt;p>&lt;p class="page-image">
  &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/visualization/V2_00.png" title="World Coordinates in Context of the Human Body">&lt;img id="World Coordinates in Context of the Human Body" class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/visualization/V2_00.png" alt="World Coordinates in Context of the Human Body" title="World Coordinates in Context of the Human Body" />&lt;/a>
  &lt;figcaption class="figure-caption">World Coordinates in Context of the Human Body&lt;/figcaption>
-&lt;/p></description></item></channel></rss>
+&lt;/p></description></item><item><title>Example 6: DICOM RT Visualization in MeVisLab – RTSTRUCT and RTDOSE Workflow</title><link>https://mevislab.github.io/examples/tutorials/image_processing/image_processing6/</link><pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/image_processing/image_processing6/</guid><description>&lt;h1 id="example-6-dicom-rt-visualization-in-mevislab--rtstruct-and-rtdose-workflow">Example 6: DICOM RT Visualization in MeVisLab – RTSTRUCT and RTDOSE Workflow&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>This tutorial explains how to load and visualize DICOM RT data in MeVisLab step by step. You will learn how to:&lt;/p>
+&lt;ul>
+&lt;li>Load CT and related RTSTRUCT data.&lt;/li>
+&lt;li>Visualize RTSTRUCTs as colored CSOs.&lt;/li>
+&lt;li>Visualize RTDOSE as a colored overlay.&lt;/li>
+&lt;li>Show labels next to each RTSTRUCT contour.
+We use the &lt;code>ExtractRTStruct&lt;/code>module for this example.&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>DICOM RT (Radiotherapy)&lt;/strong> files are essential in radiotherapy treatment planning. They include:&lt;/p></description></item></channel></rss>
