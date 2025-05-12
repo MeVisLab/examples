@@ -157,7 +157,7 @@ In case you want the same dataset to be visualized in multiple viewers, the modu
 
 ![Initial SoView2D](/images/tutorials/basicmechanics/SoView2D_1.png "Initial SoView2D")
 
-Whenever you are using the `SoView2D` module to visualize a 2D dataset, you need to add a `View2DExtensions` module and for example a `SoRenderArea` module. Without the `View2DExtensions` module, interctions like scrolling through slices or changing the window and level settings will not be possible.
+Whenever you are using the `SoView2D` module to visualize a 2D dataset, you need to add a `View2DExtensions` module and for example a `SoRenderArea` module. Without the `View2DExtensions` module, interactions like scrolling through slices or changing the window and level settings will not be possible.
 
 By default, you will see your images in a single viewer the same way as if you use the `View2D` module. The *number of columns* is defined as *1* by default. If you now change the *Number of Slices* to something like *3*, you will see 3 viewers shown in 1 column. As we can only connect one dataset, this network cannot display multiple series at the same time.
 
@@ -171,7 +171,7 @@ By default, the module shows consecutive slices with a slice step size *1*. If y
 
 ![Not existing slices](/images/tutorials/basicmechanics/SoView2D_4.png "Not existing slices")
 
-You are also able to define a slab size. This means the depth of the slab, you can either use the blend mode *Maximum* or *Blend*.
+You are also able to define a slab size. This means the depth of the slab. You can either use the blend mode *Maximum* or *Blend*.
 
 ## Exercise
 You can play around with the different `SoViewportRegion` modules to create your own layouts by setting the values a little different.
