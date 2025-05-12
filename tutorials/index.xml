@@ -237,7 +237,7 @@ Project Wizard, which you find under &lt;i>[
 &lt;ul>
 &lt;li>Divide the render area into multiple regions.&lt;/li>
 &lt;li>Assign different content to each region.&lt;/li>
-&lt;li>Use alternative methods, such as SoView2D, when applicable.&lt;/li>
+&lt;li>Use alternative methods, such as &lt;code>SoView2D&lt;/code>, when applicable.&lt;/li>
 &lt;/ul>
 &lt;h2 id="prepare-your-network">Prepare your network&lt;/h2>
 &lt;h3 id="displaying-three-images-in-one-panel">Displaying three images in one panel&lt;/h3>
