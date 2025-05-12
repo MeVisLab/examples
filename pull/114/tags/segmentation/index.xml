@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Segmentation on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/114/tags/segmentation/</link><description>Recent content in Segmentation on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 16 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/114/tags/segmentation/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 3: Region Growing</title><link>https://mevislab.github.io/examples/pull/114/tutorials/image_processing/image_processing3/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/114/tutorials/image_processing/image_processing3/</guid><description>&lt;h1 id="example-3-region-growing">Example 3: Region Growing&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/114/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=nQV2o_3BcJI" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/nQV2o_3BcJI/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=nQV2o_3BcJI" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>A very simple approach to segment parts of an image is the region growing method. A general explanation can be found &lt;a href="%22https://en.wikipedia.org/wiki/Region_growing%22">here&lt;/a>.&lt;/p>
+&lt;p>In this example, you will segment the brain of an image and show the segmentation results as an overlay on the original image.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>Add a &lt;code>LocalImage&lt;/code> module to your workspace and select load &lt;em>$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm&lt;/em>. Add a &lt;code>View2D&lt;/code> module and connect both as seen below.&lt;/p></description></item><item><title>Example 3: Segment persons in webcam videos</title><link>https://mevislab.github.io/examples/pull/114/tutorials/thirdparty/pytorch/pytorchexample3/</link><pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/114/tutorials/thirdparty/pytorch/pytorchexample3/</guid><description>&lt;h1 id="example-3-segment-persons-in-webcam-videos">Example 3: Segment persons in webcam videos&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>This tutorial is based on &lt;a href="https://mevislab.github.io/examples/pull/114/tutorials/thirdparty/opencv/thirdpartyexample2" title="Example 2: Face Detection with OpenCV">Example 2: Face Detection with OpenCV&lt;/a>. You can re-use some of the scripts already developed in the other tutorial.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;p>Add the macro module developed in the previous example to your workspace.&lt;/p>
+&lt;p>&lt;p class="page-image">
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/pull/114/images/tutorials/thirdparty/pytorch_example3_1.png" title="WebCamTest module">&lt;img id="WebCamTest module" class="img-fluid rounded" src="https://mevislab.github.io/examples/pull/114/images/tutorials/thirdparty/pytorch_example3_1.png" alt="WebCamTest module" title="WebCamTest module" />&lt;/a>
+ &lt;figcaption class="figure-caption">WebCamTest module&lt;/figcaption>
+&lt;/p>
+&lt;/p>
+&lt;p>Open the internal network of the module via middle mouse button 
+
+
+
+&lt;img width="22px" src="https://mevislab.github.io/examples/pull/114/images/mmb.svg" alt="Middle Mouse Button / Mouse Wheel" />
+ and right click 
+
+
+&lt;img width="22px" src="https://mevislab.github.io/examples/pull/114/images/rmb.svg" alt="Right Mouse Button" />
+
+ on the tab of the workspace showing the internal network. Select &lt;em>Show Enclosing Folder&lt;/em>.&lt;/p></description></item></channel></rss>
