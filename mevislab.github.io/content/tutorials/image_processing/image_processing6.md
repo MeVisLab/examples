@@ -128,7 +128,7 @@ The following figure shows the network and the result:
 ### Visualizing RTDOSE as a Color Overlay Using LUT
 We now ant to show the *RTDOSE* data as provided for the patient as a semi-transparent overlay.
 
-Now we need to add another `DicomImportExtraOutput` module to import multiple DICOM objects. You have to select the correct index for the exampleIn this case, we select index 4 for the *RTDOSE* 199*115*147*1 data. Add a `MinMaxScan` module to scan the input image and calculate the minimum and maximum values of the image. Connect it with the `DicomImportExtraOutput` module.
+Now we need to add another `DicomImportExtraOutput` module to import multiple DICOM objects. You have to select the correct index for the example. In this case, we select index 4 for the *RTDOSE* 199*115*147*1 data. Add a `MinMaxScan` module to scan the input image and calculate the minimum and maximum values of the image. Connect it with the `DicomImportExtraOutput` module.
 
 ![Importing RTDOSE Data and Applying MinMaxScan for Image Normalization](/images/tutorials/image_processing/minmaxscan.png "Importing RTDOSE Data and Applying MinMaxScan for Image Normalization")
 
@@ -152,7 +152,7 @@ Now open `SoLUTEditor` module panel, go to *Range*, *Update Range From Histogram
 
 ![SoLUTEditor Panel](/images/tutorials/image_processing/solut.png "SoLUTEditor Panel")
 
-In the same panel from on tab *Editor*, change the colors as shown in the figure: 
+In the same panel, on tab *Editor*, change the colors as shown in the figure: 
 
 ![SoLUTEditor Panel Editior](/images/tutorials/image_processing/editior.png " SoLUTEditor Panel Editior")
 
