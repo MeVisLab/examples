@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Assimp on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/115/tags/assimp/</link><description>Recent content in Assimp on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:56:33 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/115/tags/assimp/index.xml" rel="self" type="application/rss+xml"/><item><title>assimp</title><link>https://mevislab.github.io/examples/pull/115/tutorials/thirdparty/assimp/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/115/tutorials/thirdparty/assimp/</guid><description>&lt;h1 id="assimp">Asset-Importer-Lib (assimp)&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>&lt;a href="http://www.assimp.org" title="assimp" target="_blank" rel="noopener">Assimp&lt;/a> (Asset-Importer-Lib) is a library to load and process geometric scenes from various 3D data formats.&lt;/p>
+&lt;p>This chapter provides some examples of how 3D formats can be imported into MeVisLab. In general you always need a &lt;code>SoSceneLoader&lt;/code> module. The &lt;code>SoSceneLoader&lt;/code> allows to load meshes as Open Inventor points/lines/triangles/faces using the Open Asset Import Library.&lt;/p>
+&lt;p>&lt;p class="page-image">
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/pull/115/images/tutorials/thirdparty/SoSceneLoader.png" title="SoSceneLoader">&lt;img id="SoSceneLoader" class="img-fluid rounded" src="https://mevislab.github.io/examples/pull/115/images/tutorials/thirdparty/SoSceneLoader.png" alt="SoSceneLoader" title="SoSceneLoader" />&lt;/a>
+ &lt;figcaption class="figure-caption">SoSceneLoader&lt;/figcaption>
+&lt;/p>
+&lt;/p>
+&lt;p>You can also use the &lt;code>SoSceneWriter&lt;/code> module to export your 3D scenes from MeVisLab into any of the output formats listed below.&lt;/p></description></item><item><title>Example 1: 3D Printing in MeVisLab</title><link>https://mevislab.github.io/examples/pull/115/tutorials/thirdparty/assimp/assimpexample1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/115/tutorials/thirdparty/assimp/assimpexample1/</guid><description>&lt;h1 id="example-1-3d-printing-in-mevislab">Example 1: 3D Printing in MeVisLab&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/115/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=82ysCYNTyso" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/82ysCYNTyso/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=82ysCYNTyso" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>This example uses the assimp library to load a 3D file and save the file as *.stl for 3D printing.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>Add the modules &lt;code>SoSceneLoader&lt;/code>, &lt;code>SoBackground&lt;/code> and &lt;code>SoExaminerViewer&lt;/code> to your workspace and connect them as seen below.&lt;/p>
+&lt;p>&lt;p class="page-image">
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/pull/115/images/tutorials/thirdparty/assimp_example1.png" title="Example Network">&lt;img id="Example Network" class="img-fluid rounded" src="https://mevislab.github.io/examples/pull/115/images/tutorials/thirdparty/assimp_example1.png" alt="Example Network" title="Example Network" />&lt;/a>
+ &lt;figcaption class="figure-caption">Example Network&lt;/figcaption>
+&lt;/p>
+&lt;/p>
+&lt;h3 id="open-the-3d-file">Open the 3D file&lt;/h3>
+&lt;p>Select the file &lt;em>vtkCow.obj&lt;/em> from MeVisLab demo data directory. Open &lt;code>SoExaminerViewer&lt;/code> and inspect the scene. You will see a 3D cow.&lt;/p></description></item></channel></rss>
