@@ -1,6 +1,6 @@
 ---
 title: "Example 2: Macro modules and Module Interaction"
-date: 19-05-2025
+date: 2025-05-19
 draft: false
 weight: 370
 status: "OK"
@@ -18,12 +18,13 @@ menu:
 ## Macro Module 
 A macro module can be used to develop your own functionality in MeVisLab. You have two main options for how to use it:
 
-* **With Internal Networks**: Use a macro module to reuse a network of modules. For example, if you build a network that applies a specific image filter and you want to use this setup in multiple projects, you can wrap the entire network into a single macro module. This way, you don’t need to manually reconnect all the individual modules each time — you just use your macro module.You can see in the  left side of the image is the Internal network. You can see an example in [Basic Mechanics of MeVisLab (Example: Building a Contour Filter)](/tutorials/basicmechanisms#TutorialMacroModules).
+* **With Internal Networks**: Use a macro module to reuse a network of modules. For example, if you build a network that applies a specific image filter and you want to use this setup in multiple projects, you can wrap the entire network into a single macro module. This way, you don’t need to manually reconnect all the individual modules each time — you just use your macro module. You can see the internal network at the left side of the image below. You can see an example in [Basic Mechanics of MeVisLab (Example: Building a Contour Filter)](/tutorials/basicmechanisms#TutorialMacroModules).
 
 * **Without Internal Networks**: Use a macro module to add your own Python code. If MeVisLab is missing a specific functionality, you can write your own Python script and include it in a macro module.
- This allows you to extend the software with custom behavior that integrates smoothly into your project. You can see the right side of the image the python code.
+ This allows you to extend the software with custom behavior that integrates smoothly into your project. You can see the Python code at the right side of the image.
 
- The figure below is a Macro Module with Internal Processing and Python Interaction:
+
+You can combine both approaches: have a macro module containing a module network, and additionally Python code to add your own logic or functionality:
 
  ![Internal Processing and Python Interaction](/images/tutorials/basicmechanics/with.png "Internal Processing and Python Interaction")
 
@@ -40,7 +41,7 @@ It takes an existing network of modules or Python code. To the user, interacting
 * **Implementation:**
 Macro modules are primarily defined using the MeVisLab Definition Language (MDL) and often incorporate Python scripting for more dynamic behavior. You don't need to write C++ code to create a macro module.
 * **User Interface:**
-  You can define your own User Interface for macro modules.
+  You can define your own User Interface for macro modules using MDL.
 * **Scope:**
 Macro modules can be either global (available in all your MeVisLab projects) or local (specific to the current network you are working on).
 
@@ -59,24 +60,24 @@ A Local Macro in MeVisLab is a macro module that exists only within the context 
 *	A global macro is listed in the Modules panel and module search.
    
 {{<alert class="info" caption="Info">}}
-Packages are the way MeVisLab organizes different development projects. You can organize zour own modules, test cases or C++ modules in a package.
+Packages are the way MeVisLab organizes different development projects. You can organize your own modules, test cases or C++ modules in a package.
 {{</alert>}} 
 
 ### Inputs, Outputs, and Fields:
-You can addd inputs and outputs to your macro module to connect it with the other modules:
+You can add inputs and outputs to your macro module to connect it with the other modules:
 * **Inputs:** These are connection points through which the module receives data from other modules. You define inputs in the *\*.script* file using the Input keyword. You can also define the type for each input.
 * **Outputs:** These are connection points through which the module sends processed data to other modules. You define outputs in the *\*.script* file using the Output keyword. You can also define the type for each output.
 
-You can also add fields to your macro module. Fields allow you to change parameters for your module or to see the values of results. Fields can also be added to the panel of the macro module so that the user can change them.
-* **Fields:** These are parameters that control the module's behavior, typically visible in the modules panel or in the Module Inspector. You define fields in the *\*.script* file using the Field keyword, specifying the data type, default value, and other properties.
-The below figure shows the input , outoutand feilds :
+You can add fields to your macro module. Fields allow you to change parameters for your module or to see the values of results. Fields can also be added to the panel of the macro module so that the user can change them.
+* **Fields:** These are parameters that control the module's behavior, typically visible in the module's panel or in the Module Inspector. You define fields in the *\*.script* file using the Field keyword, specifying the data type, default value, and other properties.
+The below figure shows the input, output and fields:
 ![Inputs, Outputs, and Fields](/images/tutorials/basicmechanics/fields.png "Inputs, Outputs, and Fields")
 
 ### Files Associated with a Macro Module:
 Macro modules typically contain the following files:
-* **Definition file (*\*.def*):** The module definition file contains the definition and information about the module like name, author, package, etc. **Defintion files are only available for global macro modules**.
+* **Definition file (*\*.def*):** The module definition file contains the definition and information about the module like name, author, package, etc. **Definition files are only available for global macro modules**.
 
-* **Script file (*\*.script*):** The script file defines inputs, outputs, fields and the user interface of the macro module. In case you want to add Python code, it includes the reference to the Python script file. The *\*.script* file allows you to define Python functions to be called for multiple situations.
+* **Script file (*\*.script*):** The script file defines inputs, outputs, fields and the user interface of the macro module. In case you want to add Python code, it includes the reference to the Python script file. The *\*.script* file allows you to define Python functions to be called on field changes and user interactions.
 
   * **Module Initialization**: You can add the *initCommand* to the *Commands* section and the given Python function is called whenever the module is added to the workspace or reloaded.
   * **Window creation**: You can add the *initCommand* to the *Window* section and the given Python function is called whenever the panel of the module is opened.
@@ -107,12 +108,14 @@ For an example see [Example 2.5.2: Module interactions via Python scripting](/tu
 
 * Files
 	*	(*\*.script*): Defines inputs, outputs, fields, and user interface.
-	*	(*\*.py*): Optional, contains Python code.
+	*	(*\*.py*): Contains Python code.
 	*	(*\*.def*): Definition file (only for global macros).
+  *	(*\*.mlab*): Stores the internal network of modules within the macro module.
+  * (*\*.mhelp*): Provides documentation or user assistance for the module.
 
 * Components
 	*	Inputs/Outputs: For connecting the module with other modules. 
 	*	Fields: Parameters for user control
 	*	Field Listeners: Run Python code when a field value changes
 
-* Package: are the way MeVisLab organizes different development projects. Required for global macros.
+* Packages: are the way MeVisLab organizes different development projects. Required for global macros.
