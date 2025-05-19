@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Region Growing on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/116/tags/region-growing/</link><description>Recent content in Region Growing on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:56:33 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/116/tags/region-growing/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 3: Region Growing</title><link>https://mevislab.github.io/examples/pull/116/tutorials/image_processing/image_processing3/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/116/tutorials/image_processing/image_processing3/</guid><description>&lt;h1 id="example-3-region-growing">Example 3: Region Growing&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/116/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=nQV2o_3BcJI" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/nQV2o_3BcJI/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=nQV2o_3BcJI" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>A very simple approach to segment parts of an image is the region growing method. A general explanation can be found &lt;a href="%22https://en.wikipedia.org/wiki/Region_growing%22">here&lt;/a>.&lt;/p>
+&lt;p>In this example, you will segment the brain of an image and show the segmentation results as an overlay on the original image.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>Add a &lt;code>LocalImage&lt;/code> module to your workspace and select load &lt;em>$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm&lt;/em>. Add a &lt;code>View2D&lt;/code> module and connect both as seen below.&lt;/p></description></item></channel></rss>
