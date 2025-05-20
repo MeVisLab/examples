@@ -71,6 +71,9 @@ You can add inputs and outputs to your macro module to connect it with the other
 You can add fields to your macro module. Fields allow you to change parameters for your module or to see the values of results. Fields can also be added to the panel of the macro module so that the user can change them.
 * **Fields:** These are parameters that control the module's behavior, typically visible in the module's panel or in the Module Inspector. You define fields in the *\*.script* file using the *Field* keyword, specifying the data type, default value, and other properties.
 The below figure shows the input, output and fields:
+
+![Inputs, Outputs, and Fields](/images/tutorials/basicmechanics/fields.png "Inputs, Outputs, and Fields")
+
 You have two options when adding fields to your macro module:
 
 1. **Define your own fields:**  
