@@ -80,7 +80,7 @@ You have two options when adding fields to your macro module:
   You can create new fields by specifying their name, type, and default value in the *\*.script* file. This allows you to provide custom parameters for your macro module, tailored to your specific needs.
 
 2. **Reuse fields from the internal network:**  
-  Instead of defining a new field, you can expose an existing field from one of the modules inside your macro module's internal network. To do this, you reference the `internalName` of the internal field you want to reuse. This makes the internal field accessible at the macro module level, allowing users to interact with it directly without duplicating parameters.
+  Instead of defining a new field, you can expose an existing field from one of the modules inside your macro module's internal network. To do this, you reference the *internalName* of the internal field you want to reuse. This makes the internal field accessible at the macro module level, allowing users to interact with it directly without duplicating parameters.
 
 ### Files Associated with a Macro Module:
 Macro modules typically contain the following files:
