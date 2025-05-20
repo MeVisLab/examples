@@ -86,7 +86,8 @@ Macro modules typically contain the following files:
 
   * **Field changes**: You can also react on any changes of fields in your module and create Field Listeners. See below for details.
 * **Python file (*\*.py*):** *(Optional)*: The Python file contains the Python code that is used by the module. You can add Python functions to fields or UI elements to react on user interactions in the *\*.script* file.
-
+* **MeVisLab network file (*\*.mlab*):** Stores the internal network of modules that make up the macro module. This file essentially defines the macro module's internal structure and connections.
+* **Macro help file (*\*.help*):***(Optional)*:Provides help documentation for the macro module. This file is used to display information to users about the module’s functionality, usage, and any specific instructions.
 ### Field Listeners:
 Field listeners are mechanisms to execute Python code automatically when the value of a field changes. This allows you to create dynamic responses to user interactions in the module's parameter panel.
 
