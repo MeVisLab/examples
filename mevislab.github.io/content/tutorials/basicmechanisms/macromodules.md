@@ -65,13 +65,19 @@ Packages are the way MeVisLab organizes different development projects. You can 
 
 ### Inputs, Outputs, and Fields:
 You can add inputs and outputs to your macro module to connect it with the other modules:
-* **Inputs:** These are connection points through which the module receives data from other modules. You define inputs in the *\*.script* file using the Input keyword. You can also define the type for each input.
-* **Outputs:** These are connection points through which the module sends processed data to other modules. You define outputs in the *\*.script* file using the Output keyword. You can also define the type for each output.
+* **Inputs:** These are connection points through which the module receives data from other modules. You define inputs in the *\*.script* file using the *Input* keyword. You can also define the type for each input.
+* **Outputs:** These are connection points through which the module sends processed data to other modules. You define outputs in the *\*.script* file using the *Output* keyword. You can also define the type for each output.
 
 You can add fields to your macro module. Fields allow you to change parameters for your module or to see the values of results. Fields can also be added to the panel of the macro module so that the user can change them.
-* **Fields:** These are parameters that control the module's behavior, typically visible in the module's panel or in the Module Inspector. You define fields in the *\*.script* file using the Field keyword, specifying the data type, default value, and other properties.
+* **Fields:** These are parameters that control the module's behavior, typically visible in the module's panel or in the Module Inspector. You define fields in the *\*.script* file using the *Field* keyword, specifying the data type, default value, and other properties.
 The below figure shows the input, output and fields:
-![Inputs, Outputs, and Fields](/images/tutorials/basicmechanics/fields.png "Inputs, Outputs, and Fields")
+You have two options when adding fields to your macro module:
+
+1. **Define your own fields:**  
+  You can create new fields by specifying their name, type, and default value in the *\*.script* file. This allows you to provide custom parameters for your macro module, tailored to your specific needs.
+
+2. **Reuse fields from the internal network:**  
+  Instead of defining a new field, you can expose an existing field from one of the modules inside your macro module's internal network. To do this, you reference the `internalName` of the internal field you want to reuse. This makes the internal field accessible at the macro module level, allowing users to interact with it directly without duplicating parameters.
 
 ### Files Associated with a Macro Module:
 Macro modules typically contain the following files:
@@ -79,15 +85,15 @@ Macro modules typically contain the following files:
 
 * **Script file (*\*.script*):** The script file defines inputs, outputs, fields and the user interface of the macro module. In case you want to add Python code, it includes the reference to the Python script file. The *\*.script* file allows you to define Python functions to be called on field changes and user interactions.
 
-  * **Module Initialization**: You can add the *initCommand* to the *Commands* section and the given Python function is called whenever the module is added to the workspace or reloaded.
+  * **Module initialization**: You can add the *initCommand* to the *Commands* section and the given Python function is called whenever the module is added to the workspace or reloaded.
   * **Window creation**: You can add the *initCommand* to the *Window* section and the given Python function is called whenever the panel of the module is opened.
   * **User interaction**: You can add commands to any user interface element like *Buttons* to call Python functions on user interactions with this element. The image below shows you the user interface and the internal interface:
   ![user interface and the internal interface](/images/tutorials/basicmechanics/mycountourFilter.png "user interface and the internal interface")
 
   * **Field changes**: You can also react on any changes of fields in your module and create Field Listeners. See below for details.
-* **Python file (*\*.py*):** *(Optional)*: The Python file contains the Python code that is used by the module. You can add Python functions to fields or UI elements to react on user interactions in the *\*.script* file.
-* **MeVisLab network file (*\*.mlab*):** Stores the internal network of modules that make up the macro module. This file essentially defines the macro module's internal structure and connections.
-* **Macro help file (*\*.help*):***(Optional)*:Provides help documentation for the macro module. This file is used to display information to users about the module’s functionality, usage, and any specific instructions.
+* **Python file (*\*.py*):** *(Optional)* The Python file contains the Python code that is used by the module. You can add Python functions to fields or UI elements to react on user interactions in the *\*.script* file.
+* **MeVisLab network file (*\*.mlab*):** *(Optional)* Stores the internal network of modules that make up the macro module. This file essentially defines the macro module's internal structure and connections.
+* **Macro help file (*\*.help*):** *(Optional)* Provides help documentation for the macro module. This file is used to display information to users about the module’s functionality, usage, and any specific instructions.
 ### Field Listeners:
 Field listeners are mechanisms to execute Python code automatically when the value of a field changes. This allows you to create dynamic responses to user interactions in the module's parameter panel.
 
@@ -96,7 +102,7 @@ You create field listeners within the *Commands* sections of the *\*.script* fil
 For an example see [Example 2.5.2: Module interactions via Python scripting](/tutorials/basicmechanisms/macromodules/scriptingexample2/).
 
 ## Summary
-* Macro Module: a custom block in MeVisLab used to group a network of modules or custom Python code into a single reusable unit. 
+* Macro modules allow you to add your own functionality to MeVisLab. You can add inputs and outputs and connect existing modules to your new macro module.
 
 * Benefits:
 	* Organized structure.
