@@ -18,7 +18,7 @@ menu:
 ## What is a Macro Module? 
 A macro module can be used to develop your own functionality in MeVisLab.
 
-Like all other standard MeVisLab modules, macro modules have a defined interface with inputs, outputs, and parameters (fields). This interface acts as the *face* of the macro module, allowing it to interact with other modules in a larger network. They hide the complexity of the internal network or Python code, presenting a more simplified and manageable unit to the user.
+Like all other standard MeVisLab modules, macro modules have a defined interface with inputs, outputs, and parameters (fields). This interface allows it to interact with other modules in a larger network. They hide the complexity of the internal network or Python code, presenting a more simplified and manageable unit to the user.
 
 Macro modules are primarily defined using the *MeVisLab Definition Language (MDL)* and often incorporate Python scripting for added functionality, especially for dynamic user interfaces. Importantly, you don't need to write C++ code to create them.
 
@@ -30,13 +30,13 @@ You have two main options for developing a macro module:
 
 An example can be found in chapter [Basic Mechanics of MeVisLab (Example: Building a Contour Filter)](/tutorials/basicmechanisms#TutorialMacroModules).
 
-* **Without Internal Networks**: Use a macro module to add your own Python code. If MeVisLab is missing a specific functionality, you can write your own Python script execute it in a macro module. This allows you to extend the software with custom behavior that integrates smoothly into your project. You can see the Python code at the right side of the image.
+* **Without Internal Networks**: Use a macro module to add your own Python code. If MeVisLab is missing a specific functionality, you can write your own Python script and execute it it in a macro module. This allows you to extend the software with custom behavior that integrates smoothly into your project. You can see the Python code at the right side of the image below.
 
-Below image shows these two options. The left side encapsulates a network of three modules into one macro module. The right side shows a macro module without internal network, only having your custom Python script.
+The image shows these two options. The left side encapsulates a network of three modules into one macro module. The right side shows a macro module without an internal network, only containing your custom Python script.
 
-A typical example for macro modules without internal network is the execution of a pre-trained AI model on an input ML image, see [Example 2: Brain Parcellation using PyTorch](/tutorials/thirdparty/pytorch/pytorchexample2/) for details.
+A typical example for macro modules without an internal network is the execution of a pre-trained AI model on an input ML image, see [Example 2: Brain Parcellation using PyTorch](/tutorials/thirdparty/pytorch/pytorchexample2/) for details.
 
-It is also possible to combine both approaches, means you can add internal networks and write Python code for user interaction and processing.
+It is also possible to combine both approaches. You can add internal networks and additionally write Python code for user interaction and processing.
 
  ![Internal Processing and Python Interaction](/images/tutorials/basicmechanics/with.png "Internal Processing and Python Interaction")
 
@@ -65,7 +65,7 @@ A Local Macro module in MeVisLab exists within the context of the current networ
 *	A local macro can only be reused elsewhere by copying it into another folder with your network file.
 
 #### Global Macro Module:
- A global macro module is stored in a central location within your MeVisLab installation. The directory is called Package. Once created a gloval macro module, it appears in the module browser and can be used in any MeVisLab network you open. See [Package creation](/tutorials/basicmechanisms/macromodules/package/) for details about Packages.
+ A global macro module is stored in a central location within your MeVisLab installation. The directory is called Package. Once a global macro module is created, it appears in the module browser and can be used in any MeVisLab network you open. See [Package creation](/tutorials/basicmechanisms/macromodules/package/) for details about Packages.
 
  Local macro modules can be converted to global macro modules. MeVisLab then adds a definition file containing the name and package of the module and copies the content to your selected package directory. Package directories are loaded automatically when you start MeVisLab in case they have been added to your user packages via main menu {{< menuitem "Edit" "Preferences" "Packages" >}}.
 
@@ -82,21 +82,17 @@ Macro modules can have input and output connectors that receive data and/or prov
 They are typically defined in the macro module's *\*.script* file.
 
 #### Inputs:
-Input connectors accept data or control signals from other modules in the network. These inputs define what information the encapsulated network or Python script within the macro module receives and processes.
+Input connectors accept data from other modules in the network. These inputs define what information the encapsulated network or Python script within the macro module receives and processes.
 
-Data input connectors, often represented by triangles for ML images, half-circles for Open Inventor scenes, or squares for base objects, receive data objects from other modules. The type of data an input accepts is determined by the modules within the macro that are connected to this input.
-
-Parameter inputs (Fields) allow users to control the behavior of the internal network. Parameter inputs appear in the module's panel and in the Module Inspector. They can be connected to the Parameters/Fields of other modules or manually adjusted by the user.
+Data input connectors, represented by triangles for ML images, half-circles for Open Inventor scenes, or squares for base objects, receive data objects from other modules. The type of data an input accepts is determined by the modules within the macro that are connected to this input.
 
 #### Outputs:
 Output connectors provide the results of the processing performed by their internal networks. These outputs can then be connected to the inputs of other modules.
 
 Data Outputs (triangle, half-circle, square) provide the processed data from the internal network or Python file. The type of data an output provides depends on the outputs of the modules within the macro that are connected to this output.
 
-Parameter Outputs (Fields) allow other modules to read values or states from within the encapsulated network or Python file. 
-
 #### Fields:
-Fields are parameters controlling the internal behaviour of a macro module or provide results of the internal processing. 
+Parameter Fields allow users to control the behavior of the internal network. They can be connected to the parameters/fields of other modules or manually adjusted by the user. They also allow other modules to read values or states from within the encapsulated network or Python file. 
 
 You have two options when adding fields to your macro module:
 
@@ -134,8 +130,8 @@ For an example see [Example 2.5.2: Module interactions via Python scripting](/tu
 
 ## Summary
 * Macro modules allow you to add your own functionality to MeVisLab. You can add inputs and outputs and connect existing modules to your new macro module.
-* Macro modules may contain an internal network to encapsulate this functionality or Python code to implement your own functionalities to MeVisLab
+* Macro modules may contain an internal network to encapsulate this functionality or Python code to implement your own functionalities to MeVisLab.
 * Benefits are encapsulation, reusability, abtraction of complexity and the possibility to add your own functionality to MeVisLab.
-* There are different types of macro modules.
-	*	Local macroi modules are Only available in the directory of your current network
+* There are different types of macro modules:
+	*	Local macro modules are only available in the directory of your current network
 	*	Global macro modules are available in all projects but must be part of a package
