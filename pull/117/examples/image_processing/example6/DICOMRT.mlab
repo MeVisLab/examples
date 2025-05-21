@@ -19,7 +19,6 @@ module DicomImport {
   }
   fields {
     instanceName = DicomImport
-    source = C:/tmp/DICOM
     files = ""
     inputMode = Directory
     enableRecursiveSearch = TRUE
