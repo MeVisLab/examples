@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutorial on MeVisLab Examples</title><link>https://mevislab.github.io/examples/tags/tutorial/</link><description>Recent content in Tutorial on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 05 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/tags/tutorial/index.xml" rel="self" type="application/rss+xml"/><item><title>Introduction to MeVisLab</title><link>https://mevislab.github.io/examples/introduction/introduction/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/introduction/introduction/</guid><description>&lt;h2 id="tutorial_introduction">Tutorial Introduction&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tutorial on MeVisLab Examples</title><link>https://mevislab.github.io/examples/tags/tutorial/</link><description>Recent content in Tutorial on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/tags/tutorial/index.xml" rel="self" type="application/rss+xml"/><item><title>Introduction to MeVisLab</title><link>https://mevislab.github.io/examples/introduction/introduction/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/introduction/introduction/</guid><description>&lt;h2 id="tutorial_introduction">Tutorial Introduction&lt;/h2>
 &lt;p>Welcome to &lt;a href="https://mevislab.github.io/examples/glossary/#mevislab">MeVisLab&lt;/a>!&lt;/p>
 &lt;p>More than 20 years of experience and the continuous implementation of adaptations made MeVisLab one of
 the most powerful development platforms for medical image processing.
@@ -98,24 +98,12 @@ World coordinates also refer to the patient axes. They are:&lt;/p>
 &lt;p>&lt;p class="page-image">
  &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/visualization/V2_00.png" title="World Coordinates in Context of the Human Body">&lt;img id="World Coordinates in Context of the Human Body" class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/visualization/V2_00.png" alt="World Coordinates in Context of the Human Body" title="World Coordinates in Context of the Human Body" />&lt;/a>
  &lt;figcaption class="figure-caption">World Coordinates in Context of the Human Body&lt;/figcaption>
-&lt;/p></description></item><item><title>Example 2: Macro modules and Module Interaction</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/</guid><description>&lt;h1 id="TutorialChapter6">Example 2: Macro modules&lt;/h1>
-&lt;h2 id="macro-modules-and-module-interactions-via-user-interface-and-python-scripting">Macro modules and Module Interactions via User Interface and Python Scripting&lt;/h2>
-&lt;p>MeVisLab provides different types of modules, which can be distinguished by their color. The brown modules are called Macro modules. Macro modules condense a whole network into one module. You can open the internal network by pressing the middle mouse button 
-
-
-
-&lt;img width="22px" src="https://mevislab.github.io/examples/images/mmb.svg" alt="Middle Mouse Button / Mouse Wheel" />
- or via right mouse click 
-
-
-&lt;img width="22px" src="https://mevislab.github.io/examples/images/rmb.svg" alt="Right Mouse Button" />
-
- and select &lt;i>[
- 
- Help
- &amp;rarr; 
- Show Internal Network
-]&lt;/i>. Macro modules provide the possibility to create customized user interfaces and Python interactions.&lt;/p></description></item><item><title>Example 2.1: Package Creation</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/package/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/package/</guid><description>&lt;h1 id="example-21-package-creation">Example 2.1: Package creation&lt;/h1>
+&lt;/p></description></item><item><title>Example 2: Macro modules and Module Interaction</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/</link><pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/</guid><description>&lt;h1 id="TutorialChapter6">Example 2: Macro modules&lt;/h1>
+&lt;h2 id="macro-module">Macro Module&lt;/h2>
+&lt;p>A macro module can be used to develop your own functionality in MeVisLab. You have two main options for how to use it:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>With Internal Networks&lt;/strong>: Use a macro module to reuse a network of modules. For example, if you build a network that applies a specific image filter and you want to use this setup in multiple projects, you can wrap the entire network into a single macro module. This way, you don’t need to manually reconnect all the individual modules each time — you just use your macro module. You can see the internal network at the left side of the image below. You can see an example in &lt;a href="https://mevislab.github.io/examples/tutorials/basicmechanisms#TutorialMacroModules">Basic Mechanics of MeVisLab (Example: Building a Contour Filter)&lt;/a>.&lt;/p></description></item><item><title>Example 2.1: Package Creation</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/package/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/package/</guid><description>&lt;h1 id="example-21-package-creation">Example 2.1: Package creation&lt;/h1>
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
  &lt;div>
  &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=1wrGsYtAs3g" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/1wrGsYtAs3g/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=1wrGsYtAs3g" target="_blank">YouTube&lt;/a>.
