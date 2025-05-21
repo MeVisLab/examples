@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Workspace on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/117/tags/workspace/</link><description>Recent content in Workspace on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:56:33 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/117/tags/workspace/index.xml" rel="self" type="application/rss+xml"/><item><title>Introduction to MeVisLab</title><link>https://mevislab.github.io/examples/pull/117/introduction/introduction/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/introduction/introduction/</guid><description>&lt;h2 id="tutorial_introduction">Tutorial Introduction&lt;/h2>
+&lt;p>Welcome to &lt;a href="https://mevislab.github.io/examples/pull/117/glossary/#mevislab">MeVisLab&lt;/a>!&lt;/p>
+&lt;p>More than 20 years of experience and the continuous implementation of adaptations made MeVisLab one of
+the most powerful development platforms for medical image processing.
+Several applications and their prototypes are based on and could be realized because of
+MeVisLab, including software assistants for neuro-imaging, dynamic image
+analysis, surgery planning, and cardiovascular analysis.&lt;/p>
+&lt;p>MeVisLab is a development environment for rapid prototyping and product
+development of medical and industrial imaging applications. It includes
+a &lt;a href="https://mevislab.github.io/examples/pull/117/glossary/#mevislab-sdk">&lt;em>Software Development Kit (SDK)&lt;/em>&lt;/a> and an &lt;a href="https://mevislab.github.io/examples/pull/117/glossary/#mevislab-apk">&lt;em>ApplicationBuilder&lt;/em>&lt;/a> for deploying your applications to end-customers.&lt;/p></description></item></channel></rss>

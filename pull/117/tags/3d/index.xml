@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>3D on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/117/tags/3d/</link><description>Recent content in 3D on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 08 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/117/tags/3d/index.xml" rel="self" type="application/rss+xml"/><item><title>Chapter II: Open Inventor</title><link>https://mevislab.github.io/examples/pull/117/tutorials/openinventor/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/openinventor/</guid><description>&lt;h1 id="TutorialOpenInventorModules">Open Inventor modules&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In total, there are three types of modules:&lt;/p>
+&lt;ul>
+&lt;li>blue ML modules&lt;/li>
+&lt;li>brown macro modules&lt;/li>
+&lt;li>green Open Inventor modules&lt;/li>
+&lt;/ul>
+&lt;p>The names of Open Inventor modules start with the prefix &lt;code>So\*&lt;/code> (for Scene Objects). Open Inventor modules process and render 3D scene objects and enable image interactions. Scene objects are transmitted using the semi-circle shaped input and output connectors. With the help of these modules, Open Inventor scenes can be implemented.&lt;/p></description></item><item><title>Example 1: Open Inventor Objects</title><link>https://mevislab.github.io/examples/pull/117/tutorials/openinventor/openinventorobjects/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/openinventor/openinventorobjects/</guid><description>&lt;h1 id="TutorialOpenInventorModules">Example 1: Open Inventor Objects&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=aFCK_aqmPsg" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/aFCK_aqmPsg/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=aFCK_aqmPsg" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example we like to construct an Open Inventor scene in which we display three 3D objects of different color and shape.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="TutorialGenerateOpenInventorObjects">Generating Open Inventor Objects&lt;/h3>
+&lt;p>First, add the modules &lt;code>SoExaminerViewer&lt;/code> and &lt;code>SoCone&lt;/code> to the workspace and connect both modules as shown. The module &lt;code>SoCone&lt;/code> creates a cone shaped object, which can be displayed in the Viewer &lt;code>SoExaminerViewer&lt;/code>.&lt;/p></description></item><item><title>Example 2: Mouse interactions in Open Inventor</title><link>https://mevislab.github.io/examples/pull/117/tutorials/openinventor/mouseinteractions/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/openinventor/mouseinteractions/</guid><description>&lt;h1 id="TutorialVisualizationExample5">Example 2: Mouse interactions in Open Inventor&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=Ye5lOHDWcRo" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/Ye5lOHDWcRo/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=Ye5lOHDWcRo" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example, we implement some image or object interactions. We will create a 3D scene, in which we display a cube and change its size using the mouse. We also get to know another viewer, the module &lt;code>SoExaminerViewer&lt;/code>. This viewer is important. It enables the rendering of Open Inventor scenes and allows interactions with the Open Inventor scenes.&lt;/p></description></item><item><title>Example 3: Camera Interactions in Open Inventor</title><link>https://mevislab.github.io/examples/pull/117/tutorials/openinventor/camerainteraction/</link><pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/openinventor/camerainteraction/</guid><description>&lt;h1 id="CameraInteraction">Example 3: Camera Interactions in Open Inventor&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=J6qtN8QfPEc" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/J6qtN8QfPEc/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=J6qtN8QfPEc" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example, we are learning the basic principles of camera interactions in Open Inventor. We will show the difference between a &lt;code>SoRenderArea&lt;/code> and a &lt;code>SoExaminerViewer&lt;/code> and use different modules of the &lt;code>SoCamera*&lt;/code> group.&lt;/p>
+&lt;h2 id="the-sorenderarea-module">The &lt;code>SoRenderArea&lt;/code> module&lt;/h2>
+&lt;p>The module &lt;code>SoRenderArea&lt;/code> is a simple renderer for Open Inventor scenes. It offers functionality to record movies and to create snapshots, but does not include an own camera or light.&lt;/p></description></item><item><title>Chapter III: Visualization</title><link>https://mevislab.github.io/examples/pull/117/tutorials/visualization/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/visualization/</guid><description>&lt;h1 id="TutorialVisualization">Visualization in MeVisLab&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Images and data objects can be rendered in 2D and 3D and interacted with in several ways using a set of tools available through MeVisLab.
+In this chapter in particular, we will focus on simple image interaction with two- and three-dimensional visualizations.&lt;/p>
+
+&lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+ &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+ &lt;/symbol>
+ &lt;symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+ &lt;/symbol>
+ &lt;symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+ &lt;/symbol>
+ &lt;symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+ &lt;/symbol>
+&lt;/svg>
+
+&lt;div class="alert alert-primary alert-info d-flex align-items-center" role="alert">
+ &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:">&lt;use xlink:href="#info-fill"/>&lt;/svg>
+ &lt;div>
+ &lt;b>Info:&amp;nbsp;&lt;/b>
+ Not only pixel- and voxel-based data, but also scene objects and 3D scenes can be visualized. See our tutorial on &lt;a href="https://mevislab.github.io/examples/pull/117/tutorials/openinventor#TutorialOpenInventorModules">OpenInventorModules&lt;/a> for further information.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="view2d-and-view3d">View2D and View3D&lt;/h2>
+&lt;p>An easy way to display data and images in 2D and 3D is by using the Modules &lt;code>View2D&lt;/code> and &lt;code>View3D&lt;/code>. What can be done with these viewers?&lt;/p></description></item><item><title>Example 4: Display 2D images in Open Inventor SoRenderArea</title><link>https://mevislab.github.io/examples/pull/117/tutorials/visualization/visualizationexample4/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/visualization/visualizationexample4/</guid><description>&lt;h1 id="TutorialVisualizationExample4">Example 4: Display images converted to Open Inventor scene objects&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=WaD6zuvVNek" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/WaD6zuvVNek/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=WaD6zuvVNek" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In the previous example you learned how to use the module &lt;code>SoView2DOverlay&lt;/code> together with a &lt;code>View2D&lt;/code>. MeVisLab provides a whole family of &lt;code>SoView2D*&lt;/code> modules (&lt;code>SoView2DOverlay&lt;/code>, &lt;code>SoView2DRectangle&lt;/code>, &lt;code>SoView2DGrid&lt;/code>, &amp;hellip;). All these modules create or interact with scene objects and are based on the module &lt;code>SoView2D&lt;/code>, which can convert a voxel-image into a scene object. In this example, you will get to know some members of the &lt;code>SoView2D&lt;/code>-family.&lt;/p></description></item><item><title>Example 5: Volume rendering and interactions</title><link>https://mevislab.github.io/examples/pull/117/tutorials/visualization/visualizationexample5/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/visualization/visualizationexample5/</guid><description>&lt;h1 id="TutorialVisualizationExample6">Example 5: Volume rendering and interactions&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=QViPqXs2LHc" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/QViPqXs2LHc/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=QViPqXs2LHc" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example we like to convert a scan of a head into a 3D scene-object. The scene-object allows to add some textures, interactions and animations.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>Implement the following network and open the image &lt;em>$(DemoDataPath)/BrainMultiModal/ProbandT1.tif&lt;/em>.&lt;/p>
+&lt;p>&lt;p class="page-image">
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/pull/117/images/tutorials/visualization/V6_01.png" title="SoGVRVolumeRenderer">&lt;img id="SoGVRVolumeRenderer" class="img-fluid rounded" src="https://mevislab.github.io/examples/pull/117/images/tutorials/visualization/V6_01.png" alt="SoGVRVolumeRenderer" title="SoGVRVolumeRenderer" />&lt;/a>
+ &lt;figcaption class="figure-caption">SoGVRVolumeRenderer&lt;/figcaption>
+&lt;/p>
+&lt;/p>
+&lt;p>The module &lt;code>SoGVRVolumeRenderer&lt;/code> allows volume rendering of 3D and 4D images.&lt;/p></description></item><item><title>Example 6: MeVis Path Tracer</title><link>https://mevislab.github.io/examples/pull/117/tutorials/visualization/visualizationexample6/</link><pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/visualization/visualizationexample6/</guid><description>&lt;h1 id="example-6-mevis-path-tracer">Example 6: MeVis Path Tracer&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://youtube.com/shorts/U23QH2Pvwew" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/U23QH2Pvwew/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;We have a Short video showing the possibilities of the &lt;b>MeVis Path Tracer&lt;/b> on &lt;a href="https://youtube.com/shorts/U23QH2Pvwew" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>The MeVis Path Tracer offers a Monte Carlo Path Tracing framework running on CUDA GPUs. It offers photorealistic rendering of volumes and meshes, physically based lightning with area lights and soft shadows and fully integrates into MeVisLab Open Inventor (camera, depth buffer, clipping planes, etc.).&lt;/p>
+
+&lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+ &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+ &lt;/symbol>
+ &lt;symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+ &lt;/symbol>
+ &lt;symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+ &lt;/symbol>
+ &lt;symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+ &lt;/symbol>
+&lt;/svg>
+
+&lt;div class="alert alert-primary alert-info d-flex align-items-center" role="alert">
+ &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Extra Infos:">&lt;use xlink:href="#info-fill"/>&lt;/svg>
+ &lt;div>
+ &lt;b>Extra Infos:&amp;nbsp;&lt;/b>
+ CUDA is a parallel computing platform and programming model created by NVIDIA. For further information, see &lt;a href="https://blogs.nvidia.com/blog/2012/09/10/what-is-cuda-2/" target="_blank" rel="noopener">NVIDIA website&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;div class="container">
+ 
+ 
+ &lt;div class="row row-cols-1 row-cols-sm-2 row-cols-md-5">
+ &lt;div class="col mt-5">
+ &lt;p class="page-image">
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/pull/117/images/tutorials/visualization/pathtracer/PathTracer1.png" title="PathTracer1">&lt;img src="https://mevislab.github.io/examples/pull/117/images/tutorials/visualization/pathtracer/PathTracer1.png" class="img-fluid" alt="PathTracer1">&lt;/a>
+ &lt;figcaption class="figure-caption">PathTracer1&lt;/figcaption>
+ &lt;/p></description></item><item><title>Example 6.1: Volume Rendering vs. Path Tracer</title><link>https://mevislab.github.io/examples/pull/117/tutorials/visualization/pathtracer/pathtracerexample1/</link><pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/visualization/pathtracer/pathtracerexample1/</guid><description>&lt;h1 id="example-61-volume-rendering-vs-path-tracer">Example 6.1: Volume Rendering vs. Path Tracer&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example you develop a network to show some differences between volume rendering and the MeVisLab Path Tracer. You will visualize the same scene using both 3D rendering techniques and some of the modules for path tracing.&lt;/p>
+
+&lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+ &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+ &lt;/symbol>
+ &lt;symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+ &lt;/symbol>
+ &lt;symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+ &lt;/symbol>
+ &lt;symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+ &lt;/symbol>
+&lt;/svg>
+
+&lt;div class="alert alert-primary alert-warning d-flex align-items-center" role="alert">
+ &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Attention:">&lt;use xlink:href="#warning-fill"/>&lt;/svg>
+ &lt;div>
+ &lt;b>Attention:&amp;nbsp;&lt;/b>
+ &lt;p>The MeVis Path Tracer requires an NVIDIA graphics card with CUDA support. In order to check your hardware, open MeVisLab and add a &lt;code>SoPathTracer&lt;/code> module to your workspace. You will see a message if your hardware does not support CUDA:&lt;/p></description></item><item><title>Example 6.2: Visualization using Path Tracer</title><link>https://mevislab.github.io/examples/pull/117/tutorials/visualization/pathtracer/pathtracerexample2/</link><pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/visualization/pathtracer/pathtracerexample2/</guid><description>&lt;h1 id="example-62-visualization-using-sopathtracer">Example 6.2: Visualization using SoPathTracer&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this tutorial, we will explain the basics of using the &lt;code>SoPathTracer&lt;/code> module in MeVisLab. You will learn how to create a scene, assign materials, add light sources, and configure the PathTracer to generate enhanced renderings.&lt;/p>
+
+&lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+ &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+ &lt;/symbol>
+ &lt;symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+ &lt;/symbol>
+ &lt;symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+ &lt;/symbol>
+ &lt;symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+ &lt;/symbol>
+&lt;/svg>
+
+&lt;div class="alert alert-primary alert-warning d-flex align-items-center" role="alert">
+ &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Attention:">&lt;use xlink:href="#warning-fill"/>&lt;/svg>
+ &lt;div>
+ &lt;b>Attention:&amp;nbsp;&lt;/b>
+ &lt;p>The MeVis Path Tracer requires an NVIDIA graphics card with CUDA support. In order to check your hardware, open MeVisLab and add a &lt;code>SoPathTracer&lt;/code> module to your workspace. You will see a message if your hardware does not support CUDA:&lt;/p></description></item><item><title>Example 7: Add 3D viewer to OrthoView2D</title><link>https://mevislab.github.io/examples/pull/117/tutorials/visualization/visualizationexample7/</link><pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/visualization/visualizationexample7/</guid><description>&lt;h1 id="TutorialVisualizationExample7">Example 7: Add 3D viewer to OrthoView2D&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=vRtFcaPBAko" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/vRtFcaPBAko/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=vRtFcaPBAko" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example we will use the &lt;code>OrthoView2D&lt;/code> module and add a 3D viewer to the layout &lt;em>Cube&lt;/em>.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>Add the modules &lt;code>LocalImage&lt;/code> and &lt;code>OrthoView2D&lt;/code> to your workspace and connect them.&lt;/p>
+&lt;p>&lt;p class="page-image">
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/pull/117/images/tutorials/image_processing/network_example7.png" title="Network">&lt;img id="Network" class="img-fluid rounded" src="https://mevislab.github.io/examples/pull/117/images/tutorials/image_processing/network_example7.png" alt="Network" title="Network" />&lt;/a>
+ &lt;figcaption class="figure-caption">Network&lt;/figcaption>
+&lt;/p>
+&lt;/p>
+&lt;p>The &lt;code>OrthoView2D&lt;/code> module allows you to select multiple layouts. Select layout &lt;em>Cube Equal&lt;/em>. The layout shows your image in three orthogonal viewing directions. The top left segment remains empty.&lt;/p></description></item><item><title>Example 8: Vessel Segmentation using SoVascularSystem</title><link>https://mevislab.github.io/examples/pull/117/tutorials/visualization/visualizationexample8/</link><pubDate>Fri, 08 Dec 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/visualization/visualizationexample8/</guid><description>&lt;h1 id="TutorialVisualizationExample8">Example 8: Vessel Segmentation using SoVascularSystem&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=tEwEgI_3ZGM" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/tEwEgI_3ZGM/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=tEwEgI_3ZGM" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this tutorial, we are using an input mask to create a vessel centerline using the &lt;code>DtfSkeletonization&lt;/code> module and visualize the vascular structures in 3D using the &lt;code>SoVascularSystem&lt;/code> module. The second part uses the distance between centerline and surface of the vessel structures to color thin vessels red and thick vessels green.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>Load the example &lt;a href="https://mevislab.github.io/examples/pull/117/examples/visualization/example8/EditedImage.mlimage">tree mask&lt;/a> by using the &lt;code>LocalImage&lt;/code> module. Connect the output to a &lt;code>DtfSkeletonization&lt;/code> module as seen below. The initial output of the &lt;code>DtfSkeletonization&lt;/code> module is empty. Press the &lt;em>Update&lt;/em> button to calculate the skeleton and the erosion distances.&lt;/p></description></item><item><title>Example 9: Creating Dynamic 3D Animations using AnimationRecorder</title><link>https://mevislab.github.io/examples/pull/117/tutorials/visualization/visualizationexample9/</link><pubDate>Mon, 08 Jan 2024 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/visualization/visualizationexample9/</guid><description>&lt;h1 id="TutorialVisualizationExample9">Example 9: Creating Dynamic 3D Animations using AnimationRecorder&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=Sxfwwm6BGnA" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/Sxfwwm6BGnA/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=Sxfwwm6BGnA" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this tutorial, we are using the &lt;code>AnimationRecorder&lt;/code> module to generate dynamic and visually appealing animations of our 3D scenes. We will be recording a video of the results of our previous project, particularly the detailed visualizations of the muscles, bones and blood vessels created using &lt;code>PathTracer&lt;/code>.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;p>Open the network and files of &lt;a href="https://mevislab.github.io/examples/pull/117/tutorials/visualization/pathtracer/pathtracerexample2/">Example 6.2&lt;/a>, add a &lt;code>SoSeparator&lt;/code> module and an &lt;code>AnimationRecorder&lt;/code> module to your workspace and connect them as shown below.&lt;/p></description></item><item><title>Example 4: Subtract 3D objects</title><link>https://mevislab.github.io/examples/pull/117/tutorials/image_processing/image_processing4/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/image_processing/image_processing4/</guid><description>&lt;h1 id="example-4-subtract-3d-objects">Example 4: Subtract 3D objects&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=VdvErVvoq2k" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/VdvErVvoq2k/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=VdvErVvoq2k" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example, we load an image and render it as &lt;code>WEMIsoSurface&lt;/code>. Then we create a 3-dimensional &lt;code>SoSphere&lt;/code> and subtract the sphere from the initial WEM.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>Add a &lt;code>LocalImage&lt;/code> module to your workspace and select load &lt;em>$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm&lt;/em>. Add a &lt;code>WEMIsoSurface&lt;/code>, a &lt;code>SoWEMRenderer&lt;/code>, a &lt;code>SoBackground&lt;/code> and a &lt;code>SoExaminerViewer&lt;/code> module and connect them as seen below. Make sure to configure the &lt;code>WEMIsoSurface&lt;/code> to use a &lt;em>Iso Min. Value&lt;/em> of 420 and a &lt;em>Voxel Sampling&lt;/em> 1.&lt;/p></description></item><item><title>Example 5: Clip Planes</title><link>https://mevislab.github.io/examples/pull/117/tutorials/image_processing/image_processing5/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/image_processing/image_processing5/</guid><description>&lt;h1 id="example-5-clip-planes">Example 5: Clip Planes&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=Lmt7helBl0E" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/Lmt7helBl0E/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=Lmt7helBl0E" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example, we are using the &lt;code>SoGVRDrawOnPlane&lt;/code> module to define the currently visible slice from a 2D view as a clip plane in 3D.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>First we need to develop the network to scroll through the slices. Add a &lt;code>LocalImage&lt;/code> module to your workspace and select the file &lt;em>ProbandT1&lt;/em> from MeVisLab demo data.&lt;/p></description></item><item><title>Chapter V: Data Objects</title><link>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/</guid><description>&lt;h2 id="TutorialDataObjects">Data Objects in MeVisLab&lt;/h2>
+&lt;p>MeVisLab provides pre-defined data objects, e. g.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/contourobjects">Contour Segmented Objects (CSOs)&lt;/a> &lt;br>
+which are three-dimensional objects encapsulating formerly defined contours within images.&lt;/li>
+&lt;li>&lt;a href="https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/surfaceobjects">Surface Objects (Winged Edge Meshes or WEMs)&lt;/a> &lt;br>
+represent the surface of geometrical figures and allow the user to manipulate them.&lt;/li>
+&lt;li>&lt;a href="https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/markerobjects">Markers&lt;/a> &lt;br>
+are used to mark specific locations or aspects of an image and allow to process those later on.&lt;/li>
+&lt;li>&lt;a href="tutorials/dataobjects/curves">Curves&lt;/a> &lt;br>
+can print the results of a function as two-dimensional mathematical graphs into a diagram.&lt;/li>
+&lt;/ul>
+&lt;p>Usage, advantages and disadvantages of each above mentioned data object type will be covered in the following specified chapters, where you will be building example networks for some of the most common use cases.&lt;/p></description></item><item><title>Contour Example 3: 2D and 3D Visualization of Contours</title><link>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/contours/contourexample3/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/contours/contourexample3/</guid><description>&lt;h1 id="TutorialContoursExample3">Contour Example 3: Overlay Creation and 3D Visualization of Contours&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=6NmKQagTDKg" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/6NmKQagTDKg/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=6NmKQagTDKg" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example, we&amp;rsquo;d like to use the created CSOs to display an overlay.
+This allows us to mark one of two lungs. In addition to
+that, we will display the whole segmented lobe of the lung in a 3D
+image.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>Use the network from the &lt;a href="https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/contours/contourexample2">contour example 2&lt;/a> and add the modules &lt;code>VoxelizeCSO&lt;/code>,
+&lt;code>SoView2DOverlay&lt;/code> and &lt;code>View2D&lt;/code> to your workspace. Connect the module as
+shown. The module &lt;code>VoxelizeCSO&lt;/code> allows to convert CSOs into voxel images.&lt;/p></description></item><item><title>Surface Objects (WEM)</title><link>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/surfaceobjects/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/surfaceobjects/</guid><description>&lt;h1 id="WEMs">Surface Objects (WEMs)&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In MeVisLab it is possible to create, visualize, process and manipulate surface objects, also known as polygon meshes. Here, we call surface objects &lt;em>Winged Edge Mesh&lt;/em>, in short WEM. In this chapter you will get an introduction into WEMs. In addition, you will find examples on how to work with WEMs. For more information on WEMs take a look at the 
+&lt;a href="https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/ToolBoxReference/WEMDataStructure.html" target="_blank">MeVislab Toolbox Reference&lt;/a>
+
+. If you like to know which WEM formats can be imported into MeVisLab, take a look at the assimp documentation &lt;a href="https://github.com/assimp/assimp" target="_blank" rel="noopener">here&lt;/a>.&lt;/p></description></item><item><title>Surface Example 1: Creation of WEMs</title><link>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/surfaces/surfaceexample1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/surfaces/surfaceexample1/</guid><description>&lt;h1 id="surface-example-1-create-winged-edge-mesh-out-of-voxel-images-and-csos">Surface Example 1: Create Winged Edge Mesh out of voxel images and CSOs&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=-KnZ5a27T0c" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/-KnZ5a27T0c/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=-KnZ5a27T0c" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example you will learn how to create a Winged Edge Mesh (WEM). There are several approaches on creating WEMs, a few of them are shown in this example. Instead of creating WEMs, they can also be imported, see chapter &lt;a href="tutorials/dataobjects/surfaceobjects">Surface Objects (WEM)&lt;/a>.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="from-image-to-surface-generating-wems-out-of-voxel-images">From image to surface: Generating WEMs out of voxel images&lt;/h3>
+&lt;p>At first, we will create a WEM out of a voxel image using the module &lt;code>WEMIsoSurface&lt;/code>. Add and connect the shown modules. Load the image &lt;em>$(DemoDataPath)/Bone.tiff&lt;/em> and set the &lt;em>Iso Min. Value&lt;/em> in the panel of &lt;code>WEMIsoSurface&lt;/code> to 1200. Tick the box &lt;em>Use image max. value&lt;/em>. The module &lt;code>WEMIsoSurface&lt;/code> creates surface objects out of all voxels with an Iso value equal or above 1200 (and smaller than the image max value). The module &lt;code>SoWEMRenderer&lt;/code> can now be used to generate an Open Inventor scene, which can be displayed by the module &lt;code>SoExaminerViewer&lt;/code>.&lt;/p></description></item><item><title>Surface Example 2: Processing and Modification of WEM</title><link>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/surfaces/surfaceexample2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/surfaces/surfaceexample2/</guid><description>&lt;h1 id="surface-example-2-processing-and-modification-of-wem">Surface Example 2: Processing and Modification of WEM&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=lVbldzanvfE" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/lVbldzanvfE/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=lVbldzanvfE" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example, you will learn how to modify and process WEMs.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;h4 id="modification-of-wems">Modification of WEMs&lt;/h4>
+&lt;p>Use the module &lt;code>WEMLoad&lt;/code> to load the file &lt;em>venus.off&lt;/em>. Then add and connect the shown modules. We like to display the WEM &lt;em>venus&lt;/em> two times, one time this WEM is modified. You can use the module &lt;code>WEMModify&lt;/code> to apply modifications. In its panel, change the scale and the size of the WEM. Now you see two times the &lt;code>venus&lt;/code> next to each other.&lt;/p></description></item><item><title>Surface Example 3: Interactions with WEM</title><link>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/surfaces/surfaceexample3/</link><pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/surfaces/surfaceexample3/</guid><description>&lt;h1 id="surface-example-3-interactions-with-wem">Surface Example 3: Interactions with WEM&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=YDOEqCOmUFw" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/YDOEqCOmUFw/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=YDOEqCOmUFw" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In these examples, we are showing 2 different possibilities to interact with a WEM:&lt;/p>
+&lt;ul>
+&lt;li>Scale, rotate and move a WEM in a scene&lt;/li>
+&lt;li>Modify a WEM in a scene&lt;/li>
+&lt;/ul>
+&lt;h3 id="scale-rotate-and-move-a-wem-in-a-scene">Scale, rotate and move a WEM in a scene&lt;/h3>
+&lt;p>We are using a &lt;code>SoTransformerDragger&lt;/code> module to apply transformations on a 3D WEM object via mouse interactions.&lt;/p></description></item><item><title>Surface Example 4: Interactively moving WEM</title><link>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/surfaces/surfaceexample4/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/surfaces/surfaceexample4/</guid><description>&lt;h1 id="surface-example-4-interactively-moving-wem">Surface Example 4: Interactively moving WEM&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=WKiCddNGKrw" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/WKiCddNGKrw/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=WKiCddNGKrw" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example, we like to interactively move WEMs using &lt;code>SoDragger&lt;/code> modules insight a viewer.&lt;/p>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;h3 id="interactively-translating-objects-in-3d-using-sodragger-modules">Interactively translating objects in 3D using SoDragger modules&lt;/h3>
+&lt;p>Add and connect the following modules as shown. In the panel of the module &lt;code>WEMInitialize&lt;/code> select the &lt;em>Model&lt;/em> &lt;em>Octasphere&lt;/em>. After that, open the viewer &lt;code>SoExaminerViewer&lt;/code> and make sure to select the &lt;em>Interaction Mode&lt;/em>. Now, you are able to click on the presented &lt;em>Octaspehere&lt;/em> and move it alongside one axis. The following modules are involved in the interactions:&lt;/p></description></item><item><title>Surface Example 5: WEM - Primitive Value Lists</title><link>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/surfaces/surfaceexample5/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/surfaces/surfaceexample5/</guid><description>&lt;h1 id="surface-example-5-wem---primitive-value-lists">Surface Example 5: WEM - Primitive Value Lists&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=Rap1RY6l5Cc" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/Rap1RY6l5Cc/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=Rap1RY6l5Cc" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>WEMs do not only contain the coordinates of nodes and surfaces, they can also contain additional information. These information are stored in so called &lt;em>Primitive Value Lists&lt;/em> (PVLs). Every node, every surface and every edge can contains such a list. In these lists, you can for example store the color of the node or specific patient information. These information can be used for visualization or for further statistical analysis.&lt;/p></description></item><item><title>Example 1: Distance between Markers</title><link>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/markers/markerexample1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/dataobjects/markers/markerexample1/</guid><description>&lt;h1 id="example-1-calculating-the-distance-between-markers">Example 1: Calculating the distance between markers&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=xYR5Qkze0lE" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/xYR5Qkze0lE/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=xYR5Qkze0lE" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example, we will measure the distance between one position in an image to a list of markers.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>Add the following modules and connect them as shown.&lt;/p>
+&lt;p>We changed the names of the modules &lt;code>SoView2DMarkerEditor&lt;/code> and &lt;code>XMarkerLIstContainer&lt;/code>, to distinguish these modules from two similar modules we will add later on. Open the panel of &lt;code>SoView2DMarkerEditor&lt;/code> and select the tab &lt;em>Drawing&lt;/em>. Now chose the &lt;em>Color&lt;/em> &lt;em>red&lt;/em>.&lt;/p></description></item><item><title>assimp</title><link>https://mevislab.github.io/examples/pull/117/tutorials/thirdparty/assimp/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/thirdparty/assimp/</guid><description>&lt;h1 id="assimp">Asset-Importer-Lib (assimp)&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>&lt;a href="http://www.assimp.org" title="assimp" target="_blank" rel="noopener">Assimp&lt;/a> (Asset-Importer-Lib) is a library to load and process geometric scenes from various 3D data formats.&lt;/p>
+&lt;p>This chapter provides some examples of how 3D formats can be imported into MeVisLab. In general you always need a &lt;code>SoSceneLoader&lt;/code> module. The &lt;code>SoSceneLoader&lt;/code> allows to load meshes as Open Inventor points/lines/triangles/faces using the Open Asset Import Library.&lt;/p>
+&lt;p>&lt;p class="page-image">
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/pull/117/images/tutorials/thirdparty/SoSceneLoader.png" title="SoSceneLoader">&lt;img id="SoSceneLoader" class="img-fluid rounded" src="https://mevislab.github.io/examples/pull/117/images/tutorials/thirdparty/SoSceneLoader.png" alt="SoSceneLoader" title="SoSceneLoader" />&lt;/a>
+ &lt;figcaption class="figure-caption">SoSceneLoader&lt;/figcaption>
+&lt;/p>
+&lt;/p>
+&lt;p>You can also use the &lt;code>SoSceneWriter&lt;/code> module to export your 3D scenes from MeVisLab into any of the output formats listed below.&lt;/p></description></item><item><title>Example 1: 3D Printing in MeVisLab</title><link>https://mevislab.github.io/examples/pull/117/tutorials/thirdparty/assimp/assimpexample1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/117/tutorials/thirdparty/assimp/assimpexample1/</guid><description>&lt;h1 id="example-1-3d-printing-in-mevislab">Example 1: 3D Printing in MeVisLab&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/117/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=82ysCYNTyso" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/82ysCYNTyso/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=82ysCYNTyso" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>This example uses the assimp library to load a 3D file and save the file as *.stl for 3D printing.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>Add the modules &lt;code>SoSceneLoader&lt;/code>, &lt;code>SoBackground&lt;/code> and &lt;code>SoExaminerViewer&lt;/code> to your workspace and connect them as seen below.&lt;/p>
+&lt;p>&lt;p class="page-image">
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/pull/117/images/tutorials/thirdparty/assimp_example1.png" title="Example Network">&lt;img id="Example Network" class="img-fluid rounded" src="https://mevislab.github.io/examples/pull/117/images/tutorials/thirdparty/assimp_example1.png" alt="Example Network" title="Example Network" />&lt;/a>
+ &lt;figcaption class="figure-caption">Example Network&lt;/figcaption>
+&lt;/p>
+&lt;/p>
+&lt;h3 id="open-the-3d-file">Open the 3D file&lt;/h3>
+&lt;p>Select the file &lt;em>vtkCow.obj&lt;/em> from MeVisLab demo data directory. Open &lt;code>SoExaminerViewer&lt;/code> and inspect the scene. You will see a 3D cow.&lt;/p></description></item></channel></rss>
