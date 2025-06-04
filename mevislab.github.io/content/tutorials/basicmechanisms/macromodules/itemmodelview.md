@@ -1,5 +1,5 @@
 ---
-title: "Example 7: Creating you own abstract ItemModel by using the ItemModelView"
+title: "Example 7: Creating you own ItemModel by using the ItemModelView"
 date: 2025-06-03
 status: "OK"
 draft: false
@@ -8,16 +8,16 @@ tags: ["Advanced", "Tutorial", "ItemModel", "ItemModelView"]
 menu: 
   main:
     identifier: "itemmodel"
-    title: "Creating you own abstract ItemModel by using the ItemModelView"
+    title: "Creating your own ItemModel by using the ItemModelView"
     weight: 465
     parent: "basicmechanisms"
 ---
-# Example 7: Creating you own abstract ItemModel by using the ItemModelView
+# Example 7: Creating your own ItemModel by using the ItemModelView
 
 ## Introduction
-In this example, we will show how to use the *ItemModelView* MDL control to represent an abstract hierarchical item model with generic named attributes. You will see how to select the displayed attributes in the resulting table and how to interact with this table.
+In this example, we will show how to use the *ItemModelView* MDL control to represent an abstract hierarchical item model with generically named attributes. You will see how to select the displayed attributes in the resulting table and how to interact with this table.
 
-We create a macro module receiving an input image and then showing some selected DICOM attributs of this patient in our own *ItemModelView*.
+We create a macro module that receives an input image and then showing some selected DICOM attributs of this patient in our own *ItemModelView*.
 
 ## Prepare your network
 
@@ -30,13 +30,13 @@ Use the *Project Wizard* via menu entry {{< menuitem "File" "Run Project Wizard 
 
 Start with an empty network and add a Python file.
 
-We can leave the *Fields* empty for now. We can do that in the *\*.script* file.
+We can leave the *Fields* empty for now. We can add them in the *\*.script* file.
 
 Click *Create* {{< mousebutton "left" >}}.
 
 {{< imagegallery 3 "/images/tutorials/basicmechanics" "ItemModel_1" "ItemModel_2" "ItemModel_3">}}
 
-If you cannot find your module via *Module Search*, reload module cache by clicking menu item {{< menuitem "Extras" "Reload Module Database (Clear Cache)" >}}
+If you cannot find your module via *Module Search*, reload module cache by clicking the menu item {{< menuitem "Extras" "Reload Module Database (Clear Cache)" >}}
 
 ### Define the necessary fields
 Add your new module `MyItemModelView` to your workspace. It does not provide a user interface and you do not have any *Fields* available.
@@ -127,15 +127,15 @@ Window {
 ```
 {{</highlight>}}
 
-Every *Field* we defined in the *Parameters* section is now used as a column in our view. The *Field* *id* has been defined to be the *idAttribute*. If you now open your panel, MeVisLab will complain that you did not define the *Field* *myItemModel*. You have to add a *Field* with this name to your *Parameters* section or as an *Output Field*. We will add an *Output Field*, so that our model can also be used by other modules, if necessary. The typs is *MLBase*.
+Every *Field* that we defined in the *Parameters* section is now used as a column in our view. The *Field* *id* has been defined to be the *idAttribute*. If you now open your panel, MeVisLab will complain that you did not define the *Field* *myItemModel*. You have to add a *Field* with this name to your *Parameters* section or as an *Output Field*. We will add an *Output Field*, so that our model can also be used by other modules, if necessary. The type is *MLBase*.
 
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan
 Outputs {
     Field myItemModel {
-      type = MLBase
+        type = MLBase
     }
-  }
+}
 ```
 {{</highlight>}}
 
@@ -144,7 +144,7 @@ Your module now also shows an output *MLBase* object and the columns you defined
 ![Module Output and Columns](/images/tutorials/basicmechanics/ItemModel_6.png "Module Output and Columns")
 
 ### Fill your table with data
-We want to get the necessary information from the defined input image *inImage*. We want the module to update the content whenever the input image changes. Therefore we ned a *Field Listener* calling a Python function whenever the input image changes. Add it to your *Commands* section.
+We want to get the necessary information from the defined input image *inImage*. We want the module to update the content whenever the input image changes. Therefore we need a *Field Listener* calling a Python function whenever the input image changes. Add it to your *Commands* section.
 
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan
@@ -190,7 +190,7 @@ class MyItem:
 ```
 {{</highlight>}}
 
-Now we implement a very simple and basic model named *MyItemModel*. Initially we create a new *MLBase* object using the existing *StandardItemModel* and define the structure of our items as already done by the attributes.
+Now we implement a very simple and basic model named *MyItemModel*. Initially we create a new *MLBase* object using the existing *StandardItemModel* and define the structure of our items as already done using the attributes.
 
 Some additional functions are necessary to get the root item and the selected index of the model. We also need functions to add and insert items and to clear all items.
 
@@ -198,13 +198,10 @@ Some additional functions are necessary to get the root item and the selected in
 ```Python
 class MyItemModel:
     def __init__(self):
-        self.model = MLAB.createMLBaseObject(
-            "StandardItemModel", [["id"] + gAttributes]
-        )
+        self.model = MLAB.createMLBaseObject("StandardItemModel", [["id"] + gAttributes])
         root = MyItem()
         self.root = root
         self.map = {}
-        pass
 
     def makeCurrent(self):
         ctx.field("myItemModel").setObject(self.model)
@@ -214,7 +211,7 @@ class MyItemModel:
 
     def getSelectedIndex(self):
         ids = [int(x) for x in ctx.field("selection").value.split()]
-        if len(ids):
+        if ids:
             return self.model.findFirst("id", ids[0])
         else:
             return None
@@ -253,7 +250,7 @@ class MyItemModel:
 ```
 {{</highlight>}}
 
-You can see that above Python code uses a field *selection* which contains the id of the selected item in our table. We have to add this *Field* to our *\*.script* file, too.
+You can see that the above Python code uses a field *selection* which contains the ID of the selected item in our table. We have to add this *Field* to our *\*.script* file, too.
 
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan
@@ -288,11 +285,10 @@ def imageChanged(field: "mevislab.MLABField "):
     global gModel, gNextId
     gModel = MyItemModel()
     gNextId = 0
-    if gModel:
-        gModel.makeCurrent()
+    gModel.makeCurrent()
 
     if field.isValid():
-        _patientName, _patientBirthdate, _studyDescription, _studyDate, _modality, _seriesDescription, _seriesDate, _numberOfSlices = _getImageData()
+        patientName, patientBirthdate, studyDescription, studyDate, modality, seriesDescription, seriesDate, numberOfSlices = _getImageData()
         
         gModel.insertItem(
             None,
@@ -300,24 +296,24 @@ def imageChanged(field: "mevislab.MLABField "):
             True,
             {
                 "id": getNextId(),
-                "patientName": _patientName,
-                "patientBirthdate": _patientBirthdate,
-                "studyDescription": _studyDescription,
-                "studyDate": _studyDate,
-                "modality": _modality,
-                "seriesDescription": _seriesDescription,
-                "seriesDate": _seriesDate,
+                "patientName": patientName,
+                "patientBirthdate": patientBirthdate,
+                "studyDescription": studyDescription,
+                "studyDate": studyDate,
+                "modality": modality,
+                "seriesDescription": seriesDescription,
+                "seriesDate": seriesDate,
                 "sopInstanceUID": "",
             },
         )
         
-        _tmpSelectedIndex = gModel.getSelectedIndex()
+        tmpSelectedIndex = gModel.getSelectedIndex()
         
-        for _sliceNumber in range(0, _numberOfSlices):
-            _instanceUid = field.getFrameSpecificDicomTag("SOPInstanceUID", _sliceNumber)
+        for sliceNumber in range(0, numberOfSlices):
+            instanceUid = field.getFrameSpecificDicomTag("SOPInstanceUID", sliceNumber)
 
             gModel.insertItem(
-                _tmpSelectedIndex,
+                tmpSelectedIndex,
                 0,
                 True,
                 {
@@ -329,28 +325,28 @@ def imageChanged(field: "mevislab.MLABField "):
                     "modality": "",
                     "seriesDescription": "",
                     "seriesDate": "",
-                    "sopInstanceUID": _instanceUid.value(),
+                    "sopInstanceUID": instanceUid.value(),
                 },
             )
 ```
 {{</highlight>}}
 
-Whenever the image changes, we create a new and empty model (*gModel*) and reset the next id (*gNextId*) to *0*. If the image is valid, we get the image data.
+Whenever the image changes, we create a new and empty model (*gModel*) and reset the next ID (*gNextId*) to *0*. If the image is valid, we get the image data.
 
 {{< highlight filename="MyItemModelView.py" >}}
 ```Python
 def _getImageData():
-    _imageField = ctx.field("inImage")
-    _patientName = _imageField.getDicomTagValueByName("PatientName")
-    _patientBirthdate = _imageField.getDicomTagValueByName("PatientBirthDate")
-    _studyDescription = _imageField.getDicomTagValueByName("StudyDescription")
-    _studyDate = _imageField.getDicomTagValueByName("StudyDate")
-    _modality = _imageField.getDicomTagValueByName("Modality")
-    _seriesDescription = _imageField.getDicomTagValueByName("SeriesDescription")
-    _seriesDate = _imageField.getDicomTagValueByName("SeriesDate")
-    _numberOfSlices = _imageField.sizeZ()
+    imageField = ctx.field("inImage")
+    patientName = imageField.getDicomTagValueByName("PatientName")
+    patientBirthdate = imageField.getDicomTagValueByName("PatientBirthDate")
+    studyDescription = imageField.getDicomTagValueByName("StudyDescription")
+    studyDate = imageField.getDicomTagValueByName("StudyDate")
+    modality = imageField.getDicomTagValueByName("Modality")
+    seriesDescription = imageField.getDicomTagValueByName("SeriesDescription")
+    seriesDate = imageField.getDicomTagValueByName("SeriesDate")
+    numberOfSlices = imageField.sizeZ()
     
-    return _patientName, _patientBirthdate, _studyDescription, _studyDate, _modality, _seriesDescription, _seriesDate, _numberOfSlices
+    return patientName, patientBirthdate, studyDescription, studyDate, modality, seriesDescription, seriesDate, numberOfSlices
 ```
 {{</highlight>}}
 
@@ -360,7 +356,7 @@ If you now open the panel of your module, you can already see the results.
 
 ![Module Panel](/images/tutorials/basicmechanics/ItemModel_7.png "Module Panel")
 
-The first line shows the information of the patient, the study and the series and the child items represent a single slice of the image.
+The first line shows the information of the patient, the study and the series and each child item represents a single slice of the image.
 
 ## Interact with your model
 We can now add options to interact with the *ItemModelView*. Open the *\*.script* file of your module and go to the *Commands* section. We add a *FieldListener* to our *selection* field. Whenever the user selects a different item in our view, the Python function *itemClicked* in the *FieldListener* is executed.
@@ -386,7 +382,7 @@ def getItemByID(self, id):
 ```
 {{</highlight>}}
 
-It uses the *id* to find the selected item and returns all values of this item.
+It uses *id* to find the selected item and returns all values of this item.
 
 Now add the Python function of our *FieldListener* to your Python script:
 
@@ -401,15 +397,15 @@ def itemClicked(field: "mevislab.MLABField"):
 ```
 {{</highlight>}}
 
-The *itemClicked* function uses the *id* from the selected item to get the value of column 8 (in this case it is the *SOP Instance UID* of the image) and prints this value.
+The *itemClicked* function uses *id* from the selected item to get the value of column 8 (in this case it is the *SOP Instance UID* of the image) and prints this value.
 
 ![Clicked Item](/images/tutorials/basicmechanics/ItemModel_8.png "Clicked Item")
 
-The problem is, that the *Field* *selection* also changes, whenever a new item is added to the model. Your debug output is already flooded with SOP Instance UIDs without interaction.
+The problem is that the *Field* *selection* also changes whenever a new item is added to the model. Your debug output is already flooded with SOP Instance UIDs without interaction.
 
 ![Debug Output](/images/tutorials/basicmechanics/ItemModel_9.png "Debug Output")
 
-Add another global parameter to your Pythion script to prevent the *FieldListener* from executing during *imageChanged* event.
+Add another global parameter to your Python script to prevent the *FieldListener* from executing during the *imageChanged* event.
 
 {{< highlight filename="MyItemModelView.py" >}}
 ```Python
@@ -432,8 +428,8 @@ def itemClicked(field: "mevislab.MLABField"):
 While the *imageChanged* function is executed, the parameter is set to *False* and the *itemClicked* function does not print anything.
 
 ## Summary
-* *ItemModelViews* allow you to dfine your own abstract hierarchical item model with generic named attributes
-* This model can be provided as Output parameter and added to the Panel of your module
+* *ItemModelViews* allow you to define your own abstract hierarchical item model with generically named attributes
+* This model can be provided as Output and added to the Panel of your module
 * Interactions with the model can be implemented by using a *FieldListener*.
 
 {{< networkfile "examples/basic_mechanisms/Modules.zip" >}}
