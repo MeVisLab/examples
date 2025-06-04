@@ -17,7 +17,7 @@ menu:
 ## Introduction
 In this example, we will show how to use the *ItemModelView* MDL control to represent an abstract hierarchical item model with generically named attributes. You will see how to select the displayed attributes in the resulting table and how to interact with this table.
 
-We create a macro module that receives an input image and then showing some selected DICOM attributs of this patient in our own *ItemModelView*.
+We create a macro module that receives an input image and then shows some selected DICOM attributes of this patient in our own *ItemModelView*.
 
 ## Prepare your network
 
@@ -199,8 +199,7 @@ Some additional functions are necessary to get the root item and the selected in
 class MyItemModel:
     def __init__(self):
         self.model = MLAB.createMLBaseObject("StandardItemModel", [["id"] + gAttributes])
-        root = MyItem()
-        self.root = root
+        self.root = MyItem()
         self.map = {}
 
     def makeCurrent(self):
