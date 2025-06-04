@@ -1,0 +1,289 @@
+// MDL v1 utf8
+mevislabVersion = 3.7.1.15
+network  {
+  watchlist = ""
+}
+module OrthoView2D {
+  internal  {
+    frame = "451 84 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "482 157 548 512"
+        sizeHint = "400 440"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = OrthoView2D
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    synchronizePosition = TRUE
+    layout = LAYOUT_CUBE_EQUAL
+    filterMode = FILTER_LINEAR
+    synchronizeZoom = TRUE
+    synchronizePanning = FALSE
+    useGlobalInputImage = TRUE
+    snapToCenter = FALSE
+    alternCubeLayout = FALSE
+    timePoint = 0
+    useManagedInteraction = FALSE
+    enableSlicing = TRUE
+    borderOn = TRUE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    grayWidth = 816.337585449219
+    grayCenter = 685.964660644531
+    annotationOn = TRUE
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationFontSize = ANNO_SIZE_AUTO
+    valueHighPrecision = TRUE
+    annoCoords = Voxel
+    showCurrentPos = TRUE
+    worldPosition = "-13.3527755737305 -30.5226287841797 37.4195861816406"
+    coloredMode = FALSE
+  }
+}
+module LocalImage {
+  internal  {
+    frame = "393 589 144 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = LocalImage
+    name = $(DemoDataPath)/BrainMultiModal/ProbandT1.dcm
+    autoLoad = TRUE
+  }
+}
+module SoViewportRegion {
+  internal  {
+    frame = "517 197 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "897 251 696 539"
+        sizeHint = "696 539"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoViewportRegion
+    on = TRUE
+    modifyVP = TRUE
+    usePreviousVP = FALSE
+    autoScaleAbsoluteValuesHiDPI = TRUE
+    cacheViewportRegion = FALSE
+    useViewportRegionDefinitionCallback = FALSE
+    xPositionMode = POSITION_MODE_MIN_AND_MAX
+    x1 = 0
+    x1ReferenceMode = REFERENCE_MODE_MIN
+    x1DomainMode = DOMAIN_MODE_RELATIVE_TO_WIDTH
+    x2 = 0.5
+    x2ReferenceMode = REFERENCE_MODE_MIN
+    x2DomainMode = DOMAIN_MODE_RELATIVE_TO_WIDTH
+    yPositionMode = POSITION_MODE_MIN_AND_MAX
+    y1 = 0
+    y1ReferenceMode = REFERENCE_MODE_MAX
+    y1DomainMode = DOMAIN_MODE_RELATIVE_TO_HEIGHT
+    y2 = 0.5
+    y2ReferenceMode = REFERENCE_MODE_MAX
+    y2DomainMode = DOMAIN_MODE_RELATIVE_TO_HEIGHT
+    projectionType = UNMODIFIED
+    renderDelayedPaths = TRUE
+    detectMouseOver = FALSE
+    forwardEvents = TRUE
+    forwardEventsInViewportOnly = TRUE
+    keepViewportWhileDragging = TRUE
+    mapEventToViewport = TRUE
+    consumeEventsInViewport = TRUE
+    enableBorder = FALSE
+    borderWidth = 1
+    borderColor = "1 1 1"
+    borderAlpha = 1
+    enableBackground = FALSE
+    backgroundColor = "1 1 1"
+    backgroundAlpha = 1
+    preset = centeredThird
+  }
+}
+module View3D {
+  internal  {
+    frame = "513 413 144 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = View3D
+    autoViewAll = TRUE
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    lutType = Ramp
+    rendererType = Slicer
+    currentTimePoint = 0
+    staticSamplingRate = 1
+    quality = 1
+    filterVolumeData = FilterLinear
+    lutEditorColorPoints = "[ 0 0 0 0, 4095 1 1 1 ]"
+    lutEditorAlphaPoints = "[ 0 0, 4095 1 ]"
+    lutEditorRelativeLut = FALSE
+    lutEditorColorInterpolation = InterpolateRGB
+    lutEditorAlphaFactor = 1
+    orientationProjectionType = PERSPECTIVE
+    orientationLocation = LOWER_RIGHT
+    orientationOn = TRUE
+    orientationModel = CUBE
+    greyCenter = 0.382499784231186
+    greyWidth = 0.520000040531158
+    alphaFactor = 1
+    colorFactor = "1 1 1"
+    camType = TRUE
+    camPosition = "194.42822265625 -378.746307373047 67.7337341308594"
+    camOrientation = "0.934440433979034 0.240476414561272 0.262663811445236 1.54235064983368"
+    initialCameraOrientation = CAMERA_KEEP_AS_IS
+    camFar = 546.26605
+    camNear = 264.49319
+    camFocal = 405.23923
+    camHeight = 0.78539801
+    decoration = FALSE
+    annotations = TRUE
+    background = TRUE
+    mode = VolumeRendering
+    interactiveQuality = Medium
+  }
+  internalFields  {
+    renderer.gradientQuality = GradientQualityAutomatic
+    renderer.enhancementAlphaMix = 0.25
+    renderer.boundaryEnhancement = FALSE
+    renderer.boundaryEnhancementFactor = 1
+    renderer.boundaryEnhancementExponent = 1
+    renderer.boundaryEnhancementGradientBias = 0
+    renderer.silhouetteEnhancement = FALSE
+    renderer.silhouetteEnhancementExponent = 1
+    renderer.silhouetteEnhancementFactor = 1
+    renderer.toneShading = FALSE
+    renderer.toneShadingWarmColor = "0.67451000213623 0.533333003520966 0.141176000237465"
+    renderer.toneShadingColdColor = "0 0 0.400000005960464"
+    renderer.toneShadingWarmDiffuse = 0.60000002
+    renderer.toneShadingColdDiffuse = 0.2
+    renderer.toneShadingAngle = 45
+    renderer.materialAmbient = 0.60000002
+    renderer.materialDiffuse = 1
+    renderer.materialSpecular = 1
+    renderer.materialSpecularity = 32
+    renderer.light1Enabled = TRUE
+    renderer.light1DiffuseIntensity = 1
+    renderer.light1SpecularIntensity = 1
+    renderer.light1Color = "1 1 1"
+    renderer.light1PolarPhi = 45
+    renderer.light1PolarRho = 0
+    renderer.light2Enabled = FALSE
+    renderer.light2DiffuseIntensity = 1
+    renderer.light2SpecularIntensity = 1
+    renderer.light2Color = "1 1 1"
+    renderer.light2PolarPhi = 0
+    renderer.light2PolarRho = 0
+    renderer.light3Enabled = FALSE
+    renderer.light3DiffuseIntensity = 1
+    renderer.light3SpecularIntensity = 1
+    renderer.light3Color = "1 1 1"
+    renderer.light3PolarPhi = -45
+    renderer.light3PolarRho = 0
+    renderer.sizeOutputX = 109
+    renderer.sizeOutputY = 91
+    renderer.sizeOutputZ = 80
+    renderer.subVolumeStartX = 0
+    renderer.subVolumeStartY = 0
+    renderer.subVolumeStartZ = 0
+    renderer.subVolumeEndX = 109
+    renderer.subVolumeEndY = 91
+    renderer.subVolumeEndZ = 80
+    clip.hideGeometry = FALSE
+    clip.on = FALSE
+    clip.left = FALSE
+    clip.right = FALSE
+    clip.top = FALSE
+    clip.bottom = FALSE
+    clip.rear = FALSE
+    clip.front = FALSE
+    clip.translation0 = "1 0 0"
+    clip.translation1 = "-1 0 0"
+    clip.translation2 = "0 1 0"
+    clip.translation3 = "0 -1 0"
+    clip.translation4 = "0 0 1"
+    clip.translation5 = "0 0 -1"
+    clip.rotation0 = "0 0 0.999999940395355 1.57079994678497"
+    clip.rotation1 = "0 0 -0.999999940395355 1.57079994678497"
+    clip.rotation2 = "0 0 -1 3.1415901184082"
+    clip.rotation3 = "0 0 1 0"
+    clip.rotation4 = "-0.999999940395355 0 0 1.57079994678497"
+    clip.rotation5 = "0.999999940395355 0 0 1.57079994678497"
+  }
+}
+module SoCameraInteraction {
+  internal  {
+    frame = "509 293 152 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SoCameraInteraction
+    interactionProviderID = ""
+    headlight = TRUE
+    eventMode = SceneFirst
+    interactiveLowComplexity = Force
+    zoomSensitivity = 1
+    enableZoomWithMouseWheel = TRUE
+    cursorShapeRotate = ROTATE_XY_CURSOR
+    cursorShapePan = MOVE_ALL_CURSOR
+    cursorShapeZoom = MOVE_INOUT_CURSOR
+  }
+}
+module StringUtils {
+  internal  {
+    frame = "845 517 104 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "506 201 532 336"
+        sizeHint = "228 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = StringUtils
+    operationType = Compare
+    string1 = LAYOUT_CUBE_EQUAL
+    string2 = LAYOUT_CUBE_EQUAL
+    string3 = ""
+    string4 = ""
+    string5 = ""
+    string6 = ""
+    stringPrefix = [
+    stringPostfix = ]
+    toggle1 = TRUE
+    toggle2 = TRUE
+    toggle3 = FALSE
+    toggle4 = FALSE
+    toggle5 = FALSE
+    toggle6 = FALSE
+    togglePrefix = FALSE
+    togglePostfix = FALSE
+    separator = ""
+    selectSeparator = 0
+    toggleIgnoreCase = FALSE
+    inPos1 = 0
+    inPos2 = 0
+  }
+}
+connections  {
+  OrthoView2D.image = LocalImage.outImage
+  OrthoView2D.inInvPreLUT = SoViewportRegion.self
+  SoViewportRegion.on = StringUtils.boolResult
+  SoViewportRegion.children = SoCameraInteraction.self
+  View3D.inImage = LocalImage.outImage
+  SoCameraInteraction.inScene = View3D.self
+  StringUtils.string1 = OrthoView2D.layout
+}
+networkModel = ""

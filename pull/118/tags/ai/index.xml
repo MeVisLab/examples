@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/118/tags/ai/</link><description>Recent content in AI on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 30 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/118/tags/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>PyTorch</title><link>https://mevislab.github.io/examples/pull/118/tutorials/thirdparty/pytorch/</link><pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/118/tutorials/thirdparty/pytorch/</guid><description>&lt;h1 id="pytorch">PyTorch&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>&lt;a href="http://www.pytorch.org" title="pytorch" target="_blank" rel="noopener">PyTorch&lt;/a> is a machine learning framework based on the Torch library, used for applications such as Computer Vision and Natural Language Processing, originally developed by Meta AI and now part of the Linux Foundation umbrella.&lt;/p>
+&lt;p>A lot of AI frameworks can be used within MeVisLab. We currently do not provide a preintegrated AI framework though as we try to avoid compatibility issues, and AI frameworks are very fast-moving by nature.&lt;/p></description></item><item><title>Example 1: Installing PyTorch using the PythonPip module</title><link>https://mevislab.github.io/examples/pull/118/tutorials/thirdparty/pytorch/pytorchexample1/</link><pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/118/tutorials/thirdparty/pytorch/pytorchexample1/</guid><description>&lt;h1 id="example-1-installing-pytorch-using-the-pythonpip-module">Example 1: Installing PyTorch using the PythonPip module&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>The module &lt;code>PythonPip&lt;/code> allows you to install additional Python packages to be used in MeVisLab.&lt;/p>
+
+&lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+ &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+ &lt;/symbol>
+ &lt;symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+ &lt;/symbol>
+ &lt;symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+ &lt;/symbol>
+ &lt;symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16">
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+ &lt;/symbol>
+&lt;/svg>
+
+&lt;div class="alert alert-primary alert-warning d-flex align-items-center" role="alert">
+ &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">&lt;use xlink:href="#warning-fill"/>&lt;/svg>
+ &lt;div>
+ &lt;b>Warning:&amp;nbsp;&lt;/b>
+ You should not use the general Python &lt;em>pip&lt;/em> command from a locally installed Python, because MeVisLab will not know these packages and they cannot be used in MeVisLab directly.
+ &lt;/div>
+&lt;/div>
+&lt;p>The module either allows to install packages into the global MeVisLab installation directory, or into your defined user package. We will use the user package directory, because then the installed packages remain available in your packages even if you uninstall or update MeVisLab. In addition to that, no administrative rights are necessary if you did install MeVisLab for all users.&lt;/p></description></item><item><title>Example 2: Brain Parcellation using PyTorch</title><link>https://mevislab.github.io/examples/pull/118/tutorials/thirdparty/pytorch/pytorchexample2/</link><pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/118/tutorials/thirdparty/pytorch/pytorchexample2/</guid><description>&lt;h1 id="example-2-brain-parcellation-using-pytorch">Example 2: Brain Parcellation using PyTorch&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example, you are using a pre-trained PyTorch deep learning model (HighRes3DNet) to perform a full brain parcellation. HighRes3DNet is a 3D residual network presented by Li et al. in &lt;a href="https://link.springer.com/chapter/10.1007/978-3-319-59050-9_28" target="_blank" rel="noopener">On the Compactness, Efficiency, and Representation of 3D Convolutional Networks: Brain Parcellation as a Pretext Task&lt;/a>.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;p>Add a &lt;code>LocalImage&lt;/code> module to your workspace and select the file &lt;em>MRI_Head.dcm&lt;/em>. For PyTorch it is necessary to resample the data to a defined size. Add a &lt;code>Resample3D&lt;/code> module to the &lt;code>LocalImage&lt;/code> and open the panel. Change &lt;em>Keep Constant&lt;/em> to &lt;em>Voxel Size&lt;/em> and define &lt;em>Image Size&lt;/em> as 176, 217, 160.&lt;/p></description></item><item><title>Example 3: Segment persons in webcam videos</title><link>https://mevislab.github.io/examples/pull/118/tutorials/thirdparty/pytorch/pytorchexample3/</link><pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/118/tutorials/thirdparty/pytorch/pytorchexample3/</guid><description>&lt;h1 id="example-3-segment-persons-in-webcam-videos">Example 3: Segment persons in webcam videos&lt;/h1>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>This tutorial is based on &lt;a href="https://mevislab.github.io/examples/pull/118/tutorials/thirdparty/opencv/thirdpartyexample2" title="Example 2: Face Detection with OpenCV">Example 2: Face Detection with OpenCV&lt;/a>. You can re-use some of the scripts already developed in the other tutorial.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;p>Add the macro module developed in the previous example to your workspace.&lt;/p>
+&lt;p>&lt;p class="page-image">
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/pull/118/images/tutorials/thirdparty/pytorch_example3_1.png" title="WebCamTest module">&lt;img id="WebCamTest module" class="img-fluid rounded" src="https://mevislab.github.io/examples/pull/118/images/tutorials/thirdparty/pytorch_example3_1.png" alt="WebCamTest module" title="WebCamTest module" />&lt;/a>
+ &lt;figcaption class="figure-caption">WebCamTest module&lt;/figcaption>
+&lt;/p>
+&lt;/p>
+&lt;p>Open the internal network of the module via middle mouse button 
+
+
+
+&lt;img width="22px" src="https://mevislab.github.io/examples/pull/118/images/mmb.svg" alt="Middle Mouse Button / Mouse Wheel" />
+ and right click 
+
+
+&lt;img width="22px" src="https://mevislab.github.io/examples/pull/118/images/rmb.svg" alt="Right Mouse Button" />
+
+ on the tab of the workspace showing the internal network. Select &lt;em>Show Enclosing Folder&lt;/em>.&lt;/p></description></item></channel></rss>

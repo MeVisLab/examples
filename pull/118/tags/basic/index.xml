@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Basic on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/118/tags/basic/</link><description>Recent content in Basic on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 29 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/118/tags/basic/index.xml" rel="self" type="application/rss+xml"/><item><title>Tips and Tricks</title><link>https://mevislab.github.io/examples/pull/118/tutorials/shorts/</link><pubDate>Wed, 29 Nov 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/118/tutorials/shorts/</guid><description>&lt;h1 id="mevislab-tips-and-tricks">MeVisLab Tips and Tricks&lt;/h1>
+&lt;p>This chapter shows some features and functionalities which are helpful but do not provide its own tutorial.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://mevislab.github.io/examples/pull/118/tutorials/shorts#shortcuts">Keyboard Shortcuts&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://mevislab.github.io/examples/pull/118/tutorials/shorts#snippets">Using Snippets&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://mevislab.github.io/examples/pull/118/tutorials/shorts#scriptingassistant">Scripting Assistant&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://mevislab.github.io/examples/pull/118/tutorials/shorts#user_scripts">User Scripts&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://mevislab.github.io/examples/pull/118/tutorials/shorts#mlimagestate">Show status of module in- and output&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://mevislab.github.io/examples/pull/118/tutorials/shorts#modulesuggest">Module suggestion of module in- and output&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="shortcuts">Keyboard Shortcuts&lt;/h2>
+&lt;p>This is a collection of useful keyboard shortcuts in MeVisLab, hopefully it grows continuously.&lt;/p>
+&lt;table class="table table-striped">
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Shortcut&lt;/th>
+ &lt;th>Functionality&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ 1
+ &lt;/kbd>&lt;/td>
+ &lt;td>Automatically arrange selection of modules / in the current network&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ 2
+ &lt;/kbd>&lt;/td>
+ &lt;td>Open most recent network file&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ 3
+ &lt;/kbd>&lt;/td>
+ &lt;td>Run most recent test case (extremely useful for developers)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ A
+ &lt;/kbd> then 
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ 1
+ &lt;/kbd>&lt;/td>
+ &lt;td>Layout network&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ A
+ &lt;/kbd> then 
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ TAB
+ &lt;/kbd>&lt;/td>
+ &lt;td>Layout .script file (in MATE)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ D
+ &lt;/kbd>&lt;/td>
+ &lt;td>Duplicate currently selected module (including all field values)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd> and Left Mouse 
+
+&lt;img width="22px" src="https://mevislab.github.io/examples/pull/118/images/lmb.svg" alt="Left Mouse Button" />
+
+
+ or Middle Mouse Button 
+
+
+
+&lt;img width="22px" src="https://mevislab.github.io/examples/pull/118/images/mmb.svg" alt="Middle Mouse Button / Mouse Wheel" />
+&lt;/td>
+ &lt;td>Show Internal Network&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ SPACE
+ &lt;/kbd>&lt;/td>
+ &lt;td>Show hidden outputs of the currently selected module&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ ALT
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ T
+ &lt;/kbd>&lt;/td>
+ &lt;td>Start test center&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ K
+ &lt;/kbd>&lt;/td>
+ &lt;td>Restart MeVisLab with current network(s)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ CTRL
+ &lt;/kbd>
+ +
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ R
+ &lt;/kbd>&lt;/td>
+ &lt;td>Run script file with the same name of your network file if available in the same directory.&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>
+ 
+ &lt;kbd>
+ 
+ 
+ 
+ 
+ ALT
+ &lt;/kbd> Double-click 
+
+&lt;img width="22px" src="https://mevislab.github.io/examples/pull/118/images/lmb.svg" alt="Left Mouse Button" />
+
+
+ on a module&lt;/td>
+ &lt;td>Open automatic panel of the module.&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="snippets">Using Snippets&lt;/h2>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/118/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=xX7wJiyfxhA" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/xX7wJiyfxhA/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=xX7wJiyfxhA" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;p>Sometimes you have to create the same network over and over again &amp;ndash; for example, to quickly preview DICOM files. Generally, you will at least add one module to load and another module to display your images. Sometimes you may also want to view the DICOM header data. A network you possibly generate whenever opening DICOM files will be the following:&lt;/p></description></item></channel></rss>
