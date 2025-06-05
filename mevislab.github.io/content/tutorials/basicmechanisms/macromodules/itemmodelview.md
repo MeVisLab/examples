@@ -164,8 +164,7 @@ Before implementing the Python function, we have to add necessary imports and gl
 
 {{< highlight filename="MyItemModelView.py" >}}
 ```Python
-import mevislab
-from mevis import *
+from mevis import MLAB
 
 gAttributes = ["Patient Name", "patientBirthdate", "studyDescription", "studyDate", "modality", "seriesDescription", "seriesDate", "sopInstanceUID"]
 gModel = None
