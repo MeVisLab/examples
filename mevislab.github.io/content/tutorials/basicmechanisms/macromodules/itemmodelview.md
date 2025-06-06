@@ -166,7 +166,7 @@ Before implementing the Python function, we have to add necessary imports and gl
 ```Python
 from mevis import MLAB
 
-gAttributes = ["Patient Name", "patientBirthdate", "studyDescription", "studyDate", "modality", "seriesDescription", "seriesDate", "sopInstanceUID"]
+gAttributes = ["patientName", "patientBirthdate", "studyDescription", "studyDate", "modality", "seriesDescription", "seriesDate", "sopInstanceUID"]
 gModel = None
 gNextId = 0
 ```
