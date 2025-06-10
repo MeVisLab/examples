@@ -14,6 +14,8 @@ menu:
 ---
 # Example 6.1: Volume Rendering vs. Path Tracer
 
+{{< youtube "E0H87Cimu_M">}}
+
 ## Introduction
 In this example you develop a network to show some differences between volume rendering and the MeVisLab Path Tracer. You will visualize the same scene using both 3D rendering techniques and some of the modules for path tracing.
 

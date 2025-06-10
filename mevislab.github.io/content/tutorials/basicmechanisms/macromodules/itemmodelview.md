@@ -172,7 +172,7 @@ gNextId = 0
 ```
 {{</highlight>}}
 
-We need *mevis.MLAB* and we define the attributes of our resulting view.
+We need to import *mevis.MLAB* and we define the attributes of our resulting view.
 
 The unique *id* is an increasing *Integer* and we can now initialize our model.
 
