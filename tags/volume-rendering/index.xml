@@ -54,6 +54,11 @@
  &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/visualization/pathtracer/PathTracer1.png" title="PathTracer1">&lt;img src="https://mevislab.github.io/examples/images/tutorials/visualization/pathtracer/PathTracer1.png" class="img-fluid" alt="PathTracer1">&lt;/a>
  &lt;figcaption class="figure-caption">PathTracer1&lt;/figcaption>
  &lt;/p></description></item><item><title>Example 6.1: Volume Rendering vs. Path Tracer</title><link>https://mevislab.github.io/examples/tutorials/visualization/pathtracer/pathtracerexample1/</link><pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/visualization/pathtracer/pathtracerexample1/</guid><description>&lt;h1 id="example-61-volume-rendering-vs-path-tracer">Example 6.1: Volume Rendering vs. Path Tracer&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=E0H87Cimu_M" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/E0H87Cimu_M/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=E0H87Cimu_M" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
 &lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>In this example you develop a network to show some differences between volume rendering and the MeVisLab Path Tracer. You will visualize the same scene using both 3D rendering techniques and some of the modules for path tracing.&lt;/p>
 
