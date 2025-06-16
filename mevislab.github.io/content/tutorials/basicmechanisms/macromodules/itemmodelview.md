@@ -172,9 +172,8 @@ gNextId = 0
 
 def getNextId():
     global gNextId
-    id = gNextId
     gNextId += 1
-    return id
+    return gNextId
 ```
 {{</highlight>}}
 
