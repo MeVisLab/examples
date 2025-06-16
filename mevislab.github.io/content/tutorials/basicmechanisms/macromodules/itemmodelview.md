@@ -1,5 +1,5 @@
 ---
-title: "Example 7: Creating you own ItemModel by using the ItemModelView"
+title: "Example 7: Creating your own ItemModel by using the ItemModelView"
 date: 2025-06-03
 status: "OK"
 draft: false
@@ -169,6 +169,11 @@ from mevis import MLAB
 gAttributes = ["patientName", "patientBirthdate", "studyDescription", "studyDate", "modality", "seriesDescription", "seriesDate", "sopInstanceUID"]
 gModel = None
 gNextId = 0
+
+def getNextId():
+    global gNextId
+    gNextId += 1
+    return gNextId
 ```
 {{</highlight>}}
 
