@@ -195,9 +195,9 @@ Commands {
 
 In the above example, we react on changes of the field *startSlice* of the module `View2D`. Whenever the field value (currently displayed slice) changes, the Python function *printCurrentSliceNumber* is executed.
 
-In your Python file `Filter.py` you can now add the following:
+In your Python file `MyViewerApplication.py` you can now add the following:
 
-{{< highlight filename="Filter.py" >}}
+{{< highlight filename="MyViewerApplication.py" >}}
 ```Python
 def printCurrentSliceNumber(field):
     MLAB.log(field.value)
