@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Package on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/120/tags/package/</link><description>Recent content in Package on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:58:44 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/120/tags/package/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 2.1: Package Creation</title><link>https://mevislab.github.io/examples/pull/120/tutorials/basicmechanisms/macromodules/package/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/120/tutorials/basicmechanisms/macromodules/package/</guid><description>&lt;h1 id="example-21-package-creation">Example 2.1: Package creation&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/120/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=1wrGsYtAs3g" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/1wrGsYtAs3g/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=1wrGsYtAs3g" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Packages are the way MeVisLab organizes different development projects.&lt;/p>
+&lt;p>Macro modules and projects are stored in packages. If you like to create a global macro module, you need a package in which this macro module can be stored in. In this chapter, we will create our own package. We start our package creation by creating a package group, because every package needs to be stored in a package group. You can find detailed information about packages and package groups 
+&lt;a href="https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/GettingStarted/ch08.html" target="_blank">here&lt;/a>
+
+ and in the 
+&lt;a href="https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/PackageStructure/index.html" target="_blank">package documentation&lt;/a>
+
+.&lt;/p></description></item></channel></rss>

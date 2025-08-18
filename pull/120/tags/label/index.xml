@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Label on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/120/tags/label/</link><description>Recent content in Label on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 11 Mar 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/120/tags/label/index.xml" rel="self" type="application/rss+xml"/><item><title>Contour Example 6: Adding Labels to Contours</title><link>https://mevislab.github.io/examples/pull/120/tutorials/dataobjects/contours/contourexample6/</link><pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/120/tutorials/dataobjects/contours/contourexample6/</guid><description>&lt;h1 id="TutorialContoursExample6">Contour Example 6: Adding Labels to Contours&lt;/h1>
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
+ &lt;div>
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/120/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=-ACAoeK2Fm8" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/-ACAoeK2Fm8/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=-ACAoeK2Fm8" target="_blank">YouTube&lt;/a>.
+ &lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>In this example, we are adding a label to a contour. The label provides information about measurements and about the contour itself. The label remains connected to the contour and can be moved via mouse interactions.&lt;/p>
+&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
+&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
+&lt;p>Add a &lt;code>LocalImage&lt;/code> and a &lt;code>View2D&lt;/code> module to your workspace and connect them as shown below. Load the file &lt;em>ProbandT1.dcm&lt;/em> from MeVisLab demo data. In order to create contours (CSOs), we need a &lt;code>SoView2DCSOExtensibleEditor&lt;/code> module. It manages attached CSO editors, renderers and offers an optional default renderer for all types of CSOs.&lt;/p></description></item></channel></rss>
