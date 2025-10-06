@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arithmetic on MeVisLab Examples</title><link>https://mevislab.github.io/examples/tags/arithmetic/</link><description>Recent content in Arithmetic on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:56:33 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/tags/arithmetic/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 1: Arithmetic operations on two images</title><link>https://mevislab.github.io/examples/tutorials/image_processing/image_processing1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/image_processing/image_processing1/</guid><description>&lt;h1 id="example-1-arithmetic-operations-on-two-images">Example 1: Arithmetic operations on two images&lt;/h1>
-&lt;div class="alert alert-secondary d-flex align-items-center" role="alert">
- &lt;div>
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" />&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=ToTQ3XRPmlk" target="_blank">&lt;img width="100px" src="https://img.youtube.com/vi/ToTQ3XRPmlk/0.jpg" />&lt;/a>&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=ToTQ3XRPmlk" target="_blank">YouTube&lt;/a>.
- &lt;/div>
-&lt;/div>
-&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>We are using the &lt;code>Arithmetic2&lt;/code> module to apply basic scalar functions on two images. The module provides 2 inputs for images and 1 output image for the result.&lt;/p>
-&lt;h2 id="steps-to-do">Steps to do&lt;/h2>
-&lt;h3 id="develop-your-network">Develop your network&lt;/h3>
-&lt;p>Add two &lt;code>LocalImage&lt;/code> modules to your workspace for the input images. Select &lt;em>$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm&lt;/em> and &lt;em>$(DemoDataPath)/BrainMultiModal/ProbandT2.dcm&lt;/em> from MeVisLab demo data and add a &lt;code>SynchroView2D&lt;/code> to your network.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arithmetic on MeVisLab Examples</title><link>https://mevislab.github.io/examples/tags/arithmetic/</link><description>Recent content in Arithmetic on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:56:33 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/tags/arithmetic/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 1: Arithmetic operations on two images</title><link>https://mevislab.github.io/examples/tutorials/image_processing/image_processing1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/image_processing/image_processing1/</guid><description>&lt;h1 id="example-1-arithmetic-operations-on-two-images"&gt;Example 1: Arithmetic operations on two images&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=ToTQ3XRPmlk" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/ToTQ3XRPmlk/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=ToTQ3XRPmlk" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;We are using the &lt;code&gt;Arithmetic2&lt;/code&gt; module to apply basic scalar functions on two images. The module provides 2 inputs for images and 1 output image for the result.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
+&lt;h3 id="develop-your-network"&gt;Develop your network&lt;/h3&gt;
+&lt;p&gt;Add two &lt;code&gt;LocalImage&lt;/code&gt; modules to your workspace for the input images. Select &lt;em&gt;$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm&lt;/em&gt; and &lt;em&gt;$(DemoDataPath)/BrainMultiModal/ProbandT2.dcm&lt;/em&gt; from MeVisLab demo data and add a &lt;code&gt;SynchroView2D&lt;/code&gt; to your network.&lt;/p&gt;</description></item></channel></rss>
