@@ -89,6 +89,10 @@ The voxel size is now 1.
 
 You can add this network to the world coordinate system network developed above and see both coordinate systems.
 
+{{<alert class="warning" caption="Warning">}}
+Replace the `SoGroup` module from the World Group in your network by a `SoSeparator`. Additional details about the difference can be found [here](https://mevislab.github.io/examples/tutorials/openinventor).
+{{</alert>}}
+
 ![World coordinates of the loaded image](/images/tutorials/basicmechanics/WorldVoxelNetwork.png "World coordinates of the loaded image")
 
 Opening the `SoExaminerViewer` shows the world coordinate system in white and the voxel coordinate system in yellow.
