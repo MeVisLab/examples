@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>RunPythonScript on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/122/tags/runpythonscript/</link><description>Recent content in RunPythonScript on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:58:44 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/122/tags/runpythonscript/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 2.5.1: The module RunPythonScript</title><link>https://mevislab.github.io/examples/pull/122/tutorials/basicmechanisms/macromodules/scriptingexample1/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/122/tutorials/basicmechanisms/macromodules/scriptingexample1/</guid><description>&lt;h1 id="example-251-the-module-runpythonscript"&gt;Example 2.5.1: The module RunPythonScript&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/122/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=O5Get1PMOq8" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/O5Get1PMOq8/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=O5Get1PMOq8" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The module &lt;code&gt;RunPythonScript&lt;/code&gt; allows to execute Python scripts from within a MeVisLab network. You can draw parameter connection from modules to &lt;code&gt;RunPythonScript&lt;/code&gt; and back, to process parameter fields using Python scripting.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
+&lt;h3 id="develop-your-network"&gt;Develop your network&lt;/h3&gt;
+&lt;p&gt;In this example, we like to dynamically change the color of a cube in an Open Inventor scene. For that, add and connect the following modules as shown.&lt;/p&gt;</description></item></channel></rss>
