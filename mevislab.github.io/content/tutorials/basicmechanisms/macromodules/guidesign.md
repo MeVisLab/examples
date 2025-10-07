@@ -164,7 +164,7 @@ Window MyWindowName {
             title = "Title of my Box"
         }
         Label MyLabel {
-            title = "This is a label below the box"
+            title = "This is a label beside the box"
         }
     }
 }
