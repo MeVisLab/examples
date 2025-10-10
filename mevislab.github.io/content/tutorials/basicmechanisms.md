@@ -199,7 +199,7 @@ You have probably already noticed how the modules differ in color. Each color re
   * Green modules are OpenInventor modules, they enable visual 3D scene graphs. 
   * The brown modules are called macro modules. Macro modules encapsulate a whole network in a single module. 
   
-To condense our filter into one single module, we will now be creating a macro module out of it. To do that, right-click on the group title and select *Convert To Local Macro*. Name your new macro module and finish. You just created a local macro module. Local macro modules can only be used in the network they were created in.
+To condense our filter into one single module, we will now be creating a macro module out of it. To do that, right-click on the group title and select *Convert To Local Macro*. Name your new macro module and finish. You just created a local macro module. Local macros can only be used from networks in the same or any parent directory.
 
 ![Convert to local macro](/images/tutorials/basicmechanics/BM_21.png "Convert to local macro")
 ![Your first local macro](/images/tutorials/basicmechanics/BM_22.png "Your first local macro")
