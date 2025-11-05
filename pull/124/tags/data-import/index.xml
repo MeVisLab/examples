@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data Import on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/124/tags/data-import/</link><description>Recent content in Data Import on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:58:44 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/124/tags/data-import/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 1: Data import in MeVisLab</title><link>https://mevislab.github.io/examples/pull/124/tutorials/basicmechanisms/dataimport/</link><pubDate>Wed, 15 Jun 2022 08:54:53 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/124/tutorials/basicmechanisms/dataimport/</guid><description>&lt;h1 id="example-1-data-import-in-mevislab"&gt;Example 1: Data Import in MeVisLab&lt;/h1&gt;
+&lt;p&gt;MeVisLab provides several pre-defined modules to import data for processing in your networks.&lt;/p&gt;
+
+&lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&gt;
+ &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&gt;
+ &lt;/symbol&gt;
+&lt;/svg&gt;
+
+&lt;div class="alert alert-primary alert-info d-flex align-items-center" role="alert"&gt;
+ &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Extra Infos:"&gt;&lt;use xlink:href="#info-fill"/&gt;&lt;/svg&gt;
+ &lt;div&gt;
+ &lt;b&gt;Extra Infos:&amp;nbsp;&lt;/b&gt;
+ The easiest way to load data in MeVisLab is to drop the file onto the MeVisLab workspace. MeVisLab will try to find a module that is capable of loading your file automatically.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;These chapters explain the data formats and modules related to this example:&lt;/p&gt;</description></item><item><title>Example 1.1: MeVisLab Coordinate Systems</title><link>https://mevislab.github.io/examples/pull/124/tutorials/basicmechanisms/coordinatesystems/coordinatesystems/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/124/tutorials/basicmechanisms/coordinatesystems/coordinatesystems/</guid><description>&lt;h1 id="example-11-mevislab-coordinate-systems"&gt;Example 1.1: MeVisLab Coordinate Systems&lt;/h1&gt;
+&lt;p&gt;Three coordinate systems exist next to each other:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;World coordinates&lt;/li&gt;
+&lt;li&gt;Voxel coordinates&lt;/li&gt;
+&lt;li&gt;Device coordinates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;World coordinate systems in MeVisLab are always &lt;a href="https://en.wikipedia.org/wiki/Right-hand_rule" target="_blank" rel="noopener"&gt;right handed&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The blue rectangle shows the same region in the three coordinate systems.&lt;/p&gt;
+&lt;p&gt;&lt;p class="page-image"&gt;
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/pull/124/images/tutorials/basicmechanics/GSExampleImageProcessing10b.png" title="Coordinate Systems in MeVisLab"&gt;&lt;img id="Coordinate Systems in MeVisLab" class="img-fluid rounded" src="https://mevislab.github.io/examples/pull/124/images/tutorials/basicmechanics/GSExampleImageProcessing10b.png" alt="Coordinate Systems in MeVisLab" title="Coordinate Systems in MeVisLab" /&gt;&lt;/a&gt;
+ &lt;figcaption class="figure-caption"&gt;Coordinate Systems in MeVisLab&lt;/figcaption&gt;
+&lt;/p&gt;
+&lt;/p&gt;
+&lt;h2 id="world-coordinates"&gt;World coordinates&lt;/h2&gt;
+&lt;p&gt;World coordinates are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Global: Combine several objects in a view&lt;/li&gt;
+&lt;li&gt;Isotropic: All directions are equivalent&lt;/li&gt;
+&lt;li&gt;Orthogonal: Coordinate axes are orthogonal to each other&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The origin of the world coordinate system can be anywhere and is not clearly defined. Origins of the other coordinate systems can always be mapped to the world coordinate system. In case of DICOM images, this mapping is defined by DICOM tags.&lt;/p&gt;</description></item><item><title>Example 1.2: DICOM Coordinate Systems</title><link>https://mevislab.github.io/examples/pull/124/tutorials/basicmechanisms/coordinatesystems/coordinatesystems2/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/124/tutorials/basicmechanisms/coordinatesystems/coordinatesystems2/</guid><description>&lt;h1 id="example-12-dicom-coordinate-systems"&gt;Example 1.2: DICOM Coordinate Systems&lt;/h1&gt;
+&lt;h2 id="general"&gt;General&lt;/h2&gt;
+&lt;p&gt;Coordinate systems in &lt;a href="https://en.wikipedia.org/wiki/DICOM" target="_blank" rel="noopener"&gt;DICOM&lt;/a&gt; are basically the same as world coordinates in MeVisLab (except for the 0.5 voxel offset).
+World coordinates also refer to the patient axes. They are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Based on the patient&amp;rsquo;s main body axes (transverse, coronal, sagittal)&lt;/li&gt;
+&lt;li&gt;Measured as 1 coordinate unit = 1 millimeter&lt;/li&gt;
+&lt;li&gt;Right-handed&lt;/li&gt;
+&lt;li&gt;Not standardized regarding their origin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;p class="page-image"&gt;
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/pull/124/images/tutorials/visualization/V2_00.png" title="World Coordinates in Context of the Human Body"&gt;&lt;img id="World Coordinates in Context of the Human Body" class="img-fluid rounded" src="https://mevislab.github.io/examples/pull/124/images/tutorials/visualization/V2_00.png" alt="World Coordinates in Context of the Human Body" title="World Coordinates in Context of the Human Body" /&gt;&lt;/a&gt;
+ &lt;figcaption class="figure-caption"&gt;World Coordinates in Context of the Human Body&lt;/figcaption&gt;
+&lt;/p&gt;</description></item></channel></rss>
