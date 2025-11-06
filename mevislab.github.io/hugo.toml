@@ -68,7 +68,7 @@ canonifyURLs = true
 [[menu.main]]
     identifier = "examples"
     title = "Examples"
-    url = "/examples/"
+    url = "/examples/examples/"
     weight = 600
 
 [[menu.main]]
