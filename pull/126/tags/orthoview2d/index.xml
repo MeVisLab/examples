@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OrthoView2D on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/126/tags/orthoview2d/</link><description>Recent content in OrthoView2D on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 21 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/126/tags/orthoview2d/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 7: Add 3D viewer to OrthoView2D</title><link>https://mevislab.github.io/examples/pull/126/tutorials/visualization/visualizationexample7/</link><pubDate>Tue, 21 Nov 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/126/tutorials/visualization/visualizationexample7/</guid><description>&lt;h1 id="TutorialVisualizationExample7"&gt;Example 7: Add 3D viewer to OrthoView2D&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="https://mevislab.github.io/examples/pull/126/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=vRtFcaPBAko" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/vRtFcaPBAko/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=vRtFcaPBAko" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this example we will use the &lt;code&gt;OrthoView2D&lt;/code&gt; module and add a 3D viewer to the layout &lt;em&gt;Cube&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
+&lt;h3 id="develop-your-network"&gt;Develop your network&lt;/h3&gt;
+&lt;p&gt;Add the modules &lt;code&gt;LocalImage&lt;/code&gt; and &lt;code&gt;OrthoView2D&lt;/code&gt; to your workspace and connect them.&lt;/p&gt;
+&lt;p&gt;&lt;p class="page-image"&gt;
+ &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/pull/126/images/tutorials/image_processing/network_example7.png" title="Network"&gt;&lt;img id="Network" class="img-fluid rounded" src="https://mevislab.github.io/examples/pull/126/images/tutorials/image_processing/network_example7.png" alt="Network" title="Network" /&gt;&lt;/a&gt;
+ &lt;figcaption class="figure-caption"&gt;Network&lt;/figcaption&gt;
+&lt;/p&gt;
+&lt;/p&gt;
+&lt;p&gt;The &lt;code&gt;OrthoView2D&lt;/code&gt; module allows you to select multiple layouts. Select layout &lt;em&gt;Cube Equal&lt;/em&gt;. The layout shows your image in three orthogonal viewing directions. The top left segment remains empty.&lt;/p&gt;</description></item></channel></rss>
