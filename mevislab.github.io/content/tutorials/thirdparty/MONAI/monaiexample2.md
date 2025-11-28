@@ -71,9 +71,9 @@ Interface {
 ```
 {{</highlight>}}
 
-If you now reload your module in MeVisLab, you can see the new in- and output.
+If you now reload your module in MeVisLab, you can see the new input and output.
 
-![MONAIDemo with in- and output](/images/tutorials/thirdparty/monai_example2_3.png "MONAIDemo with in- and output")
+![MONAIDemo with input and output](/images/tutorials/thirdparty/monai_example2_3.png "MONAIDemo with input and output")
 
 Add a *Commands* section to your \**.script*-file.
 
@@ -94,9 +94,9 @@ Right-click {{< mousebutton "right" >}} on the Macro Module and select {{< menui
 
 ![MONAIDemo Network](/images/tutorials/thirdparty/monai_example2_3a.png "MonaiDemo Network")
 
-Fields of the internal network can be left default, we will change them later.
+Fields of the internal network can be left with default values, we will change them later.
 
-The left part defines actions executed on the input image, the right part defines what shall happen on the output after the *MONAI* segmentation has been done. A detailed descripion will be provided later.
+The left part defines actions executed on the input image, the right part defines what shall happen on the output after the *MONAI* segmentation has been done. A detailed description will be provided later.
 
 Open your *\*.script* file via right-click {{< mousebutton "right" >}} on the Macro Module and select {{< menuitem "Related Files" "MONAIDemo.script">}}.
 
@@ -253,9 +253,9 @@ Open the panel of the `SwapFlipDimensions` module and select X as *Axis 1* and Z
 
 ![SwapFlipDimensions](/images/tutorials/thirdparty/monai_example2_11.png "SwapFlipDimensions")
 
-After the algorithm has been executed, we have to flip the images back to the priginal order. Open the panel of the `SwapFlipDimensions1` module and select X as *Axis 1* and Z as *Axis 2*. 
+After the algorithm has been executed, we have to flip the images back to the original order. Open the panel of the `SwapFlipDimensions1` module and select X as *Axis 1* and Z as *Axis 2*. 
 
-Finally we want to show the results o the algorithm as a semi-transparent overlay on the image. Open tha panel of the `View2DOverlay` and define the following settings:
+Finally we want to show the results of the algorithm as a semi-transparent overlay on the image. Open tha panel of the `View2DOverlay` and define the following settings:
 * Blend Mode: Blend
 * Alpha Factor: 0.5
 * Base Color: red
@@ -263,7 +263,7 @@ Finally we want to show the results o the algorithm as a semi-transparent overla
 ![View2DOverlay](/images/tutorials/thirdparty/monai_example2_12.png "View2DOverlay")
 
 ### Field Listeners
-We add some Field Listeners to our Commands section of the *\*.script* file. They are necessary to react on changes the user does on the fields of our module.
+We add some Field Listeners to our Commands section of the *\*.script* file. They are necessary to react on changes the user makes on the fields of our module.
 
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
@@ -334,7 +334,7 @@ def _sizeChanged():
 ```
 {{</highlight>}}
 
-These functions should be enough to run th module. You can try them by changing the input image of our module, by changing any of the size values in *Module Inspector* or by clicking *start*.
+These functions should be enough to run the module. You can try them by changing the input image of our module, by changing any of the size values in *Module Inspector* or by clicking *start*.
 
 Lets implement the *_getImage* function first:
 
@@ -409,7 +409,7 @@ We want to use the image that has been modified according to our pre-trained net
 ```
 {{</highlight>}}
 
-This function now already calculates the segmentation using the *MONAI* model. The problem is, that it may happen that our sub image with the size 160 x 160 x 160 is located somewhere in our original image, where no spleen is visible.
+This function now already calculates the segmentation using the *MONAI* model. The problem is, that it may happen that our subimage with the size 160 x 160 x 160 is located somewhere in our original image, where no spleen is visible.
 
 We have to calculate a bounding box in our `ROISelect` module and need to be able to move this bounding box to the correct location.
 
@@ -465,7 +465,7 @@ If you now open the panel of our `MONAIDemo` module, we can manually move the bo
 
 ![MONAIDemo panel](/images/tutorials/thirdparty/monai_example2_5.png "MONAIDemo panel").
 
-Back to Python, we now need to reset our module to default,m in case the input image changes. This also removed previous segmentations from the `PythonImage` module.
+Back to Python, we now need to reset our module to default, in case the input image changes. This also removes previous segmentations from the `PythonImage` module.
 
 {{< highlight filename="MONAIDemo.py" >}}
 ```Python
@@ -487,13 +487,13 @@ Back to Python, we now need to reset our module to default,m in case the input i
 {{</highlight>}}
 
 ## Execute the segmentation
-If you now load an image using the `itkImageFileReader` module, you can manually adapt your bounding box to include the spleen ans start segmentation.
+If you now load an image using the `itkImageFileReader` module, you can manually adapt your bounding box to include the spleen and start segmentation.
 
-The results are shown as a sem-transparent overlay.
+The results are shown as a semi-transparent overlay.
 
 ![Segmentation result](/images/tutorials/thirdparty/monai_example2_6.png "Segmentation result").
 
-You can also use the other examples from *MONAI Model Zoo* the same way, just make sure to apply necessary changes on the input images like size, voxel size and other parameters defined in the *inference.json* file of the model.
+You can also use the other examples from *MONAI Model Zoo* the same way, just make sure to apply the necessary changes on the input images like size, voxel size and other parameters defined in the *inference.json* file of the model.
 
 ## Summary
 * Pre-trained *MONAI* networks can be used directly in MeVisLab via `PythonImage` module
