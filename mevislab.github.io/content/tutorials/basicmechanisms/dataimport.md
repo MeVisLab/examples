@@ -74,6 +74,10 @@ In order to get all DICOM tags from your currently imported and selected volume,
 
 ![DicomTagBrowser Module](/images/tutorials/basicmechanics/DicomTagBrowser.png "DicomTagBrowser Module")
 
+In MeVisLab versions later than 4.2.0 the *Output Inspector* provides the option to show the DICOM tags of the currently selected output directly. You do not need to add a separate `DicomTagBrowser` module anymore.
+
+![DICOM Information in Output Inspector](/images/tutorials/basicmechanics/OutputInspectorDICOM.png "DICOM Information in Output Inspector")
+
 ## Segmentations / 2D Contours {#2DContours}
 2-dimensional contours in MeVisLab are handled via *CSO*s (**C**ontour **S**egmentation **O**bjects).
 
