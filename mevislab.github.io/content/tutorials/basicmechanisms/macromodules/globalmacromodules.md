@@ -48,7 +48,7 @@ right-click {{< mousebutton "right" >}} the macro module to open the context men
     *\\MyPackageGroup\\General\\Modules\\Macros\\MyProject*.
 
 {{<alert class="info" caption="Info">}}
-Make sure to chose *Directory Structure* as *self-contained*. This makes sure that all files of your module are stored in a single directory.
+If you are working with MeVisLab versions before 5.0, make sure to chose *Directory Structure* as *self-contained*. This makes sure that all files of your module are stored in a single directory. Later versions always use *self-contained*.
 
 Also keep in mind that Python files are only created automatically if selected in the Project Wizard. Converting a local macro to a global macro does NOT create a Python file automatically.
 {{</alert>}}

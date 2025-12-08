@@ -29,7 +29,7 @@ Project Wizard, which you find under {{< menuitem "File" "Run Project Wizard" >}
 Now, you have to edit:
 1.  Name: The name of your module
 2.  Package: Select the package you like to save the macro module in. 
-3.  Directory Structure: Change to *Self-contained*
+3.  Directory Structure: Change to *Self-contained* (this setting is only available in MeVisLab versions before 5.0.0, later versions always use *self-contained*)
 4.  Project: Select you project name
 
 Press *Next* and edit the following:
