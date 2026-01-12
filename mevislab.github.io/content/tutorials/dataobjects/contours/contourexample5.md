@@ -26,7 +26,7 @@ Load the example image *Bone.tiff*.
 
 ### Automatic Creation of CSOs Based on the Isovalue
 Now, open the panel of `CSOIsoGenerator` to set the *Iso Value* to 1200. If you press *Update* in
-the panel, you can see the creation of CSOs on each slide when opening
+the panel, you can see the creation of CSOs on every slide when opening
 the module `View2D`. In addition to that, the number of CSOs is displayed in the `CSOManager`. The module
 `CSOIsoGenerator` generates isocontours for each slice at a fixed isovalue. This means that closed CSOs are formed based on the detection of the
 voxel value of 1200 on every slice.

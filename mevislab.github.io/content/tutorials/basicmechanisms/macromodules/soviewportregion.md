@@ -29,7 +29,7 @@ Add an `ImageLoad` module to your workspace and select a 3D image like *./MeVisL
 
 ![Image Display Setup](/images/tutorials/basicmechanics/E6_1.png "Image Display Setup")
 
-Opening the three `View2D` module panels now shows the image data in three orthogonal views. The module `OrthoReformat3` transforms the input image (by rotating and/or flipping) into the three main views commonly used.
+Opening the three `View2D` module panels now shows the data in three orthogonal views. The module `OrthoReformat3` transforms the input image (by rotating and/or flipping) into the three main views commonly used.
 
 ![3 Views in 3 Viewers](/images/tutorials/basicmechanics/E6_2.png "3 Views in 3 Viewers")
 

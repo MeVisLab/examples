@@ -24,7 +24,7 @@ World coordinates also refer to the patient axes. They are:
 
 ![World Coordinates in Context of the Human Body](/images/tutorials/visualization/V2_00.png "World Coordinates in Context of the Human Body")
 
-The Digital Imaging and Communications in Medicine (DICOM) standard defines a data format that groups information into data sets. This way, the image data is always kept together with all meta information like patient ID, study time, series time, acquisition data, etc. The image slice is represented by another tag with pixel information.
+The DICOM (Digital Imaging and Communications in Medicine) standard defines a data format that groups information into data sets. This way, the image data is always kept together with all meta information like patient ID, study time, series time, acquisition data, etc. The image slice is represented by another tag with pixel information.
 
 DICOM tags have unique numbers, encoded as two 16-bit numbers, usually shown in hexadecimal notation as two four-digit numbers (xxxx,xxxx). These numbers are the data group number and the data element number.
 

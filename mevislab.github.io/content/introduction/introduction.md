@@ -192,7 +192,7 @@ An exemplary use case for a parameter connection is synchronization. Have a look
 The creation of macros is explained in more detail in [Tutorial Chapter I - Example 2.2](/tutorials/basicmechanisms/macromodules/globalmacromodules) 
 {{</alert>}}
 
-### Adding Modules to Your Workspace {#Searching_and_Adding_Modules}
+### Adding Modules to your Workspace {#Searching_and_Adding_Modules}
 
 There are several ways to add a module to your current network:
 -   via the menu bar entry {{< menuitem "Modules" >}}

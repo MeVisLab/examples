@@ -42,7 +42,7 @@ The `ConstantImage` module generates an artificial image with a certain size, da
 
 ![ConstantImage Info](/images/tutorials/basicmechanics/ConstantImageInfo.png "ConstantImage Info")
 
-Placing an object into the Open Inventor scene of the `SoExaminerViewer`, in this case a `SoCube` with *width*, *height*, and *depth* of 10, places the object to the origin of the world coordinate system.
+Placing an object into the Open Inventor Scene of the `SoExaminerViewer`, in this case a `SoCube` with *width*, *height*, and *depth* of 10, places the object to the origin of the world coordinate system.
 
 ![SoCube in world coordinate system](/images/tutorials/basicmechanics/SoCubeWorldCoordinates.png "SoCube in world coordinate system")
 
