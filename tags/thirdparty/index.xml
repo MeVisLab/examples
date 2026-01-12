@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ThirdParty on MeVisLab Examples</title><link>https://mevislab.github.io/examples/tags/thirdparty/</link><description>Recent content in ThirdParty on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:56:33 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/tags/thirdparty/index.xml" rel="self" type="application/rss+xml"/><item><title>Chapter VIII: ThirdParty components</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/</guid><description>&lt;h1 id="TutorialChapter8"&gt;MeVisLab Tutorial Chapter VIII&lt;/h1&gt;
-&lt;h2 id="TutorialThirdParty"&gt;Using ThirdParty software integrated into MeVisLab&lt;/h2&gt;
+&lt;h2 id="TutorialThirdParty"&gt;Using ThirdParty Software Integrated into MeVisLab&lt;/h2&gt;
 &lt;p&gt;MeVisLab is equipped with a lot of useful software right out of the box, like the Insight Segmentation and Registration Toolkit (ITK) or the Visualization Toolkit (VTK). This chapter works as a guide on how to use some of the third party components integrated in MeVisLab for your projects via Python scripting.
 
 &lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&gt;
@@ -21,6 +21,6 @@
  &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Additional Information:"&gt;&lt;use xlink:href="#info-fill"/&gt;&lt;/svg&gt;
  &lt;div&gt;
  &lt;b&gt;Additional Information:&amp;nbsp;&lt;/b&gt;
- You will also find instructions to install and use any Python package (e.g. PyTorch) in MeVisLab using the &lt;code&gt;PythonPip&lt;/code&gt; module.
+ You will also find instructions to install and use any Python package (e.g., PyTorch) in MeVisLab using the &lt;code&gt;PythonPip&lt;/code&gt; module.
  &lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;</description></item></channel></rss>

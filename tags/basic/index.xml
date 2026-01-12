@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Basic on MeVisLab Examples</title><link>https://mevislab.github.io/examples/tags/basic/</link><description>Recent content in Basic on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 29 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/tags/basic/index.xml" rel="self" type="application/rss+xml"/><item><title>Tips and Tricks</title><link>https://mevislab.github.io/examples/tutorials/shorts/</link><pubDate>Wed, 29 Nov 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/shorts/</guid><description>&lt;h1 id="mevislab-tips-and-tricks"&gt;MeVisLab Tips and Tricks&lt;/h1&gt;
-&lt;p&gt;This chapter shows some features and functionalities which are helpful but do not provide its own tutorial.&lt;/p&gt;
+&lt;p&gt;This chapter shows some features and functionalities that are helpful but do not provide its own tutorial.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://mevislab.github.io/examples/tutorials/shorts#shortcuts"&gt;Keyboard Shortcuts&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://mevislab.github.io/examples/tutorials/shorts#snippets"&gt;Using Snippets&lt;/a&gt;&lt;/li&gt;
@@ -9,7 +9,7 @@
 &lt;li&gt;&lt;a href="https://mevislab.github.io/examples/tutorials/shorts#modulesuggest"&gt;Module suggestion of module in- and output&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="shortcuts"&gt;Keyboard Shortcuts&lt;/h2&gt;
-&lt;p&gt;This is a collection of useful keyboard shortcuts in MeVisLab, hopefully it grows continuously.&lt;/p&gt;
+&lt;p&gt;This is a collection of useful keyboard shortcuts in MeVisLab.&lt;/p&gt;
 &lt;table class="table table-striped"&gt;
  &lt;thead&gt;
  &lt;tr&gt;

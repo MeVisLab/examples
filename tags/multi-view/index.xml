@@ -7,6 +7,6 @@
 &lt;li&gt;Assign different content to each region.&lt;/li&gt;
 &lt;li&gt;Use alternative methods, such as &lt;code&gt;SoView2D&lt;/code&gt;, when applicable.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="prepare-your-network"&gt;Prepare your network&lt;/h2&gt;
-&lt;h3 id="displaying-three-images-in-one-panel"&gt;Displaying three images in one panel&lt;/h3&gt;
+&lt;h2 id="prepare-your-network"&gt;Prepare Your Network&lt;/h2&gt;
+&lt;h3 id="displaying-three-images-in-one-panel"&gt;Displaying Three Images in One Panel&lt;/h3&gt;
 &lt;p&gt;Add an &lt;code&gt;ImageLoad&lt;/code&gt; module to your workspace and select a 3D image like &lt;em&gt;./MeVisLab/Resources/DemoData/MRI_Head.tif&lt;/em&gt; from the MeVisLab demo data directory. Connect an &lt;code&gt;OrthoReformat3&lt;/code&gt; module and add three &lt;code&gt;View2D&lt;/code&gt; modules.&lt;/p&gt;</description></item></channel></rss>

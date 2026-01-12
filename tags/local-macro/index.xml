@@ -30,4 +30,4 @@
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h3 id="TutorialLoadingData"&gt;Loading Data&lt;/h3&gt;
-&lt;p&gt;First, we need to load the data we would like to work on, e.g. a CT scan. In MeVisLab, modules are used to perform their associated specific task, they are the basic entities you will be working with. Each module has a different functionality for processing, visualization and interaction. Connecting modules enables the development of complex processing pipelines. You will get to know different types of modules throughout the course of this tutorial.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;First, we need to load the data we would like to work on, e.g., a CT scan. In MeVisLab, modules are used to perform their associated specific task: they are the basic entities you will be working with. Each module has a different functionality for processing, visualization, and interaction. Connecting modules enables the development of complex processing pipelines. You will get to know different types of modules throughout the course of this tutorial.&lt;/p&gt;</description></item></channel></rss>

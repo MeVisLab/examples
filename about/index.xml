@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Abouts on MeVisLab Examples</title><link>https://mevislab.github.io/examples/about/</link><description>Recent content in Abouts on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:54:53 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/about/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview</title><link>https://mevislab.github.io/examples/about/about/</link><pubDate>Wed, 15 Jun 2022 08:54:53 +0200</pubDate><guid>https://mevislab.github.io/examples/about/about/</guid><description>&lt;h2 id="symbols"&gt;Symbols&lt;/h2&gt;
-&lt;p&gt;We embedded three symbols, referencing additional info, tasks and warnings:
+&lt;p&gt;We embedded three symbols, referencing additional info, tasks, and warnings:
 
 &lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&gt;
  &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
