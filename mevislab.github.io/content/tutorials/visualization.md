@@ -32,11 +32,11 @@ An easy way to display data and images in 2D and 3D is by using the Modules `Vie
 
 1. Scroll through the slices using the mouse wheel {{< mousebutton "middle" >}}  and/or middle mouse button {{< mousebutton "middle" >}}.
 
-2. Change the contrast of the image by clicking the right mouse button {{< mousebutton "right" >}} and move the mouse
+2. Change the contrast of the image by clicking the right mouse button {{< mousebutton "right" >}} and moving the mouse.
 
-3. Zoom in and out by pressing {{< keyboard "CTRL" >}} and middle mouse button {{< mousebutton "middle" >}}
+3. Zoom in and out by pressing {{< keyboard "CTRL" >}} and middle mouse button {{< mousebutton "middle" >}}.
 
-4. Toggle between multiple timepoints (if available) via {{< keyboard "ArrowLeft" >}} and {{< keyboard "ArrowRight" >}}
+4. Toggle between multiple timepoints (if available) via {{< keyboard "ArrowLeft" >}} and {{< keyboard "ArrowRight" >}}.
 
 5. More features can be found on the help page.
 
@@ -46,18 +46,18 @@ The `View2DExtensions` module provides additional ways to interact with an image
 
 ### View3D
 
-1. Zoom in and out using the mouse wheel {{< mousebutton "middle" >}}
+1. Zoom in and out using the mouse wheel {{< mousebutton "middle" >}}.
 
-2. Drag the 3D objects using the middle mouse button {{< mousebutton "middle" >}}
+2. Drag the 3D objects using the middle mouse button {{< mousebutton "middle" >}}.
 
-3. Change the contrast of the image by clicking the right mouse button {{< mousebutton "right" >}} and moving the mouse
+3. Change the contrast of the image by clicking the right mouse button {{< mousebutton "right" >}} and moving the mouse.
 
 4. Rotate the object by pressing the left mouse button {{< mousebutton "left" >}} and moving the object around. The present orientation is displayed by a cube in the bottom right corner.
 
 5. More features, like recording movies, can be found on the help page.
 
-6. Toggle between multiple timepoints (if available) via {{< keyboard "ArrowLeft" >}} and {{< keyboard "ArrowRight" >}}
+6. Toggle between multiple timepoints (if available) via {{< keyboard "ArrowLeft" >}} and {{< keyboard "ArrowRight" >}}.
 
 {{<alert class="info" caption="Info">}}
-More Information on Image Processing in MeVisLab can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch12.html" "here" >}}
+More information on Image Processing in MeVisLab can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch12.html" "here" >}}
 {{</alert>}}

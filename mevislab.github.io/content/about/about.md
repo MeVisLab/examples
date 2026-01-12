@@ -6,7 +6,7 @@ status: "OK"
 tags: ["Symbols", "Glossary", "Overview"]
 ---
 ## Symbols
-We embedded three symbols, referencing additional info, tasks and warnings:
+We embedded three symbols, referencing additional info, tasks, and warnings:
 {{<alert class="info" caption="Info">}}
 Provides additional links or info on the current topic.
 {{</alert>}}

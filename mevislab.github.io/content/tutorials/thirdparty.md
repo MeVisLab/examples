@@ -15,10 +15,10 @@ menu:
 
 # MeVisLab Tutorial Chapter VIII {#TutorialChapter8}
 
-## Using ThirdParty software integrated into MeVisLab {#TutorialThirdParty}
+## Using ThirdParty Software Integrated into MeVisLab {#TutorialThirdParty}
 MeVisLab is equipped with a lot of useful software right out of the box, like the Insight Segmentation and Registration Toolkit (ITK) or the Visualization Toolkit (VTK). This chapter works as a guide on how to use some of the third party components integrated in MeVisLab for your projects via Python scripting.
 {{<alert class="info" caption="Additional Information">}}
-You will also find instructions to install and use any Python package (e.g. PyTorch) in MeVisLab using the `PythonPip` module. 
+You will also find instructions to install and use any Python package (e.g., PyTorch) in MeVisLab using the `PythonPip` module. 
 {{</alert>}}
 
 ### OpenCV
@@ -52,6 +52,6 @@ The tutorials available here shall provide examples on how to integrate AI into 
 [Matplotlib](https://matplotlib.org/) is a library for creating static, animated, and interactive visualizations in Python.
 
 * create publication quality plots
-* Make interactive figures that can be zoomed, panned and updated
+* Make interactive figures that can be zoomed, panned, and updated
 * Customize visual style and layout
 * Export to many file formats

@@ -13,28 +13,28 @@ menu:
     parent: "imageprocessing"
 ---
 
-# Example 1: Arithmetic operations on two images
+# Example 1: Arithmetic Operations on Two Images
 
 {{< youtube "ToTQ3XRPmlk" >}}
 
 ## Introduction
-We are using the `Arithmetic2` module to apply basic scalar functions on two images. The module provides 2 inputs for images and 1 output image for the result.
+We are using the `Arithmetic2` module to apply basic scalar functions on two images. The module provides two inputs for images and one output image for the result.
 
-## Steps to do
-### Develop your network
+## Steps to Do
+### Develop Your Network
 Add two `LocalImage` modules to your workspace for the input images. Select *$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm* and *$(DemoDataPath)/BrainMultiModal/ProbandT2.dcm* from MeVisLab demo data and add a `SynchroView2D` to your network.
 
 In the end, add the `Arithmetic2` module and connect them as seen below.
 
 ![Example Network](/images/tutorials/image_processing/network_example1.png "Example Network")
 
-Your `SynchroView2D` shows two images. On the left hand side, you can see the original image from your left `LocalImage` module. The right image shows the result of the arithmetic operation executed by the `Arithmetic2` module on the two input images.
+Your `SynchroView2D` shows two images. On the left hand side, you can see the original image from your left `LocalImage` module. The right image shows the result of the arithmetic operation performed by the `Arithmetic2` module on the two input images.
 
 ![SynchroView2D](/images/tutorials/image_processing/arithmetic_viewer.png "SynchroView2D")
 
-The `SynchroView2D` module automatically synchronizes the visible slice of both input images, you can see the same slice with and without applied filter.
+The `SynchroView2D` module automatically synchronizes the visible slice of both input images; you can see the same slice with and without applied filter.
 
-## Arithmetic operations
+## Arithmetic Operations
 Double-click {{< mousebutton "left" >}} the `Arithmetic2` module to select different functions to be applied.
 
 ![Arithmetic2](/images/tutorials/image_processing/arithmetic2.png "Arithmetic2")

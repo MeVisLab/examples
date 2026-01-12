@@ -25,24 +25,24 @@ The blue rectangle shows the same region in the three coordinate systems.
 
 ![Coordinate Systems in MeVisLab](/images/tutorials/basicmechanics/GSExampleImageProcessing10b.png "Coordinate Systems in MeVisLab")
 
-## World coordinates
+## World Coordinates
 World coordinates are:
 * Global: Combine several objects in a view
 * Isotropic: All directions are equivalent
 * Orthogonal: Coordinate axes are orthogonal to each other
 
-The origin of the world coordinate system can be anywhere and is not clearly defined. Origins of the other coordinate systems can always be mapped to the world coordinate system. In case of DICOM images, this mapping is defined by DICOM tags.
+The origin of the world coordinate system can be anywhere and is not clearly defined. Origins of the other coordinate systems can always be mapped to the world coordinate system. In the case of DICOM images, this mapping is defined by DICOM tags.
 
-### World coordinates in MeVisLab
+### World Coordinates in MeVisLab
 You can show the world coordinates in MeVisLab by using the following example network:
 
 ![World Coordinates in MeVisLab](/images/tutorials/basicmechanics/WorldCoordinates.png "World Coordinates in MeVisLab")
 
-The `ConstantImage` module generates an artificial image with a certain size, data type and a constant fill value. The origin of the image is at the origin of the world coordinate system, therefore the `SoCoordinateSystem` module shows the world coordinate system. In order to have a larger z-axis, open the panel of the `ConstantImage` module and set *IMage Size* for *Z* to *256*.
+The `ConstantImage` module generates an artificial image with a certain size, data type, and a constant fill value. The origin of the image is at the origin of the world coordinate system, therefore the `SoCoordinateSystem` module shows the world coordinate system. In order to have a larger z-axis, open the panel of the `ConstantImage` module and set *IMage Size* for *Z* to *256*.
 
 ![ConstantImage Info](/images/tutorials/basicmechanics/ConstantImageInfo.png "ConstantImage Info")
 
-Placing an object into the Open Inventor Scene of the `SoExaminerViewer`, in this case a `SoCube` with *width*, *height* and *depth* of 10, places the object to the origin of the world coordinate system.
+Placing an object into the Open Inventor Scene of the `SoExaminerViewer`, in this case a `SoCube` with *width*, *height*, and *depth* of 10, places the object to the origin of the world coordinate system.
 
 ![SoCube in world coordinate system](/images/tutorials/basicmechanics/SoCubeWorldCoordinates.png "SoCube in world coordinate system")
 
@@ -52,19 +52,19 @@ You can move an object in your scene, for example by using a `SoTranslation` mod
 ![SoTranslation](/images/tutorials/basicmechanics/SoTranslation.png "SoTranslation")
 
 ### Transformations
-More complex transformations can be done by using the `SoTransform` module. You can not only translate an existing object, but also rotate, scale and apply many other transformations.
+More complex transformations can be done by using the `SoTransform` module. You can not only translate an existing object, but also rotate, scale, and apply many other transformations.
 
 ![SoTransform](/images/tutorials/basicmechanics/SoTransform.png "SoTransform")
 
 {{< networkfile "/examples/basic_mechanisms/coordinatesystems/WorldCoordinates.mlab" >}}
 
-## Voxel coordinates
+## Voxel Coordinates
 Voxel coordinates are:
 * Relative to an image
 * Continuous from [0..x,0..y,0..z], voxel center at 0.5
 * Direct relation to voxel location in memory
 
-### Voxel coordinates in MeVisLab
+### Voxel Coordinates in MeVisLab
 You can show the voxel coordinates in MeVisLab by using the following example network:
 
 ![Voxel Coordinates](/images/tutorials/basicmechanics/VoxelCoordinates.png "Voxel Coordinates")
@@ -75,11 +75,11 @@ Load the file *Liver1_CT_venous.small.tif* .The `Info` module shows detailed inf
 
 The *Advanced* tab of the `Info` module shows the world coordinates of the image. In this case, the origin of the voxel coordinate system is located at -186.993, -173.993, -249.993.
 
-In addition to that, you can see a scaling which has been done on the image. The voxel sizes are shown in the diagonal values of the matrix as 3.985792, 3.985792, 3.985798.
+In addition to that, you can see a scaling that has been done on the image. The voxel sizes are shown in the diagonal values of the matrix as 3.985792, 3.985792, 3.985798.
 
 ![World coordinates of the loaded image](/images/tutorials/basicmechanics/ImageInfo_Advanced.png "World coordinates of the loaded image")
 
-You can change the scaling to 1 by adding a `Resample3D` module to the network, Set the voxel size to 1, 1, 1 and inspect the `Info` module.
+You can change the scaling to 1 by adding a `Resample3D` module to the network: set the voxel size to 1, 1, 1 and inspect the `Info` module.
 
 ![Resample3D](/images/tutorials/basicmechanics/Resample3D.png "Resample3D")
 
@@ -107,7 +107,7 @@ You can also add a `SoVertexProperty` and a `SoLineSet` module and configure a l
 
 {{< networkfile "/examples/basic_mechanisms/coordinatesystems/VoxelCoordinates.mlab" >}}
 
-## Device coordinates
+## Device Coordinates
 Device coordinates are:
 * 2D coordinates in OpenGL viewport
 * Measured in pixel

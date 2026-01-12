@@ -24,12 +24,12 @@ World coordinates also refer to the patient axes. They are:
 
 ![World Coordinates in Context of the Human Body](/images/tutorials/visualization/V2_00.png "World Coordinates in Context of the Human Body")
 
-The DICOM (Digital Imaging and Communications in Medicine) standard defines a data format that groups information into data sets. This way, the image data is always kept together with all meta information like patient ID, study time, series time, acquisition data etc. The image slice is represented by another tag with pixel information.
+The DICOM (Digital Imaging and Communications in Medicine) standard defines a data format that groups information into data sets. This way, the image data is always kept together with all meta information like patient ID, study time, series time, acquisition data, etc. The image slice is represented by another tag with pixel information.
 
-DICOM tags have unique numbers, encoded as two 16 bit numbers, usually shown in hexadecimal notation as two four-digit numbers (xxxx,xxxx). These numbers are the data group number and the data element number.
+DICOM tags have unique numbers, encoded as two 16-bit numbers, usually shown in hexadecimal notation as two four-digit numbers (xxxx,xxxx). These numbers are the data group number and the data element number.
 
 {{<alert class="info" caption="Info">}}
-Although DICOM is a standard, often the data that is received / recorded does not follow the standard. Wrongly used tags or missing mandatory tags may cause problems in data processing.
+Although DICOM is a standard, often the data that is received/recorded does not follow the standard. Wrongly used tags or missing mandatory tags may cause problems in data processing.
 {{</alert>}}
 
 Some typical modules for DICOM handling:
@@ -48,7 +48,7 @@ For handling and manipulating DICOM data in C++, the DICOM toolkit [DCMTK](https
 Another option for Python is [pydicom](https://pydicom.github.io/).
 {{</alert>}}
 
-## Orthogonal views
+## Orthogonal Views
 The module `OrthoView2D` provides a 2D view displaying the input image in three orthogonal viewing directions. By default, the view is configured as *Cube* where the transverse view is placed in the top right segment, sagittal in bottom left and coronal in bottom right segment. Use the left mouse button to set a position in the data set. This position will be displayed in all available views and is available as field *worldPosition*. 
 
 ![OrthoView2D](/images/tutorials/basicmechanics/OrthoView2D.png "OrthoView2D")

@@ -14,7 +14,7 @@ menu:
 ---
 
 
-# Example 2.1: Package creation
+# Example 2.1: Package Creation
 
 {{< youtube "1wrGsYtAs3g">}}
 
@@ -28,7 +28,7 @@ Macro modules and projects are stored in packages. If you like to create a globa
 
 [//]: <> (MVL-653)
 
-## Steps to do
+## Steps to Do
 To create packages and package groups, we will use the Project Wizard. Open the Project Wizard via {{< menuitem "File" "Run Project Wizard ..." >}}. Then, select {{< menuitem "Package" "New Package" >}} and *Run Wizard*.
 
 ![The Project Wizard](/images/tutorials/basicmechanics/GUI_01.png "The Project Wizard")
@@ -40,9 +40,9 @@ Next you need to:
 
 2.  Find a name for your package, in our example we call it *General*.
 
-3.  Select the path your package group is supposed to be stored in (If you
+3.  Select the path your package group is supposed to be stored in. If you
     like to add a package to an existing package group, select its name
-    and chose the path the package group is stored in)
+    and chose the path the package group is stored in.
 
 If you now create the package, you can find a folder structure in the
 desired directory. The folder of your package group contains the folder

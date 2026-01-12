@@ -13,7 +13,7 @@ menu:
     parent: "macro_modules"
 ---
 
-# Example 2.5.1: The module RunPythonScript
+# Example 2.5.1: The Module RunPythonScript
 
 {{< youtube "O5Get1PMOq8" >}}
 
@@ -21,14 +21,14 @@ menu:
 
 The module `RunPythonScript` allows to execute Python scripts from within a MeVisLab network. You can draw parameter connection from modules to `RunPythonScript` and back, to process parameter fields using Python scripting. 
 
-## Steps to do
-### Develop your network
+## Steps to Do
+### Develop Your Network
 
 In this example, we like to dynamically change the color of a cube in an Open Inventor scene. For that, add and connect the following modules as shown. 
 
 ![RunPythonScript Example](/images/tutorials/basicmechanics/Scripting_06.png "RunPythonScript")
 
-### Scripting using the moduule `RunPythonScript`
+### Scripting Using the Module `RunPythonScript`
 
 Open the panel of `RunPythonScript`. There is an option to display input and output fields. For that, tick the box *Fields* on the top left side of the panel. 
 

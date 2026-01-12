@@ -22,14 +22,14 @@ We will demonstrate how to:
 * Assign different content to each region. 
 * Use alternative methods, such as `SoView2D`, when applicable.
 
-## Prepare your network
+## Prepare Your Network
 
-### Displaying three images in one panel
+### Displaying Three Images in One Panel
 Add an `ImageLoad` module to your workspace and select a 3D image like *./MeVisLab/Resources/DemoData/MRI_Head.tif* from the MeVisLab demo data directory. Connect an `OrthoReformat3` module and add three `View2D` modules.
 
 ![Image Display Setup](/images/tutorials/basicmechanics/E6_1.png "Image Display Setup")
 
-Opening the three `View2D` module panels now shows the data in 3 orthogonal views. The module `OrthoReformat3` transforms the input image (by rotating and/or flipping) into the three main views commonly used.
+Opening the three `View2D` module panels now shows the data in three orthogonal views. The module `OrthoReformat3` transforms the input image (by rotating and/or flipping) into the three main views commonly used.
 
 ![3 Views in 3 Viewers](/images/tutorials/basicmechanics/E6_2.png "3 Views in 3 Viewers")
 
@@ -49,7 +49,7 @@ This happens, because all three `SoViewportRegion` modules have the same setting
 
 ![SoViewportRegion](/images/tutorials/basicmechanics/E6_5.png "SoViewportRegion")
 
-The `SoViewportRegion` module allows to define the X- and Y-position and the width and height of the image in the `SoRenderArea` module.
+The `SoViewportRegion` module allows to define the x- and y-position and the width and height of the image in the `SoRenderArea` module.
 
 Values can be in pixels or as fractions from 0 to 1:
 
@@ -109,7 +109,7 @@ The right `SoViewportRegion` module should look as follows:
 
 ![Sagittal View](/images/tutorials/basicmechanics/E6_9.png "Sagittal View")
 
-#### Displaying four images in one panel
+#### Displaying Four Images in One Panel
 In the next example, the `SoRenderArea` will display four views at the same time: axial, coronal, sagittal, and a 3D view.
 
 ![3D View Layout](/images/tutorials/basicmechanics/E6_11.png "3D View Layout")
@@ -152,14 +152,14 @@ You will see that the orientation cube of the 3D viewer appears in the bottom ri
 
 ![Final Network](/images/tutorials/basicmechanics/E6_13.png "Final Network")
 
-## Alternative using `SoView2D`
+## Alternative Using `SoView2D`
 In case you want the same dataset to be visualized in multiple viewers, the module `SoView2D` already provides this functionality.
 
 ![Initial SoView2D](/images/tutorials/basicmechanics/SoView2D_1.png "Initial SoView2D")
 
-Whenever you are using the `SoView2D` module to visualize a 2D dataset, you need to add a `View2DExtensions` module and for example a `SoRenderArea` module. Without the `View2DExtensions` module, interactions like scrolling through slices or changing the window and level settings will not be possible.
+Whenever you are using the `SoView2D` module to visualize a 2D dataset, you need to add a `View2DExtensions` module and, for example, a `SoRenderArea` module. Without the `View2DExtensions` module, interactions like scrolling through slices or changing the window and level settings will not be possible.
 
-By default, you will see your images in a single viewer the same way as if you use the `View2D` module. The *number of columns* is defined as *1* by default. If you now change the *Number of Slices* to something like *3*, you will see 3 viewers shown in 1 column. As we can only connect one dataset, this network cannot display multiple series at the same time.
+By default, you will see your images in a single viewer the same way as if you use the `View2D` module. The *number of columns* is defined as *1* by default. If you now change the *Number of Slices* to something like *3*, you will see three viewers shown in a single column. As we can only connect one dataset, this network cannot display multiple series at the same time.
 
 ![Multiple slices in SoView2D](/images/tutorials/basicmechanics/SoView2D_2.png "Multiple slices in SoView2D")
 
