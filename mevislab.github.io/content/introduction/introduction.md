@@ -148,7 +148,7 @@ Each module has a context menu, providing the following options:
 ![Context Menu of a module](images/tutorials/introduction/ModuleContextMenu.png "Context Menu of a module")
 
 * **Show Internal Network:** [Macro modules](glossary/#macro-module) provide an entry to open the internal network. You can see what happens inside a macro module. The internal network may also contain other macro modules. Changes in the internal network are applied to the currently running instance of your module but not saved permanently.
-* **Show Window:** If a module does not provide a User Interface, you will see the automatic panel, showing the module's name. Modules may additionally have one or more windows that can be opened. You can also open the Scripting Console of a module to integrate Python.
+* **Show Window:** If a module does not provide a user interface, you will see the automatic panel, showing the module's name. Modules may additionally have one or more windows that can be opened. You can also open the Scripting Console of a module to integrate Python.
 * **Instance Name:** You can edit or copy the instance name. Renaming can be useful if the same module appears more than once in one network and/or if you want to access and distinguish the modules in your Python script. 
 * **Help:** The menu entry Help provides access to the Module Help pages and to an example network where the module is used. This example network often helps to understand which additional modules can be added to create your desired effect.
 * **Extras:** Automated tests written for the specific module can be executed here. You can also run this module in a separate process.
