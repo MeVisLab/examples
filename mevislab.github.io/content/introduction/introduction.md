@@ -111,7 +111,7 @@ rearrange the items and add new views via {{< menuitem "Main Menu" "View" "Views
 They provide the functionalities to process, display, and interact with images.
 {{</alert>}}
 
-The three existing module types (ML, [Open Inventor](glossary/#open-inventor), and [macro module](glossary/#macro-module)) can be distinguished by their colors:
+The three existing module types (ML, [Open Inventor](/glossary/#open-inventor), and [macro module](/glossary/#macro-module)) can be distinguished by their colors:
 
 {{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:230px">Type</div> | <div style="width:430px">Appearance</div> | Characteristics |

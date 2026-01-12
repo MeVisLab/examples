@@ -13,17 +13,16 @@ menu:
     parent: "macro_modules"
 ---
 # Example 2.3: Creation of Module Help
-
 Generating help of a macro module is part of the video about macro modules from [Example 2: Creation of global macro modules](tutorials/basicmechanisms/macromodules/globalmacromodules)
 {{< youtube "M4HnA0d1V5k">}}
 
 ## Introduction
-
 In this chapter, you will learn how to create a help page and an example network. For hands-on training, we will use the macro module `Filter`, which was created in the [previous chapter](tutorials/basicmechanisms/macromodules/globalmacromodules).
 
 Depending on the way the macro module was created, the default help page and example network might or might not exist. In the case they exist, the help page only contains information about module inputs and outputs as well as module fields. The example network only contains the macro module itself. Both, the help page and the example network, can be created and edited after module creation.
 
 ## Steps to Do
+
 ### Creation of Help Files Using MeVisLab MATE
 We will start by creating a help file using the built-in text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MeVisLab MATE">}} (MeVisLab Advanced Text Editor). If you open the context menu of your global macro module and select {{< menuitem "Help" >}}, it might be that no help page is given. We will start to create a help file by selecting {{< menuitem "Help" "Create Help" >}}. If a help page already exists, select {{< menuitem "Help" "Edit Help" >}}.
 
