@@ -19,8 +19,8 @@ menu:
 ## Introduction
 In this tutorial, we are using an input mask to create a vessel centerline using the `DtfSkeletonization` module and visualize the vascular structures in 3D using the `SoVascularSystem` module. The second part uses the distance between centerline and surface of the vessel structures to color thin vessels red and thick vessels green.
 
-## Steps to do
-### Develop your network
+## Steps to Do
+### Develop Your Network
 
 Load the example [tree mask](/examples/visualization/example8/EditedImage.mlimage) by using the `LocalImage` module. Connect the output to a `DtfSkeletonization` module as seen below. The initial output of the `DtfSkeletonization` module is empty. Press the *Update* button to calculate the skeleton and the erosion distances.
 
@@ -30,7 +30,7 @@ Below you can see the output of the original image taken from the `LocalImage` m
 
 ![Output comparison](/images/tutorials/visualization/V8_1b.png "Output comparison")
 
-The output *DtfSkeletonization.outBase1* shows nothing. Here you can find the 3-dimensional graph of the vascular structures. To generate it, open the panel of the `DtfSkeletonization` module, set *Update Mode* to *Auto Update* and select *Update skeleton graph*. Now the output additionally provides a 3D graph. Additionally, enable the *Compile Graph Voxels* to provide all object voxels at the output. 
+The output *DtfSkeletonization.outBase1* shows nothing. Here you can find the three-dimensional graph of the vascular structures. To generate it, open the panel of the `DtfSkeletonization` module, set *Update Mode* to *Auto Update*, and select *Update skeleton graph*. Now the output additionally provides a 3D graph. Additionally, enable the *Compile Graph Voxels* to provide all object voxels at the output. 
 
 ![DtfSkeletonization](/images/tutorials/visualization/V8_02.png "DtfSkeletonization")
 
@@ -38,7 +38,7 @@ You can use the *Output Inspector* to see the 3D graph.
 
 ![Graph output of DtfSkeletonization](/images/tutorials/visualization/V8_MLImage.png "Graph output of DtfSkeletonization")
 
-If you want to visualize your graph, you should connect a `GraphToVolume` module to the `DtfSkeletonization` module. The result is a 2D or 3D volume of your graph which you can connect to any 2D or 3D viewer. Add a `View2D` and a `View3D` module to the `GraphToVolume` module and update the volume.
+If you want to visualize your graph, you should connect a `GraphToVolume` module to the `DtfSkeletonization` module. The result is a 2D or 3D volume of your graph that you can connect to any 2D or 3D viewer. Add a `View2D` and a `View3D` module to the `GraphToVolume` module and update the volume.
 
 ![GraphToVolume](/images/tutorials/visualization/V8_03.png "GraphToVolume")
 
@@ -48,7 +48,7 @@ Use the `SoLUTEditor` for the `View2D`, too.
 
 ![Network](/images/tutorials/visualization/V8_04.png "Network")
 
- Open the output of the `GraphToVolume` module and inspect the images in Output Inspector. You will see that the HU value of the black background is defined as *-1*, the vessel tree is defined as *0*.
+ Open the output of the `GraphToVolume` module and inspect the images in Output Inspector. You will see that the HU value of the black background is defined as *-1* while the vessel tree is defined as *0*.
 
 ![Output Inspector](/images/tutorials/visualization/V8_04_OutputInspector.png "Output Inspector")
 
@@ -114,7 +114,7 @@ ctx.field("GraphToVolume.update").touch()
 ```
 {{</highlight>}}
 
-In case the graph is valid, we now define a static text for the label. Instead of printing the edge ID, we also walk through each skeleton of the edge and define the property for the label using the ID of the edge as value.
+In the case the graph is valid, we now define a static text for the label. Instead of printing the edge ID, we also walk through each skeleton of the edge and define the property for the label using the ID of the edge as value.
 
 Your viewers now show a different color for each skeleton, based on our LUT.
 
@@ -147,7 +147,7 @@ To establish connections between fields with the type *Float*, you can use the *
 
 Camera interactions are now synchronized between both `SoExaminerViewer` modules.
 
-Now you can notice the difference between the two modules. We use `SoVascularSystem` for a smoother visualization of the vascular structures by using the graph as reference. The `SoGVRVolumeRenderer` renders the volume from the `GraphToVolume` module, including the visible stairs from pixel representations in the volume. 
+Now you can notice the difference between the two modules. We use `SoVascularSystem` for a smoother visualization of the vascular structures by using the graph as reference. The `SoGVRVolumeRenderer` renders the volume from the `GraphToVolume` module, including the visible stairs from voxel representations in the volume. 
 
 ![ SoVascularSystem & SoGVRVolumeRenderer](/images/tutorials/visualization/V8_Difference1.png " SoVascularSystem & SoGVRVolumeRenderer")
 
@@ -201,9 +201,9 @@ Instead of using the ID of each edge for the label property, we are now using th
 ![Radius based Visualization](/images/tutorials/visualization/V8_010new.png "Radius based Visualization") 
 
 {{<alert class="info" caption="Additional Info">}}
-If you have a NIFTI file, convert it into an ML image. Load your tree mask NIfTI file using the `itkImageFileReader` module. Connect the output to a `BoundingBox` module, which removes black pixels and creates a volume without unmasked parts. In the end, add a `MLImageFormatSave` module to save it as *\*.mlimage* file. They are much smaller than a NIFTI file. 
+If you have a NIfTI file, convert it into an ML image. Load your tree mask NIfTI file using the `itkImageFileReader` module. Connect the output to a `BoundingBox` module, which removes black pixels and creates a volume without unmasked parts. In the end, add a `MLImageFormatSave` module to save it as *.mlimage* file. They are much smaller than a NIfTI file. 
 
-![NIFTI file conversion](/images/tutorials/visualization/V8_ConvertToMlImage.png "NIFTI file conversion") 
+![NIfTI file conversion](/images/tutorials/visualization/V8_ConvertToMlImage.png "NIfTI file conversion") 
 {{</alert>}}
 
 ### Mouse Clicks on Vessel Graph
@@ -212,9 +212,9 @@ Open the *Interaction* tab of the `SoVascularSystem` module. In `SoExaminerViewe
 ![Getting the click point in a vascular tree](/images/tutorials/visualization/V8_Interactions.png "Getting the click point in a vascular tree") 
 
 ## Summary
-* Vessel centerlines can be created using a `DtfSkeletonization` module
-* Vascular structures can be visualized  using a `SoVascularSystem` module, which provides several vessel specific display modes
-* The `SoVascularSystem` module provides information about mouse clicks into a vascular tree
-* The labels of a skeleton can be used to store additional information for visualization
+* Vessel centerlines can be created using a `DtfSkeletonization` module.
+* Vascular structures can be visualized  using a `SoVascularSystem` module, which provides several vessel-specific display modes.
+* The `SoVascularSystem` module provides information about mouse clicks into a vascular tree.
+* The labels of a skeleton can be used to store additional information for visualization.
 
 {{< networkfile "examples/visualization/example8/VisualizationExample8.mlab" >}}

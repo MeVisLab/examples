@@ -15,7 +15,7 @@ menu:
 
 # MeVisLab Tips and Tricks
 
-This chapter shows some features and functionalities which are helpful but do not provide its own tutorial.
+This chapter shows some features and functionalities that are helpful but do not provide its own tutorial.
 
 * [Keyboard Shortcuts](/tutorials/shorts#shortcuts)
 * [Using Snippets](/tutorials/shorts#snippets)
@@ -25,7 +25,7 @@ This chapter shows some features and functionalities which are helpful but do no
 * [Module suggestion of module in- and output](/tutorials/shorts#modulesuggest)
 
 ## Keyboard Shortcuts {#shortcuts}
-This is a collection of useful keyboard shortcuts in MeVisLab, hopefully it grows continuously.
+This is a collection of useful keyboard shortcuts in MeVisLab.
 <table class="table table-striped">
   <thead>
     <tr>
@@ -111,7 +111,7 @@ If you are new to Python or don't have experiences in accessing fields in MeVisL
 
 Open {{< menuitem "View" "Views" "Scripting Assistant">}}. A new panel is shown. 
 
-If you now interact with a network, module or macro module, your user interactions are converted into Python calls. You can see the calls in the panel of the Scripting Assistant and copy and paste them for your Python script.
+If you now interact with a network, module, or macro module, your user interactions are converted into Python calls. You can see the calls in the panel of the Scripting Assistant and copy and paste them for your Python script.
 
 ![Scripting Assistant](/images/tutorials/ScriptingAssistant_Panel.png "Scripting Assistant")
 
@@ -171,11 +171,11 @@ QApplication.setPalette(palette)
 ```
 {{</highlight>}}
 
-This script defines the color of the MeVisLab user interface elements. You can define other colors and more items, this is just an example of what you can do with user scripts.
+This script defines the color of the MeVisLab user interface elements. You can define other colors and more items; this is just an example of what you can do with user scripts.
 
 Switch back to the MeVisLab IDE and select the menu item {{< menuitem "Extras" "Reload Module Database (Clear Cache)">}} again. The colors of the MeVisLab IDE change as defined in our Python script. This change persists until you restart MeVisLab and can always be repeated by selecting the menu entry or the keyboard shortcut {{< keyboard "ctrl+F9" >}}.
 
-## Show status of module in- and output {#mlimagestate}
+## Show Status of Module Input and Output {#mlimagestate}
 
 Especially in large networks it is useful to see the state of the input and output connectors of a module. By default, the module connectors do not show if data is available. Below image shows a `DicomImport` module and a `View2D` module where no data is loaded.
 
@@ -193,7 +193,7 @@ After loading a valid DICOM directory, the connectors providing a valid ML image
 
 ![No data on connector](/images/tutorials/LMIMageState_On_2.png "No data on connector")
 
-## Module suggestion of module in- and output {#modulesuggest}
+## Module Suggestion of Module Input and Output {#modulesuggest}
 
 {{< youtube "q_cw583EE_s" >}}
 

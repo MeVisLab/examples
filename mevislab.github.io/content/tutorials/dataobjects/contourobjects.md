@@ -16,11 +16,11 @@ menu:
 ## Introduction
 ### Structure of CSOs
 
-MeVisLab provides modules to create contours in images. 3D objects which encapsulate these contours are called Contour Segmented Objects (CSOs).
+MeVisLab provides modules to create contours in images. 3D objects that encapsulate these contours are called Contour Segmentation Objects (CSOs).
 
 In the next image, you can see a rectangular shaped CSO. The pink circles you can see are called *Seed Points*.
 
-*Seed Points* define the shape of the CSO. In case of a rectangle, you need four *Seed Points* forming the corners, to define the whole rectangle.
+*Seed Points* define the shape of the CSO. In the case of a rectangle, you need four *Seed Points* forming the corners to define the whole rectangle.
 
 The points forming the blue lines are called *Path Points*.
 
@@ -41,17 +41,17 @@ The following images show editors available in MeVisLab for drawing CSOs:
 {{<alert class="info" caption="Extra Infos">}}
 The `SoCSOIsoEditor` and `SoCSOLiveWireEditor` are special, because they are using an algorithm to detect edges themselves.
 
-* The `SoCSOIsoEditor` generates iso-contours interactively.
+* The `SoCSOIsoEditor` generates isocontours interactively.
 * The `SoCSOLiveWireEditor` renders and semi-interactively generates CSOs based on the LiveWire algorithm.
 {{</alert>}}
 
 ### CSO Lists and CSO Groups
 
-All created CSOs are stored in CSO lists, which can be saved and loaded on demand. The lists can not only store the coordinates of the CSOs, but also additional information in the form of name-value pairs (using specialized modules or Python scripting).
+All created CSOs are stored in CSO lists that can be saved and loaded on demand. The lists can not only store the coordinates of the CSOs, but also additional information in the form of name-value pairs (using specialized modules or Python scripting).
 
 ![Basic CSO Network](/images/tutorials/dataobjects/contours/BasicCSONetwork.png "Basic CSO Network")
 
-Each `SoCSO*Editor` requires a `SoView2DCSOExtensibleEditor` which manages attached CSO editors and renderers and offers an optional default renderer for all types of CSOs. In addition to that, the list of CSOs needs to be stored in a `CSOManager`.
+Each `SoCSO*Editor` requires a `SoView2DCSOExtensibleEditor` that manages attached CSO editors and renderers and offers an optional default renderer for all types of CSOs. In addition to that, the list of CSOs needs to be stored in a `CSOManager`.
 
 The appearance of the CSO can be defined by using a `SoCSOVisualizationSettings` module.
 

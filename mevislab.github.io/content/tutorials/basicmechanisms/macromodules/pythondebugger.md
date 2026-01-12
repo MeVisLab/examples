@@ -12,56 +12,56 @@ menu:
     weight: 455
     parent: "basicmechanisms"
 ---
-# Example 5: Debugging Python files in MATE
+# Example 5: Debugging Python Files in MATE
 
 {{< youtube "ccLDQUrlzjU">}}
 
 ## Introduction
 MeVisLab provides the powerful integrated text editor MATE. By default, MATE is used to create/edit files like Python scripts. In this tutorial, we want to show you how to debug Python scripts in MeVisLab. 
 
-## Prepare your network
+## Prepare Your Network
 We are using a very simple network of pre-defined modules, but you can also debug your self-written Python scripts. Add a `LocalImage` module to your workspace and connect it to a `DicomTagBrowser` module. The `DicomTagBrowser` module shows a table containing the DICOM tags of your currently opened file.
 
 ![Example Network](/images/tutorials/basicmechanics/Debug1.png "Example Network")
 
-## Open Python script in MATE
+## Open Python Script in MATE
 To debug our module, we need to open the Python file. Right-click {{< mousebutton "right" >}} the module `DicomTagBrowser` and select {{< menuitem "Related Files (3)" "DicomTagBrowser.py" >}}. The file is opened in MATE.
 
 {{<alert class="info" caption="Attention">}}
-MATE only opens Python files if default configuration in *MeVisLab/Preferences* is not changed for *Supportive Programs*.
+MATE only opens Python files if the default configuration in *MeVisLab/Preferences* is not changed for *Supportive Programs*.
 {{</alert>}}
 
 ![MATE](/images/tutorials/basicmechanics/Debug2.png "MATE")
 
 {{<alert class="info" caption="Information">}}
-You can not only debug your own files, but also Python scripts of pre-defined MeVisLab modules.
+You cannot only debug your own files, but also Python scripts of pre-defined MeVisLab modules.
 {{</alert>}}
 
 The user interface of MATE provides some relevant views for debugging.
 
-### Outline view
+### Outline View
 The *Outline* view shows a list of all functions defined in your currently opened script.
 
-### Project Workspace view
+### Project Workspace View
 The *Project Workspace* view shows the content of the directories for all of your opened files. In this case, we only opened one file and only see the content of the directory for the `DicomTagBrowser` module.
 
-### Debug Output view
+### Debug Output View
 The *Debug Output* view shows the messages you also see in MeVisLab. Additional views are available as soon as we start debugging our file.
 
-## Debug a Python script
+## Debug a Python Script
 First we need to enable debugging. In the MATE main menu, select {{< menuitem "Debug" "Enable Debugging" >}}. You can see some new panels appearing in MATE.
 
-### Debugging panel
+### Debugging Panel
 The *Debugging* panel allows you to step through your code.
 
 ![Debugging Panel](/images/tutorials/basicmechanics/Debug3.png "Debugging Panel")
 
-### Stack Frames panel
+### Stack Frames Panel
 The *Stack Frames* panel shows your current stack trace while debugging.
 
 ![Stack Frames](/images/tutorials/basicmechanics/Debug4.png "Stack Frames")
 
-### Variables/Watches/Evaluate Expression panel
+### Variables/Watches/Evaluate Expression Panel
 Another panel *Variables/Watches/Evaluate Expression* appears, where you can see all current local and global variables. Add your own variables to watch their current value and evaluate your own expressions.
 
 ![Variables/Watches/Evaluate Expression](/images/tutorials/basicmechanics/Debug5.png "Variables/Watches/Evaluate Expression")

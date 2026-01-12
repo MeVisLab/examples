@@ -201,7 +201,7 @@ Reload your macro module and enter the following values for your new fields:
 * sizeY = 160
 * sizeZ = 160
 
-Next, we change the grey values of the image, because the algorithm has been trained on values between -57 and 164. Again, the values can be found in the *inference.json* file in your *configs* directory.
+Next, we change the gray values of the image, because the algorithm has been trained on values between -57 and 164. Again, the values can be found in the *inference.json* file in your *configs* directory.
 
 Open the *\*.script* file and add the following fields to your local macro module `MonaiDemo`:
 
@@ -224,7 +224,7 @@ As already done before, we can now defined the threshold values for our module v
 * thresholdMin = -57
 * thresholdMax = 164
 
-As defined in the *inference.json* file in your *configs* directory, the grey values in the image must be between 0 and 1.
+As defined in the *inference.json* file in your *configs* directory, the gray values in the image must be between 0 and 1.
 
 Open the *\*.script* file and add the following fields to your local macro module `MonaiDemo`:
 

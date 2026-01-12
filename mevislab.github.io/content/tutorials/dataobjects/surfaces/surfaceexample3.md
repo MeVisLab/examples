@@ -17,28 +17,28 @@ menu:
 {{< youtube "YDOEqCOmUFw">}}
 
 ## Introduction
-In these examples, we are showing 2 different possibilities to interact with a WEM:
+In these examples, we are showing two different possibilities to interact with a WEM:
 * Scale, rotate and move a WEM in a scene
 * Modify a WEM in a scene
 
-### Scale, rotate and move a WEM in a scene
+### Scale, Rotate, and Move a WEM in a Scene
 We are using a `SoTransformerDragger` module to apply transformations on a 3D WEM object via mouse interactions.
 
 Add a `SoCube` and a `SoBackground` module and connect both to a `SoExaminerViewer`. For a better understanding, you should also add a `SoCoordinateSystem` module and connect it to the viewer. Change the *User Transform Mode* to *User Transform Instead Of Input* and set *User Scale* to 2 for *x*, *y* and *z*.
 
 ![Initial Network](/images/tutorials/dataobjects/surfaces/WEMExample3_1.png "Initial Network")
 
-The `SoExaminerViewer` shows your cube and the world coordinate system. You can interact with the camera (rotate, zoom and pan), the cube itself does not change and remains in the center of the coordinate system.
+The `SoExaminerViewer` shows your cube and the world coordinate system. You can interact with the camera (rotate, zoom, and pan), the cube itself does not change and remains in the center of the coordinate system.
 
 ![Initial Cube](/images/tutorials/dataobjects/surfaces/WEMExample3_2.png "Initial Cube")
 
-Scaling, rotation and translations on the cube itself can be done by using the module `SoTransformerDragger`. Additionally add a `SoTransform` module to your network. Add all modules but the `SoCoordinateSystem` to a `SoSeparator` so that transformations are not applied to the coordinate system.
+Scaling, rotating, and translating the cube itself can be done by using the module `SoTransformerDragger`. Additionally, add a `SoTransform` module to your network. Add all modules but the `SoCoordinateSystem` to a `SoSeparator` so that transformations are not applied to the coordinate system.
 
 ![SoTransformerDragger and SoTransform](/images/tutorials/dataobjects/surfaces/WEMExample3_3.png "SoTransformerDragger and SoTransform")
 
-Draw parameter connections from *Translation*, *Scale Factor* and *Rotation* of the `SoTransformerDragger` to the same fields of the `SoTransform` module.
+Draw parameter connections from *Translation*, *Scale Factor*, and *Rotation* of the `SoTransformerDragger` to the same fields of the `SoTransform` module.
 
-Opening your SoExaminerViewer now allows you to use handles of the `SoTransformerDragger` to scale, rotate and move the cube. You can additionally interact with the camera as already done before.
+Opening your SoExaminerViewer now allows you to use handles of the `SoTransformerDragger` to scale, rotate, and move the cube. You can additionally interact with the camera as already done before.
 
 {{<alert class="info" caption="Info">}}
 You need to change the active tool on the right side of the `SoExaminerViewer`. Use the *Pick Mode* for applying transformations and the *View Mode* for using the camera.
@@ -50,14 +50,14 @@ You can also try the other `So*Dragger` modules in MeVisLab for variations of th
 
 {{< networkfile "examples/data_objects/surface_objects/example3/SurfaceExample3.mlab" >}}
 
-### Interactively modify WEMs
+### Interactively Modify WEMs
 We are using the `WEMBulgeEditor` module to interactively modify the WEM via mouse interactions.
 
-Add a `WEMInitialize`, a `SoWEMRenderer` and a `SoBackground` module to your workspace and connect them to a `SoExaminerViewer` as seen below. Select model *Icosahedron* for the `WEMInitialize` module.
+Add a `WEMInitialize`, a `SoWEMRenderer`, and a `SoBackground` module to your workspace and connect them to a `SoExaminerViewer` as seen below. Select model *Icosahedron* for the `WEMInitialize` module.
 
 ![WEMLoad and SoWEMRenderer](/images/tutorials/dataobjects/surfaces/WEMExample3_5.png "WEMLoad and SoWEMRenderer")
 
-You can see the WEM and interact with it in the viewer (zoom, move and rotate). In case the object does not rotate around its center, trigger the field *viewAll* of the `SoExaminerViewer`.
+You can see the WEM and interact with it in the viewer (zoom, move, and rotate). In the case the object does not rotate around its center, trigger the field *viewAll* of the `SoExaminerViewer`.
 
 Add a `WEMBulgeEditor` and a `SoWEMBulgeEditor` to your network and connect them as seen below. 
 
@@ -111,6 +111,6 @@ For other interaction possibilities, you can play around with the example networ
 
 ## Summary
 * MeVisLab provides multiple options to interact with 3D surfaces.
-* Modules of the `So*Dragger` family allow to scale, rotate and translate a WEM.
+* Modules of the `So*Dragger` family allow to scale, rotate, and translate a WEM.
 * You can always use a `SoCoordinateSystem` to see the current world coordinates.
 * The `WEMBulgeEditor` allows you to interactively modify a WEM via mouse.

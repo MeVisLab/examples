@@ -20,8 +20,8 @@ menu:
 
 In this example, we are adding a label to a contour. The label provides information about measurements and about the contour itself. The label remains connected to the contour and can be moved via mouse interactions.
 
-## Steps to do
-### Develop your network
+## Steps to Do
+### Develop Your Network
 
 Add a `LocalImage` and a `View2D` module to your workspace and connect them as shown below. Load the file *ProbandT1.dcm* from MeVisLab demo data. In order to create contours (CSOs), we need a `SoView2DCSOExtensibleEditor` module. It manages attached CSO editors, renderers and offers an optional default renderer for all types of CSOs.
 
@@ -35,7 +35,7 @@ We are now able to create lines in the `View2D`. You can also modify the lines b
 
 ![SoCSODistanceLineEditor](/images/tutorials/dataobjects/contours/Ex6_2.png "SoCSODistanceLineEditor")
 
-The created lines do neither provide any details about the length of your measurement, nor a unique ID to identify it in case of multiple CSOs.
+The created lines do neither provide any details about the length of your measurement, nor a unique ID to identify it in the case of multiple CSOs.
 
 Add a `CSOLabelRenderer` module to your network and connect it to a `SoGroup`. Also connect your `SoCSODistanceLineEditor` to the `SoGroup` as seen below. The *ID* of each CSO appears next to your distance lines. Moving the ID also shows the *name* of the contour.
 
@@ -46,7 +46,7 @@ We now want to customize the details to be shown for each distance line. Open th
 Enter the following to the panel of the `CSOLabelRenderer` module:
 {{< highlight filename="CSOLabelRenderer" >}}
 ```Python
-labelString = f"Length {cso.getLength()}"  
+labelString = f"Length: {cso.getLength()}"  
 labelName = f"Distance: {cso.getId()}"
 deviceOffsetX = 0
 deviceOffsetY = 0
@@ -64,11 +64,11 @@ labelString = f'Length: {cso.getLength():.2f} mm'
 ```
 {{</highlight>}}
 
-In order to see all possible parameters of a CSO, add a `CSOInfo` module to your network and connect it to the `CSOManager`. The geometric informations of the selected CSO from `CSOManager` can be seen there.
+In order to see all possible parameters of a CSO, add a `CSOInfo` module to your network and connect it to the `CSOManager`. The geometric information of the selected CSO from `CSOManager` can be seen there.
 
 ![CSOInfo](/images/tutorials/dataobjects/contours/Ex6_CSOInfo.png "CSOInfo")
 
-For labels shown on greyscale images, it makes sense to add a shadow. Open the panel of the `SoCSOVisualizationSettings` module and on tab *Misc* check the option *Should render shadow*. This increases the readability of your labels.
+For labels shown on grayscale images, it makes sense to add a shadow. Open the panel of the `SoCSOVisualizationSettings` module and on tab *Misc* check the option *Should render shadow*. This increases the readability of your labels.
 
 {{< imagegallery 2 "/images/tutorials/dataobjects/contours/" "Ex6_NoShadow" "Ex6_Shadow" >}}
 
@@ -120,7 +120,7 @@ You will find a lot more information in the `CSOInfo` module for your rectangles
 
 ![CSOInfo](/images/tutorials/dataobjects/contours/Ex6_10.png "CSOInfo")
 
-## Parameters and meanings for all CSO types
+## Parameters and Meanings for All CSO Types
 <table class="table table-striped">
   <thead>
     <tr>

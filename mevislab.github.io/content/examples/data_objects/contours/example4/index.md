@@ -4,7 +4,7 @@ title: "Annotation of images"
 category: "data_objects"
 ---
 
-# Contour Example 4: Annotation of images
+# Contour Example 4: Annotation of Images
 This example shows how to add annotations to an image.
 
 ## Summary

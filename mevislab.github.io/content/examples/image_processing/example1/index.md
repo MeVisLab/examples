@@ -4,7 +4,7 @@ title: "Arithmetic operations on two images"
 category: "image_processing"
 ---
 
-# Image Processing Example 1: Arithmetic operations on two images
+# Image Processing Example 1: Arithmetic Operations on Two Images
 In this example, we apply scalar functions on two images like Add, Multiply, Subtract, etc.
 
 ## Summary

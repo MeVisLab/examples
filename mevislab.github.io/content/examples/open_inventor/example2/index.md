@@ -4,7 +4,7 @@ title: "Mouse interactions in an Open Inventor scene"
 category: "open_inventor"
 ---
 
-# Open Inventor Example 2: Mouse interactions in an Open Inventor scene
+# Open Inventor Example 2: Mouse Interactions in an Open Inventor Scene
 This example shows how to implement object interactions.
 
 ## Summary
