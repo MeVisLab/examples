@@ -34,7 +34,7 @@ Open the Automatic Panel of the `SynchroView2D` module via context menu {{< mous
 
 ![Synchronize LUTs in SynchroView2D](/images/tutorials/image_processing/synchLUTs.png "Synchronize LUTs in SynchroView2D")
 
-Double-click the `SynchroView2D` and change window/level values via right mouse button {{< mousebutton "right" >}}. You can see that the background of your images gets very bright and changes based on the LUT are applied to all voxels of your input image - even on the background. Hovering your mouse over the image(s) shows the current greyvalue under your cursor in [Hounsfield Unit (HU)](https://en.wikipedia.org/wiki/Hounsfield_scale).
+Double-click the `SynchroView2D` and change window/level values via right mouse button {{< mousebutton "right" >}}. You can see that the background of your images gets very bright and changes based on the LUT are applied to all voxels of your input image - even on the background. Hovering your mouse over the image(s) shows the current gray value under your cursor in [Hounsfield Unit (HU)](https://en.wikipedia.org/wiki/Hounsfield_scale).
 
 ![Without masking the image](/images/tutorials/image_processing/SynchroView2D_before.png "Without masking the image")
 

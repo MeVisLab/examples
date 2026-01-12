@@ -90,7 +90,7 @@ Debugging information can be found using the [Debug Output](/glossary/#debug-out
 The MeVisLab IDE and its layout are completely configurable. You can
 rearrange the items and add new views via {{< menuitem "Main Menu" "View" "Views" >}}.
 
-### Filetypes Used in, for, and with MeVisLab
+### File Types Used in, for, and With MeVisLab
 
 {{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:230px">Extension</div> | Description |
@@ -147,7 +147,7 @@ Each module has a context menu, providing the following options:
 
 ![Context Menu of a module](/images/tutorials/introduction/ModuleContextMenu.png "Context Menu of a module")
 
-* **Show Internal Network:** [Macro modules](/glossary/#macro-module) provides an entry to open the internal network. You can see what happens inside a macro module. The internal network may also contain other macro modules.
+* **Show Internal Network:** [Macro modules](/glossary/#macro-module) provide an entry to open the internal network. You can see what happens inside a macro module. The internal network may also contain other macro modules.
 * **Show Window:** If a module does not provide a User Interface, you will see the automatic panel showing the module's name. Modules may additionally have one or more windows that can be opened. You can also open the Scripting Console of a module to integrate Python.
 * **Instance Name:** You can edit or copy the instance name. Renaming can be useful if the same module appears more than once in one network and/or if you want to access and distinguish the modules in your Python script. 
 * **Help:** The menu entry Help provides access to the Module Help pages and to an example network where the module is used. This example network often helps to understand which additional modules can be added to create your desired effect.
@@ -183,7 +183,7 @@ If you want to know more about establishing, removing, moving, and replacing con
 Besides through a module's input and output connectors, connections can also be established between parameters in the module's panel. 
 
 {{<alert class="check" caption="Check">}}
-An exemplary usecase for a parameter connection is synchronization. Have a look [here](/tutorials/basicmechanisms/#TutorialParameterConnection).
+An exemplary use case for a parameter connection is synchronization. Have a look [here](/tutorials/basicmechanisms/#TutorialParameterConnection).
 {{</alert>}}
 
 ### Macro Modules {#Macro_Modules}
@@ -226,7 +226,7 @@ Usually the quickest way to add modules to a network is the quick search in the 
 Any time you enter something in the MeVisLab GUI while not focussing a dialog window, your entry will be put into the quick search automatically.
 {{</alert>}}
 
- Use the {{< keyboard "ArrowUp" >}} and {{< keyboard "ArrowDown" >}} keys on your keyboard to move to one of the listed modules. The module's decription will appear next to it, allowing you to decide if this is the right module for your usecase.
+ Use the {{< keyboard "ArrowUp" >}} and {{< keyboard "ArrowDown" >}} keys on your keyboard to move to one of the listed modules. The module's decription will appear next to it, allowing you to decide if this is the right module for your use case.
 
 ![Quick Search Results](/images/tutorials/introduction/GSExampleNetworkViewImage02.png "Quick Search Results")
 
