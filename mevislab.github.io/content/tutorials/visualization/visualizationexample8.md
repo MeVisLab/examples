@@ -203,7 +203,7 @@ Instead of using the ID of each edge for the label property, we are now using th
 {{<alert class="info" caption="Additional Info">}}
 If you have a NIfTI file, convert it into an ML image. Load your tree mask NIfTI file using the `itkImageFileReader` module. Connect the output to a `BoundingBox` module, which removes black pixels and creates a volume without unmasked parts. In the end, add a `MLImageFormatSave` module to save it as *.mlimage* file. They are much smaller than a NIfTI file. 
 
-![NIfTI file conversion](images/tutorials/visualization/V8_ConvertToMlImage.png "NIFTI file conversion") 
+![NIFTI file conversion](images/tutorials/visualization/V8_ConvertToMlImage.png "NIFTI file conversion") 
 {{</alert>}}
 
 ### Mouse Clicks on Vessel Graph
