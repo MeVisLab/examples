@@ -83,10 +83,10 @@ The module `RunPythonScript` allows to execute Python scripts from within a MeVi
 
 #### Module Interactions via Python Scripting
 
-You can reference to a Python function inside a *.script* file of a macro module. With this, you can, for example, execute a Python function whenever you open a panel, or define the action that is executed when pressing a button or specify the command triggered by a [field listener](tutorials/basicmechanisms/macromodules/scriptingexample2). An example for module interactions via Python scripting is given in the same example.
+You can reference to a Python function inside a *.script* file of a macro module. With this, you can, for example, execute a Python function, whenever you open a panel, define the action that is executed when pressing a button or specify the command triggered by a [field listener](tutorials/basicmechanisms/macromodules/scriptingexample2). An example for module interactions via Python scripting is given in the same example.
 
 #### Python Scripting in Network Files (*.mlab*)
-If you do not want to create a macro module, you can also execute Python scripts in a network file (*.mlab*). Save your network using a defined name, for example, *mytest.mlab*. Then create a *.script* and a *.py* file in the same directory, using the same names (*mytest.script* and *mytest.py*).
+If you do not want to create a macro module, you can also execute Python scripts in a network file (*.mlab*). Save your network using a defined name, for example, *mytest.mlab*. Then, create a *.script* and a *.py* file in the same directory, using the same names (*mytest.script* and *mytest.py*).
 
 Open the *.script* file and add a *Commands* section defining the name of the Python file.
 

@@ -42,7 +42,7 @@ To add and edit a panel, open the context menu and select {{< menuitem "Related 
 
 ### Module Interface
 By default, the *.script* file contains the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Interface" "interface" >}} of the module.
-In the interface section (everything inside the curled brackets behind the name *Interface*) you can define the module inputs, the module outputs, and also all module fields (or *Parameters*).
+In the interface section (everything insight the curled brackets behind the name *Interface*) you can define the module inputs, the module outputs, and also all module fields (or *Parameters*).
 
 [//]: <> (MVL-653)
 {{< highlight filename="Filter.script" >}}
@@ -288,7 +288,7 @@ Commands {
 {{</highlight>}}
 
 {{<alert class="info" caption="Infos">}}
-The section *Source* should already be available and generated automatically in the case you enable the Wizard to add a Python file to your module.
+The section *Source* should already be available and generated automatically in case you enable the Wizard to add a Python file to your module.
 {{</alert>}}
 
 [//]: <> (MVL-653)

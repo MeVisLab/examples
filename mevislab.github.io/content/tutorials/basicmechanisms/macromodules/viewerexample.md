@@ -20,7 +20,7 @@ In this example, you will learn how to create a simple prototype application in 
 
 ## Steps to Do
 ### Create Your Network
-Start with an empty network and add the module `ImageLoad` to your workspace. Then, add a `View2D` and a `View3D` to your workspace and connect the modules as seen below.
+Start with an empty network and add the Module `ImageLoad` to your workspace. Then, add a `View2D` and `View3D` to your workspace and connect the modules as seen below.
 
 ![Loading and viewing images](images/tutorials/basicmechanics/SimpleApp_01.png "Loading and viewing images")
 ### Load an Image

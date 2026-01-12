@@ -63,7 +63,7 @@ This slice shall now be used as a clip plane in 3D. In order to achieve this, yo
 
 ![Example Network](images/tutorials/image_processing/network_example5c.png "Example Network")
 
-Now, your 3D scene shows a three-dimensional volume cut by a plane in the middle. Once again, the clipping is not the same slice as your 2D view shows.
+Now your 3D scene shows a three-dimensional volume cut by a plane in the middle. Once again, the clipping is not the same slice as your 2D view shows.
 
 ![Clip plane in 3D](images/tutorials/image_processing/3D_ClipPlane.png "Clip plane in 3D")
 

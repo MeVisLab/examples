@@ -42,7 +42,7 @@ Now, create your macro module and reload MeVisLab. You can find your module via 
 
 ![Enable Python scripting](images/tutorials/basicmechanics/EnablePythonScripting.png "Enable Python scripting")
 
-To design a panel and create a user interface for the macro module, open the *.script* file. You can see that a *Command* section exist, which defines the Python file as source for all commands.
+To design a panel and create a user interface for the macro module, open the *.script* file. You can see that a *Commands* section exists, which defines the Python file as source for all commands.
 
 ![Open the script file](images/tutorials/basicmechanics/OpenScriptFile.png "Open the script file")
 
@@ -233,7 +233,7 @@ can do this in the following way:
     
     ![Scripting Assistant](images/tutorials/basicmechanics/GUI_Exp_15.png "Scripting Assistant")
 
-2. Enable a functionality that allows us to notice the ID of the CSO we are currently hovering over with our mouse. For this, open the network file of our macro module. We will use the module `SoView2DCSOExtensibleEditor`. Open its panel and select the tab *Advanced*. You can check a box to enable *Update CSO id under mouse*. If you now hover over a CSO, you can see its ID in the panel. We can save the network to save this functionality, but we can also solve our problem via scripting. The Scripting Assistant translated our action into code that we can use.
+2. Enable a functionality that allows us to notice the id of the CSO we are currently hovering over with our mouse. For this, open the internal network of our macro module. We will use the module `SoView2DCSOExtensibleEditor`. Open its panel and select the tab *Advanced*. You can check a box to enable *Update CSO id under mouse*. If you now hover over a CSO, you can see its ID in the panel. We can save the internal network to save this functionality, but we can also solve our problem via scripting. The Scripting Assistant translated our action into code that we can use.
     
     ![Enabling CSO id identification](images/tutorials/basicmechanics/GUI_Exp_16.png "Enabling CSO id identification")
 
