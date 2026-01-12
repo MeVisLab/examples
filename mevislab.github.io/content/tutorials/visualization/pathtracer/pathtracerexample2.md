@@ -118,7 +118,7 @@ You can increase the *Shininess* of the bones and change the *Diffuse* color in 
 ## Visualize Vessels
 Repeat the process for the vessels. Add another `LocalImage`, `SoPathTracerVolume`, `SoLUTEditor` (or `LUTLoad`), and `View2D` module as seen below. Load this [Vessels mask](examples/visualization/example6/edited_Vessels.mlimage) and check it using `View2D`.
 
-![Vessels mask](images/tutorials/visualization/pathtracer/View2D_Vessels.png "Vessels mask")
+![Vessels mask](/images/tutorials/visualization/pathtracer/View2D_Vessels.png "Vessels mask")
 
 #### Load Example LUT from File
 Load a prepared XML File in a `LUTLoad` module as provided [here](examples/visualization/example6/LUT_Vessels.xml)

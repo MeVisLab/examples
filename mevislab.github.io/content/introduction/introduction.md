@@ -90,7 +90,7 @@ Debugging information can be found using the [Debug Output](glossary/#debug-outp
 The MeVisLab IDE and its layout are completely configurable. You can
 rearrange the items and add new views via {{< menuitem "Main Menu" "View" "Views" >}}.
 
-### File Types Used in, for, and With MeVisLab
+### Filetypes Used in, for, and with MeVisLab
 
 {{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:230px">Extension</div> | Description |
