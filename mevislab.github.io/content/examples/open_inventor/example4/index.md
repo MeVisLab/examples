@@ -12,9 +12,9 @@ This example has been taken from the [MeVisLab forum](https://forum.mevislab.de/
 ## Summary
 A local macro `flightControl` allows you to navigate with the camera through the scene.
 
-![Screenshot](/examples/open_inventor/example4/image.png)
+![Screenshot](examples/open_inventor/example4/image.png)
 
 # Download
-You can download the example network [here](/examples/open_inventor/example4/flight2.zip)
+You can download the example network [here](examples/open_inventor/example4/flight2.zip)
 
 

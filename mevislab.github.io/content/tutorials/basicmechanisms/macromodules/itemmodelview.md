@@ -23,7 +23,7 @@ We create a macro module that receives an input image and then shows some select
 
 ### Create a Macro Module
 {{<alert class="info" caption="Info">}}
-Make sure to create a package first. Packages are the way MeVisLab organizes different development projects. You can find an example in chapter [Package creation](/tutorials/basicmechanisms/macromodules/package/).
+Make sure to create a package first. Packages are the way MeVisLab organizes different development projects. You can find an example in chapter [Package creation](tutorials/basicmechanisms/macromodules/package/).
 {{</alert>}} 
 
 Use the *Project Wizard* via menu entry {{< menuitem "File" "Run Project Wizard ..." >}} to create a new macro module named `MyItemModelView`.
@@ -34,14 +34,14 @@ We can leave the *Fields* empty for now. We can add them in the *.script* file.
 
 Click *Create* {{< mousebutton "left" >}}.
 
-{{< imagegallery 3 "/images/tutorials/basicmechanics" "ItemModel_1" "ItemModel_2" "ItemModel_3">}}
+{{< imagegallery 3 "images/tutorials/basicmechanics" "ItemModel_1" "ItemModel_2" "ItemModel_3">}}
 
 If you cannot find your module via *Module Search*, reload module cache by clicking the menu item {{< menuitem "Extras" "Reload Module Database (Clear Cache)" >}}
 
 ### Define the Necessary Fields
 Add your new module `MyItemModelView` to your workspace. It does not provide a user interface and you do not have any *Fields* available.
 
-![Empty Module](/images/tutorials/basicmechanics/ItemModel_4.png "Empty Module")
+![Empty Module](images/tutorials/basicmechanics/ItemModel_4.png "Empty Module")
 
 Open the *.script* file of your module via right-click {{< mousebutton "right" >}} and {{< menuitem "Related Files (4)" "MyItemModelView.script" >}}.
 
@@ -98,7 +98,7 @@ Interface {
 
 If you now open your panel, you should see the *Input* *inImage* and the just created *Fields*. The *Field* *id* is necessary to identify unique objects in your *ItemModel* later. In order to make this example easier to understand, we defined all types of the *Fields* as *String*. You can also use different types, if you like.
 
-![Module Input and Fields](/images/tutorials/basicmechanics/ItemModel_5.png "Module Input and Fields")
+![Module Input and Fields](images/tutorials/basicmechanics/ItemModel_5.png "Module Input and Fields")
 
 ### Add the ItemModelView to Your Panel
 We can now add the *ItemModelView* to our panel and define the columns of the view, that we want to see. Add a *Window* section to your script file and define it as seen below.
@@ -141,7 +141,7 @@ Outputs {
 
 Your module now also shows an output *MLBase* object and the columns you defined for the *ItemModelView*.
 
-![Module Output and Columns](/images/tutorials/basicmechanics/ItemModel_6.png "Module Output and Columns")
+![Module Output and Columns](images/tutorials/basicmechanics/ItemModel_6.png "Module Output and Columns")
 
 ### Fill Your Table with Data
 We want to get the necessary information from the defined input image *inImage*. We want the module to update the content whenever the input image changes. Therefore, we need a *Field Listener* calling a Python function whenever the input image changes. Add it to your *Commands* section.
@@ -357,7 +357,7 @@ The image data is then used to create the root item of our model. We use the sel
 
 If you now open the panel of your module, you can already see the results.
 
-![Module Panel](/images/tutorials/basicmechanics/ItemModel_7.png "Module Panel")
+![Module Panel](images/tutorials/basicmechanics/ItemModel_7.png "Module Panel")
 
 The first line shows the information of the patient, the study and the series and each child item represents a single slice of the image.
 
@@ -402,11 +402,11 @@ def itemClicked(field: "mevislab.MLABField"):
 
 The *itemClicked* function uses *id* from the selected item to get the value of column 8 (in this case, it is the *SOP Instance UID* of the image) and prints this value.
 
-![Clicked Item](/images/tutorials/basicmechanics/ItemModel_8.png "Clicked Item")
+![Clicked Item](images/tutorials/basicmechanics/ItemModel_8.png "Clicked Item")
 
 The problem is that the *Field* *selection* also changes whenever a new item is added to the model. Your debug output is already flooded with SOP Instance UIDs without interaction.
 
-![Debug Output](/images/tutorials/basicmechanics/ItemModel_9.png "Debug Output")
+![Debug Output](images/tutorials/basicmechanics/ItemModel_9.png "Debug Output")
 
 Add another global parameter to your Python script to prevent the *FieldListener* from executing during the *imageChanged* event.
 

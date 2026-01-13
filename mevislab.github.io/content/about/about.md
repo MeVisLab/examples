@@ -21,6 +21,6 @@ Hints common mistakes or steps you should consider beforehand.
 Keyboard shortcuts are incorporated like this:  {{< keyboard "CTRL" "ALT" "2" >}}.
 
 ## Networks
-The networks shown and used in the tutorials can be found in the [Examples](/examples) section of this page. 
+The networks shown and used in the tutorials can be found in the [Examples](examples) section of this page. 
 They are usually embedded like this:
 {{< networkfile "examples/data_objects/contours/example1/ContourExample1.mlab" >}}

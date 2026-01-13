@@ -35,5 +35,5 @@ The first example shows how to install *torch* and *torchvision* by using the Me
 In this example, we are using a pre-trained network from [torch.hub](https://pytorch.org/hub/) to generate an AI based image overlay of a brain parcellation map.
 
 ### Segment Persons in Webcam Videos
-The second tutorial adapts the [Example 2: Face Detection with OpenCV](/tutorials/thirdparty/opencv/thirdpartyexample2/ "Example 2: Face Detection with OpenCV") to segment a person shown in a webcam stream. The network has been taken from [torchvision](https://pytorch.org/vision/stable/index.html).
+The second tutorial adapts the [Example 2: Face Detection with OpenCV](tutorials/thirdparty/opencv/thirdpartyexample2/ "Example 2: Face Detection with OpenCV") to segment a person shown in a webcam stream. The network has been taken from [torchvision](https://pytorch.org/vision/stable/index.html).
 

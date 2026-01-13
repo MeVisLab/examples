@@ -17,7 +17,7 @@ menu:
 {{< youtube "_wheDC8TBJQ" >}}
 
 ## Introduction
-In the previous chapters you developed a macro module with User Interface and Python scripting. In this step you will see how to implement an automated test to verify and validate the Requirements defined in [Overview](/tutorials/summary).
+In the previous chapters you developed a macro module with User Interface and Python scripting. In this step you will see how to implement an automated test to verify and validate the Requirements defined in [Overview](tutorials/summary).
 
 ## Steps to do
 ### Create a test network using your macro module
@@ -25,11 +25,11 @@ Create a new and empty network and save it as \*.mlab file. Remember the locatio
 
 Use Module Search and add your macro module developed in previous steps to your Workspace.
 
-![Macro module](/images/tutorials/summary/Example4_1.png "Macro module")
+![Macro module](images/tutorials/summary/Example4_1.png "Macro module")
 
 You can see that the module does not have any inputs or outputs. You cannot connect it to other modules. For testing purposes it makes sense to provide the viewers and images as outputs so that you can use them for generating screenshots.
 
-Open the \*.script file in MATE as already explained in [Step 3](/tutorials/summary/summary3). In the *Outputs* section, add the following:
+Open the \*.script file in MATE as already explained in [Step 3](tutorials/summary/summary3). In the *Outputs* section, add the following:
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -45,20 +45,20 @@ Interface {
 ```
 {{</highlight>}}
 
-![Macro module with outputs](/images/tutorials/summary/Example4_2.png "Macro module with outputs")
+![Macro module with outputs](images/tutorials/summary/Example4_2.png "Macro module with outputs")
 
 You can now add a viewer or any other module to your macro module and use them for testing. In our example, we add a `CalculateVolume` module to the segmentation mask and a `SoCameraInteraction` with two `OffscreenRenderer` modules to the 3D output. In the end, we need an `ImageCompare` module to compare expected and real image in our test.
 
-![Test Network](/images/tutorials/summary/Example4_3.png "Test Network")
+![Test Network](images/tutorials/summary/Example4_3.png "Test Network")
 
 ### Create test case
 Open MeVisLab TestCaseManager via {{< menuitem "File" "Run TestCaseManager..." >}}. On tab *Test Creation* define a name of your test case, for example *TutorialSummaryTest*. Select Type as *Macros*, define the package and use the same as for your macro module, select *Import Network* and Select your saved \*.mlab file from the step above. Click *Create*.
 
-![Test Creation](/images/tutorials/summary/Example4_4.png "Test Creation")
+![Test Creation](images/tutorials/summary/Example4_4.png "Test Creation")
 
 MATE automatically opens the Python file of your test case and it appears in MeVisLab TestCaseManager. 
 
-![Test Creation](/images/tutorials/summary/Example4_5.png "Test Creation")
+![Test Creation](images/tutorials/summary/Example4_5.png "Test Creation")
 
 ### Write test functions in Python
 #### Preparations
@@ -368,11 +368,11 @@ def TEST_Toggle3DVolumes():
 ### Sorting order in TestCaseManager
 The MeVisLab TestCaseManager sorts your test cases alphabetically. Your test cases should look like this now:
 
-![TestCaseManager Sorting](/images/tutorials/summary/Example4_6.png "TestCaseManager Sorting")
+![TestCaseManager Sorting](images/tutorials/summary/Example4_6.png "TestCaseManager Sorting")
 
 Generally, test cases should not depend on each other and the order of their execution does not matter. Sometimes it makes sense though to execute tests in a certain order, for example for performance reasons. In this case you can add numeric prefixes to your test cases. This might look like this then:
 
-![TestCaseManager Custom Sorting](/images/tutorials/summary/Example4_7.png "TestCaseManager Custom Sorting")
+![TestCaseManager Custom Sorting](images/tutorials/summary/Example4_7.png "TestCaseManager Custom Sorting")
 
 ### Not testable requirements
 As already mentioned, some requirements can not be tested in an automated environment. Human eyesight cannot be replaced completely.
@@ -387,7 +387,7 @@ In our application, the following tests have not been tested automatically:
 ### Test Reports
 The results of your tests are shown in a Report Viewer. You can also export the results to JUnit for usage in build environments like [Jenkins](https://www.jenkins.io/).
 
-![ReportViewer](/images/tutorials/summary/Example4_8.png "ReportViewer")
+![ReportViewer](images/tutorials/summary/Example4_8.png "ReportViewer")
 
 ### Screenshots
 You can also add screenshots of your inventor scene to the report. Add the following to your Python script wherever you want to capture the content of the `SoCameraInteraction` module and a Snapshot of your 3D scene is attached to your test report:

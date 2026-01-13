@@ -23,7 +23,7 @@ The Python code used in this example has been taken from [Towards Data Science](
 
 ## Steps to do
 ### Open Example 1
-Add the macro module developed in [Example 1](/tutorials/thirdparty/opencv/thirdpartyexample1) to your workspace.
+Add the macro module developed in [Example 1](tutorials/thirdparty/opencv/thirdpartyexample1) to your workspace.
 
 ### Download trained classifier XML file
 Initially you need to download the trained classifier XML file. It is available in the [OpenCV GitHub repository](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml). Save the file somewhere and remember the path for later usage in Python.
@@ -75,11 +75,11 @@ def releaseCamera(_):
 
 Opening your macro module and pressing *Start* should now open your WebCam stream and an additional OpenCV window which shows a blue rectangle around a detected face.
 
-![Face Detection in MeVisLab using OpenCV](/images/tutorials/thirdparty/bigbang.png "Face Detection in MeVisLab using OpenCV")
+![Face Detection in MeVisLab using OpenCV](images/tutorials/thirdparty/bigbang.png "Face Detection in MeVisLab using OpenCV")
 
 ## Summary
 This is just one example for using OpenCV in MeVisLab. You will find lots of other examples and tutorials online, we just wanted to show one possibility.
 
 {{<alert class="info" caption="Info">}}
-You can download the Python file [here](/examples/thirdparty/example2/FaceDetection.py)
+You can download the Python file [here](examples/thirdparty/example2/FaceDetection.py)
 {{</alert>}}

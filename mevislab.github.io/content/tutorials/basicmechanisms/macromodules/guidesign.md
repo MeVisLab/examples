@@ -30,15 +30,15 @@ More information about GUI design in MeVisLab can be found {{< docuLinks "/Resou
 
 ## Creating a Panel for the Macro Module Filter {#Example_Paneldesign}
 ### Creation of a module panel
-In [Example 2.2](/tutorials/basicmechanisms/macromodules/globalmacromodules) we created the global macro module `Filter`. By now, this module does not have a proper panel. When double-clicking {{< mousebutton "left" >}} the module, the *Automatic Panel* is shown.
+In [Example 2.2](tutorials/basicmechanisms/macromodules/globalmacromodules) we created the global macro module `Filter`. By now, this module does not have a proper panel. When double-clicking {{< mousebutton "left" >}} the module, the *Automatic Panel* is shown.
 
 The *Automatic Panel* contains fields, as well as module in and outputs. In this case, no fields exists except the *instanceName*. Accordingly, there is no possibility to interact with the module. Only the input and the output of the module are given.
 
-![Automatic Panel](/images/tutorials/basicmechanics/GUI_10.png "Automatic Panel")
+![Automatic Panel](images/tutorials/basicmechanics/GUI_10.png "Automatic Panel")
 
 To add and edit a panel, open the context menu and select {{< menuitem "Related Files" "Filter.script" >}}. The text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the file *Filter.script*, which you can edit to define a custom User Interface for the Module.
 
-![Module script file](/images/tutorials/basicmechanics/GUI_11.png "Module script file")
+![Module script file](images/tutorials/basicmechanics/GUI_11.png "Module script file")
 
 ### Module Interface
 Per default, the *.script* file contains the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Interface" "interface" >}} of the module.
@@ -70,9 +70,9 @@ Creating an input/output causes:
 1. Input/output connectors are added to the module.
 2. You can find placeholders for the input and output in the internal network (see image).
 3. Input/output fields are added to the automatic panel.
-4. A description of the input/output fields is automatically added to the module help file, when opening the *\*.mhelp* file after input/output creation. Helpfile creation is explained in [Example 2.3](/tutorials/basicmechanisms/macromodules/helpfiles/).
+4. A description of the input/output fields is automatically added to the module help file, when opening the *\*.mhelp* file after input/output creation. Helpfile creation is explained in [Example 2.3](tutorials/basicmechanisms/macromodules/helpfiles/).
 
-![Internal Network of your macro module](/images/tutorials/basicmechanics/BM_23.png "Internal Network of your macro module")
+![Internal Network of your macro module](images/tutorials/basicmechanics/BM_23.png "Internal Network of your macro module")
 
 ##### Module Fields
 
@@ -115,7 +115,7 @@ Window MyWindowName {
 ```
 {{</highlight>}}
 
-![Module Panel](/images/tutorials/basicmechanics/ModulePanel.png "Module Panel")
+![Module Panel](images/tutorials/basicmechanics/ModulePanel.png "Module Panel")
 
 You can define different properties of your control. For a window, you can for example define a title, or whether the
 window should be shown in full screen (*fullscreen = True*).
@@ -150,7 +150,7 @@ Window MyWindowName {
 ```
 {{</highlight>}}
 
-![Vertical layout of Box and Text](/images/tutorials/basicmechanics/VerticalLayout.png "Vertical layout of Box and Text")
+![Vertical layout of Box and Text](images/tutorials/basicmechanics/VerticalLayout.png "Vertical layout of Box and Text")
 
 {{< highlight filename="Filter.script" >}}
 ```Stan
@@ -171,7 +171,7 @@ Window MyWindowName {
 ```
 {{</highlight>}}
 
-![Horizontal layout of Box and Text](/images/tutorials/basicmechanics/HorizontalLayout.png "Horizontal layout of Box and Text")
+![Horizontal layout of Box and Text](images/tutorials/basicmechanics/HorizontalLayout.png "Horizontal layout of Box and Text")
 
 
 There are much more controls, which can be used. For example a CheckBox,
@@ -196,7 +196,7 @@ network name. To find the internal field name, open the internal network of the 
 
 Then, open the panel of the module `Convolution` and right-click {{< mousebutton "right" >}} the field title *Use* of the box *Predefined Kernel* and select *Copy Name*. You now copied the internal network name of the field to your clipboard. The name is made up of *ModuleName.FieldName*, in this case *Convolution.predefKernel*.
 
-![Convolution Module](/images/tutorials/basicmechanics/Convolution.png "Convolution Module")
+![Convolution Module](images/tutorials/basicmechanics/Convolution.png "Convolution Module")
 
 In the panel of the module `Convolution`, you can change this variable *Kernel* via a drop-down menu. In
 MDL, a drop-down menu is called a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_ComboBox" "ComboBox" >}}. We can take over the field *predefKernel*, its drop-down menu and all its properties by
@@ -219,7 +219,7 @@ Window MyWindowName {
 ```
 {{</highlight>}}
 
-![Selecting the kernel](/images/tutorials/basicmechanics/SelectingKernel.png "Selecting the kernel")
+![Selecting the kernel](images/tutorials/basicmechanics/SelectingKernel.png "Selecting the kernel")
 
 As an alternative, you can define the field *kernel* in the *Parameters* environment, and reference the defined field by its name. The result in the panel is the same. You can see a difference in the Automatic Panel. All fields that are defined in the interface in the *Parameters* environment appear in the Automatic Panel. Fields of the internal network, which are used but not declared in the section *Parameters* of the module interface, do not appear in the Automatic Panel.
 

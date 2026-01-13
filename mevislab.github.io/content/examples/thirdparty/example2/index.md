@@ -8,4 +8,4 @@ category: "thirdparty"
 This Python file shows how to access the webcam and detect faces in the video stream via OpenCV.
 
 # Download
-You can download the Python files [here](/examples/thirdparty/example2/FaceDetection.py)
+You can download the Python files [here](examples/thirdparty/example2/FaceDetection.py)

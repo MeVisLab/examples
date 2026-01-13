@@ -39,15 +39,15 @@ Press *Next* and edit the following:
 
 Now, create your macro module and reload MeVisLab. You can find your module via search in MeVisLab.
 
-![Creating macro module](/images/tutorials/basicmechanics/CreatingMacroModule.png "Creating macro module")
+![Creating macro module](images/tutorials/basicmechanics/CreatingMacroModule.png "Creating macro module")
 
-![Enable Python scripting](/images/tutorials/basicmechanics/EnablePythonScripting.png "Enable Python scripting")
+![Enable Python scripting](images/tutorials/basicmechanics/EnablePythonScripting.png "Enable Python scripting")
 
 To design a panel and create a user interface for the macro module, open the *.script* file. You can see that a *Command* environment exist, which defines the Python file as source for all commands.
 
-![Open the script file](/images/tutorials/basicmechanics/OpenScriptFile.png "Open the script file")
+![Open the script file](images/tutorials/basicmechanics/OpenScriptFile.png "Open the script file")
 
-![Script file](/images/tutorials/basicmechanics/ScriptFile.png "Script file")
+![Script file](images/tutorials/basicmechanics/ScriptFile.png "Script file")
 
 ### Creating a Panel with Tabs and Viewers
 
@@ -81,7 +81,7 @@ Window {
 ```
 {{</highlight>}}
 
-![Panel with Tabs and Viewers](/images/tutorials/basicmechanics/PanelWithTabsAndViewers.png "Panel with Tabs and Viewers")
+![Panel with Tabs and Viewers](images/tutorials/basicmechanics/PanelWithTabsAndViewers.png "Panel with Tabs and Viewers")
 
 ### Edit Viewer Settings in the Panel
 
@@ -91,9 +91,9 @@ internal network either via the context menu or using the middle mouse
 button {{< mousebutton "middle" >}} and click on the module. After that, open the Automatic Panel of
 the module `SoExaminerViewer` via context menu {{< menuitem "Show Windows" "Automatic Panel" >}} and change the field *decoration* to *False*. Keep in mind, as we did not create CSOs by now, the right viewer stays black.
 
-![Change viewer settings](/images/tutorials/basicmechanics/ChangeViewerSettings.png "Change viewer settings")
+![Change viewer settings](images/tutorials/basicmechanics/ChangeViewerSettings.png "Change viewer settings")
 
-![Changed viewer settings](/images/tutorials/basicmechanics/ChangedViewerSettings.png "Changed viewer settings")
+![Changed viewer settings](images/tutorials/basicmechanics/ChangedViewerSettings.png "Changed viewer settings")
 
 ### Selection of Images
 
@@ -104,7 +104,7 @@ internal network of your macro module. Now you are able to open the panel of
 the module `LocalImage`. Right-click {{< mousebutton "right" >}} the desired field: In this case, right-click the label
 *Name:*. Select *Copy Name*, to copy the internal name of this field.
 
-![Copy the field name](/images/tutorials/basicmechanics/GUI_Exp_09.png "Copy the field name")
+![Copy the field name](images/tutorials/basicmechanics/GUI_Exp_09.png "Copy the field name")
 
 Now, you can add this field as a new field to your window by pasting the
 name. All field settings are taken over from the internal field from the module `LocalImage`.
@@ -138,7 +138,7 @@ Window {
 ```
 {{</highlight>}}
 
-![Add name field](/images/tutorials/basicmechanics/AddNameField.png "Add name field")
+![Add name field](images/tutorials/basicmechanics/AddNameField.png "Add name field")
 
 ### Add Buttons to your Panel
 
@@ -225,7 +225,7 @@ def fileDialog():
 ```
 {{</highlight>}}
 
-![Automatically generate CSOs based on Iso value](/images/tutorials/basicmechanics/GUI_Exp_14.png "Automatically generate CSOs based on Iso value")
+![Automatically generate CSOs based on Iso value](images/tutorials/basicmechanics/GUI_Exp_14.png "Automatically generate CSOs based on Iso value")
 
 ### Colorizing CSOs
 
@@ -237,11 +237,11 @@ can do this in the following way:
 
 1. Enable the View *Scripting Assistant*, which translates actions into Python code. 
     
-    ![Scripting Assistant](/images/tutorials/basicmechanics/GUI_Exp_15.png "Scripting Assistant")
+    ![Scripting Assistant](images/tutorials/basicmechanics/GUI_Exp_15.png "Scripting Assistant")
 
 2. Enable a functionality that allows us to notice the id of the CSO we are currently hovering over with our mouse. For this open the internal network of our macro module. We will use the module `SoView2DCSOExtensibleEditor`. Open its panel and select the tab *Advanced*. You can check a box to enable *Update CSO id under mouse*. If you now hover over a CSO, you can see its id in the panel. We can save the internal network to save this functionality, but we can also solve our problem via scripting. The Scripting Assistant translated our action into code, which we can use.
     
-    ![Enabling CSO id identification](/images/tutorials/basicmechanics/GUI_Exp_16.png "Enabling CSO id identification")
+    ![Enabling CSO id identification](images/tutorials/basicmechanics/GUI_Exp_16.png "Enabling CSO id identification")
 
     We like to activate this functionality when opening the panel of our macro module `IsoCSOs`. Thus, we add a starting command to the control Window. We can call this command for example *enableFunctionalities*.
 
@@ -329,7 +329,7 @@ TabViewItem Settings {
 ```
 {{</highlight>}}
 
-![Colored selection](/images/tutorials/basicmechanics/GUI_Exp_22.png "Colored selection")
+![Colored selection](images/tutorials/basicmechanics/GUI_Exp_22.png "Colored selection")
 
 ## Summary
 * The control *Tabview* creates tabs in panels.

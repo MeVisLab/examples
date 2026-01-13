@@ -26,18 +26,18 @@ Add two `LocalImage` modules to your workspace for the input images. Select *$(D
 
 In the end, add the `Arithmetic2` module and connect them as seen below.
 
-![Example Network](/images/tutorials/image_processing/network_example1.png "Example Network")
+![Example Network](images/tutorials/image_processing/network_example1.png "Example Network")
 
 Your `SynchroView2D` shows two images. On the left hand side, you can see the original image from your left `LocalImage` module. The right image shows the result of the arithmetic operation performed by the `Arithmetic2` module on the two input images.
 
-![SynchroView2D](/images/tutorials/image_processing/arithmetic_viewer.png "SynchroView2D")
+![SynchroView2D](images/tutorials/image_processing/arithmetic_viewer.png "SynchroView2D")
 
 The `SynchroView2D` module automatically synchronizes the visible slice of both input images; you can see the same slice with and without applied filter.
 
 ## Arithmetic Operations
 Double-click {{< mousebutton "left" >}} the `Arithmetic2` module to select different functions to be applied.
 
-![Arithmetic2](/images/tutorials/image_processing/arithmetic2.png "Arithmetic2")
+![Arithmetic2](images/tutorials/image_processing/arithmetic2.png "Arithmetic2")
 
 The selected function is applied automatically.
 

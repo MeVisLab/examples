@@ -23,19 +23,19 @@ In this example, we are using the MeVisLab Profiler to inspect the memory and CP
 ### Creating the network to be used for profiling
 You can open any network you like, here we are using the example network of the module `MinMaxScan` for profiling. Add the module `MinMaxScan` to your workspace, open the example network via right-click {{<mousebutton "right">}} and select {{<menuitem "Help" "Show Example Network">}}.
 
-![MinMaxScan Example Network](/images/tutorials/testing/profiling_network.png "MinMaxScan Example Network")
+![MinMaxScan Example Network](images/tutorials/testing/profiling_network.png "MinMaxScan Example Network")
 
 ### Enable Profiling
 Next, enable the MeVisLab Profiler via menu item {{<menuitem "View" "Views" "Profiling">}}. The Profiler is opened in your Views Area but can be detached and dragged over the workspace holding the left mouse button {{<mousebutton "left">}}.
 
-![MeVisLab Profiling](/images/tutorials/testing/Profiling.png "MeVisLab Profiling")
+![MeVisLab Profiling](images/tutorials/testing/Profiling.png "MeVisLab Profiling")
 
 Enable profiling by checking *Enable* in the top left corner of the Profiling window.
 
 ### Inspect your network
 Now open the `View2D` module's panel via double-click and scroll through the slices. Inspect the Profiler.
 
-![MeVisLab Profiling Network](/images/tutorials/testing/Profiling_Network1.png "MeVisLab Profiling Network")
+![MeVisLab Profiling Network](images/tutorials/testing/Profiling_Network1.png "MeVisLab Profiling Network")
 
 The Profiler shows detailed information about each module in your network. 
 
@@ -46,11 +46,11 @@ Also, filtering by module name is handy when you are working with larger network
 
 Field values and their changes for all modules in your network can be inspected in the *Fields* tab:
 
-![MeVisLab Profiling Fields](/images/tutorials/testing/Profiling_Network2.png "MeVisLab Profiling Fields")
+![MeVisLab Profiling Fields](images/tutorials/testing/Profiling_Network2.png "MeVisLab Profiling Fields")
 
 In addition to the Profiler window, your modules also provide a tiny bar indicating their current memory and time consumption.
 
-![MeVisLab Profiling Module](/images/tutorials/testing/Module_Info.png "MeVisLab Profiling Module")
+![MeVisLab Profiling Module](images/tutorials/testing/Module_Info.png "MeVisLab Profiling Module")
 
 {{<alert class="info" caption="Info">}}
 More information about profiling in MeVisLab can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch17.html" "here">}}

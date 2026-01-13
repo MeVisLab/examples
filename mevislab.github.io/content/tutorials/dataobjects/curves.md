@@ -16,6 +16,6 @@ menu:
 ## Introduction
 Curves can be used in MeVisLab to print the results of a function as two-dimensional mathematical curves into a diagram.
 
-![Curves in MeVisLab](/images/tutorials/dataobjects/curves/Curves.png "Curves in MeVisLab")
+![Curves in MeVisLab](images/tutorials/dataobjects/curves/Curves.png "Curves in MeVisLab")
 
 In the given example, only modules available in commercial **MeVisLab Professional SDK** have been used. The non-commercial **MeVisLab Standard SDK** provides more modules for curves.
