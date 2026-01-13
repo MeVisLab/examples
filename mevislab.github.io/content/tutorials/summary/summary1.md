@@ -17,7 +17,7 @@ menu:
 {{< youtube "-hbddg0bXcA" >}}
 
 ## Introduction
-In this example, we will develop a network that fulfills the requirements mentioned on the [overview page](/tutorials/summary#DevelopNetwork). The network will be developed by reusing existing modules and defining basic field values.
+In this example, we will develop a network that fulfills the requirements mentioned on the [overview page](tutorials/summary#DevelopNetwork). The network will be developed by reusing existing modules and defining basic field values.
 
 ## Steps to Do
 ### 2D Viewer
@@ -70,7 +70,7 @@ The following requirements from [overview](tutorials/summary#DevelopNetwork) wil
   * **Requirement 9.2**: Segmentation results
   * **Requirement 9.3**: All
 
-Add a `SoExaminerViewer`, a `SoWEMRenderer` and an `IsoSurface` module to your existing network and connect them to the `LocalImage` module. Configure the `IsoSurface` to use an *IsoValue* of *200*, a *Resolution* of *1* and check *Auto-Update* and *Auto-Apply*.
+Add a `SoExaminerViewer`, a `SoWEMRenderer`, and an `IsoSurface` module to your existing network and connect them to the `LocalImage` module. Configure the `IsoSurface` to use an *IsoValue* of *200*, a *Resolution* of *1* and check *Auto-Update* and *Auto-Apply*.
 
 ![3D Viewer](images/tutorials/summary/Example1_5.png "3D Viewer")
 

@@ -20,6 +20,7 @@ menu:
 In this step you are recreating your application installer after changing the UI in previous [Step 6: Refine - Update Application](tutorials/summary/summary6/).
 
 ## Steps to Do
+
 ### Update the *.mlinstall* File
 You do not need to use the Project Wizard now, because you already have a valid *.mlinstall* file. The location should be in your package under *.\Configuration\Installers\TutorialSummary*. Open the file in any text editor and search for the *$VERSION 0.5*. Change the version to something else, in our case, we now have our first major release 1.0.
 

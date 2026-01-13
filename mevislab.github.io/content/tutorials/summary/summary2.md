@@ -27,7 +27,7 @@ Packages are described in detail in [Example 2.1: Package creation](tutorials/ba
 
 Open the Project Wizard via {{< menuitem "File" "Run Project Wizard..." >}} and select *New Package*. Run the Wizard and enter details of your new package and click *Create*.
 
-![Package wizard](/images/tutorials/summary/Example2_1.png "Package wizard")
+![Package wizard](images/tutorials/summary/Example2_1.png "Package wizard")
 
 MeVisLab reloads and you can start creating your macro module.
 
@@ -78,7 +78,7 @@ Macro module TutorialSummary {
 ```
 {{</highlight>}}
 
-An *externalDefinition* to a script file is also added (see below for the *.scrip*t file).
+An *externalDefinition* to a script file is also added (see below for the *.script* file).
 
 #### MeVisLab Network (*.mlab*) File
 The *.mlab* file is a copy of the *.mlab* file you developed in [Step 1](tutorials/summary/summary1/) and reused in the wizard. In the next chapters, this file will be used as *internal network*. 
@@ -121,7 +121,7 @@ We did not define inputs or outputs. You cannot connect your module to others. I
 
 ![Automatic Panel](images/tutorials/summary/Example2_8.png "Automatic Panel")
 
-Right-click on your module allows you to open the internal network as developed in [Step 1](/tutorials/summary/summary1/).
+Right-click on your module allows you to open the internal network as developed in [Step 1](tutorials/summary/summary1/).
 
 ## Summary
 * Macro modules encapsulate an entire MeVisLab network including all modules.

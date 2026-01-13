@@ -111,7 +111,7 @@ rearrange the items and add new views via {{< menuitem "Main Menu" "View" "Views
 They provide the functionalities to process, display, and interact with images.
 {{</alert>}}
 
-The three existing module types (ML, [Open Inventor](/glossary/#open-inventor), and [macro module](/glossary/#macro-module)) can be distinguished by their colors:
+The three existing module types (ML, [Open Inventor](glossary/#open-inventor), and [macro module](glossary/#macro-module)) can be distinguished by their colors:
 
 {{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:230px">Type</div> | <div style="width:430px">Appearance</div> | Characteristics |
@@ -147,13 +147,13 @@ Each module has a context menu, providing the following options:
 
 ![Context Menu of a module](images/tutorials/introduction/ModuleContextMenu.png "Context Menu of a module")
 
-* **Show Internal Network:** [Macro modules](glossary/#macro-module) provide an entry to open the internal network. You can see what happens inside a macro module. The internal network may also contain other macro modules. Changes in the internal network are applied to the currently running instance of your module but not saved permanently.
-* **Show Window:** If a module does not provide a user interface, you will see the automatic panel, showing the module's name. Modules may additionally have one or more windows that can be opened. You can also open the Scripting Console of a module to integrate Python.
+* **Show Internal Network:** [Macro modules](glossary/#macro-module) provide an entry to open the internal network. You can see what happens inside a macro module. The internal network may also contain other macro modules.
+* **Show Window:** If a module does not provide a user interface, you will see the automatic panel showing the module's name. Modules may additionally have one or more windows that can be opened. You can also open the Scripting Console of a module to integrate Python.
 * **Instance Name:** You can edit or copy the instance name. Renaming can be useful if the same module appears more than once in one network and/or if you want to access and distinguish the modules in your Python script. 
 * **Help:** The menu entry Help provides access to the Module Help pages and to an example network where the module is used. This example network often helps to understand which additional modules can be added to create your desired effect.
 * **Extras:** Automated tests written for the specific module can be executed here. You can also run this module in a separate process.
 * **Reload Definition:** In the case you are currently working on a module, you may need to reload the definition so that your changes are applied on the module (for example, attached Python scripts).
-* **Related Files:** Related files allows a quick access to the modules *.script* or *.py* files. The files are automatically opened in [MATE](glossary/#mevislab-mate) for editing. Changes to the *.mlab* file are applied permanently for your module.
+* **Related Files:** Related files allows a quick access to the modules *.script* or *.py* files. The files are automatically opened in [MATE](glossary/#mevislab-mate) for editing.
 * **Show Enclosing Folder:** This entry opens the directory where your module is stored.
 * **Grouping:** Multiple modules can be clustered and the groups can be named. This adds clarity to the structure of your network. In addition to that, grouped modules can be converted to local or global macro modules easily.
 

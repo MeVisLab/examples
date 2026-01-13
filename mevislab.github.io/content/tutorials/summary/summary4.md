@@ -17,9 +17,10 @@ menu:
 {{< youtube "_wheDC8TBJQ" >}}
 
 ## Introduction
-In the previous chapters you developed a macro module with User Interface and Python scripting. In this step you will see how to implement an automated test to verify and validate the Requirements defined in [Overview](tutorials/summary).
+In the previous chapters you developed a macro module with a user interface and Python scripting. In this step you will see how to implement an automated test to verify and validate the requirements defined in [Overview](tutorials/summary).
 
 ## Steps to Do
+
 ### Create a Test Network Using Your Macro Module
 Create a new and empty network and save it as *.mlab* file. Remember the location.
 
@@ -371,7 +372,7 @@ The MeVisLab TestCaseManager sorts your test cases alphabetically. Your test cas
 
 ![TestCaseManager Sorting](images/tutorials/summary/Example4_6.png "TestCaseManager Sorting")
 
-Generally, test cases should not depend on each other and the order of their execution should not matter. Sometimes it makes sense though to execute tests in a certain order, for example, for performance reasons. In this case you can add numeric prefixes to your test cases. This might look like this then:
+Generally, test cases should not depend on each other and the order of their execution should not matter. Sometimes it makes sense though to execute tests in a certain order, for example, for performance reasons. In this case, you can add numeric prefixes to your test cases. This might look like this then:
 
 ![TestCaseManager Custom Sorting](images/tutorials/summary/Example4_7.png "TestCaseManager Custom Sorting")
 

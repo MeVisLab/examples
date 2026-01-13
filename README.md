@@ -10,4 +10,4 @@ This is the repository for the [MeVisLab Tutorials and Examples GitHub pages](ht
 * Install npm, e.g., from [npmjs Website](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 * Change to mevislab.github.io folder and run `npm install`
 * Stay in this folder and run `hugo server -d public --baseURL //localhost/examples/` (The `/examples/` path is locally not absolute necessary but it helps to find problems that might appear on the production website.)
-* Open in your favorite browser the given URL
+* Open the given URL in your favorite browser

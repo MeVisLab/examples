@@ -67,7 +67,7 @@ A Local Macro module in MeVisLab exists within the context of the current networ
 #### Global Macro Module:
  A global macro module is stored in a central location within your MeVisLab installation. The directory is called Package. Once a global macro module is created, it appears in the module browser and can be used in any MeVisLab network you open. See [Package creation](tutorials/basicmechanisms/macromodules/package/) for details about Packages.
 
- Local macro modules can be converted to global macro modules. MeVisLab then adds a definition file containing the name and package of the module and copies the content to your selected package directory. Package directories are loaded automatically when you start MeVisLab in the case they have been added to your user packages via main menu {{< menuitem "Edit" "Preferences" "Packages" >}}.
+ Local macro modules can be converted to global macro modules. MeVisLab then adds a definition file containing the name and package of the module and copies the content to your selected package directory. Package directories are loaded automatically when you start MeVisLab in case they have been added to your user packages via main menu {{< menuitem "Edit" "Preferences" "Packages" >}}.
 
 *	A global macro can be used in any MeVisLab network.
 *	A global macro is listed in the Modules panel and module search.

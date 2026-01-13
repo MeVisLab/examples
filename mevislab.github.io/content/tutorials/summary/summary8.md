@@ -55,7 +55,7 @@ Open the internal network of your previously created macro module from [Step 2](
 
 ![Internal network](images/tutorials/summary/Example8_5a.png "Internal network")
 
-We are going to develop a web application, therefore we need special `RemoteRendering` modules for the viewer. Add two `RemoteRendering` modules and a `SoCameraInteraction` to your workspace and connect them to your existing modules as seen below.
+We are going to develop a web application; therefore, we need special `RemoteRendering` modules for the viewer. Add two `RemoteRendering` modules and a `SoCameraInteraction` to your workspace and connect them to your existing modules as seen below.
 
 ![Remote Rendering](images/tutorials/summary/Example8_5b.png "Remote Rendering")
 
@@ -172,7 +172,7 @@ You can emulate the final viewer by adding a `RemoteRenderingClient` module to t
 
 ![RemoteRenderingClient](images/tutorials/summary/Example8_9.png "RemoteRenderingClient")
 
-Open the *.script* files of your macro modules and copy the *FieldListeners* from *Commands* section of your *TutorialSummary.script* to *TutorialSummaryBrowser.script*.
+Open the *.script* files of your macro modules and copy the *FieldListeners* from the *Commands* section of your *TutorialSummary.script* to *TutorialSummaryBrowser.script*.
 
 {{< highlight filename="TutorialSummaryBrowser.script" >}}
 ```Stan

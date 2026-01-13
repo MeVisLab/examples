@@ -30,7 +30,7 @@ Add the modules to your workspace and connect them as seen below.
 ### Creating a Curve
 Click on the output of the `CurveCreator` module and open the Output Inspector.
 
-![Empty Output Inspector](/images/tutorials/dataobjects/curves/OutputInspector_empty.png "Empty Output Inspector")
+![Empty Output Inspector](images/tutorials/dataobjects/curves/OutputInspector_empty.png "Empty Output Inspector")
 
 Double-click {{<mousebutton "left">}} on the `CurveCreator` module and open the Panel.
 
@@ -90,13 +90,13 @@ Now open the panel of the `StylePalette` module.
 
 ![StylePalette](images/tutorials/dataobjects/curves/StylePalette.png "StylePalette")
 
-The `StylePalette` module allows you to define twelve different styles for curves. Initially, without manual changes, the styles are applied one after the other. The first curve gets style 1, the second curve style 2, and so on.
+The `StylePalette` allows you to define twelve different styles for curves. Initially, without manual changes, the styles are applied one after the other. The first curve gets style 1, the second curve style 2, and so on.
 
-Open the panel of your `CurveCreator` module again and define *Curve Style(s)* as *"3 6"*. *Update* {{<mousebutton "left">}} your curves.
+Open the Panel of your `CurveCreator` module again and define *Curve Style(s)* as *"3 6"*. *Update* {{<mousebutton "left">}} your curves.
 
 ![StylePalette applied](images/tutorials/dataobjects/curves/StylePalette_applied.png "StylePalette applied")
 
-You now applied the style three for your first curve and style six for the second. This is how you can create twelve different curves with unique appearance.
+You now applied the style three for your first curve and six for the second. This is how you can create twelve different curves with unique appearance.
 
 ### Using Multiple Tables for Curve Generation
 In addition to adding multiple columns for different y-coordinates, you can also define multiple tables as input, so that you can also have different x-coordinates for multiple curves.

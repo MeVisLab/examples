@@ -29,7 +29,7 @@ An exemplary Open Inventor scene will be implemented in the following paragraph.
 Inventor scenes are organized in structures called scene graphs. A scene graph is made up of nodes, which represent 3D objects to be drawn, properties of the 3D objects, nodes that combine other nodes and are used for hierarchical grouping, and others (cameras, lights, etc.). These nodes are accordingly called shape nodes, property nodes, group nodes, and so on. Each node contains one or more pieces of information stored in fields. For example, the `SoSphere` node contains only its radius, stored in its *radius* field. Open Inventor modules function as Open Inventor nodes, so they may have input connectors to add Open Inventor child nodes (modules) and output connectors to link themselves to Open Inventor parent nodes (modules).
 
 {{<alert class="info" caption="Execution order in Open Inventor scenes">}}
-The model below depicts the order in which the modules are traversed. The red arrow indicates the traversal order: from top to bottom and from left to right. The modules are numbered accordingly, from 1 to 8. Knowing about the traversal order can be crucial to achieve a certain ouput.
+The model below depicts the order in which the modules are traversed. The red arrow indicates the traversal order: from top to bottom and from left to right. The modules are numbered accordingly from 1 to 8. Knowing about the traversal order can be crucial to achieve a certain ouput.
 ![Traversing in Open Inventor](images/tutorials/openinventor/OI1_13.png "Traversing through a network of Open Inventor modules")
 {{</alert>}}
 

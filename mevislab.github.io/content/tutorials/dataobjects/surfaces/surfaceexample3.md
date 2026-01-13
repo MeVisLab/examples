@@ -44,7 +44,7 @@ Opening your SoExaminerViewer now allows you to use handles of the `SoTransforme
 You need to change the active tool on the right side of the `SoExaminerViewer`. Use the *Pick Mode* for applying transformations and the *View Mode* for adjusting the camera.
 {{</alert>}}
 
-![Moved, Rotated and Scaled Cube](/images/tutorials/dataobjects/surfaces/WEMExample3_4.png "Moved, Rotated and Scaled Cube")
+![Moved, Rotated, and Scaled Cube](images/tutorials/dataobjects/surfaces/WEMExample3_4.png "Moved, Rotated, and Scaled Cube")
 
 You can also try the other `So*Dragger` modules in MeVisLab for variations of the `SoTransformerDragger`.
 
