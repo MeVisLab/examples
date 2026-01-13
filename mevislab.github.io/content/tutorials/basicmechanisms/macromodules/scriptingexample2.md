@@ -85,11 +85,7 @@ Window {
 
 ### Edit viewer settings in the panel
 
-You may want to change the design setting of the right viewer. This is
-still possible via the internal network of the macro module. Open the
-internal network either via the context menu or using the middle mouse
-button {{< mousebutton "middle" >}} and click on the module. After that, open the Automatic Panel of
-the module `SoExaminerViewer` via context menu {{< menuitem "Show Windows" "Automatic Panel" >}} and change the field *decoration* to *False*. Keep in mind, as we did not create CSOs by now, the right viewer stays black.
+You may want to change the design setting of the right viewer. This is possible via the network file of the macro module. Open the context menu {{< mousebutton "right" >}} and select {{< menuitem "Related Files" "IsoCSOs.mlab" >}} on the module. In the network file, open the Automatic Panel of the module `SoExaminerViewer` via context menu {{< menuitem "Show Windows" "Automatic Panel" >}} and change the field *decoration* to *False*. Keep in mind, as we did not create CSOs by now, the right viewer stays black.
 
 ![Change viewer settings](/images/tutorials/basicmechanics/ChangeViewerSettings.png "Change viewer settings")
 
@@ -98,11 +94,7 @@ the module `SoExaminerViewer` via context menu {{< menuitem "Show Windows" "Auto
 ### Selection of images
 
 Next, we like to add the option to browse through the folders and select
-the image, we like to create CSOs from. This functionality is already given in the internal network in the module `LocalImage`. We can copy this functionality from `LocalImage` and add this option to the panel above both viewers. But, how should we know, which field name we
-reference to? To find this out, open the
-internal network of your macro module. Now you are able to open the panel of
-the module `LocalImage`. Right-click {{< mousebutton "right" >}} the desired field: In this case, right-click the label
-*Name:*. Select *Copy Name*, to copy the internal name of this field.
+the image, we like to create CSOs from. This functionality is already given in the internal network in the module `LocalImage`. We can copy this functionality from `LocalImage` and add this option to the panel above both viewers. But, how should we know, which field name we reference to? To find this out, open the network file of your macro module again. Now you are able to open the panel of the module `LocalImage`. Right-click {{< mousebutton "right" >}} the desired field: In this case, right-click the label *Name:*. Select *Copy Name*, to copy the internal name of this field.
 
 ![Copy the field name](/images/tutorials/basicmechanics/GUI_Exp_09.png "Copy the field name")
 
@@ -239,7 +231,7 @@ can do this in the following way:
     
     ![Scripting Assistant](/images/tutorials/basicmechanics/GUI_Exp_15.png "Scripting Assistant")
 
-2. Enable a functionality which allows us to notice the id of the CSO we are currently hovering over with our mouse. For this open the internal network of our macro module. We will use the module `SoView2DCSOExtensibleEditor`. Open its panel and select the tab *Advanced*. You can check a box to enable *Update CSO id under mouse*. If you now hover over a CSO, you can see its id in the panel. We can save the internal network to save this functionality, but we can also solve our problem via scripting. The Scripting Assistant translated our action into code, which we can use.
+2. Enable a functionality which allows us to notice the id of the CSO we are currently hovering over with our mouse. For this open the network file of our macro module. We will use the module `SoView2DCSOExtensibleEditor`. Open its panel and select the tab *Advanced*. You can check a box to enable *Update CSO id under mouse*. If you now hover over a CSO, you can see its id in the panel. We can save the network to save this functionality, but we can also solve our problem via scripting. The Scripting Assistant translated our action into code, which we can use.
     
     ![Enabling CSO id identification](/images/tutorials/basicmechanics/GUI_Exp_16.png "Enabling CSO id identification")
 

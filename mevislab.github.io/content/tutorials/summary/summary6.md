@@ -68,7 +68,7 @@ You can also update your Python files for new or updated requirements. In this e
 If you want to write an additional Python test case, you can also do that.
 
 ## Summary
-* Your application can be updated by modifying the macro module and/or internal network of your application
+* Your application can be updated by modifying the macro module and/or network file of your application
 * Any changes will be applied to your installable executable in the next step
 
 {{< networkfile "examples/summary/TutorialSummaryUpdated.zip" >}}
