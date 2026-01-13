@@ -15,12 +15,12 @@ menu:
 # Example 2: 2D Plotting
 
 ## Introduction 
-In this tutorial, we will equip the macro module we created in the [previous tutorial](/tutorials/thirdparty/matplotlib/modulesetup) with a responsive and interactable panel to plot grayscale distributions of single slices as well as defined sequences of slices in 2D.
+In this tutorial, we will equip the macro module we created in the [previous tutorial](tutorials/thirdparty/matplotlib/modulesetup) with a responsive and interactable panel to plot grayscale distributions of single slices as well as defined sequences of slices in 2D.
 
 ## Steps to Do
 Open the module definition folder of your macro module and the related *.script* file in MATE. Then, activate the preview as shown below: 
 
-![MATE Preview](/images/tutorials/thirdparty/Matplotlib7.png)
+![MATE Preview](images/tutorials/thirdparty/Matplotlib7.png)
 
 Drag the small preview window to the bottom right corner of your window where it does not bother you. We will now be adding contents to be displayed there. 
 
@@ -71,8 +71,8 @@ You can click and hold onto a box to move it within the Preview. Your code will 
 To plot a slice or a defined sequence of slices, we need to be able to set a start and an end. 
 Go back into your MeVisLab workspace, right click your `BaseNetwork` module and choose "Show Internal Network". 
 
-![SubImage module info](/images/tutorials/thirdparty/Matplotlib8.png "The `SubImage` module provides the option to set sequences of slices.")
-![SubImage module panel](/images/tutorials/thirdparty/Matplotlib9.PNG "The starting and ending slices of the sequence can be set in the module panel.")
+![SubImage module info](images/tutorials/thirdparty/Matplotlib8.png "The `SubImage` module provides the option to set sequences of slices.")
+![SubImage module panel](images/tutorials/thirdparty/Matplotlib9.PNG "The starting and ending slices of the sequence can be set in the module panel.")
 
 {{<alert class="info" caption="Info">}}
 To find out what the parameters are called, what type of values they contain and receive and what they refer to, you can right-click on them within the panel.
@@ -210,7 +210,7 @@ Lastly, put this under your two boxes, but above the empty element in the vertic
 ``` {{</highlight>}}
 
 If you followed all of the listed steps, your panel preview should look like this and display all the current parameter values. 
-![Adapted macro panel](/images/tutorials/thirdparty/Matplotlib10.PNG)
+![Adapted macro panel](images/tutorials/thirdparty/Matplotlib10.PNG)
 
 We can now work on the functions that visualize the data as plots on the Matplotlib canvas. 
 You will have noticed how all of the buttons in the .script file have a command. Whenever that button is clicked, its designated command is executed.
@@ -291,9 +291,9 @@ def click2D():
 
 You should now be able to reproduce results like these: 
 
-![Single Slice 2D](/images/tutorials/thirdparty/Matplotlib13.PNG "2D plot of slice 28")
-![Small Sequence 2D](/images/tutorials/thirdparty/Matplotlib112.PNG "Smaller sequences are displayed as multiple single slice plots.")
-![Sequence in 2D](/images/tutorials/thirdparty/Matplotlib122.PNG "Sequence in 2D")
+![Single Slice 2D](images/tutorials/thirdparty/Matplotlib13.PNG "2D plot of slice 28")
+![Small Sequence 2D](images/tutorials/thirdparty/Matplotlib112.PNG "Smaller sequences are displayed as multiple single slice plots.")
+![Sequence in 2D](images/tutorials/thirdparty/Matplotlib122.PNG "Sequence in 2D")
 
 {{<alert class="info" caption="Info">}}
 Notice how the bin size affects the plots appearance.

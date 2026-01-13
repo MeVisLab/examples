@@ -14,7 +14,7 @@ Ghosting means not only showing contours available on the currently visible slic
 
 The contours are also displayed in a three-dimensionsl `SoExaminerViewer` by using the `SoCSO3DRenderer`.
 
-![Screenshot](/examples/data_objects/contours/example5/image.png)
+![Screenshot](examples/data_objects/contours/example5/image.png)
 
 # Download
-You can download the example network [here](/examples/data_objects/contours/example5/ContourExample5.mlab)
+You can download the example network [here](examples/data_objects/contours/example5/ContourExample5.mlab)

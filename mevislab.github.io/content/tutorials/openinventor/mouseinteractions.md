@@ -29,7 +29,7 @@ Additional information about the `SoMouseGrabber` can be found here: {{< docuLin
 
 [//]: <> (MVL-653)
 
-![SoMouseGrabber](/images/tutorials/openinventor/V5_01.png "SoMouseGrabber")
+![SoMouseGrabber](images/tutorials/openinventor/V5_01.png "SoMouseGrabber")
 ### Configure Mouse Interactions
 Now, open the panels of the module `SoMouseGrabber` and the module `SoExaminerViewer`, which displays a cube. In the viewer, press the right button of your mouse {{< mousebutton "right" >}} and move the mouse around. This action can be seen in the panel of the module SoMouseGrabber.
 
@@ -37,19 +37,19 @@ Now, open the panels of the module `SoMouseGrabber` and the module `SoExaminerVi
 Make sure to configure `SoMouseGrabber` fields as seen below.
 {{</alert>}}
 
-![SoMouseGrabber](/images/tutorials/openinventor/V5_02.png "SoMouseGrabber")
+![SoMouseGrabber](images/tutorials/openinventor/V5_02.png "SoMouseGrabber")
 
 **You can see:**
 1. *Button 3*, the right mouse button {{< mousebutton "right" >}}, is tagged as being pressed
 2. Changes of the mouse coordinates are displayed in the box *Output*
 
-![Mouse Interactions](/images/tutorials/openinventor/V5_03.png "Mouse Interactions")
+![Mouse Interactions](images/tutorials/openinventor/V5_03.png "Mouse Interactions")
 
 ### Resize Cube via Mouse Interactions
 
 We like to use the detected mouse movements to change the size of our cube. In order to that, open the panel of `SoCube`. Build parameter connections from the mouse coordinates to the width and depth of the cube.
 
-![Change Cube size by Mouse Events](/images/tutorials/openinventor/V5_04.png "Change Cube size by Mouse Events")
+![Change Cube size by Mouse Events](images/tutorials/openinventor/V5_04.png "Change Cube size by Mouse Events")
 
 If you now press the right mouse button {{< mousebutton "right" >}} inside the viewer and move the mouse around, the size of the cube changes.
 

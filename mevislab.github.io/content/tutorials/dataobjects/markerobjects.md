@@ -18,15 +18,15 @@ In MeVisLab you can attach markers to images and other data objects. In this exa
 ## Creation and Rendering
 To create markers, you can use a marker editor, for example, the `SoView2DMarkerEditor`. Connect this editor to a viewer as shown below. Now you can interactively create new markers. Connect the module `XMarkerListContainer` to your marker editor to store markers in a list.
 
-![Create Markers](/images/tutorials/dataobjects/markers/DO_Markers_01.png "Create Markers")
+![Create Markers](images/tutorials/dataobjects/markers/DO_Markers_01.png "Create Markers")
 
 Using the `StylePalette` module, you can define a style for your markers. In order to set different styles for different markers, change the field *Color Mode* in the panel of `SoView2DMarkerEditor` to *Index*.
 
-![Style of Markers](/images/tutorials/dataobjects/markers/DO_Markers_08.png "Style of Markers")
+![Style of Markers](images/tutorials/dataobjects/markers/DO_Markers_08.png "Style of Markers")
 
 With the help of the module `So3DMarkerRenderer`, markers of an `XMarkerList` can be rendered in 3D.
 
-![Rendering of Markers](/images/tutorials/dataobjects/markers/DO_Markers_09.png "Rendering of Markers")
+![Rendering of Markers](images/tutorials/dataobjects/markers/DO_Markers_09.png "Rendering of Markers")
 
 ## Working with Markers
 {{<alert class="info" caption="Info">}}
@@ -40,7 +40,7 @@ Learn how to convert markers by building the following network. Press the *Reloa
 Make sure to set *Lower Threshold* of the `MaskToMarkers` module to 1000 so that the 3D object is rendered correctly.
 {{</alert>}}
 
-![Convert Markers](/images/tutorials/dataobjects/markers/DO_Markers_02.png "Convert Markers")
+![Convert Markers](images/tutorials/dataobjects/markers/DO_Markers_02.png "Convert Markers")
 
 ## Exercise
 Get the HU value of the image at your markers location.

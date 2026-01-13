@@ -30,7 +30,7 @@ You can find the internal name of one module field in the respective network. Op
 
 When entering *ctx* to the console, you can see the context you are working with. In the context of the *Scripting Console*, you have access to your workspace, meaning the whole network, its modules, and the modules' fields.
 
-![Scripting context](/images/tutorials/basicmechanics/Scripting_02.png "Scripting context")
+![Scripting context](images/tutorials/basicmechanics/Scripting_02.png "Scripting context")
 
 ### Editing the Workspace
 
@@ -42,11 +42,11 @@ In the *Scripting Console*, you can add and connect modules using the following 
 
 In this case, we added the modules `DicomImport` and `View2D` to the workspace and connected both modules.
 
-![Add and connect modules via scripting](/images/tutorials/basicmechanics/Scripting_03.png "Add and connect modules via scripting")
+![Add and connect modules via scripting](images/tutorials/basicmechanics/Scripting_03.png "Add and connect modules via scripting")
 
 It is also possible to add notes to your workspace.
 
-![Add a note to the workspace](/images/tutorials/basicmechanics/Scripting_04.png "Add a note to your workspace")
+![Add a note to the workspace](images/tutorials/basicmechanics/Scripting_04.png "Add a note to your workspace")
 
 ### Access Modules and Module Fields
 
@@ -56,7 +56,7 @@ You can also directly access a module field via *ctx.field("* < ModuleName.Field
 
 [//]: <> (MVL-653)
 
-![Access modules and module fields](/images/tutorials/basicmechanics/Scripting_05.png "Access modules and module fields")
+![Access modules and module fields](images/tutorials/basicmechanics/Scripting_05.png "Access modules and module fields")
 
 ### Python Scripting Reference
 
@@ -118,7 +118,7 @@ Under {{< menuitem "View" "Views" "Scripting Assistant" >}} you can find the vie
 
 For example: Open the *Scripting Assistant*. Add the module `WEMInitialize` to your workspace. You can select a *Model*, for example, the cube. In addition, you can change the *Translation* and press *Apply*. All these actions can be seen in the *Scripting Assistant* translated into Python code. Therefore, the *Scripting Assistant* is a powerful tool to help you to script you actions.
 
-![Scripting Assistant](/images/tutorials/basicmechanics/Scripting_01.png "Scripting Assistant")
+![Scripting Assistant](images/tutorials/basicmechanics/Scripting_01.png "Scripting Assistant")
 
 ## Examples
 See the following examples for Python scripting:

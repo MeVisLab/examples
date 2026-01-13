@@ -38,7 +38,7 @@ These are some of the most important packages that have been adapted for MeVisLa
 ### Working with the PythonPip Module on your MeVisLab Workspace
 The module `PythonPip` can be found via module search. It provides a user interface showing the currently installed Python packages including version and MeVisLab package it has been installed to.
 
-![PythonPip interface](/images/tutorials/thirdparty/pytorch_example1_2.png "PythonPip interface")
+![PythonPip interface](images/tutorials/thirdparty/pytorch_example1_2.png "PythonPip interface")
 
 Select the package to install the Python package into, write the name of the package and click install.
 
@@ -68,7 +68,7 @@ MeVisPython -m pip ...
 The commandline option does not provide the possibility to install into a specified user package. Third-party information and *.mli* files are not adapted automatically with the commandline tool.
 {{</alert>}}
 
-In [Example 1: Installing PyTorch using the PythonPip module](/tutorials/thirdparty/pytorch/pytorchexample1/) we are installing PyTorch to use it in MeVisLab scripting.
+In [Example 1: Installing PyTorch using the PythonPip module](tutorials/thirdparty/pytorch/pytorchexample1/) we are installing PyTorch to use it in MeVisLab scripting.
 
 ## Summary
 * The `PythonPip` module allows to install additional Python packages to adapt MeVisLab to a certain extent.

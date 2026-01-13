@@ -19,9 +19,9 @@ menu:
 ## Introduction
 In this example, we are using the module `CSOListContainer` instead of the `CSOManager`. The `CSOManager` is a heavyweight, UI driven module. You can use it to see all of your CSOs and CSOGroups in the module panel. The `CSOListContainer` is a lightweight module with focus on Python scripting. We recommend to use this module for final application development, because Python provides much more flexibility in handling CSO objects.
 
-![CSOManager](/images/tutorials/dataobjects/contours/Example_7_1.png "CSOManager")
+![CSOManager](images/tutorials/dataobjects/contours/Example_7_1.png "CSOManager")
 
-![CSOListContainer](/images/tutorials/dataobjects/contours/Example_7_2.png "CSOListContainer")
+![CSOListContainer](images/tutorials/dataobjects/contours/Example_7_2.png "CSOListContainer")
 
 We will create multiple CSOs by using the `SoCSOEllipseEditor` and dynamically add these CSOs to different groups via Python scripting depending on their size. CSOs larger than a configurable threshold will be drawn in red, small CSOs will be drawn in green. The colors will also be adapted if we manually resize the contours.
 
@@ -31,7 +31,7 @@ Add a `LocalImage` and a `View2D` module to your workspace and connect them as s
 
 Add a `SoCSOEllipseEditor` and a `CSOListContainer` to the `SoView2DCSOExtensibleEditor`
 
-![Initial Network](/images/tutorials/dataobjects/contours/Example_7_3.png "Initial Network")
+![Initial Network](images/tutorials/dataobjects/contours/Example_7_3.png "Initial Network")
 
 You are now able to draw CSOs.
 
@@ -40,11 +40,11 @@ Create a separate directory for this tutorial and save your network in this empt
 ### Create a Local Macro Module
 Select the module `CSOListContainer` and open menu {{<menuitem "File" "Create Local Macro" >}}. Enter some details about your new local macro module and click *Finish*. Leave the already defined output as is.
 
-![Create Local Macro](/images/tutorials/dataobjects/contours/Example_7_4.png "Create Local Macro")
+![Create Local Macro](images/tutorials/dataobjects/contours/Example_7_4.png "Create Local Macro")
 
 The appearance of the `CSOListContainer` module changes, because it is a macro module named `csoList` now.
 
-![Network with new local macro](/images/tutorials/dataobjects/contours/Example_7_5.png "Network with new local macro")
+![Network with new local macro](images/tutorials/dataobjects/contours/Example_7_5.png "Network with new local macro")
 
 The behavior of your network does not change. You can still draw the same CSOs and they are still managed by the `CSOListContainer` module. The reason why we created a local macro with a single module inside is that we want to add Python scripting to the module. Python scripts can only be added to macro modules.
 
@@ -180,7 +180,7 @@ def _getCSOList():
 ```
 {{</highlight>}}
 
-![Final Network](/images/tutorials/dataobjects/contours/Example_7_6.png "Final Network")
+![Final Network](images/tutorials/dataobjects/contours/Example_7_6.png "Final Network")
 
 If you now draw contours, they are automatically colored depending on the size. You can also edit existing contours and the color is adapted.
 

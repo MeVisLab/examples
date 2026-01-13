@@ -19,14 +19,14 @@ Images and data objects can be rendered in 2D and 3D and interacted with in seve
 In this chapter in particular, we will focus on simple image interaction with two- and three-dimensional visualizations. 
 
 {{<alert class="info" caption="Info">}}
-Not only pixel- and voxel-based data, but also scene objects and 3D scenes can be visualized. See our tutorial on [OpenInventorModules](/tutorials/openinventor#TutorialOpenInventorModules) for further information.
+Not only pixel- and voxel-based data, but also scene objects and 3D scenes can be visualized. See our tutorial on [OpenInventorModules](tutorials/openinventor#TutorialOpenInventorModules) for further information.
 {{</alert>}}
 
 ## View2D and View3D
 
 An easy way to display data and images in 2D and 3D is by using the Modules `View2D` and `View3D`. What can be done with these viewers?
 
-![View2D and View3D](/images/tutorials/visualization/V0.png "View2D and View3D")
+![View2D and View3D](images/tutorials/visualization/V0.png "View2D and View3D")
 
 ### View2D
 
@@ -41,7 +41,7 @@ An easy way to display data and images in 2D and 3D is by using the Modules `Vie
 5. More features can be found on the help page.
 
 {{<alert class="info" caption="Info">}}
-The `View2DExtensions` module provides additional ways to interact with an image. ![View2DExtensions](/images/tutorials/visualization/V0a.png "View2DExtensions")
+The `View2DExtensions` module provides additional ways to interact with an image. ![View2DExtensions](images/tutorials/visualization/V0a.png "View2DExtensions")
 {{</alert>}}
 
 ### View3D

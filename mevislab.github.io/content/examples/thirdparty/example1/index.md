@@ -8,4 +8,4 @@ category: "thirdparty"
 This Python file shows how to access the webcam via OpenCV and use the video via `PythonImage` module in MeVisLab.
 
 # Download
-You can download the Python files [here](/examples/thirdparty/example1/OpenCVExample.zip)
+You can download the Python files [here](examples/thirdparty/example1/OpenCVExample.zip)

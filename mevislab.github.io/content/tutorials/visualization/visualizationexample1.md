@@ -18,7 +18,7 @@ In this example we like to use the module `SynchroView2D` to be able to inspect 
 
 The module `SynchroView2D` provides two 2D viewers that are synchronized.
 
-As in Tutorial [Chapter 1 - Basic Mechanics of MeVisLab](/tutorials/basicmechanisms/#TutorialParameterConnection), the processed and the unprocessed image can be displayed simultaneously. Scrolling through one image automatically changes the slices of both viewers, so slices with the same slice number are shown in both images.
+As in Tutorial [Chapter 1 - Basic Mechanics of MeVisLab](tutorials/basicmechanisms/#TutorialParameterConnection), the processed and the unprocessed image can be displayed simultaneously. Scrolling through one image automatically changes the slices of both viewers, so slices with the same slice number are shown in both images.
 
 The difference is that we are now using an already existing module named `SynchroView2D`.
 
@@ -32,7 +32,7 @@ The `SynchroView2D` module is explained {{< docuLinks "/Standard/Documentation/P
 ### Develop Your Network
 Start the example by adding the module `LocalImage` to your workspace to load the example image *Tumor1_Head_t1.small.tif*. Next, add and connect the following modules as shown.
 
-![SynchroView2D](/images/tutorials/visualization/V1_01.png "SynchroView2D Viewer")
+![SynchroView2D](images/tutorials/visualization/V1_01.png "SynchroView2D Viewer")
 
 ## Summary
 * Multiple images can be synchronized by the `SynchroView2D` module

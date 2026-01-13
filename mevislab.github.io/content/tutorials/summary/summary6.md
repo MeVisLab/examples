@@ -61,7 +61,7 @@ Window {
 
 Back in MeVisLab IDE, your user interface should now provide the possibility to define an alpha value of the overlay. Changes are applied automatically because you reused the field of the `SoView2DOverlay` module directly.
 
-![Updated User Interface](/images/tutorials/summary/Example6_1.png "Updated User Interface")
+![Updated User Interface](images/tutorials/summary/Example6_1.png "Updated User Interface")
 
 You can also update your Python files for new or updated requirements. In this example we just want to show the basic principles, therefore we only add this new element to the *.script* file.
 

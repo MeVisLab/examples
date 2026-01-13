@@ -37,12 +37,12 @@ The module `Threshold` compares the value of each voxel of the image with a cust
 
 Select output of the `Threshold` module to see the binary image in Output Inspector.
 
-![Image Threshold](/images/tutorials/visualization/V3_01.png "Image Threshold")
+![Image Threshold](images/tutorials/visualization/V3_01.png "Image Threshold")
 
 ### Overlays
 The module `SoView2DOverlay` blends a 2D image over another one in a 2D viewer. In this case, all voxels with a value above the `Threshold` are colored and therefore highlighted. The colored voxels are then blended over the original image. Using the panel of `SoView2DOverlay`, you can select the color of the overlay.
 
-![SoView2DOverlay](/images/tutorials/visualization/V3_02.png "SoView2DOverlay")
+![SoView2DOverlay](images/tutorials/visualization/V3_02.png "SoView2DOverlay")
 
 {{<alert class="info" caption="Extra Infos">}}
 
@@ -59,7 +59,7 @@ The `SoView2DOverlay` module is explained {{< docuLinks "/Standard/Documentation
 ## Summary
 * The module `Threshold` applies a relative or an absolute threshold to a voxel image.
 * The module `SoView2DOverlay` blends an 2D image over another one in a 2D viewer.
-* You can also use a 3D `SoRenderArea` for the same visualizations. An example can be seen in the next [Example 4](/tutorials/visualization/visualizationexample4 "Display images converted to Open Inventor scene objects").
+* You can also use a 3D `SoRenderArea` for the same visualizations. An example can be seen in the next [Example 4](tutorials/visualization/visualizationexample4 "Display images converted to Open Inventor scene objects").
 
 {{<alert class="warning" caption="Warning">}}
 The `SoView2DOverlay` module is not intended to work with `OrthoView2D`; in this case, use a `GVROrthoOverlay`.

@@ -23,14 +23,14 @@ In this example, you will learn how to write an automated test for a simple netw
 ### Creating the Network to be Used for Testing
 Add the following modules to your workspace and connect them as seen below: 
 
-![Testcase network ](/images/tutorials/testing/testNetwork1.png "Testcase network ")
+![Testcase network ](images/tutorials/testing/testNetwork1.png "Testcase network ")
 
 Save your network as *NetworkTestCase.mlab*.
 
 ## Test Creation
 Open the MeVisLab TestCaseManager via menu {{<menuitem "File" "Run TestCaseManager" >}}. The following window will appear.
 
-![TestCaseManager window ](/images/tutorials/testing/testCaseManagerWindow.png "TestCaseManager window ")
+![TestCaseManager window ](images/tutorials/testing/testCaseManagerWindow.png "TestCaseManager window ")
 
 Change to the *Test Creation* tab and enter details of your test case as seen below. Make sure to have a package available already. 
 
@@ -40,7 +40,7 @@ Details on package creation can be found in [Example 2.1: Package creation](./tu
 
 Select your saved *NetworkTestCase.mlab* file.
 
- ![Test Creation window ](/images/tutorials/testing/TestCreation.png "Test Creation window ")
+ ![Test Creation window ](images/tutorials/testing/TestCreation.png "Test Creation window ")
 
 Click *Create*. The MeVisLab text editor MATE will automatically open and display the Python file of your test. Add the below listed code to the Python file.
 
@@ -88,11 +88,11 @@ The value of our `DicomImport`s *progress* field is saved as the *currentValue* 
 ### Run Your Test Case
 Open the TestCase Manager und run your test by selecting your test case and clicking on the *Play* button in the bottom right corner.
 
-![Run Test Case](/images/tutorials/testing/runTestCase.png "Run Test Case")
+![Run Test Case](images/tutorials/testing/runTestCase.png "Run Test Case")
 
 After execution, the ReportViewer will open automatically displaying your test's results.
 
-![ReportViewer](/images/tutorials/testing/successTestCase.png "ReportViewer")
+![ReportViewer](images/tutorials/testing/successTestCase.png "ReportViewer")
 
 
 ### Writing a Test for Global Macro Modules
@@ -111,7 +111,7 @@ Please observe that field access through Python scripting works differently for 
 *Imagine unpeeled nuts in a bag as a concept - the field as a nut, their module as their nutshell, and the bag as the global macro.* 
 
 {{<alert class="info" caption="Info">}}
-[Example 2.2: Global macro modules](/tutorials/basicmechanisms/macromodules/globalmacromodules/) provides additional info on global macro modules and their creation.
+[Example 2.2: Global macro modules](tutorials/basicmechanisms/macromodules/globalmacromodules/) provides additional info on global macro modules and their creation.
 {{</alert>}}
 
 ## Exercise

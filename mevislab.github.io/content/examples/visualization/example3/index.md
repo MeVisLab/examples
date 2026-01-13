@@ -6,7 +6,7 @@ category: "visualization"
 
 # Visualization Example 3: Image Overlays
 This example shows the creation of an overlay. Using the module `SoView2DOverlay`, an overlay can be blended over a 2D image.
-![Screenshot](/examples/visualization/example3/image.png)
+![Screenshot](examples/visualization/example3/image.png)
 
 # Download
-You can download the example network [here](/examples/visualization/example3/VisualizationExample3.mlab)
+You can download the example network [here](examples/visualization/example3/VisualizationExample3.mlab)

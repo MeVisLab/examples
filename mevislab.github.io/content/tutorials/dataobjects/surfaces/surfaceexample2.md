@@ -24,43 +24,43 @@ In this example, you will learn how to modify and process WEMs.
 #### Modification of WEMs
 Use the module `WEMLoad` to load the file *venus.off*. Then, add and connect the shown modules. We like to display the WEM *venus* two times, one time this WEM is modified. You can use the module `WEMModify` to apply modifications. In its panel, change the scale and the size of the WEM. Now you see two times the `venus` next to each other.
 
-![WEMModify](/images/tutorials/dataobjects/surfaces/DO7_01.png "WEMModify")
+![WEMModify](images/tutorials/dataobjects/surfaces/DO7_01.png "WEMModify")
 
 #### Smoothing of WEMs
 It is possible to smooth the WEM using the module `WEMSmooth`. Add this module to your network as shown. You can see the difference of the smoothed and the unsmoothed WEM in your viewer. There are more modules that can modify WEMs, for example, `WEMExtrude`. You can find them via search or in {{< menuitem "Modules" "Visualization" "Surface Meshes (WEM)" >}}.
 
-![WEMSmooth](/images/tutorials/dataobjects/surfaces/DO7_02.png "WEMSmooth")
+![WEMSmooth](images/tutorials/dataobjects/surfaces/DO7_02.png "WEMSmooth")
 
 #### Calculate Distance Between WEMs
 Now, we like to calculate the distance between our two WEMs. In order to do this, add and connect the module `WEMSurfaceDistance` as shown.
 
-![Calculate surface distance](/images/tutorials/dataobjects/surfaces/DO7_03.png "Calculate surface distance")
+![Calculate surface distance](images/tutorials/dataobjects/surfaces/DO7_03.png "Calculate surface distance")
 
 #### Annotations in 3D
 As a last step, we like to draw the calculated distances as annotations into the image. This is a little bit tricky as we need the module `SoView2DAnnotation` to create annotations in a 3D viewer. Add and connect the following modules as shown. What is done here? We use the module `SoView2D` to display a 2D image in the `SoExaminerViewer`, in addition to the WEMs we already see in the viewer. We do not see an additional image in the viewer, as we chose no proper input image to the module `SoView2D` using the module `ConstantImage` with value 0. Thus, we pretend to have a 2D image, which we can annotate. Now, we use the module `SoView2DAnnotation` to annotate the pretended 2D image, displayed in the viewer of `SoExaminerViewer`. We already used the module `SoView2DAnnotation` in [Contour Example 4](tutorials/dataobjects/contours/contourexample4/).
 
 In the `SoView2D` module, you need to uncheck the option *Draw image data*.
 
-![Annotation modules](/images/tutorials/dataobjects/surfaces/DO7_05.png "Annotation modules")
+![Annotation modules](images/tutorials/dataobjects/surfaces/DO7_05.png "Annotation modules")
 
 Now, change the *Annotation Mode* to *User*, as we like to insert custom annotations. In addition, disable to *Show vertical ruler*.
 
-![Select annotation mode](/images/tutorials/dataobjects/surfaces/DO7_06.png "Select annotation mode")
+![Select annotation mode](images/tutorials/dataobjects/surfaces/DO7_06.png "Select annotation mode")
 
 Next, open the tab *Input* and draw parameter connections from the results of the distance calculations, which can be found in the panel of `WEMSufaceDistance`, to the input fields in the panel of `SoView2DAnnotation`.
 
-![Define annotation parameters](/images/tutorials/dataobjects/surfaces/DO7_07.png "Define annotation parameters")
+![Define annotation parameters](images/tutorials/dataobjects/surfaces/DO7_07.png "Define annotation parameters")
 
 You can design the annotation overlay as you like in the tab *User*. We decided to only display the minimal (the minimum minimum) and maximal (the maximum minimum) distance between both WEMs.
 
-![Annotation design](/images/tutorials/dataobjects/surfaces/DO7_04.png "Annotation design")
+![Annotation design](images/tutorials/dataobjects/surfaces/DO7_04.png "Annotation design")
 
 As we use a 2D annotation module to annotate a 3D viewer, it is important to get rid of all 2D orientation annotations, which you can edit in the tab *Orientation*.
 
-![Disable 2D orientation annotations](/images/tutorials/dataobjects/surfaces/DO7_08.png "Disable 2D orientation annotations")
+![Disable 2D orientation annotations](images/tutorials/dataobjects/surfaces/DO7_08.png "Disable 2D orientation annotations")
 
 Now, you can see the result in the viewer. If the annotations are not visible, press {{< keyboard "a">}} a few times to change the annotation mode.
-![Display surface distance in viewer](/images/tutorials/dataobjects/surfaces/DO7_09.png "Display surface distance in viewer")
+![Display surface distance in viewer](images/tutorials/dataobjects/surfaces/DO7_09.png "Display surface distance in viewer")
 
 ## Summary
 * There are several modules to modify and process WEMs, e.g., `WEMModify`, `WEMSmooth`.

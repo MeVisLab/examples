@@ -21,7 +21,7 @@ In this example, we are using the `PythonImage` module and access your WebCam to
 ### Creating the Network to be Used for Testing
 Add the modules to your workspace and connect them as seen below. 
 
-![Example Network ](/images/tutorials/thirdparty/network_example1.png "Example Network ")
+![Example Network ](images/tutorials/thirdparty/network_example1.png "Example Network ")
 
 The viewer is empty because the image needs to be set via Python scripting.
 
@@ -33,7 +33,7 @@ More information about the `PythonImage` module can be found {{< docuLinks "/Sta
 Now you need to create a macro module from your network. You can either group your modules, create a local macro, and convert it to a global macro module, or you use the Project Wizard and load your *.mlab* file.
 
 {{<alert class="info" caption="Info">}}
-A tutorial on how to create your own macro modules can be found in [Example 2.2: Global macro modules](/tutorials/basicmechanisms/macromodules/globalmacromodules "Example 2.2: Global macro modules"). Make sure to add a Python file to your macro module.
+A tutorial on how to create your own macro modules can be found in [Example 2.2: Global macro modules](tutorials/basicmechanisms/macromodules/globalmacromodules "Example 2.2: Global macro modules"). Make sure to add a Python file to your macro module.
 {{</alert>}}
 
 ### Add the View2D to Your UI

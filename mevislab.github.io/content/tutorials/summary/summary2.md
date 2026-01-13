@@ -23,26 +23,26 @@ In this example, we encapsulate the previously developed prototype network into 
 Make sure to have your *.mlab* file from the previous [tutorial](/tutorials/summary/summary1/) available.
 
 ### Package Creation
-Packages are described in detail in [Example 2.1: Package creation](/tutorials/basicmechanisms/macromodules/package/). If you already have your own package, you can skip this part and continue creating a macro module.
+Packages are described in detail in [Example 2.1: Package creation](tutorials/basicmechanisms/macromodules/package/). If you already have your own package, you can skip this part and continue creating a macro module.
 
 Open the Project Wizard via {{< menuitem "File" "Run Project Wizard..." >}} and select *New Package*. Run the Wizard and enter details of your new package and click *Create*.
 
-![Package wizard](/images/tutorials/summary/Example2_1.png "Package wizard")
+![Package wizard](images/tutorials/summary/Example2_1.png "Package wizard")
 
 MeVisLab reloads and you can start creating your macro module.
 
 ### Create a Macro Module
 Open the Project Wizard via {{< menuitem "File" "Run Project Wizard..." >}} and select *macro module*. Run the Wizard and enter details of your new macro module. 
 
-![Macro module wizard](/images/tutorials/summary/Example2_2.png "Macro module wizard")
+![Macro module wizard](images/tutorials/summary/Example2_2.png "Macro module wizard")
 
 Select the created package and click *Next*.
 
-![Macro module wizard](/images/tutorials/summary/Example2_3.png "Macro module wizard")
+![Macro module wizard](images/tutorials/summary/Example2_3.png "Macro module wizard")
 
-Select your *.mlab* file from [Step 1](/tutorials/summary/summary1/) and check *Add Python file*. Click *Next*.
+Select your *.mlab* file from [Step 1](tutorials/summary/summary1/) and check *Add Python file*. Click *Next*.
 
-![Macro module wizard](/images/tutorials/summary/Example2_4.png "Macro module wizard")
+![Macro module wizard](images/tutorials/summary/Example2_4.png "Macro module wizard")
 
 You do not have to define fields of your macro module now, we will do that later. Click *Create*. The Windows Explorer opens showing the directory of your macro module. It should be the same directory you selected for your Package.
 
@@ -59,7 +59,7 @@ The directory structure for a macro module is as follows:
     * <MACRO_NAME>.py
     * <MACRO_NAME>.script
 
-![Directory Structure](/images/tutorials/summary/Example2_6.png "Directory Structure")
+![Directory Structure](images/tutorials/summary/Example2_6.png "Directory Structure")
 
 #### Definition (*.def*) File
 The initial *.def* file contains information you entered into the Wizard for the macro module.
@@ -78,10 +78,10 @@ Macro module TutorialSummary {
 ```
 {{</highlight>}}
 
-An *externalDefinition* to a script file is also added (see below for the *.scrip*t file).
+An *externalDefinition* to a script file is also added (see below for the *.script* file).
 
 #### MeVisLab Network (*.mlab*) File
-The *.mlab* file is a copy of the *.mlab* file you developed in [Step 1](/tutorials/summary/summary1/) and reused in the wizard. In the next chapters, this file will be used as *internal network*. 
+The *.mlab* file is a copy of the *.mlab* file you developed in [Step 1](tutorials/summary/summary1/) and reused in the wizard. In the next chapters, this file will be used as *internal network*. 
 
 #### Python (*.py*) File
 The initial *.py* file only contains the import of MeVisLab-specific objects and functions. In the future steps, we will add functionalities to our application in Python.
@@ -115,13 +115,13 @@ The source also defines your Python file to be used when calling functions and e
 ### Using Your Macro Module
 As you created a global macro module, you can search for it in the MeVisLab *Module Search*.
 
-![Module Search](/images/tutorials/summary/Example2_7.png "Module Search")
+![Module Search](images/tutorials/summary/Example2_7.png "Module Search")
 
 We did not define inputs or outputs. You cannot connect your module to others. In addition to that, we did not develop a user interface. Double-clicking your module {{< mousebutton "left" >}} only opens the automatic panel showing the *instanceName*.
 
-![Automatic Panel](/images/tutorials/summary/Example2_8.png "Automatic Panel")
+![Automatic Panel](images/tutorials/summary/Example2_8.png "Automatic Panel")
 
-Right-click on your module allows you to open the internal network as developed in [Step 1](/tutorials/summary/summary1/).
+Right-click on your module allows you to open the internal network as developed in [Step 1](tutorials/summary/summary1/).
 
 ## Summary
 * Macro modules encapsulate an entire MeVisLab network including all modules.

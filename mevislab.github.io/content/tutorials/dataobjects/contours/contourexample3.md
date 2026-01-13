@@ -25,25 +25,25 @@ image.
 
 ## Steps to Do
 ### Develop Your Network
-Use the network from the [contour example 2](/tutorials/dataobjects/contours/contourexample2) and add the modules `VoxelizeCSO`,
+Use the network from the [contour example 2](tutorials/dataobjects/contours/contourexample2) and add the modules `VoxelizeCSO`,
 `SoView2DOverlay` and `View2D` to your workspace. Connect the module as
 shown. The module `VoxelizeCSO` allows to convert CSOs into voxel images.
 
-![Data Objects Contours Example 3](/images/tutorials/dataobjects/contours/DO3_02.png "Data Objects Contours Example 3")
+![Data Objects Contours Example 3](images/tutorials/dataobjects/contours/DO3_02.png "Data Objects Contours Example 3")
 
 ### Convert CSOs into Voxel Images
 Update the module `VoxelizeCSOs` to create voxel masks based on your CSOs.
 The result can be seen in `View2D1`.
 
-![Overlay](/images/tutorials/dataobjects/contours/DO3_03.png "Overlay")
+![Overlay](images/tutorials/dataobjects/contours/DO3_03.png "Overlay")
 
 Next, we like to inspect the marked lobe of the lung. This means we
 like to inspect the object that is built out of CSOs. In order to do that, add
 the `View3D` module. The 3D version of the lung can be seen in the
 viewer.
 
-![Additional 3D Viewer](/images/tutorials/dataobjects/contours/DO3_04.png "Additional 3D Viewer")
-![Extracted Object](/images/tutorials/dataobjects/contours/DO3_05.png "Extracted Object")
+![Additional 3D Viewer](images/tutorials/dataobjects/contours/DO3_04.png "Additional 3D Viewer")
+![Extracted Object](images/tutorials/dataobjects/contours/DO3_05.png "Extracted Object")
 
 ## Summary
 * The module `VoxelizeCSO` converts CSOs to voxel images.

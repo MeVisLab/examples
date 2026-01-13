@@ -15,31 +15,31 @@ menu:
 # Example 3: Segment Persons in WebCam Videos
 
 ## Introduction
-This tutorial is based on [Example 2: Face Detection with OpenCV](/tutorials/thirdparty/opencv/thirdpartyexample2 "Example 2: Face Detection with OpenCV"). You can re-use some of the scripts already developed in the other tutorial.
+This tutorial is based on [Example 2: Face Detection with OpenCV](tutorials/thirdparty/opencv/thirdpartyexample2 "Example 2: Face Detection with OpenCV"). You can re-use some of the scripts already developed in the other tutorial.
 
 ## Steps to Do
 Add the macro module developed in the previous example to your workspace.
 
-![WebCamTest module](/images/tutorials/thirdparty/pytorch_example3_1.png "WebCamTest module")
+![WebCamTest module](images/tutorials/thirdparty/pytorch_example3_1.png "WebCamTest module")
 
 Open the internal network of the module via middle mouse button {{< mousebutton "middle" >}} and right click {{< mousebutton "right" >}} on the tab of the workspace showing the internal network. Select *Show Enclosing Folder*.
 
-![Show Enclosing Folder](/images/tutorials/thirdparty/pytorch_example3_2.png "Show Enclosing Folder")
+![Show Enclosing Folder](images/tutorials/thirdparty/pytorch_example3_2.png "Show Enclosing Folder")
 
 The file browser opens showing the files of your macro module. Copy the *.mlab* file somewhere you can remember.
 
 ### Create the Macro Module
 Open the the Project Wizard via {{< menuitem "File" "Run Project Wizard">}} and select *Macro Module*. Click *Run Wizard*.
 
-![Project Wizard](/images/tutorials/thirdparty/pytorch_example3_3.png "Project Wizard")
+![Project Wizard](images/tutorials/thirdparty/pytorch_example3_3.png "Project Wizard")
 
 Define the module properties as shown below, though you can choose your own name. Click *Next*.
 
-![Module Properties](/images/tutorials/thirdparty/pytorch_example3_4.png "Module Properties")
+![Module Properties](images/tutorials/thirdparty/pytorch_example3_4.png "Module Properties")
 
 Define the module properties and select the copied *.mlab* file. Make sure to add a Python file and click *Next*.
 
-![Macro Module Properties](/images/tutorials/thirdparty/pytorch_example3_5.png "Macro Module Properties")
+![Macro Module Properties](images/tutorials/thirdparty/pytorch_example3_5.png "Macro Module Properties")
 
 Leave the module field reference as is and click *Create*. Close Project Wizard and select {{< menuitem "Extras" "Reload Module Database (Clear Cache)">}}.
 
@@ -146,22 +146,22 @@ def releaseCamera(_):
 ```
 {{</highlight>}}
 
-You should now have the complete functionality of the [Example 2: Face Detection with OpenCV](/tutorials/thirdparty/opencv/thirdpartyexample2 "Example 2: Face Detection with OpenCV").
+You should now have the complete functionality of the [Example 2: Face Detection with OpenCV](tutorials/thirdparty/opencv/thirdpartyexample2 "Example 2: Face Detection with OpenCV").
 
 ### Adapt the Network
 For *PyTorch*, we require some additional modules in our network. Open the internal network of your module and add another `PythonImage` module. Connect a `Resample3D` and an `ImagePropertyConvert` module.
 
 In `Resample3D` module, define the *Image Size* 693, 520, 1. Change *VoxelSize* for all dimensions to 1.
 
-![Resample3D](/images/tutorials/thirdparty/pytorch_example3_7.png "Resample3D")
+![Resample3D](images/tutorials/thirdparty/pytorch_example3_7.png "Resample3D")
 
 Open the Panel of the `ImagePropertyConvert` module and check *World Matrix*. 
 
-![ImagePropertyConvert](/images/tutorials/thirdparty/pytorch_example3_9.png "ImagePropertyConvert")
+![ImagePropertyConvert](images/tutorials/thirdparty/pytorch_example3_9.png "ImagePropertyConvert")
 
 Then add a `SoView2DOverlayMPR` module and connect it to the `ImagePropertyConvert` and the `View2D`. Change *Blend Mode* to *Blend*, *Alpha* to something between 0 and 1, and define a color for the overlay.
 
-![SoView2DOverlayMPR](/images/tutorials/thirdparty/pytorch_example3_8.png "SoView2DOverlayMPR")
+![SoView2DOverlayMPR](images/tutorials/thirdparty/pytorch_example3_8.png "SoView2DOverlayMPR")
 
 Save the internal network.
 
@@ -317,7 +317,7 @@ The following classes are available:
 
 The final result of the segmentation should be a semi-transparent red overlay of the persons segmented in your webcam stream.
 
-![Final Segmentation result](/images/tutorials/thirdparty/pytorch_example3_10.png "Final Segmentation result")
+![Final Segmentation result](images/tutorials/thirdparty/pytorch_example3_10.png "Final Segmentation result")
 
 ## Summary
 * You can install additional Python AI packages by using the `PythonPip` module.

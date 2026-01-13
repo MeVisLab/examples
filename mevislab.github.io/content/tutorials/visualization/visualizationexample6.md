@@ -16,7 +16,7 @@ menu:
 
 <div class="alert alert-secondary d-flex align-items-center" role="alert">
     <div>
-        <img width="100px" src="/images/youtube.svg" />&nbsp;&nbsp;<a href="https://youtube.com/shorts/U23QH2Pvwew" target="_blank"><img width="100px" src="https://img.youtube.com/vi/U23QH2Pvwew/0.jpg" /></a>&nbsp;&nbsp;&nbsp;We have a Short video showing the possibilities of the <b>MeVis Path Tracer</b> on <a href="https://youtube.com/shorts/U23QH2Pvwew" target="_blank">YouTube</a>.
+        <img width="100px" src="images/youtube.svg" />&nbsp;&nbsp;<a href="https://youtube.com/shorts/U23QH2Pvwew" target="_blank"><img width="100px" src="https://img.youtube.com/vi/U23QH2Pvwew/0.jpg" /></a>&nbsp;&nbsp;&nbsp;We have a Short video showing the possibilities of the <b>MeVis Path Tracer</b> on <a href="https://youtube.com/shorts/U23QH2Pvwew" target="_blank">YouTube</a>.
     </div>
 </div>
 
@@ -27,7 +27,7 @@ The MeVis Path Tracer offers a Monte Carlo Path Tracing framework running on CUD
 CUDA is a parallel computing platform and programming model created by NVIDIA. For further information, see [NVIDIA website](https://blogs.nvidia.com/blog/2012/09/10/what-is-cuda-2/).
 {{</alert>}}
 
-{{< imagegallery 5 "/images/tutorials/visualization/pathtracer" "PathTracer1" "PathTracer2" "PathTracer3" "PathTracer4" "PathTracer5" >}}
+{{< imagegallery 5 "images/tutorials/visualization/pathtracer" "PathTracer1" "PathTracer2" "PathTracer3" "PathTracer4" "PathTracer5" >}}
 
 The `SoPathTracer` module implements the main renderer (like the `SoGVRVolumeRenderer`). It collects all `SoPathTracer*` extensions (on its left side) in the scene and renders them. Picking is also supported, but currently only the first hit position. It supports an arbitrary number of objects with different orientation and bounding boxes.
 
