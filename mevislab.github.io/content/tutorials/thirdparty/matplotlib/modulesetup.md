@@ -27,7 +27,7 @@ If you feel like using a shortcut, you can also download the base network below 
 
 Your finished network should look like this: 
 
-![Base network](/images/tutorials/thirdparty/Matplotlib1.PNG)
+![Base network](images/tutorials/thirdparty/Matplotlib1.PNG)
 
 {{< networkfile "/tutorials/thirdparty/matplotlib/MatplotlibBaseNetwork.mlab" >}}
 
@@ -38,7 +38,7 @@ You will have noticed how, for every module, a panel will pop up if you double-c
 But where and how is a module panel created? To answer this question, please close the module panel and right-click on the module. 
 A context menu will open, click on "Related Files". 
 
-![Context menu of the "SubImage" module](/images/tutorials/thirdparty/Matplotlib2.png)
+![Context menu of the "SubImage" module](images/tutorials/thirdparty/Matplotlib2.png)
 
 As you can see, each module has a .script and a .py file, named like the module itself: 
 + The .script file is, where the appearance and structure of the module panel as well as their commands are declared. 
@@ -50,9 +50,9 @@ Some modules also reference a .mlab file which usually contains their internal n
 If your network is ready, group it by right-clicking on your group's title and select "Grouping", then "Add To A New Group".
 After, convert your grouped network into a macro module. 
 
-![Converting to a macro](/images/tutorials/thirdparty/Matplotlib3.png)
+![Converting to a macro](images/tutorials/thirdparty/Matplotlib3.png)
 {{<alert class="info" caption="Info">}}
-Information on how to convert groups into macros can be found [here](/tutorials/basicmechanisms#TutorialMacroModules). 
+Information on how to convert groups into macros can be found [here](tutorials/basicmechanisms#TutorialMacroModules). 
 {{</alert>}}
 Depending on whether you like to reuse your projects in other workspaces, it can make sense to convert them.
 We'd recommend to do so. 
@@ -68,7 +68,7 @@ Now open the .script file of your newly created macro through the context menu. 
 
 
 Click the "Reload" button that is located above the script for the .py file to be added into the module definition folder, then open it using the "Files" button on the same bar as demonstrated below:
-![MATE](/images/tutorials/thirdparty/Matplotlib5.png)
+![MATE](images/tutorials/thirdparty/Matplotlib5.png)
 
 {{<alert class="info" caption="Info">}}
 The [MDL Reference](https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/MDLReference/index.html) is a very handy tool for this and certainly also for following projects. 

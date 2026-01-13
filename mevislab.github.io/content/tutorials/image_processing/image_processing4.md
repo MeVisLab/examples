@@ -24,30 +24,30 @@ In this example, we load an image and render it as `WEMIsoSurface`. Then, we cre
 ### Develop Your Network
 Add a `LocalImage` module to your workspace and select load *$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm*. Add a `WEMIsoSurface`, a `SoWEMRenderer`, a `SoBackground`, and a `SoExaminerViewer` module and connect them as seen below. Make sure to configure the `WEMIsoSurface` to use a *Iso Min. Value* of 420 and a *Voxel Sampling* 1.
 
-![Example Network](/images/tutorials/image_processing/network_example4.png "Example Network")
+![Example Network](images/tutorials/image_processing/network_example4.png "Example Network")
 
 The `SoExaminerViewer` now shows the head as a three-dimensional rendering.
 
-![SoExaminerViewer](/images/tutorials/image_processing/SoExaminerViewer_initial.png "SoExaminerViewer")
+![SoExaminerViewer](images/tutorials/image_processing/SoExaminerViewer_initial.png "SoExaminerViewer")
 
 ### Add a 3D Sphere to your Scene
 We now want to add a three-dimensional sphere to our scene. Add a `SoMaterial` and a `SoSphere` to your network, connect them to a `SoSeparator` and then to the `SoExaminerViewer`. Set your material to use a *Diffuse Color* red and adapt the size of the sphere to *Radius* 50.
 
-![Example Network](/images/tutorials/image_processing/network_example4b.png "Example Network")
+![Example Network](images/tutorials/image_processing/network_example4b.png "Example Network")
 
 The `SoExaminerViewer` now shows the head and the red sphere inside.
 
-![SoExaminerViewer](/images/tutorials/image_processing/SoExaminerViewer_sphere.png "SoExaminerViewer")
+![SoExaminerViewer](images/tutorials/image_processing/SoExaminerViewer_sphere.png "SoExaminerViewer")
 
 ### Set Location of your Sphere
 In order to define the best possible location of the sphere, we additionally add a `SoTranslation` module and connect it to the `SoSeparator` between the material and the sphere. Define a translation of x=0, y=20 and z=80.
 
-![Example Network](/images/tutorials/image_processing/network_example4c.png "Example Network")
+![Example Network](images/tutorials/image_processing/network_example4c.png "Example Network")
 
 ### Subtract the Sphere from the Head
 We now want to subtract the sphere from the head to get a hole. Add another `SoWEMRenderer`, a `WEMLevelSetBoolean`, and a `SoWEMConvertInventor` to the network and connect them to a `SoSwitch` as seen below. The `SoSwitch` also needs to be connected to the `SoWEMRenderer` of the head. Set your `WEMLevelSetBoolean` to use the *Mode* **Difference**.
 
-![Example Network](/images/tutorials/image_processing/network_example4d.png "Example Network")
+![Example Network](images/tutorials/image_processing/network_example4d.png "Example Network")
 
 What happens in your network now?
 
@@ -57,7 +57,7 @@ What happens in your network now?
 4) Both `SoWEMRenderer` (the head on the left side and the subtraction on the right side) are inputs for a `SoSwitch`.
 5) The `SoSwitch` toggles through its inputs and you can show the original WEM of the head or the subtraction.
 
-{{< imagegallery 2 "/images/tutorials/image_processing" "SoExaminerViewer_1" "SoExaminerViewer_2" >}}
+{{< imagegallery 2 "images/tutorials/image_processing" "SoExaminerViewer_1" "SoExaminerViewer_2" >}}
 
 You can now toggle the hole to be shown or not, depending on your setting for the `SoSwitch`.
 
@@ -65,4 +65,4 @@ You can now toggle the hole to be shown or not, depending on your setting for th
 * The module `WEMLevelSetBoolean` allows to subtract or add three-dimensional WEM objects.
 * The `SoSwitch` can toggle multiple Open Inventor scenes as input.
 
-{{< networkfile "/examples/image_processing/example4/Subtract3DObjects.mlab" >}}
+{{< networkfile "examples/image_processing/example4/Subtract3DObjects.mlab" >}}

@@ -17,7 +17,7 @@ menu:
 ## Summary
 This chapter will summarize all previous chapters and you will develop a whole application in MeVisLab. The complete workflow from developing a prototype to delivering your final application to your customer is explained step-by-step.
 
-![Prototype to Product](/images/tutorials/summary/Prototyping.png "Prototype to Product")
+![Prototype to Product](images/tutorials/summary/Prototyping.png "Prototype to Product")
 
 {{<alert class="warning" caption="Licensing">}}
 Some of the features described here will require a separate license. Building an installable executable requires the **MeVisLab ApplicationBuilder** license. It extends the **MeVisLab SDK** so that you can generate an installer of your developed macro module.
@@ -45,12 +45,12 @@ In the first step, you are developing an application based on the following requ
   * **Requirement 9.3**: All
 
 ### Step 2: Create Your Macro Module
-Your network will be encapsulated in a macro module for later application development. For details about macro modules, see [Example 2.2: Global macro modules](/tutorials/basicmechanisms/macromodules/globalmacromodules/).
+Your network will be encapsulated in a macro module for later application development. For details about macro modules, see [Example 2.2: Global macro modules](tutorials/basicmechanisms/macromodules/globalmacromodules/).
 
 ### Step 3: Develop a User Interface and Add Python Scripting {#UIDesign}
 Develop the UI and Python Scripts based on your requirements from Step 1. The resulting UI will look like below mockup:
 
-![User Interface Design](/images/tutorials/summary/UIMockUp.png "User Interface Design")
+![User Interface Design](images/tutorials/summary/UIMockUp.png "User Interface Design")
 
 ## Review
 ### Step 4: Write Automated Tests for Your Macro Module

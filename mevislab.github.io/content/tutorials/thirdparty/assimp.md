@@ -18,7 +18,7 @@ menu:
 
 This chapter provides some examples of how 3D formats can be imported into MeVisLab. In general, you always need a `SoSceneLoader` module. The `SoSceneLoader` allows to load meshes as Open Inventor points/lines/triangles/faces using the Open Asset Import Library.
 
-![SoSceneLoader](/images/tutorials/thirdparty/SoSceneLoader.png "SoSceneLoader")
+![SoSceneLoader](images/tutorials/thirdparty/SoSceneLoader.png "SoSceneLoader")
 
 You can also use the `SoSceneWriter` module to export your 3D scenes from MeVisLab in a number of output formats.
 

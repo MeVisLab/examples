@@ -24,10 +24,10 @@ As MeVisLab supports the integration of Python scripts, e.g., for test automatio
 
 In the following tutorial pages on Matplotlib, you will be shown how to create a module in MeVisLab that helps you plot greyscale distributions of single slices or defined sequences of slices of a DICOM image and layer the grayscale distributions of two chosen slices for comparison.
 
-+ The module that is adapted during the tutorials is set up in the [Example 1: Module Setup](/tutorials/thirdparty/matplotlib/modulesetup) tutorial.
-+ The panel and two dimensional plotting functionality is added in [Example 2: 2D Plotting](/tutorials/thirdparty/matplotlib/2dplotting).
-+ In [Example 3: Slice Comparison](/tutorials/thirdparty/matplotlib/slicecomparison), the comparison between two chosen slices is enabled by overlaying their grayscale distributions. 
-+ [Example 4: 3D Plotting](/tutorials/thirdparty/matplotlib/3dplotting) adds an additional three-dimensional plotting functionality to the panel.
++ The module that is adapted during the tutorials is set up in the [Example 1: Module Setup](tutorials/thirdparty/matplotlib/modulesetup) tutorial.
++ The panel and two dimensional plotting functionality is added in [Example 2: 2D Plotting](tutorials/thirdparty/matplotlib/2dplotting).
++ In [Example 3: Slice Comparison](tutorials/thirdparty/matplotlib/slicecomparison), the comparison between two chosen slices is enabled by overlaying their grayscale distributions. 
++ [Example 4: 3D Plotting](tutorials/thirdparty/matplotlib/3dplotting) adds an additional three-dimensional plotting functionality to the panel.
 
 {{<alert class="check" caption="Check">}}
 Notice that for the Matplotlib tutorials, the previous tutorial always works as a foundation for the following one.

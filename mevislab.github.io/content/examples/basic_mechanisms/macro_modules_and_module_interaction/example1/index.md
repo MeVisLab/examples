@@ -16,7 +16,7 @@ In this example we update the *.script* file of the `Filter` module to display t
 Changes applied to fields in the macro module's panel are applied to their internal network as well.
 {{</alert>}}
 
-![Screenshot](/examples/basic_mechanisms/macro_modules_and_module_interaction/example1/image.png)
+![Screenshot](examples/basic_mechanisms/macro_modules_and_module_interaction/example1/image.png)
 
 # Download
-You can download the example network [here](/examples/basic_mechanisms/macro_modules_and_module_interaction/example1/FilterExample.zip)
+You can download the example network [here](examples/basic_mechanisms/macro_modules_and_module_interaction/example1/FilterExample.zip)

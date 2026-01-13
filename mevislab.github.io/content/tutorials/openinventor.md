@@ -31,13 +31,13 @@ Inventor scenes are organized in structures called scene graphs. A scene graph i
 
 {{<alert class="info" caption="Execution order in Open Inventor scenes">}}
 The model below depicts the order in which the modules are executed. The red arrow indicates the traversal order: from top to bottom and from left to right. The modules are numbered accordingly, from 1 to 8. Knowing about the traversal order can be crucial to achieve a certain ouput.
-![Traversing in Open Inventor](/images/tutorials/openinventor/OI1_13.png "Traversing through a network of Open Inventor modules")
+![Traversing in Open Inventor](images/tutorials/openinventor/OI1_13.png "Traversing through a network of Open Inventor modules")
 {{</alert>}}
 
 ## SoGroup and SoSeparator
 The `SoGroup` and `SoSeparator` modules can be used as containers for child nodes. They both allow multiple inputs and combine the results in one single output as seen above. Nevertheless, there is a big difference in handling the traversal state of the scene graph.
 
-![SoGroup vs. SoSeparator](/images/tutorials/openinventor/SoGroup_SoSeparator.png "SoGroup vs. SoSeparator")
+![SoGroup vs. SoSeparator](images/tutorials/openinventor/SoGroup_SoSeparator.png "SoGroup vs. SoSeparator")
 
 In the network above, we render four `SoCone` objects. The left side uses the `SoSeparator` modules, the right side uses the `SoGroup` ones. There is a `SoMaterial` module defining one of the left cone objects to be yellow. As you can see, the `SoMaterial` module is only applied to that cone, the other left cone remains in its default gray color, because the `SoSeparator` module isolates the separator's children from the rest of the scene graph.
 

@@ -31,18 +31,18 @@ Installing additional Python packages into MeVisLab by using the `PythonPip` mod
 #### The PythonPip module
 Add a `PythonPip` module to your workspace. 
 
-![PythonPip module](/images/tutorials/thirdparty/pytorch_example1_1.png "PythonPip module")
+![PythonPip module](images/tutorials/thirdparty/pytorch_example1_1.png "PythonPip module")
 
 Double-click {{< mousebutton "left" >}} the module and inspect the panel.
 
-![PythonPip panel](/images/tutorials/thirdparty/pytorch_example1_2.png "PythonPip panel")
+![PythonPip panel](images/tutorials/thirdparty/pytorch_example1_2.png "PythonPip panel")
 
-The panel shows all currently installed Python packages including their version and the MeVisLab package they are saved in. You can see a warning that the target package is set to read-only in case you are selecting a MeVisLab package. Changing to one of your user packages (see [Example 2.1: Package creation](/tutorials/basicmechanisms/macromodules/package/) for details) makes the warning disappear.
+The panel shows all currently installed Python packages including their version and the MeVisLab package they are saved in. You can see a warning that the target package is set to read-only in case you are selecting a MeVisLab package. Changing to one of your user packages (see [Example 2.1: Package creation](tutorials/basicmechanisms/macromodules/package/) for details) makes the warning disappear.
 
-![Select user package](/images/tutorials/thirdparty/pytorch_example1_3.png "Select user package")
+![Select user package](images/tutorials/thirdparty/pytorch_example1_3.png "Select user package")
 
 {{<alert class="info" caption="Additional information">}}
-Additional Information on the `PythonPip` module can be found in [Example 4: Install additional Python packages via PythonPip module](/tutorials/basicmechanisms/macromodules/pythonpip "PythonPip module").
+Additional Information on the `PythonPip` module can be found in [Example 4: Install additional Python packages via PythonPip module](tutorials/basicmechanisms/macromodules/pythonpip "PythonPip module").
 {{</alert>}}
 
 #### Install torch and torchvision
@@ -66,15 +66,15 @@ If you are behind a proxy server, you may have to set the **HTTP_PROXY** and **H
 Alternatively you can also add a parameter to *pip install* command: *--proxy https://proxy:port*
 {{</alert>}}
 
-![Install torch and torchvision](/images/tutorials/thirdparty/pytorch_example1_4.png "Install torch and torchvision")
+![Install torch and torchvision](images/tutorials/thirdparty/pytorch_example1_4.png "Install torch and torchvision")
 
 After clicking *Install*, the pip console output opens and you can follow the process of the installation.
 
-![Python pip output](/images/tutorials/thirdparty/pytorch_example1_5.png "Python pip output")
+![Python pip output](images/tutorials/thirdparty/pytorch_example1_5.png "Python pip output")
 
 After the installation was finished with exit code 0, you should see the new packages in the `PythonPip` module.
 
-![PyTorch installed](/images/tutorials/thirdparty/pytorch_example1_6.png "PyTorch installed")
+![PyTorch installed](images/tutorials/thirdparty/pytorch_example1_6.png "PyTorch installed")
 
 ## Summary
 * *PyTorch* can be installed using the `PythonPip` module.

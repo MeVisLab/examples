@@ -23,10 +23,10 @@ In this chapter you will learn how to create global macro modules. There are man
 
 ## Steps to Do
 ### Transform a Local Macro Module into a Global Macro Module
-To transform our local macro module `Filter` from [Chapter I](/tutorials/basicmechanisms#TutorialMacroModules) into a global macro module,
+To transform our local macro module `Filter` from [Chapter I](tutorials/basicmechanisms#TutorialMacroModules) into a global macro module,
 right-click {{< mousebutton "right" >}} the macro module to open the context menu and select {{< menuitem "Extras" "Convert To Global Module..." >}}
 
-![Convert local macro to global macro](/images/tutorials/basicmechanics/GUI_03.png "Convert local macro to global macro")
+![Convert local macro to global macro](images/tutorials/basicmechanics/GUI_03.png "Convert local macro to global macro")
 
 ### Define Module Properties
 
@@ -53,7 +53,7 @@ If you are working with MeVisLab versions before 5.0, make sure to chose *Direct
 Also keep in mind that Python files are only created automatically if selected in the Project Wizard. Converting a local macro to a global macro does NOT create a Python file automatically.
 {{</alert>}}
 
-![Create global macro module](/images/tutorials/basicmechanics/GUI_04.png "Create global macro module")
+![Create global macro module](images/tutorials/basicmechanics/GUI_04.png "Create global macro module")
 
 ### Use the Project Wizard to Create Global Macro Modules
 Instead of converting a local macro module into a global macro module, you can also use the *Project Wizard* to create new macro modules. Open the Project Wizard via {{< menuitem "File" "Run Project Wizard ..." >}}. Then, select {{< menuitem "Modules (Scripting)" "Macro module" >}} and *Run Wizard*.
@@ -81,7 +81,7 @@ Make sure to chose *Directory Structure* as *self-contained*. This ensures that 
  
  Press *Next >* to edit further properties. You have the opportunity to directly define the internal network of the macro module, for example, by copying an existing network. In this case, we could copy the network of the local macro module `Filter` we already created. In addition, you have the opportunity to directly create a Python file. Python scripting can be used for the implementation of module interactions and other module functionalities. More information about Python scripting can be found [here](./tutorials/basicmechanisms/macromodules/pythonscripting).
 
-{{< imagegallery 2 "/images" "ProjectWizard1" "ProjectWizard2" >}}
+{{< imagegallery 2 "images" "ProjectWizard1" "ProjectWizard2" >}}
 
 ## Structure of Global Macro Modules
 After creating your global macro module, you can find the created project *MyProject* in your package. This project contains your macro module `Filter`. For the macro module exist three files:
@@ -93,19 +93,19 @@ In addition, two folders may be created:
 * *mhelp*: contains the help files of all modules of this project
 * *network*: contains the example networks of all modules of this project
 
-![Structure of global macro modules](/images/tutorials/basicmechanics/GUI_04_2.png "Structure of global macro modules")
+![Structure of global macro modules](images/tutorials/basicmechanics/GUI_04_2.png "Structure of global macro modules")
 
 ## How to Find Global Macro Modules
 All available modules are categorized and can be found via {{< menuitem "Modules" >}} in
 the respective genre. After creating a global
 macro, the new module can be found via {{< menuitem "Modules" "Filters" >}}. In addition, you can now find your macro module via module search.
 
-![Find module in menu](/images/tutorials/basicmechanics/GUI_05.png "Find module in menu")
+![Find module in menu](images/tutorials/basicmechanics/GUI_05.png "Find module in menu")
 
 
 {{<alert class="info" caption="Hint">}}
 If you do not find your new global macro module, try to reload the module database.
-![Reload module database](/images/tutorials/basicmechanics/GUI_05_2.png "Reload module database")
+![Reload module database](images/tutorials/basicmechanics/GUI_05_2.png "Reload module database")
 {{</alert>}}
 
 ## Summary

@@ -24,31 +24,31 @@ To explain WEMs in MeVisLab, we will build a network that shows the structure an
 ### Initialize a WEM
 Add the module `WEMInitialize` to your workspace, open its panel, and select a *Cube*. In general, a WEM is made up of surfaces. Here all surfaces are squares. In MeVisLab it is common to build WEMs out of triangles.
 
-![WEM initializing](/images/tutorials/dataobjects/surfaces/WEM_01_1.png "WEM initializing")
+![WEM initializing](images/tutorials/dataobjects/surfaces/WEM_01_1.png "WEM initializing")
 
 ### Rendering of WEMs
 
 For rendering WEMs, you can use the module `SoWEMRenderer` in combination with the viewer `SoExaminerViewer`. Add both modules to your network and connect them as shown. A background is always a nice feature to have.
-![WEM rendering](/images/tutorials/dataobjects/surfaces/WEM_01_2.png "WEM rendering")
+![WEM rendering](images/tutorials/dataobjects/surfaces/WEM_01_2.png "WEM rendering")
 
 ### Geometry of WEMs
 The geometry of WEMs is given by different structures. Using specialized WEM renderer modules, all structures can be visualized.
 
 #### Edges
 Add and connect the module `SoWEMRendererEdges` to your workspace to enable the rendering of WEM Edges. Here, we manipulated the line thickness to make the lines of the edges thicker. 
-![WEM Edges](/images/tutorials/dataobjects/surfaces/WEM_01_3.png "WEM Edges")
+![WEM Edges](images/tutorials/dataobjects/surfaces/WEM_01_3.png "WEM Edges")
 
 #### Nodes
 Nodes mark the corner points of each surface. Therefore, nodes define the geometric properties of every WEM. To visualize the nodes, add and connect the module `SoWEMRendererNodes` as shown. By default, the nodes are visualized with an offset to the position they are located in. We reduced the offset to be zero, increased the point size, and changed the color. 
-![WEM Nodes](/images/tutorials/dataobjects/surfaces/WEM_01_4.png "WEM Nodes")
+![WEM Nodes](images/tutorials/dataobjects/surfaces/WEM_01_4.png "WEM Nodes")
 
 #### Faces
 Between the nodes and alongside the edges, surfaces are created. The rendering of these surfaces can be enabled and disabled using the panel of `SoWEMRenderer`.
-![WEM Faces](/images/tutorials/dataobjects/surfaces/WEM_01_5.png "WEM Faces")
+![WEM Faces](images/tutorials/dataobjects/surfaces/WEM_01_5.png "WEM Faces")
 
 #### Normals
 Normals display the orthogonal vector either to the faces (Face Normals) or to the nodes (Nodes Normals). With the help of the module `SoWEMRendererNormals`, these structures can be visualized.  
-![WEM normal editor](/images/tutorials/dataobjects/surfaces/WEM_01_6.png "WEM normal editor")
+![WEM normal editor](images/tutorials/dataobjects/surfaces/WEM_01_6.png "WEM normal editor")
 {{< imagegallery 2 "images/tutorials/dataobjects/surfaces/" "WEMNodeNormals" "WEMFaceNormals">}}
 
 ### WEMs in MeVisLab {#WEMsInMevislab}

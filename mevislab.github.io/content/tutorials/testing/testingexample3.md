@@ -23,16 +23,16 @@ In this example, you are writing an iterative test. Iterative test functions run
 ### Creating the network to be used for testing
 Add a `LocalImage` and a `DicomTagViewer` module to your workspace and connect them.
 
-![Example Network](/images/tutorials/testing/network_test3.png "Example Network")
+![Example Network](images/tutorials/testing/network_test3.png "Example Network")
 
 ### Test case creation
 Open the panel of the `DicomTagViewer` and set *Tag Name* to *WindowCenter*. The value of the DICOM tag from the current input image is automatically set as value.
 
 Save the network.
 
-Start MeVisLab TestCaseManager and create a new test case called *IterativeTestCase* as seen in [Example 1: Writing a simple testcase in MeVisLab](/tutorials/testing/testingexample1).
+Start MeVisLab TestCaseManager and create a new test case called *IterativeTestCase* as seen in [Example 1: Writing a simple testcase in MeVisLab](tutorials/testing/testingexample1).
 
-![DicomTagViewer](/images/tutorials/testing/DicomTagViewer.png "DicomTagViewer")
+![DicomTagViewer](images/tutorials/testing/DicomTagViewer.png "DicomTagViewer")
 
 ### Defining the test data
 In TestCaseManager open the test case Python file via *Edit File*.
@@ -77,7 +77,7 @@ def testPatient(path, windowCenter):
 {{</highlight>}}
 
 1. Initially, the path and filename for the module `LocalImage` are set. The data is loaded automatically, because the module has the *AutoLoad* flag enabled by default.
-![LocalImage](/images/tutorials/testing/LocalImage.png "LocalImage")
+![LocalImage](images/tutorials/testing/LocalImage.png "LocalImage")
 2. Then, the DICOM tree of the loaded file is used to get the *WindowCenter* value (*importValue*).
 3. The previously defined value of the `DicomTagViewer` is set as *dicomValue*.
 4. The final test functions *ASSERT_EQ* evaluate if the given values are equal.
@@ -89,7 +89,7 @@ You can use many other *ASSERT** possibilities, just try using the MATE auto com
 ### Run your iterative test
 Open MeVisLab TestCase Manager and select your package and test case. You will see 2 test functions on the right side.
 
-![Iterative Test](/images/tutorials/testing/TestCaseManager_TestWindowCenter.png "Iterative Test")
+![Iterative Test](images/tutorials/testing/TestCaseManager_TestWindowCenter.png "Iterative Test")
 
 The identifiers of your test functions are shown as defined in the list (*ProbandT1/2*). The *TestWindowCenter* now runs for each entry in the list and calls the function *testPatient* for each entry using the given values.
 
@@ -108,7 +108,7 @@ def testPatient(path, windowCenter):
 
 Your ReportViewer now shows a screenshot of the image in the `View2D`.
 
-![Screenshot in ReportViewer](/images/tutorials/testing/Screenshot.png "Screenshot in ReportViewer")
+![Screenshot in ReportViewer](images/tutorials/testing/Screenshot.png "Screenshot in ReportViewer")
 
 ## Summary
 * Iterative tests allow you to run the same test function on multiple input entries.

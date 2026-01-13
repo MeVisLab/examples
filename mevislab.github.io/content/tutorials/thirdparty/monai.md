@@ -21,5 +21,5 @@ Created by [NVIDIA](https://docs.nvidia.com/monai/index.html "NVIDIA") and the L
 MONAI includes ready-to-use deep learning models (such as UNet and SegResNet) and utilities for segmentation, classification, and image registration. It supports distributed GPU training and ensures reproducible research workflows.
 
 ## Available Tutorials
-* [Example 1: Install MONAI using PythonPip module](/tutorials/thirdparty/monai/monaiexample1/)
-* [Example 2: Applying a spleen segmentation model from MONAI in MeVisLab](/tutorials/thirdparty/monai/monaiexample2/)
+* [Example 1: Install MONAI using PythonPip module](tutorials/thirdparty/monai/monaiexample1/)
+* [Example 2: Applying a spleen segmentation model from MONAI in MeVisLab](tutorials/thirdparty/monai/monaiexample2/)
