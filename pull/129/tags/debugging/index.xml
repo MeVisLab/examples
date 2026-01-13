@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Debugging on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/129/tags/debugging/</link><description>Recent content in Debugging on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 09 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/129/tags/debugging/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 5: Debugging Python in MATE</title><link>https://mevislab.github.io/examples/pull/129/tutorials/basicmechanisms/macromodules/pythondebugger/</link><pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/129/tutorials/basicmechanisms/macromodules/pythondebugger/</guid><description>&lt;h1 id="example-5-debugging-python-files-in-mate"&gt;Example 5: Debugging Python Files in MATE&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=ccLDQUrlzjU" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/ccLDQUrlzjU/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=ccLDQUrlzjU" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;MeVisLab provides the powerful integrated text editor MATE. By default, MATE is used to create/edit files like Python scripts. In this tutorial, we want to show you how to debug Python scripts in MeVisLab.&lt;/p&gt;
+&lt;h2 id="prepare-your-network"&gt;Prepare Your Network&lt;/h2&gt;
+&lt;p&gt;We are using a very simple network of pre-defined modules, but you can also debug your self-written Python scripts. Add a &lt;code&gt;LocalImage&lt;/code&gt; module to your workspace and connect it to a &lt;code&gt;DicomTagBrowser&lt;/code&gt; module. The &lt;code&gt;DicomTagBrowser&lt;/code&gt; module shows a table containing the DICOM tags of your currently opened file.&lt;/p&gt;</description></item><item><title>Chapter VI: Testing</title><link>https://mevislab.github.io/examples/pull/129/tutorials/testing/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/129/tutorials/testing/</guid><description>&lt;h1 id="TutorialChapter6"&gt;MeVisLab Tutorial Chapter VI&lt;/h1&gt;
+&lt;h2 id="TutorialTesting"&gt;Testing, Profiling, and Debugging in MeVisLab&lt;/h2&gt;
+&lt;p&gt;The MeVisLab Integrated Development Environment (IDE) provides tools to write automated tests in Python, to profile your network performance, and to debug your Python code.
+All of these funtionalities will be addressed in this chapter.&lt;/p&gt;
+&lt;h3 id="testing"&gt;Testing&lt;/h3&gt;
+&lt;p&gt;The MeVisLab TestCenter is the starting point of your tests. Select &lt;i&gt;[
+ 
+ File
+ &amp;rarr; 
+ Run TestCaseManager
+]&lt;/i&gt; to open the user interface of the TestCaseManager.&lt;/p&gt;</description></item></channel></rss>
