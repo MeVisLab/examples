@@ -33,7 +33,7 @@
 &lt;p&gt;World coordinate systems in MeVisLab are always &lt;a href="https://en.wikipedia.org/wiki/Right-hand_rule" target="_blank" rel="noopener"&gt;right handed&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;The blue rectangle shows the same region in the three coordinate systems.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/basicmechanics/GSExampleImageProcessing10b.png" title="Coordinate Systems in MeVisLab"&gt;&lt;img id="Coordinate Systems in MeVisLab" class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/basicmechanics/GSExampleImageProcessing10b.png" alt="Coordinate Systems in MeVisLab" title="Coordinate Systems in MeVisLab" /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/basicmechanics/GSExampleImageProcessing10b.png" title="Coordinate Systems in MeVisLab"&gt;&lt;img id="Coordinate Systems in MeVisLab" class="img-fluid rounded" src="images/tutorials/basicmechanics/GSExampleImageProcessing10b.png" alt="Coordinate Systems in MeVisLab" title="Coordinate Systems in MeVisLab" /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;Coordinate Systems in MeVisLab&lt;/figcaption&gt;
 &lt;/p&gt;
 &lt;/p&gt;
@@ -55,7 +55,7 @@ World coordinates also refer to the patient axes. They are:&lt;/p&gt;
 &lt;li&gt;Not standardized regarding their origin&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/visualization/V2_00.png" title="World Coordinates in Context of the Human Body"&gt;&lt;img id="World Coordinates in Context of the Human Body" class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/visualization/V2_00.png" alt="World Coordinates in Context of the Human Body" title="World Coordinates in Context of the Human Body" /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/visualization/V2_00.png" title="World Coordinates in Context of the Human Body"&gt;&lt;img id="World Coordinates in Context of the Human Body" class="img-fluid rounded" src="images/tutorials/visualization/V2_00.png" alt="World Coordinates in Context of the Human Body" title="World Coordinates in Context of the Human Body" /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;World Coordinates in Context of the Human Body&lt;/figcaption&gt;
 &lt;/p&gt;</description></item><item><title>Example 6: DICOM RT Visualization in MeVisLab – RTSTRUCT and RTDOSE Workflow</title><link>https://mevislab.github.io/examples/tutorials/image_processing/image_processing6/</link><pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/image_processing/image_processing6/</guid><description>&lt;h1 id="example-6-dicom-rt-visualization-in-mevislab--rtstruct-and-rtdose-workflow"&gt;Example 6: DICOM RT Visualization in MeVisLab – RTSTRUCT and RTDOSE Workflow&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;

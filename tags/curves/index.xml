@@ -2,14 +2,14 @@
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Curves can be used in MeVisLab to print the results of a function as two-dimensional mathematical curves into a diagram.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/dataobjects/curves/Curves.png" title="Curves in MeVisLab"&gt;&lt;img id="Curves in MeVisLab" class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/dataobjects/curves/Curves.png" alt="Curves in MeVisLab" title="Curves in MeVisLab" /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/dataobjects/curves/Curves.png" title="Curves in MeVisLab"&gt;&lt;img id="Curves in MeVisLab" class="img-fluid rounded" src="images/tutorials/dataobjects/curves/Curves.png" alt="Curves in MeVisLab" title="Curves in MeVisLab" /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;Curves in MeVisLab&lt;/figcaption&gt;
 &lt;/p&gt;
 &lt;/p&gt;
 &lt;p&gt;In the given example, only modules available in commercial &lt;strong&gt;MeVisLab Professional SDK&lt;/strong&gt; have been used. The non-commercial &lt;strong&gt;MeVisLab Standard SDK&lt;/strong&gt; provides more modules for curves.&lt;/p&gt;</description></item><item><title>Example 1: Drawing curves</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/curves/curvesexample1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/curves/curvesexample1/</guid><description>&lt;h1 id="example-1-drawing-curves"&gt;Example 1: Drawing Curves&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=sj6muyInkRc" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/sj6muyInkRc/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=sj6muyInkRc" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=sj6muyInkRc" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/sj6muyInkRc/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=sj6muyInkRc" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;

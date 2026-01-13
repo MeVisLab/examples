@@ -31,23 +31,23 @@
 Connect the output of &lt;code&gt;LocalImage&lt;/code&gt; to the input of &lt;code&gt;SubImage&lt;/code&gt; and the output of &lt;code&gt;SubImage&lt;/code&gt; with the input of &lt;code&gt;Histogram&lt;/code&gt;.
 If you feel like using a shortcut, you can also download the base network below and open it in your MeVisLab.&lt;/p&gt;</description></item><item><title>Example 2: 2D Plotting</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/2dplotting/</link><pubDate>Tue, 30 May 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/2dplotting/</guid><description>&lt;h1 id="example-2-2d-plotting"&gt;Example 2: 2D Plotting&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this tutorial, we will equip the macro module we created in the &lt;a href="https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/modulesetup"&gt;previous tutorial&lt;/a&gt; with a responsive and interactable panel to plot grayscale distributions of single slices as well as defined sequences of slices in 2D.&lt;/p&gt;
+&lt;p&gt;In this tutorial, we will equip the macro module we created in the &lt;a href="tutorials/thirdparty/matplotlib/modulesetup"&gt;previous tutorial&lt;/a&gt; with a responsive and interactable panel to plot grayscale distributions of single slices as well as defined sequences of slices in 2D.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
 &lt;p&gt;Open the module definition folder of your macro module and the related .script file in MATE. Then activate the Preview as shown below:&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/thirdparty/Matplotlib7.png" title=""&gt;&lt;img id="" class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/thirdparty/Matplotlib7.png" alt="MATE Preview" /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/Matplotlib7.png" title=""&gt;&lt;img id="" class="img-fluid rounded" src="images/tutorials/thirdparty/Matplotlib7.png" alt="MATE Preview" /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;&lt;/figcaption&gt;
 &lt;/p&gt;</description></item><item><title>Example 3: Slice Comparison</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/slicecomparison/</link><pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/slicecomparison/</guid><description>&lt;h1 id="example-3-slice-comparison"&gt;Example 3: Slice Comparison&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;We will adapt the previously created macro module to be able to overlay two defined slices to compare their grayscale distributions.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The module we are adapting has been set up in the &lt;a href="https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/modulesetup"&gt;Example 1: Module Setup&lt;/a&gt; tutorial.&lt;/li&gt;
+&lt;li&gt;The module we are adapting has been set up in the &lt;a href="tutorials/thirdparty/matplotlib/modulesetup"&gt;Example 1: Module Setup&lt;/a&gt; tutorial.&lt;/li&gt;
 &lt;li&gt;The panel and two-dimensional plotting functionality has been added in [Example 2: 2D Plotting]
-(/tutorials/thirdparty/matplotlib/2dplotting).&lt;/li&gt;
+(tutorials/thirdparty/matplotlib/2dplotting).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
 &lt;p&gt;At first, we will extend the panel: Open your &lt;code&gt;BaseNetwork&lt;/code&gt; macro module within an empty MeVisLab workspace and select the .script file from its related files.&lt;/p&gt;</description></item><item><title>Example 4: 3D Plotting</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/3dplotting/</link><pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/3dplotting/</guid><description>&lt;h1 id="example-4-3d-plotting"&gt;Example 4: 3D Plotting&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this tutorial, we will equip the macro module we created in the &lt;a href="https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/modulesetup"&gt;Example 1: Module Setup&lt;/a&gt; and later on adapted by enabling it to plot grayscale distributions of single slices and sequences in 2D in &lt;a href="https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/2dplotting"&gt;Example 2: 2D Plotting&lt;/a&gt; with a three-dimensional plotting functionality.&lt;/p&gt;
+&lt;p&gt;In this tutorial, we will equip the macro module we created in the &lt;a href="tutorials/thirdparty/matplotlib/modulesetup"&gt;Example 1: Module Setup&lt;/a&gt; and later on adapted by enabling it to plot grayscale distributions of single slices and sequences in 2D in &lt;a href="tutorials/thirdparty/matplotlib/2dplotting"&gt;Example 2: 2D Plotting&lt;/a&gt; with a three-dimensional plotting functionality.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
 &lt;p&gt;The fields and commands needed have already been prepared in the second tutorial. We will just have to modify our .py file a little to make them usable. Integrate the following code into your .py file and import numpy.&lt;/p&gt;</description></item></channel></rss>

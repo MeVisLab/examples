@@ -4,7 +4,7 @@
 &lt;p&gt;In fact, nearly everything in MeVisLab can be done via Python scripting: You can add modules to your network, or remove modules, you can dynamically establish and remove connections and so on. But, much more important: You can access module inputs and outputs, as well as module fields to process their parameters and data. You can equip user interfaces and panel with custom functionalities. Python can be used to implement module interactions. When you open a panel or you press a button in a panel, the executed actions are implemented via Python scripting.&lt;/p&gt;</description></item><item><title>Example 2.5.1: The module RunPythonScript</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/scriptingexample1/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/scriptingexample1/</guid><description>&lt;h1 id="example-251-the-module-runpythonscript"&gt;Example 2.5.1: The Module RunPythonScript&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=O5Get1PMOq8" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/O5Get1PMOq8/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=O5Get1PMOq8" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=O5Get1PMOq8" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/O5Get1PMOq8/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=O5Get1PMOq8" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -14,7 +14,7 @@
 &lt;p&gt;In this example, we like to dynamically change the color of a cube in an Open Inventor scene. For that, add and connect the following modules as shown.&lt;/p&gt;</description></item><item><title>Example 2.5.2: Module interactions via Python scripting</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/scriptingexample2/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/scriptingexample2/</guid><description>&lt;h1 id="example-252-module-interactions-via-python-scripting"&gt;Example 2.5.2: Module Interactions Via Python Scripting&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=hGq6vA7Ll9Q" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/hGq6vA7Ll9Q/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=hGq6vA7Ll9Q" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=hGq6vA7Ll9Q" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/hGq6vA7Ll9Q/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=hGq6vA7Ll9Q" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -40,7 +40,7 @@ Project Wizard, which you find under &lt;i&gt;[
 &lt;p&gt;The &lt;code&gt;PythonPip&lt;/code&gt; module allows to work with the Python package manager pip. It can be used to install Python packages into the site-packages of the MeVisLab Python installation.&lt;/p&gt;</description></item><item><title>Example 5: Debugging Python in MATE</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/pythondebugger/</link><pubDate>Thu, 09 Jan 2025 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/pythondebugger/</guid><description>&lt;h1 id="example-5-debugging-python-files-in-mate"&gt;Example 5: Debugging Python Files in MATE&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=ccLDQUrlzjU" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/ccLDQUrlzjU/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=ccLDQUrlzjU" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=ccLDQUrlzjU" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/ccLDQUrlzjU/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=ccLDQUrlzjU" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -59,7 +59,7 @@ All of these funtionalities will be addressed in this chapter.&lt;/p&gt;
 ]&lt;/i&gt; to open the user interface of the TestCaseManager.&lt;/p&gt;</description></item><item><title>Example 1: Writing a simple test case in MeVisLab</title><link>https://mevislab.github.io/examples/tutorials/testing/testingexample1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/testing/testingexample1/</guid><description>&lt;h1 id="example-1-writing-a-simple-test-case-in-mevislab"&gt;Example 1: Writing a simple test case in MeVisLab&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=DqpVaKai_00" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/DqpVaKai_00/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=DqpVaKai_00" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=DqpVaKai_00" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/DqpVaKai_00/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=DqpVaKai_00" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -69,28 +69,28 @@ All of these funtionalities will be addressed in this chapter.&lt;/p&gt;
 &lt;p&gt;Add the following modules to your workspace and connect them as seen below:&lt;/p&gt;</description></item><item><title>Example 3: Iterative tests in MeVisLab with Screenshots</title><link>https://mevislab.github.io/examples/tutorials/testing/testingexample3/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/testing/testingexample3/</guid><description>&lt;h1 id="example-3-iterative-tests-in-mevislab"&gt;Example 3: Iterative tests in MeVisLab&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=1JidUyfz0xU" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/1JidUyfz0xU/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=1JidUyfz0xU" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=1JidUyfz0xU" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/1JidUyfz0xU/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=1JidUyfz0xU" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this example, you are writing an iterative test. Iterative test functions run a function for every specified input. They return a tuple consisting of the function object called and the inputs iterated over. The iterative test functions are useful if the same function should be applied to different input data. These could be input values, names of input images, etc.&lt;/p&gt;</description></item><item><title>Step 3: Prototyping - User Interface and Python scripting</title><link>https://mevislab.github.io/examples/tutorials/summary/summary3/</link><pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/summary/summary3/</guid><description>&lt;h1 id="step-3-prototyping---user-interface-and-python-scripting"&gt;Step 3: Prototyping - User Interface and Python scripting&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=dOyncLUpclU" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/dOyncLUpclU/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=dOyncLUpclU" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=dOyncLUpclU" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/dOyncLUpclU/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=dOyncLUpclU" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this step, we will develop a user interface and add Python scripting to the macro module you created in &lt;a href="https://mevislab.github.io/examples/tutorials/summary/summary2"&gt;Step 2&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this step, we will develop a user interface and add Python scripting to the macro module you created in &lt;a href="tutorials/summary/summary2"&gt;Step 2&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
 &lt;h3 id="develop-the-user-interface"&gt;Develop the User Interface&lt;/h3&gt;
-&lt;p&gt;A mockup of the user interface you are going to develop is available &lt;a href="https://mevislab.github.io/examples/tutorials/summary#UIDesign"&gt;here&lt;/a&gt;. The interface provides the possibility to load files and shows a 2D and a 3D viewer. In addition to that, some settings and information for our final application are available.&lt;/p&gt;</description></item><item><title>Step 4: Review - Automated Tests</title><link>https://mevislab.github.io/examples/tutorials/summary/summary4/</link><pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/summary/summary4/</guid><description>&lt;h1 id="step-4-review---automated-tests"&gt;Step 4: Review - Automated Tests&lt;/h1&gt;
+&lt;p&gt;A mockup of the user interface you are going to develop is available &lt;a href="tutorials/summary#UIDesign"&gt;here&lt;/a&gt;. The interface provides the possibility to load files and shows a 2D and a 3D viewer. In addition to that, some settings and information for our final application are available.&lt;/p&gt;</description></item><item><title>Step 4: Review - Automated Tests</title><link>https://mevislab.github.io/examples/tutorials/summary/summary4/</link><pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/summary/summary4/</guid><description>&lt;h1 id="step-4-review---automated-tests"&gt;Step 4: Review - Automated Tests&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=_wheDC8TBJQ" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/_wheDC8TBJQ/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=_wheDC8TBJQ" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=_wheDC8TBJQ" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/_wheDC8TBJQ/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=_wheDC8TBJQ" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In the previous chapters you developed a macro module with User Interface and Python scripting. In this step you will see how to implement an automated test to verify and validate the Requirements defined in &lt;a href="https://mevislab.github.io/examples/tutorials/summary"&gt;Overview&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In the previous chapters you developed a macro module with User Interface and Python scripting. In this step you will see how to implement an automated test to verify and validate the Requirements defined in &lt;a href="tutorials/summary"&gt;Overview&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
 &lt;h3 id="create-a-test-network-using-your-macro-module"&gt;Create a test network using your macro module&lt;/h3&gt;
 &lt;p&gt;Create a new and empty network and save it as *.mlab file. Remember the location.&lt;/p&gt;</description></item><item><title>OpenCV</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/opencv/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/opencv/</guid><description>&lt;h1 id="OpenCV"&gt;Open Source Computer Vision Library (OpenCV)&lt;/h1&gt;
@@ -105,7 +105,7 @@ All of these funtionalities will be addressed in this chapter.&lt;/p&gt;
 &lt;h3 id="creating-the-network-to-be-used-for-testing"&gt;Creating the network to be used for testing&lt;/h3&gt;
 &lt;p&gt;Add the modules to your workspace and connect them as seen below.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/thirdparty/network_example1.png" title="Example Network "&gt;&lt;img id="Example Network " class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/thirdparty/network_example1.png" alt="Example Network " title="Example Network " /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/network_example1.png" title="Example Network "&gt;&lt;img id="Example Network " class="img-fluid rounded" src="images/tutorials/thirdparty/network_example1.png" alt="Example Network " title="Example Network " /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;Example Network &lt;/figcaption&gt;
 &lt;/p&gt;
 &lt;/p&gt;
@@ -137,7 +137,7 @@ All of these funtionalities will be addressed in this chapter.&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
 &lt;h3 id="open-example-1"&gt;Open Example 1&lt;/h3&gt;
-&lt;p&gt;Add the macro module developed in &lt;a href="https://mevislab.github.io/examples/tutorials/thirdparty/opencv/thirdpartyexample1"&gt;Example 1&lt;/a&gt; to your workspace.&lt;/p&gt;</description></item><item><title>Example 1: Installing PyTorch using the PythonPip module</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample1/</link><pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample1/</guid><description>&lt;h1 id="example-1-installing-pytorch-using-the-pythonpip-module"&gt;Example 1: Installing PyTorch using the PythonPip module&lt;/h1&gt;
+&lt;p&gt;Add the macro module developed in &lt;a href="tutorials/thirdparty/opencv/thirdpartyexample1"&gt;Example 1&lt;/a&gt; to your workspace.&lt;/p&gt;</description></item><item><title>Example 1: Installing PyTorch using the PythonPip module</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample1/</link><pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample1/</guid><description>&lt;h1 id="example-1-installing-pytorch-using-the-pythonpip-module"&gt;Example 1: Installing PyTorch using the PythonPip module&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;The module &lt;code&gt;PythonPip&lt;/code&gt; allows you to install additional Python packages to be used in MeVisLab.&lt;/p&gt;
 
@@ -169,11 +169,11 @@ All of these funtionalities will be addressed in this chapter.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
 &lt;p&gt;Add a &lt;code&gt;LocalImage&lt;/code&gt; module to your workspace and select the file &lt;em&gt;MRI_Head.dcm&lt;/em&gt;. For PyTorch it is necessary to resample the data to a defined size. Add a &lt;code&gt;Resample3D&lt;/code&gt; module to the &lt;code&gt;LocalImage&lt;/code&gt; and open the panel. Change &lt;em&gt;Keep Constant&lt;/em&gt; to &lt;em&gt;Voxel Size&lt;/em&gt; and define &lt;em&gt;Image Size&lt;/em&gt; as 176, 217, 160.&lt;/p&gt;</description></item><item><title>Example 3: Segment persons in webcam videos</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample3/</link><pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample3/</guid><description>&lt;h1 id="example-3-segment-persons-in-webcam-videos"&gt;Example 3: Segment persons in webcam videos&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This tutorial is based on &lt;a href="https://mevislab.github.io/examples/tutorials/thirdparty/opencv/thirdpartyexample2" title="Example 2: Face Detection with OpenCV"&gt;Example 2: Face Detection with OpenCV&lt;/a&gt;. You can re-use some of the scripts already developed in the other tutorial.&lt;/p&gt;
+&lt;p&gt;This tutorial is based on &lt;a href="tutorials/thirdparty/opencv/thirdpartyexample2" title="Example 2: Face Detection with OpenCV"&gt;Example 2: Face Detection with OpenCV&lt;/a&gt;. You can re-use some of the scripts already developed in the other tutorial.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
 &lt;p&gt;Add the macro module developed in the previous example to your workspace.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/thirdparty/pytorch_example3_1.png" title="WebCamTest module"&gt;&lt;img id="WebCamTest module" class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/thirdparty/pytorch_example3_1.png" alt="WebCamTest module" title="WebCamTest module" /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/pytorch_example3_1.png" title="WebCamTest module"&gt;&lt;img id="WebCamTest module" class="img-fluid rounded" src="images/tutorials/thirdparty/pytorch_example3_1.png" alt="WebCamTest module" title="WebCamTest module" /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;WebCamTest module&lt;/figcaption&gt;
 &lt;/p&gt;
 &lt;/p&gt;
@@ -181,23 +181,23 @@ All of these funtionalities will be addressed in this chapter.&lt;/p&gt;
 
 
 
-&lt;img width="22px" src="https://mevislab.github.io/examples/images/mmb.svg" alt="Middle Mouse Button / Mouse Wheel" /&gt;
+&lt;img width="22px" src="images/mmb.svg" alt="Middle Mouse Button / Mouse Wheel" /&gt;
  and right click 
 
 
-&lt;img width="22px" src="https://mevislab.github.io/examples/images/rmb.svg" alt="Right Mouse Button" /&gt;
+&lt;img width="22px" src="images/rmb.svg" alt="Right Mouse Button" /&gt;
 
  on the tab of the workspace showing the internal network. Select &lt;em&gt;Show Enclosing Folder&lt;/em&gt;.&lt;/p&gt;</description></item><item><title>Example 1: Installing MONAI using the PythonPip module</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/monai/monaiexample1/</link><pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/monai/monaiexample1/</guid><description>&lt;h1 id="example-1-installing-monai-using-the-pythonpip-module"&gt;Example 1: Installing MONAI using the PythonPip module&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;With the &lt;code&gt;PythonPip&lt;/code&gt; module, you can import additional Python libraries into MeVisLab.&lt;/p&gt;
 &lt;h3 id="steps-to-do"&gt;Steps to do&lt;/h3&gt;
 &lt;h4 id="install-pytorch"&gt;Install PyTorch&lt;/h4&gt;
-&lt;p&gt;As &lt;em&gt;MONAI&lt;/em&gt; requires &lt;em&gt;PyTorch&lt;/em&gt;, install it by using the &lt;code&gt;PythonPip&lt;/code&gt; module as described &lt;a href="https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample1/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As &lt;em&gt;MONAI&lt;/em&gt; requires &lt;em&gt;PyTorch&lt;/em&gt;, install it by using the &lt;code&gt;PythonPip&lt;/code&gt; module as described &lt;a href="tutorials/thirdparty/pytorch/pytorchexample1/"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id="install-monai"&gt;Install MONAI&lt;/h4&gt;
 &lt;p&gt;After installing &lt;em&gt;torch&lt;/em&gt; and &lt;em&gt;torchvision&lt;/em&gt;, we install &lt;em&gt;MONAI&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;For installing &lt;em&gt;MONAI&lt;/em&gt; enter &amp;quot;&lt;em&gt;monai&lt;/em&gt;&amp;quot; into the Command textbox and press &lt;em&gt;Install&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/thirdparty/monai_example1_1.png" title="Install MONAI"&gt;&lt;img id="Install MONAI" class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/thirdparty/monai_example1_1.png" alt="Install MONAI" title="Install MONAI" /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/monai_example1_1.png" title="Install MONAI"&gt;&lt;img id="Install MONAI" class="img-fluid rounded" src="images/tutorials/thirdparty/monai_example1_1.png" alt="Install MONAI" title="Install MONAI" /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;Install MONAI&lt;/figcaption&gt;
 &lt;/p&gt;</description></item><item><title>Example 2: Applying a spleen segmentation model from MONAI in MeVisLab</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/monai/monaiexample2/</link><pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/monai/monaiexample2/</guid><description>&lt;h1 id="example-2-applying-a-spleen-segmentation-model-from-monai-in-mevislab"&gt;Example 2: Applying a spleen segmentation model from MONAI in MeVisLab&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;

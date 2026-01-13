@@ -15,7 +15,7 @@
 &lt;p&gt;In this chapter, you will find some examples for different types of image processing in MeVisLab.&lt;/p&gt;</description></item><item><title>Example 1: Arithmetic operations on two images</title><link>https://mevislab.github.io/examples/tutorials/image_processing/image_processing1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/image_processing/image_processing1/</guid><description>&lt;h1 id="example-1-arithmetic-operations-on-two-images"&gt;Example 1: Arithmetic Operations on Two Images&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=ToTQ3XRPmlk" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/ToTQ3XRPmlk/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=ToTQ3XRPmlk" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=ToTQ3XRPmlk" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/ToTQ3XRPmlk/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=ToTQ3XRPmlk" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -25,7 +25,7 @@
 &lt;p&gt;Add two &lt;code&gt;LocalImage&lt;/code&gt; modules to your workspace for the input images. Select &lt;em&gt;$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm&lt;/em&gt; and &lt;em&gt;$(DemoDataPath)/BrainMultiModal/ProbandT2.dcm&lt;/em&gt; from MeVisLab demo data and add a &lt;code&gt;SynchroView2D&lt;/code&gt; to your network.&lt;/p&gt;</description></item><item><title>Example 2: Masking images</title><link>https://mevislab.github.io/examples/tutorials/image_processing/image_processing2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/image_processing/image_processing2/</guid><description>&lt;h1 id="example-2-masking-images"&gt;Example 2: Masking Images&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=k003ytr8ZQA" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/k003ytr8ZQA/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=k003ytr8ZQA" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=k003ytr8ZQA" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/k003ytr8ZQA/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=k003ytr8ZQA" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -33,7 +33,7 @@
 &lt;p&gt;Being in a dark room using a large screen, the user might be blended by these large white regions.&lt;/p&gt;</description></item><item><title>Example 3: Region Growing</title><link>https://mevislab.github.io/examples/tutorials/image_processing/image_processing3/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/image_processing/image_processing3/</guid><description>&lt;h1 id="example-3-region-growing"&gt;Example 3: Region Growing&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=nQV2o_3BcJI" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/nQV2o_3BcJI/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=nQV2o_3BcJI" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=nQV2o_3BcJI" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/nQV2o_3BcJI/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=nQV2o_3BcJI" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -44,7 +44,7 @@
 &lt;p&gt;Add a &lt;code&gt;LocalImage&lt;/code&gt; module to your workspace and select load &lt;em&gt;$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm&lt;/em&gt;. Add a &lt;code&gt;View2D&lt;/code&gt; module and connect both as seen below.&lt;/p&gt;</description></item><item><title>Example 4: Subtract 3D objects</title><link>https://mevislab.github.io/examples/tutorials/image_processing/image_processing4/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/image_processing/image_processing4/</guid><description>&lt;h1 id="example-4-subtract-3d-objects"&gt;Example 4: Subtract 3D Objects&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=VdvErVvoq2k" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/VdvErVvoq2k/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=VdvErVvoq2k" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=VdvErVvoq2k" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/VdvErVvoq2k/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=VdvErVvoq2k" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -54,7 +54,7 @@
 &lt;p&gt;Add a &lt;code&gt;LocalImage&lt;/code&gt; module to your workspace and select load &lt;em&gt;$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm&lt;/em&gt;. Add a &lt;code&gt;WEMIsoSurface&lt;/code&gt;, a &lt;code&gt;SoWEMRenderer&lt;/code&gt;, a &lt;code&gt;SoBackground&lt;/code&gt;, and a &lt;code&gt;SoExaminerViewer&lt;/code&gt; module and connect them as seen below. Make sure to configure the &lt;code&gt;WEMIsoSurface&lt;/code&gt; to use a &lt;em&gt;Iso Min. Value&lt;/em&gt; of 420 and a &lt;em&gt;Voxel Sampling&lt;/em&gt; 1.&lt;/p&gt;</description></item><item><title>Example 5: Clip Planes</title><link>https://mevislab.github.io/examples/tutorials/image_processing/image_processing5/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/image_processing/image_processing5/</guid><description>&lt;h1 id="example-5-clip-planes"&gt;Example 5: Clip Planes&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=Lmt7helBl0E" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/Lmt7helBl0E/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=Lmt7helBl0E" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=Lmt7helBl0E" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/Lmt7helBl0E/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=Lmt7helBl0E" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;

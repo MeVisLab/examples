@@ -11,7 +11,7 @@ All of these funtionalities will be addressed in this chapter.&lt;/p&gt;
 ]&lt;/i&gt; to open the user interface of the TestCaseManager.&lt;/p&gt;</description></item><item><title>Example 1: Writing a simple test case in MeVisLab</title><link>https://mevislab.github.io/examples/tutorials/testing/testingexample1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/testing/testingexample1/</guid><description>&lt;h1 id="example-1-writing-a-simple-test-case-in-mevislab"&gt;Example 1: Writing a simple test case in MeVisLab&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=DqpVaKai_00" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/DqpVaKai_00/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=DqpVaKai_00" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=DqpVaKai_00" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/DqpVaKai_00/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=DqpVaKai_00" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -21,7 +21,7 @@ All of these funtionalities will be addressed in this chapter.&lt;/p&gt;
 &lt;p&gt;Add the following modules to your workspace and connect them as seen below:&lt;/p&gt;</description></item><item><title>Example 3: Iterative tests in MeVisLab with Screenshots</title><link>https://mevislab.github.io/examples/tutorials/testing/testingexample3/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/testing/testingexample3/</guid><description>&lt;h1 id="example-3-iterative-tests-in-mevislab"&gt;Example 3: Iterative tests in MeVisLab&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=1JidUyfz0xU" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/1JidUyfz0xU/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=1JidUyfz0xU" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=1JidUyfz0xU" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/1JidUyfz0xU/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=1JidUyfz0xU" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;

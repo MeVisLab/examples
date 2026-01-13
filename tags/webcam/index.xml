@@ -5,7 +5,7 @@
 &lt;h3 id="creating-the-network-to-be-used-for-testing"&gt;Creating the network to be used for testing&lt;/h3&gt;
 &lt;p&gt;Add the modules to your workspace and connect them as seen below.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/thirdparty/network_example1.png" title="Example Network "&gt;&lt;img id="Example Network " class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/thirdparty/network_example1.png" alt="Example Network " title="Example Network " /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/network_example1.png" title="Example Network "&gt;&lt;img id="Example Network " class="img-fluid rounded" src="images/tutorials/thirdparty/network_example1.png" alt="Example Network " title="Example Network " /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;Example Network &lt;/figcaption&gt;
 &lt;/p&gt;
 &lt;/p&gt;
@@ -37,13 +37,13 @@
 &lt;/div&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
 &lt;h3 id="open-example-1"&gt;Open Example 1&lt;/h3&gt;
-&lt;p&gt;Add the macro module developed in &lt;a href="https://mevislab.github.io/examples/tutorials/thirdparty/opencv/thirdpartyexample1"&gt;Example 1&lt;/a&gt; to your workspace.&lt;/p&gt;</description></item><item><title>Example 3: Segment persons in webcam videos</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample3/</link><pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample3/</guid><description>&lt;h1 id="example-3-segment-persons-in-webcam-videos"&gt;Example 3: Segment persons in webcam videos&lt;/h1&gt;
+&lt;p&gt;Add the macro module developed in &lt;a href="tutorials/thirdparty/opencv/thirdpartyexample1"&gt;Example 1&lt;/a&gt; to your workspace.&lt;/p&gt;</description></item><item><title>Example 3: Segment persons in webcam videos</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample3/</link><pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample3/</guid><description>&lt;h1 id="example-3-segment-persons-in-webcam-videos"&gt;Example 3: Segment persons in webcam videos&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This tutorial is based on &lt;a href="https://mevislab.github.io/examples/tutorials/thirdparty/opencv/thirdpartyexample2" title="Example 2: Face Detection with OpenCV"&gt;Example 2: Face Detection with OpenCV&lt;/a&gt;. You can re-use some of the scripts already developed in the other tutorial.&lt;/p&gt;
+&lt;p&gt;This tutorial is based on &lt;a href="tutorials/thirdparty/opencv/thirdpartyexample2" title="Example 2: Face Detection with OpenCV"&gt;Example 2: Face Detection with OpenCV&lt;/a&gt;. You can re-use some of the scripts already developed in the other tutorial.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
 &lt;p&gt;Add the macro module developed in the previous example to your workspace.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/thirdparty/pytorch_example3_1.png" title="WebCamTest module"&gt;&lt;img id="WebCamTest module" class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/thirdparty/pytorch_example3_1.png" alt="WebCamTest module" title="WebCamTest module" /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/pytorch_example3_1.png" title="WebCamTest module"&gt;&lt;img id="WebCamTest module" class="img-fluid rounded" src="images/tutorials/thirdparty/pytorch_example3_1.png" alt="WebCamTest module" title="WebCamTest module" /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;WebCamTest module&lt;/figcaption&gt;
 &lt;/p&gt;
 &lt;/p&gt;
@@ -51,10 +51,10 @@
 
 
 
-&lt;img width="22px" src="https://mevislab.github.io/examples/images/mmb.svg" alt="Middle Mouse Button / Mouse Wheel" /&gt;
+&lt;img width="22px" src="images/mmb.svg" alt="Middle Mouse Button / Mouse Wheel" /&gt;
  and right click 
 
 
-&lt;img width="22px" src="https://mevislab.github.io/examples/images/rmb.svg" alt="Right Mouse Button" /&gt;
+&lt;img width="22px" src="images/rmb.svg" alt="Right Mouse Button" /&gt;
 
  on the tab of the workspace showing the internal network. Select &lt;em&gt;Show Enclosing Folder&lt;/em&gt;.&lt;/p&gt;</description></item></channel></rss>

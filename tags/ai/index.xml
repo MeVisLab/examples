@@ -33,11 +33,11 @@
 &lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
 &lt;p&gt;Add a &lt;code&gt;LocalImage&lt;/code&gt; module to your workspace and select the file &lt;em&gt;MRI_Head.dcm&lt;/em&gt;. For PyTorch it is necessary to resample the data to a defined size. Add a &lt;code&gt;Resample3D&lt;/code&gt; module to the &lt;code&gt;LocalImage&lt;/code&gt; and open the panel. Change &lt;em&gt;Keep Constant&lt;/em&gt; to &lt;em&gt;Voxel Size&lt;/em&gt; and define &lt;em&gt;Image Size&lt;/em&gt; as 176, 217, 160.&lt;/p&gt;</description></item><item><title>Example 3: Segment persons in webcam videos</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample3/</link><pubDate>Tue, 16 May 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample3/</guid><description>&lt;h1 id="example-3-segment-persons-in-webcam-videos"&gt;Example 3: Segment persons in webcam videos&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This tutorial is based on &lt;a href="https://mevislab.github.io/examples/tutorials/thirdparty/opencv/thirdpartyexample2" title="Example 2: Face Detection with OpenCV"&gt;Example 2: Face Detection with OpenCV&lt;/a&gt;. You can re-use some of the scripts already developed in the other tutorial.&lt;/p&gt;
+&lt;p&gt;This tutorial is based on &lt;a href="tutorials/thirdparty/opencv/thirdpartyexample2" title="Example 2: Face Detection with OpenCV"&gt;Example 2: Face Detection with OpenCV&lt;/a&gt;. You can re-use some of the scripts already developed in the other tutorial.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
 &lt;p&gt;Add the macro module developed in the previous example to your workspace.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/thirdparty/pytorch_example3_1.png" title="WebCamTest module"&gt;&lt;img id="WebCamTest module" class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/thirdparty/pytorch_example3_1.png" alt="WebCamTest module" title="WebCamTest module" /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/pytorch_example3_1.png" title="WebCamTest module"&gt;&lt;img id="WebCamTest module" class="img-fluid rounded" src="images/tutorials/thirdparty/pytorch_example3_1.png" alt="WebCamTest module" title="WebCamTest module" /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;WebCamTest module&lt;/figcaption&gt;
 &lt;/p&gt;
 &lt;/p&gt;
@@ -45,11 +45,11 @@
 
 
 
-&lt;img width="22px" src="https://mevislab.github.io/examples/images/mmb.svg" alt="Middle Mouse Button / Mouse Wheel" /&gt;
+&lt;img width="22px" src="images/mmb.svg" alt="Middle Mouse Button / Mouse Wheel" /&gt;
  and right click 
 
 
-&lt;img width="22px" src="https://mevislab.github.io/examples/images/rmb.svg" alt="Right Mouse Button" /&gt;
+&lt;img width="22px" src="images/rmb.svg" alt="Right Mouse Button" /&gt;
 
  on the tab of the workspace showing the internal network. Select &lt;em&gt;Show Enclosing Folder&lt;/em&gt;.&lt;/p&gt;</description></item><item><title>MONAI</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/monai/</link><pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/monai/</guid><description>&lt;h1 id="monai"&gt;MONAI&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -60,12 +60,12 @@
 &lt;p&gt;With the &lt;code&gt;PythonPip&lt;/code&gt; module, you can import additional Python libraries into MeVisLab.&lt;/p&gt;
 &lt;h3 id="steps-to-do"&gt;Steps to do&lt;/h3&gt;
 &lt;h4 id="install-pytorch"&gt;Install PyTorch&lt;/h4&gt;
-&lt;p&gt;As &lt;em&gt;MONAI&lt;/em&gt; requires &lt;em&gt;PyTorch&lt;/em&gt;, install it by using the &lt;code&gt;PythonPip&lt;/code&gt; module as described &lt;a href="https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample1/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As &lt;em&gt;MONAI&lt;/em&gt; requires &lt;em&gt;PyTorch&lt;/em&gt;, install it by using the &lt;code&gt;PythonPip&lt;/code&gt; module as described &lt;a href="tutorials/thirdparty/pytorch/pytorchexample1/"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id="install-monai"&gt;Install MONAI&lt;/h4&gt;
 &lt;p&gt;After installing &lt;em&gt;torch&lt;/em&gt; and &lt;em&gt;torchvision&lt;/em&gt;, we install &lt;em&gt;MONAI&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;For installing &lt;em&gt;MONAI&lt;/em&gt; enter &amp;quot;&lt;em&gt;monai&lt;/em&gt;&amp;quot; into the Command textbox and press &lt;em&gt;Install&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/thirdparty/monai_example1_1.png" title="Install MONAI"&gt;&lt;img id="Install MONAI" class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/thirdparty/monai_example1_1.png" alt="Install MONAI" title="Install MONAI" /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/monai_example1_1.png" title="Install MONAI"&gt;&lt;img id="Install MONAI" class="img-fluid rounded" src="images/tutorials/thirdparty/monai_example1_1.png" alt="Install MONAI" title="Install MONAI" /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;Install MONAI&lt;/figcaption&gt;
 &lt;/p&gt;</description></item><item><title>Example 2: Applying a spleen segmentation model from MONAI in MeVisLab</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/monai/monaiexample2/</link><pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/monai/monaiexample2/</guid><description>&lt;h1 id="example-2-applying-a-spleen-segmentation-model-from-monai-in-mevislab"&gt;Example 2: Applying a spleen segmentation model from MONAI in MeVisLab&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;

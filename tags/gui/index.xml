@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GUI on MeVisLab Examples</title><link>https://mevislab.github.io/examples/tags/gui/</link><description>Recent content in GUI on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:58:44 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/tags/gui/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 2.4: GUI development</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/guidesign/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/guidesign/</guid><description>&lt;h1 id="example-24-building-a-panel-layout-interactions-with-macro-modules"&gt;Example 2.4: Building a Panel Layout: Interactions with Macro Modules&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=tdQUkkROWBg" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/tdQUkkROWBg/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=tdQUkkROWBg" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=tdQUkkROWBg" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/tdQUkkROWBg/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=tdQUkkROWBg" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -37,9 +37,9 @@ use the
 &lt;/div&gt;
 &lt;h2 id="Example_Paneldesign"&gt;Creating a Panel for the Macro Module Filter&lt;/h2&gt;
 &lt;h3 id="creation-of-a-module-panel"&gt;Creation of a module panel&lt;/h3&gt;
-&lt;p&gt;In &lt;a href="https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/globalmacromodules"&gt;Example 2.2&lt;/a&gt; we created the global macro module &lt;code&gt;Filter&lt;/code&gt;. By now, this module does not have a proper panel. When double-clicking 
+&lt;p&gt;In &lt;a href="tutorials/basicmechanisms/macromodules/globalmacromodules"&gt;Example 2.2&lt;/a&gt; we created the global macro module &lt;code&gt;Filter&lt;/code&gt;. By now, this module does not have a proper panel. When double-clicking 
 
-&lt;img width="22px" src="https://mevislab.github.io/examples/images/lmb.svg" alt="Left Mouse Button" /&gt;
+&lt;img width="22px" src="images/lmb.svg" alt="Left Mouse Button" /&gt;
 
 
  the module, the &lt;em&gt;Automatic Panel&lt;/em&gt; is shown.&lt;/p&gt;</description></item></channel></rss>

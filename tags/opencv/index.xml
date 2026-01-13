@@ -10,7 +10,7 @@
 &lt;h3 id="creating-the-network-to-be-used-for-testing"&gt;Creating the network to be used for testing&lt;/h3&gt;
 &lt;p&gt;Add the modules to your workspace and connect them as seen below.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/thirdparty/network_example1.png" title="Example Network "&gt;&lt;img id="Example Network " class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/thirdparty/network_example1.png" alt="Example Network " title="Example Network " /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/network_example1.png" title="Example Network "&gt;&lt;img id="Example Network " class="img-fluid rounded" src="images/tutorials/thirdparty/network_example1.png" alt="Example Network " title="Example Network " /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;Example Network &lt;/figcaption&gt;
 &lt;/p&gt;
 &lt;/p&gt;
@@ -42,4 +42,4 @@
 &lt;/div&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
 &lt;h3 id="open-example-1"&gt;Open Example 1&lt;/h3&gt;
-&lt;p&gt;Add the macro module developed in &lt;a href="https://mevislab.github.io/examples/tutorials/thirdparty/opencv/thirdpartyexample1"&gt;Example 1&lt;/a&gt; to your workspace.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Add the macro module developed in &lt;a href="tutorials/thirdparty/opencv/thirdpartyexample1"&gt;Example 1&lt;/a&gt; to your workspace.&lt;/p&gt;</description></item></channel></rss>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Volume Rendering on MeVisLab Examples</title><link>https://mevislab.github.io/examples/tags/volume-rendering/</link><description>Recent content in Volume Rendering on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 23 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/tags/volume-rendering/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 5: Volume rendering and interactions</title><link>https://mevislab.github.io/examples/tutorials/visualization/visualizationexample5/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/visualization/visualizationexample5/</guid><description>&lt;h1 id="TutorialVisualizationExample6"&gt;Example 5: Volume Rendering and Interactions&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=QViPqXs2LHc" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/QViPqXs2LHc/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=QViPqXs2LHc" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=QViPqXs2LHc" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/QViPqXs2LHc/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=QViPqXs2LHc" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -10,14 +10,14 @@
 &lt;h3 id="develop-your-network"&gt;Develop Your Network&lt;/h3&gt;
 &lt;p&gt;Implement the following network and open the image &lt;em&gt;$(DemoDataPath)/BrainMultiModal/ProbandT1.tif&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/visualization/V6_01.png" title="SoGVRVolumeRenderer"&gt;&lt;img id="SoGVRVolumeRenderer" class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/visualization/V6_01.png" alt="SoGVRVolumeRenderer" title="SoGVRVolumeRenderer" /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/visualization/V6_01.png" title="SoGVRVolumeRenderer"&gt;&lt;img id="SoGVRVolumeRenderer" class="img-fluid rounded" src="images/tutorials/visualization/V6_01.png" alt="SoGVRVolumeRenderer" title="SoGVRVolumeRenderer" /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;SoGVRVolumeRenderer&lt;/figcaption&gt;
 &lt;/p&gt;
 &lt;/p&gt;
 &lt;p&gt;The module &lt;code&gt;SoGVRVolumeRenderer&lt;/code&gt; allows volume rendering of 3D and 4D images.&lt;/p&gt;</description></item><item><title>Example 6: MeVis Path Tracer</title><link>https://mevislab.github.io/examples/tutorials/visualization/visualizationexample6/</link><pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/visualization/visualizationexample6/</guid><description>&lt;h1 id="example-6-mevis-path-tracer"&gt;Example 6: MeVis Path Tracer&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://youtube.com/shorts/U23QH2Pvwew" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/U23QH2Pvwew/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;We have a Short video showing the possibilities of the &lt;b&gt;MeVis Path Tracer&lt;/b&gt; on &lt;a href="https://youtube.com/shorts/U23QH2Pvwew" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://youtube.com/shorts/U23QH2Pvwew" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/U23QH2Pvwew/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;We have a Short video showing the possibilities of the &lt;b&gt;MeVis Path Tracer&lt;/b&gt; on &lt;a href="https://youtube.com/shorts/U23QH2Pvwew" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -51,12 +51,12 @@
  &lt;div class="row row-cols-1 row-cols-sm-2 row-cols-md-5"&gt;
  &lt;div class="col mt-5"&gt;
  &lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/visualization/pathtracer/PathTracer1.png" title="PathTracer1"&gt;&lt;img src="https://mevislab.github.io/examples/images/tutorials/visualization/pathtracer/PathTracer1.png" class="img-fluid" alt="PathTracer1"&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/visualization/pathtracer/PathTracer1.png" title="PathTracer1"&gt;&lt;img src="images/tutorials/visualization/pathtracer/PathTracer1.png" class="img-fluid" alt="PathTracer1"&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;PathTracer1&lt;/figcaption&gt;
  &lt;/p&gt;</description></item><item><title>Example 6.1: Volume Rendering vs. Path Tracer</title><link>https://mevislab.github.io/examples/tutorials/visualization/pathtracer/pathtracerexample1/</link><pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/visualization/pathtracer/pathtracerexample1/</guid><description>&lt;h1 id="example-61-volume-rendering-vs-path-tracer"&gt;Example 6.1: Volume Rendering vs. Path Tracer&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=E0H87Cimu_M" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/E0H87Cimu_M/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=E0H87Cimu_M" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=E0H87Cimu_M" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/E0H87Cimu_M/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=E0H87Cimu_M" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Global Macro on MeVisLab Examples</title><link>https://mevislab.github.io/examples/tags/global-macro/</link><description>Recent content in Global Macro on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:58:44 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/tags/global-macro/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 2.2: Creation of global macro modules</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/globalmacromodules/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/globalmacromodules/</guid><description>&lt;h1 id="example-22-global-macro-modules"&gt;Example 2.2: Global Macro Modules&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=M4HnA0d1V5k" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/M4HnA0d1V5k/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=M4HnA0d1V5k" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=M4HnA0d1V5k" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/M4HnA0d1V5k/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=M4HnA0d1V5k" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -9,17 +9,17 @@
  
  Modules
 ]&lt;/i&gt;.&lt;/p&gt;</description></item><item><title>Example 2.3: Creation of module help</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/helpfiles/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/helpfiles/</guid><description>&lt;h1 id="example-23-creation-of-module-help"&gt;Example 2.3: Creation of Module Help&lt;/h1&gt;
-&lt;p&gt;Generating help of a macro module is part of the video about macro modules from &lt;a href="https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/globalmacromodules"&gt;Example 2: Creation of global macro modules&lt;/a&gt;
+&lt;p&gt;Generating help of a macro module is part of the video about macro modules from &lt;a href="tutorials/basicmechanisms/macromodules/globalmacromodules"&gt;Example 2: Creation of global macro modules&lt;/a&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=M4HnA0d1V5k" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/M4HnA0d1V5k/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=M4HnA0d1V5k" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=M4HnA0d1V5k" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/M4HnA0d1V5k/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=M4HnA0d1V5k" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;&lt;/p&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this chapter, you will learn how to create a help page and an example network. For hands-on training, we will use the macro module &lt;code&gt;Filter&lt;/code&gt;, which was created in the &lt;a href="https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/globalmacromodules"&gt;previous chapter&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Example 2.4: GUI development</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/guidesign/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/guidesign/</guid><description>&lt;h1 id="example-24-building-a-panel-layout-interactions-with-macro-modules"&gt;Example 2.4: Building a Panel Layout: Interactions with Macro Modules&lt;/h1&gt;
+&lt;p&gt;In this chapter, you will learn how to create a help page and an example network. For hands-on training, we will use the macro module &lt;code&gt;Filter&lt;/code&gt;, which was created in the &lt;a href="tutorials/basicmechanisms/macromodules/globalmacromodules"&gt;previous chapter&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Example 2.4: GUI development</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/guidesign/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/guidesign/</guid><description>&lt;h1 id="example-24-building-a-panel-layout-interactions-with-macro-modules"&gt;Example 2.4: Building a Panel Layout: Interactions with Macro Modules&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=tdQUkkROWBg" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/tdQUkkROWBg/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=tdQUkkROWBg" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=tdQUkkROWBg" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/tdQUkkROWBg/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=tdQUkkROWBg" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -55,9 +55,9 @@ use the
 &lt;/div&gt;
 &lt;h2 id="Example_Paneldesign"&gt;Creating a Panel for the Macro Module Filter&lt;/h2&gt;
 &lt;h3 id="creation-of-a-module-panel"&gt;Creation of a module panel&lt;/h3&gt;
-&lt;p&gt;In &lt;a href="https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/globalmacromodules"&gt;Example 2.2&lt;/a&gt; we created the global macro module &lt;code&gt;Filter&lt;/code&gt;. By now, this module does not have a proper panel. When double-clicking 
+&lt;p&gt;In &lt;a href="tutorials/basicmechanisms/macromodules/globalmacromodules"&gt;Example 2.2&lt;/a&gt; we created the global macro module &lt;code&gt;Filter&lt;/code&gt;. By now, this module does not have a proper panel. When double-clicking 
 
-&lt;img width="22px" src="https://mevislab.github.io/examples/images/lmb.svg" alt="Left Mouse Button" /&gt;
+&lt;img width="22px" src="images/lmb.svg" alt="Left Mouse Button" /&gt;
 
 
  the module, the &lt;em&gt;Automatic Panel&lt;/em&gt; is shown.&lt;/p&gt;</description></item><item><title>Example 2.5: Interactions via Python scripting</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/pythonscripting/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/pythonscripting/</guid><description>&lt;h1 id="TutorialPythonScripting"&gt;Example 2.5: Module Interactions Using Python Scripting&lt;/h1&gt;
@@ -66,7 +66,7 @@ use the
 &lt;p&gt;In fact, nearly everything in MeVisLab can be done via Python scripting: You can add modules to your network, or remove modules, you can dynamically establish and remove connections and so on. But, much more important: You can access module inputs and outputs, as well as module fields to process their parameters and data. You can equip user interfaces and panel with custom functionalities. Python can be used to implement module interactions. When you open a panel or you press a button in a panel, the executed actions are implemented via Python scripting.&lt;/p&gt;</description></item><item><title>Example 2.5.2: Module interactions via Python scripting</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/scriptingexample2/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/scriptingexample2/</guid><description>&lt;h1 id="example-252-module-interactions-via-python-scripting"&gt;Example 2.5.2: Module Interactions Via Python Scripting&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=hGq6vA7Ll9Q" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/hGq6vA7Ll9Q/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=hGq6vA7Ll9Q" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=hGq6vA7Ll9Q" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/hGq6vA7Ll9Q/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=hGq6vA7Ll9Q" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -93,7 +93,7 @@ Project Wizard, which you find under &lt;i&gt;[
 &lt;h3 id="creating-the-network-to-be-used-for-testing"&gt;Creating the network to be used for testing&lt;/h3&gt;
 &lt;p&gt;Add the modules to your workspace and connect them as seen below.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/thirdparty/network_example1.png" title="Example Network "&gt;&lt;img id="Example Network " class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/thirdparty/network_example1.png" alt="Example Network " title="Example Network " /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/network_example1.png" title="Example Network "&gt;&lt;img id="Example Network " class="img-fluid rounded" src="images/tutorials/thirdparty/network_example1.png" alt="Example Network " title="Example Network " /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;Example Network &lt;/figcaption&gt;
 &lt;/p&gt;
 &lt;/p&gt;

@@ -3,14 +3,14 @@
 &lt;p&gt;&lt;a href="http://www.assimp.org" title="assimp" target="_blank" rel="noopener"&gt;Assimp&lt;/a&gt; (Asset-Importer-Lib) is a library to load and process geometric scenes from various 3D data formats.&lt;/p&gt;
 &lt;p&gt;This chapter provides some examples of how 3D formats can be imported into MeVisLab. In general, you always need a &lt;code&gt;SoSceneLoader&lt;/code&gt; module. The &lt;code&gt;SoSceneLoader&lt;/code&gt; allows to load meshes as Open Inventor points/lines/triangles/faces using the Open Asset Import Library.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/thirdparty/SoSceneLoader.png" title="SoSceneLoader"&gt;&lt;img id="SoSceneLoader" class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/thirdparty/SoSceneLoader.png" alt="SoSceneLoader" title="SoSceneLoader" /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/SoSceneLoader.png" title="SoSceneLoader"&gt;&lt;img id="SoSceneLoader" class="img-fluid rounded" src="images/tutorials/thirdparty/SoSceneLoader.png" alt="SoSceneLoader" title="SoSceneLoader" /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;SoSceneLoader&lt;/figcaption&gt;
 &lt;/p&gt;
 &lt;/p&gt;
 &lt;p&gt;You can also use the &lt;code&gt;SoSceneWriter&lt;/code&gt; module to export your 3D scenes from MeVisLab in a number of output formats.&lt;/p&gt;</description></item><item><title>Example 1: 3D Printing in MeVisLab</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/assimp/assimpexample1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/assimp/assimpexample1/</guid><description>&lt;h1 id="example-1-3d-printing-in-mevislab"&gt;Example 1: 3D Printing in MeVisLab&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
- &lt;img width="100px" src="https://mevislab.github.io/examples/images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=82ysCYNTyso" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/82ysCYNTyso/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=82ysCYNTyso" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=82ysCYNTyso" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/82ysCYNTyso/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=82ysCYNTyso" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
@@ -19,7 +19,7 @@
 &lt;h3 id="develop-your-network"&gt;Develop your network&lt;/h3&gt;
 &lt;p&gt;Add the modules &lt;code&gt;SoSceneLoader&lt;/code&gt;, &lt;code&gt;SoBackground&lt;/code&gt; and &lt;code&gt;SoExaminerViewer&lt;/code&gt; to your workspace and connect them as seen below.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/thirdparty/assimp_example1.png" title="Example Network"&gt;&lt;img id="Example Network" class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/thirdparty/assimp_example1.png" alt="Example Network" title="Example Network" /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/assimp_example1.png" title="Example Network"&gt;&lt;img id="Example Network" class="img-fluid rounded" src="images/tutorials/thirdparty/assimp_example1.png" alt="Example Network" title="Example Network" /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;Example Network&lt;/figcaption&gt;
 &lt;/p&gt;
 &lt;/p&gt;

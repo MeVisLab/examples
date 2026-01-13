@@ -7,12 +7,12 @@
 &lt;p&gt;With the &lt;code&gt;PythonPip&lt;/code&gt; module, you can import additional Python libraries into MeVisLab.&lt;/p&gt;
 &lt;h3 id="steps-to-do"&gt;Steps to do&lt;/h3&gt;
 &lt;h4 id="install-pytorch"&gt;Install PyTorch&lt;/h4&gt;
-&lt;p&gt;As &lt;em&gt;MONAI&lt;/em&gt; requires &lt;em&gt;PyTorch&lt;/em&gt;, install it by using the &lt;code&gt;PythonPip&lt;/code&gt; module as described &lt;a href="https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample1/"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As &lt;em&gt;MONAI&lt;/em&gt; requires &lt;em&gt;PyTorch&lt;/em&gt;, install it by using the &lt;code&gt;PythonPip&lt;/code&gt; module as described &lt;a href="tutorials/thirdparty/pytorch/pytorchexample1/"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id="install-monai"&gt;Install MONAI&lt;/h4&gt;
 &lt;p&gt;After installing &lt;em&gt;torch&lt;/em&gt; and &lt;em&gt;torchvision&lt;/em&gt;, we install &lt;em&gt;MONAI&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;For installing &lt;em&gt;MONAI&lt;/em&gt; enter &amp;quot;&lt;em&gt;monai&lt;/em&gt;&amp;quot; into the Command textbox and press &lt;em&gt;Install&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="https://mevislab.github.io/examples/images/tutorials/thirdparty/monai_example1_1.png" title="Install MONAI"&gt;&lt;img id="Install MONAI" class="img-fluid rounded" src="https://mevislab.github.io/examples/images/tutorials/thirdparty/monai_example1_1.png" alt="Install MONAI" title="Install MONAI" /&gt;&lt;/a&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/monai_example1_1.png" title="Install MONAI"&gt;&lt;img id="Install MONAI" class="img-fluid rounded" src="images/tutorials/thirdparty/monai_example1_1.png" alt="Install MONAI" title="Install MONAI" /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;Install MONAI&lt;/figcaption&gt;
 &lt;/p&gt;</description></item><item><title>Example 2: Applying a spleen segmentation model from MONAI in MeVisLab</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/monai/monaiexample2/</link><pubDate>Thu, 13 Nov 2025 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/monai/monaiexample2/</guid><description>&lt;h1 id="example-2-applying-a-spleen-segmentation-model-from-monai-in-mevislab"&gt;Example 2: Applying a spleen segmentation model from MONAI in MeVisLab&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
