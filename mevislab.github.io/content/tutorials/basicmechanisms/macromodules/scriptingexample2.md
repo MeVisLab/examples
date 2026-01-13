@@ -12,23 +12,23 @@ menu:
     weight: 440
     parent: "macro_modules"
 ---
-# Example 2.5.2: Module interactions via Python scripting
+# Example 2.5.2: Module Interactions Via Python Scripting
 
 {{< youtube "hGq6vA7Ll9Q" >}}
 
 ## Introduction
 
-In this example, you will learn how to add Python scripting to your User Interface. The network used in [Chapter V](tutorials/dataobjects/contours/contourexample5/) will be used for creating the macro module.
+In this example, you will learn how to add Python scripting to your user interface. The network used in [Chapter V](tutorials/dataobjects/contours/contourexample5/) will be used for creating the macro module.
 
-## Steps to do
-### Creating the macro module
+## Steps to Do
+### Creating the Macro Module
 First, we condense the example network into a macro module and then we create a panel for that module. To create a macro module use the
 Project Wizard, which you find under {{< menuitem "File" "Run Project Wizard" >}}. Select
 *Macro module* and press *Run*.
 
 Now, you have to edit:
 1.  Name: The name of your module
-2.  Package: Select the package you like to save the macro module in. 
+2.  Package: Select the package you like to save the macro module in
 3.  Directory Structure: Change to *Self-contained* (this setting is only available in MeVisLab versions before 5.0.0, later versions always use *self-contained*)
 4.  Project: Select you project name
 
@@ -39,17 +39,17 @@ Press *Next* and edit the following:
 
 Now, create your macro module and reload MeVisLab. You can find your module via search in MeVisLab.
 
-![Creating macro module](/images/tutorials/basicmechanics/CreatingMacroModule.png "Creating macro module")
+![Creating macro module](images/tutorials/basicmechanics/CreatingMacroModule.png "Creating macro module")
 
-![Enable Python scripting](/images/tutorials/basicmechanics/EnablePythonScripting.png "Enable Python scripting")
+![Enable Python scripting](images/tutorials/basicmechanics/EnablePythonScripting.png "Enable Python scripting")
 
-To design a panel and create a user interface for the macro module, open the *\*.script* file. You can see, that a Command environment exist, which defines the python file as source for all commands.
+To design a panel and create a user interface for the macro module, open the *.script* file. You can see that a *Command* environment exist, which defines the Python file as source for all commands.
 
-![Open the script file](/images/tutorials/basicmechanics/OpenScriptFile.png "Open the script file")
+![Open the script file](images/tutorials/basicmechanics/OpenScriptFile.png "Open the script file")
 
-![Script file](/images/tutorials/basicmechanics/ScriptFile.png "Script file")
+![Script file](images/tutorials/basicmechanics/ScriptFile.png "Script file")
 
-### Creating a panel with tabs and viewers
+### Creating a Panel with Tabs and Viewers
 
 At first, we create a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Window" "Window" >}} with two {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html##mdl_TabView" "Tabs" >}}. One *Main* tab, in which both viewers of the network are represented and one tab for *Settings*. For generating tabs, we can use the control {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_TabView" "TabView" >}}, with its items {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_TabViewItem" "TabViewItem" >}}. The control *TabView* enables to add a command, which is executed when opening the tab. For adding the viewers to the panel, we use the Control *Viewer*.
 
@@ -81,22 +81,22 @@ Window {
 ```
 {{</highlight>}}
 
-![Panel with Tabs and Viewers](/images/tutorials/basicmechanics/PanelWithTabsAndViewers.png "Panel with Tabs and Viewers")
+![Panel with Tabs and Viewers](images/tutorials/basicmechanics/PanelWithTabsAndViewers.png "Panel with Tabs and Viewers")
 
-### Edit viewer settings in the panel
+### Edit Viewer Settings in the Panel
 
 You may want to change the design setting of the right viewer. This is possible via the network file of the macro module. Open the context menu {{< mousebutton "right" >}} and select {{< menuitem "Related Files" "IsoCSOs.mlab" >}} on the module. In the network file, open the Automatic Panel of the module `SoExaminerViewer` via context menu {{< menuitem "Show Windows" "Automatic Panel" >}} and change the field *decoration* to *False*. Keep in mind, as we did not create CSOs by now, the right viewer stays black.
 
-![Change viewer settings](/images/tutorials/basicmechanics/ChangeViewerSettings.png "Change viewer settings")
+![Change viewer settings](images/tutorials/basicmechanics/ChangeViewerSettings.png "Change viewer settings")
 
-![Changed viewer settings](/images/tutorials/basicmechanics/ChangedViewerSettings.png "Changed viewer settings")
+![Changed viewer settings](images/tutorials/basicmechanics/ChangedViewerSettings.png "Changed viewer settings")
 
-### Selection of images
+### Selection of Images
 
 Next, we like to add the option to browse through the folders and select
 the image, we like to create CSOs from. This functionality is already given in the internal network in the module `LocalImage`. We can copy this functionality from `LocalImage` and add this option to the panel above both viewers. But, how should we know, which field name we reference to? To find this out, open the network file of your macro module again. Now you are able to open the panel of the module `LocalImage`. Right-click {{< mousebutton "right" >}} the desired field: In this case, right-click the label *Name:*. Select *Copy Name*, to copy the internal name of this field.
 
-![Copy the field name](/images/tutorials/basicmechanics/GUI_Exp_09.png "Copy the field name")
+![Copy the field name](images/tutorials/basicmechanics/GUI_Exp_09.png "Copy the field name")
 
 Now, you can add this field as a new field to your window by pasting the
 name. All field settings are taken over from the internal field from the module `LocalImage`.
@@ -130,18 +130,18 @@ Window {
 ```
 {{</highlight>}}
 
-![Add name field](/images/tutorials/basicmechanics/AddNameField.png "Add name field")
+![Add name field](images/tutorials/basicmechanics/AddNameField.png "Add name field")
 
-### Add buttons to your panel
+### Add Buttons to your Panel
 
-As a next step, we like to add a *Browse\...*-Button, like in the module
+As a next step, we like to add a *Browse\...* button, like in the module
 `LocalImage`, and also a button to create the CSOs.
 
-To create the *Browse\...*-Button:
+To create the *Browse\...* button:
 
 1.  Create a button containing the command *fileDialog*.
 2.  Right-click {{< mousebutton "right" >}} the command to create the respective function in the Python file.
-3.  Edit the function in the Python file, to enable the file dialog (similar function as in *LocalImage.py*).
+3.  Edit the function in the Python file to enable the file dialog (similar function as in *LocalImage.py*).
 
 To create the Iso Generator Button:
 
@@ -217,7 +217,7 @@ def fileDialog():
 ```
 {{</highlight>}}
 
-![Automatically generate CSOs based on Iso value](/images/tutorials/basicmechanics/GUI_Exp_14.png "Automatically generate CSOs based on Iso value")
+![Automatically generate CSOs based on Iso value](images/tutorials/basicmechanics/GUI_Exp_14.png "Automatically generate CSOs based on Iso value")
 
 ### Colorizing CSOs
 
@@ -229,11 +229,11 @@ can do this in the following way:
 
 1. Enable the View *Scripting Assistant*, which translates actions into Python code. 
     
-    ![Scripting Assistant](/images/tutorials/basicmechanics/GUI_Exp_15.png "Scripting Assistant")
+    ![Scripting Assistant](images/tutorials/basicmechanics/GUI_Exp_15.png "Scripting Assistant")
 
-2. Enable a functionality which allows us to notice the id of the CSO we are currently hovering over with our mouse. For this open the network file of our macro module. We will use the module `SoView2DCSOExtensibleEditor`. Open its panel and select the tab *Advanced*. You can check a box to enable *Update CSO id under mouse*. If you now hover over a CSO, you can see its id in the panel. We can save the network to save this functionality, but we can also solve our problem via scripting. The Scripting Assistant translated our action into code, which we can use.
+2. Enable a functionality that allows us to notice the id of the CSO we are currently hovering over with our mouse. For this open the network file of our macro module. We will use the module `SoView2DCSOExtensibleEditor`. Open its panel and select the tab *Advanced*. You can check a box to enable *Update CSO id under mouse*. If you now hover over a CSO, you can see its id in the panel. We can save the network to save this functionality, but we can also solve our problem via scripting. The Scripting Assistant translated our action into code, which we can use.
     
-    ![Enabling CSO id identification](/images/tutorials/basicmechanics/GUI_Exp_16.png "Enabling CSO id identification")
+    ![Enabling CSO id identification](images/tutorials/basicmechanics/GUI_Exp_16.png "Enabling CSO id identification")
 
     We like to activate this functionality when opening the panel of our macro module `IsoCSOs`. Thus, we add a starting command to the control Window. We can call this command for example *enableFunctionalities*.
 
@@ -263,7 +263,7 @@ def enableFunctionalities():
 
 3.  Implement a field listener. This field listener will detect when you hover over a CSO and the CSO id changes. Triggered by a CSO id change, a colorization function will be executed, which will colorize the selected CSO.
 
-In the *\*.script* file:
+In the *.script* file:
 
 {{< highlight filename="IsoCSOs.script" >}}
 ```Stan
@@ -321,7 +321,7 @@ TabViewItem Settings {
 ```
 {{</highlight>}}
 
-![Colored selection](/images/tutorials/basicmechanics/GUI_Exp_22.png "Colored selection")
+![Colored selection](images/tutorials/basicmechanics/GUI_Exp_22.png "Colored selection")
 
 ## Summary
 * The control *Tabview* creates tabs in panels.

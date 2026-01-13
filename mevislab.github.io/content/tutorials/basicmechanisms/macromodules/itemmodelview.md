@@ -12,38 +12,38 @@ menu:
     weight: 465
     parent: "basicmechanisms"
 ---
-# Example 7: Creating your own ItemModel by using the ItemModelView
+# Example 7: Creating Your Own ItemModel by Using the ItemModelView
 
 ## Introduction
 In this example, we will show how to use the *ItemModelView* MDL control to represent an abstract hierarchical item model with generically named attributes. You will see how to select the displayed attributes in the resulting table and how to interact with this table.
 
 We create a macro module that receives an input image and then shows some selected DICOM attributes of this patient in our own *ItemModelView*.
 
-## Prepare your network
+## Prepare Your Network
 
 ### Create a Macro Module
 {{<alert class="info" caption="Info">}}
-Make sure to create a package first. Packages are the way MeVisLab organizes different development projects. You can find an example in chapter [Package creation](/tutorials/basicmechanisms/macromodules/package/).
+Make sure to create a package first. Packages are the way MeVisLab organizes different development projects. You can find an example in chapter [Package creation](tutorials/basicmechanisms/macromodules/package/).
 {{</alert>}} 
 
 Use the *Project Wizard* via menu entry {{< menuitem "File" "Run Project Wizard ..." >}} to create a new macro module named `MyItemModelView`.
 
 Start with an empty network and add a Python file.
 
-We can leave the *Fields* empty for now. We can add them in the *\*.script* file.
+We can leave the *Fields* empty for now. We can add them in the *.script* file.
 
 Click *Create* {{< mousebutton "left" >}}.
 
-{{< imagegallery 3 "/images/tutorials/basicmechanics" "ItemModel_1" "ItemModel_2" "ItemModel_3">}}
+{{< imagegallery 3 "images/tutorials/basicmechanics" "ItemModel_1" "ItemModel_2" "ItemModel_3">}}
 
 If you cannot find your module via *Module Search*, reload module cache by clicking the menu item {{< menuitem "Extras" "Reload Module Database (Clear Cache)" >}}
 
-### Define the necessary fields
+### Define the Necessary Fields
 Add your new module `MyItemModelView` to your workspace. It does not provide a user interface and you do not have any *Fields* available.
 
-![Empty Module](/images/tutorials/basicmechanics/ItemModel_4.png "Empty Module")
+![Empty Module](images/tutorials/basicmechanics/ItemModel_4.png "Empty Module")
 
-Open the *\*.script* file of your module via right-click {{< mousebutton "right" >}} and {{< menuitem "Related Files (4)" "MyItemModelView.script" >}}.
+Open the *.script* file of your module via right-click {{< mousebutton "right" >}} and {{< menuitem "Related Files (4)" "MyItemModelView.script" >}}.
 
 We first define the input for the image.
 {{< highlight filename="MyItemModelView.script" >}}
@@ -98,9 +98,9 @@ Interface {
 
 If you now open your panel, you should see the *Input* *inImage* and the just created *Fields*. The *Field* *id* is necessary to identify unique objects in your *ItemModel* later. In order to make this example easier to understand, we defined all types of the *Fields* as *String*. You can also use different types, if you like.
 
-![Module Input and Fields](/images/tutorials/basicmechanics/ItemModel_5.png "Module Input and Fields")
+![Module Input and Fields](images/tutorials/basicmechanics/ItemModel_5.png "Module Input and Fields")
 
-### Add the ItemModelView to your panel
+### Add the ItemModelView to Your Panel
 We can now add the *ItemModelView* to our panel and define the columns of the view, that we want to see. Add a *Window* section to your script file and define it as seen below.
 
 {{< highlight filename="MyItemModelView.script" >}}
@@ -109,8 +109,8 @@ Window {
   Category {
   Vertical {
       ItemModelView myItemModel {
-        name                 = itemModelView
-        idAttribute          = id
+        name        = itemModelView
+        idAttribute = id
         Column id {}
         Column patientName {}
         Column patientBirthdate {}
@@ -141,10 +141,10 @@ Outputs {
 
 Your module now also shows an output *MLBase* object and the columns you defined for the *ItemModelView*.
 
-![Module Output and Columns](/images/tutorials/basicmechanics/ItemModel_6.png "Module Output and Columns")
+![Module Output and Columns](images/tutorials/basicmechanics/ItemModel_6.png "Module Output and Columns")
 
-### Fill your table with data
-We want to get the necessary information from the defined input image *inImage*. We want the module to update the content whenever the input image changes. Therefore we need a *Field Listener* calling a Python function whenever the input image changes. Add it to your *Commands* section.
+### Fill Your Table with Data
+We want to get the necessary information from the defined input image *inImage*. We want the module to update the content whenever the input image changes. Therefore, we need a *Field Listener* calling a Python function whenever the input image changes. Add it to your *Commands* section.
 
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan
@@ -181,7 +181,7 @@ We need to import *mevis.MLAB* and we define the attributes of our resulting vie
 
 The unique *id* is an increasing *Integer* and we can now initialize our model.
 
-#### Implement the model
+#### Implement the Model
 In Python, we have to define some basic classes and functions for our final model. Define a class *MyItem* which represents a single item. Each item may have children of the same type to provide a hierarchical structure.
 
 {{< highlight filename="MyItemModelView.py" >}}
@@ -194,7 +194,7 @@ class MyItem:
 ```
 {{</highlight>}}
 
-Now we implement a very simple and basic model named *MyItemModel*. Initially we create a new *MLBase* object using the existing *StandardItemModel* and define the structure of our items as already done using the attributes.
+Now we implement a very simple and basic model named *MyItemModel*. Initially, we create a new *MLBase* object using the existing *StandardItemModel* and define the structure of our items as already done using the attributes.
 
 Some additional functions are necessary to get the root item and the selected index of the model. We also need functions to add and insert items and to clear all items.
 
@@ -253,7 +253,7 @@ class MyItemModel:
 ```
 {{</highlight>}}
 
-You can see that the above Python code uses a field *selection* which contains the ID of the selected item in our table. We have to add this *Field* to our *\*.script* file, too.
+You can see that the above Python code uses a field *selection* that contains the ID of the selected item in our table. We have to add this *Field* to our *.script* file, too.
 
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan
@@ -279,7 +279,7 @@ Window {
 ```
 {{</highlight>}}
 
-#### Fill the model with your data
+#### Fill the Model with Your Data
 Now, we can implement the function *imageChanged*.
 
 {{< highlight filename="MyItemModelView.py" >}}
@@ -357,12 +357,12 @@ The image data is then used to create the root item of our model. We use the sel
 
 If you now open the panel of your module, you can already see the results.
 
-![Module Panel](/images/tutorials/basicmechanics/ItemModel_7.png "Module Panel")
+![Module Panel](images/tutorials/basicmechanics/ItemModel_7.png "Module Panel")
 
 The first line shows the information of the patient, the study and the series and each child item represents a single slice of the image.
 
-## Interact with your model
-We can now add options to interact with the *ItemModelView*. Open the *\*.script* file of your module and go to the *Commands* section. We add a *FieldListener* to our *selection* field. Whenever the user selects a different item in our view, the Python function *itemClicked* in the *FieldListener* is executed.
+## Interact with Your Model
+We can now add options to interact with the *ItemModelView*. Open the *.script* file of your module and go to the *Commands* section. We add a *FieldListener* to our *selection* field. Whenever the user selects a different item in our view, the Python function *itemClicked* in the *FieldListener* is executed.
 
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan
@@ -400,13 +400,13 @@ def itemClicked(field: "mevislab.MLABField"):
 ```
 {{</highlight>}}
 
-The *itemClicked* function uses *id* from the selected item to get the value of column 8 (in this case it is the *SOP Instance UID* of the image) and prints this value.
+The *itemClicked* function uses *id* from the selected item to get the value of column 8 (in this case, it is the *SOP Instance UID* of the image) and prints this value.
 
-![Clicked Item](/images/tutorials/basicmechanics/ItemModel_8.png "Clicked Item")
+![Clicked Item](images/tutorials/basicmechanics/ItemModel_8.png "Clicked Item")
 
 The problem is that the *Field* *selection* also changes whenever a new item is added to the model. Your debug output is already flooded with SOP Instance UIDs without interaction.
 
-![Debug Output](/images/tutorials/basicmechanics/ItemModel_9.png "Debug Output")
+![Debug Output](images/tutorials/basicmechanics/ItemModel_9.png "Debug Output")
 
 Add another global parameter to your Python script to prevent the *FieldListener* from executing during the *imageChanged* event.
 
@@ -431,8 +431,8 @@ def itemClicked(field: "mevislab.MLABField"):
 While the *imageChanged* function is executed, the parameter is set to *False* and the *itemClicked* function does not print anything.
 
 ## Summary
-* *ItemModelViews* allow you to define your own abstract hierarchical item model with generically named attributes
-* This model can be provided as Output and added to the Panel of your module
+* *ItemModelViews* allow you to define your own abstract hierarchical item model with generically named attributes.
+* This model can be provided as Output and added to the Panel of your module.
 * Interactions with the model can be implemented by using a *FieldListener*.
 
 {{< networkfile "examples/basic_mechanisms/Modules.zip" >}}

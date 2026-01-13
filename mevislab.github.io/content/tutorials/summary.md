@@ -17,7 +17,7 @@ menu:
 ## Summary
 This chapter will summarize all previous chapters and you will develop a whole application in MeVisLab. The complete workflow from developing a prototype to delivering your final application to your customer is explained step-by-step.
 
-![Prototype to Product](/images/tutorials/summary/Prototyping.png "Prototype to Product")
+![Prototype to Product](images/tutorials/summary/Prototyping.png "Prototype to Product")
 
 {{<alert class="warning" caption="Licensing">}}
 Some of the features described here will require a separate license. Building an installable executable requires the **MeVisLab ApplicationBuilder** license. It extends the **MeVisLab SDK** so that you can generate an installer of your developed macro module.
@@ -28,8 +28,8 @@ Free evaluation licenses of the **MeVisLab ApplicationBuilder**, time-limited to
 ## Prototype
 ### Step 1: Develop your network {#DevelopNetwork}
 In the first step, you are developing an application based on the following requirements:
-* **Requirement 1**: The application shall be able to load DICOM data.
-* **Requirement 2**: The application shall provide a 2D and a 3D viewer.
+* **Requirement 1**: The application shall be able to load DICOM data
+* **Requirement 2**: The application shall provide a 2D and a 3D viewer
 * **Requirement 3**: The 2D viewer shall display the loaded images
 * **Requirement 4**: The 2D viewer shall provide the possibility to segment parts of the image based on a RegionGrowing algorithm
   * **Requirement 4.1**: It shall be possible to click into the image for defining a marker position for starting the RegionGrowing
@@ -44,26 +44,26 @@ In the first step, you are developing an application based on the following requ
   * **Requirement 9.2**: Segmentation results
   * **Requirement 9.3**: All
 
-### Step 2: Create your macro module
-Your network will be encapsulated in a macro module for later application development. For details about macro modules, see [Example 2.2: Global macro modules](/tutorials/basicmechanisms/macromodules/globalmacromodules/).
+### Step 2: Create Your Macro Module
+Your network will be encapsulated in a macro module for later application development. For details about macro modules, see [Example 2.2: Global macro modules](tutorials/basicmechanisms/macromodules/globalmacromodules/).
 
-### Step 3: Develop a User Interface and add Python Scripting {#UIDesign}
+### Step 3: Develop a User Interface and Add Python Scripting {#UIDesign}
 Develop the UI and Python Scripts based on your requirements from Step 1. The resulting UI will look like below mockup:
 
-![User Interface Design](/images/tutorials/summary/UIMockUp.png "User Interface Design")
+![User Interface Design](images/tutorials/summary/UIMockUp.png "User Interface Design")
 
 ## Review
-### Step 4: Write automated tests for your macro module
+### Step 4: Write Automated Tests for Your Macro Module
 Test your macro module in MeVisLab. Your requirements from Step 1 are translated into test cases written in Python. The fields accessible via Python as defined in Step 2 shall be used to test your application.
 
-### Step 5: Create an installable executable
+### Step 5: Create an Installable Executable
 Create a standalone application by using the **MeVisLab ApplicationBuilder** and install the application on another system.
 
 ## Refine
-### Step 6: Update your network and macro module
+### Step 6: Update Your Network and Macro Module
 Integrate feedback from customers having installed your executable and adapt your test cases from Step 4.
 
-### Step 7: Update your installable executable
+### Step 7: Update Your Installable Executable
 Re-build your executable and release a new version of your application.
 
 The above loop can easily be repeated until your product completely fulfills your defined requirements.

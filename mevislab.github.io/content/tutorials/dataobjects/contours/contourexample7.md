@@ -18,43 +18,43 @@ menu:
 
 ## Introduction
 
-In this example, we are using the module `CSOListContainer` instead of the `CSOManager`. The `CSOManager` is a heavy weight, UI driven module. You can use it to see all of your CSOs, CSOLists and CSOGroups in the module panel. The `CSOListContainer` is a light weight module with focus on Python scripting. We recommend to use this module for final application development, because Python provides much more flexibility in handling CSO objects.
+In this example, we are using the module `CSOListContainer` instead of the `CSOManager`. The `CSOManager` is a heavyweight, UI driven module. You can use it to see all of your CSOs and CSOGroups in the module panel. The `CSOListContainer` is a lightweight module with focus on Python scripting. We recommend to use this module for final application development, because Python provides much more flexibility in handling CSO objects.
 
-![CSOManager](/images/tutorials/dataobjects/contours/Example_7_1.png "CSOManager")
+![CSOManager](images/tutorials/dataobjects/contours/Example_7_1.png "CSOManager")
 
-![CSOListContainer](/images/tutorials/dataobjects/contours/Example_7_2.png "CSOListContainer")
+![CSOListContainer](images/tutorials/dataobjects/contours/Example_7_2.png "CSOListContainer")
 
 We will create multiple CSOs by using the `SoCSOEllipseEditor` and dynamically add these CSOs to different groups via Python scripting depending on their size. CSOs larger than a configurable threshold will be red, small CSOs will be drawn green. The colors will also be adapted if we manually resize the contours.
 
-## Steps to do
-### Develop your network
+## Steps to Do
+### Develop Your Network
 
-Add a `LocalImage` and a `View2D` module to your workspace and connect them as shown below. Load the file *ProbandT1.dcm* from MeVisLab demo data. In order to create contours (CSOs), we need a `SoView2DCSOExtensibleEditor` module. It manages attached CSO editors, renderers and offers an optional default renderer for all types of CSOs.
+Add a `LocalImage` and a `View2D` module to your workspace and connect them as shown below. Load the file *ProbandT1.dcm* from MeVisLab demo data. In order to create contours (CSOs), we need a `SoView2DCSOExtensibleEditor` module. It manages attached CSO editors, renderers, and offers an optional default renderer for all types of CSOs.
 
 Add a `SoCSOEllipseEditor` and a `CSOListContainer` to the `SoView2DCSOExtensibleEditor`
 
-![Initial Network](/images/tutorials/dataobjects/contours/Example_7_3.png "Initial Network")
+![Initial Network](images/tutorials/dataobjects/contours/Example_7_3.png "Initial Network")
 
 You are now able to draw CSOs.
 
 Create a separate directory for this tutorial and save your network in this empty directory. This makes the final structure easier to read.
 
-### Create a local macro module
+### Create a Local Macro Module
 Select the module `CSOListContainer` and open menu {{<menuitem "File" "Create Local Macro" >}}. Enter some details about your new local macro module and click finish. Leave the already defined output as is.
 
-![Create Local Macro](/images/tutorials/dataobjects/contours/Example_7_4.png "Create Local Macro")
+![Create Local Macro](images/tutorials/dataobjects/contours/Example_7_4.png "Create Local Macro")
 
 The appearance of the `CSOListContainer` module changes, because it is a macro module named `csoList` now.
 
-![Network with new local macro](/images/tutorials/dataobjects/contours/Example_7_5.png "Network with new local macro")
+![Network with new local macro](images/tutorials/dataobjects/contours/Example_7_5.png "Network with new local macro")
 
-The behavior of your network does not change. You can still draw the same CSOs and they are still managed by the `CSOListContainer` module. The reason why we created a local macro with a single module inside is, that we want to add Python scripting to the module. Python scripts can only be added to macro modules.
+The behavior of your network does not change. You can still draw the same CSOs and they are still managed by the `CSOListContainer` module. The reason why we created a local macro with a single module inside is that we want to add Python scripting to the module. Python scripts can only be added to macro modules.
 
 Open the context menu of your `csoList` module {{< mousebutton "right" >}} and select {{<menuitem "Related Files" "csoList.script" >}}.
 
-The MeVisLab text editor MATE opens, showing your script file. You can see the output of your module as *CSOListContainer.outCSOList*. We want to define a threshold for the color of our CSOs. Therefore add another field to the *Parameters* section of your script file named *areaThreshold*. Define the *type* as *Float* and *value* as *2000.0*.
+The MeVisLab text editor MATE opens, showing your script file. You can see the output of your module as *CSOListContainer.outCSOList*. We want to define a threshold for the color of our CSOs. For this, add another field to the *Parameters* section of your script file named *areaThreshold*. Define the *type* as *Float* and *value* as *2000.0*.
 
-In order to call Python functions, we also need a Python file. Add a *Commands* section and define the *source* of the Python file as *$(LOCAL)/csoList.py*. Also add an *initCommand* as *initCSOList*. The initCommand defines the Python function which is called whenever the module is added to the workspace or reloaded.
+In order to call Python functions, we also need a Python file. Add a *Commands* section and define the *source* of the Python file as *$(LOCAL)/csoList.py*. Also add an *initCommand* as *initCSOList*. The initCommand defines the Python function that is called whenever the module is added to the workspace or reloaded.
 
 {{< highlight filename="csoList.script" >}}
 ```Stan
@@ -81,7 +81,7 @@ Right-click {{< mousebutton "right" >}} on the *initCSOList* command and select 
 
 Back in MeVisLab, the new field *areaThreshold* can be seen in Module Inspector when selecting your module. The next step is to write the Python function *initCSOList*.
 
-### Write Python script
+### Write Python Script
 Whenever the local macro module is added to the workspace or reloaded, new CSOLists shall be created and we need a possibility to update the lists whenever a new CSO has been created or existing contours changed.
 
 Define a function *setupCSOList*.
@@ -109,7 +109,7 @@ The function gets the current CSOList from the output field of the `CSOListConta
 
 We also create two new CSO lists: one list for small contours, one list for larger contours, depending on the defined *areaThreshold* from the modules parameter.
 
-Additionally, we also want to define different colors for the CSOs in the lists. Small contours shall be drawn green, large contours shall be red.
+Additionally, we also want to define different colors for the CSOs in the lists. Small contours shall be drawn green, large contours shall be drawn red.
 
 In order to listen for changes on the contours, we need to register for notifications. Create a new function *registerForNotification*.
 
@@ -182,7 +182,7 @@ def _getCSOList():
 ```
 {{</highlight>}}
 
-![Final Network](/images/tutorials/dataobjects/contours/Example_7_6.png "Final Network")
+![Final Network](images/tutorials/dataobjects/contours/Example_7_6.png "Final Network")
 
 If you now draw contours, they are automatically colored depending on the size. You can also edit existing contours and the color is adapted.
 

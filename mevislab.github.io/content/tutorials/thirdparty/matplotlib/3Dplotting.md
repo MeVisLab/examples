@@ -16,7 +16,7 @@ menu:
 
 ## Introduction 
 
-In this tutorial, we will equip the macro module we created in the [Example 1: Module Setup](/tutorials/thirdparty/matplotlib/modulesetup) and later on adapted by enabling it to plot grayscale distributions of single slices and sequences in 2D in [Example 2: 2D Plotting](/tutorials/thirdparty/matplotlib/2dplotting) with a three dimensional plotting functionality. 
+In this tutorial, we will equip the macro module we created in the [Example 1: Module Setup](tutorials/thirdparty/matplotlib/modulesetup) and later on adapted by enabling it to plot grayscale distributions of single slices and sequences in 2D in [Example 2: 2D Plotting](tutorials/thirdparty/matplotlib/2dplotting) with a three-dimensional plotting functionality. 
 
 ## Steps to do 
 
@@ -56,8 +56,8 @@ After saving, you should be able to reproduce results like these:
 You cannot zoom into 3D plots on a Matplotlib canvas. Try changing the viewing angle instead.
 {{</alert>}}
 
-![Single Slice 3D](/images/tutorials/thirdparty/Matplotlib27.PNG)
-![Single Slice 3D](/images/tutorials/thirdparty/Matplotlib29.PNG)
+![Single Slice 3D](images/tutorials/thirdparty/Matplotlib27.PNG)
+![Single Slice 3D](images/tutorials/thirdparty/Matplotlib29.PNG)
 
 You can download the .py file below if you want.
 {{< networkfile "/tutorials/thirdparty/matplotlib/BaseNetwork3D.py" >}}

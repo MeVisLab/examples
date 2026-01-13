@@ -22,14 +22,14 @@ World coordinates also refer to the patient axes. They are:
 * Right-handed
 * Not standardized regarding their origin
 
-![World Coordinates in Context of the Human Body](/images/tutorials/visualization/V2_00.png "World Coordinates in Context of the Human Body")
+![World Coordinates in Context of the Human Body](images/tutorials/visualization/V2_00.png "World Coordinates in Context of the Human Body")
 
-The DICOM (Digital Imaging and Communications in Medicine) standard defines a data format that groups information into data sets. This way, the image data is always kept together with all meta information like patient ID, study time, series time, acquisition data etc. The image slice is represented by another tag with pixel information.
+The DICOM (Digital Imaging and Communications in Medicine) standard defines a data format that groups information into data sets. This way, the image data is always kept together with all meta information like patient ID, study time, series time, acquisition data, etc. The image slice is represented by another tag with pixel information.
 
-DICOM tags have unique numbers, encoded as two 16 bit numbers, usually shown in hexadecimal notation as two four-digit numbers (xxxx,xxxx). These numbers are the data group number and the data element number.
+DICOM tags have unique numbers, encoded as two 16-bit numbers, usually shown in hexadecimal notation as two four-digit numbers (xxxx,xxxx). These numbers are the data group number and the data element number.
 
 {{<alert class="info" caption="Info">}}
-Although DICOM is a standard, often the data that is received / recorded does not follow the standard. Wrongly used tags or missing mandatory tags may cause problems in data processing.
+Although DICOM is a standard, often the data that is received/recorded does not follow the standard. Wrongly used tags or missing mandatory tags may cause problems in data processing.
 {{</alert>}}
 
 Some typical modules for DICOM handling:
@@ -48,20 +48,20 @@ For handling and manipulating DICOM data in C++, the DICOM toolkit [DCMTK](https
 Another option for Python is [pydicom](https://pydicom.github.io/).
 {{</alert>}}
 
-## Orthogonal views
+## Orthogonal Views
 The module `OrthoView2D` provides a 2D view displaying the input image in three orthogonal viewing directions. By default, the view is configured as *Cube* where the transverse view is placed in the top right segment, sagittal in bottom left and coronal in bottom right segment. Use the left mouse button to set a position in the data set. This position will be displayed in all available views and is available as field *worldPosition*. 
 
-![OrthoView2D](/images/tutorials/basicmechanics/OrthoView2D.png "OrthoView2D")
+![OrthoView2D](images/tutorials/basicmechanics/OrthoView2D.png "OrthoView2D")
 
-As already learned in the previous example [1.1: MeVisLab Coordinate Systems](/tutorials/basicmechanisms/coordinatesystems/coordinatesystems), world and voxel positions are based on different coordinate systems. Selecting the top left corner of any of your views will not show a world position of 0, 0, 0. You can move the mouse cursor to the voxel position 0, 0, 0 as seen in the image information of the viewers in brackets *(x, y, z)*. The field *worldPosition* then shows the location of the image in world coordinate system (see `Info` module).
+As already learned in the previous example [1.1: MeVisLab Coordinate Systems](tutorials/basicmechanisms/coordinatesystems/coordinatesystems), world and voxel positions are based on different coordinate systems. Selecting the top left corner of any of your views will not show a world position of 0, 0, 0. You can move the mouse cursor to the voxel position 0, 0, 0 as seen in the image information of the viewers in brackets *(x, y, z)*. The field *worldPosition* then shows the location of the image in world coordinate system (see `Info` module).
 
-![OrthoView2D Voxel- and World Position](/images/tutorials/basicmechanics/OrthoView2D_WorldPosition.png "OrthoView2D Voxel- and World Position")
+![OrthoView2D Voxel- and World Position](images/tutorials/basicmechanics/OrthoView2D_WorldPosition.png "OrthoView2D Voxel- and World Position")
 
 Another option is to use the module `OrthoReformat3` which transforms the input image (by rotating and/or flipping) into the three main views commonly used: 
 * Output 0: Sagittal view
 * Output 1: Coronal view
 * Output 2: Transverse view
 
-![OrthoReformat3](/images/tutorials/basicmechanics/OrthoReformat3.png "OrthoReformat3")
+![OrthoReformat3](images/tutorials/basicmechanics/OrthoReformat3.png "OrthoReformat3")
 
 The general `View2D` always uses the original view from the image data without reconstructing another view. In case of *ProbandT1*, this is the sagittal view.

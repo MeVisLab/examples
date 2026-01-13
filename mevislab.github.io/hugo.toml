@@ -4,7 +4,6 @@ languageCode = "en-us"
 title = "MeVisLab Examples"
 theme = "MeVisLab"
 relativeURLs = false
-canonifyURLs = true
 
 [markup]
   [markup.goldmark]

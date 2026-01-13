@@ -17,11 +17,11 @@ menu:
 {{< youtube "dOyncLUpclU" >}}
 
 ## Introduction
-In this step, we will develop a user interface and add Python scripting to the macro module you created in [Step 2](/tutorials/summary/summary2).
+In this step, we will develop a user interface and add Python scripting to the macro module you created in [Step 2](tutorials/summary/summary2).
 
 ## Steps to do
 ### Develop the User Interface
-A mockup of the user interface you are going to develop is available [here](/tutorials/summary#UIDesign). The interface provides the possibility to load files and shows a 2D and a 3D viewer. In addition to that, some settings and information for our final application are available.
+A mockup of the user interface you are going to develop is available [here](tutorials/summary#UIDesign). The interface provides the possibility to load files and shows a 2D and a 3D viewer. In addition to that, some settings and information for our final application are available.
 
 Search for your macro module and add it to your workspace. Right-click {{< mousebutton "right">}} and select {{< menuitem "Related Files" "<MACRO_MODULE_NAME>.script" >}}.
 
@@ -67,7 +67,7 @@ Window {
 
 You can preview your initial layout in MeVisLab by double-clicking your module {{< mousebutton "left" >}}.
 
-![Initial Window Layout](/images/tutorials/summary/Example3_1.png "Initial Window Layout")
+![Initial Window Layout](images/tutorials/summary/Example3_1.png "Initial Window Layout")
 
 You can see the 4 vertical aligned parts as defined in the \*.script file. Now we are going to add the content of the Boxes.
 
@@ -127,7 +127,7 @@ Window {
 
 Again, you can preview your user interface in MeVisLab directly. You can already select a file to open. The image is available at the output of the `LocalImage` module in your internal network but the Viewers are missing in our interface.
 
-![Source Box](/images/tutorials/summary/Example3_2.png "Source Box")
+![Source Box](images/tutorials/summary/Example3_2.png "Source Box")
 
 ##### Viewing
 Add the 2 viewer modules to the *Viewing* section of your \*.script file and define their field as *View2D.self* and *SoExaminerViewer.self*. Set *expandX = Yes* and *expandY = Yes* for both viewing modules. We want them to resize in case the size of the Window changes.
@@ -156,7 +156,7 @@ Set the 2D Viewer type to *SoRenderArea* and the 3D Viewer type to *SoExaminerVi
 ```
 {{</highlight>}}
 
-![2D and 3D Viewer](/images/tutorials/summary/Example3_3.png "2D and 3D Viewer")
+![2D and 3D Viewer](images/tutorials/summary/Example3_3.png "2D and 3D Viewer")
 
 The images selected in the *Source* section are shown in 2D and 3D. We simply re-used the existing fields and viewers from your internal network and are already able to interact with the images. As the `View2D` of your internal network itself provides the possibility to accept markers and starts the `RegionGrowing`, this is also already possible and the segmentations are shown in 2D and 3D.
 
@@ -313,7 +313,7 @@ Window {
 
 Your user interface of the macro module should now look similar to this:
 
-![User Interface without Python Scripting](/images/tutorials/summary/Example3_4.png "User Interface without Python Scripting")
+![User Interface without Python Scripting](images/tutorials/summary/Example3_4.png "User Interface without Python Scripting")
 
 For the next elements, we require Python scripting. Nevertheless, you are already able to use your application and perform the basic functionalities without writing any line of code.
 
@@ -519,12 +519,12 @@ Add the field to the Info section of your window.
 
 Opening the window of your macro module in MeVisLab now provides all functionalities we wanted to achieve. You can also play around in the window and define some additional Boxes or MDL controls but the basic application prototype is now done.
 
-![Final Macro module](/images/tutorials/summary/Example3_5.png "Final Macro module")
+![Final Macro module](images/tutorials/summary/Example3_5.png "Final Macro module")
 
 ### MeVisLab GUI Editor
 MATE provides a powerful GUI Editor showing a preview of your current user interface and allowing to re-order elements in the UI via drag and drop. In MATE open {{< menuitem "Extras" "Enable GUI Editor" >}}.
 
-![MeVisLab GUI Editor](/images/tutorials/summary/Example3_4b.png "MeVisLab GUI Editor")
+![MeVisLab GUI Editor](images/tutorials/summary/Example3_4b.png "MeVisLab GUI Editor")
 
 Changing the layout via drag and drop automatically adapts your *\*.script* file. Save and Reload the script and your changes are applied.
 

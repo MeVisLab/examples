@@ -3,12 +3,12 @@ title: "Contact"
 date: 2022-06-15T08:54:53+02:00
 draft: false
 ---
-### Feedback is valuable and always appreciated! 
+### Feedback is Valuable and Always Appreciated! 
 
 #### MeVisLab Licensing
 Having any questions on MeVisLab Licensing? Please contact the [MeVisLab Sales Team](mailto://sales@mevislab.de)
 
-#### MeVisLab forum
+#### MeVisLab Forum
 Searching for a forum to ask your specific MeVisLab questions? Having trouble with functionalities? Ask [here](https://forum.mevislab.de)! Someone else might know the answer. If not - one of our developers will help you out!
 
 #### General Questions

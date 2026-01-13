@@ -17,9 +17,9 @@ menu:
 ## Introduction 
 
 We will adapt the previously created macro module to be able to overlay two defined slices to compare their grayscale distributions. 
-+ The module we are adapting has been set up in the [Example 1: Module Setup](/tutorials/thirdparty/matplotlib/modulesetup) tutorial.
++ The module we are adapting has been set up in the [Example 1: Module Setup](tutorials/thirdparty/matplotlib/modulesetup) tutorial.
 + The panel and two-dimensional plotting functionality has been added in [Example 2: 2D Plotting]
-  (/tutorials/thirdparty/matplotlib/2dplotting).
+  (tutorials/thirdparty/matplotlib/2dplotting).
 
 ## Steps to do
 At first, we will extend the panel: Open your `BaseNetwork` macro module within an empty MeVisLab workspace and select the .script file from its related files. 
@@ -45,7 +45,7 @@ Add the following code into your .script file, between the "Single Slice" and th
 
 Your panel should now be altered to look like this: 
 
-![MATE Preview](/images/tutorials/thirdparty/Matplotlib14.PNG)
+![MATE Preview](images/tutorials/thirdparty/Matplotlib14.PNG)
 
 We will now add the "comparison" function, to give the "Plot" button in our "Comparison" box a purpose. To do so, change into your modules .py file and choose a cosy place for the following piece of code:
 
@@ -80,8 +80,8 @@ def comparison():
 
 You should now be able to reproduce results like these:
 
-![Comparison](/images/tutorials/thirdparty/Matplotlib16.PNG)
-![Comparison](/images/tutorials/thirdparty/Matplotlib17.PNG)
+![Comparison](images/tutorials/thirdparty/Matplotlib16.PNG)
+![Comparison](images/tutorials/thirdparty/Matplotlib17.PNG)
 
 ### Summary
 + Grayscale distributions of two slices can be layered to compare them and make deviations noticeable

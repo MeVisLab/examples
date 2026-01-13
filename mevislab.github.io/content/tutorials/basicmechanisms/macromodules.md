@@ -28,17 +28,17 @@ You have two main options for developing a macro module:
 
 * **With Internal Networks**: Use a macro module to reuse a network of modules. For example, if you build a network that applies a specific image filter and you want to use this setup in multiple projects, you can wrap the entire network into a single macro module. This way, you don’t need to manually reconnect all the individual modules each time — you just use your macro module. You can also add inputs and outputs to connect your internal network with other modules.
 
-An example can be found in chapter [Basic Mechanics of MeVisLab (Example: Building a Contour Filter)](/tutorials/basicmechanisms#TutorialMacroModules).
+An example can be found in chapter [Basic Mechanics of MeVisLab (Example: Building a Contour Filter)](tutorials/basicmechanisms#TutorialMacroModules).
 
 * **Without Internal Networks**: Use a macro module to add your own Python code. If MeVisLab is missing a specific functionality, you can write your own Python script and execute it it in a macro module. This allows you to extend the software with custom behavior that integrates smoothly into your project. You can see the Python code at the right side of the image below.
 
 The image shows these two options. The left side encapsulates a network of three modules into one macro module. The right side shows a macro module without an internal network, only containing your custom Python script.
 
-A typical example for macro modules without an internal network is the execution of a pre-trained AI model on an input ML image, see [Example 2: Brain Parcellation using PyTorch](/tutorials/thirdparty/pytorch/pytorchexample2/) for details.
+A typical example for macro modules without an internal network is the execution of a pre-trained AI model on an input ML image, see [Example 2: Brain Parcellation using PyTorch](tutorials/thirdparty/pytorch/pytorchexample2/) for details.
 
 It is also possible to combine both approaches. You can add internal networks and additionally write Python code for user interaction and processing.
 
- ![Internal Processing and Python Interaction](/images/tutorials/basicmechanics/with.png "Internal Processing and Python Interaction")
+ ![Internal Processing and Python Interaction](images/tutorials/basicmechanics/with.png "Internal Processing and Python Interaction")
 
 ### Benefits of Macro Modules:
 * **Encapsulation:** 
@@ -65,7 +65,7 @@ A Local Macro module in MeVisLab exists within the context of the current networ
 *	A local macro can only be reused elsewhere by copying it into another folder with your network file.
 
 #### Global Macro Module:
- A global macro module is stored in a central location within your MeVisLab installation. The directory is called Package. Once a global macro module is created, it appears in the module browser and can be used in any MeVisLab network you open. See [Package creation](/tutorials/basicmechanisms/macromodules/package/) for details about Packages.
+ A global macro module is stored in a central location within your MeVisLab installation. The directory is called Package. Once a global macro module is created, it appears in the module browser and can be used in any MeVisLab network you open. See [Package creation](tutorials/basicmechanisms/macromodules/package/) for details about Packages.
 
  Local macro modules can be converted to global macro modules. MeVisLab then adds a definition file containing the name and package of the module and copies the content to your selected package directory. Package directories are loaded automatically when you start MeVisLab in case they have been added to your user packages via main menu {{< menuitem "Edit" "Preferences" "Packages" >}}.
 
@@ -99,16 +99,16 @@ You have two options when adding fields to your macro module:
 * **Define your own fields:** You can define your own fields by specifying their name, type, and default value in the *\*.script* file. This allows you to provide custom parameters for your macro module, tailored to your specific needs. These parameters can be use as input from the user or output from the modules processing.
 * **Reuse fields from the internal network:**  Instead of defining your own field, you can expose an existing field from one of the modules of your internal network. To do this, you reference the *internalName* of the internal field you want to reuse. This makes the internal field accessible at the macro module level, allowing users to interact with it directly without duplicating parameters. Changes of the field value are automatically applied in your internal network.
 
-![Inputs, Outputs, and Fields](/images/tutorials/basicmechanics/fields.png "Inputs, Outputs, and Fields")
+![Inputs, Outputs, and Fields](images/tutorials/basicmechanics/fields.png "Inputs, Outputs, and Fields")
 
 ### Files Associated with a Macro Module:
 Macro modules typically need the following files:
 * **Definition file (*\*.def*):** The module definition file contains the definition and information about the module like name, author, package, etc. **Definition files are only available for global macro modules**.
 * **Script file (*\*.script*):** The script file defines inputs, outputs, fields and the user interface of the macro module. In case you want to add Python code, it includes the reference to the Python file. The *\*.script* file allows you to define Python functions to be called on field changes and user interactions.
 
-![user interface and the internal interface](/images/tutorials/basicmechanics/mycountourFilter.png "user interface and the internal interface")
+![user interface and the internal interface](images/tutorials/basicmechanics/mycountourFilter.png "user interface and the internal interface")
 
-* **Python file (*\*.py*):** *(Optional)* The Python file contains the Python code that is used by the module. See section [Python functions and Script files](/tutorials/basicmechanisms/macromodules#PythonAndScripts) for different options to add Python functions to user interactions.
+* **Python file (*\*.py*):** *(Optional)* The Python file contains the Python code that is used by the module. See section [Python functions and Script files](tutorials/basicmechanisms/macromodules#PythonAndScripts) for different options to add Python functions to user interactions.
 * **Internal network file (*\*.mlab*):** *(Optional)* Stores the internal network of the module if available. This file essentially defines the macro module's internal structure and connections.
 * **Macro module help file (*\*.mhelp*):** *(Optional)* Provides help documentation for the macro module. This file is used to display information to users about the module’s functionality, usage, and any specific instructions.
 
@@ -119,14 +119,14 @@ Python functions can be executed on any user interaction with your macro module.
 * **Module initialization**: You can add the *initCommand* to the *Commands* section and the given Python function is called whenever the module is added to the workspace or reloaded.
 * **Window creation**: You can add the *initCommand* to the *Window* section and the given Python function is called whenever the panel of the module is opened.
 * **User interaction**: You can add commands to any user interface element like *Buttons* to call Python functions on user interactions with this element. The image below shows you the user interface and the internal interface:
-* **Field changes**: You can also react on any changes of fields in your module and create Field Listeners. See section [Field Listeners](/tutorials/basicmechanisms/macromodules#FieldListeners) for details.
+* **Field changes**: You can also react on any changes of fields in your module and create Field Listeners. See section [Field Listeners](tutorials/basicmechanisms/macromodules#FieldListeners) for details.
 
 ### Field Listeners: {#FieldListeners}
 Field listeners are mechanisms to execute Python code automatically anytime the value of a field changes. This allows you to create dynamic responses to user interactions in the module's parameter panel.
 
 You can define field listeners within the *Commands* sections of the *\*.script* file. You get a reference to the field object and then use a method to add a callback function that will be executed when the field's value is modified.
 
-For an example see [Example 2.5.2: Module interactions via Python scripting](/tutorials/basicmechanisms/macromodules/scriptingexample2/).
+For an example see [Example 2.5.2: Module interactions via Python scripting](tutorials/basicmechanisms/macromodules/scriptingexample2/).
 
 ## Summary
 * Macro modules allow you to add your own functionality to MeVisLab. You can add inputs and outputs and connect existing modules to your new macro module.

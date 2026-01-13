@@ -17,7 +17,7 @@ menu:
 {{< youtube "E0H87Cimu_M">}}
 
 ## Introduction
-In this example you develop a network to show some differences between volume rendering and the MeVisLab Path Tracer. You will visualize the same scene using both 3D rendering techniques and some of the modules for path tracing.
+In this example, you develop a network to show some differences between volume rendering and the MeVisLab Path Tracer. You will visualize the same scene using both 3D rendering techniques and some of the modules for path tracing.
 
 {{<alert class="warning" caption="Attention">}}
 The MeVis Path Tracer requires an NVIDIA graphics card with CUDA support. In order to check your hardware, open MeVisLab and add a `SoPathTracer` module to your workspace. You will see a message if your hardware does not support CUDA:
@@ -26,112 +26,112 @@ The MeVis Path Tracer requires an NVIDIA graphics card with CUDA support. In ord
 *Handling cudaGetDeviceCount returned 35 (CUDA driver version is insufficient for CUDA runtime version)*
 {{</alert>}}
 
-## Steps to do
-As a first step for comparison, you are creating a 3D scene with 2 spheres using the already known volume rendering.
+## Steps to Do
+As a first step for comparison, you are creating a 3D scene with two spheres using the already known volume rendering.
 
 ### Volume Rendering
 #### Create 3D objects
-Add 3 `WEMInitialize` modules for 1 *Cube* and 2 *Icosphere* to your workspace and connect each of them to a `SoWEMRenderer`. Set *instanceName* of the `WEMInitialize` modules to *Sphere1*, *Sphere2* and *Cube*. Set *instanceName* of the `SoWEMRenderer` modules to *RenderSphere1*, *RenderSphere2* and *RenderCube*.
+Add three `WEMInitialize` modules for one *Cube* and two *Icosphere* to your workspace and connect each of them to a `SoWEMRenderer`. Set *instanceName* of the `WEMInitialize` modules to *Ccube*, *Sphere1*, and *Sphere2*. Set *instanceName* of the `SoWEMRenderer` modules to and *RenderCube*, *RenderSphere1*, and *RenderSphere2*.
 
-For *RenderSphere1* define a *Diffuse Color* *yellow* and set *Face Alpha* to *0.5*. The *RenderCube* remains as is and the *RenderSphere2* is defined as *Diffuse Color* *red* and *Face Alpha* *0.5*.
+For *RenderSphere1*, define a *Diffuse Color* *yellow* and set *Face Alpha* to *0.5*. The *RenderCube* remains as is and the *RenderSphere2* is defined as *Diffuse Color* *red* and *Face Alpha* *0.5*.
 
 Group your modules and name the group *Initialization*. Your network should now look like this:
 
-![Example Initialization](/images/tutorials/visualization/pathtracer/Example1_1.png "Example Initialization")
+![Example Initialization](images/tutorials/visualization/pathtracer/Example1_1.png "Example Initialization")
 
-Use the Output Inspector for your `SoWEMRenderer` outputs and inspect the 3D rendering. You should have a yellow and a red sphere and a grey cube.
+Use the Output Inspector for your `SoWEMRenderer` outputs and inspect the 3D rendering. You should have a yellow and a red sphere, and a grey cube.
 
-{{< imagegallery 3 "/images/tutorials/visualization/pathtracer" "Sphere1" "Sphere2" "Cube" >}}
+{{< imagegallery 3 "images/tutorials/visualization/pathtracer" "Sphere1" "Sphere2" "Cube" >}}
 
 #### Rendering
 Add 2 `SoGroup` modules and a `SoBackground` to your network. Connect the modules as seen below.
 
-![Example Group](/images/tutorials/visualization/pathtracer/Example1_2.png "Example Group")
+![Example Group](images/tutorials/visualization/pathtracer/Example1_2.png "Example Group")
 
 If you now inspect the output of the `SoGroup`, you will see an orange sphere. 
 
-![Missing Translation](/images/tutorials/visualization/pathtracer/Example1_3.png "Missing Translation")
+![Missing Translation](images/tutorials/visualization/pathtracer/Example1_3.png "Missing Translation")
 
-You did not translate the locations of our 3 objects, they are all located at the same place in world coordinates. Open the `WEMInitialize` panels of your 3D objects and define the following translations and scalings:
+You did not translate the locations of the three objects; they are all located at the same place in world coordinates. Open the `WEMInitialize` panels of your 3D objects and define the following translations and scalings:
 
-{{< imagegallery 3 "/images/tutorials/visualization/pathtracer" "WEMInitializeSphere1" "WEMInitializeSphere2" "WEMInitializeCube" >}}
+{{< imagegallery 3 "images/tutorials/visualization/pathtracer" "WEMInitializeSphere1" "WEMInitializeSphere2" "WEMInitializeCube" >}}
 
-The result of the `SoGroup` now shows 2 spheres on a rectangular cube.
+The result of the `SoGroup` now shows two spheres on a rectangular cube.
 
-![Objects Translated and Scaled](/images/tutorials/visualization/pathtracer/Example1_4.png "Objects Translated and Scaled")
+![Objects Translated and Scaled](images/tutorials/visualization/pathtracer/Example1_4.png "Objects Translated and Scaled")
 
-For the viewer, you now add a `SoCameraInteraction`, a `SoDepthPeelRenderer` and a `SoRenderArea` module to your network and connect them.
+For the viewer, you now add a `SoCameraInteraction`, a `SoDepthPeelRenderer`, and a `SoRenderArea` module to your network and connect them.
 
-![Network with Viewer](/images/tutorials/visualization/pathtracer/Example1_5.png "Network with Viewer")
+![Network with Viewer](images/tutorials/visualization/pathtracer/Example1_5.png "Network with Viewer")
 
-You now have a 3D volume rendering of our 3 objects.
+You now have a 3D volume rendering of our three objects.
 
-In order to distinguish between the 2 viewers, you now add a label to the `SoRenderArea` describing that this is the *Volume Rendering*. Add a `SoMenuItem`, a `SoBorderMenu` and a `SoSeparator` to your `SoRenderArea`.
+In order to distinguish between the two viewers, you now add a label to the `SoRenderArea` describing that this is the *Volume Rendering*. Add a `SoMenuItem`, a `SoBorderMenu`, and a `SoSeparator` to your `SoRenderArea`.
 
-![SoMenuItem](/images/tutorials/visualization/pathtracer/Example1_6.png "SoMenuItem")
+![SoMenuItem](images/tutorials/visualization/pathtracer/Example1_6.png "SoMenuItem")
 
 Define the *Label* of the `SoMenuItem` as *Volume Rendering* and set *Border Alignment* to *Top Right* and *Menu Direction* to *Horizontal* for the `SoBorderMenu`.
 
-![Label in SoRenderArea](/images/tutorials/visualization/pathtracer/Example1_7.png "Label in SoRenderArea")
+![Label in SoRenderArea](images/tutorials/visualization/pathtracer/Example1_7.png "Label in SoRenderArea")
 
 Finally, you should group all modules belonging to your volume rendering.
 
-![Volume Rendering Network](/images/tutorials/visualization/pathtracer/Example1_8.png "Volume Rendering Network")
+![Volume Rendering Network](images/tutorials/visualization/pathtracer/Example1_8.png "Volume Rendering Network")
 
 ### Path Tracing
 For the Path Tracer, you can just re-use our 3D objects from volume rendering. This helps us to compare the rendering results.
 
 #### Rendering
-Path Tracer modules fully integrate into MeVisLab Open Inventor, therefore the general principles and the necessary modules are not completely different. Add a `SoGroup` module to your workspace and connect it to your 3D objects from `SoWemRenderer`. A `SoBackground` as in volume rendering network is not necessary but you add a `SoPathTracerMaterial` and connect it to the `SoGroup`. You can leave all settings as default for now.
+Path Tracer modules fully integrate into MeVisLab Open Inventor, therefore the general principles and the necessary modules are not completely different. Add a `SoGroup` module to your workspace and connect it to your 3D objects from `SoWEMRenderer`. A `SoBackground` as in volume rendering network is not necessary but you add a `SoPathTracerMaterial` and connect it to the `SoGroup`. You can leave all settings as default for now.
 
-![Path Tracer Material](/images/tutorials/visualization/pathtracer/Example1_9.png "Path Tracer Material")
+![Path Tracer Material](images/tutorials/visualization/pathtracer/Example1_9.png "Path Tracer Material")
 
-Add a `SoPathTracerAreaLight`, a `SoPathTracerMesh` and a `SoPathTracer` to a `SoSeparator` and connect the `SoPathTracerMesh` to your `SoGroup`. This adds your 3D objects to a Path Tracer Scene. 
+Add a `SoPathTracerAreaLight`, a `SoPathTracerMesh`, and a `SoPathTracer` to a `SoSeparator` and connect the `SoPathTracerMesh` to your `SoGroup`. This adds your 3D objects to a Path Tracer Scene. 
 
-![Path Tracer](/images/tutorials/visualization/pathtracer/Example1_10.png "Path Tracer")
+![Path Tracer](images/tutorials/visualization/pathtracer/Example1_10.png "Path Tracer")
 
 Selecting the `SoSeparator` output already shows a preview of the same scene rendered via Path Tracing.
 
-![Path Tracer Preview](/images/tutorials/visualization/pathtracer/Example1_11.png "Path Tracer Preview")
+![Path Tracer Preview](images/tutorials/visualization/pathtracer/Example1_11.png "Path Tracer Preview")
 
 Add a `SoCameraInteraction` and a `SoRenderArea` to your network and connect them as seen below.
 
-![SoCameraInteraction](/images/tutorials/visualization/pathtracer/Example1_12.png "SoCameraInteraction")
+![SoCameraInteraction](images/tutorials/visualization/pathtracer/Example1_12.png "SoCameraInteraction")
 
-You can now use both `SoRenderArea` modules to visualize the differences side by side. You should also add the `SoMenuItem`, a `SoBorderMenu` and a `SoSeparator` to your `SoRenderArea` in order to have a label for Path Tracing inside the viewer.
+You can now use both `SoRenderArea` modules to visualize the differences side by side. You should also add the `SoMenuItem`, a `SoBorderMenu`, and a `SoSeparator` to your `SoRenderArea` in order to have a label for Path Tracing inside the viewer.
 
 Define the *Label* of the `SoMenuItem` as *Path Tracing* and set *Border Alignment* to *Top Right* and *Menu Direction* to *Horizontal* for the `SoBorderMenu`.
 
-![Label in SoRenderArea](/images/tutorials/visualization/pathtracer/Example1_13.png "Label in SoRenderArea")
+![Label in SoRenderArea](images/tutorials/visualization/pathtracer/Example1_13.png "Label in SoRenderArea")
 
 Finally, group your Path Tracer modules to another group named *Path Tracing*.
 
-![New Group for Path Tracing](/images/tutorials/visualization/pathtracer/Example1_14.png "New Group for Path Tracing")
+![New Group for Path Tracing](images/tutorials/visualization/pathtracer/Example1_14.png "New Group for Path Tracing")
 
-![Side by Side](/images/tutorials/visualization/pathtracer/Example1_15.png "Side by Side")
+![Side by Side](images/tutorials/visualization/pathtracer/Example1_15.png "Side by Side")
 
-### Share the same camera
+### Share the Same Camera
 Finally, you want to have the same camera perspective in both viewers so that you can see the differences. Add a `SoPerspectiveCamera` module to your workspace and connect it to the volume rendering and the Path Tracer network. The Path Tracer network additionally needs a SoGroup, see below for connection details. You have to toggle *detectCamera* in both of your `SoCameraInteraction` modules in order to synchronize the view for both `SoRenderArea` viewers.
 
-![Camera Synchronization](/images/tutorials/visualization/pathtracer/Example1_16.png "Camera Synchronization")
+![Camera Synchronization](images/tutorials/visualization/pathtracer/Example1_16.png "Camera Synchronization")
 
 {{<alert class="info" caption="Additional Info">}}
-Path Tracing requires a lot of iterations through the image before reaching the best possible result. You can see the maximum number of iterations defined and the current iteration in the `SoPathTracer` panel. The more iterations, the better the result but the more time it takes to finalize your image.
+Path Tracing requires a lot of iterations before reaching the best possible result. You can see the maximum number of iterations defined and the current iteration in the `SoPathTracer` panel. The more iterations, the better the result but the more time it takes to finalize your image.
 {{</alert>}}
 
-{{< imagegallery 3 "/images/tutorials/visualization/pathtracer" "PathTracer_1_Iteration" "PathTracer_100_Iterations" "PathTracer_1000_Iterations" >}}
+{{< imagegallery 3 "images/tutorials/visualization/pathtracer" "PathTracer_1_Iteration" "PathTracer_100_Iterations" "PathTracer_1000_Iterations" >}}
 
 ## Results
 Path Tracing provides a much more realistic way to visualize the behavior of light in a scene. It simulates the scattering and absorption of light within the volume. 
 
 ## Exercises
-1. Play around with different `SoPathTracerMaterial` settings and define different materials
-2. Change the maximum number of iterations in `SoPathTracer` module
-3. Change the configurations in `SoPathTracerAreaLight` module
+1. Play around with different `SoPathTracerMaterial` settings and define different materials.
+2. Change the maximum number of iterations in `SoPathTracer` module.
+3. Change the configurations in `SoPathTracerAreaLight` module.
 
 ## Summary
-* Path Tracer modules can be used the same way as Open Inventor modules
-* A `SoPerspectiveCamera` can be used for multiple viewers to synchronize camera position
-* Path Tracing produces beautiful, photorealistic renderings, but can be computationally expensive
+* Path Tracer modules can be used the same way as Open Inventor modules.
+* A `SoPerspectiveCamera` can be used for multiple viewers to synchronize camera position.
+* Path Tracing produces beautiful, photorealistic renderings, but can be computationally expensive.
 
 {{< networkfile "examples/visualization/example6/pathtracer1.mlab" >}}

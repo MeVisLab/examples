@@ -12,9 +12,9 @@ menu:
     weight: 450
     parent: "basicmechanisms"
 ---
-# Example 4: Installing additional Python packages using the PythonPip module
+# Example 4: Installing Additional Python Packages Using the PythonPip Module
 ## Introduction
-MeVisLab already comes with a lot of integrated third party software tools ready to use. Nevertheless it might be necessary to install additional Python packages for your specific needs. This example will walk you through the process of adding packages through usage of/using the `PythonPip` module.
+MeVisLab already comes with a lot of integrated third-party software tools ready to use. Nevertheless, it might be necessary to install additional Python packages for your specific needs. This example will walk you through the process of adding packages through usage of/using the `PythonPip` module.
 
 The `PythonPip` module allows to work with the Python package manager pip. It can be used to install Python packages into the site-packages of the MeVisLab Python installation.
 
@@ -24,7 +24,7 @@ It technically provides the full Python package ecosystem, though you will have 
 * **All installed packages with C-Extensions are release only**, so you can only import them in a release MeVisLab (under Windows)
 
 {{<alert class="info" caption="Attention">}}
-Under Windows: Existing packages (e. g./ like *NumPy*) can only be upgraded if they haven't already been loaded by MeVisLab's Python. So please make sure to start with a *fresh* MeVisLab
+On Windows: Existing packages (e.g., *NumPy*) can only be upgraded if they haven't already been loaded by MeVisLab's Python. So please make sure to start with a *fresh* MeVisLab
 {{</alert>}}
 
 **Packages that you should not upgrade or install (because they have been adapted for MeVisLab):**
@@ -35,14 +35,14 @@ Under Windows: Existing packages (e. g./ like *NumPy*) can only be upgraded if t
 
 These are some of the most important packages that have been adapted for MeVisLab. If you seem to have a problem upgrading another one that is not listed here, make sure to ask in the [MeVisLab forum](https://forum.mevislab.de) or directly contact our developers via [EMail](mailto://info@mevislab.de).
 
-### Working with the PythonPip module on your MeVisLab workspace
+### Working with the PythonPip Module on your MeVisLab Workspace
 The module `PythonPip` can be found via module search. It provides a user interface showing the currently installed Python packages including version and MeVisLab package it has been installed to.
 
-![PythonPip interface](/images/tutorials/thirdparty/pytorch_example1_2.png "PythonPip interface")
+![PythonPip interface](images/tutorials/thirdparty/pytorch_example1_2.png "PythonPip interface")
 
 Select the package to install the Python package into, write the name of the package and click install.
 
-In case you want to install a specific version, you can also use *<PACKAGE>==1.2.0*
+In the case you want to install a specific version, you can also use *<PACKAGE>==1.2.0*
 
 {{<alert class="info" caption="Attention">}}
 We strongly recommend to install the packages into a MeVisLab user package. This has many advantages:
@@ -53,9 +53,9 @@ We strongly recommend to install the packages into a MeVisLab user package. This
 The only disadvantage: Python commands will not be recognized outside of MeVisLab by default. 
 {{</alert>}}
 
-Thirdparty information and *\*.mli* files are updated automatically.
+Thirdparty information and *.mli* files are updated automatically.
 
-### Using the commandline
+### Using the Commandline
 Another option is using the commandline tool provided by MeVisLab. Under Windows, you need to change to directory *Packages\MeVis\ThirdParty\Python* first.
 
 {{< highlight filename="commandline" >}}
@@ -65,10 +65,10 @@ MeVisPython -m pip ...
 {{</highlight>}}
 
 {{<alert class="info" caption="Attention">}}
-The commandline option does not provide the possibility to install into a specified user package. Thirdparty information and *\*.mli* files are not adapted automatically with the commandline tool.
+The commandline option does not provide the possibility to install into a specified user package. Third-party information and *.mli* files are not adapted automatically with the commandline tool.
 {{</alert>}}
 
-In [Example 1: Installing PyTorch using the PythonPip module](/tutorials/thirdparty/pytorch/pytorchexample1/) we are installing PyTorch to use it in MeVisLab scripting.
+In [Example 1: Installing PyTorch using the PythonPip module](tutorials/thirdparty/pytorch/pytorchexample1/) we are installing PyTorch to use it in MeVisLab scripting.
 
 ## Summary
-* The `PythonPip` module allows to install additional Python packages to adapt MeVisLab to a certain extent
+* The `PythonPip` module allows to install additional Python packages to adapt MeVisLab to a certain extent.
