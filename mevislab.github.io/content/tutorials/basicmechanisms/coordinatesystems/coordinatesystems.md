@@ -42,12 +42,12 @@ The `ConstantImage` module generates an artificial image with a certain size, da
 
 ![ConstantImage Info](/images/tutorials/basicmechanics/ConstantImageInfo.png "ConstantImage Info")
 
-Placing an object into the Open Inventor Scene of the `SoExaminerViewer`, in this case a `SoCube` with *width*, *height*, and *depth* of 10, places the object to the origin of the world coordinate system.
+Placing an object into the Open Inventor scene of the `SoExaminerViewer`, in this case a `SoCube` with *width*, *height*, and *depth* of 10, places the object to the origin of the world coordinate system.
 
 ![SoCube in world coordinate system](/images/tutorials/basicmechanics/SoCubeWorldCoordinates.png "SoCube in world coordinate system")
 
 ### Translations
-You can move an object in your scene, for example by using a `SoTranslation` module. Update your network and add the module before your cube. Defining a translation vector 50, 0, 0 moves your cube by 50 in x-direction based on the origin of the world coordinate system.
+You can move an object in your scene, for example, by using a `SoTranslation` module. Update your network and add the module before your cube. Defining a translation vector 50, 0, 0 moves your cube by 50 in x-direction based on the origin of the world coordinate system.
 
 ![SoTranslation](/images/tutorials/basicmechanics/SoTranslation.png "SoTranslation")
 
@@ -61,7 +61,7 @@ More complex transformations can be done by using the `SoTransform` module. You 
 ## Voxel Coordinates
 Voxel coordinates are:
 * Relative to an image
-* Continuous from [0..x,0..y,0..z], voxel center at 0.5
+* Continuous from [0..x, 0..y, 0..z], voxel center at 0.5
 * Direct relation to voxel location in memory
 
 ### Voxel Coordinates in MeVisLab
@@ -69,7 +69,7 @@ You can show the voxel coordinates in MeVisLab by using the following example ne
 
 ![Voxel Coordinates](/images/tutorials/basicmechanics/VoxelCoordinates.png "Voxel Coordinates")
 
-Load the file *Liver1_CT_venous.small.tif* .The `Info` module shows detailed information about the image loaded by the `LocalImage`. Opening the `SoExaminerViewer` shows the voxel coordinate system of the loaded image. You may have to change the LUT in `SoGVRVolumeRenderer` so that the image looks better.
+Load the file *Liver1_CT_venous.small.tif*. The `Info` module shows detailed information about the image loaded by the `LocalImage`. Opening the `SoExaminerViewer` shows the voxel coordinate system of the loaded image. You may have to change the LUT in `SoGVRVolumeRenderer` so that the image looks better.
 
 ![Voxel coordinates of the loaded image](/images/tutorials/basicmechanics/SoExaminerViewer_Voxel.png "Voxel coordinates of the loaded image")
 
@@ -111,8 +111,8 @@ You can also add a `SoVertexProperty` and a `SoLineSet` module and configure a l
 Device coordinates are:
 * 2D coordinates in OpenGL viewport
 * Measured in pixel
-* Have their origin (0,0) in the top left corner of the device (with x-coordinates increasing to the right and y-coordinates increasing downwards)
+* Have their origin (0, 0) in the top left corner of the device (with x-coordinates increasing to the right and y-coordinates increasing downwards)
 
 The viewport is the rectangle in pixels on your screen you want to render to. Affine transformations map abstract coordinates from your scene to physical pixels on your device.
 
-All triangular vertices go through a projection matrix and end in a normalized range from -1 to 1 representing your field of view. To find which pixels the triangles actually cover on screen, those coordinates get linearly remapped from [−1, 1] to the range of the viewport rectangle in pixels. Technically that kind of mapping is called an [*affine transformation*](https://en.wikipedia.org/wiki/Affine_transformation).
+All triangular vertices go through a projection matrix and end in a normalized range from -1 to 1 representing your field of view. To find which pixels the triangles actually cover on screen, those coordinates get linearly remapped from [−1, 1] to the range of the viewport rectangle in pixels. Technically, that kind of mapping is called an [*affine transformation*](https://en.wikipedia.org/wiki/Affine_transformation).

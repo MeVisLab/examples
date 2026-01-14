@@ -18,7 +18,7 @@ menu:
 
 ## Introduction
 This chapter will give you an introduction into the creation of module panels and user
-interfaces. For the implementation you will need to
+interfaces. For the implementation, you will need to
 use the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html" "MeVisLab Definition Language (MDL)">}}.
 
 {{<alert class="info" caption="Extra Infos">}}
@@ -29,10 +29,10 @@ More information about GUI design in MeVisLab can be found {{< docuLinks "/Resou
 [//]: <> (MVL-651)
 
 ## Creating a Panel for the Macro Module Filter {#Example_Paneldesign}
-### Creation of a module panel
+### Creation of a Module Panel
 In [Example 2.2](/tutorials/basicmechanisms/macromodules/globalmacromodules) we created the global macro module `Filter`. By now, this module does not have a proper panel. When double-clicking {{< mousebutton "left" >}} the module, the *Automatic Panel* is shown.
 
-The *Automatic Panel* contains fields, as well as module in and outputs. In this case, no fields exists except the *instanceName*. Accordingly, there is no possibility to interact with the module. Only the input and the output of the module are given.
+The *Automatic Panel* contains fields, as well as module inputs and outputs. In this case, no fields exists except the *instanceName*. Accordingly, there is no possibility to interact with the module. Only the input and the output of the module are given.
 
 ![Automatic Panel](/images/tutorials/basicmechanics/GUI_10.png "Automatic Panel")
 
@@ -41,8 +41,8 @@ To add and edit a panel, open the context menu and select {{< menuitem "Related 
 ![Module script file](/images/tutorials/basicmechanics/GUI_11.png "Module script file")
 
 ### Module Interface
-Per default, the *.script* file contains the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Interface" "interface" >}} of the module.
-In the interface section (everything insight the curled brackets behind the name *Interface*) you can define the module inputs, the module outputs, and also all module fields (or *Parameters*).
+By default, the *.script* file contains the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Interface" "interface" >}} of the module.
+In the interface section (everything inside the curled brackets behind the name *Interface*) you can define the module inputs, the module outputs, and also all module fields (or *Parameters*).
 
 [//]: <> (MVL-653)
 {{< highlight filename="Filter.script" >}}
@@ -70,7 +70,7 @@ Creating an input/output causes:
 1. Input/output connectors are added to the module.
 2. You can find placeholders for the input and output in the internal network (see image).
 3. Input/output fields are added to the automatic panel.
-4. A description of the input/output fields is automatically added to the module help file, when opening the *\*.mhelp* file after input/output creation. Helpfile creation is explained in [Example 2.3](/tutorials/basicmechanisms/macromodules/helpfiles/).
+4. A description of the input/output fields is automatically added to the module help file, when opening the *.mhelp* file after input/output creation. Helpfile creation is explained in [Example 2.3](/tutorials/basicmechanisms/macromodules/helpfiles/).
 
 ![Internal Network of your macro module](/images/tutorials/basicmechanics/BM_23.png "Internal Network of your macro module")
 
@@ -174,7 +174,7 @@ Window MyWindowName {
 ![Horizontal layout of Box and Text](/images/tutorials/basicmechanics/HorizontalLayout.png "Horizontal layout of Box and Text")
 
 
-There are much more controls, which can be used. For example a CheckBox,
+There are much more controls that can be used. For example, a CheckBox,
 a Table, a Grid, or a Button. To find out more, take a look into the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#Controls" "MDL Reference" >}}.
 
 [//]: <> (MVL-653)
@@ -276,7 +276,7 @@ Both commands reference a Python function that is executed whenever both actions
 
 If you like to learn more about Python scripting, take a look at [Example 2.5](tutorials/basicmechanisms/macromodules/pythonscripting).
 
-We need to define the Python script, which contains our Python functions. In order to do this, add a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Commands" "Command">}} section outside your window and define the tag source.
+We need to define the Python script that contains our Python functions. In order to do this, add a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Commands" "Command">}} section outside your window and define the tag source.
 
 **Example:**
 {{< highlight filename="Filter.script" >}}
@@ -288,7 +288,7 @@ Commands {
 {{</highlight>}}
 
 {{<alert class="info" caption="Infos">}}
-The section *Source* should already be available and generated automatically in case you enable the Wizard to add a Python file to your module.
+The section *Source* should already be available and generated automatically in the case you enable the Wizard to add a Python file to your module.
 {{</alert>}}
 
 [//]: <> (MVL-653)

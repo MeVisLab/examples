@@ -12,7 +12,7 @@ menu:
     weight: 660
     parent: "dataobjects"
 ---
-# Contour Segmented Objects (CSOs) in MeVisLab {#CSO}
+# Contour Segmentation Objects (CSOs) in MeVisLab {#CSO}
 ## Introduction
 ### Structure of CSOs
 
@@ -47,7 +47,7 @@ The `SoCSOIsoEditor` and `SoCSOLiveWireEditor` are special, because they are usi
 
 ### CSO Lists and CSO Groups
 
-All created CSOs are stored in CSO lists that can be saved and loaded on demand. The lists can not only store the coordinates of the CSOs, but also additional information in the form of name-value pairs (using specialized modules or Python scripting).
+All created CSOs are stored in CSO lists that can be saved and loaded on demand. The lists cannot only store the coordinates of the CSOs, but also additional information in the form of name-value pairs (using specialized modules or Python scripting).
 
 ![Basic CSO Network](/images/tutorials/dataobjects/contours/BasicCSONetwork.png "Basic CSO Network")
 

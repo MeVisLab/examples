@@ -14,7 +14,6 @@ menu:
 ---
 
 # MeVisLab Tips and Tricks
-
 This chapter shows some features and functionalities that are helpful but do not provide its own tutorial.
 
 * [Keyboard Shortcuts](/tutorials/shorts#shortcuts)
@@ -36,7 +35,7 @@ This is a collection of useful keyboard shortcuts in MeVisLab.
   <tbody>
     <tr>
       <td>{{< keyboard "CTRL" "1" >}}</td>
-      <td>Automatically arrange selection of modules / in the current network</td>
+      <td>Automatically arrange selection of modules in the current network</td>
     </tr>
     <tr>
       <td>{{< keyboard "CTRL" "2" >}}</td>
@@ -52,15 +51,15 @@ This is a collection of useful keyboard shortcuts in MeVisLab.
     </tr>
     <tr>
       <td>{{< keyboard "CTRL" "A" >}} then {{< keyboard "TAB" >}}</td>
-      <td>Layout .script file (in MATE)</td>
+      <td>Layout *.script* file (in MATE)</td>
     </tr>
     <tr>
       <td>{{< keyboard "CTRL" "D" >}}</td>
       <td>Duplicate currently selected module (including all field values)</td>
     </tr>
     <tr>
-      <td>{{< keyboard "CTRL" >}} and Left Mouse {{< mousebutton "left" >}} or Middle Mouse Button {{< mousebutton "middle" >}}</td>
-      <td>Show Internal Network</td>
+      <td>{{< keyboard "CTRL" >}} and Left Mouse Button {{< mousebutton "left" >}} or Middle Mouse Button {{< mousebutton "middle" >}}</td>
+      <td>Show internal network</td>
     </tr>
     <tr>
       <td>{{< keyboard "SPACE" >}}</td>
@@ -99,7 +98,7 @@ Create a snippet of your commonly used networks by adding the snippets list from
 
 Enter a name for your snippet like *DICOM Viewer* and click *Add*.
 
-A new snippet will be shown in your Snippets List. You can drag and drop the snippet to your workspace and the modules are re-used, including all defined field values.
+A new snippet will be shown in your Snippets List. You can drag and drop the snippet to your workspace and the modules are reused, including all defined field values.
 
 ![Snippets List](/images/tutorials/Snippets_Panel.png "Snippets List")
 
@@ -116,7 +115,6 @@ If you now interact with a network, module, or macro module, your user interacti
 ![Scripting Assistant](/images/tutorials/ScriptingAssistant_Panel.png "Scripting Assistant")
 
 ## User Scripts {#user_scripts}
-
 User scripts allow you to call any Python code from the main menu entry {{< menuitem "Scripting">}}. MeVisLab already comes with some user scripts you can try. You can also view the sources for example code via right-click {{< mousebutton "right" >}} on the menu entry under {{< menuitem "Scripting">}}.
 
 This example shows you how to change the color of the MeVisLab IDE to a dark mode.
@@ -132,7 +130,7 @@ UserIDEActions {
   Action "Set Dark Theme" {
     name       = changeTheme
     userScript = $(LOCAL)/changeTheme.py
-    statusTip  = "Change Theme to dark mode."
+    statusTip  = "Change theme to dark mode"
     accel      = "ctrl+F9"
   }
 
@@ -173,10 +171,9 @@ QApplication.setPalette(palette)
 
 This script defines the color of the MeVisLab user interface elements. You can define other colors and more items; this is just an example of what you can do with user scripts.
 
-Switch back to the MeVisLab IDE and select the menu item {{< menuitem "Extras" "Reload Module Database (Clear Cache)">}} again. The colors of the MeVisLab IDE change as defined in our Python script. This change persists until you restart MeVisLab and can always be repeated by selecting the menu entry or the keyboard shortcut {{< keyboard "ctrl+F9" >}}.
+Switch back to the MeVisLab IDE and select the menu item {{< menuitem "Extras" "Reload Module Database (Clear Cache)">}} again. The colors of the MeVisLab IDE change as defined in our Python script. This change persists until you restart MeVisLab and can always be repeated by selecting the menu entry or pressing the keyboard shortcut {{< keyboard "ctrl+F9" >}}.
 
 ## Show Status of Module Input and Output {#mlimagestate}
-
 Especially in large networks it is useful to see the state of the input and output connectors of a module. By default, the module connectors do not show if data is available. Below image shows a `DicomImport` module and a `View2D` module where no data is loaded.
 
 ![No status on connector](/images/tutorials/LMIMageState_Off.png "No status on connector")

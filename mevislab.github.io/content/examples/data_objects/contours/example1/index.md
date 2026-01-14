@@ -35,9 +35,9 @@ In this example, contours are created and colors and styles of these CSOs are cu
 ![Screenshot](/examples/data_objects/contours/example1/image.png)
 
 ## Summary
-+ Contours are stored as their own abstract data type called Contour Segmentation Objects (often abbreviated to *CSO*).
-+ The `SoCSO\*Editor` module group contains several useful modules to create, interact with or modify CSOs.
-+ Created CSOs are temporarily stored and can be managed using the `CSOManager`.
+* Contours are stored as their own abstract data type called Contour Segmentation Objects (often abbreviated to *CSO*).
+* The `SoCSO\*Editor` module group contains several useful modules to create, interact with or modify CSOs.
+* Created CSOs are temporarily stored and can be managed using the `CSOManager`.
 
 # Download
 The example network can be downloaded [here](/examples/data_objects/contours/example1/ContourExample1.mlab)

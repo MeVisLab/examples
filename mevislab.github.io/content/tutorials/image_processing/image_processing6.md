@@ -31,7 +31,7 @@ They include:
 
 Additional objects not used in this tutorial are:
 * **RT Image**, specifying radiotherapy images that have been obtained on a conical imaging geometry, such as those found on conventional simulators and portal imaging devices. It can also be used for calculated images using the same geometry, such as digitally reconstructed radiographs (DRRs).
-* **RT Beams Treatment Record**, **RT Brachy Treatment Record**, and **RT Treatment Summary Record**, containing data obtained from actual radiotherapy treatments. These objects are the historical record of treatment, and are linked with the other „planning” objects to form a complete picture of the treatment.
+* **RT Beams Treatment Record**, **RT Brachy Treatment Record**, and **RT Treatment Summary Record**, containing data obtained from actual radiotherapy treatments. These objects are the historical record of the treatment, and are linked with the other „planning” objects to form a complete picture of the treatment.
 
 ## Precondition
 If you do not have DICOM RT data, you can download an example dataset at:
@@ -44,10 +44,9 @@ This data is FOR EDUCATIONAL AND SCIENTIFIC EXCHANGE ONLY – NOT FOR SALES OR P
 Extract the ZIP file into a new folder named *DICOM_FILES*.
 
 ## Prepare Your Network
-
 Add the module `DicomImport` to your workspace. 
 
-Then click {{< mousebutton "left" >}} Browse and select the new folder named *DICOM_FILES* where you copied the content of the ZIP file earlier. Click Import {{< mousebutton "left" >}}. You can see the result after import below:
+Then, click {{< mousebutton "left" >}} *Browse* and select the new folder named *DICOM_FILES* where you copied the content of the ZIP file earlier. Click *Import* {{< mousebutton "left" >}}. You can see the result after import below:
 
 ![DICOM RT Data in DicomImport module](/images/tutorials/image_processing/Example6_1.png "DICOM RT Data in DicomImport module")
 
@@ -97,7 +96,7 @@ labelString = cso.getGroupAt(0).getLabel()
 ```
 {{</highlight>}}
 
-Then press apply {{< mousebutton "left" >}}. The name of the structure is defined in the group of each CSO. We now show the label of the group next to the contour. Add a `CSOLabelPlacementGlobal` module to define a better readable location of these labels.
+Then, press apply {{< mousebutton "left" >}}. The name of the structure is defined in the group of each CSO. We now show the label of the group next to the contour. Add a `CSOLabelPlacementGlobal` module to define a better readable location of these labels.
 
 The module `CSOLabelPlacementGlobal` implements an automatic label placement strategy that considers all CSOs on a slice.
 

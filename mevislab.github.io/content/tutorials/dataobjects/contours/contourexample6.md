@@ -17,13 +17,11 @@ menu:
 {{< youtube "-ACAoeK2Fm8">}}
 
 ## Introduction
-
 In this example, we are adding a label to a contour. The label provides information about measurements and about the contour itself. The label remains connected to the contour and can be moved via mouse interactions.
 
 ## Steps to Do
 ### Develop Your Network
-
-Add a `LocalImage` and a `View2D` module to your workspace and connect them as shown below. Load the file *ProbandT1.dcm* from MeVisLab demo data. In order to create contours (CSOs), we need a `SoView2DCSOExtensibleEditor` module. It manages attached CSO editors, renderers and offers an optional default renderer for all types of CSOs.
+Add the modules `LocalImage` and `View2D` to your workspace and connect them as shown below. Load the file *ProbandT1.dcm* from MeVisLab demo data. In order to create contours (CSOs), we need a `SoView2DCSOExtensibleEditor` module. It manages attached CSO editors, renderers and offers an optional default renderer for all types of CSOs.
 
 The first CSO we want to create is a distance line. Add a `SoCSODistanceLineEditor` to the `SoView2DCSOExtensibleEditor`. It renders and interactively generates CSOs that consist of a single line segment. The line segment can be rendered as an arrow; it can be used to measure distances.
 
@@ -46,8 +44,8 @@ We now want to customize the details to be shown for each distance line. Open th
 Enter the following to the panel of the `CSOLabelRenderer` module:
 {{< highlight filename="CSOLabelRenderer" >}}
 ```Python
-labelString = f"Length: {cso.getLength()}"  
-labelName = f"Distance: {cso.getId()}"
+labelString = f'Length: {cso.getLength()} mm'
+labelName = f'ID: {cso.getId()}'
 deviceOffsetX = 0
 deviceOffsetY = 0
 ```
@@ -68,11 +66,11 @@ In order to see all possible parameters of a CSO, add a `CSOInfo` module to your
 
 ![CSOInfo](/images/tutorials/dataobjects/contours/Ex6_CSOInfo.png "CSOInfo")
 
-For labels shown on grayscale images, it makes sense to add a shadow. Open the panel of the `SoCSOVisualizationSettings` module and on tab *Misc* check the option *Should render shadow*. This increases the readability of your labels.
+For labels shown on gray value images, it makes sense to add a shadow. Open the panel of the `SoCSOVisualizationSettings` module and on tab *Misc* check the option *Should render shadow*. This increases the readability of your labels.
 
 {{< imagegallery 2 "/images/tutorials/dataobjects/contours/" "Ex6_NoShadow" "Ex6_Shadow" >}}
 
-If you want to define your static text as a parameter in multiple labels, you can open the panel of the `CSOLabelRenderer` module and define text as User Data. The values can then be used in Python via *userData*.
+If you want to define your static text as a parameter in multiple labels, you can open the panel of the `CSOLabelRenderer` module and define text as *User Data*. The values can then be used in Python via *userData*.
 
 ![User Data](/images/tutorials/dataobjects/contours/Ex6_Parameters.png "User Data")
 

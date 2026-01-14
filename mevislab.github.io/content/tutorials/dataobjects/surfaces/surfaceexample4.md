@@ -17,12 +17,10 @@ menu:
 {{< youtube "WKiCddNGKrw">}}
 
 ## Introduction
-
 In this example, we like to interactively move WEMs using `SoDragger` modules inside a viewer.
 
 ### Develop Your Network
 ### Interactively Translating Objects in 3D Using SoDragger Modules
-
 Add and connect the following modules as shown. On the panel of the module `WEMInitialize`, select the *Model* *Octasphere*. After that, open the viewer `SoExaminerViewer` and make sure to select the *Interaction Mode*. Now, you are able to click on the presented *Octasphere* and move it alongside one axis. The following modules are involved in the interactions: 
 
 * `SoMITranslate1Dragger`: This module allows interactive translation of the object alongside one axis. You can select the axis for translation in the panel of the module.
@@ -31,10 +29,10 @@ Add and connect the following modules as shown. On the panel of the module `WEMI
 ![Interactive dragging of objects](/images/tutorials/dataobjects/surfaces/DO10_01.png "Interactive dragging of objects")
 
 ### Interactively Translating a WEM Alongside Three Axes
-We like to be able to interactively move a WEM alongside all three axes. In MeVisLab, there is the module `SoMITranslate2Dragger`, which allows translations alongside two axis, but there is no module which allows object translation in all three directions. Therefore, we will create a network that solves this task. The next steps will show you how you create three planes intersecting the objects. Dragging one plane, will drag the object alongside one axis. In addition, these planes will only be visible when hovering over them.
+We like to be able to interactively move a WEM alongside all three axes. In MeVisLab, there is the module `SoMITranslate2Dragger`, which allows translations alongside two axes, but there is no module that allows object translation in all three directions. Therefore, we will create a network that solves this task. The next steps will show you how you create three planes intersecting the objects. Dragging one plane will drag the object alongside one axis. In addition, these planes will only be visible when hovering over them.
 
 #### Creation of Planes Intersecting an Object
-We start creating a plane that will allow dragging in x-direction. In order to do that, modify your network as shown: Add the modules `WEMModify`, and `SoBackground` and connect the module `SoCube` to the dragger modules. You can select the translation direction in the panel of `SoMITranslate1Dragger`. 
+We start creating a plane that will allow dragging in x-direction. In order to do that, modify your network as shown: Add the modules `WEMModify` and `SoBackground`, and connect the module `SoCube` to the dragger modules. You can select the translation direction in the panel of `SoMITranslate1Dragger`. 
 
 ![Interactive dragging of objects](/images/tutorials/dataobjects/surfaces/DO10_02.png "Interactive dragging of objects")
 
@@ -56,7 +54,7 @@ The result can be seen in the next image. You can now select the plane in the *I
 
 #### Modifying the Appearance of the Plane
 
-For changing the visualization of the dragger plane, add the modules `SoGroup`, `SoSwitch`, and `SoMaterial` to your network and connect them as shown. In addition, group together all the modules that are responsible for the translation in the  x-direction.
+For changing the visualization of the dragger plane, add the modules `SoGroup`, `SoSwitch`, and `SoMaterial` to your network and connect them as shown. In addition, group all modules together that are responsible for the translation in the  x-direction.
 
 ![Interactive dragging of objects](/images/tutorials/dataobjects/surfaces/DO10_06.png "Interactive dragging of objects")
 
@@ -73,14 +71,13 @@ When hovering over the plane, the plane becomes visible and the option to move t
 ![Interactive dragging of objects](/images/tutorials/dataobjects/surfaces/DO10_08.png "Interactive dragging of objects")
 
 #### Interactive Object Translation in Three Dimensions
-
 We do not only want to move the object in one direction, we like to be able to do interactive object translations in all three dimensions. For this, copy the modules responsible for the translation in one direction and change the properties to enable translations in other directions.
 
 We need to change the size of `SoCube1` and `SoCube2` to form planes that cover surfaces in x- and z-, as well as x- and y-directions. To do that, draw the respective parameter connections from `DecomposeVector3` to the fields of the modules `SoCube`. In addition, we need to adapt the field *Direction* in the panels of the modules `SoMITranslate1Dragger`. 
 
 ![Interactive dragging of objects](/images/tutorials/dataobjects/surfaces/DO10_09.png "Interactive dragging of objects")
 
-Change width, height, and depth of the three cubes so that each of them represents one plane. The values need to be set to (0, 2, 2), (2, 0, 2) and (2, 2, 0). 
+Change width, height, and depth of the three cubes so that each of them represents one plane. The values need to be set to (0, 2, 2), (2, 0, 2), and (2, 2, 0). 
 
 As a next step, we like to make sure that all planes always intersect the object, even though the object is moved. To do this, we need to synchronize the field *Translation* of all `SoMIDraggerContainer` modules and the module `WEMModify`. Draw parameter connections from one *Translation* field to the next, as shown below.
 
@@ -96,7 +93,7 @@ To enable transformations in all directions, we need to connect the modules `SoM
 
 ![Interactive dragging of objects](/images/tutorials/dataobjects/surfaces/DO10_12.png "Interactive dragging of objects")
 
-As a next step, we like to enlarge the planes to make them exceed the object. For that, add the module `CalculateVectorFromVectors` to your network. Open its panel and connect the field *Size* of `WEMInfo` to *Vector 1*. We like to enlarge the size by one, so we add the vector (1,1,1), by editing the field *Vector 2*. Now, connect the *Result* to the field *V* of the module `DecomposeVector3`.
+As a next step, we like to enlarge the planes to make them exceed the object. For that, add the module `CalculateVectorFromVectors` to your network. Open its panel and connect the field *Size* of `WEMInfo` to *Vector 1*. We like to enlarge the size by one, so we add the vector (1, 1, 1), by editing the field *Vector 2*. Now, connect the *Result* to the field *V* of the module `DecomposeVector3`.
 
 ![Interactive dragging of objects](/images/tutorials/dataobjects/surfaces/DO10_13.png "Interactive dragging of objects")
 

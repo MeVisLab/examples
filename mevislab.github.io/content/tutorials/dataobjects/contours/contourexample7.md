@@ -17,18 +17,16 @@ menu:
 {{< youtube "4quJcvvt-GQ">}}
 
 ## Introduction
-
 In this example, we are using the module `CSOListContainer` instead of the `CSOManager`. The `CSOManager` is a heavyweight, UI driven module. You can use it to see all of your CSOs and CSOGroups in the module panel. The `CSOListContainer` is a lightweight module with focus on Python scripting. We recommend to use this module for final application development, because Python provides much more flexibility in handling CSO objects.
 
 ![CSOManager](/images/tutorials/dataobjects/contours/Example_7_1.png "CSOManager")
 
 ![CSOListContainer](/images/tutorials/dataobjects/contours/Example_7_2.png "CSOListContainer")
 
-We will create multiple CSOs by using the `SoCSOEllipseEditor` and dynamically add these CSOs to different groups via Python scripting depending on their size. CSOs larger than a configurable threshold will be red, small CSOs will be drawn green. The colors will also be adapted if we manually resize the contours.
+We will create multiple CSOs by using the `SoCSOEllipseEditor` and dynamically add these CSOs to different groups via Python scripting depending on their size. CSOs larger than a configurable threshold will be drawn in red, small CSOs will be drawn in green. The colors will also be adapted if we manually resize the contours.
 
 ## Steps to Do
 ### Develop Your Network
-
 Add a `LocalImage` and a `View2D` module to your workspace and connect them as shown below. Load the file *ProbandT1.dcm* from MeVisLab demo data. In order to create contours (CSOs), we need a `SoView2DCSOExtensibleEditor` module. It manages attached CSO editors, renderers, and offers an optional default renderer for all types of CSOs.
 
 Add a `SoCSOEllipseEditor` and a `CSOListContainer` to the `SoView2DCSOExtensibleEditor`
@@ -40,7 +38,7 @@ You are now able to draw CSOs.
 Create a separate directory for this tutorial and save your network in this empty directory. This makes the final structure easier to read.
 
 ### Create a Local Macro Module
-Select the module `CSOListContainer` and open menu {{<menuitem "File" "Create Local Macro" >}}. Enter some details about your new local macro module and click finish. Leave the already defined output as is.
+Select the module `CSOListContainer` and open menu {{<menuitem "File" "Create Local Macro" >}}. Enter some details about your new local macro module and click *Finish*. Leave the already defined output as is.
 
 ![Create Local Macro](/images/tutorials/dataobjects/contours/Example_7_4.png "Create Local Macro")
 
@@ -52,7 +50,7 @@ The behavior of your network does not change. You can still draw the same CSOs a
 
 Open the context menu of your `csoList` module {{< mousebutton "right" >}} and select {{<menuitem "Related Files" "csoList.script" >}}.
 
-The MeVisLab text editor MATE opens, showing your script file. You can see the output of your module as *CSOListContainer.outCSOList*. We want to define a threshold for the color of our CSOs. For this, add another field to the *Parameters* section of your script file named *areaThreshold*. Define the *type* as *Float* and *value* as *2000.0*.
+The MeVisLab text editor MATE opens, showing your *.script* file. You can see the output of your module as *CSOListContainer.outCSOList*. We want to define a threshold for the color of our CSOs. For this, add another field to the *Parameters* section of your script file named *areaThreshold*. Define the *type* as *Float* and *value* as *2000.0*.
 
 In order to call Python functions, we also need a Python file. Add a *Commands* section and define the *source* of the Python file as *$(LOCAL)/csoList.py*. Also add an *initCommand* as *initCSOList*. The initCommand defines the Python function that is called whenever the module is added to the workspace or reloaded.
 
@@ -95,21 +93,21 @@ def setupCSOList():
     csoGroupLarge = csoList.addGroup("large")
 
     csoGroupSmall.setUsePathPointColor(True)
-    csoGroupSmall.setPathPointColor((0,0,1))
+    csoGroupSmall.setPathPointColor((0, 1, 0))
 
     csoGroupLarge.setUsePathPointColor(True)
-    csoGroupLarge.setPathPointColor((1,0,0))
+    csoGroupLarge.setPathPointColor((1, 0, 0))
 
 def _getCSOList():
     return ctx.field("CSOListContainer.outCSOList").object()
 ```
 {{</highlight>}}
 
-The function gets the current CSOList from the output field of the `CSOListContainer`. Initially it should be empty. If not, we want to start with an empty list, therefore we remove all existing CSOs.
+The function gets the current CSOList from the output field of the `CSOListContainer`. Initially, it should be empty. If not, we want to start with an empty list, therefore we remove all existing CSOs.
 
 We also create two new CSO lists: one list for small contours, one list for larger contours, depending on the defined *areaThreshold* from the modules parameter.
 
-Additionally, we also want to define different colors for the CSOs in the lists. Small contours shall be drawn green, large contours shall be drawn red.
+Additionally, we also want to define different colors for the CSOs in the lists. Small contours shall be drawn in green, large contours shall be drawn in red.
 
 In order to listen for changes on the contours, we need to register for notifications. Create a new function *registerForNotification*.
 
@@ -136,7 +134,7 @@ def _getAreaThreshold():
 
 The function gets all currently existing CSOs from the `CSOListContainer`. Then, we register for notifications on this list. Whenever the notification *NOTIFICATION_CSO_FINISHED* is sent in the current context, we call the function *csoFinished*.
 
-The *csoFinished* function again needs all existing contours. We walk through all single CSOs in the list and remove it from all groups. As we do not know which CSO has been changed from the notification, we evaluate the area of each CSO and add them to the correct list again.
+The *csoFinished* function again needs all existing contours. We walk through each CSO in the list and remove it from all groups. As we do not know which CSO has been changed from the notification, we evaluate the area of each CSO and add them to the correct list again.
 
 The function *getAreaThreshold* returns the current value of our parameter field *areaThreshold*.
 
@@ -155,10 +153,10 @@ def setupCSOList():
     csoGroupLarge = csoList.addGroup("large")
 
     csoGroupSmall.setUsePathPointColor(True)
-    csoGroupSmall.setPathPointColor((0,1,0))
+    csoGroupSmall.setPathPointColor((0, 1, 0))
 
     csoGroupLarge.setUsePathPointColor(True)
-    csoGroupLarge.setPathPointColor((1,0,0))
+    csoGroupLarge.setPathPointColor((1, 0, 0))
 
 def registerForNotification():
     csoList = _getCSOList()

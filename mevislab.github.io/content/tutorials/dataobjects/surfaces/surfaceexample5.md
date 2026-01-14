@@ -17,13 +17,12 @@ menu:
 {{< youtube "Rap1RY6l5Cc">}}
 
 ## Introduction
-WEMs do not only contain the coordinates of nodes and surfaces, they can also contain additional information. That information are stored in so-called *Primitive Value Lists* (PVLs). Every node, every surface, and every edge can contains such a list. In these lists, you can for example store the color of the node or specific patient information. This information can be used for visualization or for further statistical analysis.
+WEMs do not only contain the coordinates of nodes and surfaces, they can also contain additional information. That information is stored in so-called *Primitive Value Lists* (PVLs). Every node, every surface, and every edge can contain such a list. In these lists, you can, for example, store the color of the node or specific patient information. This information can be used for visualization or for further statistical analysis.
 
 In this example we like to use PVLs to color-code and visualize the distance between two WEMs.
 
 ## Steps to Do
 ### Develop Your Network
-
 We start our network by initializing two WEMs using `WEMInitialize`. We chose an *Octasphere* and a resized *Cube*. Use the modules `SoWEMRenderer`, `SoExaminerViewer`, and `SoBackground` to visualize the WEMs.
 
 ![WEMInitialize](/images/tutorials/dataobjects/surfaces/DO12_01.png "WEMInitialize")

@@ -28,7 +28,7 @@ For this example, we need the following modules. Add the modules to your workspa
 ![Data Objects Contours Example 1](/images/tutorials/dataobjects/contours/DO1_01.png "Data Objects Contours Example 1")
 
 ### Edit Rectangular CSO
-Now, open the module `View2D`. Use your left mouse key {{< mousebutton "left" >}}, to draw a rectangle, which is your first CSO.
+Now, open the module `View2D`. Use your left mouse button {{< mousebutton "left" >}}, to draw a rectangle as your first CSO.
 
 ![Rectangle Contour](/images/tutorials/dataobjects/contours/DO1_02.png "Rectangle Contour")
 
@@ -73,7 +73,7 @@ If you want to fill the shapes, you can simply add a `SoCSOFillingRenderer` modu
 Create CSOs with green color and ellipsoid shapes.
 
 ## Summary
-* CSOs can be created using a SoCSO-Editor.
+* CSOs can be created using a SoCSO\*-Editor.
 * CSOs of different shapes can be created.
 * A list of CSOs can be stored in the `CSOManager`.
 * Properties of CSOs can be changed using `SoCSOVisualizationSettings`.
