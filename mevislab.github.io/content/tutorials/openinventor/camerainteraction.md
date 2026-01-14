@@ -8,7 +8,7 @@ tags: ["Beginner", "Tutorial", "Open Inventor", "3D", "Camera", "Perspective Cam
 menu: 
   main:
     identifier: "camerainteractions"
-    title: "Examples for camera interactions in Open Inventor"
+    title: "Examples for Camera Interactions in Open Inventor"
     weight: 530
     parent: "openinventor"
 ---

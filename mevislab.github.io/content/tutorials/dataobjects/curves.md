@@ -12,7 +12,9 @@ menu:
     weight: 775
     parent: "dataobjects"
 ---
+
 # Curves in MeVisLab {#CurvesInMeVisLab}
+
 ## Introduction
 Curves can be used in MeVisLab to print the results of a function as two-dimensional mathematical curves into a diagram.
 

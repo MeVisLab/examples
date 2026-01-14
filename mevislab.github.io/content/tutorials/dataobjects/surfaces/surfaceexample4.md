@@ -1,5 +1,5 @@
 ---
-title: "Surface Example 4: Interactively moving WEM"
+title: "Surface Example 4: Interactively Moving WEM"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
@@ -8,10 +8,11 @@ tags: ["Beginner", "Tutorial", "Data Objects", "3D", "Surfaces", "Meshes", "WEM"
 menu: 
   main:
     identifier: "surfaceexample4"
-    title: "Example for implementing WEM translations via mouse interaction"
+    title: "Example for Implementing WEM Translations Via Mouse Interaction"
     weight: 720
     parent: "surfaces"
 ---
+
 # Surface Example 4: Interactively Moving WEM
 
 {{< youtube "WKiCddNGKrw">}}
@@ -20,6 +21,7 @@ menu:
 In this example, we like to interactively move WEMs using `SoDragger` modules inside a viewer.
 
 ### Develop Your Network
+
 ### Interactively Translating Objects in 3D Using SoDragger Modules
 Add and connect the following modules as shown. On the panel of the module `WEMInitialize`, select the *Model* *Octasphere*. After that, open the viewer `SoExaminerViewer` and make sure to select the *Interaction Mode*. Now, you are able to click on the presented *Octasphere* and move it alongside one axis. The following modules are involved in the interactions: 
 
@@ -53,7 +55,6 @@ The result can be seen in the next image. You can now select the plane in the *I
 ![Interactive dragging of objects](images/tutorials/dataobjects/surfaces/DO10_05.png "Interactive dragging of objects")
 
 #### Modifying the Appearance of the Plane
-
 For changing the visualization of the dragger plane, add the modules `SoGroup`, `SoSwitch`, and `SoMaterial` to your network and connect them as shown. In addition, group all modules together that are responsible for the translation in the  x-direction.
 
 ![Interactive dragging of objects](images/tutorials/dataobjects/surfaces/DO10_06.png "Interactive dragging of objects")
@@ -77,7 +78,7 @@ We need to change the size of `SoCube1` and `SoCube2` to form planes that cover 
 
 ![Interactive dragging of objects](images/tutorials/dataobjects/surfaces/DO10_09.png "Interactive dragging of objects")
 
-Change width, height, and depth of the three cubes so that each of them represents one plane. The values need to be set to (0, 2, 2), (2, 0, 2), and (2, 2, 0). 
+Change width, height, and depth of the three cubes, so that each of them represents one plane. The values need to be set to (0, 2, 2), (2, 0, 2), and (2, 2, 0). 
 
 As a next step, we like to make sure that all planes always intersect the object, even though the object is moved. To do this, we need to synchronize the field *Translation* of all `SoMIDraggerContainer` modules and the module `WEMModify`. Draw parameter connections from one *Translation* field to the next, as shown below.
 
@@ -105,9 +106,7 @@ The result can be seen in the next image. This module can now be used for intera
 
 ![Interactive dragging of objects](images/tutorials/dataobjects/surfaces/DO10_15.png "Interactive dragging of objects")
 
-
 ## Summary
 * A family of `SoDragger` modules is available that can be used to interactively modify Open Inventor objects.
-
 
 {{< networkfile "examples/data_objects/surface_objects/example4/SurfaceExample4.zip" >}}

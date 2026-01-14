@@ -1,5 +1,5 @@
 ---
-title: "Step 7: Refine - Re-Build Installer"
+title: "Step 7: Refine - Rebuild Installer"
 date: "2023-01-21"
 status: "open"
 draft: false
@@ -8,10 +8,11 @@ tags: ["Advanced", "Tutorial", "Prototyping", "Tool Runner", "Installer"]
 menu: 
   main:
     identifier: "summaryexample7"
-    title: "Re-build your executable and release a new version of your application."
+    title: "Rebuild Installer"
     weight: 835
     parent: "summary"
 ---
+
 # Step 7: Refine - Rebuild Installer
 
 {{< youtube "E0GnWPXT8Og" >}}

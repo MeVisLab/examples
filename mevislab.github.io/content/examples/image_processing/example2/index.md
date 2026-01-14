@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Masking images"
+title: "Masking Images"
 category: "image_processing"
 ---
 

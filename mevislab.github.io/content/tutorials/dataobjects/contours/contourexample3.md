@@ -12,12 +12,12 @@ menu:
     weight: 675
     parent: "contours"
 ---
+
 # Contour Example 3: Overlay Creation and 3D Visualization of Contours {#TutorialContoursExample3}
 
 {{< youtube "6NmKQagTDKg">}}
 
 ## Introduction
-
 In this example, we'd like to use the created CSOs to display an overlay.
 This allows us to mark one of two lungs. In addition to
 that, we will display the whole segmented lobe of the lung in a 3D

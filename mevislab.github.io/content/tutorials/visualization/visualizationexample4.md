@@ -1,5 +1,5 @@
 ---
-title: "Example 4: Display 2D images in Open Inventor SoRenderArea"
+title: "Example 4: Display 2D Images in Open Inventor SoRenderArea"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
@@ -8,10 +8,11 @@ tags: ["Beginner", "Tutorial", "Visualization", "2D", "3D", "Open Inventor", "Sn
 menu: 
   main:
     identifier: "visualization_example4"
-    title: "Example for displaying images in Open Inventor SoRenderArea"
+    title: "Example for Displaying Images in Open Inventor SoRenderArea"
     weight: 570
     parent: "visualization"
 ---
+
 # Example 4: Display Images Converted to Open Inventor Scene Objects {#TutorialVisualizationExample4}
 
 {{< youtube "WaD6zuvVNek" >}}
@@ -28,6 +29,7 @@ More information about the SoView2D family can be found {{< docuLinks "/Resource
 [//]: <> (MVL-653)
 
 ## Steps to Do
+
 ### Develop Your Network
 We will start the example by creating an overlay again. Add the following modules and connect them as shown. Select a *Threshold* and a *Comparison Operator* for the module `Threshold` as in the previous example. The module `SoView2D` converts the image into a scene object. The image as well as the overlay is rendered and displayed by the module `SoRenderArea`.
 
@@ -38,13 +40,13 @@ You may have noticed that you are not able to scroll through the slices. This fu
 
 ![View2DExtensions](images/tutorials/visualization/V4_02.png "View2DExtensions")
 
-### Add Screenshot Gallery to Viewing Area
-With the help of the module `SoRenderArea` you can record screenshots and movies. Before we do that, open {{< menuitem "View" "Views" "Screenshot Gallery" >}}, to add the Screenshot Gallery to your viewing area.
+### Add Screenshot Gallery to Views Area
+With the help of the module `SoRenderArea` you can record screenshots and movies. Before we do that, open {{< menuitem "View" "Views" "Screenshot Gallery" >}}, to add the Screenshot Gallery to your views area.
 
 ![Screenshot Gallery](images/tutorials/visualization/V4_03.png "Screenshot Gallery")
 
 ### Create Screenshots and Movies
-If you now select your favorite slice of the bone in the Viewer `SoRenderArea` and press {{< keyboard "F11" >}}, a screenshot is taken and displayed in the Screenshot Gallery. For recording a movie, press {{< keyboard "F9" >}} to start the movie and {{< keyboard "F10" >}} to stop recording. You can find the movie in the Screenshot Gallery.
+If you now select your favorite slice of the bone in the viewer `SoRenderArea` and press {{< keyboard "F11" >}}, a screenshot is taken and displayed in the Screenshot Gallery. For recording a movie, press {{< keyboard "F9" >}} to start the movie and {{< keyboard "F10" >}} to stop recording. You can find the movie in the Screenshot Gallery.
 
 ![Record Movies and Snapshots](images/tutorials/visualization/V4_05.png "Record Movies and Snapshots")
 

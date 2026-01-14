@@ -1,5 +1,5 @@
 ---
-title: "Example 2: Brain Parcellation using PyTorch"
+title: "Example 2: Brain Parcellation Using PyTorch"
 date: 2023-06-30
 status: "OK"
 draft: false
@@ -8,21 +8,24 @@ tags: ["Advanced", "Tutorial", "PyTorch", "Python", "PythonPip", "AI"]
 menu: 
   main:
     identifier: "pytorchexample2"
-    title: "Brain Parcellation using PyTorch"
+    title: "Brain Parcellation Using PyTorch"
     weight: 873
     parent: "pytorch"
 ---
+
 # Example 2: Brain Parcellation Using PyTorch
 
 ## Introduction
-In this example, you are using a pre-trained PyTorch deep learning model (HighRes3DNet) to perform a full brain parcellation. HighRes3DNet is a 3D residual network presented by Li et al. in [On the Compactness, Efficiency, and Representation of 3D Convolutional Networks: Brain Parcellation as a Pretext Task](https://link.springer.com/chapter/10.1007/978-3-319-59050-9_28).
+In this example, you are using a pretrained PyTorch deep learning model (HighRes3DNet) to perform a full brain parcellation.
+
+HighRes3DNet is a 3D residual network presented by Li et al. in [On the Compactness, Efficiency, and Representation of 3D Convolutional Networks: Brain Parcellation as a Pretext Task](https://link.springer.com/chapter/10.1007/978-3-319-59050-9_28).
 
 ## Steps to Do
 Add a `LocalImage` module to your workspace and select the file *MRI_Head.dcm*. For PyTorch it is necessary to resample the data to a defined size. Add a `Resample3D` module to the `LocalImage` and open the panel. Change *Keep Constant* to *Voxel Size* and define *Image Size* as 176, 217, 160.
 
 ![Resample3D module](images/tutorials/thirdparty/pytorch_example2_1.png "Resample3D module").
 
-The coordinates in PyTorch are also a little different than in MeVisLab; therefore, you have to rotate the image. Add an `OrthoSwapFlip` module and connect it to the `Resample3D` module. Change *View* to *Other* and set *Orientation* to *YXZ*. Also check *Flip horizontal*, *Flip vertical*, and *Flip depth*. *Apply* your changes.
+The coordinates in PyTorch are also a little bit different than in MeVisLab; therefore, you have to rotate the image. Add an `OrthoSwapFlip` module and connect it to the `Resample3D` module. Change *View* to *Other* and set *Orientation* to *YXZ*. Also check *Flip horizontal*, *Flip vertical*, and *Flip depth*. *Apply* your changes.
 
 ![OrthoSwapFlip module](images/tutorials/thirdparty/pytorch_example2_2.png "OrthoSwapFlip module").
 
@@ -37,12 +40,12 @@ Add an `OrthoView2D` module to your network and save the *.mlab* file.
 ## Integrate PyTorch and Scripting
 For integrating PyTorch and Python scripting, we need a `PythonImage` module. Add it to your workspace. Right-click {{< mousebutton "right" >}} on the `PythonImage` module and select {{< menuitem "Grouping" "Add to new Group...">}}. Right-click {{< mousebutton "right" >}} your new group and select {{< menuitem "Grouping" "Add to new Group...">}}. Name your new local macro *DemoAI*, select a directory for your project, and leave all settings as default.
 
-Our new module does not provide an input or output. 
+Our new module does not provide any input or output. 
 
 ![DemoAI local macro](images/tutorials/thirdparty/pytorch_example2_4.png "DemoAI local macro").
 
 ### Adding an Interface to the Local Macro
-Right-click {{< mousebutton "right" >}} the local macro and select {{< menuitem "Related Files" "DemoAI.script">}}. MATE opens showing the *.script* file of our module. Add an input *Field* of type *Image*, an output *Field* using the *internalName* of the output of our `PythonImage` and a *Trigger* to start the segmentation.
+Right-click {{< mousebutton "right" >}} the local macro and select {{< menuitem "Related Files" "DemoAI.script">}}. MATE opens showing the *.script* file of our module. Add an input *Field* of type *Image*, an output *Field* using the *internalName* of the output of our `PythonImage`, and a *Trigger* to start the segmentation.
 
 You should also already add a Python file in the *Commands* section.
 
@@ -70,19 +73,19 @@ In MATE, right-click {{< mousebutton "right" >}} the Project Workspace and add a
 
 ![Project Workspace](images/tutorials/thirdparty/pytorch_example2_5.png "Project Workspace").
 
-Change to MeVisLab IDE, right-click {{< mousebutton "right" >}} the local macro and select {{< menuitem "Reload Definition">}}. Your new input and output interface are now available and you can connect images to your module.
+Switch back to MeVisLab IDE, right-click {{< mousebutton "right" >}} the local macro, and select {{< menuitem "Reload Definition">}}. Your new input and output interface is now available and you can connect images to your module.
 
 ![DemoAI local macro with interfaces](images/tutorials/thirdparty/pytorch_example2_6.png "DemoAI local macro with interfaces").
 
 ### Extend Your Network
-We want to show the segmentation results as an overlay on the original image. Add a `SoView2DOverlayMPR` module and connect it to your `DemoAI` macro. Connect the output of the `SoView2DOverlayMPR` to a `SoGroup`. We also need a lookup table for the colors to be used for the overlay. We already prepared a *\*.xml* file you can simply use. Download the [lut.xml](/examples/thirdparty/pytorch2/lut.xml) file and save it in your current working directory of the project. 
+We want to show the segmentation results as an overlay on the original image. Add a `SoView2DOverlayMPR` module and connect it to your `DemoAI` macro. Connect the output of the `SoView2DOverlayMPR` to a `SoGroup`. We also need a lookup table for the colors to be used for the overlay. We already prepared an *.xml* file you can simply use. Download the [lut.xml](examples/thirdparty/pytorch2/lut.xml) file and save it in your current working directory of the project. 
 
-Add a `LoadBase` module and connect it to a `SoMLLUT` module. The `SoMLLUT` needs to be connected to the `SoGroup` so that it is applied to our segmentation results.
+Add a `LoadBase` module and connect it to a `SoMLLUT` module. The `SoMLLUT` needs to be connected to the `SoGroup`, so that it is applied to our segmentation results.
 
 ![Final network](images/tutorials/thirdparty/pytorch_example2_7.png "Final network").
 
 {{<alert class="info" caption="Info">}}
-If your PC is equipped with less than 16GBs of RAM/working memory, we recommend to add a `SubImage` module between the `OrthoSwapFlip` and the `Resample3D` module. You should configure less slices in z-direction to prevent your system from running out of memory.
+If your PC is equipped with less than 16GBs of RAM/working memory, we recommend to add a `SubImage` module between the `OrthoSwapFlip` and the `Resample3D` module. You should configure less slices in the z-direction to prevent your system from running out of memory.
 
 ![SubImage module](images/tutorials/thirdparty/pytorch_example2_7b.png "SubImage module").
 {{</alert>}}
@@ -92,9 +95,9 @@ Inspect the output of the `LoadBase` module in the Output Inspector to see if th
 ![LUT in LoadBase](images/tutorials/thirdparty/pytorch_example2_8.png "LUT in LoadBase").
 
 ### Write Python Script
-You can now execute the pre-trained PyTorch network on your image. Right-click {{< mousebutton "right" >}} the local macro and select {{< menuitem "Related Files" "DemoAI.script">}}. The Python function is supposed to be called whenever the *Trigger* is touched.
+You can now execute the pretrained PyTorch network on your image. Right-click {{< mousebutton "right" >}} the local macro and select {{< menuitem "Related Files" "DemoAI.script">}}. The Python function is supposed to be called whenever the *Trigger* is touched.
 
-Add the following code to your Commands section:
+Add the following code to your *Commands* section:
 
 {{< highlight filename="DemoAI.script" >}}
 ```Stan
@@ -144,7 +147,7 @@ def onStart():
 {{</highlight>}}
 
 {{<alert class="warning" caption="Warning">}}
-When executing your script for the first time, you will get a ScriptError message in MeVisLab console. This only happens because the file of the trained network is missing and downloaded initially. You can ignore the message.
+When executing your Python script for the first time, you will get a ScriptError message in the MeVisLab console. This only happens because the file of the trained network is missing and downloaded initially. You can ignore the message.
 {{</alert>}}
 
 {{<alert class="info" caption="Info">}}
@@ -159,9 +162,9 @@ The function does the following:
 * Set output image to module output
 
 ## Execute the Segmentation
-Change alpha value of your `SoView2DOverlayMPR` to have a better visualization of the results.
+Change the alpha value of your `SoView2DOverlayMPR` to have a better visualization of the results.
 
-Change to MeVisLab IDE and select your module `DemoAI`. In *Module Inspector* click *Trigger* for *start* and wait a little until you can see the results.
+Switch back to the MeVisLab IDE and select your module `DemoAI`. In *Module Inspector*, click *Trigger* for *start* and wait a little bit until you can see the results.
 
 ![Final result](images/tutorials/thirdparty/pytorch_example2_9.png "Final result").
 

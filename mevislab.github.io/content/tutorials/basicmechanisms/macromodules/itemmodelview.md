@@ -1,5 +1,5 @@
 ---
-title: "Example 7: Creating your own ItemModel by using the ItemModelView"
+title: "Example 7: Creating Your Own ItemModel by Using the ItemModelView"
 date: 2025-06-03
 status: "OK"
 draft: false
@@ -8,10 +8,11 @@ tags: ["Advanced", "Tutorial", "ItemModel", "ItemModelView"]
 menu: 
   main:
     identifier: "itemmodel"
-    title: "Creating your own ItemModel by using the ItemModelView"
+    title: "Creating Your Own ItemModel by Using the ItemModelView"
     weight: 465
     parent: "basicmechanisms"
 ---
+
 # Example 7: Creating Your Own ItemModel by Using the ItemModelView
 
 ## Introduction
@@ -194,7 +195,7 @@ class MyItem:
 ```
 {{</highlight>}}
 
-Now we implement a very simple and basic model named *MyItemModel*. Initially, we create a new *MLBase* object using the existing *StandardItemModel* and define the structure of our items as already done using the attributes.
+Now, we implement a very simple and basic model named *MyItemModel*. Initially, we create a new *MLBase* object using the existing *StandardItemModel* and define the structure of our items as already done using the attributes.
 
 Some additional functions are necessary to get the root item and the selected index of the model. We also need functions to add and insert items and to clear all items.
 
@@ -279,7 +280,7 @@ Window {
 ```
 {{</highlight>}}
 
-#### Fill the Model with Your Data
+#### Fill the Model With Your Data
 Now, we can implement the function *imageChanged*.
 
 {{< highlight filename="MyItemModelView.py" >}}
@@ -361,7 +362,7 @@ If you now open the panel of your module, you can already see the results.
 
 The first line shows the information of the patient, the study and the series and each child item represents a single slice of the image.
 
-## Interact with Your Model
+## Interact With Your Model
 We can now add options to interact with the *ItemModelView*. Open the *.script* file of your module and go to the *Commands* section. We add a *FieldListener* to our *selection* field. Whenever the user selects a different item in our view, the Python function *itemClicked* in the *FieldListener* is executed.
 
 {{< highlight filename="MyItemModelView.script" >}}
@@ -387,7 +388,7 @@ def getItemByID(self, id):
 
 It uses *id* to find the selected item and returns all values of this item.
 
-Now add the Python function of our *FieldListener* to your Python script:
+Now, add the Python function of our *FieldListener* to your Python script:
 
 {{< highlight filename="MyItemModelView.py" >}}
 ```Python

@@ -14,13 +14,14 @@ menu:
 ---
 
 # MeVisLab Tutorial Chapter VII {#TutorialChapter7}
+
 ## Summary
 This chapter will summarize all previous chapters and you will develop an entire application in MeVisLab. The complete workflow from developing a prototype to delivering your final application to your customer is explained step-by-step.
 
 ![Prototype to Product](images/tutorials/summary/Prototyping.png "Prototype to Product")
 
 {{<alert class="warning" caption="Licensing">}}
-Some of the features described here will require a separate license. Building an installable executable requires the **MeVisLab ApplicationBuilder** license. It extends the **MeVisLab SDK** so that you can generate an installer of your developed macro module.
+Some of the features described here will require a separate license. Building an installable executable requires the **MeVisLab ApplicationBuilder** license. It extends the **MeVisLab SDK**, so that you can generate an installer of your developed macro module.
 
 Free evaluation licenses of the **MeVisLab ApplicationBuilder**, time-limited to three months, can be requested at [sales(at)mevislab.de](mailto://sales@mevislab.de).
 {{</alert>}}

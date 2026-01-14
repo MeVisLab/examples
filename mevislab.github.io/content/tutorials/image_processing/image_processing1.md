@@ -1,5 +1,5 @@
 ---
-title: "Example 1: Arithmetic operations on two images"
+title: "Example 1: Applying Scalar Functions to Two Images"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
@@ -8,19 +8,19 @@ tags: ["Beginner", "Tutorial", "Image Processing", "Arithmetic"]
 menu: 
   main:
     identifier: "imageprocessing1"
-    title: "In this example, you will apply scalar functions on two images like Add, Multiply, Subtract, etc."
+    title: "Applying Scalar Functions to Two Images"
     weight: 605
     parent: "imageprocessing"
 ---
 
 # Example 1: Arithmetic Operations on Two Images
-
 {{< youtube "ToTQ3XRPmlk" >}}
 
 ## Introduction
 We are using the `Arithmetic2` module to apply basic scalar functions on two images. The module provides two inputs for images and one output image for the result.
 
 ## Steps to Do
+
 ### Develop Your Network
 Add two `LocalImage` modules to your workspace for the input images. Select *$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm* and *$(DemoDataPath)/BrainMultiModal/ProbandT2.dcm* from MeVisLab demo data and add a `SynchroView2D` to your network.
 

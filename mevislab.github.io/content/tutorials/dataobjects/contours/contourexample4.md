@@ -8,10 +8,11 @@ tags: ["Beginner", "Tutorial", "Data Objects", "2D", "Contours", "CSO", "Annotat
 menu: 
   main:
     identifier: "contourexample4"
-    title: "Calculate the volume of your segmentation and display ml value on your image in viewer"
+    title: "Calculate the Volume of Your Segmentation and Display Milliliter Value on Your Image in the Viewer"
     weight: 680
     parent: "contours"
 ---
+
 # Contour Example 4: Annotation of Images {#TutorialContoursExample4}
 
 {{< youtube "bT2ZprYcuOU">}}
@@ -21,6 +22,7 @@ In this example we like to calculate the volume of our object, in this
 case, the part of the lung we have segmented. 
 
 ## Steps to Do
+
 ### Develop Your Network and Calculate the Lung Volume
 Add the modules `CalculateVolume` and `SoView2DAnnotation` to your workspace
 and connect both modules as shown. Update the module `CalculateVolume`,
@@ -31,7 +33,7 @@ which directly shows the volume of our object.
 ### Display the Lung Volume in the Image
 We now like to display the volume in the image viewer. For this, open
 the panel of the modules `CalculateVolume` and `SoView2DAnnotation`.
-Open the tab *Input* in the panel of the module `SoView2DAnnotation`. Now
+Open the tab *Input* in the panel of the module `SoView2DAnnotation`. Now,
 establish a parameter connection between *Total Volume* calculated in
 the module `CalculateVolume` and the *input00* of the module
 `SoView2DAnnotation`. This connection projects the *Total Volume* to the

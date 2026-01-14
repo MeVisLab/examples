@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Apply transformations on a 3D WEM object via mouse interactions"
+title: "Apply Transformations to a 3D WEM Object Via Mouse Interactions"
 category: "data_objects"
 ---
 
-# Surface Example 3: Interactions with WEM
+# Surface Example 3: Interactions With WEM
+
 ## Scale, Rotate, and Move a WEM in a Scene
 In this example, we are using a `SoTransformerDragger` module to apply transformations on a 3D WEM object via mouse interactions.
 ![Screenshot](examples/data_objects/surface_objects/example3/image.png)

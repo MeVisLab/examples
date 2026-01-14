@@ -1,5 +1,5 @@
 ---
-title: "Example 2: Masking images"
+title: "Example 2: Masking Images"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
@@ -8,7 +8,7 @@ tags: ["Beginner", "Tutorial", "Image Processing", "Mask"]
 menu: 
   main:
     identifier: "imageprocessing2"
-    title: "In this example, you will apply a mask on an image, so that contrast changes are not applied on black background pixels"
+    title: "Masking Images"
     weight: 610
     parent: "imageprocessing"
 ---
@@ -25,6 +25,7 @@ Being in a dark room using a large screen, the user might be blended by these la
 Image masking is a very good way to select a defined region where image processing shall be applied. A mask allows to define a region (the masked region) to allow image modifications whereas voxels outside the mask remain unchanged.
 
 ## Steps to Do
+
 ### Develop Your Network
 Add a `LocalImage` and a `SynchroView2D` module to your network and connect the modules as seen below.
 
@@ -48,7 +49,7 @@ Changing the window/level values in your viewer still also changes background vo
 
 {{< imagegallery 2 "images/tutorials/image_processing" "Threshold" "Mask">}}
 
-Now all voxels having a HU value lower or equal 60 are set to 0, all others are set to 1. The resulting image from the `Threshold` module is a binary image that can now be used as a mask by the `Mask` module.
+Now, all voxels having a value lower or equal 60 are set to 0, all others are set to 1. The resulting image from the `Threshold` module is a binary image that can now be used as a mask by the `Mask` module.
 
 ![Output of the Threshold module](images/tutorials/image_processing/OutputInspector_Threshold.png "Output of the Threshold module")
 

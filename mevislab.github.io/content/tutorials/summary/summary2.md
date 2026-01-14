@@ -1,5 +1,5 @@
 ---
-title: "Step 2: Prototyping - Create a macro module"
+title: "Step 2: Prototyping - Create a Macro Module"
 date: "2023-01-16"
 status: "open"
 draft: false
@@ -8,10 +8,11 @@ tags: ["Advanced", "Tutorial", "Prototyping", "Macro modules"]
 menu: 
   main:
     identifier: "summaryexample2"
-    title: "Create a macro module from your network."
+    title: "Create a Macro Module From Your Network"
     weight: 810
     parent: "summary"
 ---
+
 # Step 2: Prototyping - Create a Macro Module
 
 {{< youtube "gNlOTiEOJgU" >}}

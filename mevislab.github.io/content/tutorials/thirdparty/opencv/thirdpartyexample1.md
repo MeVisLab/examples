@@ -1,23 +1,25 @@
 ---
-title: "Example 1: WebCam access with OpenCV"
+title: "Example 1: Webcam Access with OpenCV"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
 weight: 855
-tags: ["Advanced", "Tutorial", "OpenCV", "Python", "WebCam", "Macro", "Macro modules", "Global Macro"]
+tags: ["Advanced", "Tutorial", "OpenCV", "Python", "Webcam", "Macro", "Macro modules", "Global Macro"]
 menu: 
   main:
     identifier: "thirdpartyexample1"
-    title: "Access your webcam and use the live video in MeVisLab via OpenCV."
+    title: "Access Your Webcam and Use the Live Video in MeVisLab Via OpenCV."
     weight: 855
     parent: "opencv"
 ---
-# Example 1: WebCam Access with OpenCV
+
+# Example 1: Webcam Access with OpenCV
 
 ## Introduction
-In this example, we are using the `PythonImage` module and access your WebCam to show the video in a `View2D`.
+In this example, we are using the `PythonImage` module and access your webcam to show the video in a `View2D`.
 
 ## Steps to Do
+
 ### Creating the Network to be Used for Testing
 Add the modules to your workspace and connect them as seen below. 
 
@@ -95,11 +97,11 @@ def setupInterface():
 def releaseCamera(_):
   pass
 
-# Start capturing WebCam
+# Start capturing webcam
 def startCapture():
   pass
 
-# Stop capturing WebCam
+# Stop capturing webcam
 def stopCapture():
   pass
 
@@ -107,7 +109,7 @@ def stopCapture():
 {{</highlight>}}
 
 ### Use OpenCV
-Your `View2D` is still empty, let's get access to the WebCam and show the video in your module. Open the Python file of your network again and enter the following code:
+Your `View2D` is still empty, let's get access to the webcam and show the video in your module. Open the Python file of your network again and enter the following code:
 {{< highlight filename="<YOUR_MODULE_NAME>.py" >}}
 ```Python
 # from mevis import *
@@ -128,25 +130,25 @@ def setupInterface():
 def releaseCamera(_):
   pass
 
-# Start capturing WebCam
+# Start capturing webcam
 def startCapture():
   pass
 
-# Stop capturing WebCam
+# Stop capturing webcam
 def stopCapture():
   pass
 ```
 {{</highlight>}}
 
-We now imported *cv2* and *OpenCVUtils* so that we can use them in Python. Additionally, we defined a list of *_interfaces* and a *camera*. The import of *mevis* is not necessary for this example.
+We now imported *cv2* and *OpenCVUtils*, so that we can use them in Python. Additionally, we defined a list of *_interfaces* and a *camera*. The import of *mevis* is not necessary for this example.
 
 The *setupInterfaces* function is called whenever the *Window* of your module is opened. Here we are getting the interface of the `PythonImage` module and append it to our global list.
 
-### Access the WebCam
+### Accessing the Webcam
 Now we want to start capturing the camera.
 {{< highlight filename="<YOUR_MODULE_NAME>.py" >}}
 ```Python
-# Start capturing WebCam
+# Start capturing webcam
 def startCapture():
   global camera
   if not camera:
@@ -164,15 +166,15 @@ def updateImage(image):
 ```
 {{</highlight>}}
 
-The *startCapture* function gets the camera from the *cv2* object if not already available. Then it calls the current MeVisLab network context and creates a timer which calls a *grabImage* function every 0.1 seconds.
+The *startCapture* function gets the camera from the *cv2* object if not already available. Then, it calls the current MeVisLab network context and creates a timer that calls a *grabImage* function every 0.1 seconds.
 
-The *grabImage* function reads an image from the *camera* and calls *updateImage*. The interface from the `PythonImage` module is used to set the image from the WebCam. The MeVisLab *OpenCVUtils* convert the OpenCV image to the MeVisLab image format *MLImage*.
+The *grabImage* function reads an image from the *camera* and calls *updateImage*. The interface from the `PythonImage` module is used to set the image from the webcam. The MeVisLab *OpenCVUtils* converts the OpenCV image to the MeVisLab image format *MLImage*.
 
 Next, we define what happens if you click the *Pause* button.
 {{< highlight filename="<YOUR_MODULE_NAME>.py" >}}
 ```Python
 ...
-# Stop capturing WebCam
+# Stop capturing webcam
 def stopCapture():
   ctx.removeTimers()
 ...
@@ -197,9 +199,9 @@ def releaseCamera(_):
 ```
 {{</highlight>}}
 
-Again, the timers are removed, all interfaces are reset, and the camera is released. The light indicating WebCam usage should turn off.
+Again, the timers are removed, all interfaces are reset, and the camera is released. The light indicating webcam usage should turn off.
 
-Opening your macro module via double-click {{< mousebutton "left" >}} should now allow to start and pause your WebCam video in MeVisLab. You can modify your internal network using a `Convolution` filter module or any other module available in MeVisLab for modifying the stream on-the-fly.
+Opening your macro module via double-click {{< mousebutton "left" >}} should now allow to start and pause your webcam video in MeVisLab. You can modify your internal network using a `Convolution` filter module or any other module available in MeVisLab for modifying the stream on-the-fly.
 
 ## Summary
 * The `PythonImage` module allows to use Python for defining the image output.

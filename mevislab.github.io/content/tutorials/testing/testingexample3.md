@@ -1,5 +1,5 @@
 ---
-title: "Example 3: Iterative tests in MeVisLab with Screenshots"
+title: "Example 3: Iterative Tests in MeVisLab With Screenshots"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
@@ -8,18 +8,20 @@ tags: ["Advanced", "Tutorial", "Testing", "Python", "Automated Tests", "Iterativ
 menu: 
   main:
     identifier: "testingexample3"
-    title: "Writing an iterative test in MeVisLab"
+    title: "Writing an Iterative Test in MeVisLab"
     weight: 795
     parent: "testing"
 ---
+
 # Example 3: Iterative Tests in MeVisLab
 
 {{<youtube "1JidUyfz0xU">}}
 
 ## Introduction
-In this example, you are writing an iterative test. Iterative test functions run a function for every specified input. They return a tuple consisting of the function object called and the inputs iterated over. The iterative test functions are useful if the same function should be applied to different input data. These could be input values, names of input images, etc.
+In this example you are writing an iterative test. Iterative test functions run a function for every specified input. They return a tuple consisting of the function object called and the inputs iterated over. The iterative test functions are useful if the same function should be applied to different input data. These could be input values, names of input images, etc.
 
 ## Steps to Do
+
 ### Creating the Network to be Used for Testing
 Add a `LocalImage` and a `DicomTagViewer` module to your workspace and connect them.
 

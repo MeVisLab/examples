@@ -1,5 +1,5 @@
 ---
-title: "Extra: Run your application in Browser"
+title: "Extra: Run Your Application in a Browser"
 date: "2023-02-24"
 status: "open"
 draft: false
@@ -8,10 +8,11 @@ tags: ["Advanced", "Tutorial", "Prototyping", "Browser", "Web"]
 menu: 
   main:
     identifier: "summaryexample8"
-    title: "Adapt existing application to run in a browser window."
+    title: "Adapt an Existing Application to Run in a Browser"
     weight: 840
     parent: "summary"
 ---
+
 # Extra: Run Your Application in a Browser
 
 {{< youtube "XgOyeu65f7Q" >}}
@@ -20,7 +21,7 @@ menu:
 This step explains how to run your developed application in a browser. The MeVisLab network remains the same, only some adaptations are necessary for running any macro module in a browser window.
 
 {{<alert class="warning" caption="Licensing">}}
-This step requires a valid **MeVisLab Webtoolkit** license. It extends the **MeVisLab SDK** so that you can develop web macro modules.
+This step requires a valid **MeVisLab Webtoolkit** license. It extends the **MeVisLab SDK**, so that you can develop web macro modules.
 
 Free evaluation licenses of the **MeVisLab Webtoolkit**, time-limited to three months, can be requested at [sales(at)mevislab.de](mailto://sales@mevislab.de).
 {{</alert>}}

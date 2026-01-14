@@ -1,5 +1,5 @@
 ---
-title: "Example 3: Creating a simple application"
+title: "Example 3: Creating a Simple Application"
 date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
@@ -8,21 +8,25 @@ tags: ["Advanced", "Tutorial", "Macro", "Macro modules", "Global Macro", "Python
 menu: 
   main:
     identifier: "viewerexample"
-    title: "Adding viewer to your UI and implement a field listener in Python"
+    title: "Adding Viewer to Your UI and Implement a Field Listener in Python"
     weight: 445
     parent: "basicmechanisms"
 ---
+
 # Example 3: Creating a Simple Application
+
 ## Introduction
 In the previous examples, you already learned how to create macro modules, user interfaces, and how to interact with your UI via Python scripting.
 
 In this example, you will learn how to create a simple prototype application in MeVisLab including a user interface with 2D and 3D viewer. You will learn how to implement field listeners and react on events.
 
 ## Steps to Do
+
 ### Create Your Network
-Start with an empty network and add the Module `ImageLoad` to your workspace. Then, add a `View2D` and `View3D` to your workspace and connect the modules as seen below.
+Start with an empty network and add the module `ImageLoad` to your workspace. Then, add the modules `View2D` and `View3D` to your workspace and connect them as seen below.
 
 ![Loading and viewing images](images/tutorials/basicmechanics/SimpleApp_01.png "Loading and viewing images")
+
 ### Load an Image
 Now, double-click {{< mousebutton "left" >}} on the `ImageLoad` module and open any image. You can use the included file *./MeVisLab/Resources/DemoData/MRI_Head.dcm*.
 
@@ -75,7 +79,7 @@ Interface {
 ``` 
 {{</highlight>}}
 
-We now re-use the *filepath* field from the `ImageLoad` module for our interface. Add a *Window* and a *Vertical* to the bottom of your *.script* file. Add the just created parameter field *filepath* inside your *Vertical* as seen below.
+We now reuse the *filepath* field from the `ImageLoad` module for our interface. Add a *Window* and a *Vertical* to the bottom of your *.script* file. Add the just created parameter field *filepath* inside your *Vertical* as seen below.
 
 {{< highlight filename="MyViewerApplication.script" >}}
 ``` Stan
@@ -175,7 +179,6 @@ def reset():
 Clicking on *Reset* in your module now clears the filename field and the viewers do not show any images anymore.
 
 #### Field Listeners {#fieldlisteners}
-
 A field listener watches a given field in your network and reacts on any changes of the field value. You can define Python functions to execute in the case a change has been detected.
 
 In order to define such a listener, you need to add it to the *Commands* section in your *.script* file.
@@ -207,8 +210,8 @@ def printCurrentSliceNumber(field):
 Scrolling through slices in the `View2D` module now logs a message containing the slice number currently visible to the MeVisLab Debug Output.
 
 ## Summary
-* You can add any viewers to your application UI by re-using them in MDL.
-* Parameter fields using the *internalName* of an existing field in your network allows re-using this UI element in your own UI. Changes in your UI are applied to the field in the module.
+* You can add any viewers to your application UI by reusing them in MDL.
+* Parameter fields using the *internalName* of an existing field in your network allows reusing this UI element in your own UI. Changes in your UI are applied to the field in the module.
 * Field Listeners allow reacting on changes of a field value in Python.
 
 {{< networkfile "examples/basic_mechanisms/viewer_application/viewerexample.mlab" >}}

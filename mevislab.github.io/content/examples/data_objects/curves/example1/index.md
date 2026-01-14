@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Drawing curves"
+title: "Drawing Curves"
 category: "data_objects"
 ---
 

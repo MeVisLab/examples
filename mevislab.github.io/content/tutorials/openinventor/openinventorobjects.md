@@ -8,7 +8,7 @@ tags: ["Beginner", "Tutorial", "Open Inventor", "3D"]
 menu: 
   main:
     identifier: "openinventorobjects"
-    title: "Create Open Inventor Objects, change Material, Translate location in 3D and general explanation about Scene Graphs."
+    title: "Create Open Inventor Objects, Change Material, Translate Location in 3D and General Explanation about Scene Graphs"
     weight: 510
     parent: "openinventor"
 ---
@@ -21,6 +21,7 @@ menu:
 In this example we like to construct an Open Inventor scene in which we display three 3D objects of different color and shape.
 
 ## Steps to Do
+
 ### Generating Open Inventor Objects {#TutorialGenerateOpenInventorObjects}
 First, add the modules `SoExaminerViewer` and `SoCone` to the workspace and connect both modules as shown. The module `SoCone` creates a cone shaped object, which can be displayed in the viewer `SoExaminerViewer`.
 

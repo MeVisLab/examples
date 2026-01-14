@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Creating a simple application"
+title: "Creating a Simple Application"
 category: "basic_mechanisms"
 ---
 

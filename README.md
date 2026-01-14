@@ -5,7 +5,7 @@ This is the repository for the [MeVisLab Tutorials and Examples GitHub pages](ht
 ## Configuration
 
 ### Local Deployment
-* Check out code
+* Check out the code
 * Install _extended_ hugo from the [Hugo Website](https://gohugo.io/)
 * Install npm, e.g., from [npmjs Website](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 * Change to mevislab.github.io folder and run `npm install`

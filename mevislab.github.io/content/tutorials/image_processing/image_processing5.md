@@ -8,7 +8,7 @@ tags: ["Advanced", "Tutorial", "Image Processing", "3D", "Clip Planes"]
 menu: 
   main:
     identifier: "imageprocessing5"
-    title: "In this example, show some options for integrating clip planes into your 3D views."
+    title: "Clip Planes"
     weight: 625
     parent: "imageprocessing"
 ---
@@ -21,6 +21,7 @@ menu:
 In this example, we are using the `SoGVRDrawOnPlane` module to define the currently visible slice from a 2D view as a clip plane in 3D.
 
 ## Steps to Do
+
 ### Develop Your Network
 First, we need to develop the network to scroll through the slices. Add a `LocalImage` module to your workspace and select the file *ProbandT1* from MeVisLab demo data.
 
@@ -63,7 +64,7 @@ This slice shall now be used as a clip plane in 3D. In order to achieve this, yo
 
 ![Example Network](images/tutorials/image_processing/network_example5c.png "Example Network")
 
-Now your 3D scene shows a three-dimensional volume cut by a plane in the middle. Once again, the clipping is not the same slice as your 2D view shows.
+Now, your 3D scene shows a three-dimensional volume cut by a plane in the middle. Once again, the clipping is not the same slice as your 2D view shows.
 
 ![Clip plane in 3D](images/tutorials/image_processing/3D_ClipPlane.png "Clip plane in 3D")
 

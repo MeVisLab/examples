@@ -8,7 +8,7 @@ tags: ["Beginner", "Tutorial", "Image Processing", "Segmentation", "Region Growi
 menu: 
   main:
     identifier: "imageprocessing3"
-    title: "In this example, you segment parts of an image by using a simple region growing."
+    title: "Segmentation With Region Growing"
     weight: 615
     parent: "imageprocessing"
 ---
@@ -23,6 +23,7 @@ A very simple approach to segment parts of an image is the region growing method
 In this example, you will segment the brain of an image and show the segmentation results as an overlay on the original image.
 
 ## Steps to Do
+
 ### Develop Your Network
 Add a `LocalImage` module to your workspace and select load *$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm*. Add a `View2D` module and connect both as seen below.
 

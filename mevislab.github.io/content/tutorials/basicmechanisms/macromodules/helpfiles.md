@@ -1,5 +1,5 @@
 ---
-title: "Example 2.3: Creation of module help"
+title: "Example 2.3: Creation of Module Help"
 date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
@@ -8,10 +8,11 @@ tags: ["Beginner", "Tutorial", "Macro", "Macro modules", "Global Macro", "Help"]
 menu: 
   main:
     identifier: "helpfiles"
-    title: "Creation of module help files in MATE"
+    title: "Creation of Module Help Files in MATE"
     weight: 400
     parent: "macro_modules"
 ---
+
 # Example 2.3: Creation of Module Help
 Generating help of a macro module is part of the video about macro modules from [Example 2: Creation of global macro modules](tutorials/basicmechanisms/macromodules/globalmacromodules)
 {{< youtube "M4HnA0d1V5k">}}
@@ -78,10 +79,9 @@ To create the example network, open the file *FilterExample.mlab* in MeVisLab an
 
 ![Example Network](images/tutorials/basicmechanics/ExpNetwork_02.png "Example Network")
 
-
 ## Summary
-* {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MeVisLab MATE">}} is a built-in text editor which can be used to create module help files, module panels or to create module interactionss via Python scripting.
-* You can create help files via the module context menu using MeVisLab Mate.
-* You can add an example network to your macro module via the .def file.
+* {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MeVisLab MATE">}} is a built-in text editor that can be used to create module help files and module panels, or to create module interactions via Python scripting.
+* You can create help files via the module context menu using MeVisLab's MATE.
+* You can add an example network to your macro module via the *.def* file.
 
 [//]: <> (MVL-653)

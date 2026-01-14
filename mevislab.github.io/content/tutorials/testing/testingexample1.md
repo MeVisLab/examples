@@ -1,5 +1,5 @@
 ---
-title: "Example 1: Writing a simple test case in MeVisLab"
+title: "Example 1: Writing a Simple Test Case in MeVisLab"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
@@ -8,18 +8,20 @@ tags: ["Beginner", "Tutorial", "Testing", "Python", "Automated Tests"]
 menu: 
   main:
     identifier: "testingexample1"
-    title: "Writing a simple test case for the module DicomImport in MeVisLab using Python and MeVisLab TestCenter."
+    title: "Writing a Simple Test Case for the Module DicomImport in MeVisLab Using Python and MeVisLab TestCenter"
     weight: 790
     parent: "testing"
 ---
+
 # Example 1: Writing a Simple Test Case in MeVisLab
 
 {{< youtube "DqpVaKai_00" >}}
 
 ## Introduction
-In this example, you will learn how to write an automated test for a simple network using the `DicomImport`, `MinMaxScan`, and `View3D` modules. Afterwards, you will be able to write test cases for any other module and network yourself.
+In this example you will learn how to write an automated test for a simple network using the `DicomImport`, `MinMaxScan`, and `View3D` modules. Afterward, you will be able to write test cases for any other module and network yourself.
 
 ## Steps to Do
+
 ### Creating the Network to be Used for Testing
 Add the following modules to your workspace and connect them as seen below: 
 

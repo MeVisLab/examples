@@ -12,6 +12,7 @@ menu:
     weight: 690
     parent: "contours"
 ---
+
 # Contour Example 6: Adding Labels to Contours {#TutorialContoursExample6}
 
 {{< youtube "-ACAoeK2Fm8">}}
@@ -20,6 +21,7 @@ menu:
 In this example, we are adding a label to a contour. The label provides information about measurements and about the contour itself. The label remains connected to the contour and can be moved via mouse interactions.
 
 ## Steps to Do
+
 ### Develop Your Network
 Add the modules `LocalImage` and `View2D` to your workspace and connect them as shown below. Load the file *ProbandT1.dcm* from MeVisLab demo data. In order to create contours (CSOs), we need a `SoView2DCSOExtensibleEditor` module. It manages attached CSO editors, renderers and offers an optional default renderer for all types of CSOs.
 
@@ -44,8 +46,8 @@ We now want to customize the details to be shown for each distance line. Open th
 Enter the following to the panel of the `CSOLabelRenderer` module:
 {{< highlight filename="CSOLabelRenderer" >}}
 ```Python
-labelString = f"Length: {cso.getLength()}"  
-labelName = f"ID: {cso.getId()}"
+labelString = f'Length: {cso.getLength()} mm'
+labelName = f'ID: {cso.getId()}'
 deviceOffsetX = 0
 deviceOffsetY = 0
 ```

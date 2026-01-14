@@ -12,6 +12,7 @@ menu:
     weight: 691
     parent: "contours"
 ---
+
 # Contour Example 7: Using the CSOListContainer {#TutorialContoursExample7}
 
 {{< youtube "4quJcvvt-GQ">}}
@@ -26,6 +27,7 @@ In this example, we are using the module `CSOListContainer` instead of the `CSOM
 We will create multiple CSOs by using the `SoCSOEllipseEditor` and dynamically add these CSOs to different groups via Python scripting depending on their size. CSOs larger than a configurable threshold will be drawn in red, small CSOs will be drawn in green. The colors will also be adapted if we manually resize the contours.
 
 ## Steps to Do
+
 ### Develop Your Network
 Add a `LocalImage` and a `View2D` module to your workspace and connect them as shown below. Load the file *ProbandT1.dcm* from MeVisLab demo data. In order to create contours (CSOs), we need a `SoView2DCSOExtensibleEditor` module. It manages attached CSO editors, renderers, and offers an optional default renderer for all types of CSOs.
 
@@ -103,7 +105,7 @@ def _getCSOList():
 ```
 {{</highlight>}}
 
-The function gets the current CSOList from the output field of the `CSOListContainer`. Initially, it should be empty. If not, we want to start with an empty list, therefore we remove all existing CSOs.
+The function gets the current CSOList from the output field of the `CSOListContainer`. Initially, it should be empty. If not, we want to start with an empty list; therefore, we remove all existing CSOs.
 
 We also create two new CSO lists: one list for small contours, one list for larger contours, depending on the defined *areaThreshold* from the modules parameter.
 
@@ -138,7 +140,7 @@ The *csoFinished* function again needs all existing contours. We walk through ea
 
 The function *getAreaThreshold* returns the current value of our parameter field *areaThreshold*.
 
-Now we can call our functions in the *initCSOList* function and test our module.
+Now, we can call our functions in the *initCSOList* function and test our module.
 
 {{< highlight filename="csoList.py" >}}
 ```Python

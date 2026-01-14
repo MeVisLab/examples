@@ -1,5 +1,5 @@
 ---
-title: "Surface Example 3: Interactions with WEM"
+title: "Surface Example 3: Interactions With WEM"
 date: "2023-03-21"
 status: "OK"
 draft: false
@@ -8,10 +8,11 @@ tags: ["Beginner", "Tutorial", "Data Objects", "3D", "Surfaces", "Meshes", "WEM"
 menu: 
   main:
     identifier: "surfaceexample3"
-    title: "Interactions with WEM"
+    title: "Interactions With WEM"
     weight: 715
     parent: "surfaces"
 ---
+
 # Surface Example 3: Interactions with WEM
 
 {{< youtube "YDOEqCOmUFw">}}
@@ -32,7 +33,7 @@ The `SoExaminerViewer` shows your cube and the world coordinate system. You can 
 
 ![Initial Cube](images/tutorials/dataobjects/surfaces/WEMExample3_2.png "Initial Cube")
 
-Scaling, rotating, and translating the cube itself can be done by using the module `SoTransformerDragger`. Additionally, add a `SoTransform` module to your network. Add all modules except the `SoCoordinateSystem` to a `SoSeparator` so that transformations are not applied to the coordinate system.
+Scaling, rotating, and translating the cube itself can be done by using the module `SoTransformerDragger`. Additionally, add a `SoTransform` module to your network. Add all modules except the `SoCoordinateSystem` to a `SoSeparator`, so that transformations are not applied to the coordinate system.
 
 ![SoTransformerDragger and SoTransform](images/tutorials/dataobjects/surfaces/WEMExample3_3.png "SoTransformerDragger and SoTransform")
 
@@ -111,6 +112,6 @@ For other interaction possibilities, you can play around with the example networ
 
 ## Summary
 * MeVisLab provides multiple options to interact with 3D surfaces.
-* Modules of the `So*Dragger` family allow to scale, rotate, and translate a WEM.
+* Modules of the `So\*Dragger` family allow to scale, rotate, and translate a WEM.
 * You can always use a `SoCoordinateSystem` to see the current world coordinates.
 * The `WEMBulgeEditor` allows you to interactively modify a WEM via mouse.

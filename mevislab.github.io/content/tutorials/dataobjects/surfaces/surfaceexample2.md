@@ -8,10 +8,11 @@ tags: ["Beginner", "Tutorial", "Data Objects", "3D", "Surfaces", "Meshes", "WEM"
 menu: 
   main:
     identifier: "surfaceexample2"
-    title: "Examples for modification, smoothing and annotations on WEM"
+    title: "Examples for Modification, Smoothing, and Annotations of WEM"
     weight: 710
     parent: "surfaces"
 ---
+
 # Surface Example 2: Processing and Modifying of WEM
 
 {{< youtube "lVbldzanvfE">}}
@@ -20,9 +21,11 @@ menu:
 In this example, you will learn how to modify and process WEMs.
 
 ## Steps to Do
+
 ### Develop Your Network
+
 #### Modification of WEMs
-Use the module `WEMLoad` to load the file *venus.off*. Then, add and connect the shown modules. We like to display the WEM *venus* two times, one time this WEM is modified. You can use the module `WEMModify` to apply modifications. In its panel, change the scale and the size of the WEM. Now you see two times the `venus` next to each other.
+Use the module `WEMLoad` to load the file *venus.off*. Then, add and connect the shown modules. We like to display the WEM *venus* two times, one time this WEM is modified. You can use the module `WEMModify` to apply modifications. In its panel, change the scale and the size of the WEM. Now, you see two times the `venus` next to each other.
 
 ![WEMModify](images/tutorials/dataobjects/surfaces/DO7_01.png "WEMModify")
 
@@ -66,6 +69,5 @@ Now, you can see the result in the viewer. If the annotations are not visible, p
 * There are several modules to modify and process WEMs, e.g., `WEMModify`, `WEMSmooth`.
 * To calculate the minimal and maximal (the maximum minimum) surface distance between two WEMs, use the module `WEMSurfaceDistance`.
 * To create annotations in 3D, the module `SoView2DAnnotation` can be used when adapted to be used in combination with a 3D viewer. 
-
 
 {{< networkfile "examples/data_objects/surface_objects/example2/SurfaceExample2.mlab" >}}

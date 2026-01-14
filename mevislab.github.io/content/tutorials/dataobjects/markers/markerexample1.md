@@ -1,5 +1,5 @@
 ---
-title: "Example 1: Distance between Markers"
+title: "Example 1: Distance Between Markers"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
@@ -8,10 +8,11 @@ tags: ["Beginner", "Tutorial", "Data Objects", "2D", "3D", "Marker"]
 menu: 
   main:
     identifier: "markerexample1"
-    title: "Calculate the distance between Marker objects."
+    title: "Calculate the Distance Between Marker Objects"
     weight: 755
     parent: "markers"
 ---
+
 # Example 1: Calculating the Distance Between Markers
 
 {{< youtube "xYR5Qkze0lE">}}
@@ -20,6 +21,7 @@ menu:
 In this example, we will measure the distance between one position in an image to a list of markers.
 
 ## Steps to Do
+
 ### Develop Your Network
 Add the following modules and connect them as shown.
 

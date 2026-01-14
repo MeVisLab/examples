@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Distance between markers"
+title: "Distance Between Markers"
 category: "data_objects"
 ---
 

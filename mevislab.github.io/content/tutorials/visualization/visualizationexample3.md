@@ -8,10 +8,11 @@ tags: ["Beginner", "Tutorial", "Visualization", "2D", "Overlays", "Masks"]
 menu: 
   main:
     identifier: "visualization_example3"
-    title: "How to blend images and masks over each other "
+    title: "How to Blend Images and Masks Over Each Other"
     weight: 565
     parent: "visualization"
 ---
+
 # Example 3: How to Blend Images Over Each Other {#TutorialVisualizationExample3}
 
 {{< youtube "e8iFGp-St0c" >}}
@@ -20,6 +21,7 @@ menu:
 In this example we will show you how to blend a 2D image over another one. With the help of the module `SoView2DOverlay` we will create an overlay, which allows us to highlight all bones in the scan.
 
 ## Steps to Do
+
 ### Develop Your Network
 Start this example by adding the shown modules, connecting the modules to form a network and loading the example image *Bone.tiff*.
 
@@ -33,7 +35,7 @@ The `Threshold` module is explained {{< docuLinks "/Standard/Documentation/Publi
 
 [//]: <> (MVL-653)
 
-The module `Threshold` compares the value of each voxel of the image with a customized threshold. In this case: If the value of the chosen voxel is lower than the threshold, the voxel value is replaced by the minimum value of the image. If the value of the chosen voxel is higher than the threshold, the voxel value is replaced by the maximum value of the image. With this, we can construct a binary image that divides the image into bone (white) and no bone (black).
+The module `Threshold` compares the value of each voxel of the image with a customizable threshold. In this case: If the value of the chosen voxel is lower than the threshold, the voxel value is replaced by the minimum value of the image. If the value of the chosen voxel is higher than the threshold, the voxel value is replaced by the maximum value of the image. With this, we can construct a binary image that divides the image into bone (white) and no bone (black).
 
 Select output of the `Threshold` module to see the binary image in Output Inspector.
 

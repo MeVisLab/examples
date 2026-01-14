@@ -12,9 +12,11 @@ menu:
     weight: 877
     parent: "thirdparty"
 ---
+
 # MONAI {#monai}
+
 ## Introduction
-[MONAI](https://github.com/Project-MONAI "monai") (**M**edical **O**pen **N**etwork for **AI**) is an open-source framework built on [PyTorch](http://www.pytorch.org "pytorch"), designed for developing and deploying AI models in medical imaging.
+[MONAI](https://github.com/Project-MONAI "monai") (**M**edical **O**pen **N**etwork for **AI**) is an open-source framework built on [PyTorch](http://www.pytorch.org "pytorch") designed for developing and deploying AI models in medical imaging.
 
 Created by [NVIDIA](https://docs.nvidia.com/monai/index.html "NVIDIA") and the Linux Foundation, it provides specialized tools for handling medical data formats like DICOM and NIfTI, along with advanced preprocessing, augmentation, and 3D image analysis capabilities.
 
