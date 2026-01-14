@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Interactively moving WEM"
+title: "Interactively Moving WEM"
 category: "data_objects"
 ---
 

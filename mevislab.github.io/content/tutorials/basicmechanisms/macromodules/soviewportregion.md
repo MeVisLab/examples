@@ -1,5 +1,5 @@
 ---
-title: "Example 6: Creating Multi-View Layouts Using SoViewportRegion"
+title: "Example 6: Creating Multi View Layouts Using SoViewportRegion"
 date: 2025-04-22
 status: "OK"
 draft: false
@@ -8,11 +8,12 @@ tags: ["Beginner", "Tutorial", "SoViewportRegion", "Layout", "Multi-View"]
 menu: 
   main:
     identifier: "soviewportregion"
-    title: "Creating Multi-View Layouts Using SoViewportRegion"
+    title: "Creating Multi View Layouts Using SoViewportRegion"
     weight: 460
     parent: "basicmechanisms"
 ---
-# Example 6: Creating Multi-View Layouts Using SoViewportRegion
+
+# Example 6: Creating Multi View Layouts Using SoViewportRegion
 
 ## Introduction
 In this guide, we will show how to use the `SoViewportRegion` module to create custom layouts within the `SoRenderArea` module. This allows you to display multiple views or slices in a single window.
@@ -29,7 +30,7 @@ Add an `ImageLoad` module to your workspace and select a 3D image like *./MeVisL
 
 ![Image Display Setup](images/tutorials/basicmechanics/E6_1.png "Image Display Setup")
 
-Opening the three `View2D` module panels now shows the data in three orthogonal views. The module `OrthoReformat3` transforms the input image (by rotating and/or flipping) into the three main views commonly used.
+Opening the three `View2D` module panels now shows the image data in three orthogonal views. The module `OrthoReformat3` transforms the input image (by rotating and/or flipping) into the three main views commonly used.
 
 ![3 Views in 3 Viewers](images/tutorials/basicmechanics/E6_2.png "3 Views in 3 Viewers")
 
@@ -64,7 +65,7 @@ We want to create a layout with the following setting:
 
 ![Target Layout](images/tutorials/basicmechanics/E6_6.png "Target Layout")
 
-Now open the left `SoViewportRegion` module and change settings:
+Now, open the left `SoViewportRegion` module and change settings:
 
 * **X-Position and Width**
   * *Left Border* to 0
@@ -114,11 +115,11 @@ In the next example, the `SoRenderArea` will display four views at the same time
 
 ![3D View Layout](images/tutorials/basicmechanics/E6_11.png "3D View Layout")
 
-These views will be arranged in a single panel that is split into two sides with each side showing two images. To add the 3D view, insert a `View3D` module and connect it to the `ImageLoad` module. Then connect the `View3D` to `SoCameraInteraction`, connect that to another `SoViewportRegion`, and finally to `SoRenderArea`.
+These views will be arranged in a single panel that is split into two sides with each side showing two images. To add the 3D view, insert a `View3D` module and connect it to the `ImageLoad` module. Then, connect the `View3D` to `SoCameraInteraction`, connect that to another `SoViewportRegion`, and finally to `SoRenderArea`.
 
 ![3D View Network](images/tutorials/basicmechanics/E6_10.png "3D View Network")
 
-Now open the left `SoViewportRegion` module and change settings:
+Now, open the left `SoViewportRegion` module and change settings:
 
 * **X-Position and Width**
   * *Left Border* to 0

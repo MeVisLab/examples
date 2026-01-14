@@ -1,5 +1,5 @@
 ---
-title: "Example 2.5.1: The module RunPythonScript"
+title: "Example 2.5.1: The Module RunPythonScript"
 date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
@@ -8,7 +8,7 @@ tags: ["Beginner", "Tutorial", "Python", "Scripting", "RunPythonScript"]
 menu: 
   main:
     identifier: "scriptingexample1"
-    title: "The module RunPythonScript"
+    title: "The Module RunPythonScript"
     weight: 430
     parent: "macro_modules"
 ---
@@ -21,8 +21,8 @@ menu:
 The module `RunPythonScript` allows to execute Python scripts from within a MeVisLab network. You can draw parameter connection from modules to `RunPythonScript` and back to process parameter fields using Python scripting. 
 
 ## Steps to Do
-### Develop Your Network
 
+### Develop Your Network
 In this example, we like to dynamically change the color of a cube in an Open Inventor scene. For that, add and connect the following modules as shown. 
 
 ![RunPythonScript Example](images/tutorials/basicmechanics/Scripting_06.png "RunPythonScript")
@@ -54,7 +54,6 @@ To update the output field *DiffuseColor*, it is important to use the methods *u
 You can now see a color change in the viewer `SoExaminerViewer` every time the `TimeCounter` counts.
 
 ![Triggered color change](images/tutorials/basicmechanics/Scripting_08.png "Triggered color change")
-
 
 ## Summary
 * The module `RunPythonScript` can be used to process module fields in your network using Python scripting.

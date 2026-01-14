@@ -8,10 +8,11 @@ tags: ["Beginner", "Tutorial", "Image Processing"]
 menu: 
   main:
     identifier: "imageprocessing"
-    title: "Examples for processing images in MeVisLab."
+    title: "Examples for Processing Images in MeVisLab."
     weight: 600
     parent: "tutorials"
 ---
+
 # Image Processing in MeVisLab {#TutorialImageProcessing}
 Digital image processing is the use of a digital computer to process digital images through an algorithm (see [Wikipedia](https://en.wikipedia.org/wiki/Digital_image_processing)).
 

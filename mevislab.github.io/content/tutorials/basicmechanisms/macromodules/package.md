@@ -8,18 +8,16 @@ tags: ["Beginner", "Tutorial", "Package"]
 menu: 
   main:
     identifier: "packageCreation"
-    title: "Creation of packages necessary for macro modules."
+    title: "Creation of Packages Necessary for Macro Modules."
     weight: 380
     parent: "macro_modules"
 ---
-
 
 # Example 2.1: Package Creation
 
 {{< youtube "1wrGsYtAs3g">}}
 
 ## Introduction
-
 Packages are the way MeVisLab organizes different development projects.
 
 Macro modules and projects are stored in packages. If you like to create a global macro module, you need a package in which this macro module can be stored in. In this chapter, we will create our own package. We start our package creation by creating a package group, because every package needs to be stored in a package group. You can find detailed information about packages and package groups {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch08.html" "here" >}} and in the {{< docuLinks "/Resources/Documentation/Publish/SDK/PackageStructure/index.html" "package documentation" >}}.
@@ -35,7 +33,7 @@ To create packages and package groups, we will use the Project Wizard. Open the 
 
 Next you need to:
 
-1.  Find a name for your package group, for example your company name or
+1.  Find a name for your package group, for example, your company name or
     in our example the name *MyPackageGroup*.
 
 2.  Find a name for your package, in our example we call it *General*.

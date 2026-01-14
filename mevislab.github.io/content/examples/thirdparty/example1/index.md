@@ -1,10 +1,10 @@
 ---
-title: "OpenCV Webcam access"
+title: "OpenCV Webcam Access"
 date: 2022-06-15T08:56:33+02:00
 category: "thirdparty"
 ---
 
-# ThirdParty Example 1: OpenCV Webcam Access
+# Third-party Example 1: OpenCV Webcam Access
 This Python file shows how to access the webcam via OpenCV and use the video via `PythonImage` module in MeVisLab.
 
 # Download

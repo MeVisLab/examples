@@ -8,10 +8,11 @@ tags: ["Advanced", "Tutorial", "Prototyping"]
 menu: 
   main:
     identifier: "summaryexample6"
-    title: "Integrate feedback from customers having installed your executable and adapt your test cases from Example 4."
+    title: "Update Application"
     weight: 830
     parent: "summary"
 ---
+
 # Step 6: Refine - Update Application
 
 {{< youtube "1v_UyGs8W1g" >}}
@@ -25,6 +26,7 @@ Your customer requests an additional requirement to define the transparency of y
 * **Requirement 5.2**: It shall be possible to define the alpha value of the overlay
 
 ## Steps to Do
+
 ### Adapt Your Macro Module
 Use the module search to add your macro module to your workspace. We need an additional UI element for setting the alpha value of the overlay.
 
@@ -63,7 +65,7 @@ Back in MeVisLab IDE, your user interface should now provide the possibility to 
 
 ![Updated User Interface](images/tutorials/summary/Example6_1.png "Updated User Interface")
 
-You can also update your Python files for new or updated requirements. In this example we just want to show the basic principles, therefore we only add this new element to the *.script* file.
+You can also update your Python files for new or updated requirements. In this example we just want to show the basic principles; therefore, we only add this new element to the *.script* file.
 
 If you want to write an additional Python test case, you can also do that.
 

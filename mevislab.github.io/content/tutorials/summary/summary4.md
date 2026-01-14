@@ -8,10 +8,11 @@ tags: ["Advanced", "Tutorial", "Prototyping", "Automated Tests", "Python"]
 menu: 
   main:
     identifier: "summaryexample4"
-    title: "Test your macro module in MeVisLab. Your requirements are translated into test cases written in Python."
+    title: "Automated Tests"
     weight: 820
     parent: "summary"
 ---
+
 # Step 4: Review - Automated Tests
 
 {{< youtube "_wheDC8TBJQ" >}}
@@ -28,7 +29,7 @@ Use *Module Search* and add your macro module developed in previous steps to you
 
 ![Macro module](images/tutorials/summary/Example4_1.png "Macro module")
 
-You can see that the module does not have any inputs or outputs. You cannot connect it to other modules. For testing purposes it makes sense to provide the viewers and images as outputs so that you can use them for generating screenshots.
+You can see that the module does not have any inputs or outputs. You cannot connect it to other modules. For testing purposes it makes sense to provide the viewers and images as outputs, so that you can use them for generating screenshots.
 
 Open the *.script* file in MATE as already explained in [Step 3](tutorials/summary/summary3). In the *Outputs* section, add the following:
 
@@ -239,7 +240,7 @@ def TEST_RegionGrowing():
 ```
 {{</highlight>}}
 
-#### Requirement 5: The 2D Viewer Shall Display the Segmentation Results as a Semi-transparent Overlay
+#### Requirement 5: The 2D Viewer Shall Display the Segmentation Results as a Semitransparent Overlay
 ##### Requirement 5.1: It Shall be Possible to Define the Color of the Overlay
 The requirement 5 cannot be tested automatically. Transparencies should be tested by a human being.
 
@@ -312,10 +313,13 @@ def TEST_VolumeCalculation():
 {{</highlight>}}
 
 #### Requirement 9: It Shall be Possible to Toggle the Visible 3D Objects
+
 ##### Requirement 9.1: Original Data
+
 ##### Requirement 9.2: Segmentation Results
+
 ##### Requirement 9.3: All
-In the end, we want to develop a testcase for the 3D toggling of the view. We cannot exactly test if the rendering is correct, therefore we will check if the 3D rendering image changes when toggling the 3D view. We will use the modules `OffscreenRenderer`, `ImageCompare`, and `SoCameraInteraction`, which we added to our test network.
+In the end, we want to develop a testcase for the 3D toggling of the view. We cannot exactly test if the rendering is correct; therefore, we will check if the 3D rendering image changes when toggling the 3D view. We will use the modules `OffscreenRenderer`, `ImageCompare`, and `SoCameraInteraction`, which we added to our test network.
 
 Initially, without any marker and segmentation, the views *Both* and *Head* show the same result. After adding a marker, we are going to test if different views result in different images.
 
@@ -405,7 +409,7 @@ Logging.showFile("Link to screenshot file", result)
 {{</highlight>}}
 
 ## Summary
-* Define accessible fields for macro modules so that they can be set in Python tests.
+* Define accessible fields for macro modules, so that they can be set in Python tests.
 * Add outputs to your macro modules for automated testing and connecting testing modules.
 * Testcase numbering allows you to sort them and define execution order.
 

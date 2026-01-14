@@ -1,5 +1,5 @@
 ---
-title: "Example 2.5: Interactions via Python scripting"
+title: "Example 2.5: Interactions via Python Scripting"
 date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
@@ -8,11 +8,13 @@ tags: ["Beginner", "Tutorial", "Macro", "Macro modules", "Global Macro", "Python
 menu: 
   main:
     identifier: "pythonscripting"
-    title: "Interactions with macro modules via Python scripting"
+    title: "Interactions with Macro Modules via Python Scripting"
     weight: 420
     parent: "macro_modules"
 ---
+
 # Example 2.5: Module Interactions Using Python Scripting {#TutorialPythonScripting}
+
 ## Introduction
 
 This chapter will give you an overview over Python scripting in MeVisLab. Here, no introduction into Python will be given. However, basic knowledge in Python is helpful. Instead, we will show how to integrate and use Python in the MeVisLab SDK. 
@@ -20,20 +22,17 @@ This chapter will give you an overview over Python scripting in MeVisLab. Here, 
 In fact, nearly everything in MeVisLab can be done via Python scripting: You can add modules to your network, or remove modules, you can dynamically establish and remove connections, and so on. But, much more important: You can access module inputs and outputs, as well as module fields to process their parameters and data. You can equip user interfaces and panel with custom functionalities. Python can be used to implement module interactions. When you open a panel or you press a button in a panel, the executed actions are implemented via Python scripting.
 
 ## Basics
-
 To see how to access modules, fields, and so on, open the *Scripting Console* via {{< menuitem "Scripting" "Show Scripting Console" >}}.
-### Internal Field Names
 
-You can find the internal name of one module field in the respective network. Open a panel, for example, the Automatic Panel and right-click {{< mousebutton "right" >}} the field's title to open the field's context menu. Now, you can select *Copy Name*, to copy the internal name of the field. This name can be used to access the field via scripting.
+### Internal Field Names
+You can find the internal name of one module field in the respective network. Open a panel, for example, the automatic panel and right-click {{< mousebutton "right" >}} the field's title to open the field's context menu. Now, you can select *Copy Name*, to copy the internal name of the field. This name can be used to access the field via scripting.
 
 ### Scripting Context
-
 When entering *ctx* to the console, you can see the context you are working with. In the context of the *Scripting Console*, you have access to your workspace, meaning the whole network, its modules, and the modules' fields.
 
 ![Scripting context](images/tutorials/basicmechanics/Scripting_02.png "Scripting context")
 
 ### Editing the Workspace
-
 In the *Scripting Console*, you can add and connect modules using the following commands:
 
 * *ctx.addModule("*< ModuleName >*")* : Add the desired module to your workspace.
@@ -49,7 +48,6 @@ It is also possible to add notes to your workspace.
 ![Add a note to the workspace](images/tutorials/basicmechanics/Scripting_04.png "Add a note to your workspace")
 
 ### Access Modules and Module Fields
-
 You can access modules via *ctx.module("* < ModuleName > *")*. From this object, you can access module fields, module inputs and outputs, and everything in context of this module. 
 
 You can also directly access a module field via *ctx.field("* < ModuleName.FieldName > *")*. Different methods can be called on this object. Have a look at the {{< docuLinks "/Resources/Documentation/Publish/SDK/ScriptingReference/group__scripting.html" "Scripting Reference" >}} to find out which methods can be called for which object or class. You can, for example, access the value of the respective field.
@@ -59,31 +57,27 @@ You can also directly access a module field via *ctx.field("* < ModuleName.Field
 ![Access modules and module fields](images/tutorials/basicmechanics/Scripting_05.png "Access modules and module fields")
 
 ### Python Scripting Reference
-
 {{< docuLinks "/Resources/Documentation/Publish/SDK/ScriptingReference/group__scripting.html" "Here" >}} you can find the Scripting Reference. In the Scripting Reference you can find information about different Python classes used in MeVisLab and their methods.
 
 [//]: <> (MVL-653)
 
 ## Where and How to Use Python Scripting
+
 #### Scripting View
 
 Under {{< menuitem "View" "Views" "Scripting" >}} you can find the View *Scripting*. The view offers a standard Python console, without any meaningful network or module context. This means only general Python functionalities can be tested and used. Access to modules or your network is not possible.
 
 #### Scripting Console
-
 You can open the *Scripting Console* via {{< menuitem "Scripting" "Show Scripting Console" >}}. In the context of your workspace, you can access your network and modules.
 
 #### Scripting Console of Modules
-
 Every module offers a scripting console. Open the context menu of a module and select {{< menuitem "Show Window" "Scripting Console" >}}. You can work in the context (*ctx.*) of this module. 
 
 #### Module `RunPythonScript`
-
 The module `RunPythonScript` allows to execute Python scripts from within a MeVisLab network. You can draw parameter connection from modules to `RunPythonScript` and back, to process parameter fields using Python scripting. An example for the usage of `RunPythonScript` can be found [here](../scriptingexample1/).
 
 #### Module Interactions via Python Scripting
-
-You can reference to a Python function inside a *.script* file of a macro module. With this, you can, for example, execute a Python function, whenever you open a panel, define the action that is executed when pressing a button or specify the command triggered by a [field listener](tutorials/basicmechanisms/macromodules/scriptingexample2). An example for module interactions via Python scripting is given in the same example.
+You can reference to a Python function in a *.script* file of a macro module. With this, you can, for example, execute a Python function whenever you open a panel, or define the action that is executed when pressing a button or specify the command triggered by a [field listener](tutorials/basicmechanisms/macromodules/scriptingexample2). An example for module interactions via Python scripting is given in the same example.
 
 #### Python Scripting in Network Files (*.mlab*)
 If you do not want to create a macro module, you can also execute Python scripts in a network file (*.mlab*). Save your network using a defined name, for example, *mytest.mlab*. Then, create a *.script* and a *.py* file in the same directory, using the same names (*mytest.script* and *mytest.py*).
@@ -98,7 +92,7 @@ Commands {
 ```
 {{</highlight>}}
 
-Now you can enter your Python code to the file *mytest.py*, for example:
+Now, you can enter your Python code to the file *mytest.py*, for example:
 
 {{< highlight filename="IsoCSOs.py" >}}
 ```Python

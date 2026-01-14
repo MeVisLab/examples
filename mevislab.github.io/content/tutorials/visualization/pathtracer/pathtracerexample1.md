@@ -8,10 +8,11 @@ tags: ["Advanced", "Tutorial", "Visualization", "3D", "Volume Rendering", "Path 
 menu: 
   main:
     identifier: "pathtracer_example1"
-    title: "Comparison between Volume Rendering and MeVisLab Path Tracer"
+    title: "Comparison Between Volume Rendering and MeVisLab Path Tracer"
     weight: 578
     parent: "visualization_example6"
 ---
+
 # Example 6.1: Volume Rendering vs. Path Tracer
 
 {{< youtube "E0H87Cimu_M">}}
@@ -30,8 +31,9 @@ The MeVis Path Tracer requires an NVIDIA graphics card with CUDA support. In ord
 As a first step for comparison, you are creating a 3D scene with two spheres using the already known volume rendering.
 
 ### Volume Rendering
-#### Create 3D objects
-Add three `WEMInitialize` modules for one *Cube* and two *Icosphere* to your workspace and connect each of them to a `SoWEMRenderer`. Set *instanceName* of the `WEMInitialize` modules to *Ccube*, *Sphere1*, and *Sphere2*. Set *instanceName* of the `SoWEMRenderer` modules to and *RenderCube*, *RenderSphere1*, and *RenderSphere2*.
+
+#### Create 3D Objects
+Add three `WEMInitialize` modules for one *Cube* and two *Icosphere* to your workspace and connect each of them to a `SoWEMRenderer`. Set *instanceName* of the `WEMInitialize` modules to *Cube*, *Sphere1*, and *Sphere2*. Set *instanceName* of the `SoWEMRenderer` modules to and *RenderCube*, *RenderSphere1*, and *RenderSphere2*.
 
 For *RenderSphere1*, define a *Diffuse Color* *yellow* and set *Face Alpha* to *0.5*. The *RenderCube* remains as is and the *RenderSphere2* is defined as *Diffuse Color* *red* and *Face Alpha* *0.5*.
 
@@ -79,10 +81,10 @@ Finally, you should group all modules belonging to your volume rendering.
 ![Volume Rendering Network](images/tutorials/visualization/pathtracer/Example1_8.png "Volume Rendering Network")
 
 ### Path Tracing
-For the Path Tracer, you can just re-use our 3D objects from volume rendering. This helps us to compare the rendering results.
+For the Path Tracer, you can just reuse our 3D objects from volume rendering. This helps us to compare the rendering results.
 
 #### Rendering
-Path Tracer modules fully integrate into MeVisLab Open Inventor, therefore the general principles and the necessary modules are not completely different. Add a `SoGroup` module to your workspace and connect it to your 3D objects from `SoWEMRenderer`. A `SoBackground` as in volume rendering network is not necessary but you add a `SoPathTracerMaterial` and connect it to the `SoGroup`. You can leave all settings as default for now.
+Path Tracer modules fully integrate into MeVisLab Open Inventor; therefore, the general principles and the necessary modules are not completely different. Add a `SoGroup` module to your workspace and connect it to your 3D objects from `SoWEMRenderer`. A `SoBackground` as in volume rendering network is not necessary but you add a `SoPathTracerMaterial` and connect it to the `SoGroup`. You can leave all settings as default for now.
 
 ![Path Tracer Material](images/tutorials/visualization/pathtracer/Example1_9.png "Path Tracer Material")
 
@@ -111,7 +113,7 @@ Finally, group your Path Tracer modules to another group named *Path Tracing*.
 ![Side by Side](images/tutorials/visualization/pathtracer/Example1_15.png "Side by Side")
 
 ### Share the Same Camera
-Finally, you want to have the same camera perspective in both viewers so that you can see the differences. Add a `SoPerspectiveCamera` module to your workspace and connect it to the volume rendering and the Path Tracer network. The Path Tracer network additionally needs a SoGroup, see below for connection details. You have to toggle *detectCamera* in both of your `SoCameraInteraction` modules in order to synchronize the view for both `SoRenderArea` viewers.
+Finally, you want to have the same camera perspective in both viewers, so that you can see the differences. Add a `SoPerspectiveCamera` module to your workspace and connect it to the volume rendering and the Path Tracer network. The Path Tracer network additionally needs a SoGroup, see below for connection details. You have to toggle *detectCamera* in both of your `SoCameraInteraction` modules in order to synchronize the view for both `SoRenderArea` viewers.
 
 ![Camera Synchronization](images/tutorials/visualization/pathtracer/Example1_16.png "Camera Synchronization")
 

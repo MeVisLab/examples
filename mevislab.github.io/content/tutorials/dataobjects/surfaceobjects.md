@@ -12,6 +12,7 @@ menu:
     weight: 700
     parent: "dataobjects"
 ---
+
 # Surface Objects (WEMs){#WEMs}
 ## Introduction
 In MeVisLab it is possible to create, visualize, process, and manipulate surface objects, also known as polygon meshes. Here, we call surface objects *Winged Edge Mesh*, in short WEM. In this chapter you will get an introduction into WEMs. In addition, you will find examples on how to work with WEMs. For more information on WEMs, take a look at the {{< docuLinks "/Resources/Documentation/Publish/SDK/ToolBoxReference/WEMDataStructure.html" "MeVisLab Toolbox Reference" >}}. If you like to know which WEM formats can be imported into MeVisLab, take a look at the *assimp* documentation [here](https://github.com/assimp/assimp).
@@ -27,7 +28,6 @@ Add the module `WEMInitialize` to your workspace, open its panel, and select a *
 ![WEM initializing](images/tutorials/dataobjects/surfaces/WEM_01_1.png "WEM initializing")
 
 ### Rendering of WEMs
-
 For rendering WEMs, you can use the module `SoWEMRenderer` in combination with the viewer `SoExaminerViewer`. Add both modules to your network and connect them as shown. A background is always a nice feature to have.
 ![WEM rendering](images/tutorials/dataobjects/surfaces/WEM_01_2.png "WEM rendering")
 

@@ -8,7 +8,7 @@ tags: ["Beginner", "Tutorial", "Data Objects", "2D", "Contours", "CSO"]
 menu: 
   main:
     identifier: "contourexample1"
-    title: "Creation of simple Contours changing their appearance"
+    title: "Creation of Simple Contours Changing Their Appearance"
     weight: 665
     parent: "contours"
 ---
@@ -18,10 +18,10 @@ menu:
 {{< youtube "ygYJMmQ95v8">}}
 
 ## Introduction
-
 We like to start with the creation of CSOs. To create CSOs, you need a `SoCSO*`-Editor. There are several different editors that can be used to create CSOs (see [here](tutorials/dataobjects/contourobjects#CSOEditors)). Some of them are introduced in this example.
 
 ## Steps to Do
+
 ### Develop Your Network
 For this example, we need the following modules. Add the modules to your workspace, connect them as shown below, and load the example image *$(DemoDataPath)/BrainMultiModal/ProbandT1.tif*.
 

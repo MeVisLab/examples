@@ -8,13 +8,14 @@ tags: ["Beginner", "Tutorial", "Visualization", "2D", "3D"]
 menu: 
   main:
     identifier: "visualization"
-    title: "Examples for different possibilities of visualizations in MeVisLab."
+    title: "Examples for Different Possibilities of Visualizations in MeVisLab"
     weight: 550
     parent: "tutorials"
 ---
-# Visualization in MeVisLab {#TutorialVisualization}
-## Introduction
 
+# Visualization in MeVisLab {#TutorialVisualization}
+
+## Introduction
 Images and data objects can be rendered in 2D and 3D and interacted with in several ways using a set of tools available through MeVisLab. 
 In this chapter in particular, we will focus on simple image interaction with two- and three-dimensional visualizations. 
 
@@ -23,13 +24,11 @@ Not only pixel- and voxel-based data, but also scene objects and 3D scenes can b
 {{</alert>}}
 
 ## View2D and View3D
-
-An easy way to display data and images in 2D and 3D is by using the Modules `View2D` and `View3D`. What can be done with these viewers?
+An easy way to display data and images in 2D and 3D is by using them modules `View2D` and `View3D`. What can be done with these viewers?
 
 ![View2D and View3D](images/tutorials/visualization/V0.png "View2D and View3D")
 
 ### View2D
-
 1. Scroll through the slices using the mouse wheel {{< mousebutton "middle" >}}  and/or middle mouse button {{< mousebutton "middle" >}}.
 
 2. Change the contrast of the image by clicking the right mouse button {{< mousebutton "right" >}} and moving the mouse.
@@ -45,7 +44,6 @@ The `View2DExtensions` module provides additional ways to interact with an image
 {{</alert>}}
 
 ### View3D
-
 1. Zoom in and out using the mouse wheel {{< mousebutton "middle" >}}.
 
 2. Drag the 3D objects using the middle mouse button {{< mousebutton "middle" >}}.

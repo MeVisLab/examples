@@ -1,5 +1,5 @@
 ---
-title: "Step 2: Prototyping - Create a macro module"
+title: "Step 2: Prototyping - Create a Macro Module"
 date: "2023-01-16"
 status: "open"
 draft: false
@@ -8,10 +8,11 @@ tags: ["Advanced", "Tutorial", "Prototyping", "Macro modules"]
 menu: 
   main:
     identifier: "summaryexample2"
-    title: "Create a macro module from your network."
+    title: "Create a Macro Module From Your Network"
     weight: 810
     parent: "summary"
 ---
+
 # Step 2: Prototyping - Create a Macro Module
 
 {{< youtube "gNlOTiEOJgU" >}}
@@ -20,7 +21,7 @@ menu:
 In this example, we encapsulate the previously developed prototype network into a macro module for future application development and automated testing.
 
 ## Steps to Do
-Make sure to have your *.mlab* file from the previous [tutorial](/tutorials/summary/summary1/) available.
+Make sure to have your *.mlab* file from the previous [tutorial](tutorials/summary/summary1/) available.
 
 ### Package Creation
 Packages are described in detail in [Example 2.1: Package creation](tutorials/basicmechanisms/macromodules/package/). If you already have your own package, you can skip this part and continue creating a macro module.

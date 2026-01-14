@@ -1,5 +1,5 @@
 ---
-title: "Example 1: Data import in MeVisLab"
+title: "Example 1: Data Import in MeVisLab"
 date: 2022-06-15T08:54:53+02:00
 status: "OK"
 draft: false
@@ -8,13 +8,13 @@ tags: ["Beginner", "Tutorial",  "Data Import", "DICOM"]
 menu: 
   main:
     identifier: "data_import"
-    title: "How to import several data formats into MeVisLab like DICOM, Contours, Surface Objects, or 3D Scenes."
+    title: "How to Import Different Data Formats Into MeVisLab like DICOM, Contours, Surface Objects, or 3D Scenes."
     weight: 360
     parent: "basicmechanisms"
 ---
 
 # Example 1: Data Import in MeVisLab
-MeVisLab provides several pre-defined modules to import data for processing in your networks.
+MeVisLab provides several predefined modules to import data for processing in your networks.
 
 {{<alert class="info" caption="Extra Infos">}}
 The easiest way to load data in MeVisLab is to drop the file onto the MeVisLab workspace. MeVisLab will try to find a module that is capable of loading your file automatically.
@@ -48,13 +48,13 @@ The `ImageLoad` module can import the following formats:
 * JPEG
 * MLImageFileFormat
 
-Basic information of the imported images are available on the Panel that opens via double-click.
+Basic information of the imported images is available on the panel that opens via double-click.
 
 ## DICOM Data {#DICOMImport}
 {{<alert class="info" caption="Extra Infos">}}
 Additional information about **Digital Imaging and Communications in Medicine (DICOM)** can be found at [Wikipedia](https://en.wikipedia.org/wiki/DICOM "DICOM Format")
 {{< /alert >}}
-Even if the above explained `ImageLoad` is able to import DICOM data, a much better way is to use one of the specialized modules for DICOM images such as `DicomImport`.
+Even if the above explained `ImageLoad` is able to import DICOM data, a much better way is to use one of the specialized modules for DICOM images, such as `DicomImport`.
 
 The `DicomImport` module allows to define a directory containing DICOM files to import as well as a list of files that can be dropped to the UI and imported. After import, the volumes are shown in a patient tree providing the following patient, study, series, and volume information (depending on the availability in the DICOM file(s)):
 
@@ -108,7 +108,7 @@ For saving and loading existing CSOs, the modules `CSOSave` and `CSOLoad` can be
 ### Winged Edge Mesh (WEM)
 Three-dimensional meshes in MeVisLab are handled via *WEM*s (**W**inged **E**dge **M**esh).
 
-The module `WEMLoad` loads different 3D mesh file formats like:
+The module `WEMLoad` loads different 3D mesh file formats, for example:
 * Object File Format (*.off* *.geom*)
 * Wavefront (*.obj*)
 * Polygon File Format (*.ply*)

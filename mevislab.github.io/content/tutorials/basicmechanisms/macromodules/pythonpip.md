@@ -1,5 +1,5 @@
 ---
-title: "Example 4: Installing additional Python packages using the PythonPip module"
+title: "Example 4: Installing Additional Python Packages Using the PythonPip Module"
 date: 2023-05-16
 status: "OK"
 draft: false
@@ -8,10 +8,11 @@ tags: ["Advanced", "Tutorial", "Python", "PythonPip", "pip"]
 menu: 
   main:
     identifier: "pythonpip"
-    title: "Installing additional Python packages using the PythonPip module"
+    title: "Installing Additional Python Packages Using the PythonPip Module"
     weight: 450
     parent: "basicmechanisms"
 ---
+
 # Example 4: Installing Additional Python Packages Using the PythonPip Module
 ## Introduction
 MeVisLab already comes with a lot of integrated third-party software tools ready to use. Nevertheless, it might be necessary to install additional Python packages for your specific needs. This example will walk you through the process of adding packages through usage of/using the `PythonPip` module.

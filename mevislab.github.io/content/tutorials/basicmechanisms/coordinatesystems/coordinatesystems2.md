@@ -8,7 +8,7 @@ tags: ["Beginner", "Tutorial",  "Data Import", "DICOM", "Coordinate Systems"]
 menu: 
   main:
     identifier: "coordinatesystems2"
-    title: "The different coordinate systems in DICOM."
+    title: "The Different Coordinate Systems in DICOM."
     weight: 366
     parent: "data_import"
 ---
@@ -24,7 +24,7 @@ World coordinates also refer to the patient axes. They are:
 
 ![World Coordinates in Context of the Human Body](images/tutorials/visualization/V2_00.png "World Coordinates in Context of the Human Body")
 
-The DICOM (Digital Imaging and Communications in Medicine) standard defines a data format that groups information into data sets. This way, the image data is always kept together with all meta information like patient ID, study time, series time, acquisition data, etc. The image slice is represented by another tag with pixel information.
+The Digital Imaging and Communications in Medicine (DICOM) standard defines a data format that groups information into data sets. This way, the image data is always kept together with all meta information like patient ID, study time, series time, acquisition data, etc. The image slice is represented by another tag with pixel information.
 
 DICOM tags have unique numbers, encoded as two 16-bit numbers, usually shown in hexadecimal notation as two four-digit numbers (xxxx,xxxx). These numbers are the data group number and the data element number.
 
@@ -34,7 +34,7 @@ Although DICOM is a standard, often the data that is received/recorded does not 
 
 Some typical modules for DICOM handling:
 * `DirectDicomImport` is a module for DICOM import that generates 3D or 4D images (as ML images) from a list of DICOM files which can directly be used by other modules. It has a lot of options to control the import process, which can, e.g., determine which slices are combined into an image stack.
-* `DicomImport` is a new module for DICOM import. The new implementation does not yet provide all known functionalities from `DirectDicomImport`, most of them will be added in future releases. Its main advantage is that the import process is faster and happens asynchronously.
+* `DicomImport` is a fast and more lightweight module for DICOM import. Its main advantage is that the import process is faster and happens asynchronously.
 * You can view the the DICOM tags of a DICOM image or a processed ML image with the module `DicomTagBrowser`.
 * You can view and cut out frame-specific tags with the module `DicomFrameSelect`.
 * You can modify DICOM tags with the module `DicomTagModify`.
@@ -53,14 +53,14 @@ The module `OrthoView2D` provides a 2D view displaying the input image in three 
 
 ![OrthoView2D](images/tutorials/basicmechanics/OrthoView2D.png "OrthoView2D")
 
-As already learned in the previous example [1.1: MeVisLab Coordinate Systems](tutorials/basicmechanisms/coordinatesystems/coordinatesystems), world and voxel positions are based on different coordinate systems. Selecting the top left corner of any of your views will not show a world position of 0, 0, 0. You can move the mouse cursor to the voxel position 0, 0, 0 as seen in the image information of the viewers in brackets *(x, y, z)*. The field *worldPosition* then shows the location of the image in world coordinate system (see `Info` module).
+As already learned in the previous example [1.1: MeVisLab Coordinate Systems](tutorials/basicmechanisms/coordinatesystems/coordinatesystems), world and voxel positions are based on different coordinate systems. Selecting the top left corner of any of your views will not show a world position of (0, 0, 0). You can move the mouse cursor to the voxel position (0, 0, 0) as seen in the image information of the viewers in brackets *(x, y, z)*. The field *worldPosition* then shows the location of the image in world coordinate system (see `Info` module).
 
 ![OrthoView2D Voxel- and World Position](images/tutorials/basicmechanics/OrthoView2D_WorldPosition.png "OrthoView2D Voxel- and World Position")
 
 Another option is to use the module `OrthoReformat3` that transforms the input image (by rotating and/or flipping) into the three main views commonly used: 
 * Output 0: Sagittal view
 * Output 1: Coronal view
-* Output 2: Transverse view
+* Output 2: Transverse view (aka Axial view)
 
 ![OrthoReformat3](images/tutorials/basicmechanics/OrthoReformat3.png "OrthoReformat3")
 

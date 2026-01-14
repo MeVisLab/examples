@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Display images converted to Open Inventor scene objects"
+title: "Display Images Converted to Open Inventor Scene Objects"
 category: "visualization"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Using provided examples"
+title: "Using Provided Examples"
 date: 2022-06-15T08:56:33+02:00
 draft: false
 status: "OK"
@@ -9,8 +9,8 @@ menu:
     weight: 649
     parent: "examples"
 ---
-### Structure
 
+### Structure
 Each tutorial chapter was used as an umbrella theme to structure related examples that are linked in a list. 
 After clicking any of the linked examples, you will be forwarded to a short description of the feature and have the option to download the resource that produces your desired effect.
 
@@ -25,7 +25,7 @@ Double-clicking the left mouse button within your MeVisLab workspace works as a 
 
 Files can also be opened using the menu option {{< menuitem "File" "Open">}}.
 
-### Archives (*.zip*) Files
+### Archive (*.zip*) Files
 Archives mostly contain macro modules. <br>
 To use those macro modules, you will need to know how to handle user packages. 
 

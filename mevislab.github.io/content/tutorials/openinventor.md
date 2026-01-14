@@ -8,14 +8,14 @@ tags: ["Beginner", "Tutorial", "Open Inventor", "3D"]
 menu: 
   main:
     identifier: "openinventor"
-    title: "Examples for handling Open Inventor Modules and Scene Graphs in MeVisLab."
+    title: "Examples for Handling Open Inventor Modules and Scene Graphs in MeVisLab."
     weight: 500
     parent: "tutorials"
 ---
 
 # Open Inventor Modules {#TutorialOpenInventorModules}
-## Introduction
 
+## Introduction
 In total, there are three types of modules:
 * blue ML modules
 * brown macro modules

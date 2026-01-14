@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Mouse interactions in an Open Inventor scene"
+title: "Mouse Interactions in an Open Inventor Scene"
 category: "open_inventor"
 ---
 

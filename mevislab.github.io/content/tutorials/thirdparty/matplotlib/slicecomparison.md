@@ -8,23 +8,23 @@ tags: ["Beginner", "Tutorial", "Matplotlib", "Visualization"]
 menu: 
   main:
     identifier: "matplotlibexample3"
-    title: "Example 3: Slice Comparison"
+    title: "Slice Comparison"
     weight: 883
     parent: "matplotlib"
 ---
+
 # Example 3: Slice Comparison
 
 ## Introduction 
-
 We will adapt the previously created macro module to be able to overlay two defined slices to compare their grayscale distributions. 
-+ The module we are adapting has been set up in the [Example 1: Module Setup](tutorials/thirdparty/matplotlib/modulesetup) tutorial.
-+ The panel and two-dimensional plotting functionality has been added in [Example 2: 2D Plotting]
+* The module we are adapting has been set up in the [Example 1: Module Setup](tutorials/thirdparty/matplotlib/modulesetup) tutorial.
+* The panel and two-dimensional plotting functionality has been added in [Example 2: 2D Plotting]
   (tutorials/thirdparty/matplotlib/2dplotting).
 
-## Steps to do
-At first, we will extend the panel: Open your `BaseNetwork` macro module within an empty MeVisLab workspace and select the .script file from its related files. 
+## Steps to Do
+At first, we will extend the panel: Open your `BaseNetwork` macro module within an empty MeVisLab workspace and select the *.script* file from its related files. 
 
-Add the following code into your .script file, between the "Single Slice" and the "Sequence" box.
+Add the following code into your *.script* file between the "Single Slice" and the "Sequence" box.
 
 {{< highlight filename = "BaseNetwork.script">}}
 ```Stan
@@ -43,11 +43,11 @@ Add the following code into your .script file, between the "Single Slice" and th
         }
 ``` {{</highlight>}}
 
-Your panel should now be altered to look like this: 
+Your panel should now be changed to look like this: 
 
 ![MATE Preview](images/tutorials/thirdparty/Matplotlib14.PNG)
 
-We will now add the "comparison" function, to give the "Plot" button in our "Comparison" box a purpose. To do so, change into your modules .py file and choose a cosy place for the following piece of code:
+We will now add the "comparison" function, to give the "Plot" button in our "Comparison" box a purpose. To do so, switch to your module's *.py* file and choose a cosy place for the following piece of code:
 
 {{< highlight filename = "BaseNetwork.py">}}
 ```Stan
@@ -83,6 +83,6 @@ You should now be able to reproduce results like these:
 ![Comparison](images/tutorials/thirdparty/Matplotlib16.PNG)
 ![Comparison](images/tutorials/thirdparty/Matplotlib17.PNG)
 
-### Summary
-+ Grayscale distributions of two slices can be layered to compare them and make deviations noticeable
+## Summary
+* Grayscale distributions of two slices can be layered to compare them and make deviations noticeable.
 

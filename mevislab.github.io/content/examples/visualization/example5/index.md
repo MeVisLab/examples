@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Volume rendering and interactions"
+title: "Volume Rendering and Interactions"
 category: "visualization"
 ---
 

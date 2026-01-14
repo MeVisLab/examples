@@ -4,32 +4,34 @@ date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
 weight: 857
-tags: ["Advanced", "Tutorial", "OpenCV", "Python", "WebCam", "Face Detection"]
+tags: ["Advanced", "Tutorial", "OpenCV", "Python", "Webcam", "Face Detection"]
 menu: 
   main:
     identifier: "thirdpartyexample2"
-    title: "Enhance OpenCV WebCam example and build a face detection using MeVisLab, OpenCV and Python."
+    title: "Enhance OpenCV Webcam Example and Build a Face Detection Using MeVisLab, OpenCV, and Python"
     weight: 857
     parent: "opencv"
 ---
+
 # Example 2: Face Detection with OpenCV
 
 ## Introduction
-This example uses the OpenCV WebCam Python script and adds a basic face detection.
+This example uses the OpenCV webcam Python script and adds a basic face detection.
 
 {{<alert class="info" caption="Info">}}
 The Python code used in this example has been taken from [Towards Data Science](https://towardsdatascience.com/face-detection-in-2-minutes-using-opencv-python-90f89d7c0f81).
 {{</alert>}}
 
-## Steps to do
+## Steps to Do
+
 ### Open Example 1
 Add the macro module developed in [Example 1](tutorials/thirdparty/opencv/thirdpartyexample1) to your workspace.
 
-### Download trained classifier XML file
-Initially you need to download the trained classifier XML file. It is available in the [OpenCV GitHub repository](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml). Save the file somewhere and remember the path for later usage in Python.
+### Download Trained Classifier XML File
+Initially, you need to download the trained classifier XML file. It is available in the [OpenCV GitHub repository](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml). Save the file somewhere and remember the path for later usage in Python.
 
-### Extend Python file
-Right click on your module {{< mousebutton "right" >}}, open the context menu and select {{< menuitem "Related Files" "<YOUR_MODULE_NAME>.py" >}}. The text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the Python file of your module.
+### Extend Python File
+Right-click on your module {{< mousebutton "right" >}}, open the context menu, and select {{< menuitem "Related Files" "<YOUR_MODULE_NAME>.py" >}}. The text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the Python file of your module.
 
 You have to load the previously downloaded XML file first.
 {{< highlight filename="<YOUR_MODULE_NAME>.py" >}}
@@ -73,12 +75,12 @@ def releaseCamera(_):
 ```
 {{</highlight>}}
 
-Opening your macro module and pressing *Start* should now open your WebCam stream and an additional OpenCV window which shows a blue rectangle around a detected face.
+Opening your macro module and pressing *Start* should now open your webcam stream and an additional OpenCV window, which shows a blue rectangle around a detected face.
 
 ![Face Detection in MeVisLab using OpenCV](images/tutorials/thirdparty/bigbang.png "Face Detection in MeVisLab using OpenCV")
 
 ## Summary
-This is just one example for using OpenCV in MeVisLab. You will find lots of other examples and tutorials online, we just wanted to show one possibility.
+* This is just one example for using OpenCV in MeVisLab. You will find lots of other examples and tutorials online, we just wanted to show one possibility.
 
 {{<alert class="info" caption="Info">}}
 You can download the Python file [here](examples/thirdparty/example2/FaceDetection.py)

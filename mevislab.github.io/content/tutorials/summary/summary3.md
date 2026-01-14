@@ -1,5 +1,5 @@
 ---
-title: "Step 3: Prototyping - User Interface and Python scripting"
+title: "Step 3: Prototyping - User Interface and Python Scripting"
 date: "2023-01-17"
 status: "open"
 draft: false
@@ -8,10 +8,11 @@ tags: ["Advanced", "Tutorial", "Prototyping", "User Interface", "Python", "GUI E
 menu: 
   main:
     identifier: "summaryexample3"
-    title: "Develop your User Interface and add Python functions."
+    title: "Develop Your User Interface and Add Python Functions"
     weight: 815
     parent: "summary"
 ---
+
 # Step 3: Prototyping - User Interface and Python Scripting
 
 {{< youtube "dOyncLUpclU" >}}
@@ -20,6 +21,7 @@ menu:
 In this step, we will develop a user interface and add Python scripting to the macro module you created in [Step 2](tutorials/summary/summary2).
 
 ## Steps to Do
+
 ### Develop the User Interface
 A mockup of the user interface you are going to develop is available [here](tutorials/summary#UIDesign). The interface provides the possibility to load files and shows a 2D and a 3D viewer. In addition to that, some settings and information for our final application are available.
 
@@ -76,12 +78,13 @@ An overview over the existing layout elements in MeVisLab Definition Language (M
 {{</alert>}}
 
 #### Adding the UI Elements
+
 ##### Source
 The *Source Box* shall provide the possibility to select a file for loading into the viewers. You have many options to achieve that in MeVisLab and Python. The easiest way is to reuse the existing field of the `LocalImage` module in your internal network.
 
 Add a field to the *Parameters* section of your *.script* file. Name the field *openFile* and set type to *String* and internalName to *LocalImage.name*.
 
-Then add another field to your *Box* for the *Source* and use the field name from *Parameters* section, in this case *openFile*. Set *browseButton = True* and *browseMode = open* and save your script.
+Then, add another field to your *Box* for the *Source* and use the field name from *Parameters* section, in this case *openFile*. Set *browseButton = True* and *browseMode = open* and save your script.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -205,7 +208,7 @@ Interface {
 ```
 {{</highlight>}}
 
-The next elements follow the same rules, therefore the final script will be available at the end for completeness.
+The next elements follow the same rules; therefore, the final script will be available at the end for completeness.
 
 In order to set the transparency of the 3D image, we need another field reusing the *SoWEMRendererImage.faceAlphaValue*. Add a field *imageAlpha* to the *Parameters* section. Define *internalName = SoWEMRendererImage.faceAlphaValue*, *type = Integer*, *min = 0*, and *max = 1*.
 
@@ -318,7 +321,7 @@ Your user interface of the macro module should now look similar to this:
 For the next elements, we require Python scripting. Nevertheless, you are already able to use your application and perform the basic functionalities without writing any line of code.
 
 ### Python Scripting
-Python scripting is always necessary in the case you do not want to reuse an existing field for your user interface but implement functions to define what happens in case of any event.
+Python scripting is always necessary in the case you do not want to reuse an existing field for your user interface but implement functions to define what happens in the case of any event.
 
 Events can be raised by the user (e.g., by clicking a button) or by the application itself (e.g., when the window is opened).
 

@@ -8,10 +8,11 @@ tags: ["Advanced", "Tutorial", "Data Objects", "3D", "Surfaces", "Meshes", "WEM"
 menu: 
   main:
     identifier: "surfaceexample5"
-    title: "Examples how to calculate distances between WEM objects"
+    title: "Examples How to Calculate Distances Between WEM Objects"
     weight: 725
     parent: "surfaces"
 ---
+
 # Surface Example 5: WEM - Primitive Value Lists
 
 {{< youtube "Rap1RY6l5Cc">}}
@@ -22,6 +23,7 @@ WEMs do not only contain the coordinates of nodes and surfaces, they can also co
 In this example we like to use PVLs to color-code and visualize the distance between two WEMs.
 
 ## Steps to Do
+
 ### Develop Your Network
 We start our network by initializing two WEMs using `WEMInitialize`. We chose an *Octasphere* and a resized *Cube*. Use the modules `SoWEMRenderer`, `SoExaminerViewer`, and `SoBackground` to visualize the WEMs.
 
@@ -83,6 +85,5 @@ The result can be seen in the next image.
 * Additional information of WEMs can be stored in *Primitive Value Lists* (PVL), attached to nodes, edges, or faces.
 * The module `WEMSurfaceDistance` stores the minimum distance between nodes of different WEMs in PVLs as LUT values.
 * PVLs containing LUT values can be used to color-code additional information on the WEM surface.
-
 
 {{< networkfile "examples/data_objects/surface_objects/example5/SurfaceExample5.mlab" >}}

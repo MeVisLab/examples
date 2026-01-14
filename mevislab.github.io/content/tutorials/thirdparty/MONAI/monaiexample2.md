@@ -1,5 +1,5 @@
 ---
-title: "Example 2: Applying a spleen segmentation model from MONAI in MeVisLab"
+title: "Example 2: Applying a Spleen Segmentation Model from MONAI in MeVisLab"
 date: 2025-11-13
 status: "OK"
 draft: false
@@ -8,21 +8,23 @@ tags: ["Advanced", "Tutorial", "MONAI", "Python", "PythonPip", "AI"]
 menu: 
   main:
     identifier: "monaiexample2"
-    title: "Applying a spleen segmentation model from MONAI in MeVisLab."
+    title: "Applying a Spleen Segmentation Model from MONAI in MeVisLab"
     weight: 879
     parent: "monai"
 ---
+
 # Example 2: Applying a Spleen Segmentation Model from MONAI in MeVisLab
 
 ## Introduction
-In the following, we will perform a spleen segmentation using a model from the *MONAI Model Zoo*. The MONAI Model Zoo is a collection of pre-trained models for medical imaging, offering standardized bundles for tasks like segmentation, classification, and detection across MRI, CT, and pathology data, all built for easy use and reproducibility within the MONAI framework. Further information and the required files can be found [here](https://github.com/Project-MONAI/model-zoo/tree/dev "here").
+In the following, we will perform a spleen segmentation using a model from the *MONAI Model Zoo*. The MONAI Model Zoo is a collection of pretrained models for medical imaging, offering standardized bundles for tasks like segmentation, classification, and detection across MRI, CT, and pathology data, all built for easy use and reproducibility within the MONAI framework. Further information and the required files can be found [here](https://github.com/Project-MONAI/model-zoo/tree/dev "here").
 
 This example shows how to use the model for **Spleen CT Segmentation** directly in MeVisLab.
 
 ## Steps to Do
+
 ### Download Necessary Files
 Create a folder named *spleen_ct_segmentation* somewhere on your system.
-Inside this folder, create two subfolders, one named *configs* and another named *models* and remember their paths.
+Inside this folder, create two subfolders, one named *configs* and another one named *models*, and remember their paths.
 
 ![Directory Structure](images/tutorials/thirdparty/monai_example2_1.png "Directory Structure").
 
@@ -47,7 +49,7 @@ Now, right-click {{< mousebutton "right" >}} on the `PythonImage` module, select
 
 Right-click {{< mousebutton "right" >}} on the group's name and choose *Convert to Local Macro* using the same name.
 
-Our new module does not provide an input or output.
+Our new module does not provide any input or output.
 
 ![Local Macro Module MONAIDemo](images/tutorials/thirdparty/monai_example2_2.png "Local Macro Module MONAIDemo")
 
@@ -98,9 +100,9 @@ Fields of the internal network can be left with default values; we will change t
 
 The left part defines actions executed on the input image, the right part defines what shall happen on the output after the *MONAI* segmentation has been done. A detailed description will be provided later.
 
-Open your *.script* file via right-click {{< mousebutton "right" >}} on the Macro Module and select {{< menuitem "Related Files" "MONAIDemo.script">}}.
+Open your *.script* file via right-click {{< mousebutton "right" >}} on the macro module and select {{< menuitem "Related Files" "MONAIDemo.script">}}.
 
-Define your input image field to re-use the internal name of the left input of the `Resample3D` module.
+Define your input image field to reuse the internal name of the left input of the `Resample3D` module.
 
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
@@ -117,7 +119,7 @@ If you now open the internal network of your macro module, you can see that the 
 
 ![MONAIDemo Internal Network](images/tutorials/thirdparty/monai_example2_3b.png "MonaiDemo Internal Network")
 
-Again, open the *.script* file and change the internal name of your *outImage* field to re-use the field *Resample3D1.output0*.
+Again, open the *.script* file and change the internal name of your *outImage* field to reuse the field *Resample3D1.output0*.
 
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
@@ -145,7 +147,7 @@ We can see that the image size is 512 x 512 x 114 and the voxel size is 0.9766 x
 
 ![Output Inspector](images/tutorials/thirdparty/monai_example2_3d.png "Output Inspector")
 
-Connect the module to your local macro module `MonaiDemo`. The result of the segmentation shall be visualized as a semi-transparent overlay on your original image.
+Connect the module to your local macro module `MonaiDemo`. The result of the segmentation shall be visualized as a semitransparent overlay on your original image.
 
 Add a `SoView2DOverlay` and a `View2D` module and connect them to your local macro module `MonaiDemo`.
 
@@ -172,7 +174,7 @@ If you reload your module now, we can set the voxel size to use for the segmenta
 
 ![Voxel Size](images/tutorials/thirdparty/monai_example2_4a.png "Voxel Size")
 
-If you select the output field of the `Resample3D` module in the internal network, you can see the dimensions of the currently opened image after changing the voxel size to 1.5 x 1.5 x 2. It shows 333 x 333 x 143.
+If you select the output field of the `Resample3D` module in the internal network, you can see the extent of the currently opened image after changing the voxel size to 1.5 x 1.5 x 2. It shows 333 x 333 x 143.
 
 ![Original Image Size](images/tutorials/thirdparty/monai_example2_5.png "Original Image Size")
 
@@ -253,9 +255,9 @@ Open the panel of the `SwapFlipDimensions` module and select X as *Axis 1* and Z
 
 ![SwapFlipDimensions](images/tutorials/thirdparty/monai_example2_11.png "SwapFlipDimensions")
 
-After the algorithm has been executed, we have to flip the images back to the original order. Open the panel of the `SwapFlipDimensions1` module and select X as *Axis 1* and Z as *Axis 2*. 
+After the algorithm has finished, we have to flip the images back to the original order. Open the panel of the `SwapFlipDimensions1` module and select X as *Axis 1* and Z as *Axis 2*. 
 
-Finally, we want to show the results of the algorithm as a semi-transparent overlay on the image. Open tha panel of the `View2DOverlay` and define the following settings:
+Finally, we want to show the results of the algorithm as a semitransparent overlay on the image. Open the panel of the `View2DOverlay` and define the following settings:
 * Blend Mode: Blend
 * Alpha Factor: 0.5
 * Base Color: red
@@ -263,7 +265,7 @@ Finally, we want to show the results of the algorithm as a semi-transparent over
 ![View2DOverlay](images/tutorials/thirdparty/monai_example2_12.png "View2DOverlay")
 
 ### Field Listeners
-We add some Field Listeners to our Commands section of the *.script* file. They are necessary to react on changes the user makes on the fields of our module.
+We add some Field Listeners to our *Commands* section of the *.script* file. They are necessary to react on changes the user makes on the fields of our module.
 
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
@@ -353,7 +355,7 @@ Let's implement the *_getImage* function first:
 ```
 {{</highlight>}}
 
-We want to use the image that has been modified according to our pre-trained network requirements discussed above. We use the output image of the `SwapFlipDimensions` module when clicking *start*.
+We want to use the image that has been modified according to our pretrained network requirements discussed above. We use the output image of the `SwapFlipDimensions` module when clicking *start*.
 
 {{< highlight filename="MONAIDemo.py" >}}
 ```Python
@@ -439,9 +441,9 @@ We have to calculate a bounding box in our `ROISelect` module and need to be abl
 ```
 {{</highlight>}}
 
-Whenever our size fields are modified, the bounding box is re-calculated using the size of the given image and the values of the sizes defined by the user. The calculated bounding box is not positioned. This needs to be done manually, if necessary.
+Whenever our size fields are modified, the bounding box is recalculated using the size of the given image and the values of the sizes defined by the user. The calculated bounding box is not positioned. This needs to be done manually, if necessary.
 
-Open the *.script* file and add a *Window* section. In this window, we re-use the panel of the `ROISelect` module to manually correct the location of our calculated bounding box.
+Open the *.script* file and add a *Window* section. In this window, we reuse the panel of the `ROISelect` module to manually correct the location of our calculated bounding box.
 
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
@@ -489,14 +491,14 @@ Back to Python, we now need to reset our module to default in the case the input
 ## Execute the Segmentation
 If you now load an image using the `itkImageFileReader` module, you can manually adapt your bounding box to include the spleen and start segmentation.
 
-The results are shown as a semi-transparent overlay.
+The results are shown as a semitransparent overlay.
 
 ![Segmentation result](images/tutorials/thirdparty/monai_example2_6.png "Segmentation result").
 
 You can also use the other examples from *MONAI Model Zoo* the same way, just make sure to apply the necessary changes on the input images like size, voxel size, and other parameters defined in the *inference.json* file of the model.
 
 ## Summary
-* Pre-trained *MONAI* networks can be used directly in MeVisLab via `PythonImage` module.
+* Pretrained *MONAI* networks can be used directly in MeVisLab via `PythonImage` module.
 * The general principles are always the same for all models.
 
 {{< networkfile "examples/thirdparty/monai/MONAIDemo.zip" >}}

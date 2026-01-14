@@ -8,10 +8,11 @@ tags: ["Beginner", "Tutorial", "assimp", "3D", "3D Printing", "stl"]
 menu: 
   main:
     identifier: "assimpexample1"
-    title: "Open a 3D file and save the file or 3D scene as *.stl file for 3D printing."
+    title: "3D Printing in MeVisLab"
     weight: 862
     parent: "assimp"
 ---
+
 # Example 1: 3D Printing in MeVisLab
 
 {{< youtube "82ysCYNTyso">}}
@@ -20,6 +21,7 @@ menu:
 This example uses the *assimp* library to load a 3D file and save the file as *.stl* for 3D printing.
 
 ## Steps to Do
+
 ### Develop Your Network
 Add the modules `SoSceneLoader`, `SoBackground`, and `SoExaminerViewer` to your workspace and connect them as seen below.
 
@@ -45,7 +47,7 @@ You can also define a material for your sphere but what we wanted to show is: Yo
 ### Save Your Scene as *.stl* File for 3D Printing
 Add a `SoSceneWriter` module to your workspace. The `SoExaminerViewer` has a hidden output that can be shown on pressing {{<keyboard "SPACE">}}. Connect the `SoSceneWriter` to the output.
 
-Name your output *.stl* file and select *Stl Ascii* as output format so that we can inspect the result afterward.
+Name your output *.stl* file and select *Stl Ascii* as output format, so that we can inspect the result afterward.
 
 ![SoSceneWriter](images/tutorials/thirdparty/SoSceneWriter.png "SoSceneWriter")
 

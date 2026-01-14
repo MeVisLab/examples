@@ -12,6 +12,7 @@ menu:
     weight: 750
     parent: "dataobjects"
 ---
+
 # Markers in MeVisLab {#MarkersInMeVisLab}
 In MeVisLab you can attach markers to images and other data objects. In this example you will see how to create, process, and use markers.
 
@@ -28,7 +29,7 @@ With the help of the module `So3DMarkerRenderer`, markers of an `XMarkerList` ca
 
 ![Rendering of Markers](images/tutorials/dataobjects/markers/DO_Markers_09.png "Rendering of Markers")
 
-## Working with Markers
+## Working With Markers
 {{<alert class="info" caption="Info">}}
 It is possible to convert other data objects into markers and also to convert markers into other data objects. 
 It is, for example, possible to set markers by using the `MaskToMarkers` module and later on generate a surface object from a list of markers using the `MaskToSurface` module. Marker conversion can also be done by various other modules, listed in [/Modules/Geometry/Markers].
@@ -37,7 +38,7 @@ It is, for example, possible to set markers by using the `MaskToMarkers` module 
 Learn how to convert markers by building the following network. Press the *Reload* buttons of the modules `MaskToMarkers` and `MarkersToSurface` to enable the conversion. Now you can see both the markers and the created surface in the module `SoExaminerViewer`. Use the toggle options of the modules `SoToggle` and `SoWEMRenderer` to enable or disable the visualization of markers and surface.
 
 {{<alert class="info" caption="Info">}}
-Make sure to set *Lower Threshold* of the `MaskToMarkers` module to 1000 so that the 3D object is rendered correctly.
+Make sure to set *Lower Threshold* of the `MaskToMarkers` module to 1000, so that the 3D object is rendered correctly.
 {{</alert>}}
 
 ![Convert Markers](images/tutorials/dataobjects/markers/DO_Markers_02.png "Convert Markers")

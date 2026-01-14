@@ -8,10 +8,11 @@ tags: ["Beginner", "Tutorial", "Data Objects", "2D", "Contours", "CSO"]
 menu: 
   main:
     identifier: "contourexample5"
-    title: "Visualizing Contours on currently visible and neighboring slices (ghosting)"
+    title: "Visualizing Contours on Currently Visible and Neighboring Slices (Ghosting)"
     weight: 685
     parent: "contours"
 ---
+
 # Contour Example 5: Visualizing Contours and Images {#TutorialContoursExample5}
 
 {{< youtube "6fHmy57P3yQ">}}
@@ -20,13 +21,14 @@ menu:
 In this example, we like to automatically create CSOs based on a predefined isovalue. 
 
 ## Steps to Do
+
 ### Develop Your Network
 Add the following modules to your workspace and connect them as shown.
 Load the example image *Bone.tiff*.
 
 ### Automatic Creation of CSOs Based on the Isovalue
 Now, open the panel of `CSOIsoGenerator` to set the *Iso Value* to 1200. If you press *Update* in
-the panel, you can see the creation of CSOs on every slide when opening
+the panel, you can see the creation of CSOs on each image slice when opening
 the module `View2D`. In addition to that, the number of CSOs is displayed in the `CSOManager`. The module
 `CSOIsoGenerator` generates isocontours for each slice at a fixed isovalue. This means that closed CSOs are formed based on the detection of the
 voxel value of 1200 on every slice.

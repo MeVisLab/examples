@@ -1,5 +1,5 @@
 ---
-title: "Example 3: Segment persons in webcam videos"
+title: "Example 3: Segment Persons in Webcam Videos"
 date: 2023-05-16
 status: "OK"
 draft: false
@@ -8,21 +8,22 @@ tags: ["Advanced", "Tutorial", "PyTorch", "Python", "PythonPip", "AI", "Segmenta
 menu: 
   main:
     identifier: "pytorchexample3"
-    title: "Segment persons in webcam videos."
+    title: "Segment Persons in Webcam Videos"
     weight: 875
     parent: "pytorch"
 ---
-# Example 3: Segment Persons in WebCam Videos
+
+# Example 3: Segment Persons in Webcam Videos
 
 ## Introduction
-This tutorial is based on [Example 2: Face Detection with OpenCV](tutorials/thirdparty/opencv/thirdpartyexample2 "Example 2: Face Detection with OpenCV"). You can re-use some of the scripts already developed in the other tutorial.
+This tutorial is based on [Example 2: Face Detection with OpenCV](tutorials/thirdparty/opencv/thirdpartyexample2 "Example 2: Face Detection with OpenCV"). You can reuse some of the scripts already developed in the other tutorial.
 
 ## Steps to Do
 Add the macro module developed in the previous example to your workspace.
 
-![WebCamTest module](images/tutorials/thirdparty/pytorch_example3_1.png "WebCamTest module")
+![WebcamTest module](images/tutorials/thirdparty/pytorch_example3_1.png "WebcamTest module")
 
-Open the internal network of the module via middle mouse button {{< mousebutton "middle" >}} and right click {{< mousebutton "right" >}} on the tab of the workspace showing the internal network. Select *Show Enclosing Folder*.
+Open the internal network of the module via middle mouse button {{< mousebutton "middle" >}} and right-click {{< mousebutton "right" >}} on the tab of the workspace showing the internal network. Select *Show Enclosing Folder*.
 
 ![Show Enclosing Folder](images/tutorials/thirdparty/pytorch_example3_2.png "Show Enclosing Folder")
 
@@ -43,8 +44,8 @@ Define the module properties and select the copied *.mlab* file. Make sure to ad
 
 Leave the module field reference as is and click *Create*. Close Project Wizard and select {{< menuitem "Extras" "Reload Module Database (Clear Cache)">}}.
 
-### Re-use Script and Python Code
-Open the script file of the `WebCamTest` module and copy the contents to your new PyTorch module. The result should be something like this:
+### Rese Script and Python Code
+Open the script file of the `WebcamTest` module and copy the contents to your new PyTorch module. The result should be something like this:
 
 {{< highlight filename="PyTorchSegmentationExample.script" >}}
 ```Stan
@@ -123,14 +124,14 @@ def grabImage():
 def updateImage(image):
   _interfaces[0].setImage(OpenCVUtils.convertImageToML(image), minMaxValues = [0,255])
 
-# Start capturing WebCam
+# Start capturing webcam
 def startCapture():
   global camera
   if not camera:
     camera = cv2.VideoCapture(0)
   ctx.callWithInterval(0.1, grabImage)
 
-# Stop capturing WebCam
+# Stop capturing webcam
 def stopCapture():
   ctx.removeTimers()
 
@@ -159,14 +160,14 @@ Open the Panel of the `ImagePropertyConvert` module and check *World Matrix*.
 
 ![ImagePropertyConvert](images/tutorials/thirdparty/pytorch_example3_9.png "ImagePropertyConvert")
 
-Then add a `SoView2DOverlayMPR` module and connect it to the `ImagePropertyConvert` and the `View2D`. Change *Blend Mode* to *Blend*, *Alpha* to something between 0 and 1, and define a color for the overlay.
+Then, add a `SoView2DOverlayMPR` module and connect it to the `ImagePropertyConvert` and the `View2D`. Change *Blend Mode* to *Blend*, *Alpha* to something between 0 and 1, and define a color for the overlay.
 
 ![SoView2DOverlayMPR](images/tutorials/thirdparty/pytorch_example3_8.png "SoView2DOverlayMPR")
 
 Save the internal network.
 
 ### Remove OpenCV-specific Code
-We want to use PyTorch for segmentation, therefore you need to add all necessary imports.
+We want to use PyTorch for segmentation; therefore, you need to add all necessary imports.
 
 {{< highlight filename="PyTorchSegmentationExample.py" >}}
 ```Python
@@ -227,7 +228,7 @@ def startWebcam():
 ```
 {{</highlight>}}
 
-As this function is not called in our user interface, we need to update the *.script* file. Change the first Button to below script:
+As this function is not called in our user interface, we need to update the *.script* file. Change the first *Button* to below script:
 
 {{< highlight filename="PyTorchSegmentationExample.script" >}}
 ```Stan
@@ -238,7 +239,7 @@ Button {
 ```
 {{</highlight>}}
 
-Now your new function *startWebcam* is called whenever touching the left button. As a next step, define a Python function *segmentSnapshot*. We are using a pre-trained network from Torchvision. In case you want to use other PyTorch possibilities, you can find lots of examples on their [website](https://pytorch.org/tutorials/).
+Now, your new function *startWebcam* is called whenever touching the left button. As a next step, define a Python function *segmentSnapshot*. We are using a pretrained network from Torchvision. In the case you want to use other PyTorch possibilities, you can find lots of examples on their [website](https://pytorch.org/tutorials/).
 
 {{< highlight filename="PyTorchSegmentationExample.py" >}}
 ```Python
@@ -315,7 +316,7 @@ The following classes are available:
 * tvmonitor
 {{</alert>}}
 
-The final result of the segmentation should be a semi-transparent red overlay of the persons segmented in your webcam stream.
+The final result of the segmentation should be a semitransparent red overlay of the persons segmented in your webcam stream.
 
 ![Final Segmentation result](images/tutorials/thirdparty/pytorch_example3_10.png "Final Segmentation result")
 

@@ -84,10 +84,7 @@ This is a collection of useful keyboard shortcuts in MeVisLab.
   </tbody>
 </table>
 
-
-
 ## Using Snippets {#snippets}
-
 {{< youtube "xX7wJiyfxhA" >}}
 
 Sometimes you have to create the same network over and over again -- for example, to quickly preview DICOM files. Generally, you will at least add one module to load and another module to display your images. Sometimes you may also want to view the DICOM header data. A network you possibly generate whenever opening DICOM files will be the following:
@@ -103,7 +100,6 @@ A new snippet will be shown in your Snippets List. You can drag and drop the sni
 ![Snippets List](images/tutorials/Snippets_Panel.png "Snippets List")
 
 ## Scripting Assistant {#scriptingassistant}
-
 {{< youtube "y6110PW5N_w" >}}
 
 If you are new to Python or don't have experiences in accessing fields in MeVisLab via Python scripting, the Scripting Assistant might help you.
@@ -182,7 +178,7 @@ In the MeVisLab preferences dialog, you can see a checkbox *Show ML image state*
 
 ![Show ML image state](images/tutorials/LMIMageState.png "Show ML image state")
 
-After enabling *Show ML image state*, your network changes and the input and output connectors appear red in case no data is available at the output.
+After enabling *Show ML image state*, your network changes and the input and output connectors appear red in the case no data is available at the output.
 
 ![No data on connector](images/tutorials/LMIMageState_On_1.png "No data on connector")
 
@@ -191,7 +187,6 @@ After loading a valid DICOM directory, the connectors providing a valid ML image
 ![No data on connector](images/tutorials/LMIMageState_On_2.png "No data on connector")
 
 ## Module Suggestion of Module Input and Output {#modulesuggest}
-
 {{< youtube "q_cw583EE_s" >}}
 
 MeVisLab provides a functionality to suggest frequently used modules for the selected output in your network.

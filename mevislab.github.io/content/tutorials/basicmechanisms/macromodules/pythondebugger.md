@@ -12,6 +12,7 @@ menu:
     weight: 455
     parent: "basicmechanisms"
 ---
+
 # Example 5: Debugging Python Files in MATE
 
 {{< youtube "ccLDQUrlzjU">}}
@@ -20,7 +21,7 @@ menu:
 MeVisLab provides the powerful integrated text editor MATE. By default, MATE is used to create/edit files like Python scripts. In this tutorial, we want to show you how to debug Python scripts in MeVisLab. 
 
 ## Prepare Your Network
-We are using a very simple network of pre-defined modules, but you can also debug your self-written Python scripts. Add a `LocalImage` module to your workspace and connect it to a `DicomTagBrowser` module. The `DicomTagBrowser` module shows a table containing the DICOM tags of your currently opened file.
+We are using a very simple network of predefined modules, but you can also debug your self-written Python scripts. Add a `LocalImage` module to your workspace and connect it to a `DicomTagBrowser` module. The `DicomTagBrowser` module shows a table containing the DICOM tags of your currently opened file.
 
 ![Example Network](images/tutorials/basicmechanics/Debug1.png "Example Network")
 
@@ -34,7 +35,7 @@ MATE only opens Python files if the default configuration in *MeVisLab/Preferenc
 ![MATE](images/tutorials/basicmechanics/Debug2.png "MATE")
 
 {{<alert class="info" caption="Information">}}
-You cannot only debug your own files, but also Python scripts of pre-defined MeVisLab modules.
+Not only can you debug your own files, but you can also debug Python scripts of predefined MeVisLab modules.
 {{</alert>}}
 
 The user interface of MATE provides some relevant views for debugging.
@@ -111,7 +112,7 @@ The *Variables* panel now shows all currently available local and global variabl
 ![Variables/Watches panel](images/tutorials/basicmechanics/Debug7a.png "Variables/Watches panel")
 
 ## Conditions for Breakpoints
-You can also define conditions for your breakpoints. Remove breakpoint in line 180 and set a new one in line 181. In case you only want to stop the execution of your script if a specific condition is met, right click {{< mousebutton "right" >}} on your breakpoint and select {{< menuitem "Set Condition for Breakpoint" >}}. A dialog opens where you can define your condition. Enter **item.text(1) == 'SOPClassUID'** as condition.
+You can also define conditions for your breakpoints. Remove breakpoint in line 180 and set a new one in line 181. In the case you only want to stop the execution of your script if a specific condition is met, right click {{< mousebutton "right" >}} on your breakpoint and select {{< menuitem "Set Condition for Breakpoint" >}}. A dialog opens where you can define your condition. Enter **item.text(1) == 'SOPClassUID'** as condition.
 
 ![Conditions for Breakpoints](images/tutorials/basicmechanics/Debug8.png "Conditions for Breakpoints")
 
@@ -123,7 +124,7 @@ The *Evaluate Expression* tab allows you to modify variables during execution. I
 {{< imagegallery 2 "images/tutorials/basicmechanics" "Debug9" "Debug9a" >}}
 
 ## Summary
-* MATE allows debugging of any Python files including files pre-defined in MeVisLab.
+* MATE allows debugging of any Python files including files predefined in MeVisLab.
 * Values of variables can be watched.
 * It is possible to define conditions for breakpoints, so that the execution is only stopped if the condition is met.
 * It is possible to change values of variables while program execution is stopped via *Evaluate Expression* panel.

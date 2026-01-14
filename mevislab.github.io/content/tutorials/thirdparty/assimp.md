@@ -8,11 +8,13 @@ tags: ["Beginner", "Tutorial", "assimp", "3D"]
 menu: 
   main:
     identifier: "assimp"
-    title: "Asset-Importer-Lib (assimp)"
+    title: "Asset Importer Library (assimp)"
     weight: 860
     parent: "thirdparty"
 ---
+
 # Asset-Importer-Lib (assimp) {#assimp}
+
 ## Introduction
 [Assimp](http://www.assimp.org "assimp") (Asset-Importer-Lib) is a library to load and process geometric scenes from various 3D data formats.
 
@@ -23,7 +25,7 @@ This chapter provides some examples of how 3D formats can be imported into MeVis
 You can also use the `SoSceneWriter` module to export your 3D scenes from MeVisLab in a number of output formats.
 
 ## File Formats
-The Assimp-Lib currently supports the following [file formats](https://assimp-docs.readthedocs.io/en/v5.1.0/about/introduction.html):
+The assimp library currently supports the following [file formats](https://assimp-docs.readthedocs.io/en/v5.1.0/about/introduction.html):
 
 * 3D Manufacturing Format (.3mf)
 * Collada (.dae, .xml)

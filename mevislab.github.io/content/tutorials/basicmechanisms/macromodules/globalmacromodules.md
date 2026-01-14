@@ -1,5 +1,5 @@
 ---
-title: "Example 2.2: Creation of global macro modules"
+title: "Example 2.2: Creation of Global Macro Modules"
 date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
@@ -8,7 +8,7 @@ tags: ["Beginner", "Tutorial", "Macro", "Macro modules", "Global Macro"]
 menu: 
   main:
     identifier: "globalmacromodules"
-    title: "Creation of global macro modules from a local macro using the Project Wizard"
+    title: "Creation of Global Macro Modules From a Local Macro Using the Project Wizard"
     weight: 390
     parent: "macro_modules"
 ---
@@ -18,10 +18,10 @@ menu:
 {{< youtube "M4HnA0d1V5k">}}
 
 ## Introduction
-
 In this chapter you will learn how to create global macro modules. There are many ways to do this. You can convert local macros into global macro modules or you can directly create global macro modules using the *Project Wizard*. In contrast to local macro modules, global macro modules are commonly available throughout projects and can be found via module search and under {{< menuitem "Modules" >}}.
 
 ## Steps to Do
+
 ### Transform a Local Macro Module into a Global Macro Module
 To transform our local macro module `Filter` from [Chapter I](tutorials/basicmechanisms#TutorialMacroModules) into a global macro module,
 right-click {{< mousebutton "right" >}} the macro module to open the context menu and select {{< menuitem "Extras" "Convert To Global Module..." >}}
@@ -29,7 +29,6 @@ right-click {{< mousebutton "right" >}} the macro module to open the context men
 ![Convert local macro to global macro](images/tutorials/basicmechanics/GUI_03.png "Convert local macro to global macro")
 
 ### Define Module Properties
-
 1.  Choose a unique module name.
 
 2.  State the module's author.
@@ -101,7 +100,6 @@ the respective genre. After creating a global
 macro, the new module can be found via {{< menuitem "Modules" "Filters" >}}. In addition, you can now find your macro module via module search.
 
 ![Find module in menu](images/tutorials/basicmechanics/GUI_05.png "Find module in menu")
-
 
 {{<alert class="info" caption="Hint">}}
 If you do not find your new global macro module, try to reload the module database.

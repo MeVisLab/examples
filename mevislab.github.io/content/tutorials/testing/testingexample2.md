@@ -8,18 +8,20 @@ tags: ["Beginner", "Tutorial", "Profiling"]
 menu: 
   main:
     identifier: "testingexample2"
-    title: "Enabling the MeVisLab Profiler and inspecting the behaviour of your network"
+    title: "Profiling in MeVisLab"
     weight: 792
     parent: "testing"
 ---
+
 # Example 2: Profiling in MeVisLab
 
 {{< youtube "DZ4BcAne4hM" >}}
 
 ## Introduction
-In this example, we are using the MeVisLab Profiler to inspect the memory and CPU consumption of the modules in an example network.
+In this example we are using the MeVisLab Profiler to inspect the memory and CPU consumption of the modules in an example network.
 
 ## Steps to Do
+
 ### Creating the Network to be Used for Profiling
 You can open any network you like, here we are using the example network of the module `MinMaxScan` for profiling. Add the module `MinMaxScan` to your workspace, open the example network via right-click {{<mousebutton "right">}} and select {{<menuitem "Help" "Show Example Network">}}.
 

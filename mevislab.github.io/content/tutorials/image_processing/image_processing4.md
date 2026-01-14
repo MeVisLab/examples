@@ -1,5 +1,5 @@
 ---
-title: "Example 4: Subtract 3D objects"
+title: "Example 4: Subtracting 3D Surface Objects"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
@@ -8,12 +8,12 @@ tags: ["Advanced", "Tutorial", "Image Processing", "3D", "Subtraction"]
 menu: 
   main:
     identifier: "imageprocessing4"
-    title: "In this example, we create two three-dimensional and subtract them."
+    title: "Subtracting 3D Surface Objects"
     weight: 620
     parent: "imageprocessing"
 ---
 
-# Example 4: Subtract 3D Objects
+# Example 4: Subtracting 3D Objects
 
 {{< youtube "VdvErVvoq2k" >}}
 
@@ -21,6 +21,7 @@ menu:
 In this example, we load an image and render it as `WEMIsoSurface`. Then, we create a three-dimensional `SoSphere` and subtract the sphere from the initial WEM.
 
 ## Steps to Do
+
 ### Develop Your Network
 Add a `LocalImage` module to your workspace and select load *$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm*. Add a `WEMIsoSurface`, a `SoWEMRenderer`, a `SoBackground`, and a `SoExaminerViewer` module and connect them as seen below. Make sure to configure the `WEMIsoSurface` to use a *Iso Min. Value* of 420 and a *Voxel Sampling* 1.
 
