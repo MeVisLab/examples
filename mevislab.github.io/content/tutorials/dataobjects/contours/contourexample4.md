@@ -18,11 +18,11 @@ menu:
 
 ## Introduction
 In this example we like to calculate the volume of our object, in this
-case the part of the lung we have segmented. 
+case, the part of the lung we have segmented. 
 
 ## Steps to Do
 ### Develop Your Network and Calculate the Lung Volume
-Add the module `CalculateVolume` and `SoView2DAnnotation` to your workspace
+Add the modules `CalculateVolume` and `SoView2DAnnotation` to your workspace
 and connect both modules as shown. Update the module `CalculateVolume`,
 which directly shows the volume of our object.
 

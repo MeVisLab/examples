@@ -12,13 +12,13 @@ menu:
     weight: 855
     parent: "opencv"
 ---
-# Example 1: WebCam access with OpenCV
+# Example 1: WebCam Access with OpenCV
 
 ## Introduction
 In this example, we are using the `PythonImage` module and access your WebCam to show the video in a `View2D`.
 
-## Steps to do
-### Creating the network to be used for testing
+## Steps to Do
+### Creating the Network to be Used for Testing
 Add the modules to your workspace and connect them as seen below. 
 
 ![Example Network ](images/tutorials/thirdparty/network_example1.png "Example Network ")
@@ -29,15 +29,15 @@ The viewer is empty because the image needs to be set via Python scripting.
 More information about the `PythonImage` module can be found {{< docuLinks "/Standard/Documentation/Publish/ModuleReference/PythonImage.html" "here" >}}
 {{</alert>}}
 
-### Create a macro module
-Now you need to create a macro module from your network. You can either group your modules, create a local macro and convert it to a global macro module, or you use the Project Wizard and load your \*.mlab file.
+### Create a Macro Module
+Now you need to create a macro module from your network. You can either group your modules, create a local macro, and convert it to a global macro module, or you use the Project Wizard and load your *.mlab* file.
 
 {{<alert class="info" caption="Info">}}
-A tutorial how to create your own macro modules can be found in [Example 2.2: Global macro modules](tutorials/basicmechanisms/macromodules/globalmacromodules "Example 2.2: Global macro modules"). Make sure to add a Python file to your macro module.
+A tutorial on how to create your own macro modules can be found in [Example 2.2: Global macro modules](tutorials/basicmechanisms/macromodules/globalmacromodules "Example 2.2: Global macro modules"). Make sure to add a Python file to your macro module.
 {{</alert>}}
 
-### Add the View2D to your UI
-Next, we need to add the `View2D` to a Window of your macro module. Right click on your module {{< mousebutton "right" >}}, open the context menu and select {{< menuitem "Related Files" "<YOUR_MODULE_NAME>.script" >}}. The text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the \*.script file of your module.
+### Add the View2D to Your UI
+Next, we need to add the `View2D` to a Window of your macro module. Right-click on your module {{< mousebutton "right" >}}, open the context menu and select {{< menuitem "Related Files" "<YOUR_MODULE_NAME>.script" >}}. The text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the *.script* file of your module.
 
 Add the following to your file:
 {{< highlight filename="<YOUR_MODULE_NAME>.script" >}}
@@ -82,12 +82,12 @@ Window {
 ```
 {{</highlight>}}
 
-Now open the Python file of your module and define the commands to be called from the \*.script file:
+Now open the Python file of your module and define the commands to be called from the *.script* file:
 {{< highlight filename="<YOUR_MODULE_NAME>.py" >}}
 ```Python
 # from mevis import *
 
-# Setup the interface for PythonImage module
+# Set up the interface for PythonImage module
 def setupInterface():
   pass
 
@@ -107,7 +107,7 @@ def stopCapture():
 {{</highlight>}}
 
 ### Use OpenCV
-Your `View2D` is still empty, lets get access to the WebCam and show the video in your module. Open the Python file of your network again and enter the following code:
+Your `View2D` is still empty, let's get access to the WebCam and show the video in your module. Open the Python file of your network again and enter the following code:
 {{< highlight filename="<YOUR_MODULE_NAME>.py" >}}
 ```Python
 # from mevis import *
@@ -117,7 +117,7 @@ import OpenCVUtils
 _interfaces = []
 camera = None
 
-# Setup the interface for PythonImage module
+# Set up the interface for PythonImage module
 def setupInterface():
   global _interfaces
   _interfaces = []
@@ -138,7 +138,7 @@ def stopCapture():
 ```
 {{</highlight>}}
 
-We now imported *cv2* and *OpenCVUtils* so that we can use them in Python. Additionally we defined a list of *_interfaces* and a *camera*. The import of *mevis* is not necessary for this example.
+We now imported *cv2* and *OpenCVUtils* so that we can use them in Python. Additionally, we defined a list of *_interfaces* and a *camera*. The import of *mevis* is not necessary for this example.
 
 The *setupInterfaces* function is called whenever the *Window* of your module is opened. Here we are getting the interface of the `PythonImage` module and append it to our global list.
 
@@ -179,7 +179,7 @@ def stopCapture():
 ```
 {{</highlight>}}
 
-As we started a timer in our network context which updates the image every 0.1 seconds, we just stop this timer and the camera is paused.
+As we started a timer in our network context that updates the image every 0.1 seconds, we just stop this timer and the camera is paused.
 
 In the end, we need to release the camera whenever you close the Window of your macro module.
 {{< highlight filename="<YOUR_MODULE_NAME>.py" >}}
@@ -197,13 +197,13 @@ def releaseCamera(_):
 ```
 {{</highlight>}}
 
-Again, the timers are removed, all interfaces are reset and the camera is released. The light indicating WebCam usage should turn off.
+Again, the timers are removed, all interfaces are reset, and the camera is released. The light indicating WebCam usage should turn off.
 
-Opening your macro module via double-click {{< mousebutton "left" >}} should now allow to start and pause your WebCam video in MeVisLab. You can modify your internal network using a `Convolution` filter module or any other module available in MeVisLab for modifying the stream on the fly.
+Opening your macro module via double-click {{< mousebutton "left" >}} should now allow to start and pause your WebCam video in MeVisLab. You can modify your internal network using a `Convolution` filter module or any other module available in MeVisLab for modifying the stream on-the-fly.
 
 ## Summary
-* The `PythonImage` module allows to use Python for defining the image output
-* OpenCV can be used in MeVisLab via Python scripting
-* Images and videos from OpenCV can be used in MeVisLab networks
+* The `PythonImage` module allows to use Python for defining the image output.
+* OpenCV can be used in MeVisLab via Python scripting.
+* Images and videos from OpenCV can be used in MeVisLab networks.
 
 {{< networkfile "examples/thirdparty/example1/OpenCVExample.zip" >}}

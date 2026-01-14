@@ -15,18 +15,16 @@ menu:
 # Example 2: 2D Plotting
 
 ## Introduction 
-
 In this tutorial, we will equip the macro module we created in the [previous tutorial](tutorials/thirdparty/matplotlib/modulesetup) with a responsive and interactable panel to plot grayscale distributions of single slices as well as defined sequences of slices in 2D.
 
-## Steps to do
-
-Open the module definition folder of your macro module and the related .script file in MATE. Then activate the Preview as shown below: 
+## Steps to Do
+Open the module definition folder of your macro module and the related *.script* file in MATE. Then, activate the preview as shown below: 
 
 ![MATE Preview](images/tutorials/thirdparty/Matplotlib7.png)
 
-Drag the small Preview window to the bottom right corner of your window where it does not bother you. We will now be adding contents to be displayed there. 
+Drag the small preview window to the bottom right corner of your window where it does not bother you. We will now be adding contents to be displayed there. 
 
-Adding the following code to your .script file will open a panel window if the macro module is clicked.
+Adding the following code to your *.script* file will open a panel window if the macro module is clicked.
 This new panel window contains a Matplotlib canvas where the plots will be displayed later on as well as two prepared boxes that we will add functions to in the next step.
 
 {{< highlight filename = "BaseNetwork.script">}}

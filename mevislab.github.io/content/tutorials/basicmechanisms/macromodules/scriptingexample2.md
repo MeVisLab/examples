@@ -22,15 +22,14 @@ In this example, you will learn how to add Python scripting to your user interfa
 
 ## Steps to Do
 ### Creating the Macro Module
-First, we condense the example network into a macro module and then we create a panel for that module. To create a macro module use the
-Project Wizard, which you find under {{< menuitem "File" "Run Project Wizard" >}}. Select
+First, we condense the example network into a macro module and then we create a panel for that module. To create a macro module, use the Project Wizard, which you find under {{< menuitem "File" "Run Project Wizard" >}}. Select
 *Macro module* and press *Run*.
 
 Now, you have to edit:
 1.  Name: The name of your module
 2.  Package: Select the package you like to save the macro module in
 3.  Directory Structure: Change to *Self-contained* (this setting is only available in MeVisLab versions before 5.0.0, later versions always use *self-contained*)
-4.  Project: Select you project name
+4.  Project: Select your project name
 
 Press *Next* and edit the following:
 
@@ -43,7 +42,7 @@ Now, create your macro module and reload MeVisLab. You can find your module via 
 
 ![Enable Python scripting](images/tutorials/basicmechanics/EnablePythonScripting.png "Enable Python scripting")
 
-To design a panel and create a user interface for the macro module, open the *.script* file. You can see that a *Command* environment exist, which defines the Python file as source for all commands.
+To design a panel and create a user interface for the macro module, open the *.script* file. You can see that a *Command* section exist, which defines the Python file as source for all commands.
 
 ![Open the script file](images/tutorials/basicmechanics/OpenScriptFile.png "Open the script file")
 
@@ -51,7 +50,7 @@ To design a panel and create a user interface for the macro module, open the *.s
 
 ### Creating a Panel with Tabs and Viewers
 
-At first, we create a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Window" "Window" >}} with two {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html##mdl_TabView" "Tabs" >}}. One *Main* tab, in which both viewers of the network are represented and one tab for *Settings*. For generating tabs, we can use the control {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_TabView" "TabView" >}}, with its items {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_TabViewItem" "TabViewItem" >}}. The control *TabView* enables to add a command, which is executed when opening the tab. For adding the viewers to the panel, we use the Control *Viewer*.
+First, we create a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Window" "Window" >}} with two {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html##mdl_TabView" "Tabs" >}}: the *Main* tab, in which both viewers of the network are represented, and the tab for *Settings*. For generating tabs, we can use the control {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_TabView" "TabView" >}}, with its items {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_TabViewItem" "TabViewItem" >}}. The control *TabView* enables to add a command, which is executed when opening the tab. For adding the viewers to the panel, we use the control *Viewer*.
 
 [//]: <> (MVL-653)
 
@@ -85,7 +84,11 @@ Window {
 
 ### Edit Viewer Settings in the Panel
 
-You may want to change the design setting of the right viewer. This is possible via the network file of the macro module. Open the context menu {{< mousebutton "right" >}} and select {{< menuitem "Related Files" "IsoCSOs.mlab" >}} on the module. In the network file, open the Automatic Panel of the module `SoExaminerViewer` via context menu {{< menuitem "Show Windows" "Automatic Panel" >}} and change the field *decoration* to *False*. Keep in mind, as we did not create CSOs by now, the right viewer stays black.
+You may want to change the design setting of the right viewer. This is
+still possible via the internal network of the macro module. Open the
+internal network either via the context menu or using the middle mouse
+button {{< mousebutton "middle" >}} and click on the module. After that, open the automatic panel of
+the module `SoExaminerViewer` via context menu {{< menuitem "Show Windows" "Automatic Panel" >}} and change the field *decoration* to *False*. Keep in mind, as we did not create CSOs by now, the right viewer stays black.
 
 ![Change viewer settings](images/tutorials/basicmechanics/ChangeViewerSettings.png "Change viewer settings")
 
@@ -132,7 +135,7 @@ Window {
 
 ![Add name field](images/tutorials/basicmechanics/AddNameField.png "Add name field")
 
-### Add Buttons to your Panel
+### Add Buttons to Your Panel
 
 As a next step, we like to add a *Browse\...* button, like in the module
 `LocalImage`, and also a button to create the CSOs.
@@ -145,11 +148,11 @@ To create the *Browse\...* button:
 
 To create the Iso Generator Button:
 
-We like to copy the field of the Update-Button from the internal module
+We like to copy the field of the *Update* button from the internal module
 `IsoCSOGenerator`, but not its layout so:
 
 1.  Create a new Field in the interface, called *IsoGenerator*, which contains the internal field *Update* from the module `IsoCSOGenerator`.
-2.  Create a new Button in your Window which uses the field *IsoGenerator*.
+2.  Create a new Button in your Window that uses the field *IsoGenerator*.
 
 After these steps, you can use the Iso Generator button to create CSOs.
 
@@ -222,8 +225,7 @@ def fileDialog():
 ### Colorizing CSOs
 
 We like to colorize the CSO we hover over with our
-mouse in the 2D viewer. Additionally, when clicking a CSO with the left mouse key {{< mousebutton "left" >}}, this CSO shall be
-colorized in the 3D viewer. This functionality can be implemented via Python
+mouse in the 2D viewer. Additionally, when clicking a CSO with the left mouse button {{< mousebutton "left" >}}, this CSO shall be colorized in the 3D viewer. This functionality can be implemented via Python
 scripting (even though MeVisLab has a build-in function to do that). We
 can do this in the following way:
 
@@ -231,13 +233,13 @@ can do this in the following way:
     
     ![Scripting Assistant](images/tutorials/basicmechanics/GUI_Exp_15.png "Scripting Assistant")
 
-2. Enable a functionality that allows us to notice the id of the CSO we are currently hovering over with our mouse. For this open the network file of our macro module. We will use the module `SoView2DCSOExtensibleEditor`. Open its panel and select the tab *Advanced*. You can check a box to enable *Update CSO id under mouse*. If you now hover over a CSO, you can see its id in the panel. We can save the network to save this functionality, but we can also solve our problem via scripting. The Scripting Assistant translated our action into code, which we can use.
+2. Enable a functionality that allows us to notice the ID of the CSO we are currently hovering over with our mouse. For this, open the network file of our macro module. We will use the module `SoView2DCSOExtensibleEditor`. Open its panel and select the tab *Advanced*. You can check a box to enable *Update CSO id under mouse*. If you now hover over a CSO, you can see its ID in the panel. We can save the network to save this functionality, but we can also solve our problem via scripting. The Scripting Assistant translated our action into code that we can use.
     
     ![Enabling CSO id identification](images/tutorials/basicmechanics/GUI_Exp_16.png "Enabling CSO id identification")
 
     We like to activate this functionality when opening the panel of our macro module `IsoCSOs`. Thus, we add a starting command to the control Window. We can call this command for example *enableFunctionalities*.
 
-    In the *\*.script* file:
+    In the *.script* file:
 
 {{< highlight filename="IsoCSOs.script" >}}
 ```Stan
@@ -261,7 +263,7 @@ def enableFunctionalities():
 ```
 {{</highlight>}}
 
-3.  Implement a field listener. This field listener will detect when you hover over a CSO and the CSO id changes. Triggered by a CSO id change, a colorization function will be executed, which will colorize the selected CSO.
+3.  Implement a field listener. This field listener will detect when you hover over a CSO and the CSO ID changes. Triggered by a CSO ID change, a colorization function will be executed that will colorize the selected CSO.
 
 In the *.script* file:
 
@@ -310,7 +312,7 @@ def colorizeCSO():
 {{</highlight>}}
 
 Reload your module ({{< keyboard "F5" >}}) and open the panel. After generating CSOs, the CSO under your mouse is marked. Clicking this CSO {{< mousebutton "left" >}} enables the marking in the 3D viewer. If you like, you can add some settings to your *Settings*
-page. For example
+page. For example:
 
 {{< highlight filename="IsoCSOs.script" >}}
 ```Stan
@@ -329,6 +331,6 @@ TabViewItem Settings {
 * The control *Button* creates a button executing a Python function when pressed.
 * The tag *WindowActivationCommand* of the control Window triggers Python functions executed when opening the panel.
 * Field listeners can be used to activate Python functions triggered by a change of defined parameter fields.
-* Use the view *Scripting Assistant* can be used to translate actions into Python code.
+* Use the view *Scripting Assistant* to translate actions into Python code.
 
 {{< networkfile "examples/basic_mechanisms/macro_modules_and_module_interaction/example2/ScriptingExample2.zip" >}}

@@ -32,7 +32,7 @@ shown. The module `VoxelizeCSO` allows to convert CSOs into voxel images.
 ![Data Objects Contours Example 3](images/tutorials/dataobjects/contours/DO3_02.png "Data Objects Contours Example 3")
 
 ### Convert CSOs into Voxel Images
-Update the module `VoxelizeCSOs` to create overlays based on your CSOs.
+Update the module `VoxelizeCSOs` to create voxel masks based on your CSOs.
 The result can be seen in `View2D1`.
 
 ![Overlay](images/tutorials/dataobjects/contours/DO3_03.png "Overlay")

@@ -29,13 +29,13 @@ Add an `ImageLoad` module to your workspace and select a 3D image like *./MeVisL
 
 ![Image Display Setup](images/tutorials/basicmechanics/E6_1.png "Image Display Setup")
 
-Opening the three `View2D` module panels now shows the data in three orthogonal views. The module `OrthoReformat3` transforms the input image (by rotating and/or flipping) into the three main views commonly used.
+Opening the three `View2D` module panels now shows the image data in three orthogonal views. The module `OrthoReformat3` transforms the input image (by rotating and/or flipping) into the three main views commonly used.
 
 ![3 Views in 3 Viewers](images/tutorials/basicmechanics/E6_2.png "3 Views in 3 Viewers")
 
 The module `SoViewportRegion` divides the render window into multiple areas, allowing different views or slices to be shown in the same window. It's useful in medical applications, like displaying MRI or CT images from different angles (axial, sagittal, coronal) at once, making data analysis easier and faster.
 
-Add three `SoViewportRegion` modules and connect each one to a `View2D` module. To display the hidden outputs of the `View2D` module, press {{< keyboard "SPACE" >}} and connect the output to the input of `SoViewportRegion`, as shown below. 
+Add three `SoViewportRegion` modules and connect each one to a `View2D` module. To display the hidden outputs of the `View2D` module, press {{< keyboard "SPACE" >}} and connect the output to the input of `SoViewportRegion` as shown below.
 
 ![Connect SoViewportRegion with View2D](images/tutorials/basicmechanics/E6_3.png "Connect SoViewportRegion with View2D")
 
@@ -114,7 +114,7 @@ In the next example, the `SoRenderArea` will display four views at the same time
 
 ![3D View Layout](images/tutorials/basicmechanics/E6_11.png "3D View Layout")
 
-These views will be arranged in a single panel, split into two sides, with each side showing two images. To add the 3D view, insert a `View3D` module and connect it to the `ImageLoad` module. Then connect the `View3D` to `SoCameraInteraction`, connect that to another `SoViewportRegion`, and finally to `SoRenderArea`.
+These views will be arranged in a single panel that is split into two sides with each side showing two images. To add the 3D view, insert a `View3D` module and connect it to the `ImageLoad` module. Then connect the `View3D` to `SoCameraInteraction`, connect that to another `SoViewportRegion`, and finally to `SoRenderArea`.
 
 ![3D View Network](images/tutorials/basicmechanics/E6_10.png "3D View Network")
 
@@ -144,7 +144,7 @@ Open the right `SoViewportRegion` connected to the `SoCameraInteraction` module 
   * *Domain* Fraction of height
   * *Reference* Upper window border
 
-This setup will let you interact with the 3D view and display all four views together, as shown in the figure below.
+This setup will let you interact with the 3D view and display all four views together as shown in the figure below.
 
 ![3D View](images/tutorials/basicmechanics/E6_12.png "3D View")
 
@@ -152,8 +152,8 @@ You will see that the orientation cube of the 3D viewer appears in the bottom ri
 
 ![Final Network](images/tutorials/basicmechanics/E6_13.png "Final Network")
 
-## Alternative Using `SoView2D`
-In case you want the same dataset to be visualized in multiple viewers, the module `SoView2D` already provides this functionality.
+## Alternatively Using `SoView2D`
+In the case you want the same dataset to be visualized in multiple viewers, the module `SoView2D` already provides this functionality.
 
 ![Initial SoView2D](images/tutorials/basicmechanics/SoView2D_1.png "Initial SoView2D")
 
@@ -163,7 +163,7 @@ By default, you will see your images in a single viewer the same way as if you u
 
 ![Multiple slices in SoView2D](images/tutorials/basicmechanics/SoView2D_2.png "Multiple slices in SoView2D")
 
-Changing the *number of columns* to *3* and the *Number of Slices* to *9* results in a 3 x 3 layout.
+Changing the *number of columns* to *3* and the *Number of Slices* to *9* results in a 3x3 layout.
 
 ![Multiple slices and columns in SoView2D](images/tutorials/basicmechanics/SoView2D_3.png "Multiple slices and columns in SoView2D")
 
@@ -179,6 +179,6 @@ You can play around with the different `SoViewportRegion` modules to create your
 ![Exercise](images/tutorials/basicmechanics/E6_14.png "Exercise")
 
 ## Summary
-* Own layouts can be created by using multiple `SoViewportRegion` modules
+* Own layouts can be created by using multiple `SoViewportRegion` modules.
 
 {{< networkfile "examples/basic_mechanisms/soviewportregion.mlab" >}}

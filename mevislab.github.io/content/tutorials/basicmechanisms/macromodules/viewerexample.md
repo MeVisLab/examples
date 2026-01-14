@@ -20,11 +20,11 @@ In this example, you will learn how to create a simple prototype application in 
 
 ## Steps to Do
 ### Create Your Network
-Start with an empty network and add the Module `ImageLoad` to your workspace. Then, add a `View2D` and `View3D` to your workspace and connect the modules as seen below.
+Start with an empty network and add the module `ImageLoad` to your workspace. Then, add a `View2D` and a `View3D` to your workspace and connect the modules as seen below.
 
 ![Loading and viewing images](images/tutorials/basicmechanics/SimpleApp_01.png "Loading and viewing images")
 ### Load an Image
-Now double-click {{< mousebutton "left" >}} on the `ImageLoad` module and open any image. You can use the included file *./MeVisLab/Resources/DemoData/MRI_Head.dcm*.
+Now, double-click {{< mousebutton "left" >}} on the `ImageLoad` module and open any image. You can use the included file *./MeVisLab/Resources/DemoData/MRI_Head.dcm*.
 
 Opening your viewers should now show the images in 2D and 3D.
 
@@ -138,7 +138,7 @@ Window {
 
 We have a vertical layout having two items placed horizontally next to each other. The new *Button* gets the title *Reset* but does nothing yet, because we did not add a Python function to a command.
 
-Additionally, we added the `View2D` and the `View3D` to our *Window* and defined the *height*, *width* and the *expandX/Y* property to *yes*. This leads our viewers to resize together with our *Window*.
+Additionally, we added the `View2D` and the `View3D` to our *Window* and defined the *height*, *width*, and the *expandX/Y* property to *yes*. This leads our viewers to resize together with our *Window*.
 
 {{<alert class="info" caption="Extra Infos">}}
 Additional information about the `View2D` and `View3D` options can be found in the MeVisLab {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Viewer" "MDL Reference">}}
@@ -149,7 +149,7 @@ You can now play around with your module in MeVisLab SDK. Open the *Window* and 
 ![2D and 3D viewers in our application](images/tutorials/basicmechanics/SimpleApp_09.png "2D and 3D viewers in our application")
 
 ### Develop a Python Function for Your Button
-Next we want to reset the filepath to an empty string on clicking our *Reset* button. Add the *reset* command to your Button.
+Next, we want to reset the filepath to an empty string on clicking our *Reset* button. Add the *reset* command to your Button.
 {{< highlight filename="MyViewerApplication.script" >}}
 ``` Stan
 ...
@@ -207,8 +207,8 @@ def printCurrentSliceNumber(field):
 Scrolling through slices in the `View2D` module now logs a message containing the slice number currently visible to the MeVisLab Debug Output.
 
 ## Summary
-* You can add any Viewers to your application UI by reusing them in MDL.
-* Parameter Fields using the internalName of an existing field in your network allows re-using this UI element in your own UI. Changes in your UI are applied to the field in the module.
+* You can add any viewers to your application UI by re-using them in MDL.
+* Parameter fields using the *internalName* of an existing field in your network allows re-using this UI element in your own UI. Changes in your UI are applied to the field in the module.
 * Field Listeners allow reacting on changes of a field value in Python.
 
 {{< networkfile "examples/basic_mechanisms/viewer_application/viewerexample.mlab" >}}

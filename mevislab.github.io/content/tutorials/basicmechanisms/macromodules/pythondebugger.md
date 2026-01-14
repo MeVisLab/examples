@@ -106,7 +106,7 @@ Use the *Debugging* panel (fifth button *Step to next line*) or press {{< keyboa
 
 ![Watches panel](images/tutorials/basicmechanics/Debug7b.png "Watches panel")
 
-The *Variables* panel now shows all currently available local and global variables including their value(s). The *Stack Trace* panel shows that the *copyCurrentTagName* function has been called after the *DicomTagBrowser.MenuItem.command* from the \*.script file of the `DicomTagBrowser` module.
+The *Variables* panel now shows all currently available local and global variables including their value(s). The *Stack Trace* panel shows that the *copyCurrentTagName* function has been called after the *DicomTagBrowser.MenuItem.command* from the *.script* file of the `DicomTagBrowser` module.
 
 ![Variables/Watches panel](images/tutorials/basicmechanics/Debug7a.png "Variables/Watches panel")
 
@@ -115,7 +115,7 @@ You can also define conditions for your breakpoints. Remove breakpoint in line 1
 
 ![Conditions for Breakpoints](images/tutorials/basicmechanics/Debug8.png "Conditions for Breakpoints")
 
-Now, the code execution is only stopped if you copy the tag name *SOPClassUID*. In case another line is copied, the execution does not stop and just continues.
+Now, the code execution is only stopped if you copy the tag name *SOPClassUID*. In the case another line is copied, the execution does not stop and just continues.
 
 ## Evaluate Expression
 The *Evaluate Expression* tab allows you to modify variables during execution. In our example you can set the result **item.text(1)** to something like **item.setText(1, "Hello")**. If you now step to the next line via {{< keyboard "F10" >}}, your watched value shows *"Hello"* instead of *"SOPClassUID"*.

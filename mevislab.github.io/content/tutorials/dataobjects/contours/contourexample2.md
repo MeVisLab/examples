@@ -34,7 +34,7 @@ In order to do that, create the shown network. You can use the network
 from the previous example and exchange the `SoCSO`-Editor. In addition to
 that, load the example image *$(DemoDataPath)/Thorax1_CT.small.tif* .
 Now, create some CSOs on different, not consecutive slices. Afterwards,
-hover over the `CSOManager` and press the emerging plus-sign. This
+hover over the `CSOManager` and press the emerging *plus* symbol. This
 displays the amount of existing CSOs.
 
 ![Data Objects Contours Example 2](images/tutorials/dataobjects/contours/DO2_02.png "Data Objects Contours Example 2")

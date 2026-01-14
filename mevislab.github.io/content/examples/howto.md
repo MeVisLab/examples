@@ -16,7 +16,7 @@ After clicking any of the linked examples, you will be forwarded to a short desc
 
 The provided files are usually either *.mlab* files or *.zip* archives. You will find a short tutorial on how to add those files into your MeVisLab application to work with them below.
 
-### MeVisLab (\*.mlab) files
+### MeVisLab (*.mlab*) Files
 MeVisLab files are networks stored as *.mlab* files. <br>
 
 {{<alert class="info" caption="Info">}}
@@ -25,7 +25,7 @@ Double-clicking the left mouse button within your MeVisLab workspace works as a 
 
 Files can also be opened using the menu option {{< menuitem "File" "Open">}}.
 
-### Archives (\*.zip files)
+### Archives (*.zip*) Files
 Archives mostly contain macro modules. <br>
 To use those macro modules, you will need to know how to handle user packages. 
 
@@ -49,7 +49,7 @@ Feel free to create certain directories if they do not exist yet, but make sure 
 
 Continuing on your MeVisLab workspace: You might need to reload the module cache after adding macro modules out of *.zip* archives for them to be displayed and ready to be used. To do so, open {{< menuitem "Extras" "Reload Module Database (Clear Cache)" >}}.
 
-### Python (\*.py) or Script (\*.script) Files
+### Python (*.py*) or Script (*.script*) Files
 In the rare case that a *.py* or *.script* file is provided, make sure to firstly follow the tutorials related to macro modules and test cases. 
 
 {{<alert class="warning" caption="Warning">}}

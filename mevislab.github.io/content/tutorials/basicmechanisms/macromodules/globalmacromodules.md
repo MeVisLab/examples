@@ -48,7 +48,7 @@ right-click {{< mousebutton "right" >}} the macro module to open the context men
     *\\MyPackageGroup\\General\\Modules\\Macros\\MyProject*.
 
 {{<alert class="info" caption="Info">}}
-If you are working with MeVisLab versions before 5.0, make sure to chose *Directory Structure* as *self-contained*. This makes sure that all files of your module are stored in a single directory. Later versions always use *self-contained*.
+If you are working with MeVisLab versions before 5.0, make sure to choose *Directory Structure* as *self-contained*. This makes sure that all files of your module are stored in a single directory. Later versions always use *self-contained*.
 
 Also keep in mind that Python files are only created automatically if selected in the Project Wizard. Converting a local macro to a global macro does NOT create a Python file automatically.
 {{</alert>}}
@@ -75,7 +75,7 @@ Instead of converting a local macro module into a global macro module, you can a
     *\\MyPackageGroup\\General\\Modules\\Macros\\MyProject*.
 
 {{<alert class="info" caption="Info">}}
-Make sure to chose *Directory Structure* as *self-contained*. This ensures that all files of your module are stored in a single directory.
+Make sure to choose *Directory Structure* as *self-contained*. This ensures that all files of your module are stored in a single directory.
 {{</alert>}}
  
  Press *Next >* to edit further properties. You have the opportunity to directly define the internal network of the macro module, for example, by copying an existing network. In this case, we could copy the network of the local macro module `Filter` we already created. In addition, you have the opportunity to directly create a Python file. Python scripting can be used for the implementation of module interactions and other module functionalities. More information about Python scripting can be found [here](./tutorials/basicmechanisms/macromodules/pythonscripting).
@@ -84,9 +84,9 @@ Make sure to chose *Directory Structure* as *self-contained*. This ensures that 
 
 ## Structure of Global Macro Modules
 After creating your global macro module, you can find the created project *MyProject* in your package. This project contains your macro module `Filter`. For the macro module exist three files:
-* *Filter.def*: Module definition file
-* *Filter.mlab*: Network file which contains the internal network of your macro module
-* *Filter.script*: MDL script file, which defines in- and outputs of your macro module as well as fields. This file defines the module panel, as well as references to python scripts.
+* *Filter.def*: module definition file
+* *Filter.mlab*: network file that contains the internal network of your macro module
+* *Filter.script*: MDL script file that defines inputs and outputs of your macro module as well as fields. This file defines the module panel, as well as references to Python scripts.
 
 In addition, two folders may be created:
 * *mhelp*: contains the help files of all modules of this project
@@ -108,7 +108,7 @@ If you do not find your new global macro module, try to reload the module databa
 {{</alert>}}
 
 ## Summary
-* Via right-click {{< mousebutton "right" >}} {{< menuitem "Extras" "Convert To Global Module..." >}} global macro modules can be created out of local macro modules.
+* Via right-click {{< mousebutton "right" >}} {{< menuitem "Extras" "Convert To Global Module..." >}}, global macro modules can be created out of local macro modules.
 * You can use the Project Wizard to create new macro modules.
 * You need to have a package structure to store your global macro module.
 * Global macro modules are available throughout projects and can be found via *Module Search* and under menu item {{< menuitem "Modules" >}}.

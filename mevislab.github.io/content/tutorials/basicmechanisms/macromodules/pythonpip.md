@@ -53,10 +53,10 @@ We strongly recommend to install the packages into a MeVisLab user package. This
 The only disadvantage: Python commands will not be recognized outside of MeVisLab by default. 
 {{</alert>}}
 
-Thirdparty information and *.mli* files are updated automatically.
+Third-party information and *.mli* files are updated automatically.
 
 ### Using the Commandline
-Another option is using the commandline tool provided by MeVisLab. Under Windows, you need to change to directory *Packages\MeVis\ThirdParty\Python* first.
+Another option is using the commandline tool provided by MeVisLab. On Windows, you need to change to directory *Packages\MeVis\ThirdParty\Python* first.
 
 {{< highlight filename="commandline" >}}
 ```cmd

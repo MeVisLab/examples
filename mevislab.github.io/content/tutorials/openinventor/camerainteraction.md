@@ -20,20 +20,20 @@ menu:
 ## Introduction
 In this example, we are learning the basic principles of camera interactions in Open Inventor. We will show the difference between a `SoRenderArea` and a `SoExaminerViewer` and use different modules of the `SoCamera*` group.
 
-## The `SoRenderArea` module
+## The `SoRenderArea` Module
 The module `SoRenderArea` is a simple renderer for Open Inventor scenes. It offers functionality to record movies and to create snapshots, but does not include an own camera or light.
 
 Add a `SoBackground`, a `SoMaterial` and a `SoOrientationModel` module to your workspace and connect them to a `SoGroup`. Add a `SoRenderArea` to the `SoGroup` and open the viewer.
 
 ![SoRenderArea without camera and lights](images/tutorials/openinventor/Camera_1.png "SoRenderArea without camera and lights")
 
-You can not interact with your scene and the rendered content is very dark. Open the `SoOrientationModel` and change *Model* to *Skeleton* to see that a little better. You can also change the material by using the panel of the `SoMaterial` module.
+You cannot interact with your scene and the rendered content is very dark. Open the `SoOrientationModel` and change *Model* to *Skeleton* to see that a little bit better. You can also change the material by using the panel of the `SoMaterial` module.
 
 Add a `SoCameraInteraction` module and connect it between the `SoGroup` and the `SoRenderArea`.
 
 ![SoRenderArea with SoCameraInteraction](images/tutorials/openinventor/Camera_2.png "SoRenderArea with SoCameraInteraction")
 
-The `SoCameraInteraction` does not only allow you to change the camera position in your scene but also adds light. The module automatically adds a headlight you can switch off in the fields of the module.
+The `SoCameraInteraction` does not only allow you to change the camera position in your scene but also adds light. The module automatically adds a headlight that you can switch off with a field of the module.
 
 {{< imagegallery 2 "images/tutorials/openinventor" "Headlight_TRUE" "Headlight_FALSE" >}}
 
@@ -41,7 +41,7 @@ The `SoCameraInteraction` can also be extended by a `SoPerspectiveCamera` or a `
 
 ![SoPerspectiveCamera and SoOrthographicCamera](images/tutorials/openinventor/Camera_3.png "SoPerspectiveCamera and SoOrthographicCamera")
 
-You can now switch between both cameras, but you can not interact with them in the viewer. Select the `SoCameraInteraction` and toggle *detectCamera*. Now the default camera of the `SoCameraInteraction` is replaced by the camera selected in the `SoSwitch`. 
+You can now switch between both cameras, but you cannot interact with them in the viewer. Select the `SoCameraInteraction` and toggle *detectCamera*. Now the default camera of the `SoCameraInteraction` is replaced by the camera selected in the `SoSwitch`. 
 
 Whenever you change the camera in the switch, you need to detect the new camera in the `SoCameraInteraction`.
 
@@ -49,13 +49,13 @@ Whenever you change the camera in the switch, you need to detect the new camera 
 
 A `SoPerspectiveCamera` camera defines a perspective projection from a viewpoint.
 
-The viewing volume for a perspective camera is a truncated pyramid. By default, the camera is located at (0,0,1) and looks along the negative z-axis; the Position and Orientation fields can be used to change these values. The Height Angle field defines the total vertical angle of the viewing volume; this and the Aspect Ratio field determine the horizontal angle.
+The viewing volume for a perspective camera is a truncated pyramid. By default, the camera is located at (0, 0, 1) and looks along the negative z-axis; the *Position* and *Orientation* fields can be used to change these values. The *Height Angle* field defines the total vertical angle of the viewing volume; this and the *Aspect Ratio* field determine the horizontal angle.
 
 A `SoOrthographicCamera` camera defines a parallel projection from a viewpoint.
 
-This camera does not diminish objects with distance, as an SoPerspectiveCamera does. The viewing volume for an orthographic camera is a cuboid (a box).
+This camera does not diminish objects with distance as an SoPerspectiveCamera does. The viewing volume for an orthographic camera is a cuboid (a box).
 
-By default, the camera is located at (0,0,1) and looks along the negative z-axis; the Position and Orientation fields can be used to change these values. The Height field defines the total height of the viewing volume; this and the Aspect Ratio field determine its width.
+By default, the camera is located at (0, 0, 1) and looks along the negative z-axis; the *Position* and *Orientation* fields can be used to change these values. The *Height* field defines the total height of the viewing volume; this and the *Aspect Ratio* field determine its width.
 
 Add a `SoCameraWidget` and connect it to your `SoGroup`. 
 
@@ -65,7 +65,7 @@ This module shows a simple widget on an Inventor viewer that can be used to rota
 
 You can also add more than one widget to show multiple widgets in the same scene, see example network of the `SoCameraWidget` module.
 
-## The `SoExaminerViewer` module
+## The `SoExaminerViewer` Module
 The `SoExaminerViewer` makes some things much easier, because a camera and a light are already integrated. 
 
 Add a `SoExaminerViewer` to your workspace and connect it to the `SoBackground`, the `SoMaterial` and the `SoOrientationModel` modules.
@@ -81,8 +81,8 @@ The module also allows you to switch between perspective and orthographic camera
 The module also provides UI elements to interact.
 
 ## Summary
-* MeVisLab provides multiple options for adding a camera to a scene
+* MeVisLab provides multiple options for adding a camera to a scene.
 * The `SoExaminerViewer` already has an integrated camera and light, the `SoRenderArea` requires additional modules.
-* You can use perspective and orthographic cameras
+* You can use perspective and orthographic cameras.
 
 {{< networkfile "examples/open_inventor/example3/CameraInteractions.mlab" >}}

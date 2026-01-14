@@ -37,7 +37,7 @@ Add a `SoView2DMarkerEditor` to your network and connect it with your `RegionGro
 
 ![SoView2DMarkerEditor](images/tutorials/image_processing/SoView2DMarkerEditor.png "SoView2DMarkerEditor")
 
-The region growing starts on manually clicking *Update* or automatically if *Update Mode* is set to *Auto-Update*. We recommend to set update mode to automatic update. Additionally, you should set the *Neighborhood Relation* to *3D-6-Neighborhood (x,y,z)*, because then your segmentation will also affect the z-axis.
+The region growing starts on manually clicking *Update* or automatically if *Update Mode* is set to *Auto-Update*. We recommend to set update mode to automatic update. Additionally, you should set the *Neighborhood Relation* to *3D-6-Neighborhood (x,y,z)*, because then your segmentation will also be performed in the z-direction.
 
 Set *Threshold Computation* to *Automatic* and define *Interval Size* as 1.600 % for relative, automatic threshold generation.
 

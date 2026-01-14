@@ -10,7 +10,7 @@ This image shows how to automatically create CSOs based on isovalues. In additio
 ## Summary
 In this example, the `CSOIsoGenerator` is used to generate contours based on a given isovalue of the image. Contours are generated in the image where the given isovalue is close to the one configured. These contours are stored in the `CSOManager` and ghosting is activated in the `SoCSOVisualizationSettings`.
 
-Ghosting means not only showing contours available on the currently visible slice but also contours of the neighbouring slices with increasing transparency.
+Ghosting means not only showing contours available on the currently visible slice but also contours of the neighboring slices with increasing transparency.
 
 The contours are also displayed in a three-dimensionsl `SoExaminerViewer` by using the `SoCSO3DRenderer`.
 

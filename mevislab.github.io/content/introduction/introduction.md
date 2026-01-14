@@ -95,11 +95,11 @@ rearrange the items and add new views via {{< menuitem "Main Menu" "View" "Views
 {{< bootstrap-table table_class="table table-striped" >}}
 | <div style="width:230px">Extension</div> | Description |
 | --- | --- |
-| `.mlab` | Network file, includes all information about the networks modules, their settings, their connections, and module groups. Networks developed using the `MeVisLab SDK` are stored as `.mlab` files and can only be opened having a valid SDK license. |
-| `.def` | Module definition file, necessary for a module to be added to the common MeVisLab module database. May also include all MDL script parts (if they are not sourced out to the `.script` file). |
+| `.mlab` | Network file, includes all information about the networks modules, their settings, their connections, and module groups. Networks developed using the `MeVisLab SDK` are stored as *.mlab* files and can only be opened having a valid SDK license. |
+| `.def` | Module definition file, necessary for a module to be added to the common MeVisLab module database. May also include all MDL script parts (if they are not sourced out to the *.script* file). |
 | `.script` | `MDL` script file, typically includes the user interface definition of panels. See [Chapter GUI Development](./tutorials/basicmechanisms/macromodules/guidesign#Example_Paneldesign "GUI Development") for an example on GUI programming. |
 | `.mlimage` | MeVisLab internal image format for 6D images saved with all DICOM tags, lossless compression, and in all data types. |
-| `.mhelp` | File with descriptions of all fields and possible use-cases of a module, edit- and creatable by using `MATE`. See [Help files](./tutorials/basicmechanisms/macromodules/helpfiles "Help files") for details. |
+| `.mhelp` | File with descriptions of all fields and possible use cases of a module, edit- and creatable by using `MATE`. See [Help files](./tutorials/basicmechanisms/macromodules/helpfiles "Help files") for details. |
 | `.py` | Python file, used for scripting in macro modules. See [Python scripting](./tutorials/basicmechanisms/macromodules/pythonscripting#TutorialPythonScripting "Python scripting") for an example on macro programming. |
 | `.dcm` | DCM part of the imported DICOM file, see [Importing DICOM Data](./tutorials/basicmechanisms/dataimport#DICOMImport "Importing DICOM Data"). |
 {{< /bootstrap-table >}}
@@ -140,7 +140,7 @@ Once the debug console is cleared, the warning and error indicators next to the
 module are also cleared.
 {{</alert>}}
 
-Informational messages are indicated in a similar matter on the same spot, but in a subtle gray color.
+Informational messages are indicated in a similar manner on the same spot, but in a subtle gray color.
 
 ### Module Interactions Through the Context Menu
 Each module has a context menu, providing the following options:
@@ -174,7 +174,7 @@ Once again, three types can be distinguished:
 A connection can be established by dragging one module close to the other. 
 {{</alert>}}
 
-Some modules even contain hidden connectors in addition to the ones displayed on the module's surface. Click on the workspace and press {{< keyboard "SPACE" >}} to see the hidden connectors as well as the internal networks of each module. You can now also use the hidden connectors for building connections.
+Some modules even contain hidden connectors in addition to the ones displayed on the module's surface. Click on the workspace and press {{< keyboard "SPACE" >}} to see the hidden connectors as well as the internal networks of each macro module. You can now also use the hidden connectors for building connections.
 
 For more information about connectors and different types of connections, click {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s03.html" "here" >}}. <br>
 If you want to know more about establishing, removing, moving, and replacing connections, have a look at {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s04.html" "this." >}}
@@ -192,7 +192,7 @@ An exemplary use case for a parameter connection is synchronization. Have a look
 The creation of macros is explained in more detail in [Tutorial Chapter I - Example 2.2](tutorials/basicmechanisms/macromodules/globalmacromodules) 
 {{</alert>}}
 
-### Adding Modules to your Workspace {#Searching_and_Adding_Modules}
+### Adding Modules to Your Workspace {#Searching_and_Adding_Modules}
 
 There are several ways to add a module to your current network:
 -   via the menu bar entry {{< menuitem "Modules" >}}

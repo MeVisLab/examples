@@ -14,11 +14,11 @@ menu:
 ---
 # Surface Objects (WEMs){#WEMs}
 ## Introduction
-In MeVisLab it is possible to create, visualize, process, and manipulate surface objects, also known as polygon meshes. Here, we call surface objects *Winged Edge Mesh*, in short WEM. In this chapter you will get an introduction into WEMs. In addition, you will find examples on how to work with WEMs. For more information on WEMs, take a look at the {{< docuLinks "/Resources/Documentation/Publish/SDK/ToolBoxReference/WEMDataStructure.html" "MeVislab Toolbox Reference" >}}. If you like to know which WEM formats can be imported into MeVisLab, take a look at the *assimp* documentation [here](https://github.com/assimp/assimp).
+In MeVisLab it is possible to create, visualize, process, and manipulate surface objects, also known as polygon meshes. Here, we call surface objects *Winged Edge Mesh*, in short WEM. In this chapter you will get an introduction into WEMs. In addition, you will find examples on how to work with WEMs. For more information on WEMs, take a look at the {{< docuLinks "/Resources/Documentation/Publish/SDK/ToolBoxReference/WEMDataStructure.html" "MeVisLab Toolbox Reference" >}}. If you like to know which WEM formats can be imported into MeVisLab, take a look at the *assimp* documentation [here](https://github.com/assimp/assimp).
 
 [//]: <> (MVL-653)
 
-## WEM Explained with MeVisLab
+## WEM in MeVisLab Explained
 To explain WEMs in MeVisLab, we will build a network that shows the structure and the characteristics of WEMs. We will start the example by generating a WEM forming a cube. With this, we will explain structures of WEMs called *Edges*, *Nodes*, *Surfaces*, and *Normals*.
 
 ### Initialize a WEM
@@ -39,7 +39,7 @@ Add and connect the module `SoWEMRendererEdges` to your workspace to enable the 
 ![WEM Edges](images/tutorials/dataobjects/surfaces/WEM_01_3.png "WEM Edges")
 
 #### Nodes
-Nodes mark the corner points of each surface. Therefore, nodes define the geometric properties of every WEM. To visualize the nodes, add and connect the module `SoWEMRendererNodes` as shown. By default, the nodes are visualized with an offset to the position they are located in. We reduced the offset to be zero, increased the point size, and changed the color. 
+Nodes mark the corner points of each polygon. Therefore, nodes define the geometric properties of every WEM. To visualize the nodes, add and connect the module `SoWEMRendererNodes` as shown. By default, the nodes are visualized with an offset to the position they are located in. We reduced the offset to be zero, increased the point size, and changed the color. 
 ![WEM Nodes](images/tutorials/dataobjects/surfaces/WEM_01_4.png "WEM Nodes")
 
 #### Faces
