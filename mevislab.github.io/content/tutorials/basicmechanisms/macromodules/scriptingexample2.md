@@ -94,7 +94,7 @@ You may want to change the design setting of the right viewer. This is possible 
 ### Selection of Images
 
 Next, we like to add the option to browse through the folders and select
-the image, we like to create CSOs from. This functionality is already given in the internal network in the module `LocalImage`. We can copy this functionality from `LocalImage` and add this option to the panel above both viewers. But, how should we know, which field name we reference to? To find this out, open the network file of your macro module again. Now you are able to open the panel of the module `LocalImage`. Right-click {{< mousebutton "right" >}} the desired field: In this case, right-click the label *Name:*. Select *Copy Name*, to copy the internal name of this field.
+the image, we like to create CSOs from. This functionality is already present in the internal network in the module `LocalImage`. We can copy this functionality from `LocalImage` and add this option to the panel above both viewers. But, how should we know which field name we reference to? To find this out, open the network file of your macro module again. Now you are able to open the panel of the module `LocalImage`. Right-click {{< mousebutton "right" >}} the desired field: In this case, right-click the label *Name:*. Select *Copy Name* to copy the internal name of this field.
 
 ![Copy the field name](images/tutorials/basicmechanics/GUI_Exp_09.png "Copy the field name")
 

@@ -208,7 +208,7 @@ Right-click the macro module and select *Show Internal Network* to inspect and c
 
 ![Internal Network of your local macro](images/tutorials/basicmechanics/BM_23.png "Internal Network of your local macro")
 
-If you want to change the permanent behaviour or the module, right-click {{< mousebutton "right" >}} and select {{< menuitem "Related Files" "Filter.mlab" >}}. The network file of the module opens. Changes applied in this file are saved permanently.
+If you want to change the permanent behavior or the module, right-click {{< mousebutton "right" >}} and select {{< menuitem "Related Files" "Filter.mlab" >}}. The network file of the module opens. Changes applied to this file are saved permanently.
 
 {{< youtube "VmK6qx-vKWk">}}
 
@@ -226,6 +226,6 @@ More information on macro modules can be found {{< docuLinks "/Resources/Documen
 * Parameters of each module can be changed in the Module Inspector or Automatic Panel of the module.
 * Parameter connections can be established to synchronize the values of these parameters.
 * Modules can be clustered. Clustered modules can be encapsulated into local or global macro modules.
-* Macro modules encapsulate networks. Internal networks can be shown and modified. Any changes of the internal network are applied to the macro module on the fly, changes in the *.mlab file are changing the permanent behaviour of your module.
+* Macro modules encapsulate networks. Internal networks can be shown and modified. Any changes of the internal network are applied to the macro module on-the-fly, changes in the *.mlab* file change the permanent behavior of your module.
 
 {{< networkfile "examples/basic_mechanisms/contour_filter/ContourFilter.zip" >}}
