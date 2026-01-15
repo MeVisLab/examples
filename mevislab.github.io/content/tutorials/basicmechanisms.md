@@ -165,15 +165,15 @@ It is also possible to use the pre-defined module `SynchroView2D` to accomplish 
 
 ### Grouping Modules {#TutorialGroupingModules}
 
-A contour filter can be created based on our previously created network. To finalize the filter, add the modules `Arithmetic2` and `Morphology` to your workspace and connect the modules as shown below. Double-click the module `Arithmetic2` to open its panel. Change the field *Function* of the module `Arithmetic2` to use the function *subtract* in the panel of the module. The contour filter is done now. You can inspect each processing step using the Output Inspector by clicking on the input and output connectors of the respective modules. The final results can be displayed using the viewer modules. If necessary, adjust the contrast by pressing the right mouse button and moving the cursor.
+A contour filter can be created based on our previously created network. To finalize the filter, add the modules `Arithmetic2` and `Morphology` to your workspace and connect the modules as shown below. Double-click {{< mousebutton "left" >}} the module `Arithmetic2` to open its panel. Change the field *Function* of the module `Arithmetic2` to use the function *subtract* in the panel of the module. The contour filter is done now. You can inspect each processing step using the Output Inspector by clicking on the input and output connectors of the respective modules. The final results can be displayed using the viewer modules. If necessary, adjust the contrast by pressing the right arrow key and moving the cursor.
 
 ![Grouping modules](images/tutorials/basicmechanics/BM_17.png "Grouping modules")
 
-If you'd like to know more about specific modules, search for help. You can do this by right-clicking the module and select help, which offers an example network and further information about the selected module in particular.
+If you'd like to know more about specific modules, search for help. You can do this by right-clicking {{< mousebutton "right" >}} the module and select help, which offers an example network and further information about the selected module in particular.
 
 ![Module Help](images/tutorials/basicmechanics/BM_18.png "Module Help")
 
-To be able to better distinguish the image processing pipeline, you can encapsulate it in a group: Select the three modules, for example, by dragging a selection rectangle around them. Then right-click the selection to open the context menu and select {{< menuitem "Add to New Group" >}}.
+To be able to better distinguish the image processing pipeline, you can encapsulate it in a group: Select the three modules, for example by dragging a selection rectangle around them. Then right-click {{< mousebutton "right" >}} the selection to open the context menu and select {{< menuitem "Add to New Group" >}}.
 
 ![Add modules to new group](images/tutorials/basicmechanics/BM_19.png "Add to new group")
 
@@ -199,14 +199,16 @@ You have probably already noticed how the modules differ in color. Each color re
   * Green modules are OpenInventor modules: they enable visual 3D scene graphs. 
   * The brown modules are called macro modules. Macro modules encapsulate a whole network in a single module. 
   
-To condense our filter into one single module, we will now be creating a macro module out of it. To do that, right-click on the group title and select *Convert To Local Macro*. Name your new macro module and finish. You just created a local macro module. Local macros can only be used from networks in the same or any parent directory.
+To condense our filter into one single module, we will now be creating a macro module out of it. To do that, right-click {{< mousebutton "right" >}} on the group title and select *Convert To Local Macro*. Name your new macro module and finish. You just created a local macro module. Local macros can only be used from networks in the same or any parent directory.
 
 ![Convert to local macro](images/tutorials/basicmechanics/BM_21.png "Convert to local macro")
 ![Your first local macro](images/tutorials/basicmechanics/BM_22.png "Your first local macro")
 
-Right-click the macro module and select *Show Internal Network* to inspect and change the internal network. You can change the properties of the new macro module by changing the properties in the internal network. You can, for example, right-click the module `Convolution` and change the kernel. These changes will be preserved.
+Right-click the macro module and select *Show Internal Network* to inspect and change the internal network. You can change the properties of the new macro module by changing the properties in the internal network. You can, for example, right-click {{< mousebutton "right" >}} the module `Convolution` and change the kernel. These changes will be applied for the currently running instance.
 
 ![Internal Network of your local macro](images/tutorials/basicmechanics/BM_23.png "Internal Network of your local macro")
+
+If you want to change the permanent behavior or the module, right-click {{< mousebutton "right" >}} and select {{< menuitem "Related Files" "Filter.mlab" >}}. The network file of the module opens. Changes applied to this file are saved permanently.
 
 {{< youtube "VmK6qx-vKWk">}}
 
@@ -224,6 +226,6 @@ More information on macro modules can be found {{< docuLinks "/Resources/Documen
 * Parameters of each module can be changed in the Module Inspector or Automatic Panel of the module.
 * Parameter connections can be established to synchronize the values of these parameters.
 * Modules can be clustered. Clustered modules can be encapsulated into local or global macro modules.
-* Macro modules encapsulate networks. Internal networks can be shown and modified. Any changes of the internal network are applied to the macro module.
+* Macro modules encapsulate networks. Internal networks can be shown and modified. Any changes of the internal network are applied to the macro module on-the-fly, changes in the *.mlab* file change the permanent behavior of your module.
 
 {{< networkfile "examples/basic_mechanisms/contour_filter/ContourFilter.zip" >}}

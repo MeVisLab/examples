@@ -53,7 +53,7 @@ MeVisLab reloads its internal database and you can open a new tab. Search for yo
 In the case you double-click {{< mousebutton "left" >}} your module now, you will see the *Automatic Panel* only showing the name of your module, because we did not add any own *Window* until now.
 
 ### Develop Your User Interface
-Before adding your own UI, open the internal network of your macro module via right-click {{< mousebutton "right" >}} and {{< menuitem "Show Internal Network" >}}. Open the panel of your `ImageLoad` module and set *filename* to an empty string (clear). This is necessary for later.
+Before adding your own UI, open the internal network of your macro module via right-click {{< mousebutton "right" >}} and {{< menuitem "Related Files" "MyViewerApplication.mlab" >}}. Open the panel of your `ImageLoad` module and set *filename* to an empty string (clear). This is necessary for later.
 
 Now, right-click on your *MyViewerApplication* and select {{< menuitem "Related Files" "MyViewerApplication.script" >}}
 

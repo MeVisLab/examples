@@ -149,7 +149,7 @@ def releaseCamera(_):
 You should now have the complete functionality of the [Example 2: Face Detection with OpenCV](tutorials/thirdparty/opencv/thirdpartyexample2 "Example 2: Face Detection with OpenCV").
 
 ### Adapt the network
-For *PyTorch*, we require some additional modules in our network. Open the internal network of your module and add another `PythonImage` module. Connect a `Resample3D` and an `ImagePropertyConvert` module.
+For *PyTorch*, we require some additional modules in our network. Open the network file via right-click {{< mousebutton "right" >}} and selecting {{< menuitem "Related Files" "PyTorchSegmentationExample.mlab" >}} of your module and add another `PythonImage` module. Connect a `Resample3D` and an `ImagePropertyConvert` module.
 
 In `Resample3D` module, define the *Image Size* 693, 520, 1. Change *VoxelSize* for all dimensions to 1.
 
@@ -163,7 +163,7 @@ Then add a `SoView2DOverlayMPR` module and connect it to the `ImagePropertyConve
 
 ![SoView2DOverlayMPR](images/tutorials/thirdparty/pytorch_example3_8.png "SoView2DOverlayMPR")
 
-Save the internal network.
+Save the network file.
 
 ### Remove OpenCV specific code
 We want to use PyTorch for segmentation, therefore you need to add all necessary imports.
