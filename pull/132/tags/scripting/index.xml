@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Scripting on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/132/tags/scripting/</link><description>Recent content in Scripting on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:58:44 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/132/tags/scripting/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 2.5: Interactions via Python Scripting</title><link>https://mevislab.github.io/examples/pull/132/tutorials/basicmechanisms/macromodules/pythonscripting/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/132/tutorials/basicmechanisms/macromodules/pythonscripting/</guid><description>&lt;h1 id="TutorialPythonScripting"&gt;Example 2.5: Module Interactions Using Python Scripting&lt;/h1&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This chapter will give you an overview over Python scripting in MeVisLab. Here, no introduction into Python will be given. However, basic knowledge in Python is helpful. Instead, we will show how to integrate and use Python in the MeVisLab SDK.&lt;/p&gt;
+&lt;p&gt;In fact, nearly everything in MeVisLab can be done via Python scripting: You can add modules to your network, or remove modules, you can dynamically establish and remove connections, and so on. But, much more important: You can access module inputs and outputs, as well as module fields to process their parameters and data. You can equip user interfaces and panel with custom functionalities. Python can be used to implement module interactions. When you open a panel or you press a button in a panel, the executed actions are implemented via Python scripting.&lt;/p&gt;</description></item><item><title>Example 2.5.1: The Module RunPythonScript</title><link>https://mevislab.github.io/examples/pull/132/tutorials/basicmechanisms/macromodules/scriptingexample1/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/132/tutorials/basicmechanisms/macromodules/scriptingexample1/</guid><description>&lt;h1 id="example-251-the-module-runpythonscript"&gt;Example 2.5.1: The Module RunPythonScript&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=O5Get1PMOq8" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/O5Get1PMOq8/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=O5Get1PMOq8" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The module &lt;code&gt;RunPythonScript&lt;/code&gt; allows to execute Python scripts from within a MeVisLab network. You can draw parameter connection from modules to &lt;code&gt;RunPythonScript&lt;/code&gt; and back to process parameter fields using Python scripting.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
+&lt;h3 id="develop-your-network"&gt;Develop Your Network&lt;/h3&gt;
+&lt;p&gt;In this example, we like to dynamically change the color of a cube in an Open Inventor scene. For that, add and connect the following modules as shown.&lt;/p&gt;</description></item><item><title>Example 2.5.2: Module Interactions via Python Scripting</title><link>https://mevislab.github.io/examples/pull/132/tutorials/basicmechanisms/macromodules/scriptingexample2/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/132/tutorials/basicmechanisms/macromodules/scriptingexample2/</guid><description>&lt;h1 id="example-252-module-interactions-via-python-scripting"&gt;Example 2.5.2: Module Interactions Via Python Scripting&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=hGq6vA7Ll9Q" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/hGq6vA7Ll9Q/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=hGq6vA7Ll9Q" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this example, you will learn how to add Python scripting to your user interface. The network used in &lt;a href="tutorials/dataobjects/contours/contourexample5/"&gt;Chapter V&lt;/a&gt; will be used for creating the macro module.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
+&lt;h3 id="creating-the-macro-module"&gt;Creating the Macro Module&lt;/h3&gt;
+&lt;p&gt;First, we condense the example network into a macro module and then we create a panel for that module. To create a macro module, use the Project Wizard, which you find under &lt;i&gt;[
+ 
+ File
+ &amp;rarr; 
+ Run Project Wizard
+]&lt;/i&gt;. Select
+&lt;em&gt;Macro module&lt;/em&gt; and press &lt;em&gt;Run&lt;/em&gt;.&lt;/p&gt;</description></item><item><title>Example 3: Creating a Simple Application</title><link>https://mevislab.github.io/examples/pull/132/tutorials/basicmechanisms/macromodules/viewerexample/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/132/tutorials/basicmechanisms/macromodules/viewerexample/</guid><description>&lt;h1 id="example-3-creating-a-simple-application"&gt;Example 3: Creating a Simple Application&lt;/h1&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In the previous examples, you already learned how to create macro modules, user interfaces, and how to interact with your UI via Python scripting.&lt;/p&gt;
+&lt;p&gt;In this example, you will learn how to create a simple prototype application in MeVisLab including a user interface with 2D and 3D viewer. You will learn how to implement field listeners and react on events.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
+&lt;h3 id="create-your-network"&gt;Create Your Network&lt;/h3&gt;
+&lt;p&gt;Start with an empty network and add the module &lt;code&gt;ImageLoad&lt;/code&gt; to your workspace. Then, add the modules &lt;code&gt;View2D&lt;/code&gt; and &lt;code&gt;View3D&lt;/code&gt; to your workspace and connect them as seen below.&lt;/p&gt;</description></item></channel></rss>
