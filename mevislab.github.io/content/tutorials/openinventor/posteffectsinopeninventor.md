@@ -18,7 +18,7 @@ menu:
 ## Introduction
 Up to this point, we practiced constructing Open Inventor scenes and placed three-dimensional Open Inventor objects of different colors and shapes within them.
 
-In this tutorial, we will go over the steps to add shadows to our 3D objects, make them glow, and vary their opacity to make them transparent. We will also incorporate WEMs from multiframe DICOMs and render them as scene objects to see how different post effects can be used on them.
+In this tutorial, we will go over the steps to add shadows to our 3D objects, make them glow, and vary their opacity to make them transparent. We will also incorporate WEMs from multi-frame DICOMs and render them as scene objects to see how different post effects can be used on them.
 
 ## Steps to Follow
 
@@ -30,7 +30,7 @@ To incorporate DICOMs into your Open Inventor Scene, they have to be rendered as
 We don't recommend using single-frame DICOMs for this example as a certain depth is required to interact with the scene objects as intended. Also make sure that the pixel data of the DICOM file you choose contains all slices of the study, as it might be difficult to arrange scene objects of individual slices to resemble the originally captured study. 
 {{</alert>}}
 
-![From DICOM to SO](images/tutorials/openinventor/multiframetoso.PNG "How to create a scene object out of a multiframe DICOM")
+![From DICOM to SO](images/tutorials/openinventor/multiframetoso.PNG "How to create a scene object out of a multi-frame DICOM")
 
 {{<alert class="info" caption="Info">}}
 Consider adding a `View2D` and an `Info` module to your `LocalImage` module's output connector to be able to compare the rendered object with the original image and adapt the isovalues to minimize noise.
@@ -79,7 +79,7 @@ To put a soft glow on the geometrical scene objects, the module `SoPostEffectGlo
 ![Glow](images/tutorials/openinventor/WorkspaceWithGlow.PNG "Applied SoPostEffectGlow")
 
 ## Summary
-* Multiframe DICOM images can be rendered to be scene objects by converting them into WEMs first.
+* Multi-frame DICOM images can be rendered to be scene objects by converting them into WEMs first.
 * Open Inventor scenes can be augmented by adding PostEffects to scene objects.
 
 {{< networkfile "examples/open_inventor/PostEffectTutorial.mlab" >}}

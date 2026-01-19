@@ -170,9 +170,9 @@ The following shall be accessible as *Field* for our macro module:
 * Filename to be opened
 * Color of the 2D overlay and 3D segmentation
 * Transparency of the 3D image
-* Threshold to be used for RegionGrowing
+* Threshold to be used for `RegionGrowing`
 * Isovalue of the 3D surface to use for rendering
-* Position of the marker to use for RegionGrowing
+* Position of the marker to use for `RegionGrowing`
 * Selection for 3D visualization (image, segmentation, or both)
 * Trigger to reset the application to its initial state
 

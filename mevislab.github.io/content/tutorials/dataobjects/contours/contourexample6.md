@@ -46,8 +46,8 @@ We now want to customize the details to be shown for each distance line. Open th
 Enter the following to the panel of the `CSOLabelRenderer` module:
 {{< highlight filename="CSOLabelRenderer" >}}
 ```Python
-labelString = f'Length: {cso.getLength()} mm'
-labelName = f'ID: {cso.getId()}'
+labelString = f"Length: {cso.getLength()} mm"
+labelName = f"ID: {cso.getId()}"
 deviceOffsetX = 0
 deviceOffsetY = 0
 ```
@@ -60,7 +60,7 @@ We are setting the *labelName* to a static text showing the type of the CSO and 
 You can also round the length by using:
 {{< highlight filename="CSOLabelRenderer" >}}
 ```Python
-labelString = f'Length: {cso.getLength():.2f} mm'
+labelString = f"Length: {cso.getLength():.2f} mm"
 ```
 {{</highlight>}}
 
@@ -68,7 +68,7 @@ In order to see all possible parameters of a CSO, add a `CSOInfo` module to your
 
 ![CSOInfo](images/tutorials/dataobjects/contours/Ex6_CSOInfo.png "CSOInfo")
 
-For labels shown on gray value images, it makes sense to add a shadow. Open the panel of the `SoCSOVisualizationSettings` module and on tab *Misc* check the option *Should render shadow*. This increases the readability of your labels.
+For labels shown on grayscale images, it makes sense to add a shadow. Open the panel of the `SoCSOVisualizationSettings` module and on tab *Misc* check the option *Should render shadow*. This increases the readability of your labels.
 
 {{< imagegallery 2 "images/tutorials/dataobjects/contours/" "Ex6_NoShadow" "Ex6_Shadow" >}}
 
@@ -84,13 +84,13 @@ We currently defined the *labelName* and *labelString* for the distance line. If
 
 {{< highlight filename="CSOLabelRenderer" >}}
 ```Python
-if cso.getSubType() == 'distanceLine':
-  labelString =  f'{userData0} {cso.getLength():.2f} mm'
+if cso.getSubType() == "distanceLine":
+  labelString =  f"{userData0} {cso.getLength():.2f} mm"
   labelName = userData1
   labelName += str(cso.getId())
-elif cso.getSubType() == 'rectangle':
-  labelString = f'{userData0} {cso.getLength():.2f} mm\n'
-  labelString += f'{userData2} {cso.getArea():.2f} mm^2'
+elif cso.getSubType() == "rectangle":
+  labelString = f"{userData0} {cso.getLength():.2f} mm\n"
+  labelString += f"{userData2} {cso.getArea():.2f} mm^2"
   labelName = userData3
   labelName += str(cso.getId())
 deviceOffsetX = 0

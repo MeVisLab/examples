@@ -141,7 +141,7 @@ def reset():
 
 For a reset, we just touch the *resetApplication* field of our macro module `TutorialSummary`.
 
-#### Requirement 1: The Application Shall be Able to Load DICOM Data
+#### Requirement 1: The application shall be able to load DICOM data
 The first requirement we want to test is the possibility to load DICOM data. After setting the file to be loaded, the output provides a valid image. Resetting the application shall unload the image.
 
 {{< highlight filename="<TEST_CASE_NAME>.py" >}}
@@ -159,8 +159,9 @@ def TEST_LoadDICOMData():
 ```
 {{</highlight>}}
 
-#### Requirement 4: The 2D Viewer Shall Provide the Possibility to Segment Parts of the Image Based on a RegionGrowing Algorithm
-##### Requirement 4.1: It Shall be Possible to Click Into the Image for Defining a Marker Position for Starting the RegionGrowing
+#### Requirement 4: The 2D viewer shall provide the possibility to segment parts of the image based on a region growing algorithm
+
+##### Requirement 4.1: It shall be possible to click into the image for defining a marker position for starting the region growing algorithm
 This test case shall make sure the `RegionGrowing` module calculates the total volume and number of voxels to be larger than 0 in the case a marker has been set. Without loading an image or after resetting the application, the values shall be 0.
 
 {{< highlight filename="<TEST_CASE_NAME>.py" >}}
@@ -192,7 +193,7 @@ def TEST_RegionGrowing():
 ```
 {{</highlight>}}
 
-##### Requirement 4.2: It Shall be Possible to Define a Threshold for the RegionGrowing Algorithm
+##### Requirement 4.2: It shall be possible to define a threshold for the region growing algorithm
 For the threshold of the region growing it makes sense to extend the previous test case instead of writing a new one. We already have a segmentation based on the default threshold value and can just change the threshold and compare the resulting volumes.
 
 Increasing the threshold shall result in larger volumes, decreasing shall result in smaller values.
@@ -240,8 +241,9 @@ def TEST_RegionGrowing():
 ```
 {{</highlight>}}
 
-#### Requirement 5: The 2D Viewer Shall Display the Segmentation Results as a Semitransparent Overlay
-##### Requirement 5.1: It Shall be Possible to Define the Color of the Overlay
+#### Requirement 5: The 2D viewer shall display the segmentation results as a semitransparent overlay
+
+##### Requirement 5.1: It shall be possible to define the color of the overlay
 The requirement 5 cannot be tested automatically. Transparencies should be tested by a human being.
 
 Nevertheless, we can write an automated test checking the possibility to define the color of the overlay and the 3D segmentation.
@@ -279,13 +281,13 @@ Finally, an image comparison is done for the 3D rendering using the old and the 
 
 The call *MLAB.processInventorQueue()* is sometimes necessary if an Open Inventor scene changed via Python scripting, because the viewers might not update immediately after changing the field. MeVisLab is now forced to process the queue in Open Inventor and to update the renderings.
 
-#### Requirement 8: The Total Volume of the Segmented Area Shall be Calculated and Shown (in ml)
+#### Requirement 8: The total volume of the segmented volume shall be calculated and shown (in ml)
 For the correctness of the volume calculation, we added the `CalculateVolume` module to our test network. The volume given by our macro is compared to the volume of the segmentation from output *outSegmentationMask* calculated by the `CalculateVolume` module.
 
 {{< highlight filename="<TEST_CASE_NAME>.py" >}}
 ```Python
 ...
-# Requirement 8: The total volume of the segmented area shall be calculated and shown (in ml)
+# Requirement 8: The total volume of the segmented volume shall be calculated and shown (in ml)
 def TEST_VolumeCalculation():
   # Reset and expect all volumes and number of voxels to be 0
   reset()
@@ -312,11 +314,11 @@ def TEST_VolumeCalculation():
 ```
 {{</highlight>}}
 
-#### Requirement 9: It Shall be Possible to Toggle the Visible 3D Objects
+#### Requirement 9: It shall be possible to toggle the visible 3D objects
 
-##### Requirement 9.1: Original Data
+##### Requirement 9.1: Original data
 
-##### Requirement 9.2: Segmentation Results
+##### Requirement 9.2: Segmentation results
 
 ##### Requirement 9.3: All
 In the end, we want to develop a testcase for the 3D toggling of the view. We cannot exactly test if the rendering is correct; therefore, we will check if the 3D rendering image changes when toggling the 3D view. We will use the modules `OffscreenRenderer`, `ImageCompare`, and `SoCameraInteraction`, which we added to our test network.

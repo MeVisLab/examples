@@ -54,7 +54,11 @@ Next, open the tab *Input* and draw parameter connections from the results of th
 
 ![Define annotation parameters](images/tutorials/dataobjects/surfaces/DO7_07.png "Define annotation parameters")
 
-You can design the annotation overlay as you like in the tab *User*. We decided to only display the minimal (the minimum minimum) and maximal (the maximum minimum) distance between both WEMs.
+You can design the annotation overlay as you like in the tab *User*. We decided to only display the minimal and maximal distance between both WEMs.
+
+{{<alert class="info" caption="Extra Infos">}}
+The `WEMSurfaceDistance` module measures minimal distances only; when talking about the maximal distance, we mean the maximal minimal distance: this is the maximum of all minimum distances.
+{{</alert>}}
 
 ![Annotation design](images/tutorials/dataobjects/surfaces/DO7_04.png "Annotation design")
 
