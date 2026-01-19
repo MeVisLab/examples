@@ -6,9 +6,9 @@
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this example we like to calculate the volume of our object, in this
-case the part of the lung we have segmented.&lt;/p&gt;
+case, the part of the lung we have segmented.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
 &lt;h3 id="develop-your-network-and-calculate-the-lung-volume"&gt;Develop Your Network and Calculate the Lung Volume&lt;/h3&gt;
-&lt;p&gt;Add the module &lt;code&gt;CalculateVolume&lt;/code&gt; and &lt;code&gt;SoView2DAnnotation&lt;/code&gt; to your workspace
+&lt;p&gt;Add the modules &lt;code&gt;CalculateVolume&lt;/code&gt; and &lt;code&gt;SoView2DAnnotation&lt;/code&gt; to your workspace
 and connect both modules as shown. Update the module &lt;code&gt;CalculateVolume&lt;/code&gt;,
 which directly shows the volume of our object.&lt;/p&gt;</description></item></channel></rss>

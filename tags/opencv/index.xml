@@ -2,12 +2,12 @@
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://opencv.org/" title="OpenCV" target="_blank" rel="noopener"&gt;OpenCV&lt;/a&gt; (Open Source Computer Vision Library) is an open source computer vision and machine learning software library.&lt;/p&gt;
 &lt;p&gt;This chapter provides some examples how to use OpenCV in MeVisLab.&lt;/p&gt;
-&lt;h2 id="other-resources"&gt;Other resources&lt;/h2&gt;
-&lt;p&gt;You can find a lot of OpenCV examples and tutorials on their &lt;a href="https://docs.opencv.org/4.x/d9/df8/tutorial_root.html" target="_blank" rel="noopener"&gt;website&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Example 1: WebCam access with OpenCV</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/opencv/thirdpartyexample1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/opencv/thirdpartyexample1/</guid><description>&lt;h1 id="example-1-webcam-access-with-opencv"&gt;Example 1: WebCam access with OpenCV&lt;/h1&gt;
+&lt;h2 id="other-resources"&gt;Other Resources&lt;/h2&gt;
+&lt;p&gt;You can find a lot of OpenCV examples and tutorials on their &lt;a href="https://docs.opencv.org/4.x/d9/df8/tutorial_root.html" target="_blank" rel="noopener"&gt;website&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Example 1: Webcam Access with OpenCV</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/opencv/thirdpartyexample1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/opencv/thirdpartyexample1/</guid><description>&lt;h1 id="example-1-webcam-access-with-opencv"&gt;Example 1: Webcam Access with OpenCV&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this example, we are using the &lt;code&gt;PythonImage&lt;/code&gt; module and access your WebCam to show the video in a &lt;code&gt;View2D&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
-&lt;h3 id="creating-the-network-to-be-used-for-testing"&gt;Creating the network to be used for testing&lt;/h3&gt;
+&lt;p&gt;In this example, we are using the &lt;code&gt;PythonImage&lt;/code&gt; module and access your webcam to show the video in a &lt;code&gt;View2D&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
+&lt;h3 id="creating-the-network-to-be-used-for-testing"&gt;Creating the Network to be Used for Testing&lt;/h3&gt;
 &lt;p&gt;Add the modules to your workspace and connect them as seen below.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
  &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/network_example1.png" title="Example Network "&gt;&lt;img id="Example Network " class="img-fluid rounded" src="images/tutorials/thirdparty/network_example1.png" alt="Example Network " title="Example Network " /&gt;&lt;/a&gt;
@@ -16,7 +16,7 @@
 &lt;/p&gt;
 &lt;p&gt;The viewer is empty because the image needs to be set via Python scripting.&lt;/p&gt;</description></item><item><title>Example 2: Face Detection with OpenCV</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/opencv/thirdpartyexample2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/opencv/thirdpartyexample2/</guid><description>&lt;h1 id="example-2-face-detection-with-opencv"&gt;Example 2: Face Detection with OpenCV&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This example uses the OpenCV WebCam Python script and adds a basic face detection.&lt;/p&gt;
+&lt;p&gt;This example uses the OpenCV webcam Python script and adds a basic face detection.&lt;/p&gt;
 
 &lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&gt;
  &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
@@ -40,6 +40,6 @@
  The Python code used in this example has been taken from &lt;a href="https://towardsdatascience.com/face-detection-in-2-minutes-using-opencv-python-90f89d7c0f81" target="_blank" rel="noopener"&gt;Towards Data Science&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
-&lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
 &lt;h3 id="open-example-1"&gt;Open Example 1&lt;/h3&gt;
 &lt;p&gt;Add the macro module developed in &lt;a href="tutorials/thirdparty/opencv/thirdpartyexample1"&gt;Example 1&lt;/a&gt; to your workspace.&lt;/p&gt;</description></item></channel></rss>

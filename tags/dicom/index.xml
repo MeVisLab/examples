@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DICOM on MeVisLab Examples</title><link>https://mevislab.github.io/examples/tags/dicom/</link><description>Recent content in DICOM on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 05 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/tags/dicom/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 1: Data import in MeVisLab</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/dataimport/</link><pubDate>Wed, 15 Jun 2022 08:54:53 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/dataimport/</guid><description>&lt;h1 id="example-1-data-import-in-mevislab"&gt;Example 1: Data Import in MeVisLab&lt;/h1&gt;
-&lt;p&gt;MeVisLab provides several pre-defined modules to import data for processing in your networks.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DICOM on MeVisLab Examples</title><link>https://mevislab.github.io/examples/tags/dicom/</link><description>Recent content in DICOM on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 05 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/tags/dicom/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 1: Data Import in MeVisLab</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/dataimport/</link><pubDate>Wed, 15 Jun 2022 08:54:53 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/dataimport/</guid><description>&lt;h1 id="example-1-data-import-in-mevislab"&gt;Example 1: Data Import in MeVisLab&lt;/h1&gt;
+&lt;p&gt;MeVisLab provides several predefined modules to import data for processing in your networks.&lt;/p&gt;
 
 &lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&gt;
  &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
@@ -64,7 +64,7 @@ World coordinates also refer to the patient axes. They are:&lt;/p&gt;
 &lt;li&gt;Load CT and related RTSTRUCT data.&lt;/li&gt;
 &lt;li&gt;Visualize RTSTRUCTs as colored CSOs.&lt;/li&gt;
 &lt;li&gt;Show labels next to each RTSTRUCT contour.&lt;/li&gt;
-&lt;li&gt;Visualize RTDOSE as a semi-transparent colored overlay.&lt;/li&gt;
+&lt;li&gt;Visualize RTDOSE as a semitransparent colored overlay.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;DICOM RT&lt;/em&gt; files are essential in radiotherapy treatment planning.&lt;/p&gt;
 &lt;p&gt;They include:&lt;/p&gt;

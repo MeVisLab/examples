@@ -15,9 +15,9 @@ All of these funtionalities will be addressed in this chapter.&lt;/p&gt;
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this example, we are using the MeVisLab Profiler to inspect the memory and CPU consumption of the modules in an example network.&lt;/p&gt;
-&lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
-&lt;h3 id="creating-the-network-to-be-used-for-profiling"&gt;Creating the network to be used for profiling&lt;/h3&gt;
+&lt;p&gt;In this example we are using the MeVisLab Profiler to inspect the memory and CPU consumption of the modules in an example network.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
+&lt;h3 id="creating-the-network-to-be-used-for-profiling"&gt;Creating the Network to be Used for Profiling&lt;/h3&gt;
 &lt;p&gt;You can open any network you like, here we are using the example network of the module &lt;code&gt;MinMaxScan&lt;/code&gt; for profiling. Add the module &lt;code&gt;MinMaxScan&lt;/code&gt; to your workspace, open the example network via right-click 
 
 

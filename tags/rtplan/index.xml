@@ -5,7 +5,7 @@
 &lt;li&gt;Load CT and related RTSTRUCT data.&lt;/li&gt;
 &lt;li&gt;Visualize RTSTRUCTs as colored CSOs.&lt;/li&gt;
 &lt;li&gt;Show labels next to each RTSTRUCT contour.&lt;/li&gt;
-&lt;li&gt;Visualize RTDOSE as a semi-transparent colored overlay.&lt;/li&gt;
+&lt;li&gt;Visualize RTDOSE as a semitransparent colored overlay.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;DICOM RT&lt;/em&gt; files are essential in radiotherapy treatment planning.&lt;/p&gt;
 &lt;p&gt;They include:&lt;/p&gt;

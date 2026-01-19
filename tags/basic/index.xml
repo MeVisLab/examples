@@ -36,7 +36,7 @@
  
  1
  &lt;/kbd&gt;&lt;/td&gt;
- &lt;td&gt;Automatically arrange selection of modules / in the current network&lt;/td&gt;
+ &lt;td&gt;Automatically arrange selection of modules in the current network&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td&gt;
@@ -140,7 +140,7 @@
  
  TAB
  &lt;/kbd&gt;&lt;/td&gt;
- &lt;td&gt;Layout .script file (in MATE)&lt;/td&gt;
+ &lt;td&gt;Layout *.script* file (in MATE)&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td&gt;
@@ -171,7 +171,7 @@
  
  
  CTRL
- &lt;/kbd&gt; and Left Mouse 
+ &lt;/kbd&gt; and Left Mouse Button 
 
 &lt;img width="22px" src="images/lmb.svg" alt="Left Mouse Button" /&gt;
 
@@ -182,7 +182,7 @@
 
 &lt;img width="22px" src="images/mmb.svg" alt="Middle Mouse Button / Mouse Wheel" /&gt;
 &lt;/td&gt;
- &lt;td&gt;Show Internal Network&lt;/td&gt;
+ &lt;td&gt;Show internal network&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td&gt;

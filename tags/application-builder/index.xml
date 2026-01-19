@@ -5,7 +5,7 @@
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Your macro module has been tested manually and/or automatically? Then you should create your first installable executable and deliver it to your customer(s) for final evaluation.&lt;/p&gt;
+&lt;p&gt;Your macro module has been tested manually and/or automatically? Then, you should create your first installable executable and deliver it to your customer(s) for final evaluation.&lt;/p&gt;
 
 &lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&gt;
  &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
@@ -26,17 +26,4 @@
  &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Licensing:"&gt;&lt;use xlink:href="#warning-fill"/&gt;&lt;/svg&gt;
  &lt;div&gt;
  &lt;b&gt;Licensing:&amp;nbsp;&lt;/b&gt;
- This step requires a valid &lt;strong&gt;MeVisLab ApplicationBuilder&lt;/strong&gt; license. It extends the &lt;strong&gt;MeVisLab SDK&lt;/strong&gt; so that you can generate an installer of your developed macro module.
-Free evaluation licenses of the &lt;strong&gt;MeVisLab ApplicationBuilder&lt;/strong&gt;, time-limited to 3 months, can be requested at &lt;a href="mailto://sales@mevislab.de"&gt;sales(at)mevislab.de&lt;/a&gt;.
- &lt;/div&gt;
-&lt;/div&gt;
-&lt;h2 id="steps-to-do"&gt;Steps to do&lt;/h2&gt;
-&lt;h3 id="install-tools-necessary-for-installer-generation"&gt;Install tools necessary for installer generation&lt;/h3&gt;
-&lt;p&gt;The MeVisLab Project Wizard for Standalone Applications &lt;i&gt;[
- 
- File
- &amp;rarr; 
- Run Project Wizard...
- &amp;rarr; 
- Standalone Application
-]&lt;/i&gt; provides a check for all necessary tools you need to install before generating an installer.&lt;/p&gt;</description></item></channel></rss>
+ &lt;p&gt;This step requires a valid &lt;strong&gt;MeVisLab ApplicationBuilder&lt;/strong&gt; license. It extends the &lt;strong&gt;MeVisLab SDK&lt;/strong&gt;, so that you can generate an installer of your developed macro module.&lt;/p&gt;</description></item></channel></rss>
