@@ -1,22 +1,23 @@
 ---
-title: "Chapter VIII: ThirdParty components"
+title: "Chapter VIII: Third-party Components"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
 weight: 850
-tags: ["Advanced", "Tutorial", "ThirdParty"]
+tags: ["Advanced", "Tutorial", "Third-party"]
 menu: 
   main:
     identifier: "thirdparty"
-    title: "Usage of ThirdParty software integrated into MeVisLab"
+    title: "Usage of Third-party Software Integrated into MeVisLab"
     weight: 850
     parent: "tutorials"
 ---
 
 # MeVisLab Tutorial Chapter VIII {#TutorialChapter8}
 
-## Using ThirdParty Software Integrated into MeVisLab {#TutorialThirdParty}
-MeVisLab is equipped with a lot of useful software right out of the box, like the Insight Segmentation and Registration Toolkit (ITK) or the Visualization Toolkit (VTK). This chapter works as a guide on how to use some of the third party components integrated in MeVisLab for your projects via Python scripting.
+## Using Third-party Software Integrated into MeVisLab {#TutorialThirdParty}
+MeVisLab is equipped with a lot of useful software right out of the box, like the Insight Segmentation and Registration Toolkit (ITK) or the Visualization Toolkit (VTK). This chapter works as a guide on how to use some of the third-party components integrated in MeVisLab for your projects via Python scripting.
+
 {{<alert class="info" caption="Additional Information">}}
 You will also find instructions to install and use any Python package (e.g., PyTorch) in MeVisLab using the `PythonPip` module. 
 {{</alert>}}
@@ -48,7 +49,7 @@ A list of supported formats can be found [here](https://assimp-docs.readthedocs.
 
 The tutorials available here shall provide examples on how to integrate AI into MeVisLab. You can also integrate other Python AI packages the same way.
 
-### matplotlib
+### Matplotlib
 [Matplotlib](https://matplotlib.org/) is a library for creating static, animated, and interactive visualizations in Python.
 
 * create publication quality plots

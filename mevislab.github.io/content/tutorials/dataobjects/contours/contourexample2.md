@@ -8,18 +8,18 @@ tags: ["Beginner", "Tutorial", "Data Objects", "2D", "Contours", "CSO", "Interpo
 menu: 
   main:
     identifier: "contourexample2"
-    title: "Creating Contours using Live Wire and linear Interpolation, grouping CSOs for different colors"
+    title: "Creating Contours Using Live Wire and Linear Interpolation, Grouping CSOs for Different Colors"
     weight: 670
     parent: "contours"
 ---
+
 # Contour Example 2: Creating Contours using Live Wire and Interpolation {#TutorialContoursExample2}
 
 {{< youtube "l2ih_maKfSw">}}
 
 ## Introduction
-
 In this example, we like to create CSOs using the **Live Wire
-Algorithm**, which allows semi-automatic CSO creation. The algorithm
+Algorithm**, which allows semiautomatic CSO creation. The algorithm
 uses edge detection to support the user creating CSOs.
 
 We also like to interpolate CSOs over slices. That means additional CSOs are
@@ -28,13 +28,14 @@ generated between manual segmentations based on a linear interpolation.
 As a last step, we will group together CSOs of the same anatomical unit.
 
 ## Steps to Do
+
 ### Develop Your Network and Create CSOs
 
 In order to do that, create the shown network. You can use the network
 from the previous example and exchange the `SoCSO`-Editor. In addition to
 that, load the example image *$(DemoDataPath)/Thorax1_CT.small.tif* .
-Now, create some CSOs on different, not consecutive slices. Afterwards,
-hover over the `CSOManager` and press the emerging plus-sign. This
+Now, create some CSOs on different, not consecutive slices. Afterward,
+hover over the `CSOManager` and press the emerging *plus* symbol. This
 displays the amount of existing CSOs.
 
 ![Data Objects Contours Example 2](images/tutorials/dataobjects/contours/DO2_02.png "Data Objects Contours Example 2")
@@ -84,7 +85,7 @@ As a last step, we need to disconnect the module `SoCSOVisualizationSettings`, a
 ![Interpolated CSOs](images/tutorials/dataobjects/contours/DO2_11.png "Interpolated CSOs")
 
 ## Summary
-* `SoCSOLiveWireEditor` can be used to create CSOs semi-automatically.
+* `SoCSOLiveWireEditor` can be used to create CSOs semiautomatically.
 * CSO interpolations can be created using `CSOSliceInterpolator`.
 * CSOs can be grouped together using the `CSOManager`.
 

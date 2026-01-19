@@ -12,18 +12,18 @@ menu:
     weight: 690
     parent: "contours"
 ---
+
 # Contour Example 6: Adding Labels to Contours {#TutorialContoursExample6}
 
 {{< youtube "-ACAoeK2Fm8">}}
 
 ## Introduction
-
 In this example, we are adding a label to a contour. The label provides information about measurements and about the contour itself. The label remains connected to the contour and can be moved via mouse interactions.
 
 ## Steps to Do
-### Develop Your Network
 
-Add a `LocalImage` and a `View2D` module to your workspace and connect them as shown below. Load the file *ProbandT1.dcm* from MeVisLab demo data. In order to create contours (CSOs), we need a `SoView2DCSOExtensibleEditor` module. It manages attached CSO editors, renderers and offers an optional default renderer for all types of CSOs.
+### Develop Your Network
+Add the modules `LocalImage` and `View2D` to your workspace and connect them as shown below. Load the file *ProbandT1.dcm* from MeVisLab demo data. In order to create contours (CSOs), we need a `SoView2DCSOExtensibleEditor` module. It manages attached CSO editors, renderers and offers an optional default renderer for all types of CSOs.
 
 The first CSO we want to create is a distance line. Add a `SoCSODistanceLineEditor` to the `SoView2DCSOExtensibleEditor`. It renders and interactively generates CSOs that consist of a single line segment. The line segment can be rendered as an arrow; it can be used to measure distances.
 
@@ -46,8 +46,8 @@ We now want to customize the details to be shown for each distance line. Open th
 Enter the following to the panel of the `CSOLabelRenderer` module:
 {{< highlight filename="CSOLabelRenderer" >}}
 ```Python
-labelString = f"Length: {cso.getLength()}"  
-labelName = f"Distance: {cso.getId()}"
+labelString = f"Length: {cso.getLength()} mm"
+labelName = f"ID: {cso.getId()}"
 deviceOffsetX = 0
 deviceOffsetY = 0
 ```
@@ -60,7 +60,7 @@ We are setting the *labelName* to a static text showing the type of the CSO and 
 You can also round the length by using:
 {{< highlight filename="CSOLabelRenderer" >}}
 ```Python
-labelString = f'Length: {cso.getLength():.2f} mm'
+labelString = f"Length: {cso.getLength():.2f} mm"
 ```
 {{</highlight>}}
 
@@ -72,7 +72,7 @@ For labels shown on grayscale images, it makes sense to add a shadow. Open the p
 
 {{< imagegallery 2 "images/tutorials/dataobjects/contours/" "Ex6_NoShadow" "Ex6_Shadow" >}}
 
-If you want to define your static text as a parameter in multiple labels, you can open the panel of the `CSOLabelRenderer` module and define text as User Data. The values can then be used in Python via *userData*.
+If you want to define your static text as a parameter in multiple labels, you can open the panel of the `CSOLabelRenderer` module and define text as *User Data*. The values can then be used in Python via *userData*.
 
 ![User Data](images/tutorials/dataobjects/contours/Ex6_Parameters.png "User Data")
 
@@ -84,13 +84,13 @@ We currently defined the *labelName* and *labelString* for the distance line. If
 
 {{< highlight filename="CSOLabelRenderer" >}}
 ```Python
-if cso.getSubType() == 'distanceLine':
-  labelString =  f'{userData0} {cso.getLength():.2f} mm'
+if cso.getSubType() == "distanceLine":
+  labelString =  f"{userData0} {cso.getLength():.2f} mm"
   labelName = userData1
   labelName += str(cso.getId())
-elif cso.getSubType() == 'rectangle':
-  labelString = f'{userData0} {cso.getLength():.2f} mm\n'
-  labelString += f'{userData2} {cso.getArea():.2f} mm^2'
+elif cso.getSubType() == "rectangle":
+  labelString = f"{userData0} {cso.getLength():.2f} mm\n"
+  labelString += f"{userData2} {cso.getArea():.2f} mm^2"
   labelName = userData3
   labelName += str(cso.getId())
 deviceOffsetX = 0

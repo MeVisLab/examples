@@ -8,28 +8,30 @@ tags: ["Advanced", "Tutorial", "Prototyping", "Automated Tests", "Python"]
 menu: 
   main:
     identifier: "summaryexample4"
-    title: "Test your macro module in MeVisLab. Your requirements are translated into test cases written in Python."
+    title: "Automated Tests"
     weight: 820
     parent: "summary"
 ---
+
 # Step 4: Review - Automated Tests
 
 {{< youtube "_wheDC8TBJQ" >}}
 
 ## Introduction
-In the previous chapters you developed a macro module with User Interface and Python scripting. In this step you will see how to implement an automated test to verify and validate the Requirements defined in [Overview](tutorials/summary).
+In the previous chapters you developed a macro module with a user interface and Python scripting. In this step you will see how to implement an automated test to verify and validate the requirements defined in [Overview](tutorials/summary).
 
-## Steps to do
-### Create a test network using your macro module
-Create a new and empty network and save it as \*.mlab file. Remember the location.
+## Steps to Do
 
-Use Module Search and add your macro module developed in previous steps to your Workspace.
+### Create a Test Network Using Your Macro Module
+Create a new and empty network and save it as *.mlab* file. Remember the location.
+
+Use *Module Search* and add your macro module developed in previous steps to your workspace.
 
 ![Macro module](images/tutorials/summary/Example4_1.png "Macro module")
 
-You can see that the module does not have any inputs or outputs. You cannot connect it to other modules. For testing purposes it makes sense to provide the viewers and images as outputs so that you can use them for generating screenshots.
+You can see that the module does not have any inputs or outputs. You cannot connect it to other modules. For testing purposes it makes sense to provide the viewers and images as outputs, so that you can use them for generating screenshots.
 
-Open the \*.script file in MATE as already explained in [Step 3](tutorials/summary/summary3). In the *Outputs* section, add the following:
+Open the *.script* file in MATE as already explained in [Step 3](tutorials/summary/summary3). In the *Outputs* section, add the following:
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -51,8 +53,8 @@ You can now add a viewer or any other module to your macro module and use them f
 
 ![Test Network](images/tutorials/summary/Example4_3.png "Test Network")
 
-### Create test case
-Open MeVisLab TestCaseManager via {{< menuitem "File" "Run TestCaseManager..." >}}. On tab *Test Creation* define a name of your test case, for example *TutorialSummaryTest*. Select Type as *Macros*, define the package and use the same as for your macro module, select *Import Network* and Select your saved \*.mlab file from the step above. Click *Create*.
+### Create Test Case
+Open MeVisLab TestCaseManager via {{< menuitem "File" "Run TestCaseManager..." >}}. On the tab *Test Creation*, define a name of your test case, for example, *TutorialSummaryTest*. Select "Type" as *Macros*, define the package and use the same as for your macro module, select *Import Network*, and select your saved *.mlab* file from the step above. Click *Create*.
 
 ![Test Creation](images/tutorials/summary/Example4_4.png "Test Creation")
 
@@ -60,7 +62,8 @@ MATE automatically opens the Python file of your test case and it appears in MeV
 
 ![Test Creation](images/tutorials/summary/Example4_5.png "Test Creation")
 
-### Write test functions in Python
+### Write Test Functions in Python
+
 #### Preparations
 Before writing a test case, we need some helper functions in Python, which we will use in our test cases. The first thing we need is a function to load images.
 
@@ -85,7 +88,7 @@ We define the path to a file to be loaded. The function *loadImage* sets the *op
 
 The arrays for the marker location and color will be used later.
 
-Next we need a function to check if the loaded image available at the first output of our macro module (*out2D*) is valid.
+Next, we need a function to check if the loaded image available at the first output of our macro module (*out2D*) is valid.
 
 {{< highlight filename="<TEST_CASE_NAME>.py" >}}
 ```Python
@@ -119,7 +122,7 @@ def setMarkerPosition(vector):
 ```
 {{</highlight>}}
 
-The *setMarkerPosition* function gets a 3-dimensional vector and sets the *markerPosition* field of our module. Then the *applyMarker* trigger is touched. As the region growing algorithm might need some time to segment, we need to wait until the *outSegmentationMask* output field is valid, meaning that there is a valid segmentation mask at the segmentation mask output of our macro module.
+The *setMarkerPosition* function gets a three-dimensional vector and sets the *markerPosition* field of our module. Then, the *applyMarker* trigger is touched. As the region growing algorithm might need some time to segment, we need to wait until the *outSegmentationMask* output field is valid, meaning that there is a valid segmentation mask at the segmentation mask output of our macro module.
 
 Finally, we need to reset the application to its initial state, so that each test case has the initial start conditions of the application. A test case should never depend on another test case so that they all can be executed exclusively.
 
@@ -156,9 +159,10 @@ def TEST_LoadDICOMData():
 ```
 {{</highlight>}}
 
-#### Requirement 4: The 2D viewer shall provide the possibility to segment parts of the image based on a RegionGrowing algorithm
-##### Requirement 4.1: It shall be possible to click into the image for defining a marker position for starting the RegionGrowing
-This test case shall make sure the `RegionGrowing` module calculates the total volume and number of voxels to be larger than 0 in case a marker has been set. Without loading an image or after resetting the application, the values shall be 0.
+#### Requirement 4: The 2D viewer shall provide the possibility to segment parts of the image based on a region growing algorithm
+
+##### Requirement 4.1: It shall be possible to click into the image for defining a marker position for starting the region growing algorithm
+This test case shall make sure the `RegionGrowing` module calculates the total volume and number of voxels to be larger than 0 in the case a marker has been set. Without loading an image or after resetting the application, the values shall be 0.
 
 {{< highlight filename="<TEST_CASE_NAME>.py" >}}
 ```Python
@@ -189,7 +193,7 @@ def TEST_RegionGrowing():
 ```
 {{</highlight>}}
 
-##### Requirement 4.2: It shall be possible to define a threshold for the RegionGrowing algorithm
+##### Requirement 4.2: It shall be possible to define a threshold for the region growing algorithm
 For the threshold of the region growing it makes sense to extend the previous test case instead of writing a new one. We already have a segmentation based on the default threshold value and can just change the threshold and compare the resulting volumes.
 
 Increasing the threshold shall result in larger volumes, decreasing shall result in smaller values.
@@ -237,9 +241,10 @@ def TEST_RegionGrowing():
 ```
 {{</highlight>}}
 
-#### Requirement 5: The 2D viewer shall display the segmentation results as a semi-transparent overlay
+#### Requirement 5: The 2D viewer shall display the segmentation results as a semitransparent overlay
+
 ##### Requirement 5.1: It shall be possible to define the color of the overlay
-The requirement 5 can not be tested automatically. Transparencies should be tested by a human being.
+The requirement 5 cannot be tested automatically. Transparencies should be tested by a human being.
 
 Nevertheless, we can write an automated test checking the possibility to define the color of the overlay and the 3D segmentation.
 
@@ -270,19 +275,19 @@ def TEST_OverlayColor():
 ```
 {{</highlight>}}
 
-Again, we reset the application to an initial state, load the image and set a marker. We remember the initial color and set a new color for our macro module. Then we check if the new color differs from the old color and if the colors used by the internal modules `SoWEMRendererSegmentation` and `SoView2DOverlay` changed to our new color.
+Again, we reset the application to an initial state, load the image, and set a marker. We remember the initial color and set a new color for our macro module. Then, we check if the new color differs from the old color and if the colors used by the internal modules `SoWEMRendererSegmentation` and `SoView2DOverlay` changed to our new color.
 
-Finally an image comparison is done for the 3D rendering using the old and the new color. The images shall differ.
+Finally, an image comparison is done for the 3D rendering using the old and the new color. The images shall differ.
 
-The call *MLAB.processInventorQueue()* is sometimes necessary if an inventor scene changed via Python scripting, because the viewers might not update immediately after changing the field. MeVisLab is now forced to process the queue in inventor and to update the renderings.
+The call *MLAB.processInventorQueue()* is sometimes necessary if an Open Inventor scene changed via Python scripting, because the viewers might not update immediately after changing the field. MeVisLab is now forced to process the queue in Open Inventor and to update the renderings.
 
-#### Requirement 8: The total volume of the segmented area shall be calculated and shown (in ml)
+#### Requirement 8: The total volume of the segmented volume shall be calculated and shown (in ml)
 For the correctness of the volume calculation, we added the `CalculateVolume` module to our test network. The volume given by our macro is compared to the volume of the segmentation from output *outSegmentationMask* calculated by the `CalculateVolume` module.
 
 {{< highlight filename="<TEST_CASE_NAME>.py" >}}
 ```Python
 ...
-# Requirement 8: The total volume of the segmented area shall be calculated and shown (in ml)
+# Requirement 8: The total volume of the segmented volume shall be calculated and shown (in ml)
 def TEST_VolumeCalculation():
   # Reset and expect all volumes and number of voxels to be 0
   reset()
@@ -310,10 +315,13 @@ def TEST_VolumeCalculation():
 {{</highlight>}}
 
 #### Requirement 9: It shall be possible to toggle the visible 3D objects
+
 ##### Requirement 9.1: Original data
+
 ##### Requirement 9.2: Segmentation results
+
 ##### Requirement 9.3: All
-In the end, we want to develop a testcase for the 3D toggling of the view. We can not exactly test if the rendering is correct, therefore we will check if the 3D rendering image changes when toggling the 3D view. We will use the modules `OffscreenRenderer`, `ImageCompare` and `SoCameraInteraction` which we added to our test network.
+In the end, we want to develop a testcase for the 3D toggling of the view. We cannot exactly test if the rendering is correct; therefore, we will check if the 3D rendering image changes when toggling the 3D view. We will use the modules `OffscreenRenderer`, `ImageCompare`, and `SoCameraInteraction`, which we added to our test network.
 
 Initially, without any marker and segmentation, the views *Both* and *Head* show the same result. After adding a marker, we are going to test if different views result in different images.
 
@@ -365,24 +373,24 @@ def TEST_Toggle3DVolumes():
 ```
 {{</highlight>}}
 
-### Sorting order in TestCaseManager
+### Sorting Order in TestCaseManager
 The MeVisLab TestCaseManager sorts your test cases alphabetically. Your test cases should look like this now:
 
 ![TestCaseManager Sorting](images/tutorials/summary/Example4_6.png "TestCaseManager Sorting")
 
-Generally, test cases should not depend on each other and the order of their execution does not matter. Sometimes it makes sense though to execute tests in a certain order, for example for performance reasons. In this case you can add numeric prefixes to your test cases. This might look like this then:
+Generally, test cases should not depend on each other and the order of their execution should not matter. Sometimes it makes sense though to execute tests in a certain order, for example, for performance reasons. In this case, you can add numeric prefixes to your test cases. This might look like this then:
 
 ![TestCaseManager Custom Sorting](images/tutorials/summary/Example4_7.png "TestCaseManager Custom Sorting")
 
-### Not testable requirements
-As already mentioned, some requirements can not be tested in an automated environment. Human eyesight cannot be replaced completely.
+### Not Testable Requirements
+As already mentioned, some requirements cannot be tested in an automated environment. Human inspection cannot be replaced completely.
 
 In our application, the following tests have not been tested automatically:
-* Requirement 2: The application shall provide a 2D and a 3D viewer.
+* Requirement 2: The application shall provide a 2D and a 3D viewer
 * Requirement 3: The 2D viewer shall display the loaded images
-* Requirement 5: The 2D viewer shall display the segmentation results as a semi-transparent overlay
-* Requirement 6: The 3D viewer shall visualize the loaded data in a 3-dimensional volume rendering
-* Requirement 7: The 3D viewer shall additionally show the segmentation result as a 3-dimensional mesh
+* Requirement 5: The 2D viewer shall display the segmentation results as a semitransparent overlay
+* Requirement 6: The 3D viewer shall visualize the loaded data in a three-dimensional volume rendering
+* Requirement 7: The 3D viewer shall additionally show the segmentation result as a three-dimensional mesh
 
 ### Test Reports
 The results of your tests are shown in a Report Viewer. You can also export the results to JUnit for usage in build environments like [Jenkins](https://www.jenkins.io/).
@@ -390,7 +398,7 @@ The results of your tests are shown in a Report Viewer. You can also export the 
 ![ReportViewer](images/tutorials/summary/Example4_8.png "ReportViewer")
 
 ### Screenshots
-You can also add screenshots of your inventor scene to the report. Add the following to your Python script wherever you want to capture the content of the `SoCameraInteraction` module and a Snapshot of your 3D scene is attached to your test report:
+You can also add screenshots of your Open Inventor scene to the report. Add the following to your Python script wherever you want to capture the content of the `SoCameraInteraction` module and a snapshot of your 3D scene is attached to your test report:
 
 {{< highlight filename="<TEST_CASE_NAME>.py" >}}
 ```Python
@@ -403,9 +411,9 @@ Logging.showFile("Link to screenshot file", result)
 {{</highlight>}}
 
 ## Summary
-* Define accessible fields for macro modules so that they can be set in Python tests
-* Add outputs to your macro modules for automated testing and connecting testing modules
-* Testcase numbering allows you to sort them and define execution order
+* Define accessible fields for macro modules, so that they can be set in Python tests.
+* Add outputs to your macro modules for automated testing and connecting testing modules.
+* Testcase numbering allows you to sort them and define execution order.
 
 {{<alert class="info" caption="Info">}}
 Additional information about MeVisLab TestCenter can be found in {{< docuLinks "/Resources/Documentation/Publish/SDK/TestCenterManual/index.html" "TestCenter Manual" >}}

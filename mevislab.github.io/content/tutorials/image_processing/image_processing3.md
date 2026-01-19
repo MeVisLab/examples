@@ -8,7 +8,7 @@ tags: ["Beginner", "Tutorial", "Image Processing", "Segmentation", "Region Growi
 menu: 
   main:
     identifier: "imageprocessing3"
-    title: "In this example, you segment parts of an image by using a simple region growing."
+    title: "Segmentation With Region Growing"
     weight: 615
     parent: "imageprocessing"
 ---
@@ -23,6 +23,7 @@ A very simple approach to segment parts of an image is the region growing method
 In this example, you will segment the brain of an image and show the segmentation results as an overlay on the original image.
 
 ## Steps to Do
+
 ### Develop Your Network
 Add a `LocalImage` module to your workspace and select load *$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm*. Add a `View2D` module and connect both as seen below.
 
@@ -37,7 +38,7 @@ Add a `SoView2DMarkerEditor` to your network and connect it with your `RegionGro
 
 ![SoView2DMarkerEditor](images/tutorials/image_processing/SoView2DMarkerEditor.png "SoView2DMarkerEditor")
 
-The region growing starts on manually clicking *Update* or automatically if *Update Mode* is set to *Auto-Update*. We recommend to set update mode to automatic update. Additionally, you should set the *Neighborhood Relation* to *3D-6-Neighborhood (x,y,z)*, because then your segmentation will also affect the z-axis.
+The region growing starts on manually clicking *Update* or automatically if *Update Mode* is set to *Auto-Update*. We recommend to set update mode to automatic update. Additionally, you should set the *Neighborhood Relation* to *3D-6-Neighborhood (x,y,z)*, because then your segmentation will also be performed in the z-direction.
 
 Set *Threshold Computation* to *Automatic* and define *Interval Size* as 1.600 % for relative, automatic threshold generation.
 

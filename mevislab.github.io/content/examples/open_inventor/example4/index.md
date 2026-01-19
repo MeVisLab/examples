@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Camera interaction with collision detection"
+title: "Camera Interaction With Collision Detection"
 category: "open_inventor"
 ---
 
-# Open Inventor Example 4: Camera Interaction with Collision Detection
+# Open Inventor Example 4: Camera Interaction With Collision Detection
 This example shows how to implement a camera flight using keyboard shortcuts. Collisions with anatomical structures are detected and the flight stops. In addition to that, the camera object and direction is rendered in another viewer.
 
 This example has been taken from the [MeVisLab forum](https://forum.mevislab.de/index.php?topic=3947.0).

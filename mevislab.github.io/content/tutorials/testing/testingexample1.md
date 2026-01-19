@@ -1,5 +1,5 @@
 ---
-title: "Example 1: Writing a simple test case in MeVisLab"
+title: "Example 1: Writing a Simple Test Case in MeVisLab"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
@@ -8,26 +8,28 @@ tags: ["Beginner", "Tutorial", "Testing", "Python", "Automated Tests"]
 menu: 
   main:
     identifier: "testingexample1"
-    title: "Writing a simple test case for the module DicomImport in MeVisLab using Python and MeVisLab TestCenter."
+    title: "Writing a Simple Test Case for the Module DicomImport in MeVisLab Using Python and MeVisLab TestCenter"
     weight: 790
     parent: "testing"
 ---
-# Example 1: Writing a simple test case in MeVisLab
+
+# Example 1: Writing a Simple Test Case in MeVisLab
 
 {{< youtube "DqpVaKai_00" >}}
 
 ## Introduction
-In this example, you will learn how to write an automated test for a simple network using the `DicomImport`, `MinMaxScan` and `View3D` modules. Afterwards, you will be able to write test cases for any other module and network yourself.
+In this example you will learn how to write an automated test for a simple network using the `DicomImport`, `MinMaxScan`, and `View3D` modules. Afterward, you will be able to write test cases for any other module and network yourself.
 
-## Steps to do
-### Creating the network to be used for testing
+## Steps to Do
+
+### Creating the Network to be Used for Testing
 Add the following modules to your workspace and connect them as seen below: 
 
 ![Testcase network ](images/tutorials/testing/testNetwork1.png "Testcase network ")
 
 Save your network as *NetworkTestCase.mlab*.
 
-## Test creation
+## Test Creation
 Open the MeVisLab TestCaseManager via menu {{<menuitem "File" "Run TestCaseManager" >}}. The following window will appear.
 
 ![TestCaseManager window ](images/tutorials/testing/testCaseManagerWindow.png "TestCaseManager window ")
@@ -73,7 +75,7 @@ def TEST_DicomImport():
 
 The *filePath* variable defines the absolute path to the DICOM files that will be given to *source* field of the `DicomImport` module in the second step of the *OpenFiles* function. 
 
-The *OpenFiles* function first defines the `DicomImport` field *inputMode* to be a *Directory*. If you want to open single files, set this field's value to *Files*. Then the *source* field is set to your previously defined *filePath*. After clicking *triggerImport*, the `DicomImport` module needs some time to load all images in the directory and process the DICOM tree. We have to wait until the field *ready* is *TRUE*. While the import is not ready yet, we wait for 1 millisecond at a time and check again. *MLAB.processEvents()* lets MeVisLab continue execution while waiting for the `DicomImport` to be ready.
+The *OpenFiles* function first defines the `DicomImport` field *inputMode* to be a *Directory*. If you want to open single files, set this field's value to *Files*. Then, the *source* field is set to your previously defined *filePath*. After clicking *triggerImport*, the `DicomImport` module needs some time to load all images in the directory and process the DICOM tree. We have to wait until the field *ready* is *True*. While the import is not ready yet, we wait for 1 millisecond at a time and check again. *MLAB.processEvents()* lets MeVisLab continue execution while waiting for the `DicomImport` to be ready.
 
 When calling the function *TEST_DicomImport*, an expected value of *1.0* is defined. Then, the DICOM files are opened.
 
@@ -85,8 +87,7 @@ When *ready* is true, the test touches the *selectNextItem* trigger, so that the
 
 The value of our `DicomImport`s *progress* field is saved as the *currentValue* variable and compared to the *expectedValue* variable by calling *ASSERT_FLOAT_EQ(expectedValue,currentValue)* to determine if the DICOM import has finished (*currentValue* and *expectedValue* are equal) or not. 
 
-### Run your test case
-
+### Run Your Test Case
 Open the TestCase Manager und run your test by selecting your test case and clicking on the *Play* button in the bottom right corner.
 
 ![Run Test Case](images/tutorials/testing/runTestCase.png "Run Test Case")
@@ -96,7 +97,7 @@ After execution, the ReportViewer will open automatically displaying your test's
 ![ReportViewer](images/tutorials/testing/successTestCase.png "ReportViewer")
 
 
-### Writing a test for global macro modules
+### Writing a Test for Global Macro Modules
 Please observe that field access through Python scripting works differently for global macros. Instead of accessing a field directly by calling their respective module, the module itself needs to be accessed as part of the global macro first.
 
 {{< highlight filename="NetworkTestCase.py" >}}
@@ -109,7 +110,7 @@ Please observe that field access through Python scripting works differently for 
 ```
 {{</highlight>}}
 
-*Imagine unpeeled nuts in a bag as a concept - the field as a nut, their module as their nutshell and the bag as the global macro.* 
+*Imagine unpeeled nuts in a bag as a concept - the field as a nut, their module as their nutshell, and the bag as the global macro.* 
 
 {{<alert class="info" caption="Info">}}
 [Example 2.2: Global macro modules](tutorials/basicmechanisms/macromodules/globalmacromodules/) provides additional info on global macro modules and their creation.
@@ -117,9 +118,9 @@ Please observe that field access through Python scripting works differently for 
 
 ## Exercise
 Create a global macro module and implement the following test objectives for both (network and macro module): 
-* Check, if the file exists.
-* Check, if the max value of file is greater than zero.
-* Check, if the `View3D`-Input and `DicomImport`-output have the same data.
+* Check if the file exists.
+* Check if the max value of file is greater than zero.
+* Check if the `View3D` input and `DicomImport` output have the same data.
 
 ## Summary
 * MeVisLab provides a TestCenter for writing automated tests in Python.

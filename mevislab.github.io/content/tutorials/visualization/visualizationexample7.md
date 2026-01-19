@@ -1,5 +1,5 @@
 ---
-title: "Example 7: Add 3D viewer to OrthoView2D"
+title: "Example 7: Add 3D Viewer to OrthoView2D"
 date: 2023-11-21
 status: "OK"
 draft: false
@@ -8,19 +8,21 @@ tags: ["Beginner", "Tutorial", "Visualization", "3D", "OrthoView2D"]
 menu: 
   main:
     identifier: "visualization_example7"
-    title: "Add 3D viewer to OrthoView2D."
+    title: "Add 3D Viewer to OrthoView2D"
     weight: 590
     parent: "visualization"
 ---
-# Example 7: Add 3D viewer to OrthoView2D {#TutorialVisualizationExample7}
+
+# Example 7: Add 3D Viewer to OrthoView2D {#TutorialVisualizationExample7}
 
 {{< youtube "vRtFcaPBAko" >}}
 
 ## Introduction
 In this example we will use the `OrthoView2D` module and add a 3D viewer to the layout *Cube*.
 
-## Steps to do
-### Develop your network
+## Steps to Do
+
+### Develop Your Network
 Add the modules `LocalImage` and `OrthoView2D` to your workspace and connect them.
 
 ![Network](images/tutorials/image_processing/network_example7.png "Network")
@@ -29,7 +31,7 @@ The `OrthoView2D` module allows you to select multiple layouts. Select layout *C
 
 ![OrthoView2D Layouts](images/tutorials/image_processing/network_example7_2.png "OrthoView2D Layouts")
 
-We now want to use a 3D rendering in the top left segment, whenever the layout *Cube Equal* is chosen. Add a `View3D` and a `SoViewportRegion` module to your workspace. Connect the `LocalImage` with your `View3D`. The image is rendered in 3D. Hit {{< keyboard "SPACE" >}} on your keyboard to make the hidden output of the `View3D` module visible. Connect it with your `SoViewportRegion` and connect the `SoViewportRegion` with the *inInvPreLUT* input of the `OrthoView2D`.
+We now want to use a 3D rendering in the top left segment whenever the layout *Cube Equal* is chosen. Add a `View3D` and a `SoViewportRegion` module to your workspace. Connect the `LocalImage` with your `View3D`. The image is rendered in 3D. Hit {{< keyboard "SPACE" >}} on your keyboard to make the hidden output of the `View3D` module visible. Connect it with your `SoViewportRegion` and connect the `SoViewportRegion` with the *inInvPreLUT* input of the `OrthoView2D`.
 
 ![Network with SoViewportRegion](images/tutorials/image_processing/network_example7_3.png "Network with SoViewportRegion")
 
@@ -41,7 +43,7 @@ You can see your `View3D` being visible in the bottom right segment of the layou
 
 ![Define viewport region](images/tutorials/image_processing/network_example7_5.png "Define viewport region")
 
-The `View3D` image is now rendered to the top left segment of the `OrthoView2D`, because the module `SoViewportRegion` renders a sub graph into a specified viewport region (VPR). The problem is: We cannot rotate and pan the 3D object, because there is no camera interaction available after adding the `SoViewportRegion`. The camera interaction is consumed by the `View3D` module before it can be used by the viewport.
+The `View3D` image is now rendered to the top left segment of the `OrthoView2D`, because the module `SoViewportRegion` renders a subgraph into a specified viewport region (VPR). The problem is: We cannot rotate and pan the 3D object, because there is no camera interaction available after adding the `SoViewportRegion`. The camera interaction is consumed by the `View3D` module before it can be used by the viewport.
 
 Add a `SoCameraInteraction` module between the `View3D` and the `SoViewportRegion`. You can now interact with your 3D scene but the rotation is not executed on the center of the object. Trigger *ViewAll* on your `SoCameraInteraction` module.
 
@@ -58,6 +60,6 @@ If the selected layout in `OrthoView2D` now matches the string *LAYOUT_CUBE_EQUA
 ![Final Network](images/tutorials/image_processing/network_example7_8.png "Final Network")
 
 ## Summary
-* The module `SoViewportRegion` renders a sub graph into a specified viewport region (VPR)
+* The module `SoViewportRegion` renders a subgraph into a specified viewport region (VPR).
 
 {{< networkfile "examples/visualization/example5/VisualizationExample7.mlab" >}}

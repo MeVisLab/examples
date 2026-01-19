@@ -1,5 +1,5 @@
 ---
-title: "Example 4: Subtract 3D objects"
+title: "Example 4: Subtracting 3D Surface Objects"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
@@ -8,12 +8,12 @@ tags: ["Advanced", "Tutorial", "Image Processing", "3D", "Subtraction"]
 menu: 
   main:
     identifier: "imageprocessing4"
-    title: "In this example, we create two 3-dimensional and subtract them."
+    title: "Subtracting 3D Surface Objects"
     weight: 620
     parent: "imageprocessing"
 ---
 
-# Example 4: Subtract 3D Objects
+# Example 4: Subtracting 3D Objects
 
 {{< youtube "VdvErVvoq2k" >}}
 
@@ -21,6 +21,7 @@ menu:
 In this example, we load an image and render it as `WEMIsoSurface`. Then, we create a three-dimensional `SoSphere` and subtract the sphere from the initial WEM.
 
 ## Steps to Do
+
 ### Develop Your Network
 Add a `LocalImage` module to your workspace and select load *$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm*. Add a `WEMIsoSurface`, a `SoWEMRenderer`, a `SoBackground`, and a `SoExaminerViewer` module and connect them as seen below. Make sure to configure the `WEMIsoSurface` to use a *Iso Min. Value* of 420 and a *Voxel Sampling* 1.
 
@@ -30,7 +31,7 @@ The `SoExaminerViewer` now shows the head as a three-dimensional rendering.
 
 ![SoExaminerViewer](images/tutorials/image_processing/SoExaminerViewer_initial.png "SoExaminerViewer")
 
-### Add a 3D Sphere to your Scene
+### Add a 3D Sphere to Your Scene
 We now want to add a three-dimensional sphere to our scene. Add a `SoMaterial` and a `SoSphere` to your network, connect them to a `SoSeparator` and then to the `SoExaminerViewer`. Set your material to use a *Diffuse Color* red and adapt the size of the sphere to *Radius* 50.
 
 ![Example Network](images/tutorials/image_processing/network_example4b.png "Example Network")
@@ -39,12 +40,12 @@ The `SoExaminerViewer` now shows the head and the red sphere inside.
 
 ![SoExaminerViewer](images/tutorials/image_processing/SoExaminerViewer_sphere.png "SoExaminerViewer")
 
-### Set Location of your Sphere
+### Set Location of Your Sphere
 In order to define the best possible location of the sphere, we additionally add a `SoTranslation` module and connect it to the `SoSeparator` between the material and the sphere. Define a translation of x=0, y=20 and z=80.
 
 ![Example Network](images/tutorials/image_processing/network_example4c.png "Example Network")
 
-### Subtract the Sphere from the Head
+### Subtract the Sphere From the Head
 We now want to subtract the sphere from the head to get a hole. Add another `SoWEMRenderer`, a `WEMLevelSetBoolean`, and a `SoWEMConvertInventor` to the network and connect them to a `SoSwitch` as seen below. The `SoSwitch` also needs to be connected to the `SoWEMRenderer` of the head. Set your `WEMLevelSetBoolean` to use the *Mode* **Difference**.
 
 ![Example Network](images/tutorials/image_processing/network_example4d.png "Example Network")

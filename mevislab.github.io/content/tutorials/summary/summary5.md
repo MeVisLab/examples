@@ -8,25 +8,28 @@ tags: ["Advanced", "Tutorial", "Prototyping", "Application Builder", "Installer"
 menu: 
   main:
     identifier: "summaryexample5"
-    title: "Create a standalone application by using the MeVisLab ApplicationBuilder and install the application on another system."
+    title: "Installer creation"
     weight: 825
     parent: "summary"
 ---
+
 # Step 5: Review - Installer creation
 
 {{< youtube "64l3igSmeWY" >}}
 
 ## Introduction
-Your macro module has been tested manually and/or automatically? Then you should create your first installable executable and deliver it to your customer(s) for final evaluation.
+Your macro module has been tested manually and/or automatically? Then, you should create your first installable executable and deliver it to your customer(s) for final evaluation.
 
 {{<alert class="warning" caption="Licensing">}}
-This step requires a valid **MeVisLab ApplicationBuilder** license. It extends the **MeVisLab SDK** so that you can generate an installer of your developed macro module.
-Free evaluation licenses of the **MeVisLab ApplicationBuilder**, time-limited to 3 months, can be requested at [sales(at)mevislab.de](mailto://sales@mevislab.de).
+This step requires a valid **MeVisLab ApplicationBuilder** license. It extends the **MeVisLab SDK**, so that you can generate an installer of your developed macro module.
+
+Free evaluation licenses of the **MeVisLab ApplicationBuilder**, time-limited to three months, can be requested at [sales(at)mevislab.de](mailto://sales@mevislab.de).
 {{</alert>}}
 
-## Steps to do
-### Install tools necessary for installer generation
-The MeVisLab Project Wizard for Standalone Applications {{<menuitem "File" "Run Project Wizard..." "Standalone Application" >}} provides a check for all necessary tools you need to install before generating an installer.
+## Steps to Do
+
+### Install Tools Necessary for Installer Generation
+The MeVisLab Project Wizard for standalone applications {{<menuitem "File" "Run Project Wizard..." "Standalone Application" >}} provides a check for all necessary tools you need to install before generating an installer.
 
 ![MeVisLab Project Wizard](images/tutorials/summary/Example5_1.png "MeVisLab Project Wizard")
 
@@ -36,24 +39,24 @@ Click on *Check if required tools are installed*. The following dialog opens:
 
 You can see that [NSIS](https://nsis.sourceforge.io/Download) and either [Dependency Walker](http://www.dependencywalker.com/) or [Dependencies](https://github.com/lucasg/Dependencies) are necessary to create an installable executable. MeVisLab provides information about the necessary version(s).
 
-Download and install/extract *NSIS* and *Dependency Walker* or *Dependencies*. Add both executables to your *PATH* environment variable, for example *C:\Program Files\depends* and *C:\Program Files (x86)\NSIS*.
+Download and install/extract *NSIS* and *Dependency Walker* or *Dependencies*. Add both executables to your *PATH* environment variable, for example, *C:\Program Files\depends* and *C:\Program Files (x86)\NSIS*.
 
 Restart MeVisLab and open Project Wizard again. All required tools should now be available.
 
-### Use MeVisLab Project Wizard to generate the installer
+### Use MeVisLab Project Wizard to Generate the Installer
 Select your macro module and the package and click *Next*.
 
 ![Welcome](images/tutorials/summary/Example5_3.png "Welcome")
 
-The general settings dialog allows you to define a name for your application. You can also define a version, in our case we decide not to be finished and have a version *0.5*. You can include debug files and decide to build a desktop or web application. We want to build an *Application Installer* for a desktop system. You can decide to precompile your Python files and you have to select your MeVisLab **MeVisLab ApplicationBuilder** license.
+The general settings dialog allows you to define a name for your application. You can also define a version, in our case, we decide not to be finished and have a version *0.5*. You can include debug files and decide to build a desktop or web application. We want to build an *Application Installer* for a desktop system. You can decide to precompile your Python files and you have to select your MeVisLab **MeVisLab ApplicationBuilder** license.
 
 ![General Settings](images/tutorials/summary/Example5_4.png "General Settings")
 
-Define your license text which is shown during installation of your executable. You can decide to use our pre-defined text, select a custom file or do not include any license text.
+Define your license text that is shown during installation of your executable. You can decide to use our predefined text, select a custom file, or do not include any license text.
 
 ![License Text](images/tutorials/summary/Example5_5.png "License Text")
 
-The next dialog can be skipped for now, you can include additional files into your installer which are not automatically added by MeVisLab from the dependency analysis.
+The next dialog can be skipped for now, you can include additional files into your installer that are not automatically added by MeVisLab from the dependency analysis.
 
 ![Manual File Lists](images/tutorials/summary/Example5_6.png "Manual File Lists")
 
@@ -70,26 +73,30 @@ The MeVisLab ToolRunner starts generating your installer. After finishing instal
 ![MeVisLab ToolRunner](images/tutorials/summary/Example5_9.png "MeVisLab ToolRunner")
 
 The directory contains the following files (and some more maybe):
-* Batch (\*.bat) file
-* Installer (\*.exe) file
-* MeVisLab Install (\*.mlinstall) file
-* Shell (\*.sh) script
-* ThirdParty list (\*.csv)
+* Batch (*.bat*) file
+* Installer (*.exe*) file
+* MeVisLab Install (*.mlinstall*) file
+* Shell (*.sh*) script
+* Third-party list (*.csv*)
 
-#### Batch file
+#### Batch File
 The batch file allows you to generate the executable again via a Windows batch file. You do not need the Project Wizard anymore now.
-#### Installer file
-The resulting installer file for your application is an executable
-#### MeVisLab Install file
-The \*.mlinstall file provides all information you just entered into the wizard. We will need this in [Step 7: Refine - Re-Build Installer](tutorials/summary/summary7/) again.
+
+#### Installer File
+The resulting installer file for your application is an executable.
+
+#### MeVisLab Install File
+The *.mlinstall* file provides all information you just entered into the wizard. We will need this in [Step 7: Refine - Rebuild Installer](tutorials/summary/summary7/) again.
 
 The file is initially generated by the Project Wizard. Having a valid file already, you can create new versions by using the MeVisLab ToolRunner.
-#### Shell skript
-The shell skript allows you to generate the executable again via a Unix shell like bash. You do not need the Project Wizard anymore now.
-#### ThirdParty file
-The third party file contains all third party software tools MeVisLab integrated into your installer from dependency analysis. The file contains the tool name, version, license and general information about the tool.
 
-### Install your executable
+#### Shell Skript
+The shell skript allows you to generate the executable again via a Unix shell like bash. You do not need the Project Wizard anymore now.
+
+#### Third-party File
+The third-party file contains all third-party software tools MeVisLab integrated into your installer from dependency analysis. The file contains the tool name, version, license, and general information about the tool.
+
+### Install Your Executable
 You can now execute the installer of your application.
 
 The installer initially shows a welcome screen showing the name and version of your application.
@@ -114,6 +121,7 @@ After the installer finished the setup, you will find a desktop icon and a start
 
 {{<alert class="warning" caption="Licensing">}}
 MeVisLab executables require an additional **MeVisLab Runtime** license. It makes sure that your resulting application needs to be licensed, too.
+
 Free evaluation licenses of the **MeVisLab ApplicationBuilder** and **MeVisLab Runtime** licenses for testing purposes can be requested at [sales(at)mevislab.de](mailto://sales@mevislab.de).
 {{</alert>}}
 
@@ -128,6 +136,6 @@ By default, your user interface uses a standard stylesheet for colors and appear
 {{</alert>}}
 
 ## Summary
-* The **MeVisLab ApplicationBuilder** allows you to create installable executables from your MeVisLab networks
-* The resulting application can be customized to your needs via Project Wizard
-* Your application will be licensed separately so that you can completely control the usage
+* The **MeVisLab ApplicationBuilder** allows you to create installable executables from your MeVisLab networks.
+* The resulting application can be customized to your needs via the Project Wizard.
+* Your application will be licensed separately, so that you can completely control the usage.

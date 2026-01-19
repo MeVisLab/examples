@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Panel for the contour filter"
+title: "Panel for the Contour Filter"
 category: "basic_mechanisms"
 ---
 
 # Example 1: Panel for the Contour Filter
-This example contains a whole package structure. Inside you can find the example contour filter for which a panel was created.
+This example contains an entire package structure. Inside, you can find the example contour filter for which a panel was created.
 
 ## Summary
 A new macro module `Filter` has been created. Initially, macro modules do not provide an own panel containing user interface elements such as buttons. The *Automatic Panel* is shown on double-clicking the module providing the name of the module.

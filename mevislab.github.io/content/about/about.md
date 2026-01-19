@@ -5,6 +5,7 @@ draft: false
 status: "OK"
 tags: ["Symbols", "Glossary", "Overview"]
 ---
+
 ## Symbols
 We embedded three symbols, referencing additional info, tasks, and warnings:
 {{<alert class="info" caption="Info">}}

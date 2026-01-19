@@ -8,26 +8,27 @@ tags: ["Beginner", "Tutorial", "Data Objects", "2D", "Contours", "CSO"]
 menu: 
   main:
     identifier: "contourexample5"
-    title: "Visualizing Contours on currently visible and neighboring slices (ghosting)"
+    title: "Visualizing Contours on Currently Visible and Neighboring Slices (Ghosting)"
     weight: 685
     parent: "contours"
 ---
+
 # Contour Example 5: Visualizing Contours and Images {#TutorialContoursExample5}
 
 {{< youtube "6fHmy57P3yQ">}}
 
 ## Introduction
-
 In this example, we like to automatically create CSOs based on a predefined isovalue. 
 
 ## Steps to Do
+
 ### Develop Your Network
 Add the following modules to your workspace and connect them as shown.
 Load the example image *Bone.tiff*.
 
 ### Automatic Creation of CSOs Based on the Isovalue
 Now, open the panel of `CSOIsoGenerator` to set the *Iso Value* to 1200. If you press *Update* in
-the panel, you can see the creation of CSOs on every slide when opening
+the panel, you can see the creation of CSOs on each image slice when opening
 the module `View2D`. In addition to that, the number of CSOs is displayed in the `CSOManager`. The module
 `CSOIsoGenerator` generates isocontours for each slice at a fixed isovalue. This means that closed CSOs are formed based on the detection of the
 voxel value of 1200 on every slice.
@@ -35,7 +36,7 @@ voxel value of 1200 on every slice.
 ![Data Objects Contours Example 5](images/tutorials/dataobjects/contours/DO5_02.png "Data Objects Contours Example 5")
 
 ### Ghosting
-Now, we like to make CSOs of previous and subsequent slices visible (Ghosting). In
+Now, we like to make CSOs of previous and subsequent slices visible (ghosting). In
 order to do that, open the panel of `SoCSOVisualizationSettings` and
 open the tab *Misc*. Increase the parameter `Ghosting depth in voxel`,
 which shows you the number of slices above and below the current slice in
@@ -47,7 +48,7 @@ viewer.
 ### Display Created CSOs
 At last, we like to make all CSOs visible in a 3D viewer. To do that,
 add the modules `SoCSO3DRenderer` and `SoExaminerViewer` to your network
-and connect them as shown. In the viewer `SoExaminerViewer` you can see
+and connect them as shown. In the viewer `SoExaminerViewer`, you can see
 all CSOs together. In this case all scanned bones can be seen.
 
 ![CSOs in 3D View](images/tutorials/dataobjects/contours/DO5_05.png "CSOs in 3D View")

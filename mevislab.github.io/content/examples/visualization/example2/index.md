@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Creating a magnifier"
+title: "Creating a Magnifier"
 category: "visualization"
 ---
 

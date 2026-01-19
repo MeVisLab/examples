@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2D and 3D visualization of contours"
+title: "2D and 3D Visualization of Contours"
 category: "data_objects"
 ---
 

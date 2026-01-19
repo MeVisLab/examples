@@ -20,7 +20,7 @@ This tutorial explains how to load and visualize DICOM RT (Radiotherapy) data in
 * Load CT and related RTSTRUCT data.
 * Visualize RTSTRUCTs as colored CSOs.
 * Show labels next to each RTSTRUCT contour.
-* Visualize RTDOSE as a semi-transparent colored overlay.
+* Visualize RTDOSE as a semitransparent colored overlay.
 
 *DICOM RT* files are essential in radiotherapy treatment planning.
 
@@ -31,7 +31,7 @@ They include:
 
 Additional objects not used in this tutorial are:
 * **RT Image**, specifying radiotherapy images that have been obtained on a conical imaging geometry, such as those found on conventional simulators and portal imaging devices. It can also be used for calculated images using the same geometry, such as digitally reconstructed radiographs (DRRs).
-* **RT Beams Treatment Record**, **RT Brachy Treatment Record**, and **RT Treatment Summary Record**, containing data obtained from actual radiotherapy treatments. These objects are the historical record of treatment, and are linked with the other „planning” objects to form a complete picture of the treatment.
+* **RT Beams Treatment Record**, **RT Brachy Treatment Record**, and **RT Treatment Summary Record**, containing data obtained from actual radiotherapy treatments. These objects are the historical record of the treatment, and are linked with the other „planning” objects to form a complete picture of the treatment.
 
 ## Precondition
 If you do not have DICOM RT data, you can download an example dataset at:
@@ -41,13 +41,12 @@ https://medicalaffairs.varian.com/headandneckbilat-imrtsx2
 This data is FOR EDUCATIONAL AND SCIENTIFIC EXCHANGE ONLY – NOT FOR SALES OR PROMOTIONAL USE.
 {{</alert>}}
 
-Extract the ZIP file into a new folder named *DICOM_FILES*.
+Extract the *.zip* file into a new folder named *DICOM_FILES*.
 
 ## Prepare Your Network
-
 Add the module `DicomImport` to your workspace. 
 
-Then click {{< mousebutton "left" >}} Browse and select the new folder named *DICOM_FILES* where you copied the content of the ZIP file earlier. Click Import {{< mousebutton "left" >}}. You can see the result after import below:
+Then, click {{< mousebutton "left" >}} *Browse* and select the new folder named *DICOM_FILES* where you copied the content of the ZIP file earlier. Click *Import* {{< mousebutton "left" >}}. You can see the result after import below:
 
 ![DICOM RT Data in DicomImport module](images/tutorials/image_processing/Example6_1.png "DICOM RT Data in DicomImport module")
 
@@ -72,7 +71,6 @@ You have to select the correct index for the *RTSTRUCT*. In our example it is in
 ![RTSTRUCT in DicomImportExtraOutput](images/tutorials/image_processing/Example6_2.png "RTSTRUCT in DicomImportExtraOutput")
 
 ### Visualize RTSTRUCTs as Colored CSOs
-
 Add an `ExtractRTStruct` module to the `DicomImportExtraOutput` to convert *RTSTRUCT* data into MeVisLab contours (CSOs). CSOs allow to visualize the contours on the CT scan and to interact with them in MeVisLab.
 
 A preview of the resulting CSOs can be seen in the *Output Inspector*.
@@ -97,7 +95,7 @@ labelString = cso.getGroupAt(0).getLabel()
 ```
 {{</highlight>}}
 
-Then press apply {{< mousebutton "left" >}}. The name of the structure is defined in the group of each CSO. We now show the label of the group next to the contour. Add a `CSOLabelPlacementGlobal` module to define a better readable location of these labels.
+Then, press apply {{< mousebutton "left" >}}. The name of the structure is defined in the group of each CSO. We now show the label of the group next to the contour. Add a `CSOLabelPlacementGlobal` module to define a better readable location of these labels.
 
 The module `CSOLabelPlacementGlobal` implements an automatic label placement strategy that considers all CSOs on a slice.
 
@@ -111,7 +109,7 @@ Add a `SoCSO3DRenderer` and a `SoExaminerViewer` module and connect them to the 
 ![CSOs in 3D](images/tutorials/image_processing/Example6_8.png "CSOs in 3D")
 
 ### Visualizing RTDOSE as a Colored Overlay
-We now want to show the *RTDOSE* data as provided for the patient as a semi-transparent, colored overlay.
+We now want to show the *RTDOSE* data as provided for the patient as a semitransparent, colored overlay.
 
 Add another `DicomImportExtraOutput` module to get the *RTDOSE* object. Again, select the correct index. In this case, we select index 4.
 
@@ -131,7 +129,7 @@ On tab *Editor*, define a lookup table as seen below.
 
 ![Lookup table](images/tutorials/image_processing/Example6_11.png "Lookup table")
 
-The lookup table shall be used for showing the RT Dose data as a semi-transparent overlay on the CT image. Add a `SoView2DOverlay` and a `SoGroup` module to your network. Replace the input of the View2D module from the `SoView2DCSOExtensibleEditor` with the `SoGroup`.
+The lookup table shall be used for showing the RT Dose data as a semitransparent overlay on the CT image. Add a `SoView2DOverlay` and a `SoGroup` module to your network. Replace the input of the View2D module from the `SoView2DCSOExtensibleEditor` with the `SoGroup`.
 
 ![RT Dose data using SoView2DOverlay](images/tutorials/image_processing/Example6_12.png "RT Dose data using SoView2DOverlay")
 
@@ -143,6 +141,6 @@ If you want to visualize the RT Struct contours together with the RT Dose overla
 * DICOM RT data can be loaded and processed in MeVisLab.
 * RT Structure Sets can be converted to MeVisLab contours and visualized using `ExtractRTStruct` and `CSOLabelRenderer` modules.
 * Anatomical information can be shown using the module `CSOLabelRenderer`.
-* RT Dose files can be shown as a semi-transparent colored overlay using `SoView2DOverlay`.
+* RT Dose files can be shown as a semitransparent colored overlay using `SoView2DOverlay`.
 
 {{< networkfile "/examples/image_processing/example6/DICOMRT.mlab" >}}

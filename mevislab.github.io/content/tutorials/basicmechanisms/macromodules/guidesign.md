@@ -1,5 +1,5 @@
 ---
-title: "Example 2.4: GUI development"
+title: "Example 2.4: GUI Development"
 date: 2022-06-15T08:58:44+02:00
 status: "OK"
 draft: false
@@ -8,17 +8,18 @@ tags: ["Beginner", "Tutorial", "Macro", "Macro modules", "Global Macro", "User I
 menu: 
   main:
     identifier: "gui_development"
-    title: "Custom User Interfaces for macro modules."
+    title: "Custom User Interfaces for Macro Modules"
     weight: 410
     parent: "macro_modules"
 ---
+
 # Example 2.4: Building a Panel Layout: Interactions with Macro Modules
 
 {{< youtube "tdQUkkROWBg">}}
 
 ## Introduction
 This chapter will give you an introduction into the creation of module panels and user
-interfaces. For the implementation you will need to
+interfaces. For the implementation, you will need to
 use the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html" "MeVisLab Definition Language (MDL)">}}.
 
 {{<alert class="info" caption="Extra Infos">}}
@@ -29,20 +30,21 @@ More information about GUI design in MeVisLab can be found {{< docuLinks "/Resou
 [//]: <> (MVL-651)
 
 ## Creating a Panel for the Macro Module Filter {#Example_Paneldesign}
-### Creation of a module panel
+
+### Creation of a Module Panel
 In [Example 2.2](tutorials/basicmechanisms/macromodules/globalmacromodules) we created the global macro module `Filter`. By now, this module does not have a proper panel. When double-clicking {{< mousebutton "left" >}} the module, the *Automatic Panel* is shown.
 
-The *Automatic Panel* contains fields, as well as module in and outputs. In this case, no fields exists except the *instanceName*. Accordingly, there is no possibility to interact with the module. Only the input and the output of the module are given.
+The *Automatic Panel* contains fields, as well as module inputs and outputs. In this case, no fields exists except the *instanceName*. Accordingly, there is no possibility to interact with the module. Only the input and the output of the module are given.
 
 ![Automatic Panel](images/tutorials/basicmechanics/GUI_10.png "Automatic Panel")
 
-To add and edit a panel, open the context menu and select {{< menuitem "Related Files" "Filter.script" >}}. The text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the file *Filter.script*, which you can edit to define a custom User Interface for the Module.
+To add and edit a panel, open the context menu and select {{< menuitem "Related Files" "Filter.script" >}}. The text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the file *Filter.script*, which you can edit to define a custom user interface for the module.
 
 ![Module script file](images/tutorials/basicmechanics/GUI_11.png "Module script file")
 
 ### Module Interface
-Per default, the *.script* file contains the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Interface" "interface" >}} of the module.
-In the interface section (everything insight the curled brackets behind the name *Interface*) you can define the module inputs, the module outputs, and also all module fields (or *Parameters*).
+By default, the *.script* file contains the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Interface" "interface" >}} of the module.
+In the interface section (everything inside the curled brackets behind the name *Interface*) you can define the module inputs, the module outputs, and also all module fields (or *Parameters*).
 
 [//]: <> (MVL-653)
 {{< highlight filename="Filter.script" >}}
@@ -63,28 +65,25 @@ Interface {
 {{</highlight>}}
 
 ##### Module Inputs and Outputs
-
-To create an input/output, you need to define a *Field* in the respective input/output environment. Each input/output gets a name (here *input0/output0*) that you can use to reference this field. The module input maps to an input of the internal network. You need to define this mapping. In this case, the input of the macro module `Filter` maps to the input of the module `Convolution` of the internal network (*internalName = Convolution.input0*). Similarly, you need to define which output of the internal network maps to the output of the macro module `Filter`. In this example, the output of the internal module `Arithmethic2` maps to the output of our macro module `Filter` (*internalName = Arithmetic2.output0*).
+To create an input/output, you need to define a *Field* in the respective input/output section. Each input/output gets a name (here *input0/output0*) that you can use to reference this field. The module input maps to an input of the internal network. You need to define this mapping. In this case, the input of the macro module `Filter` maps to the input of the module `Convolution` of the internal network (*internalName = Convolution.input0*). Similarly, you need to define which output of the internal network maps to the output of the macro module `Filter`. In this example, the output of the internal module `Arithmethic2` maps to the output of our macro module `Filter` (*internalName = Arithmetic2.output0*).
 
 Creating an input/output causes:
 1. Input/output connectors are added to the module.
 2. You can find placeholders for the input and output in the internal network (see image).
 3. Input/output fields are added to the automatic panel.
-4. A description of the input/output fields is automatically added to the module help file, when opening the *\*.mhelp* file after input/output creation. Helpfile creation is explained in [Example 2.3](tutorials/basicmechanisms/macromodules/helpfiles/).
+4. A description of the input/output fields is automatically added to the module help file, when opening the *.mhelp* file after input/output creation. Helpfile creation is explained in [Example 2.3](tutorials/basicmechanisms/macromodules/helpfiles/).
 
 ![Internal Network of your macro module](images/tutorials/basicmechanics/BM_23.png "Internal Network of your macro module")
 
 ##### Module Fields
-
-In the environment *Parameters* you can define *fields* of your macro module. These fields may map to existing fields of the internal network (*internalName = ...* ), but they do not need to and can also be completely new. You can reference these fields when creating a panel, to allow interactions with these fields. All fields appear in the *Automatic Panel*.
+In the *Parameters* section, you can define *fields* of your macro module. These fields may map to existing fields of the internal network (*internalName = ...* ), but they do not need to and can also be completely new. You can reference these fields when creating a panel, to allow interactions with these fields. All fields appear in the *Automatic Panel*.
 
 ### Module Panel Layout
-
-To create your own User Interface, we need to create a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Window" "Window" >}}. A window is one of the layout elements that exist in MDL. These layout elements are called {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#Controls" "controls" >}}. The curled brackets define the window environment, in which you can define properties of the window and insert further controls like a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Box" "Box" >}}.
+To create your own user interface, we need to create a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Window" "Window" >}}. A window is one of the layout elements that exist in MDL. These layout elements are called {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#Controls" "controls" >}}. The curled brackets define the window section, in which you can define properties of the window and insert further controls like a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Box" "Box" >}}.
 
 Initially, we call the window *MyWindowTitle*, which can be used to reference this window.
 
-Double-clicking {{< mousebutton "left" >}} on your module now opens your first self developed User Interface.
+Double-clicking {{< mousebutton "left" >}} on your module now opens your first self-developed user interface.
 
 [//]: <> (MVL-653)
 {{< highlight filename="Filter.script" >}}
@@ -117,17 +116,17 @@ Window MyWindowName {
 
 ![Module Panel](images/tutorials/basicmechanics/ModulePanel.png "Module Panel")
 
-You can define different properties of your control. For a window, you can for example define a title, or whether the
+You can define different properties of your control. For a window, you can, for example, define a title, or whether the
 window should be shown in full screen (*fullscreen = True*).
 
 These properties are called {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/#SyntaxTagsAndValues" "tags" >}} and are individually different for each control. Which tags exist for the control window can be found
 {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Window" "here" >}}.
-The control box has different tags. You can for example define a
+The control box has different tags. You can, for example, define a
 title for the box, but you can not define whether to present the box in
 full screen.
 
 If you like to add more than one control to your window,
-for example one box and one label, you can specify their design like in
+for example, one box and one label, you can specify their design like in
 the following examples:
 
 [//]: <> (MVL-653)
@@ -174,13 +173,12 @@ Window MyWindowName {
 ![Horizontal layout of Box and Text](images/tutorials/basicmechanics/HorizontalLayout.png "Horizontal layout of Box and Text")
 
 
-There are much more controls, which can be used. For example a CheckBox,
+There are much more controls that can be used. For example, a CheckBox,
 a Table, a Grid, or a Button. To find out more, take a look into the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#Controls" "MDL Reference" >}}.
 
 [//]: <> (MVL-653)
 
 ### Module Interactions {#mdlInteractions}
-
 Until now, we learned how to create the layout of a panel. As a next step, we like to get an overview over interactions.
 
 {{<alert class="info" caption="Extra Infos">}}
@@ -188,8 +186,7 @@ You can add the module `GUIExample` to your workspace and play around with is.
 {{</alert>}}
 
 #### Access to Existing Fields of the Internal Network
-
-To interact with fields of the internal network in your User Interface, we
+To interact with fields of the internal network in your user interface, we
 need to access these fields. To access the field of the internal module
 `Convolution`, which defines the kernel, we need to use the internal
 network name. To find the internal field name, open the internal network of the macro module `Filter` (click on the module using the middle mouse button {{< mousebutton "middle" >}}).
@@ -221,7 +218,7 @@ Window MyWindowName {
 
 ![Selecting the kernel](images/tutorials/basicmechanics/SelectingKernel.png "Selecting the kernel")
 
-As an alternative, you can define the field *kernel* in the *Parameters* environment, and reference the defined field by its name. The result in the panel is the same. You can see a difference in the Automatic Panel. All fields that are defined in the interface in the *Parameters* environment appear in the Automatic Panel. Fields of the internal network, which are used but not declared in the section *Parameters* of the module interface, do not appear in the Automatic Panel.
+As an alternative, you can define the field *kernel* in the *Parameters* section, and reference the defined field by its name. The result in the panel is the same. You can see a difference in the automatic panel. All fields that are defined in the interface in the *Parameters* section appear in the automatic panel. Fields of the internal network, which are used but not declared in the section *Parameters* of the module interface, do not appear in the automatic panel.
 
 {{< highlight filename="Filter.script" >}}
 ```Stan
@@ -252,8 +249,7 @@ Window MyWindowName {
 {{</highlight>}}
 
 #### Commands
-
-We cannot only use existing functionalities, but also add new interactions via Python scripting.
+We not only can use existing functionalities, but also add new interactions via Python scripting.
 
 In the example below, we added a *wakeupCommand* to the Window and a simple *command* to the Button.
 
@@ -276,7 +272,7 @@ Both commands reference a Python function that is executed whenever both actions
 
 If you like to learn more about Python scripting, take a look at [Example 2.5](tutorials/basicmechanisms/macromodules/pythonscripting).
 
-We need to define the Python script, which contains our Python functions. In order to do this, add a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Commands" "Command">}} section outside your window and define the tag source.
+We need to define the Python script that contains our Python functions. In order to do this, add a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Commands" "Command">}} section outside your window and define the tag source.
 
 **Example:**
 {{< highlight filename="Filter.script" >}}
@@ -288,7 +284,7 @@ Commands {
 {{</highlight>}}
 
 {{<alert class="info" caption="Infos">}}
-The section *Source* should already be available and generated automatically in case you enable the Wizard to add a Python file to your module.
+The section *Source* should already be available and generated automatically in the case you enable the Wizard to add a Python file to your module.
 {{</alert>}}
 
 [//]: <> (MVL-653)

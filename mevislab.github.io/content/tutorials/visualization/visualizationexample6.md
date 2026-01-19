@@ -8,10 +8,11 @@ tags: ["Advanced", "Tutorial", "Visualization", "3D", "Volume Rendering", "Path 
 menu: 
   main:
     identifier: "visualization_example6"
-    title: "Example usage of the MeVis Path Tracer"
+    title: "Example Usage of the MeVis Path Tracer"
     weight: 577
     parent: "visualization"
 ---
+
 # Example 6: MeVis Path Tracer
 
 <div class="alert alert-secondary d-flex align-items-center" role="alert">
@@ -29,7 +30,7 @@ CUDA is a parallel computing platform and programming model created by NVIDIA. F
 
 {{< imagegallery 5 "images/tutorials/visualization/pathtracer" "PathTracer1" "PathTracer2" "PathTracer3" "PathTracer4" "PathTracer5" >}}
 
-The `SoPathTracer` module implements the main renderer (like the `SoGVRVolumeRenderer`). It collects all `SoPathTracer*` extensions (on its left side) in the scene and renders them. Picking is also supported, but currently only the first hit position. It supports an arbitrary number of objects with different orientation and bounding boxes.
+The `SoPathTracer` module implements the main renderer (like the `SoGVRVolumeRenderer`). It collects all `SoPathTracer*` extensions (on its left side) in the scene and renders them. Picking is also supported, but it supports currently only the first hit position instead of a full hit profile. It supports an arbitrary number of objects with different orientation and bounding boxes.
 
 ## Path Tracing
 Path Tracing allows interactive, photorealistic 3D environments with dynamic light and shadow, reflections, and refractions.

@@ -1,10 +1,10 @@
 ---
-title: "Face detection in OpenCV"
+title: "Face Detection in OpenCV"
 date: 2022-06-15T08:56:33+02:00
 category: "thirdparty"
 ---
 
-# ThirdParty Example 2: Face Detection in OpenCV
+# Third-party Example 2: Face Detection in OpenCV
 This Python file shows how to access the webcam and detect faces in the video stream via OpenCV.
 
 # Download

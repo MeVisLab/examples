@@ -1,5 +1,5 @@
 ---
-title: "Example 5: Volume rendering and interactions"
+title: "Example 5: Volume Rendering and Interactions"
 date: 2022-06-15T08:56:33+02:00
 status: "OK"
 draft: false
@@ -8,10 +8,11 @@ tags: ["Beginner", "Tutorial", "Visualization", "3D", "Volume Rendering", "GVR",
 menu: 
   main:
     identifier: "visualization_example5"
-    title: "Volume rendering with lookup table (LUT) rotating automatically."
+    title: "Volume Rendering With Lookup Table (LUT) Rotating Automatically."
     weight: 575
     parent: "visualization"
 ---
+
 # Example 5: Volume Rendering and Interactions {#TutorialVisualizationExample6}
 
 {{< youtube "QViPqXs2LHc" >}}
@@ -20,6 +21,7 @@ menu:
 In this example we like to convert a scan of a head into a 3D scene object. The scene object allows to add some textures, interactions, and animations.
 
 ## Steps to Do
+
 ### Develop Your Network
 Implement the following network and open the image *$(DemoDataPath)/BrainMultiModal/ProbandT1.tif*.
 
@@ -34,7 +36,7 @@ Additional information about Volume Rendering can be found here: {{< docuLinks "
 [//]: <> (MVL-653)
 
 ### Change LUT
-We like to add a surface color to the head. In order to do that, we add the module `SoLUTEditor`, which adds an RGBA lookup table (LUT) to the scene. Connecting this module to `SoExaminerViewer` left to the connection between `SoGVRRenderer` and `SoExaminerViewer` (remember the order in which Open Inventor modules are executed) allows you to set the surface color of the head.
+We like to add a surface color to the head. In order to do that, we add the module `SoLUTEditor`, which adds an RGBA lookup table (LUT) to the scene. Connecting this module to `SoExaminerViewer` to the left of the connection between `SoGVRRenderer` and `SoExaminerViewer` (remember the order in which Open Inventor modules are executed) allows you to set the surface color of the head.
 
 ![SoLUTEditor](images/tutorials/visualization/V6_02.png "SoLUTEditor")
 
@@ -56,9 +58,9 @@ Open the panels of both modules and select the axis the image should rotate arou
 ![Time and Angle](images/tutorials/visualization/V6_06.png "Time and Angle")
 
 ## Exercises
-1. Change rotation speed
-2. change rotation angle
-3. Pause rotation on pressing {{< keyboard "SPACE" >}}
+1. Change the rotation speed.
+2. change the rotation angle.
+3. Pause the rotation on pressing {{< keyboard "SPACE" >}}.
 
 ## Summary
 * The module `SoGVRVolumeRenderer` renders paged images like DICOM files in a GVR.

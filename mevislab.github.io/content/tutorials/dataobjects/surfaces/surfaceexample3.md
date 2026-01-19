@@ -1,5 +1,5 @@
 ---
-title: "Surface Example 3: Interactions with WEM"
+title: "Surface Example 3: Interactions With WEM"
 date: "2023-03-21"
 status: "OK"
 draft: false
@@ -8,23 +8,24 @@ tags: ["Beginner", "Tutorial", "Data Objects", "3D", "Surfaces", "Meshes", "WEM"
 menu: 
   main:
     identifier: "surfaceexample3"
-    title: "Interactions with WEM"
+    title: "Interactions With WEM"
     weight: 715
     parent: "surfaces"
 ---
+
 # Surface Example 3: Interactions with WEM
 
 {{< youtube "YDOEqCOmUFw">}}
 
 ## Introduction
 In these examples, we are showing two different possibilities to interact with a WEM:
-* Scale, rotate and move a WEM in a scene
+* Scale, rotate, and move a WEM in a scene
 * Modify a WEM in a scene
 
 ### Scale, Rotate, and Move a WEM in a Scene
 We are using a `SoTransformerDragger` module to apply transformations on a 3D WEM object via mouse interactions.
 
-Add a `SoCube` and a `SoBackground` module and connect both to a `SoExaminerViewer`. For a better understanding, you should also add a `SoCoordinateSystem` module and connect it to the viewer. Change the *User Transform Mode* to *User Transform Instead Of Input* and set *User Scale* to 2 for *x*, *y* and *z*.
+Add a `SoCube` and a `SoBackground` module and connect both to a `SoExaminerViewer`. For a better understanding, you should also add a `SoCoordinateSystem` module and connect it to the viewer. Change the *User Transform Mode* to *User Transform Instead Of Input* and set *User Scale* to 2 for *x*, *y*, and *z*.
 
 ![Initial Network](images/tutorials/dataobjects/surfaces/WEMExample3_1.png "Initial Network")
 
@@ -32,7 +33,7 @@ The `SoExaminerViewer` shows your cube and the world coordinate system. You can 
 
 ![Initial Cube](images/tutorials/dataobjects/surfaces/WEMExample3_2.png "Initial Cube")
 
-Scaling, rotating, and translating the cube itself can be done by using the module `SoTransformerDragger`. Additionally, add a `SoTransform` module to your network. Add all modules but the `SoCoordinateSystem` to a `SoSeparator` so that transformations are not applied to the coordinate system.
+Scaling, rotating, and translating the cube itself can be done by using the module `SoTransformerDragger`. Additionally, add a `SoTransform` module to your network. Add all modules except the `SoCoordinateSystem` to a `SoSeparator`, so that transformations are not applied to the coordinate system.
 
 ![SoTransformerDragger and SoTransform](images/tutorials/dataobjects/surfaces/WEMExample3_3.png "SoTransformerDragger and SoTransform")
 
@@ -41,10 +42,10 @@ Draw parameter connections from *Translation*, *Scale Factor*, and *Rotation* of
 Opening your SoExaminerViewer now allows you to use handles of the `SoTransformerDragger` to scale, rotate, and move the cube. You can additionally interact with the camera as already done before.
 
 {{<alert class="info" caption="Info">}}
-You need to change the active tool on the right side of the `SoExaminerViewer`. Use the *Pick Mode* for applying transformations and the *View Mode* for using the camera.
+You need to change the active tool on the right side of the `SoExaminerViewer`. Use the *Pick Mode* for applying transformations and the *View Mode* for adjusting the camera.
 {{</alert>}}
 
-![Moved, Rotated and Scaled Cube](images/tutorials/dataobjects/surfaces/WEMExample3_4.png "Moved, Rotated and Scaled Cube")
+![Moved, Rotated, and Scaled Cube](images/tutorials/dataobjects/surfaces/WEMExample3_4.png "Moved, Rotated, and Scaled Cube")
 
 You can also try the other `So*Dragger` modules in MeVisLab for variations of the `SoTransformerDragger`.
 
@@ -53,7 +54,7 @@ You can also try the other `So*Dragger` modules in MeVisLab for variations of th
 ### Interactively Modify WEMs
 We are using the `WEMBulgeEditor` module to interactively modify the WEM via mouse interactions.
 
-Add a `WEMInitialize`, a `SoWEMRenderer`, and a `SoBackground` module to your workspace and connect them to a `SoExaminerViewer` as seen below. Select model *Icosahedron* for the `WEMInitialize` module.
+Add the modules `WEMInitialize`, `SoWEMRenderer`, and `SoBackground` to your workspace and connect them to a `SoExaminerViewer` as seen below. Select model *Icosahedron* for the `WEMInitialize` module.
 
 ![WEMLoad and SoWEMRenderer](images/tutorials/dataobjects/surfaces/WEMExample3_5.png "WEMLoad and SoWEMRenderer")
 
@@ -87,14 +88,14 @@ Open the panel of the `SoLUTEditor`. Configure *New Range Min* as -1 and *New Ra
 
 ![SoLUTEditor](images/tutorials/dataobjects/surfaces/WEMExample3_9.png "SoLUTEditor")
 
-Now your Primitive Value List is used to colorize the affected region for your tansformations. You can see the region by the color on hovering the mouse over the WEM.
+Now, your Primitive Value List is used to colorize the affected region for your tansformations. You can see the region by the color on hovering the mouse over the WEM.
 
 ![Affected region colored](images/tutorials/dataobjects/surfaces/Affected_Region.png "Affected region colored")
 
 The size of the region can be changed via {{<keyboard "ALT" >}} and mouse wheel {{< mousebutton "middle" >}}. Make sure that the *Influence Radius* in `WEMBulgeEditor` is larger than 0.
 
 {{<alert class="info" caption="Info">}}
-You need to change the active tool on the right side of the `SoExaminerViewer`. Use the *Pick Mode* for applying transformations and the *View Mode* for using the camera.
+You need to change the active tool on the right side of the `SoExaminerViewer`. Use the *Pick Mode* for applying transformations and the *View Mode* for adjusting the camera.
 {{</alert>}}
 
 ![Modify WEM](images/tutorials/dataobjects/surfaces/Modify.png "Modify WEM")
@@ -111,6 +112,6 @@ For other interaction possibilities, you can play around with the example networ
 
 ## Summary
 * MeVisLab provides multiple options to interact with 3D surfaces.
-* Modules of the `So*Dragger` family allow to scale, rotate, and translate a WEM.
+* Modules of the `So\*Dragger` family allow to scale, rotate, and translate a WEM.
 * You can always use a `SoCoordinateSystem` to see the current world coordinates.
 * The `WEMBulgeEditor` allows you to interactively modify a WEM via mouse.

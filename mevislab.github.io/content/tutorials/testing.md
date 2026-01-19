@@ -12,6 +12,7 @@ menu:
     weight: 785
     parent: "tutorials"
 ---
+
 # MeVisLab Tutorial Chapter VI {#TutorialChapter6}
 
 ## Testing, Profiling, and Debugging in MeVisLab {#TutorialTesting}
@@ -42,7 +43,7 @@ If you have multiple versions installed, make sure to check and, if needed, alte
 {{</alert>}}
 
 ### Profiling
-Profiling allows you to get detailed information on the behavior of your modules and networks. You can add the profiling view via {{<menuitem "View" "Views" "Profiling" >}}. The Profiling will be displayed in the Views area of the MeVisLab IDE.
+Profiling allows you to get detailed information on the behavior of your modules and networks. You can add the Profiling view via {{<menuitem "View" "Views" "Profiling" >}}. The Profiling will be displayed in the Views area of the MeVisLab IDE.
 
 ![MeVisLab Profiling](images/tutorials/testing/Profiling.png "MeVisLab Profiling")
 

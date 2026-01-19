@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Image overlays"
+title: "Image Overlays"
 category: "visualization"
 ---
 

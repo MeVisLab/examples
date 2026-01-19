@@ -8,7 +8,7 @@ tags: ["Advanced", "Tutorial", "Image Processing", "3D", "Clip Planes"]
 menu: 
   main:
     identifier: "imageprocessing5"
-    title: "In this example, show some options for integrating clip planes into your 3D views."
+    title: "Clip Planes"
     weight: 625
     parent: "imageprocessing"
 ---
@@ -21,8 +21,9 @@ menu:
 In this example, we are using the `SoGVRDrawOnPlane` module to define the currently visible slice from a 2D view as a clip plane in 3D.
 
 ## Steps to Do
+
 ### Develop Your Network
-First we need to develop the network to scroll through the slices. Add a `LocalImage` module to your workspace and select the file *ProbandT1* from MeVisLab demo data.
+First, we need to develop the network to scroll through the slices. Add a `LocalImage` module to your workspace and select the file *ProbandT1* from MeVisLab demo data.
 
 Add the modules `OrthoReformat3`, `Switch`, `SoView2D`, `View2DExtensions`, and `SoRenderArea` and connect them as seen below.
 
@@ -44,7 +45,7 @@ We now want to visualize the slice visible in the 2D images as a 3D plane. Add a
 
 ![Example Network](images/tutorials/image_processing/network_example5b.png "Example Network")
 
-A  three-dimensional plane of the image is shown. Adapt the LUT as seen below.
+A three-dimensional plane of the image is shown. Adapt the LUT as seen below.
 
 ![SoLUTEditor](images/tutorials/image_processing/tutorial5_lut.png "SoLUTEditor")
 
@@ -63,11 +64,11 @@ This slice shall now be used as a clip plane in 3D. In order to achieve this, yo
 
 ![Example Network](images/tutorials/image_processing/network_example5c.png "Example Network")
 
-Now your 3D scene shows a three-dimensional volume cut by a plane in the middle. Once again, the clipping is not the same slice as your 2D view shows.
+Now, your 3D scene shows a three-dimensional volume cut by a plane in the middle. Once again, the clipping is not the same slice as your 2D view shows.
 
 ![Clip plane in 3D](images/tutorials/image_processing/3D_ClipPlane.png "Clip plane in 3D")
 
-Again create a parameter connection from the `SoView2D` position *Slice as plane*, but this time to the `SoClipPlane`. 
+Again, create a parameter connection from the `SoView2D` position *Slice as plane*, but this time to the `SoClipPlane`. 
 
 ![SoClipPlane Plane](images/tutorials/image_processing/SoClipPlane_Plane.png "SoClipPlane Plane")
 
@@ -76,7 +77,7 @@ If you now open all three viewers and scroll through the slices in 2D, the 3D vi
 ![Final 3 views](images/tutorials/image_processing/Final3Views.png "Final 3 views")
 
 ## Summary
-* The module `OthoReformat3` transforms input images to the three viewing directions: coronal, axial, and sagittal.
+* The module `OrthoReformat3` transforms input images to the three viewing directions: coronal, axial, and sagittal.
 * A `Switch` can be used to toggle through multiple input images.
 * The `SoGVRDrawOnPlane` module renders a single slice as a three-dimensional plane.
 * Three-dimensional clip planes on volumes can be created by using a `SoClipPlane` module.

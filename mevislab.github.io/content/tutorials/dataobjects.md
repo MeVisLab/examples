@@ -8,17 +8,17 @@ tags: ["Beginner", "Tutorial", "Data Objects", "2D", "Contours", "3D", "Surfaces
 menu: 
   main:
     identifier: "dataobjects"
-    title: "Examples for handling Data Objects like Contours, Surfaces and Markers in MeVisLab."
+    title: "Examples for Handling Data Objects like Contours, Surfaces, and Markers in MeVisLab"
     weight: 650
     parent: "tutorials"
 ---
-## Data Objects in MeVisLab {#TutorialDataObjects}
 
-MeVisLab provides pre-defined data objects, e.g.:
-* [Contour Segmentation Objects (CSOs)](tutorials/dataobjects/contourobjects) <br>,
-which are three-dimensional objects encapsulating formerly defined contours within images.
+## Data Objects in MeVisLab {#TutorialDataObjects}
+MeVisLab provides predefined data objects, for example:
+* [Contour Segmentation Objects (CSOs)](tutorials/dataobjects/contourobjects) <br>
+three-dimensional objects encapsulating formerly defined contours within images.
 * [Surface Objects (Winged Edge Meshes or WEMs)](tutorials/dataobjects/surfaceobjects) <br>
- represent the surface of geometrical figures and allow the user to manipulate them.
+represent the surface of geometrical figures and allow the user to manipulate them.
 * [Markers](tutorials/dataobjects/markerobjects) <br>
 are used to mark specific locations or aspects of an image and allow to process those later on.
 * [Curves](tutorials/dataobjects/curves) <br>

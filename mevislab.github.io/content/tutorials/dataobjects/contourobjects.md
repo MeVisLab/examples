@@ -8,14 +8,16 @@ tags: ["Beginner", "Tutorial", "Data Objects", "2D", "Contours", "CSO"]
 menu: 
   main:
     identifier: "contours"
-    title: "Contour Segmented Objects (CSOs) in MeVisLab"
+    title: "Contour Segmentation Objects (CSOs) in MeVisLab"
     weight: 660
     parent: "dataobjects"
 ---
-# Contour Segmented Objects (CSOs) in MeVisLab {#CSO}
-## Introduction
-### Structure of CSOs
 
+# Contour Segmentation Objects (CSOs) in MeVisLab {#CSO}
+
+## Introduction
+
+### Structure of CSOs
 MeVisLab provides modules to create contours in images. 3D objects that encapsulate these contours are called Contour Segmentation Objects (CSOs).
 
 In the next image, you can see a rectangular shaped CSO. The pink circles you can see are called *Seed Points*.
@@ -31,7 +33,6 @@ In general, the *Seed Points* are created interactively using an editor module a
 ![Contour Segmented Object (CSO)](images/tutorials/dataobjects/contours/CSO_Expl_01.png "Contour Segmented Object (CSO)")
 
 #### CSO Editors {#CSOEditors}
-
 As mentioned, when creating CSOs, you can do this interactively by using an editor.
 
 The following images show editors available in MeVisLab for drawing CSOs:
@@ -46,8 +47,7 @@ The `SoCSOIsoEditor` and `SoCSOLiveWireEditor` are special, because they are usi
 {{</alert>}}
 
 ### CSO Lists and CSO Groups
-
-All created CSOs are stored in CSO lists that can be saved and loaded on demand. The lists can not only store the coordinates of the CSOs, but also additional information in the form of name-value pairs (using specialized modules or Python scripting).
+All created CSOs are stored in CSO lists that can be saved and loaded on demand. The lists cannot only store the coordinates of the CSOs, but also additional information in the form of name-value pairs (using specialized modules or Python scripting).
 
 ![Basic CSO Network](images/tutorials/dataobjects/contours/BasicCSONetwork.png "Basic CSO Network")
 

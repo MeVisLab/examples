@@ -1,5 +1,5 @@
 ---
-title: "Example 8: Vessel Segmentation using SoVascularSystem"
+title: "Example 8: Vessel Segmentation Using SoVascularSystem"
 date: 2023-12-08
 status: "OK"
 draft: false
@@ -8,10 +8,11 @@ tags: ["Advanced", "Tutorial", "Visualization", "3D", "Vessel Segmentation"]
 menu: 
   main:
     identifier: "visualization_example8"
-    title: "Vessel Segmentation using SoVascularSystem."
+    title: "Vessel Segmentation Using SoVascularSystem."
     weight: 592
     parent: "visualization"
 ---
+
 # Example 8: Vessel Segmentation using SoVascularSystem {#TutorialVisualizationExample8}
 
 {{< youtube "tEwEgI_3ZGM" >}}
@@ -20,8 +21,8 @@ menu:
 In this tutorial, we are using an input mask to create a vessel centerline using the `DtfSkeletonization` module and visualize the vascular structures in 3D using the `SoVascularSystem` module. The second part uses the distance between centerline and surface of the vessel structures to color thin vessels red and thick vessels green.
 
 ## Steps to Do
-### Develop Your Network
 
+### Develop Your Network
 Load the example [tree mask](examples/visualization/example8/EditedImage.mlimage) by using the `LocalImage` module. Connect the output to a `DtfSkeletonization` module as seen below. The initial output of the `DtfSkeletonization` module is empty. Press the *Update* button to calculate the skeleton and the erosion distances.
 
 ![Network](images/tutorials/visualization/V8_1.png "Network")
@@ -48,7 +49,7 @@ Use the `SoLUTEditor` for the `View2D`, too.
 
 ![Network](images/tutorials/visualization/V8_04.png "Network")
 
- Open the output of the `GraphToVolume` module and inspect the images in Output Inspector. You will see that the HU value of the black background is defined as *-1* while the vessel tree is defined as *0*.
+ Open the output of the `GraphToVolume` module and inspect the images in Output Inspector. You will see that the voxel value of the black background is defined as *-1* while the vessel tree is defined as *0*.
 
 ![Output Inspector](images/tutorials/visualization/V8_04_OutputInspector.png "Output Inspector")
 
@@ -64,7 +65,7 @@ The viewers now show your vessel graph.
 
 ![View2D and SoExaminerViewer](images/tutorials/visualization/V8_04_Viewer.png "View2D and SoExaminerViewer")
 
-### Store Edge IDs in Skeletons with RunPythonScript
+### Store Edge IDs in Skeletons With RunPythonScript
 Each edge of the calculated skeleton gets a unique ID defined by the `DtfSkeletonization` module. We now want to use this ID to define a different color for each edge of the skeleton. You can use the **Label** property of each skeleton to store the ID of the edge.
 
 Add a `RunPythonScript` module to your network, open the panel of the module and enter the following Python code:
@@ -82,7 +83,7 @@ ctx.field("GraphToVolume.update").touch()
 ```
 {{</highlight>}}
 
-First, we always want a fresh skeleton. We touch the *update* trigger of the module `DtfSkeletonization`. Then we get the graph from the *DtfSkeletonization.outBase1* output. If a valid graph is available, we walk through all edges of the graph and print the ID of each edge. In the end, we update the GraphToVolume module to get the calculated values of the Python script in the viewers. Click *Execute*.
+First, we always want a fresh skeleton. We touch the *update* trigger of the module `DtfSkeletonization`. Then, we get the graph from the *DtfSkeletonization.outBase1* output. If a valid graph is available, we walk through all edges of the graph and print the ID of each edge. In the end, we update the GraphToVolume module to get the calculated values of the Python script in the viewers. Click *Execute*.
 
 The Debug Output of the MeVisLab IDE shows a numbered list of edge IDs from 1 to 153.
 
@@ -120,7 +121,7 @@ Your viewers now show a different color for each skeleton, based on our LUT.
 
 ![View2D and SoExaminerViewer](images/tutorials/visualization/V8_05_Viewer.png "View2D and SoExaminerViewer")
 
-### Render Vascular System Using SoVascularSystem
+### Render the Vascular System Using SoVascularSystem
 The `SoVascularSystem` module is optimized for rendering vascular structures. In comparison to the `SoGVRVolumeRenderer` module, it allows to render the surface, the skeleton or points of the structure in an open inventor scene graph. Interactions with edges of the graph are also already implemented.
 
 Add a `SoVascularSystem` module to your workspace. Connect it to your `DtfSkeletonization` module and to the `SoLUTEditor` as seen below. Add another `SoExaminerViewer` for comparing the two visualization. The same `SoBackground` can be added to your new scene.
@@ -147,7 +148,7 @@ To establish connections between fields with the type *Float*, you can use the *
 
 Camera interactions are now synchronized between both `SoExaminerViewer` modules.
 
-Now you can notice the difference between the two modules. We use `SoVascularSystem` for a smoother visualization of the vascular structures by using the graph as reference. The `SoGVRVolumeRenderer` renders the volume from the `GraphToVolume` module, including the visible stairs from voxel representations in the volume. 
+Now, you can notice the difference between the two modules. We use `SoVascularSystem` for a smoother visualization of the vascular structures by using the graph as reference. The `SoGVRVolumeRenderer` renders the volume from the `GraphToVolume` module, including the visible stairs from voxel representations in the volume. 
 
 ![ SoVascularSystem & SoGVRVolumeRenderer](images/tutorials/visualization/V8_Difference1.png " SoVascularSystem & SoGVRVolumeRenderer")
 
@@ -166,7 +167,7 @@ For volume calculations, use the original image mask instead of the result from 
 ### Enhance Vessel Visualization Based on Distance Information
 Now that you've successfully obtained the vessel skeleton graph using `DtfSkeletonization`, let's take the next step to enhance the vessel visualization based on the radius information of the vessels. We will modify the existing code to use the minimum distance between centerline and surface of the vessels for defining the color.
 
-The values for the provided vascular tree vary between 0 and 10mm. Therefore define the range of the `SoLUTEditor` to *New Range Min* as *1* and *New Range Max* as *10*. On *Editor* tab, define the following LUT:
+The values for the provided vascular tree vary between 0mm and 10mm. Therefore, define the range of the `SoLUTEditor` to *New Range Min* as *1* and *New Range Max* as *10*. On *Editor* tab, define the following LUT:
 
 ![SoLUTEditor](images/tutorials/visualization/V8_SoLUTEditor2.png "SoLUTEditor")
 
@@ -193,10 +194,10 @@ ctx.field("SoVascularSystem.apply").touch()
 
 
 {{<alert class="warning" caption="Warning">}}
-Be aware that the *MinDistance* and *MaxDistance* values are algorithm-specific and don't precisely represent vessel diameters. The result of `DTFSkeletonization` is a vascular graph with an idealized, circular profile while in reality, the vessels have more complicated profiles. It is an idealized graph where all vessels have a circular cross-section. This cross-section only has one radius, described by *MinDistance* and *MaxDistance*. Those are not the two radii of an elliptical cross-section, but the results of two different algorithms to measure the one, idealized radius at Skeletons.
+Be aware that the *MinDistance* and *MaxDistance* values are algorithm-specific and don't precisely represent vessel diameters. The result of `DTFSkeletonization` is a vascular graph with an idealized, circular profile while in reality, the vessels have more complicated profiles. It is an idealized graph where all vessels have a circular cross section. This cross section only has one radius, described by *MinDistance* and *MaxDistance*. Those are not the two radii of an elliptical cross section, but the results of two different algorithms to measure the one, idealized radius at Skeletons.
 {{</alert>}}
 
-Instead of using the ID of each edge for the label property, we are now using the *MinDistance* property of the skeleton. The result is a color coded 3D visualization depending on the radius of the vessels. Small vessels are red, large vessels are green.
+Instead of using the ID of each edge for the label property, we are now using the *MinDistance* property of the skeleton. The result is a color-coded 3D visualization depending on the radius of the vessels. Small vessels are red, large vessels are green.
 
 ![Radius based Visualization](images/tutorials/visualization/V8_010new.png "Radius based Visualization") 
 
