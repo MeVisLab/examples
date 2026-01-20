@@ -676,13 +676,13 @@ voxel value of 1200 on every slice.&lt;/p&gt;</description></item><item><title>C
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In these examples, we are showing two different possibilities to interact with a WEM:&lt;/p&gt;
+&lt;p&gt;In these examples, we are showing two different possibilities to interact with the visualization of the WEM:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Scale, rotate, and move a WEM in a scene&lt;/li&gt;
+&lt;li&gt;Scale, rotate, and move a WEM&amp;rsquo;s visualization in a scene&lt;/li&gt;
 &lt;li&gt;Modify a WEM in a scene&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="scale-rotate-and-move-a-wem-in-a-scene"&gt;Scale, Rotate, and Move a WEM in a Scene&lt;/h3&gt;
-&lt;p&gt;We are using a &lt;code&gt;SoTransformerDragger&lt;/code&gt; module to apply transformations on a 3D WEM object via mouse interactions.&lt;/p&gt;</description></item><item><title>Surface Example 4: Interactively Moving WEM</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/surfaces/surfaceexample4/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/surfaces/surfaceexample4/</guid><description>&lt;h1 id="surface-example-4-interactively-moving-wem"&gt;Surface Example 4: Interactively Moving WEM&lt;/h1&gt;
+&lt;p&gt;We are using a &lt;code&gt;SoTransformerDragger&lt;/code&gt; module to apply transformations to the visualization of a 3D WEM object via mouse interactions.&lt;/p&gt;</description></item><item><title>Surface Example 4: Interactively Moving WEM</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/surfaces/surfaceexample4/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/surfaces/surfaceexample4/</guid><description>&lt;h1 id="surface-example-4-interactively-moving-wem"&gt;Surface Example 4: Interactively Moving WEM&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
  &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=WKiCddNGKrw" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/WKiCddNGKrw/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=WKiCddNGKrw" target="_blank"&gt;YouTube&lt;/a&gt;.
@@ -731,9 +731,7 @@ All of these funtionalities will be addressed in this chapter.&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this example you will learn how to write an automated test for a simple network using the &lt;code&gt;DicomImport&lt;/code&gt;, &lt;code&gt;MinMaxScan&lt;/code&gt;, and &lt;code&gt;View3D&lt;/code&gt; modules. Afterward, you will be able to write test cases for any other module and network yourself.&lt;/p&gt;
-&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
-&lt;h3 id="creating-the-network-to-be-used-for-testing"&gt;Creating the Network to be Used for Testing&lt;/h3&gt;
-&lt;p&gt;Add the following modules to your workspace and connect them as seen below:&lt;/p&gt;</description></item><item><title>Example 2: Profiling in MeVisLab</title><link>https://mevislab.github.io/examples/tutorials/testing/testingexample2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/testing/testingexample2/</guid><description>&lt;h1 id="example-2-profiling-in-mevislab"&gt;Example 2: Profiling in MeVisLab&lt;/h1&gt;
+&lt;p&gt;MeVisLab provides two options to compare a test result with an expected result:&lt;/p&gt;</description></item><item><title>Example 2: Profiling in MeVisLab</title><link>https://mevislab.github.io/examples/tutorials/testing/testingexample2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/testing/testingexample2/</guid><description>&lt;h1 id="example-2-profiling-in-mevislab"&gt;Example 2: Profiling in MeVisLab&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
  &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=DZ4BcAne4hM" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/DZ4BcAne4hM/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=DZ4BcAne4hM" target="_blank"&gt;YouTube&lt;/a&gt;.
@@ -767,8 +765,7 @@ All of these funtionalities will be addressed in this chapter.&lt;/p&gt;
  &lt;a data-modal="bs-lightbox" href="images/tutorials/dataobjects/curves/Curves.png" title="Curves in MeVisLab"&gt;&lt;img id="Curves in MeVisLab" class="img-fluid rounded" src="images/tutorials/dataobjects/curves/Curves.png" alt="Curves in MeVisLab" title="Curves in MeVisLab" /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;Curves in MeVisLab&lt;/figcaption&gt;
 &lt;/p&gt;
-&lt;/p&gt;
-&lt;p&gt;In the given example, only modules available in commercial &lt;strong&gt;MeVisLab Professional SDK&lt;/strong&gt; have been used. The non-commercial &lt;strong&gt;MeVisLab Standard SDK&lt;/strong&gt; provides more modules for curves.&lt;/p&gt;</description></item><item><title>Example 1: Drawing Curves</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/curves/curvesexample1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/curves/curvesexample1/</guid><description>&lt;h1 id="example-1-drawing-curves"&gt;Example 1: Drawing Curves&lt;/h1&gt;
+&lt;/p&gt;</description></item><item><title>Example 1: Drawing Curves</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/curves/curvesexample1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/curves/curvesexample1/</guid><description>&lt;h1 id="example-1-drawing-curves"&gt;Example 1: Drawing Curves&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
  &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=sj6muyInkRc" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/sj6muyInkRc/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=sj6muyInkRc" target="_blank"&gt;YouTube&lt;/a&gt;.
