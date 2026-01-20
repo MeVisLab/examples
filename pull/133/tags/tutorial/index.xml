@@ -685,13 +685,13 @@ voxel value of 1200 on every slice.&lt;/p&gt;</description></item><item><title>C
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In these examples, we are showing two different possibilities to interact with a WEM:&lt;/p&gt;
+&lt;p&gt;In these examples, we are showing two different possibilities to interact with the visualization of the WEM:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Scale, rotate, and move a WEM in a scene&lt;/li&gt;
+&lt;li&gt;Scale, rotate, and move a WEM&amp;rsquo;s visualization in a scene&lt;/li&gt;
 &lt;li&gt;Modify a WEM in a scene&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="scale-rotate-and-move-a-wem-in-a-scene"&gt;Scale, Rotate, and Move a WEM in a Scene&lt;/h3&gt;
-&lt;p&gt;We are using a &lt;code&gt;SoTransformerDragger&lt;/code&gt; module to apply transformations on a 3D WEM object via mouse interactions.&lt;/p&gt;</description></item><item><title>Surface Example 4: Interactively Moving WEM</title><link>https://mevislab.github.io/examples/pull/133/tutorials/dataobjects/surfaces/surfaceexample4/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/133/tutorials/dataobjects/surfaces/surfaceexample4/</guid><description>&lt;h1 id="surface-example-4-interactively-moving-wem"&gt;Surface Example 4: Interactively Moving WEM&lt;/h1&gt;
+&lt;p&gt;We are using a &lt;code&gt;SoTransformerDragger&lt;/code&gt; module to apply transformations on the visualizations of a 3D WEM object via mouse interactions.&lt;/p&gt;</description></item><item><title>Surface Example 4: Interactively Moving WEM</title><link>https://mevislab.github.io/examples/pull/133/tutorials/dataobjects/surfaces/surfaceexample4/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/133/tutorials/dataobjects/surfaces/surfaceexample4/</guid><description>&lt;h1 id="surface-example-4-interactively-moving-wem"&gt;Surface Example 4: Interactively Moving WEM&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
  &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=WKiCddNGKrw" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/WKiCddNGKrw/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=WKiCddNGKrw" target="_blank"&gt;YouTube&lt;/a&gt;.
