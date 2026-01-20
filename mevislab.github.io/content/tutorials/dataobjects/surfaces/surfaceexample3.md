@@ -23,7 +23,7 @@ In these examples, we are showing two different possibilities to interact with t
 * Modify a WEM in a scene
 
 ### Scale, Rotate, and Move a WEM in a Scene
-We are using a `SoTransformerDragger` module to apply transformations on the visualizations of a 3D WEM object via mouse interactions.
+We are using a `SoTransformerDragger` module to apply transformations to the visualization of a 3D WEM object via mouse interactions.
 
 Add a `SoCube` and a `SoBackground` module and connect both to a `SoExaminerViewer`. For a better understanding, you should also add a `SoCoordinateSystem` module and connect it to the viewer. Change the *User Transform Mode* to *User Transform Instead Of Input* and set *User Scale* to 2 for *x*, *y*, and *z*.
 
