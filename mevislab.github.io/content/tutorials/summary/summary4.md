@@ -64,6 +64,14 @@ MATE automatically opens the Python file of your test case and it appears in MeV
 
 ### Write Test Functions in Python
 
+{{<alert class="info" caption="Info">}}
+In this example, we are using the **ASSERT*** functionalities, becase they throw an exception in case the expected value does not match the actual value. Your test execution stops in this case.
+
+You can also use **EXPECT*** functions. They return *true* or *false* and you can decide yourself ho your test continues.
+
+For details, see {{< docuLinks "/Resources/Documentation/Publish/SDK/TestCenterReference/namespaceTestSupport_1_1Macros.html" "TestCenter Reference" >}}
+{{</alert>}}
+
 #### Preparations
 Before writing a test case, we need some helper functions in Python, which we will use in our test cases. The first thing we need is a function to load images.
 

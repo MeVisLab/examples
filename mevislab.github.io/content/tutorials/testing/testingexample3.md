@@ -85,7 +85,11 @@ def testPatient(path, windowCenter):
 4. The final test functions *ASSERT_EQ* evaluate if the given values are equal.
 
 {{<alert class="info" caption="Info">}}
-You can use many other *ASSERT** possibilities, just try using the MATE autocompletion and play around with them.
+You can use many other **ASSERT*** possibilities, just try using the MATE autocompletion and play around with them. **ASSERT*** functions throw an exception in case expected and actul values do not fit. Your test execution stops in this case.
+
+You can also use **EXPECT*** functions. They return *true* or *false* and you can decide yourself ho your test continues.
+
+For details, see {{< docuLinks "/Resources/Documentation/Publish/SDK/TestCenterReference/namespaceTestSupport_1_1Macros.html" "TestCenter Reference" >}}
 {{</alert>}}
 
 ### Run Your Iterative Test

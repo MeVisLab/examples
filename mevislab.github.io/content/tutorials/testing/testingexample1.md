@@ -20,6 +20,20 @@ menu:
 ## Introduction
 In this example you will learn how to write an automated test for a simple network using the `DicomImport`, `MinMaxScan`, and `View3D` modules. Afterward, you will be able to write test cases for any other module and network yourself.
 
+MeVisLab provides two options to compare a test result with an expected result:
+#### ASSERT
+Multiple **ASSERT_*** functions to compare expected and actual result are available, for example **ASSERT_EQ()** (check if two values are equal) or **ASSERT_GT()** (check if value is greater than another value).
+
+In case an assertion fails, an exception is thrown and the test execution stops.
+#### EXPECT
+The same comparisons can be done by using **EXPECT_***. The functions return *true* or *false* and depending on the result you can decide how to proceed.
+
+Make sure to use the right comparison methods depending on your needs.
+
+{{<alert class="info" caption="Info">}}
+Additional information can be found in {{< docuLinks "/Resources/Documentation/Publish/SDK/TestCenterReference/namespaceTestSupport_1_1Macros.html" "TestCenter Reference" >}}
+{{</alert>}}
+
 ## Steps to Do
 
 ### Creating the Network to be Used for Testing
@@ -87,6 +101,8 @@ When *ready* is true, the test touches the *selectNextItem* trigger, so that the
 
 The value of our `DicomImport`s *progress* field is saved as the *currentValue* variable and compared to the *expectedValue* variable by calling *ASSERT_FLOAT_EQ(expectedValue,currentValue)* to determine if the DICOM import has finished (*currentValue* and *expectedValue* are equal) or not. 
 
+You can play around with the differences between **ASSERT_FLOAT_EQ()** and **EXPECT_FLOAT_EQ()** and le your test fail to see the differences.
+
 ### Run Your Test Case
 Open the TestCase Manager und run your test by selecting your test case and clicking on the *Play* button in the bottom right corner.
 
@@ -126,5 +142,7 @@ Create a global macro module and implement the following test objectives for bot
 * MeVisLab provides a TestCenter for writing automated tests in Python.
 * Tests can be executed on networks and macro modules.
 * The test results are shown in a ReportViewer.
+* **ASSERT*** functions throw an exception if the expected result differs from the actual result. The test run is aborted in such a case.
+* **EXPECT*** functions return *true* or *false*. You can decide yoursel how to continue your test.
 
 {{< networkfile "examples/testing/example1/TestCases.zip" >}}
