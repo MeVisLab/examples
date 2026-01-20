@@ -731,9 +731,7 @@ All of these funtionalities will be addressed in this chapter.&lt;/p&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this example you will learn how to write an automated test for a simple network using the &lt;code&gt;DicomImport&lt;/code&gt;, &lt;code&gt;MinMaxScan&lt;/code&gt;, and &lt;code&gt;View3D&lt;/code&gt; modules. Afterward, you will be able to write test cases for any other module and network yourself.&lt;/p&gt;
-&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
-&lt;h3 id="creating-the-network-to-be-used-for-testing"&gt;Creating the Network to be Used for Testing&lt;/h3&gt;
-&lt;p&gt;Add the following modules to your workspace and connect them as seen below:&lt;/p&gt;</description></item><item><title>Example 2: Profiling in MeVisLab</title><link>https://mevislab.github.io/examples/pull/133/tutorials/testing/testingexample2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/133/tutorials/testing/testingexample2/</guid><description>&lt;h1 id="example-2-profiling-in-mevislab"&gt;Example 2: Profiling in MeVisLab&lt;/h1&gt;
+&lt;p&gt;MeVisLab provides two options to compare a test result with an expected result:&lt;/p&gt;</description></item><item><title>Example 2: Profiling in MeVisLab</title><link>https://mevislab.github.io/examples/pull/133/tutorials/testing/testingexample2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/133/tutorials/testing/testingexample2/</guid><description>&lt;h1 id="example-2-profiling-in-mevislab"&gt;Example 2: Profiling in MeVisLab&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
  &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=DZ4BcAne4hM" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/DZ4BcAne4hM/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=DZ4BcAne4hM" target="_blank"&gt;YouTube&lt;/a&gt;.
