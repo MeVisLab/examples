@@ -45,7 +45,7 @@ Select your *.mlab* file from [Step 1](tutorials/summary/summary1/) and check *A
 
 ![Macro module wizard](images/tutorials/summary/Example2_4.png "Macro module wizard")
 
-You do not have to define fields of your macro module now, we will do that later. Click *Create*. The Windows Explorer opens showing the directory of your macro module. It should be the same directory you selected for your Package.
+You do not have to define fields of your macro module now, we will do that later. Click *Create*. The file explorer opens showing the directory of your macro module. It should be the same directory you selected for your Package.
 
 ### Directory Structure of a Macro Module
 The directory structure for a macro module is as follows:
