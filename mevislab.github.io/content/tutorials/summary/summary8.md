@@ -139,7 +139,11 @@ Interface {
         }
         Field selected3DView {
             type   = Enum
-            values = Segmented,File,Both
+            items {
+                item Segmented {}
+                item File {}
+                item Both {}
+            }
         }
         Field totalVolume {
             internalName = CalculateVolume.totalVolume
