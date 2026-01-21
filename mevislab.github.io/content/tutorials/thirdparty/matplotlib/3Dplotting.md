@@ -22,7 +22,7 @@ In this tutorial, we will equip the macro module we created in the [Example 1: M
 The fields and commands needed have already been prepared in the second tutorial. We will just have to modify our *.py* file a little bit to make them usable. Integrate the following code into your *.py* file and import numpy.
 
 {{< highlight filename = "BaseNetwork.py">}}
-```Stan
+```Python
 def click3D():
     clearFigure()
     figure = ctx.control("canvas").object().figure()
@@ -47,7 +47,8 @@ def click3D():
         subplot.set_title(f'Sequence from {values[0]} to {endSlice}')
         ctx.field("SubImage.z").value = values[0]
         figure.canvas.draw()
-``` {{</highlight>}}
+```
+{{</highlight>}}
 
 After saving, you should be able to reproduce results like these:
 

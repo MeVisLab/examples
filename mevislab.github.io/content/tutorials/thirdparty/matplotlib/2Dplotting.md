@@ -31,35 +31,36 @@ This new panel window contains a Matplotlib canvas where the plots will be displ
 {{< highlight filename = "BaseNetwork.script">}}
 ```Stan
 Window {
-  Category {
-    Horizontal {
-      Vertical {
-        expandY = True
-        expandX = False
-        Box {
-          title= "Single Slice"
+    Category {
+        Horizontal {
+            Vertical {
+                expandY = True
+                expandX = False
+                Box {
+                    title= "Single Slice"
+                }
+                Box {
+                    title = "Sequence"
+                }
+                Empty {
+                    expandY = True
+                }
+            }
+            Box {
+                MatplotlibCanvas {
+                    expandY = True
+                    expandX = True
+                    name = canvas
+                    useToolBar = True
+                }
+                expandY = True
+                expandX = True
+            }     
         }
-        Box {
-          title = "Sequence"
-        }
-        Empty {
-          expandY = True
-        }
-      }
-      Box {
-        MatplotlibCanvas {
-          expandY = True
-          expandX = True
-          name = canvas
-          useToolBar = True
-        }
-        expandY = True
-        expandX = True
-      }     
     }
-  }
 }   
-``` {{</highlight>}}
+```
+{{</highlight>}}
 
 Letting a box expand on the x- or y-axis or adding an empty object do so contributes to the panel looking a certain way and helps the positioning of the elements. You can also try to vary the positioning by adding or removing "expand" statements or moving boxes from a vertical to a horizontal alignment. Hover over the boxes in the preview to explore the concept.
 
@@ -85,7 +86,7 @@ But there are a few other module parameters that must be set beforehand to make 
 To do so, we will be defining a "setDefaults" function for our module. Open the *.py* file and add the code below.
 
 {{< highlight filename = "BaseNetwork.py">}}
-```Stan
+```Python
 def setDefaults():
     ctx.field("SubImage.fullSize").touch()
     ctx.field("SubImage.autoApply").value = True
@@ -97,12 +98,13 @@ def setDefaults():
     ctx.field("Histogram.curveType").value = "Area"
     ctx.field("Histogram.useStepFunction").value = True
     ctx.field("Histogram.curveStyle").value = 7
-``` {{</highlight>}}
+```
+{{</highlight>}}
 
 As it is also incredibly important that the values of the parameters we are referencing are regularly updated, we will be setting some global values containing those values.
 
 {{< highlight filename = "BaseNetwork.py">}}
-```Stan
+```Python
 
 startSlice = None
 endSlice = None
@@ -113,12 +115,13 @@ def updateSlices():
     startSlice = int(ctx.field("SubImage.z").value)
     endSlice = int(ctx.field("SubImage.sz").value)
     bins = ctx.field("Histogram.binSize").value
-``` {{</highlight>}}
+```
+{{</highlight>}}
 
 Make sure that the variable declarations as "None" are put above the "setDefaults" function and add the execution of the "updateSlices()" function into the "setDefaults" function, like so:
 
 {{< highlight filename = "BaseNetwork.py">}}
-```Stan
+```Python
 def setDefaults():
     ctx.field("Histogram.xRange").value = "Dynamic Min/Max"
     ctx.field("Histogram.useZeroAsBinCenter").value = False
@@ -131,7 +134,8 @@ def setDefaults():
     ctx.field("SubImage.autoApply").value = True
     ctx.field("Histogram.updateMode").value = "AutoUpdate"
     updateSlices()
-``` {{</highlight>}}
+```
+{{</highlight>}}
 
 Now we are ensuring that the "setDefaults" function and therefore also the "updateSlices" function are executed every time the panel is opened by setting "setDefaults" as a wakeup command.
 
@@ -142,7 +146,8 @@ Commands {
     
     wakeupCommand = "setDefaults"
 } 
-``` {{</highlight>}}
+```
+{{</highlight>}}
 
 And we add field listeners, so that the field values that we are working with are updated every time they are changed.
 
@@ -154,11 +159,11 @@ Commands {
     wakeupCommand = "setDefaults"
 
     FieldListener {
-      listenField = "SubImage.sz"
-      listenField = "SubImage.z"
-      listenField = "Histogram.binSize"
+        listenField = "SubImage.sz"
+        listenField = "SubImage.z"
+        listenField = "Histogram.binSize"
 
-      command     = "updateSlices"
+        command     = "updateSlices"
     }
 } 
 ``` {{</highlight>}}
@@ -169,46 +174,49 @@ Put this inside of the box titled "Single Slice":
 {{< highlight filename = "BaseNetwork.script">}}
 ```Stan
           Field "SubImage.sz" {
-            title = "Plot slice"
+              title = "Plot slice"
           }
           Button {
-            title = "in 2D"
-            command = "singleSlice2D"
+              title = "in 2D"
+              command = "singleSlice2D"
           }
           Button {
-            title = "in 3D"
-            command = "click3D"
+              title = "in 3D"
+              command = "click3D"
           }
           Empty {}
-``` {{</highlight>}}
+```
+{{</highlight>}}
 
 And then add this to your box titled "Sequence":
 
 {{< highlight filename = "BaseNetwork.script">}}
 ```Stan
           Field "SubImage.z" {
-            title = "From slice"
+              title = "From slice"
           }
           Field "SubImage.sz" {
-            title = "To slice"
+              title = "To slice"
           }
           Button {
-            title = "Plot 2D"
-            command = "click2D"
+              title = "Plot 2D"
+              command = "click2D"
           }
           Button {
-            title = "Plot 3D"
-            command = "click3D"
+              title = "Plot 3D"
+              command = "click3D"
           }
-``` {{</highlight>}}
+```
+{{</highlight>}}
 
 Lastly, put this under your two boxes, but above the empty element in the vertical alignment:
 {{< highlight filename = "BaseNetwork.script">}}
 ```Stan
         Field "Histogram.binSize" {
-          title = "Bin size"
+            title = "Bin size"
         }
-``` {{</highlight>}}
+```
+{{</highlight>}}
 
 If you followed all of the listed steps, your panel preview should look like this and display all the current parameter values. 
 ![Adapted macro panel](images/tutorials/thirdparty/Matplotlib10.PNG)
@@ -218,16 +226,17 @@ You will have noticed how all of the buttons in the *.script* file have a comman
 However, for any of the functions referenced via "command" to work, we need one that ensures that the plots are shown on the integrated Matplotlib canvas. We will start with that one.
 
 {{< highlight filename = "BaseNetwork.py">}}
-```Stan
+```Python
 def clearFigure():
     control = ctx.control("canvas").object()
     control.figure().clear()
-``` {{</highlight>}}
+```
+{{</highlight>}}
 
 Now that this is prepared and ready, we can add the functions to extract the data:
 
 {{< highlight filename = "BaseNetwork.py">}}
-```Stan
+```Python
 def getX():
     x = ctx.field("Histogram.outputHistogramCurve").object().getXValues()
     stringx = ",".join([str(i) for i in x])
@@ -239,12 +248,13 @@ def getY():
     stringy = ",".join([str(i) for i in y])
     yValues = stringy.split(",")
     return [float(s) for s in yValues]  
-``` {{</highlight>}}
+```
+{{</highlight>}}
 
 And lastly, enable the plotting of a single slice as well as a sequence in 2D through our panel by adding the code below. 
 
 {{< highlight filename = "BaseNetwork.py">}}
-```Stan
+```Python
 def singleSlice2D():
     lastSlice = endSlice
     ctx.field("SubImage.z").value = endSlice
@@ -287,7 +297,8 @@ def click2D():
         figure.canvas.draw()
     else:
         plotSequence()
-``` {{</highlight>}}
+```
+{{</highlight>}}
 
 You should now be able to reproduce results like these: 
 

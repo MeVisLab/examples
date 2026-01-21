@@ -57,23 +57,25 @@ First, we create a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLRefere
 {{< highlight filename="IsoCSOs.script" >}}
 ```Stan
 Window {
-    TabView {
-        TabViewItem Main {
-            Horizontal {
-                Viewer View2D.self {
-                    type = SoRenderArea
-                    pw = 400
-                    ph = 400
-                }
-                Viewer SoExaminerViewer.self {
-                    type = SoExaminerViewer
-                    pw = 400
-                    ph = 400
+    Category {
+        TabView {
+            TabViewItem Main {
+                Horizontal {
+                    Viewer View2D.self {
+                        type = SoRenderArea
+                        pw   = 400
+                        ph   = 400
+                    }
+                    Viewer SoExaminerViewer.self {
+                        type = SoExaminerViewer
+                        pw   = 400
+                        ph   = 400
+                    }
                 }
             }
-        }
-        
-        TabViewItem Settings {
+            
+            TabViewItem Settings {
+            }
         }
     }
 }
@@ -109,26 +111,28 @@ name. All field settings are taken over from the internal field from the module 
 {{< highlight filename="IsoCSOs.script" >}}
 ```Stan
 Window {
-    TabView {
-        TabViewItem Main {
-            Vertical {
-                Field LocalImage.name {}
-                Horizontal {
-                    Viewer View2D.self {
-                        type = SoRenderArea
-                        pw = 400
-                        ph = 400
-                    }
-                    Viewer SoExaminerViewer.self {
-                        type = SoExaminerViewer
-                        pw = 400
-                        ph = 400
+    Category {
+        TabView {
+            TabViewItem Main {
+                Vertical {
+                    Field LocalImage.name {}
+                    Horizontal {
+                        Viewer View2D.self {
+                            type = SoRenderArea
+                            pw   = 400
+                            ph   = 400
+                        }
+                        Viewer SoExaminerViewer.self {
+                            type = SoExaminerViewer
+                            pw   = 400
+                            ph   = 400
+                        }
                     }
                 }
             }
-        }
-        
-        TabViewItem Settings {
+            
+            TabViewItem Settings {
+            }
         }
     }
 }
@@ -174,35 +178,37 @@ Commands {
 }
 
 Window {
-    TabView {
-        TabViewItem Main {
-            Vertical {
-                Horizontal {
-                    Field LocalImage.name {}
-                    Button {
-                        title = "Browse..."
-                        command = fileDialog
+    Category {
+        TabView {
+            TabViewItem Main {
+                Vertical {
+                    Horizontal {
+                        Field LocalImage.name {}
+                        Button {
+                            title = "Browse..."
+                            command = fileDialog
+                        }
+                        Button IsoGenerator {
+                            title = "Iso Generator"
+                        }
                     }
-                    Button IsoGenerator {
-                        title = "Iso Generator"
-                    }
-                }
-                Horizontal {
-                    Viewer View2D.self {
-                        type = SoRenderArea
-                        pw = 400
-                        ph = 400
-                    }
-                    Viewer SoExaminerViewer.self {
-                        type = SoExaminerViewer
-                        pw = 400
-                        ph = 400
+                    Horizontal {
+                        Viewer View2D.self {
+                            type = SoRenderArea
+                            pw   = 400
+                            ph   = 400
+                        }
+                        Viewer SoExaminerViewer.self {
+                            type = SoExaminerViewer
+                            pw   = 400
+                            ph   = 400
+                        }
                     }
                 }
             }
-        }
-        
-        TabViewItem Settings {
+            
+            TabViewItem Settings {
+            }
         }
     }
 }
@@ -245,9 +251,11 @@ can do this in the following way:
 ```Stan
 Window {
     windowActivatedCommand = enableFunctionalities
-    TabView {
-        TabViewItem Main {
-            ...
+    Category {
+        TabView {
+            TabViewItem Main {
+                ...
+            }
         }
     }
 }

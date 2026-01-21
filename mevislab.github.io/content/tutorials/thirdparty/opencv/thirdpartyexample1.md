@@ -45,41 +45,43 @@ Add the following to your file:
 {{< highlight filename="<YOUR_MODULE_NAME>.script" >}}
 ```Stan
 Interface  {
-  Inputs {}
-  Outputs {}
-  Parameters {}
+    Inputs {}
+    Outputs {}
+    Parameters {}
 }
 
 Commands {
-  source = $(LOCAL)/<YOUR_MODULE_NAME>.py
+    source = $(LOCAL)/<YOUR_MODULE_NAME>.py
 }
 
 Window {
-  h = 500
-  w = 500
-  initCommand = setupInterface
-  destroyedCommand = releaseCamera
-  
-  Vertical {
-    Horizontal {
-      Button {
-        title = Start
-        command = startCapture
-      }
-      Button {
-        title = Pause
-        command = stopCapture
-      }
+    h = 500
+    w = 500
+    initCommand = setupInterface
+    destroyedCommand = releaseCamera
+    
+    Category {
+        Vertical {
+            Horizontal {
+                Button {
+                    title = Start
+                    command = startCapture
+                }
+                Button {
+                    title = Pause
+                    command = stopCapture
+                }
+            }
+            Horizontal {
+                expandX = True
+                expandY = True
+                
+                Viewer View2D.self {
+                    type = SoRenderArea
+                }
+            }
+        }
     }
-    Horizontal {
-      expandX = True
-      expandY = True
-      
-      Viewer View2D.self {
-        type = SoRenderArea
-      }
-    }
-  }
 }
 ```
 {{</highlight>}}
@@ -91,19 +93,19 @@ Now open the Python file of your module and define the commands to be called fro
 
 # Set up the interface for PythonImage module
 def setupInterface():
-  pass
+    pass
 
 # Release camera in the end
 def releaseCamera(_):
-  pass
+    pass
 
 # Start capturing webcam
 def startCapture():
-  pass
+    pass
 
 # Stop capturing webcam
 def stopCapture():
-  pass
+    pass
 
 ```
 {{</highlight>}}
@@ -121,22 +123,22 @@ camera = None
 
 # Set up the interface for PythonImage module
 def setupInterface():
-  global _interfaces
-  _interfaces = []
-  interface = ctx.module("PythonImage").call("getInterface")
-  _interfaces.append(interface)
+    global _interfaces
+    _interfaces = []
+    interface = ctx.module("PythonImage").call("getInterface")
+    _interfaces.append(interface)
 
 # Release camera in the end
 def releaseCamera(_):
-  pass
+    pass
 
 # Start capturing webcam
 def startCapture():
-  pass
+    pass
 
 # Stop capturing webcam
 def stopCapture():
-  pass
+    pass
 ```
 {{</highlight>}}
 
@@ -150,19 +152,19 @@ Now we want to start capturing the camera.
 ```Python
 # Start capturing webcam
 def startCapture():
-  global camera
-  if not camera:
-    camera = cv2.VideoCapture(0)
-  ctx.callWithInterval(0.1, grabImage)
+    global camera
+    if not camera:
+        camera = cv2.VideoCapture(0)
+    ctx.callWithInterval(0.1, grabImage)
 
 # Grab image from camera and update
 def grabImage():
-  _, img = camera.read()
-  updateImage(img)
+    _, img = camera.read()
+    updateImage(img)
 
 # Update image in interface
 def updateImage(image):
-  _interfaces[0].setImage(OpenCVUtils.convertImageToML(image), minMaxValues = [0,255])
+    _interfaces[0].setImage(OpenCVUtils.convertImageToML(image), minMaxValues = [0,255])
 ```
 {{</highlight>}}
 
@@ -176,7 +178,7 @@ Next, we define what happens if you click the *Pause* button.
 ...
 # Stop capturing webcam
 def stopCapture():
-  ctx.removeTimers()
+    ctx.removeTimers()
 ...
 ```
 {{</highlight>}}
@@ -189,12 +191,12 @@ In the end, we need to release the camera whenever you close the Window of your 
 ...
 # Release camera in the end
 def releaseCamera(_):
-  global camera, _interfaces
-  ctx.removeTimers()
-  _interfaces = []
-  if camera:
-    camera.release()
-    camera = None
+    global camera, _interfaces
+    ctx.removeTimers()
+    _interfaces = []
+    if camera:
+        camera.release()
+        camera = None
 ...
 ```
 {{</highlight>}}

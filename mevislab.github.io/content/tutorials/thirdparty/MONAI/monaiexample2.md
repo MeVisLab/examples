@@ -60,15 +60,15 @@ Add the following code into the *.script* file and save.
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
 Interface {
-  Inputs {
-    Field inputImage { type = Image }
-  }
-  Outputs {
-    Field outImage { internalName = PythonImage.output0 }
-  }
-  Parameters {
-    Field start { type = Trigger }
-  }
+    Inputs {
+        Field inputImage { type = Image }
+    }
+    Outputs {
+        Field outImage { internalName = PythonImage.output0 }
+    }
+    Parameters {
+        Field start { type = Trigger }
+    }
 }
 ```
 {{</highlight>}}
@@ -83,7 +83,7 @@ Add a *Commands* section to your *.script* file.
 ```Stan
 ...
 Commands {
-  source = $(LOCAL)/MONAIDemo.py
+    source = $(LOCAL)/MONAIDemo.py
 }
 ...
 ```
@@ -107,9 +107,9 @@ Define your input image field to reuse the internal name of the left input of th
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
 Interface {
-  Inputs {
-    Field inputImage { internalName = Resample3D.input0 }
-  }
+    Inputs {
+        Field inputImage { internalName = Resample3D.input0 }
+    }
   ...
 }
 ```
@@ -124,11 +124,11 @@ Again, open the *.script* file and change the internal name of your *outImage* f
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
 Interface {
-  ...
-  Outputs {
-    Field outImage { internalName = Resample3D1.output0 }
-  }
-  ...
+    ...
+    Outputs {
+        Field outImage { internalName = Resample3D1.output0 }
+    }
+    ...
 }
 ```
 {{</highlight>}}
@@ -160,12 +160,12 @@ Open the *.script* file and add the fields *start* and *voxelSize* to your local
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
 Interface {
-  ...
-  Parameters {
-    Field start { type = Trigger }
-    Field voxelSize { internalName = Resample3D.voxelSize }
-  }
-  ...
+    ...
+    Parameters {
+        Field start { type = Trigger }
+        Field voxelSize { internalName = Resample3D.voxelSize }
+    }
+    ...
 }
 ```
 {{</highlight>}}
@@ -185,15 +185,15 @@ Open the *.script* file and add the following fields to your local macro module 
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
 Interface {
-  ...
-  Parameters {
     ...
-    Field sizeX { type = Int }
-    Field sizeY { type = Int }
-    Field sizeZ { type = Int }
+    Parameters {
+        ...
+        Field sizeX { type = Int }
+        Field sizeY { type = Int }
+        Field sizeZ { type = Int }
+        ...
+    }
     ...
-  }
-  ...
 }
 ```
 {{</highlight>}}
@@ -210,14 +210,14 @@ Open the *.script* file and add the following fields to your local macro module 
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
 Interface {
-  ...
-  Parameters {
     ...
-    Field thresholdMin { internalName = IntervalThreshold.threshMin }
-    Field thresholdMax { internalName = IntervalThreshold.threshMax }
+    Parameters {
+        ...
+        Field thresholdMin { internalName = IntervalThreshold.threshMin }
+        Field thresholdMax { internalName = IntervalThreshold.threshMax }
+        ...
+    }
     ...
-  }
-  ...
 }
 ```
 {{</highlight>}}
@@ -233,14 +233,14 @@ Open the *.script* file and add the following fields to your local macro module 
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
 Interface {
-  ...
-  Parameters {
     ...
-    Field scaleMin { internalName = Scale.outputMin }
-    Field scaleMax { internalName = Scale.outputMax }
+    Parameters {
+        ...
+        Field scaleMin { internalName = Scale.outputMin }
+        Field scaleMax { internalName = Scale.outputMax }
+        ...
+    }
     ...
-  }
-  ...
 }
 ```
 {{</highlight>}}
@@ -271,27 +271,27 @@ We add some Field Listeners to our *Commands* section of the *.script* file. The
 ```Stan
 ...
 Commands {
-  source = $(LOCAL)/MONAIDemo.py
-  
-  FieldListener start {
-    command = onStart
-  }
-  
-  FieldListener sizeX {
-    command = _sizeChanged
-  }
-  
-  FieldListener sizeY {
-    command = _sizeChanged
-  }
-  
-  FieldListener sizeZ {
-    command = _sizeChanged
-  }
-  
-  FieldListener inputImage {
-    command = _setDefaultValues
-  }
+    source = $(LOCAL)/MONAIDemo.py
+    
+    FieldListener start {
+        command = onStart
+    }
+    
+    FieldListener sizeX {
+        command = _sizeChanged
+    }
+    
+    FieldListener sizeY {
+        command = _sizeChanged
+    }
+    
+    FieldListener sizeZ {
+        command = _sizeChanged
+    }
+    
+    FieldListener inputImage {
+        command = _setDefaultValues
+    }
 }
 ...
 ```
@@ -360,53 +360,53 @@ We want to use the image that has been modified according to our pretrained netw
 {{< highlight filename="MONAIDemo.py" >}}
 ```Python
 ...
-  def onStart():
-    print("\n--- Start ---")
-    try:
-        inputImage = _getImage()
+    def onStart():
+        print("\n--- Start ---")
+        try:
+            inputImage = _getImage()
 
-        if inputImage:
-            imageArray = inputImage.getTile(
-                (0, 0, 0, 0, 0, 0), inputImage.imageExtent()
-            )
-            # We only need x, y and z-dimensions
-            image = imageArray[0, 0, 0, :, :, :]
+            if inputImage:
+                imageArray = inputImage.getTile(
+                    (0, 0, 0, 0, 0, 0), inputImage.imageExtent()
+                )
+                # We only need x, y and z-dimensions
+                image = imageArray[0, 0, 0, :, :, :]
 
-            print(f"Using image {image.shape}")
+                print(f"Using image {image.shape}")
 
-            # prepare tensor
-            inputTensor = torch.tensor(image[None, None, :, :, :]).to(DEVICE)
-            print(f" Tensorform: {tuple(inputTensor.shape)}")
-            # Load Bundle-Configuration
-            parser = load_bundle_config(MODEL_DIR, "train.json")
+                # prepare tensor
+                inputTensor = torch.tensor(image[None, None, :, :, :]).to(DEVICE)
+                print(f" Tensorform: {tuple(inputTensor.shape)}")
+                # Load Bundle-Configuration
+                parser = load_bundle_config(MODEL_DIR, "train.json")
 
-            # Create network from train.json
-            model = parser.get_parsed_content("network_def")
-            model.load_state_dict(torch.load(MODEL_PATH, map_location=DEVICE))
-            model.to(DEVICE)
-            model.eval()
-            print("Model loaded and initialized.")
+                # Create network from train.json
+                model = parser.get_parsed_content("network_def")
+                model.load_state_dict(torch.load(MODEL_PATH, map_location=DEVICE))
+                model.to(DEVICE)
+                model.eval()
+                print("Model loaded and initialized.")
 
-            # Inference
-            with torch.no_grad():
-                output = model(inputTensor)
-                prediction = output.argmax(dim=1, keepdim=True).cpu().numpy()[0, 0]
+                # Inference
+                with torch.no_grad():
+                    output = model(inputTensor)
+                    prediction = output.argmax(dim=1, keepdim=True).cpu().numpy()[0, 0]
 
-            print("Inference done.")
+                print("Inference done.")
 
-            # Result back into MeVisLab
-            interface = ctx.module("PythonImage").call("getInterface")
-            interface.setImage(
-                prediction, voxelToWorldMatrix=inputImage.voxelToWorldMatrix()
-            )
+                # Result back into MeVisLab
+                interface = ctx.module("PythonImage").call("getInterface")
+                interface.setImage(
+                    prediction, voxelToWorldMatrix=inputImage.voxelToWorldMatrix()
+                )
 
-            print("--- Segmentation done ---\n")
+                print("--- Segmentation done ---\n")
 
-    except Exception as e:
-        print("Error:", e)
-        import traceback
+        except Exception as e:
+            print("Error:", e)
+            import traceback
 
-        traceback.print_exc()
+            traceback.print_exc()
 ...
 ```
 {{</highlight>}}
@@ -418,25 +418,25 @@ We have to calculate a bounding box in our `ROISelect` module and need to be abl
 {{< highlight filename="MONAIDemo.py" >}}
 ```Python
 ...
-  def _sizeChanged(field: "mevislab.MLABField"):
-    if ctx.field("Resample3D.output0").isValid():
-        voxelSizeImage = ctx.field("Resample3D.output0").image()
-        # Get the size of this image
-        voxelSizeImageExtent = voxelSizeImage.imageExtent()
+    def _sizeChanged(field: "mevislab.MLABField"):
+        if ctx.field("Resample3D.output0").isValid():
+            voxelSizeImage = ctx.field("Resample3D.output0").image()
+            # Get the size of this image
+            voxelSizeImageExtent = voxelSizeImage.imageExtent()
 
-        # Calculate region of interest by defining start point and size
-        roiStartX = voxelSizeImageExtent[0] - ctx.field("sizeX").value
-        roiStartY = voxelSizeImageExtent[1] - ctx.field("sizeY").value
-        roiStartZ = voxelSizeImageExtent[2] - ctx.field("sizeZ").value
+            # Calculate region of interest by defining start point and size
+            roiStartX = voxelSizeImageExtent[0] - ctx.field("sizeX").value
+            roiStartY = voxelSizeImageExtent[1] - ctx.field("sizeY").value
+            roiStartZ = voxelSizeImageExtent[2] - ctx.field("sizeZ").value
 
-        ctx.field("ROISelect.startVoxelX").value = roiStartX
-        ctx.field("ROISelect.startVoxelY").value = roiStartY
-        ctx.field("ROISelect.startVoxelZ").value = roiStartZ
+            ctx.field("ROISelect.startVoxelX").value = roiStartX
+            ctx.field("ROISelect.startVoxelY").value = roiStartY
+            ctx.field("ROISelect.startVoxelZ").value = roiStartZ
 
-        # Subtract 1 because the voxel values start with 0
-        ctx.field("ROISelect.endVoxelX").value = voxelSizeImageExtent[0] - 1
-        ctx.field("ROISelect.endVoxelY").value = voxelSizeImageExtent[1] - 1
-        ctx.field("ROISelect.endVoxelZ").value = voxelSizeImageExtent[2] - 1
+            # Subtract 1 because the voxel values start with 0
+            ctx.field("ROISelect.endVoxelX").value = voxelSizeImageExtent[0] - 1
+            ctx.field("ROISelect.endVoxelY").value = voxelSizeImageExtent[1] - 1
+            ctx.field("ROISelect.endVoxelZ").value = voxelSizeImageExtent[2] - 1
 ...
 ```
 {{</highlight>}}
@@ -449,15 +449,15 @@ Open the *.script* file and add a *Window* section. In this window, we reuse the
 ```Stan
 ...
 Window {
-  height = 100
-  width = 100
-  Category {
-    Viewer ROISelect.scene.self {
-      type = SoRenderArea
-      expandX = True
-      expandY = True
+    height = 100
+    width = 100
+    Category {
+        Viewer ROISelect.scene.self {
+            type = SoRenderArea
+            expandX = True
+            expandY = True
+        }
     }
-  }
 }
 ...
 ```
@@ -473,17 +473,17 @@ Back to Python, we now need to reset our module to default in the case the input
 ```Python
 ...
   def _setDefaultValues():
-    ctx.field("voxelSize").value = [1.5, 1.5, 2]
-    ctx.field("sizeX").value = 160
-    ctx.field("sizeY").value = 160
-    ctx.field("sizeZ").value = 160
-    ctx.field("thresholdMin").value = -57
-    ctx.field("thresholdMax").value = 164
-    ctx.field("scaleMin").value = 0
-    ctx.field("scaleMax").value = 1
+      ctx.field("voxelSize").value = [1.5, 1.5, 2]
+      ctx.field("sizeX").value = 160
+      ctx.field("sizeY").value = 160
+      ctx.field("sizeZ").value = 160
+      ctx.field("thresholdMin").value = -57
+      ctx.field("thresholdMax").value = 164
+      ctx.field("scaleMin").value = 0
+      ctx.field("scaleMax").value = 1
 
-    interface = ctx.module("PythonImage").call("getInterface")
-    interface.unsetImage()
+      interface = ctx.module("PythonImage").call("getInterface")
+      interface.unsetImage()
 ...
 ```
 {{</highlight>}}

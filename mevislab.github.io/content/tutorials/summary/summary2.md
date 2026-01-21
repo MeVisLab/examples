@@ -68,13 +68,13 @@ The initial *.def* file contains information you entered into the Wizard for the
 {{< highlight filename="<MACRO_NAME>.def" >}}
 ```Stan
 Macro module TutorialSummary {
-  genre              = "VisualizationMain"
-  author             = "MeVis Medical Solutions AG"
-  comment            = "Macro module for MeVisLab tutorials"
-  keywords           = "2D 3D RegionGrowing"
-  seeAlso            = ""
+    genre              = "VisualizationMain"
+    author             = "MeVis Medical Solutions AG"
+    comment            = "Macro module for MeVisLab tutorials"
+    keywords           = "2D 3D RegionGrowing"
+    seeAlso            = ""
    
-  externalDefinition = "$(LOCAL)/TutorialSummary.script"
+    externalDefinition = "$(LOCAL)/TutorialSummary.script"
 }
 ```
 {{</highlight>}}
@@ -99,14 +99,14 @@ The script (*.script*) file defines fields accessible from outside the macro mod
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
 Interface {
-  Inputs {}
-  Outputs {}
-  Parameters {}
+    Inputs {}
+    Outputs {}
+    Parameters {}
 }
 
 
 Commands {
-  source = $(LOCAL)/TutorialSummary.py
+    source = $(LOCAL)/TutorialSummary.py
 }
 ```
 {{</highlight>}}

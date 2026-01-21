@@ -36,13 +36,13 @@ Open the *.script* file in MATE as already explained in [Step 3](tutorials/summa
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
 Interface {
-  Inputs {}
-  Outputs {
-    Field out2D { internalName = LocalImage.outImage }
-    Field out3D { internalName = SoSwitch.self }
-    Field outSegmentationMask { internalName = CloseGap.output0 }
-  }
-  ...
+    Inputs {}
+    Outputs {
+      Field out2D { internalName = LocalImage.outImage }
+      Field out3D { internalName = SoSwitch.self }
+      Field outSegmentationMask { internalName = CloseGap.output0 }
+    }
+    ...
 }
 ```
 {{</highlight>}}
@@ -87,8 +87,8 @@ marker_location_new = [-20, -30, 35]
 new_color = [0.5, 0.5, 0]
 
 def loadImage(full_path):
-  MLAB.log("Setting image path to '" + full_path + "'...")
-  ctx.field("TutorialSummary.openFile").value = full_path
+    MLAB.log("Setting image path to '" + full_path + "'...")
+    ctx.field("TutorialSummary.openFile").value = full_path
 ```
 {{</highlight>}}
 
@@ -102,12 +102,12 @@ Next, we need a function to check if the loaded image available at the first out
 ```Python
 ...
 def isImageValid():
-  MLAB.log("Checking if image is valid...")
-  data_valid = ctx.field("TutorialSummary.out2D").isValid()
-  if data_valid:
-    return True
-  else:
-    return False
+    MLAB.log("Checking if image is valid...")
+    data_valid = ctx.field("TutorialSummary.out2D").isValid()
+    if data_valid:
+        return True
+    else:
+        return False
 ...
 ```
 {{</highlight>}}
@@ -118,14 +118,15 @@ We also need to set a marker in our macro module.
 ```Python
 ...
 def setMarkerPosition(vector):
-  MLAB.log("Setting marker position to [" + str(vector[0]) + "," + str(vector[1]) + "," + str(vector[2]) + "]...")
-  ctx.field("TutorialSummary.markerPosition").setValue(vector[0], vector[1], vector[2])
-  ctx.field("TutorialSummary.applyMarker").touch()
-  MLAB.processEvents()
-  while not ctx.field("TutorialSummary.outSegmentationMask").isValid():
-    MLAB.msleep(100)
+    MLAB.log("Setting marker position to [" + str(vector[0]) + "," + str(vector[1]) + "," + str(vector[2]) + "]...")
+    ctx.field("TutorialSummary.markerPosition").setValue(vector[0], vector[1], vector[2])
+    ctx.field("TutorialSummary.applyMarker").touch()
     MLAB.processEvents()
-  MLAB.log("Marker position set to '" + str(ctx.field("TutorialSummary.markerPosition").value) + "'...")
+
+    while not ctx.field("TutorialSummary.outSegmentationMask").isValid():
+        MLAB.msleep(100)
+        MLAB.processEvents()
+    MLAB.log("Marker position set to '" + str(ctx.field("TutorialSummary.markerPosition").value) + "'...")
 ...
 ```
 {{</highlight>}}
@@ -141,8 +142,8 @@ Having one test case for the requirement to load images and one for setting the 
 ```Python
 ...
 def reset():
-  MLAB.log("Resetting application...")
-  ctx.field("TutorialSummary.resetApplication").touch()
+    MLAB.log("Resetting application...")
+    ctx.field("TutorialSummary.resetApplication").touch()
 ...
 ```
 {{</highlight>}}
@@ -157,12 +158,12 @@ The first requirement we want to test is the possibility to load DICOM data. Aft
 ...
 # Requirement 1: The application shall be able to load DICOM data
 def TEST_LoadDICOMData():
-  # Set path to image and expect a valid image
-  loadImage(path_to_image)
-  ASSERT_TRUE(isImageValid())
-  # Reset again and expect an invalid image
-  reset()
-  ASSERT_FALSE(isImageValid())
+    # Set path to image and expect a valid image
+    loadImage(path_to_image)
+    ASSERT_TRUE(isImageValid())
+    # Reset again and expect an invalid image
+    reset()
+    ASSERT_FALSE(isImageValid())
 ...
 ```
 {{</highlight>}}
@@ -178,25 +179,25 @@ This test case shall make sure the `RegionGrowing` module calculates the total v
 # Requirement 4: The 2D viewer shall provide the possibility to segment parts of the image based on a RegionGrowing algorithm
 # Requirement 4.1: It shall be possible to click into the image for defining a marker position for starting the RegionGrowing
 def TEST_RegionGrowing():
-  # Load image and expect volumes and voxels without marker to be 0
-  loadImage(path_to_image)
-  region_growing_voxels = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
-  region_growing_volume = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
-  ASSERT_EQ(region_growing_voxels, 0)
-  ASSERT_EQ(region_growing_volume, 0)
-  # Set marker and expect volumes and voxels to be larger than 0
-  reset()
-  setMarkerPosition(marker_location)
-  region_growing_voxels = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
-  region_growing_volume = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
-  ASSERT_GT(region_growing_voxels, 0)
-  ASSERT_GT(region_growing_volume, 0)
-  # Reset application and expect volumes and voxels to be 0 again
-  reset()
-  region_growing_voxels = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
-  region_growing_volume = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
-  ASSERT_EQ(region_growing_voxels, 0)
-  ASSERT_EQ(region_growing_volume, 0)
+    # Load image and expect volumes and voxels without marker to be 0
+    loadImage(path_to_image)
+    region_growing_voxels = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
+    region_growing_volume = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
+    ASSERT_EQ(region_growing_voxels, 0)
+    ASSERT_EQ(region_growing_volume, 0)
+    # Set marker and expect volumes and voxels to be larger than 0
+    reset()
+    setMarkerPosition(marker_location)
+    region_growing_voxels = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
+    region_growing_volume = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
+    ASSERT_GT(region_growing_voxels, 0)
+    ASSERT_GT(region_growing_volume, 0)
+    # Reset application and expect volumes and voxels to be 0 again
+    reset()
+    region_growing_voxels = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
+    region_growing_volume = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
+    ASSERT_EQ(region_growing_voxels, 0)
+    ASSERT_EQ(region_growing_volume, 0)
 ...
 ```
 {{</highlight>}}
@@ -213,38 +214,38 @@ Increasing the threshold shall result in larger volumes, decreasing shall result
 # Requirement 4.1: It shall be possible to click into the image for defining a marker position for starting the RegionGrowing
 # Requirement 4.2: It shall be possible to define a threshold for the RegionGrowing algorithm
 def TEST_RegionGrowing():
-  # Load image and expect volumes and voxels without marker to be 0
-  loadImage(path_to_image)
-  region_growing_voxels = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
-  region_growing_volume = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
-  ASSERT_EQ(region_growing_voxels, 0)
-  ASSERT_EQ(region_growing_volume, 0)
-  # Set marker and expect volumes and voxels to be larger than 0
-  setMarkerPosition(marker_location)
-  region_growing_voxels = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
-  region_growing_volume = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
-  ASSERT_GT(region_growing_voxels, 0)
-  ASSERT_GT(region_growing_volume, 0)
-  # Test the threshold functionality by changing the value and comparing the results
-  current_threshold = ctx.field("TutorialSummary.thresholdInterval").value
-  current_threshold = current_threshold + 0.5
-  ctx.field("TutorialSummary.thresholdInterval").value = current_threshold
-  region_growing_voxels_new = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
-  region_growing_volume_new = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
-  ASSERT_GT(region_growing_voxels_new, region_growing_voxels)
-  ASSERT_GT(region_growing_volume_new, region_growing_volume)
-  current_threshold = current_threshold - 0.7
-  ctx.field("TutorialSummary.thresholdInterval").value = current_threshold
-  region_growing_voxels_new = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
-  region_growing_volume_new = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
-  ASSERT_LT(region_growing_voxels_new, region_growing_voxels)
-  ASSERT_LT(region_growing_volume_new, region_growing_volume)
-  # Reset application and expect volumes and voxels to be 0 again
-  reset()
-  region_growing_voxels = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
-  region_growing_volume = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
-  ASSERT_EQ(region_growing_voxels, 0)
-  ASSERT_EQ(region_growing_volume, 0)
+    # Load image and expect volumes and voxels without marker to be 0
+    loadImage(path_to_image)
+    region_growing_voxels = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
+    region_growing_volume = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
+    ASSERT_EQ(region_growing_voxels, 0)
+    ASSERT_EQ(region_growing_volume, 0)
+    # Set marker and expect volumes and voxels to be larger than 0
+    setMarkerPosition(marker_location)
+    region_growing_voxels = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
+    region_growing_volume = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
+    ASSERT_GT(region_growing_voxels, 0)
+    ASSERT_GT(region_growing_volume, 0)
+    # Test the threshold functionality by changing the value and comparing the results
+    current_threshold = ctx.field("TutorialSummary.thresholdInterval").value
+    current_threshold = current_threshold + 0.5
+    ctx.field("TutorialSummary.thresholdInterval").value = current_threshold
+    region_growing_voxels_new = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
+    region_growing_volume_new = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
+    ASSERT_GT(region_growing_voxels_new, region_growing_voxels)
+    ASSERT_GT(region_growing_volume_new, region_growing_volume)
+    current_threshold = current_threshold - 0.7
+    ctx.field("TutorialSummary.thresholdInterval").value = current_threshold
+    region_growing_voxels_new = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
+    region_growing_volume_new = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
+    ASSERT_LT(region_growing_voxels_new, region_growing_voxels)
+    ASSERT_LT(region_growing_volume_new, region_growing_volume)
+    # Reset application and expect volumes and voxels to be 0 again
+    reset()
+    region_growing_voxels = ctx.field("TutorialSummary.RegionGrowing.numSegmentedVoxels").value
+    region_growing_volume = ctx.field("TutorialSummary.RegionGrowing.segmentedVolume_ml").value
+    ASSERT_EQ(region_growing_voxels, 0)
+    ASSERT_EQ(region_growing_volume, 0)
 ...
 ```
 {{</highlight>}}
@@ -260,25 +261,25 @@ Nevertheless, we can write an automated test checking the possibility to define 
 ```Python
 ...
 def TEST_OverlayColor():
-  reset()
-  loadImage(path_to_image)
-  setMarkerPosition(marker_location)
-  ctx.field("SoCameraInteraction.viewAll").touch()
-  ctx.field("SoCameraInteraction.viewFromLeft").touch()
-  MLAB.processInventorQueue()
-  ctx.field("OffscreenRenderer.update").touch()
-  MLAB.processInventorQueue()
-  current_color = ctx.field("TutorialSummary.selectOverlayColor").value
-  ctx.field("TutorialSummary.selectOverlayColor").setValue(new_color)
-  ctx.field("SoCameraInteraction.viewAll").touch()
-  ctx.field("SoCameraInteraction.viewFromLeft").touch()
-  MLAB.processInventorQueue()
-  ctx.field("OffscreenRenderer1.update").touch()
-  MLAB.processInventorQueue()
-  ASSERT_NE(current_color, ctx.field("TutorialSummary.selectOverlayColor").value)
-  ASSERT_EQ(ctx.field("TutorialSummary.selectOverlayColor").value, ctx.field("TutorialSummary.SoView2DOverlay.baseColor").value)
-  ASSERT_EQ(ctx.field("TutorialSummary.selectOverlayColor").value, ctx.field("TutorialSummary.SoWEMRendererSegmentation.faceDiffuseColor").value)
-  ASSERT_FALSE(ctx.field("ImageCompare.testPassed").value)
+    reset()
+    loadImage(path_to_image)
+    setMarkerPosition(marker_location)
+    ctx.field("SoCameraInteraction.viewAll").touch()
+    ctx.field("SoCameraInteraction.viewFromLeft").touch()
+    MLAB.processInventorQueue()
+    ctx.field("OffscreenRenderer.update").touch()
+    MLAB.processInventorQueue()
+    current_color = ctx.field("TutorialSummary.selectOverlayColor").value
+    ctx.field("TutorialSummary.selectOverlayColor").setValue(new_color)
+    ctx.field("SoCameraInteraction.viewAll").touch()
+    ctx.field("SoCameraInteraction.viewFromLeft").touch()
+    MLAB.processInventorQueue()
+    ctx.field("OffscreenRenderer1.update").touch()
+    MLAB.processInventorQueue()
+    ASSERT_NE(current_color, ctx.field("TutorialSummary.selectOverlayColor").value)
+    ASSERT_EQ(ctx.field("TutorialSummary.selectOverlayColor").value, ctx.field("TutorialSummary.SoView2DOverlay.baseColor").value)
+    ASSERT_EQ(ctx.field("TutorialSummary.selectOverlayColor").value, ctx.field("TutorialSummary.SoWEMRendererSegmentation.faceDiffuseColor").value)
+    ASSERT_FALSE(ctx.field("ImageCompare.testPassed").value)
 ...
 ```
 {{</highlight>}}
@@ -297,27 +298,27 @@ For the correctness of the volume calculation, we added the `CalculateVolume` mo
 ...
 # Requirement 8: The total volume of the segmented volume shall be calculated and shown (in ml)
 def TEST_VolumeCalculation():
-  # Reset and expect all volumes and number of voxels to be 0
-  reset()
-  reference_volume = ctx.field("CalculateVolume.totalVolume").value
-  ASSERT_EQ(reference_volume, 0)
-  # Load patient, set marker and expect all volumes and number of voxels to be > 0
-  loadImage(path_to_image)
-  reference_volume = ctx.field("CalculateVolume.totalVolume").value
-  ASSERT_EQ(reference_volume, 0)
-  setMarkerPosition(marker_location)  
-  reference_volume = ctx.field("CalculateVolume.totalVolume").value
-  current_volume = ctx.field("TutorialSummary.totalVolume").value
-  # Expect the total volume of the application to be the same as our additional CalculateVolume module
-  ASSERT_GT(reference_volume, 0)
-  ASSERT_EQ(reference_volume, current_volume)
-  #set marker to a different location and check if volumes change.
-  setMarkerPosition(marker_location_new)  
-  reference_volume_new = ctx.field("CalculateVolume.totalVolume").value
-  current_volume_new = ctx.field("TutorialSummary.totalVolume").value
-  ASSERT_NE(reference_volume, reference_volume_new)
-  ASSERT_NE(current_volume, current_volume_new)
-  ASSERT_EQ(reference_volume_new, current_volume_new)
+    # Reset and expect all volumes and number of voxels to be 0
+    reset()
+    reference_volume = ctx.field("CalculateVolume.totalVolume").value
+    ASSERT_EQ(reference_volume, 0)
+    # Load patient, set marker and expect all volumes and number of voxels to be > 0
+    loadImage(path_to_image)
+    reference_volume = ctx.field("CalculateVolume.totalVolume").value
+    ASSERT_EQ(reference_volume, 0)
+    setMarkerPosition(marker_location)  
+    reference_volume = ctx.field("CalculateVolume.totalVolume").value
+    current_volume = ctx.field("TutorialSummary.totalVolume").value
+    # Expect the total volume of the application to be the same as our additional CalculateVolume module
+    ASSERT_GT(reference_volume, 0)
+    ASSERT_EQ(reference_volume, current_volume)
+    #set marker to a different location and check if volumes change.
+    setMarkerPosition(marker_location_new)  
+    reference_volume_new = ctx.field("CalculateVolume.totalVolume").value
+    current_volume_new = ctx.field("TutorialSummary.totalVolume").value
+    ASSERT_NE(reference_volume, reference_volume_new)
+    ASSERT_NE(current_volume, current_volume_new)
+    ASSERT_EQ(reference_volume_new, current_volume_new)
 ...
 ```
 {{</highlight>}}
@@ -341,42 +342,42 @@ Initially, without any marker and segmentation, the views *Both* and *Head* show
 # Requirement 9.2: Segmentation results
 # Requirement 9.3: All
 def TEST_Toggle3DVolumes():
-  # Set ImageCompare.postErrorOnDiff to False because otherwise differences will lead to a failed test
-  ctx.field("ImageCompare.postErrorOnDiff").value = False
-  # Reset application and check if number of voxels is 0 on output
-  reset()
-  loadImage(path_to_image)
-  # Without marker, the content of the 3D viewer should be the same for File and All
-  ctx.field("TutorialSummary.selected3DView").value = "Both"
-  MLAB.processInventorQueue()
-  ctx.field("SoCameraInteraction.viewFromLeft").touch()
-  MLAB.processInventorQueue()
-  ctx.field("OffscreenRenderer.update").touch()
-  ctx.field("TutorialSummary.selected3DView").value = "File"
-  MLAB.processInventorQueue()
-  ctx.field("OffscreenRenderer1.update").touch()
-  ctx.field("ImageCompare.compare").touch()
-  ASSERT_TRUE(ctx.field("ImageCompare.testPassed").value)
-  # With marker, the content of the 3D viewer should be different
-  setMarkerPosition(marker_location)
-  ctx.field("TutorialSummary.selected3DView").value = "Both"
-  MLAB.processInventorQueue()
-  ctx.field("OffscreenRenderer.update").touch()
-  ctx.field("TutorialSummary.selected3DView").value = "File"
-  ctx.field("OffscreenRenderer1.update").touch()
-  MLAB.processInventorQueue()
-  ctx.field("ImageCompare.compare").touch()
-  ASSERT_FALSE(ctx.field("ImageCompare.testPassed").value)
-  ctx.field("TutorialSummary.selected3DView").value = "Segmented"
-  ctx.field("OffscreenRenderer1.update").touch()
-  MLAB.processInventorQueue()
-  ctx.field("ImageCompare.compare").touch()
-  ASSERT_FALSE(ctx.field("ImageCompare.testPassed").value)
-  ctx.field("TutorialSummary.selected3DView").value = "Both"
-  ctx.field("OffscreenRenderer.update").touch()
-  MLAB.processInventorQueue()
-  ctx.field("ImageCompare.compare").touch()
-  ASSERT_FALSE(ctx.field("ImageCompare.testPassed").value)
+    # Set ImageCompare.postErrorOnDiff to False because otherwise differences will lead to a failed test
+    ctx.field("ImageCompare.postErrorOnDiff").value = False
+    # Reset application and check if number of voxels is 0 on output
+    reset()
+    loadImage(path_to_image)
+    # Without marker, the content of the 3D viewer should be the same for File and All
+    ctx.field("TutorialSummary.selected3DView").value = "Both"
+    MLAB.processInventorQueue()
+    ctx.field("SoCameraInteraction.viewFromLeft").touch()
+    MLAB.processInventorQueue()
+    ctx.field("OffscreenRenderer.update").touch()
+    ctx.field("TutorialSummary.selected3DView").value = "File"
+    MLAB.processInventorQueue()
+    ctx.field("OffscreenRenderer1.update").touch()
+    ctx.field("ImageCompare.compare").touch()
+    ASSERT_TRUE(ctx.field("ImageCompare.testPassed").value)
+    # With marker, the content of the 3D viewer should be different
+    setMarkerPosition(marker_location)
+    ctx.field("TutorialSummary.selected3DView").value = "Both"
+    MLAB.processInventorQueue()
+    ctx.field("OffscreenRenderer.update").touch()
+    ctx.field("TutorialSummary.selected3DView").value = "File"
+    ctx.field("OffscreenRenderer1.update").touch()
+    MLAB.processInventorQueue()
+    ctx.field("ImageCompare.compare").touch()
+    ASSERT_FALSE(ctx.field("ImageCompare.testPassed").value)
+    ctx.field("TutorialSummary.selected3DView").value = "Segmented"
+    ctx.field("OffscreenRenderer1.update").touch()
+    MLAB.processInventorQueue()
+    ctx.field("ImageCompare.compare").touch()
+    ASSERT_FALSE(ctx.field("ImageCompare.testPassed").value)
+    ctx.field("TutorialSummary.selected3DView").value = "Both"
+    ctx.field("OffscreenRenderer.update").touch()
+    MLAB.processInventorQueue()
+    ctx.field("ImageCompare.compare").touch()
+    ASSERT_FALSE(ctx.field("ImageCompare.testPassed").value)
 ...
 ```
 {{</highlight>}}
