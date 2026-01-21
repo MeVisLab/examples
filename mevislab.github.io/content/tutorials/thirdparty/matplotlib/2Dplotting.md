@@ -34,7 +34,7 @@ Window {
     Category {
         Horizontal {
             Vertical {
-                expandY = True
+                expandY = Yes
                 expandX = False
                 Box {
                     title= "Single Slice"
@@ -43,18 +43,18 @@ Window {
                     title = "Sequence"
                 }
                 Empty {
-                    expandY = True
+                    expandY = Yes
                 }
             }
             Box {
                 MatplotlibCanvas {
-                    expandY = True
-                    expandX = True
-                    name = canvas
-                    useToolBar = True
+                    expandY   = Yes
+                    expandX   = Yes
+                    name      = canvas
+                    useToolBar = Yes
                 }
-                expandY = True
-                expandX = True
+                expandY = Yes
+                expandX = Yes
             }     
         }
     }

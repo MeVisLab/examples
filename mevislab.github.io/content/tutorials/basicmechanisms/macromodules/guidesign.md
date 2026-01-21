@@ -115,7 +115,7 @@ Window MyWindowName {
 ![Module Panel](images/tutorials/basicmechanics/ModulePanel.png "Module Panel")
 
 You can define different properties of your control. For a window, you can, for example, define a title, or whether the
-window should be shown in full screen (*fullscreen = True*).
+window should be shown in full screen (*fullscreen = Yes*).
 
 These properties are called {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/#SyntaxTagsAndValues" "tags" >}} and are individually different for each control. Which tags exist for the control window can be found
 {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Window" "here" >}}.

@@ -87,7 +87,7 @@ The *Source Box* shall provide the possibility to select a file for loading into
 
 Add a field to the *Parameters* section of your *.script* file. Name the field *openFile* and set type to *String* and internalName to *LocalImage.name*.
 
-Then, add another field to your *Box* for the *Source* and use the field name from *Parameters* section, in this case *openFile*. Set *browseButton = True* and *browseMode = open* and save your script.
+Then, add another field to your *Box* for the *Source* and use the field name from *Parameters* section, in this case *openFile*. Set *browseButton = Yes* and *browseMode = open* and save your script.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -115,7 +115,7 @@ Window {
             Box Source {
                 layout = Horizontal
                 Field openFile {
-                    browseButton = True
+                    browseButton = Yes
                     browseMode   = open
                 }
             }
@@ -150,13 +150,13 @@ Set the 2D viewer's type to *SoRenderArea* and the 3D viewer's type to *SoExamin
     Box Viewing {
         layout = Horizontal
         Viewer View2D.self {
-            expandX = True
-            expandY = True
+            expandX = Yes
+            expandY = Yes
             type    = SoRenderArea
         }
         Viewer SoExaminerViewer.self {
-            expandX = True
-            expandY = True
+            expandX = Yes
+            expandY = Yes
             type    = SoExaminerViewer
         }
     }
@@ -218,15 +218,15 @@ The next elements follow the same rules; therefore, the final script will be ava
 
 In order to set the transparency of the 3D image, we need another field reusing the *SoWEMRendererImage.faceAlphaValue*. Add a field *imageAlpha* to the *Parameters* section. Define *internalName = SoWEMRendererImage.faceAlphaValue*, *type = Integer*, *min = 0*, and *max = 1*.
 
-Add the field to the *Settings Box* and set *step = 0.1* and *slider = True*.
+Add the field to the *Settings Box* and set *step = 0.1* and *slider = Yes*.
 
 For the `RegionGrowing` threshold, add the field *thresholdInterval* to *Parameters* section and set *type = Integer*,  *min = 1*,  *max = 100*, and *internalName = RegionGrowing.autoThresholdIntervalSizeInPercent*.
 
-Add the field to the *Settings* UI, and define *step = 0.1* and *slider = True*.
+Add the field to the *Settings* UI, and define *step = 0.1* and *slider = Yes*.
 
 Define a field *isoValueImage* in the *Parameters* section and set *internalName = IsoSurfaceImage.isoValue*,  *type = Integer*,  *min = 1*, and  *max = 1000*.
 
-In the *Settings* section of the UI, set *step = 2* and *slider = True*.
+In the *Settings* section of the UI, set *step = 2* and *slider = Yes*.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -278,20 +278,20 @@ Window {
             Box Source {
                 layout = Horizontal
                 Field openFile {
-                    browseButton = True
+                    browseButton = Yes
                     browseMode   = open
                 }
             }
             Box Viewing {
                 layout = Horizontal
                 Viewer View2D.self {
-                    expandX = True
-                    expandY = True
+                    expandX = Yes
+                    expandY = Yes
                     type    = SoRenderArea
                 }
                 Viewer SoExaminerViewer.self {
-                    expandX = True
-                    expandY = True
+                    expandX = Yes
+                    expandY = Yes
                     type    = SoExaminerViewer
                 }
             }
@@ -302,15 +302,15 @@ Window {
                 }
                 Field imageAlpha {
                     step    = 0.1
-                    slider  = True
+                    slider  = Yes
                 }
                 Field thresholdInterval {
                     step    = 0.1
-                    slider  = True
+                    slider  = Yes
                 }
                 Field isoValueImage {
                     step    = 2
-                    slider  = True
+                    slider  = Yes
                 }
             }
             Box Info {
@@ -465,7 +465,7 @@ Commands {
     Box Source {
         layout = Horizontal
         Field openFile {
-            browseButton = True
+            browseButton = Yes
             browseMode   = open
         }
         Field resetApplication { }
@@ -627,7 +627,7 @@ Window {
             Box Source {
               layout = Horizontal
               Field openFile {
-                  browseButton = True
+                  browseButton = Yes
                   browseMode   = open
               }
               Field resetApplication { }
@@ -635,13 +635,13 @@ Window {
             Box Viewing {
               layout = Horizontal
               Viewer View2D.self {
-                  expandX = True
-                  expandY = True
+                  expandX = Yes
+                  expandY = Yes
                   type    = SoRenderArea
               }
               Viewer SoExaminerViewer.self {
-                  expandX = True
-                  expandY = True
+                  expandX = Yes
+                  expandY = Yes
                   type    = SoExaminerViewer
               }
             }
@@ -652,15 +652,15 @@ Window {
               }
               Field imageAlpha {
                   step   = 0.1
-                  slider = True
+                  slider = Yes
               }
               Field thresholdInterval {
                   step   = 0.1
-                  slider = True
+                  slider = Yes
               }
               Field isoValueImage {
                   step   = 2
-                  slider = True
+                  slider = Yes
               }
               Field markerPosition {}
               Field applyMarker {}

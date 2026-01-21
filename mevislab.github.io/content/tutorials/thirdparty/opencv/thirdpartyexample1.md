@@ -73,8 +73,8 @@ Window {
                 }
             }
             Horizontal {
-                expandX = True
-                expandY = True
+                expandX = Yes
+                expandY = Yes
                 
                 Viewer View2D.self {
                     type = SoRenderArea

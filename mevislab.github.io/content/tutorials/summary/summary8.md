@@ -211,7 +211,7 @@ Window "MainPanel" {
             Box Source {
                 layout = Horizontal
                 Field openFile {
-                    browseButton = True
+                    browseButton = Yes
                     browseMode   = open
                 }
                 Field resetApplication { }
@@ -219,12 +219,12 @@ Window "MainPanel" {
             Box Viewing {
                 layout = Horizontal
                 RemoteRendering out2D {
-                    expandX = True
-                    expandY = True
+                    expandX = Yes
+                    expandY = Yes
                 }
                 RemoteRendering out3D {
-                    expandX = True
-                    expandY = True
+                    expandX = Yes
+                    expandY = Yes
                 }
             }
             Box Settings {
@@ -237,15 +237,15 @@ Window "MainPanel" {
                 }
                 Field imageAlpha {
                     step   = 0.1
-                    slider = True
+                    slider = Yes
                 }
                 Field thresholdInterval {
                     step   = 0.1
-                    slider = True
+                    slider = Yes
                 }
                 Field isoValueImage {
                     step   = 2
-                    slider = True
+                    slider = Yes
                 }
                 Field markerPosition {}
                 Field applyMarker {}

@@ -453,9 +453,9 @@ Window {
     width = 100
     Category {
         Viewer ROISelect.scene.self {
-            type = SoRenderArea
-            expandX = True
-            expandY = True
+            type    = SoRenderArea
+            expandX = Yes
+            expandY = Yes
         }
     }
 }
