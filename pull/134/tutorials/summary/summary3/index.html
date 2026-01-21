@@ -366,7 +366,11 @@ If the GUI editor is not shown in MATE, make sure to check <em>[View → Preview
         }
         Field selected3DView {
             type   = Enum
-            values = Segmented,File,Both
+            items {
+                item Segmented {}
+                item File {}
+                item Both {}
+            }
         }
         Field totalVolume {
             internalName = CalculateVolume.totalVolume
