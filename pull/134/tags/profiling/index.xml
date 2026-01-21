@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Profiling on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/134/tags/profiling/</link><description>Recent content in Profiling on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 08:56:33 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/134/tags/profiling/index.xml" rel="self" type="application/rss+xml"/><item><title>Chapter VI: Testing</title><link>https://mevislab.github.io/examples/pull/134/tutorials/testing/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/134/tutorials/testing/</guid><description>&lt;h1 id="TutorialChapter6"&gt;MeVisLab Tutorial Chapter VI&lt;/h1&gt;
+&lt;h2 id="TutorialTesting"&gt;Testing, Profiling, and Debugging in MeVisLab&lt;/h2&gt;
+&lt;p&gt;The MeVisLab Integrated Development Environment (IDE) provides tools to write automated tests in Python, to profile your network performance, and to debug your Python code.
+All of these funtionalities will be addressed in this chapter.&lt;/p&gt;
+&lt;h3 id="testing"&gt;Testing&lt;/h3&gt;
+&lt;p&gt;The MeVisLab TestCenter is the starting point of your tests. Select &lt;i&gt;[
+ 
+ File
+ &amp;rarr; 
+ Run TestCaseManager
+]&lt;/i&gt; to open the user interface of the TestCaseManager.&lt;/p&gt;</description></item><item><title>Example 2: Profiling in MeVisLab</title><link>https://mevislab.github.io/examples/pull/134/tutorials/testing/testingexample2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/134/tutorials/testing/testingexample2/</guid><description>&lt;h1 id="example-2-profiling-in-mevislab"&gt;Example 2: Profiling in MeVisLab&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=DZ4BcAne4hM" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/DZ4BcAne4hM/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=DZ4BcAne4hM" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this example we are using the MeVisLab Profiler to inspect the memory and CPU consumption of the modules in an example network.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
+&lt;h3 id="creating-the-network-to-be-used-for-profiling"&gt;Creating the Network to be Used for Profiling&lt;/h3&gt;
+&lt;p&gt;You can open any network you like, here we are using the example network of the module &lt;code&gt;MinMaxScan&lt;/code&gt; for profiling. Add the module &lt;code&gt;MinMaxScan&lt;/code&gt; to your workspace, open the example network via right-click 
+
+
+&lt;img width="22px" src="images/rmb.svg" alt="Right Mouse Button" /&gt;
+
+ and select &lt;i&gt;[
+ 
+ Help
+ &amp;rarr; 
+ Show Example Network
+]&lt;/i&gt;.&lt;/p&gt;</description></item></channel></rss>
