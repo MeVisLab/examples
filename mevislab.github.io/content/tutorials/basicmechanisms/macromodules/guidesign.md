@@ -99,16 +99,14 @@ Interface {
             internalName = Arithmetic2.output0
         }
     }
-    Parameters {
-
-    }
+    Parameters {}
 }
 
 Window MyWindowName {
-    title = MyWindowTitle
+    Category {
+        title = MyWindowTitle
 
-    Box MyBox {
-
+        Box MyBox {}
     }
 }
 ```
@@ -117,7 +115,7 @@ Window MyWindowName {
 ![Module Panel](images/tutorials/basicmechanics/ModulePanel.png "Module Panel")
 
 You can define different properties of your control. For a window, you can, for example, define a title, or whether the
-window should be shown in full screen (*fullscreen = True*).
+window should be shown in full screen (*fullscreen = Yes*).
 
 These properties are called {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/#SyntaxTagsAndValues" "tags" >}} and are individually different for each control. Which tags exist for the control window can be found
 {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Window" "here" >}}.
@@ -136,13 +134,14 @@ Window MyWindowName {
     title = MyWindowTitle
     w = 100
     h = 50
-
-    Vertical {
-        Box MyBox {
-            title = "Title of my Box"
-        }
-        Label MyLabel {
+    Category {
+        Vertical {
+            Box MyBox {
+                title = "Title of my Box"
+            }
+            Label MyLabel {
             title = "This is a label below the box"
+            }
         }
     }
 }
@@ -157,13 +156,14 @@ Window MyWindowName {
     title = MyWindowTitle
     w = 100
     h = 50
-
-    Horizontal {
-        Box MyBox {
-            title = "Title of my Box"
-        }
-        Label MyLabel {
-            title = "This is a label beside the box"
+    Category {
+        Horizontal {
+            Box MyBox {
+                title = "Title of my Box"
+            }
+            Label MyLabel {
+                title = "This is a label beside the box"
+            }
         }
     }
 }
@@ -209,8 +209,10 @@ Changes of the properties of this field can be done in the curled brackets using
 Window MyWindowName {
     title = MyWindowTitle
     
-    Field Convolution.predefKernel {
-        title = Kernel
+    Category {
+        Field Convolution.predefKernel {
+            title = Kernel
+        }
     }
 }
 ```
@@ -243,7 +245,9 @@ Interface {
 
 Window MyWindowName {
     title = MyWindowTitle
-    Field kernel {}
+    Category {
+        Field kernel {}
+    }
 }
 ```
 {{</highlight>}}
@@ -259,8 +263,10 @@ Window MyWindowName {
     title = MyWindowTitle
     wakeupCommand = myWindowCommand
     
-    Button MyButton {
-        command = myButtonAction
+    Category {
+        Button MyButton {
+            command = myButtonAction
+        }
     }
 }
 ```

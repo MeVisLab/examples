@@ -45,24 +45,27 @@ In addition to that, we define the minimal size of the Window as 400 x 300 pixel
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
 Window {
-  // Define minimum width and height
-  minimumWidth  = 400
-  minimumHeight = 300
-  // Vertical Layout and 4 Boxes with Horizontal Layout
-  Vertical {
-    Box Source {
-      layout = Horizontal
+    // Define minimum width and height
+    minimumWidth  = 400
+    minimumHeight = 300
+
+    Category {
+        // Vertical Layout and 4 Boxes with Horizontal Layout
+        Vertical {
+            Box Source {
+                layout = Horizontal
+            }
+            Box Viewing {
+                layout = Horizontal
+            }
+            Box Settings {
+                layout = Horizontal
+            }
+            Box Info {
+                layout = Horizontal
+            }
+        }
     }
-    Box Viewing {
-      layout = Horizontal
-    }
-    Box Settings {
-      layout = Horizontal
-    }
-    Box Info {
-      layout = Horizontal
-    }
-  }
 }
 ```
 {{</highlight>}}
@@ -84,46 +87,49 @@ The *Source Box* shall provide the possibility to select a file for loading into
 
 Add a field to the *Parameters* section of your *.script* file. Name the field *openFile* and set type to *String* and internalName to *LocalImage.name*.
 
-Then, add another field to your *Box* for the *Source* and use the field name from *Parameters* section, in this case *openFile*. Set *browseButton = True* and *browseMode = open* and save your script.
+Then, add another field to your *Box* for the *Source* and use the field name from *Parameters* section, in this case *openFile*. Set *browseButton = Yes* and *browseMode = open* and save your script.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
 Interface {
-  Inputs {}
-  Outputs {}
-  Parameters {
-    Field openFile {
-      type         = String
-      internalName = LocalImage.name
+    Inputs {}
+    Outputs {}
+    Parameters {
+      Field openFile {
+          type         = String
+          internalName = LocalImage.name
+      }
     }
-  }
 }
 
 ...
 
 Window {
-  // Define minimum width and height
-  minimumWidth  = 400
-  minimumHeight = 300
-  // Vertical Layout and 4 Boxes with Horizontal Layout
-  Vertical {
-    Box Source {
-      layout = Horizontal
-      Field openFile {
-        browseButton = True
-        browseMode   = open
-      }
+    // Define minimum width and height
+    minimumWidth  = 400
+    minimumHeight = 300
+    
+    Category {
+        // Vertical Layout and 4 Boxes with Horizontal Layout
+        Vertical {
+            Box Source {
+                layout = Horizontal
+                Field openFile {
+                    browseButton = Yes
+                    browseMode   = open
+                }
+            }
+            Box Viewing {
+                layout = Horizontal
+            }
+            Box Settings {
+                layout = Horizontal
+            }
+            Box Info {
+                layout = Horizontal
+            }
+        }
     }
-    Box Viewing {
-      layout = Horizontal
-    }
-    Box Settings {
-      layout = Horizontal
-    }
-    Box Info {
-      layout = Horizontal
-    }
-  }
 }
 ```
 {{</highlight>}}
@@ -142,17 +148,17 @@ Set the 2D viewer's type to *SoRenderArea* and the 3D viewer's type to *SoExamin
 ...
 
     Box Viewing {
-      layout = Horizontal
-      Viewer View2D.self {
-        expandX = True
-        expandY = True
-        type    = SoRenderArea
-      }
-      Viewer SoExaminerViewer.self {
-        expandX = True
-        expandY = True
-        type    = SoExaminerViewer
-      }
+        layout = Horizontal
+        Viewer View2D.self {
+            expandX = Yes
+            expandY = Yes
+            type    = SoRenderArea
+        }
+        Viewer SoExaminerViewer.self {
+            expandX = Yes
+            expandY = Yes
+            type    = SoExaminerViewer
+        }
     }
 
 ...
@@ -183,24 +189,24 @@ The *baseColor* field of the `SoView2DOverlay` already has a parameter connectio
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
 Interface {
-  Inputs {}
-  Outputs {}
-  Parameters {
-    ...
-    Field selectOverlayColor {
-      internalName = SoView2DOverlay.baseColor
-      type         = Color
+    Inputs {}
+    Outputs {}
+    Parameters {
+        ...
+        Field selectOverlayColor {
+            internalName = SoView2DOverlay.baseColor
+            type         = Color
+        }
     }
-  }
 }
 
 ...
 
     Box Settings {
-      layout = Horizontal
-      Field selectOverlayColor {
-        title   = Color
-      }
+        layout = Horizontal
+        Field selectOverlayColor {
+            title   = Color
+        }
     }
 
 ...
@@ -212,103 +218,106 @@ The next elements follow the same rules; therefore, the final script will be ava
 
 In order to set the transparency of the 3D image, we need another field reusing the *SoWEMRendererImage.faceAlphaValue*. Add a field *imageAlpha* to the *Parameters* section. Define *internalName = SoWEMRendererImage.faceAlphaValue*, *type = Integer*, *min = 0*, and *max = 1*.
 
-Add the field to the *Settings Box* and set *step = 0.1* and *slider = True*.
+Add the field to the *Settings Box* and set *step = 0.1* and *slider = Yes*.
 
 For the `RegionGrowing` threshold, add the field *thresholdInterval* to *Parameters* section and set *type = Integer*,  *min = 1*,  *max = 100*, and *internalName = RegionGrowing.autoThresholdIntervalSizeInPercent*.
 
-Add the field to the *Settings* UI, and define *step = 0.1* and *slider = True*.
+Add the field to the *Settings* UI, and define *step = 0.1* and *slider = Yes*.
 
 Define a field *isoValueImage* in the *Parameters* section and set *internalName = IsoSurfaceImage.isoValue*,  *type = Integer*,  *min = 1*, and  *max = 1000*.
 
-In the *Settings* section of the UI, set *step = 2* and *slider = True*.
+In the *Settings* section of the UI, set *step = 2* and *slider = Yes*.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
 Interface {
-  Inputs {}
-  Outputs {}
-  Parameters {
-    Field openFile {
-      type         = String
-      internalName = LocalImage.name
+    Inputs {}
+    Outputs {}
+    Parameters {
+        Field openFile {
+            type         = String
+            internalName = LocalImage.name
+        }
+        Field selectOverlayColor {
+            internalName = SoView2DOverlay.baseColor
+            type         = Color
+        }
+        Field imageAlpha {
+            internalName = SoWEMRendererImage.faceAlphaValue
+            type         = Integer
+            min          = 0
+            max          = 1
+        }
+        Field thresholdInterval {
+            internalName = RegionGrowing.autoThresholdIntervalSizeInPercent
+            type         = Integer
+            min          = 0
+            max          = 100
+        }
+        Field isoValueImage  {
+            internalName = IsoSurfaceImage.isoValue
+            type         = Integer
+            min          = 0
+            max          = 1000
+        }
     }
-    Field selectOverlayColor {
-      internalName = SoView2DOverlay.baseColor
-      type         = Color
-    }
-    Field imageAlpha {
-      internalName = SoWEMRendererImage.faceAlphaValue
-      type         = Integer
-      min          = 0
-      max          = 1
-    }
-    Field thresholdInterval {
-      internalName = RegionGrowing.autoThresholdIntervalSizeInPercent
-      type         = Integer
-      min          = 0
-      max          = 100
-    }
-    Field isoValueImage  {
-      internalName = IsoSurfaceImage.isoValue
-      type         = Integer
-      min          = 0
-      max          = 1000
-    }
-  }
 }
 
 Commands {
-  source = $(LOCAL)/TutorialSummary.py
+    source = $(LOCAL)/TutorialSummary.py
 }
 
 Window {
-  // Define minimum width and height
-  minimumWidth  = 400
-  minimumHeight = 300
-  // Vertical Layout and 4 Boxes with Horizontal Layout
-  Vertical {
-    Box Source {
-      layout = Horizontal
-      Field openFile {
-        browseButton = True
-        browseMode   = open
-      }
+    // Define minimum width and height
+    minimumWidth  = 400
+    minimumHeight = 300
+
+    Category {
+        // Vertical Layout and 4 Boxes with Horizontal Layout
+        Vertical {
+            Box Source {
+                layout = Horizontal
+                Field openFile {
+                    browseButton = Yes
+                    browseMode   = open
+                }
+            }
+            Box Viewing {
+                layout = Horizontal
+                Viewer View2D.self {
+                    expandX = Yes
+                    expandY = Yes
+                    type    = SoRenderArea
+                }
+                Viewer SoExaminerViewer.self {
+                    expandX = Yes
+                    expandY = Yes
+                    type    = SoExaminerViewer
+                }
+            }
+            Box Settings {
+                layout = Horizontal
+                Field selectOverlayColor {
+                    title   = Color
+                }
+                Field imageAlpha {
+                    step    = 0.1
+                    slider  = Yes
+                }
+                Field thresholdInterval {
+                    step    = 0.1
+                    slider  = Yes
+                }
+                Field isoValueImage {
+                    step    = 2
+                    slider  = Yes
+                }
+            }
+            Box Info {
+                layout = Horizontal
+            }
+        }
     }
-    Box Viewing {
-      layout = Horizontal
-      Viewer View2D.self {
-        expandX = True
-        expandY = True
-        type    = SoRenderArea
-      }
-      Viewer SoExaminerViewer.self {
-        expandX = True
-        expandY = True
-        type    = SoExaminerViewer
-      }
-    }
-    Box Settings {
-      layout = Horizontal
-      Field selectOverlayColor {
-        title   = Color
-      }
-      Field imageAlpha {
-        step    = 0.1
-        slider  = True
-      }
-      Field thresholdInterval {
-        step    = 0.1
-        slider  = True
-      }
-      Field isoValueImage {
-        step    = 2
-        slider  = True
-      }
-    }
-    Box Info {
-      layout    = Horizontal
-    }
-  }
 }
 
 ```
@@ -339,11 +348,11 @@ Open your script file and go to the *Commands* section. Add a *FieldListener* an
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
 Commands {
-  source = $(LOCAL)/TutorialSummary.py
-  
-  FieldListener selected3DView {
-    command = viewSelectionChanged
-  }
+    source = $(LOCAL)/TutorialSummary.py
+    
+    FieldListener selected3DView {
+        command = viewSelectionChanged
+    }
 }
 ```
 {{</highlight>}}
@@ -355,12 +364,12 @@ Right-click {{< mousebutton "right" >}} the command select {{< menuitem "Create 
 from mevis import *
 
 def viewSelectionChanged(field):
-  if field.value == "Segmented":
-    ctx.field("SoSwitch.whichChild").value = 0
-  if field.value == "File":
-    ctx.field("SoSwitch.whichChild").value = 1
-  if field.value == "Both":
-    ctx.field("SoSwitch.whichChild").value = 2
+    if field.value == "Segmented":
+        ctx.field("SoSwitch.whichChild").value = 0
+    if field.value == "File":
+        ctx.field("SoSwitch.whichChild").value = 1
+    if field.value == "Both":
+        ctx.field("SoSwitch.whichChild").value = 2
 ```
 {{</highlight>}}
 
@@ -375,11 +384,11 @@ Then, add a trigger field *applyMarker* to your *Parameters* section. Set *type 
 ```Stan
 ...
     Field markerPosition {
-      type         = Vector3
+        type         = Vector3
     }
     Field applyMarker {
-      type         = Trigger
-      title        = Add
+        type         = Trigger
+        title        = Add
     }
 ...
 ```
@@ -389,12 +398,12 @@ Add another *FieldListener* to both fields:
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
 ...
-  FieldListener markerPosition {
-    command = insertPosition
-  }
-  FieldListener applyMarker {
-    command = applyPosition
-  }
+    FieldListener markerPosition {
+        command = insertPosition
+    }
+    FieldListener applyMarker {
+        command = applyPosition
+    }
 ...
 ```
 {{</highlight>}}
@@ -403,8 +412,8 @@ Finally, add both fields to the *Settings* section of your user interface:
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
 ...
-      Field markerPosition {}
-      Field applyMarker {}
+    Field markerPosition {}
+    Field applyMarker {}
 ...
 ```
 {{</highlight>}}
@@ -414,11 +423,11 @@ The Python functions should look like this:
 ```Python
 ...
 def insertPosition(field):
-  ctx.field("SoView2DMarkerEditor.newPosXYZ").value = field.value
+    ctx.field("SoView2DMarkerEditor.newPosXYZ").value = field.value
 
 def applyPosition():
-  ctx.field("SoView2DMarkerEditor.useInsertTemplate").value = True
-  ctx.field("SoView2DMarkerEditor.add").touch()
+    ctx.field("SoView2DMarkerEditor.useInsertTemplate").value = True
+    ctx.field("SoView2DMarkerEditor.add").touch()
 ...
 ```
 {{</highlight>}}
@@ -440,27 +449,27 @@ Add the field to your *Source* region.
 ```Stan
 ...
   Parameters {
-    Field resetApplication {
-      type         = Trigger
-      title        = Reset
-    }
+      Field resetApplication {
+          type         = Trigger
+          title        = Reset
+      }
   }
 ...
 Commands {
-  ...
-  FieldListener resetApplication {
-    command = resetApplication
-  }
+    ...
+    FieldListener resetApplication {
+        command = resetApplication
+    }
 }
 ...
-  Box Source {
-    layout = Horizontal
-    Field openFile {
-      browseButton = True
-      browseMode   = open
+    Box Source {
+        layout = Horizontal
+        Field openFile {
+            browseButton = Yes
+            browseMode   = open
+        }
+        Field resetApplication { }
     }
-    Field resetApplication { }
-  }
 ...
 ```
 {{</highlight>}}
@@ -475,9 +484,9 @@ Add the Python function *resetApplication* and implement the following:
 from mevis import *
 
 def resetApplication():
-  ctx.field("RegionGrowing.clear").touch()
-  ctx.field("SoView2DMarkerEditor.deleteAll").touch()
-  ctx.field("LocalImage.close").touch()
+    ctx.field("RegionGrowing.clear").touch()
+    ctx.field("SoView2DMarkerEditor.deleteAll").touch()
+    ctx.field("LocalImage.close").touch()
 ```
 {{</highlight>}}
 
@@ -486,11 +495,10 @@ You can also reset the application to initial state by adding a *initCommand* to
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
 Window {
-  // Define minimum width and height
-  minimumWidth  = 400
-  minimumHeight = 300
-  initCommand   = resetApplication
-
+    // Define minimum width and height
+    minimumWidth  = 400
+    minimumHeight = 300
+    initCommand   = resetApplication
   ...
 }
 ```
@@ -503,13 +511,13 @@ This can also be used for setting/resetting to default values of the application
 from mevis import *
 
 def resetApplication():
-  ctx.field("RegionGrowing.clear").touch()
-  ctx.field("SoView2DMarkerEditor.deleteAll").touch()
-  ctx.field("LocalImage.close").touch()
-  ctx.field("imageAlpha").value = 0.5
-  ctx.field("thresholdInterval").value = 1.0
-  ctx.field("isoValueImage").value = 200
-  ctx.field("selected3DView").value = "Both"
+    ctx.field("RegionGrowing.clear").touch()
+    ctx.field("SoView2DMarkerEditor.deleteAll").touch()
+    ctx.field("LocalImage.close").touch()
+    ctx.field("imageAlpha").value = 0.5
+    ctx.field("thresholdInterval").value = 1.0
+    ctx.field("isoValueImage").value = 200
+    ctx.field("selected3DView").value = "Both"
 ```
 {{</highlight>}}
 
@@ -539,131 +547,138 @@ If the GUI editor is not shown in MATE, make sure to check *[View &rarr; Preview
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
 Interface {
-  Inputs {}
-  Outputs {}
-  Parameters {
-    Field openFile {
-      type         = String
-      internalName = LocalImage.name
+    Inputs {}
+    Outputs {}
+    Parameters {
+        Field openFile {
+            type         = String
+            internalName = LocalImage.name
+        }
+        Field selectOverlayColor {
+            internalName = SoView2DOverlay.baseColor
+            type         = Color
+        }
+        Field imageAlpha {
+            internalName = SoWEMRendererImage.faceAlphaValue
+            type         = Integer
+            min          = 0
+            max          = 1
+        }
+        Field thresholdInterval {
+            internalName = RegionGrowing.autoThresholdIntervalSizeInPercent
+            type         = Integer
+            min          = 0
+            max          = 100
+        }
+        Field isoValueImage  {
+            internalName = IsoSurfaceImage.isoValue
+            type         = Integer
+            min          = 0
+            max          = 1000
+        }
+        Field selected3DView {
+            type   = Enum
+            items {
+                item Segmented {}
+                item File {}
+                item Both {}
+            }
+        }
+        Field totalVolume {
+            internalName = CalculateVolume.totalVolume
+            editable     = False
+        }
+        Field resetApplication {
+            type  = Trigger
+            title = Reset
+        }
+        Field markerPosition {
+            type         = Vector3
+        }
+        Field applyMarker {
+            type  = Trigger
+            title = Add
+        }
     }
-    Field selectOverlayColor {
-      internalName = SoView2DOverlay.baseColor
-      type         = Color
-    }
-    Field imageAlpha {
-      internalName = SoWEMRendererImage.faceAlphaValue
-      type         = Integer
-      min          = 0
-      max          = 1
-    }
-    Field thresholdInterval {
-      internalName = RegionGrowing.autoThresholdIntervalSizeInPercent
-      type         = Integer
-      min          = 0
-      max          = 100
-    }
-    Field isoValueImage  {
-      internalName = IsoSurfaceImage.isoValue
-      type         = Integer
-      min          = 0
-      max          = 1000
-    }
-    Field selected3DView {
-      type   = Enum
-      values = Segmented,File,Both
-    }
-    Field totalVolume {
-      internalName = CalculateVolume.totalVolume
-      editable     = False
-    }
-    Field resetApplication {
-      type  = Trigger
-      title = Reset
-    }
-    Field markerPosition {
-      type         = Vector3
-    }
-    Field applyMarker {
-      type  = Trigger
-      title = Add
-    }
-  }
 }
 
 Commands {
-  source = $(LOCAL)/<MACRO_NAME>.py
-  
-  FieldListener selected3DView {
-    command = viewSelectionChanged
-  }
-  FieldListener resetApplication {
-    command = resetApplication
-  }
-  FieldListener markerPosition {
-    command = insertPosition
-  }
-  FieldListener applyMarker {
-    command = applyPosition
-  }
+    source = $(LOCAL)/<MACRO_NAME>.py
+    
+    FieldListener selected3DView {
+        command = viewSelectionChanged
+    }
+    FieldListener resetApplication {
+        command = resetApplication
+    }
+    FieldListener markerPosition {
+        command = insertPosition
+    }
+    FieldListener applyMarker {
+        command = applyPosition
+    }
 }
 
 Window {
-  // Define minimum width and height
-  minimumWidth  = 400
-  minimumHeight = 300
-  initCommand   = resetApplication
-  // Vertical Layout and 4 Boxes with Horizontal Layout
-  Vertical {
-    Box Source {
-      layout = Horizontal
-      Field openFile {
-        browseButton = True
-        browseMode   = open
-      }
-      Field resetApplication { }
+    // Define minimum width and height
+    minimumWidth  = 400
+    minimumHeight = 300
+    initCommand   = resetApplication
+
+    Category {
+        // Vertical Layout and 4 Boxes with Horizontal Layout
+        Vertical {
+            Box Source {
+              layout = Horizontal
+              Field openFile {
+                  browseButton = Yes
+                  browseMode   = open
+              }
+              Field resetApplication { }
+            }
+            Box Viewing {
+              layout = Horizontal
+              Viewer View2D.self {
+                  expandX = Yes
+                  expandY = Yes
+                  type    = SoRenderArea
+              }
+              Viewer SoExaminerViewer.self {
+                  expandX = Yes
+                  expandY = Yes
+                  type    = SoExaminerViewer
+              }
+            }
+            Box Settings {
+              layout = Horizontal
+              Field selectOverlayColor {
+                  title   = Color
+              }
+              Field imageAlpha {
+                  step   = 0.1
+                  slider = Yes
+              }
+              Field thresholdInterval {
+                  step   = 0.1
+                  slider = Yes
+              }
+              Field isoValueImage {
+                  step   = 2
+                  slider = Yes
+              }
+              Field markerPosition {}
+              Field applyMarker {}
+              ComboBox selected3DView {
+                  alignX   = Left
+                  editable = False
+              }
+            }
+            Box Info {
+                layout    = Horizontal
+                Field totalVolume {}
+            }
+        }
     }
-    Box Viewing {
-      layout = Horizontal
-      Viewer View2D.self {
-        expandX = True
-        expandY = True
-        type    = SoRenderArea
-      }
-      Viewer SoExaminerViewer.self {
-        expandX = True
-        expandY = True
-        type    = SoExaminerViewer
-      }
-    }
-    Box Settings {
-      layout = Horizontal
-      Field selectOverlayColor {
-        title   = Color
-      }
-      Field imageAlpha {
-        step   = 0.1
-        slider = True
-      }
-      Field thresholdInterval {
-        step   = 0.1
-        slider = True
-      }
-      Field isoValueImage {
-        step   = 2
-        slider = True
-      }
-      Field markerPosition {}
-      Field applyMarker {}
-      ComboBox selected3DView {
-        alignX   = Left
-        editable = False
-      }
-    }
-    Box Info {
-      layout    = Horizontal
-      Field totalVolume {}
-    }
-  }
 }
 ```
 {{</highlight>}}
@@ -673,28 +688,28 @@ Window {
 from mevis import *
 
 def viewSelectionChanged(field):
-  if field.value == "Segmented":
-    ctx.field("SoSwitch.whichChild").value = 0
-  if field.value == "File":
-    ctx.field("SoSwitch.whichChild").value = 1
-  if field.value == "Both":
-    ctx.field("SoSwitch.whichChild").value = 2
+    if field.value == "Segmented":
+        ctx.field("SoSwitch.whichChild").value = 0
+    if field.value == "File":
+        ctx.field("SoSwitch.whichChild").value = 1
+    if field.value == "Both":
+        ctx.field("SoSwitch.whichChild").value = 2
 
 def resetApplication():
-  ctx.field("RegionGrowing.clear").touch()
-  ctx.field("SoView2DMarkerEditor.deleteAll").touch()
-  ctx.field("LocalImage.close").touch()
-  ctx.field("imageAlpha").value = 0.5
-  ctx.field("thresholdInterval").value = 1.0
-  ctx.field("isoValueImage").value = 200
-  ctx.field("selected3DView").value = "Both"
+    ctx.field("RegionGrowing.clear").touch()
+    ctx.field("SoView2DMarkerEditor.deleteAll").touch()
+    ctx.field("LocalImage.close").touch()
+    ctx.field("imageAlpha").value = 0.5
+    ctx.field("thresholdInterval").value = 1.0
+    ctx.field("isoValueImage").value = 200
+    ctx.field("selected3DView").value = "Both"
 
 def insertPosition(field):
-  ctx.field("SoView2DMarkerEditor.newPosXYZ").value = field.value
+    ctx.field("SoView2DMarkerEditor.newPosXYZ").value = field.value
 
 def applyPosition():
-  ctx.field("SoView2DMarkerEditor.useInsertTemplate").value = True
-  ctx.field("SoView2DMarkerEditor.add").touch()
+    ctx.field("SoView2DMarkerEditor.useInsertTemplate").value = True
+    ctx.field("SoView2DMarkerEditor.add").touch()
 ```
 {{</highlight>}}
 

@@ -50,11 +50,11 @@ We first define the input for the image.
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan
 Interface {
-  Inputs {
-    Field inImage            { type = Image  }
-  }
-  Outputs {}
-  Parameters {}
+    Inputs {
+        Field inImage            { type = Image  }
+    }
+    Outputs {}
+    Parameters {}
 }
 ```
 {{</highlight>}}
@@ -78,21 +78,21 @@ All of them have to be defined as a *Field* in the *Parameters* section of the s
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan
 Interface {
-  Inputs {
-    Field inImage            { type = Image  }
-  }
-  Outputs {}
-  Parameters {
-    Field id                 { type = Int    }
-    Field patientName        { type = String }
-    Field patientBirthdate   { type = String }
-    Field studyDescription   { type = String }
-    Field studyDate          { type = String }
-    Field modality           { type = String }
-    Field seriesDescription  { type = String }
-    Field seriesDate         { type = String }
-    Field sopInstanceUID     { type = String }
-  }
+    Inputs {
+        Field inImage            { type = Image  }
+    }
+    Outputs {}
+    Parameters {
+        Field id                 { type = Int    }
+        Field patientName        { type = String }
+        Field patientBirthdate   { type = String }
+        Field studyDescription   { type = String }
+        Field studyDate          { type = String }
+        Field modality           { type = String }
+        Field seriesDescription  { type = String }
+        Field seriesDate         { type = String }
+        Field sopInstanceUID     { type = String }
+    }
 }
 ```
 {{</highlight>}}
@@ -107,23 +107,23 @@ We can now add the *ItemModelView* to our panel and define the columns of the vi
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan
 Window {
-  Category {
-  Vertical {
-      ItemModelView myItemModel {
-        name        = itemModelView
-        idAttribute = id
-        Column id {}
-        Column patientName {}
-        Column patientBirthdate {}
-        Column studyDescription {}
-        Column studyDate {}
-        Column modality {}
-        Column seriesDescription {}
-        Column seriesDate {}
-        Column sopInstanceUID {}
-      }
+    Category {
+        Vertical {
+            ItemModelView myItemModel {
+                name        = itemModelView
+                idAttribute = id
+                Column id {}
+                Column patientName {}
+                Column patientBirthdate {}
+                Column studyDescription {}
+                Column studyDate {}
+                Column modality {}
+                Column seriesDescription {}
+                Column seriesDate {}
+                Column sopInstanceUID {}
+            }
+        }
     }
-  }
 }
 ```
 {{</highlight>}}
@@ -150,11 +150,11 @@ We want to get the necessary information from the defined input image *inImage*.
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan
 Commands {
-  source = $(LOCAL)/MyItemModelView.py
+    source = $(LOCAL)/MyItemModelView.py
   
-  FieldListener inImage {
-    command = imageChanged
-  }
+    FieldListener inImage {
+        command = imageChanged
+    }
 }
 ```
 {{</highlight>}}
@@ -259,23 +259,24 @@ You can see that the above Python code uses a field *selection* that contains th
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan
 Interface {
-  ...
-  Parameters {
-    ...    
-    Field selection          { type = String }
     ...
-  }
-}
-Window {
-  Category {
-    Vertical {
-      ItemModelView myItemModel {
-        ...
-        selectionField       = selection
-        ...
-      }
+    Parameters {
+      ...    
+      Field selection { type = String }
+      ...
     }
-  }
+}
+
+Window {
+    Category {
+        Vertical {
+            ItemModelView myItemModel {
+                ...
+                selectionField = selection
+                ...
+            }
+        }
+    }
 }
 ```
 {{</highlight>}}
@@ -368,11 +369,11 @@ We can now add options to interact with the *ItemModelView*. Open the *.script* 
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan
 Commands {
-  ...
-  FieldListener selection {
-    command = itemClicked
-  }
-  ...
+    ...
+    FieldListener selection {
+        command = itemClicked
+    }
+    ...
 }
 ```
 {{</highlight>}}

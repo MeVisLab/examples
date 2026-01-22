@@ -29,19 +29,20 @@ Add the following code into your *.script* file between the "Single Slice" and t
 {{< highlight filename = "BaseNetwork.script">}}
 ```Stan
         Box {
-          title = "Comparison"
-          Field "SubImage.z" {
-            title = "Compare slice"
-          }
-          Field "SubImage.sz" {
-            title = "With slice"
-          }
-          Button {
-            title   = "Plot"
-            command = "comparison"
-          }
+            title = "Comparison"
+            Field "SubImage.z" {
+                title = "Compare slice"
+            }
+            Field "SubImage.sz" {
+                title = "With slice"
+            }
+            Button {
+                title   = "Plot"
+                command = "comparison"
+            }
         }
-``` {{</highlight>}}
+```
+{{</highlight>}}
 
 Your panel should now be changed to look like this: 
 
@@ -50,7 +51,7 @@ Your panel should now be changed to look like this:
 We will now add the "comparison" function, to give the "Plot" button in our "Comparison" box a purpose. To do so, switch to your module's *.py* file and choose a cosy place for the following piece of code:
 
 {{< highlight filename = "BaseNetwork.py">}}
-```Stan
+```Python
 def comparison():
     clearFigure()
     figure = ctx.control("canvas").object().figure()
@@ -76,7 +77,8 @@ def comparison():
     subplot.legend([f'Slice {i}' for i in values])
     figure.canvas.draw()
     ctx.field("SubImage.z").value = values[0]
-``` {{</highlight>}}
+```
+{{</highlight>}}
 
 You should now be able to reproduce results like these:
 

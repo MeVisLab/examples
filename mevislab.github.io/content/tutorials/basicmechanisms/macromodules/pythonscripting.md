@@ -87,7 +87,7 @@ Open the *.script* file and add a *Commands* section defining the name of the Py
 {{< highlight filename="IsoCSOs.script" >}}
 ```Stan
 Commands {
-  source = $(LOCAL)/mytest.py
+    source = $(LOCAL)/mytest.py
 }
 ```
 {{</highlight>}}

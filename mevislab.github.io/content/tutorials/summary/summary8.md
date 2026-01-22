@@ -76,20 +76,20 @@ The file opens in MATE and you will see that it looks similar to the *.script* f
 {{< highlight filename="TutorialSummaryBrowser.script" >}}
 ```Stan
 Web {
-  plugin = "$(MLAB_MeVisLab_Private)/Sources/Web/application/js/jquery/Plugin.js"
-  plugin = "$(MLAB_MeVisLab_Private)/Sources/Web/application/js/yui/Plugin.js"
-  
-  // Specify web plugins here. If you have additional JavaScript files, you can load them from 
-  // the plugin. It is also possible to load other plugins here.
-  plugin = "$(LOCAL)/www/js/Plugin.js"
+    plugin = "$(MLAB_MeVisLab_Private)/Sources/Web/application/js/jquery/Plugin.js"
+    plugin = "$(MLAB_MeVisLab_Private)/Sources/Web/application/js/yui/Plugin.js"
+    
+    // Specify web plugins here. If you have additional JavaScript files, you can load them from 
+    // the plugin. It is also possible to load other plugins here.
+    plugin = "$(LOCAL)/www/js/Plugin.js"
 
-  Deployment {
-    // Deploy the www directory recursively when building web application installers
-    directory = "$(LOCAL)/www"
-  }
-  
-  // The developer URL is used by the startWorkerService.py user script.
-  developerUrl = "MeVis/TutorialSummary/Projects/TutorialSummaryBrowser/Modules/www/TutorialSummaryBrowser.html"
+    Deployment {
+        // Deploy the www directory recursively when building web application installers
+        directory = "$(LOCAL)/www"
+    }
+    
+    // The developer URL is used by the startWorkerService.py user script.
+    developerUrl = "MeVis/TutorialSummary/Projects/TutorialSummaryBrowser/Modules/www/TutorialSummaryBrowser.html"
 }
 ```
 {{</highlight>}}
@@ -101,62 +101,66 @@ You can also copy all fields from *Parameters* section to your web macro module 
 {{< highlight filename="TutorialSummaryBrowser.script" >}}
 ```Stan
 Interface {
-  Inputs {}
-  Outputs {
-    Field out2D { internalName = RemoteRendering2D.output }
-    Field out3D { internalName = RemoteRendering3D.output }
-    Field outSegmentationMask { internalName = CloseGap.output0 }
-  }
-  Parameters {
-    Field openFile {
-      type         = String
-      internalName = LocalImage.name
+    Inputs {}
+    Outputs {
+        Field out2D { internalName = RemoteRendering2D.output }
+        Field out3D { internalName = RemoteRendering3D.output }
+        Field outSegmentationMask { internalName = CloseGap.output0 }
     }
-    Field selectOverlayColor {
-      internalName = SoView2DOverlay.baseColor
-      type         = Color
+    Parameters {
+        Field openFile {
+            type         = String
+            internalName = LocalImage.name
+        }
+        Field selectOverlayColor {
+            internalName = SoView2DOverlay.baseColor
+            type         = Color
+        }
+        Field selectOverlayTransparency {
+            internalName = SoView2DOverlay.alphaFactor
+        }
+        Field imageAlpha {
+            internalName = SoWEMRendererImage.faceAlphaValue
+            type         = Integer
+            min          = 0
+            max          = 1
+        }
+        Field thresholdInterval {
+            internalName = RegionGrowing.autoThresholdIntervalSizeInPercent
+            type         = Integer
+            min          = 0
+            max          = 100
+        }
+        Field isoValueImage  {
+            internalName = IsoSurfaceImage.isoValue
+            type         = Integer
+            min          = 0
+            max          = 1000
+        }
+        Field selected3DView {
+            type   = Enum
+            items {
+                item Segmented {}
+                item File {}
+                item Both {}
+            }
+        }
+        Field totalVolume {
+            internalName = CalculateVolume.totalVolume
+            editable     = False
+        }
+        Field resetApplication {
+            type  = Trigger
+            title = Reset
+        }
+        Field markerPosition {
+            type         = Vector3
+        }
+        Field applyMarker {
+            type  = Trigger
+            title = Add
+        }
     }
-    Field selectOverlayTransparency {
-      internalName = SoView2DOverlay.alphaFactor
-    }
-    Field imageAlpha {
-      internalName = SoWEMRendererImage.faceAlphaValue
-      type         = Integer
-      min          = 0
-      max          = 1
-    }
-    Field thresholdInterval {
-      internalName = RegionGrowing.autoThresholdIntervalSizeInPercent
-      type         = Integer
-      min          = 0
-      max          = 100
-    }
-    Field isoValueImage  {
-      internalName = IsoSurfaceImage.isoValue
-      type         = Integer
-      min          = 0
-      max          = 1000
-    }
-    Field selected3DView {
-      type   = Enum
-      values = Segmented,File,Both
-    }
-    Field totalVolume {
-      internalName = CalculateVolume.totalVolume
-      editable     = False
-    }
-    Field resetApplication {
-      type  = Trigger
-      title = Reset
-    }
-    Field markerPosition {
-      type         = Vector3
-    }
-    Field applyMarker {
-      type  = Trigger
-      title = Add
-    }
-  }
 }
 ```
 {{</highlight>}}
@@ -178,20 +182,20 @@ Open the *.script* files of your macro modules and copy the *FieldListeners* fro
 {{< highlight filename="TutorialSummaryBrowser.script" >}}
 ```Stan
 Commands {
-  source = $(LOCAL)/TutorialSummaryBrowser.py
-  
-  FieldListener selected3DView {
-    command = viewSelectionChanged
-  }
-  FieldListener resetApplication {
-    command = resetApplication
-  }
-  FieldListener markerPosition {
-    command = insertPosition
-  }
-  FieldListener applyMarker {
-    command = applyPosition
-  }
+    source = $(LOCAL)/TutorialSummaryBrowser.py
+    
+    FieldListener selected3DView {
+        command = viewSelectionChanged
+    }
+    FieldListener resetApplication {
+        command = resetApplication
+    }
+    FieldListener markerPosition {
+        command = insertPosition
+    }
+    FieldListener applyMarker {
+        command = applyPosition
+    }
 }
 ```
 {{</highlight>}}
@@ -201,63 +205,65 @@ Also copy the *Window* section to your web macro module. The *Box* of the *Viewi
 {{< highlight filename="TutorialSummaryBrowser.script" >}}
 ```Stan
 Window "MainPanel" {
-  // Define minimum width and height
-  minimumWidth  = 400
-  minimumHeight = 300
-  initCommand   = resetApplication
-  // Vertical Layout and 4 Boxes with Horizontal Layout
-  Vertical {
-    Box Source {
-      layout = Horizontal
-      Field openFile {
-        browseButton = True
-        browseMode   = open
-      }
-      Field resetApplication { }
+    // Define minimum width and height
+    minimumWidth  = 400
+    minimumHeight = 300
+    initCommand   = resetApplication
+    Category {
+        // Vertical Layout and four Boxes with Horizontal Layout
+        Vertical {
+            Box Source {
+                layout = Horizontal
+                Field openFile {
+                    browseButton = Yes
+                    browseMode   = open
+                }
+                Field resetApplication { }
+            }
+            Box Viewing {
+                layout = Horizontal
+                RemoteRendering out2D {
+                    expandX = Yes
+                    expandY = Yes
+                }
+                RemoteRendering out3D {
+                    expandX = Yes
+                    expandY = Yes
+                }
+            }
+            Box Settings {
+                layout = Horizontal
+                Field selectOverlayColor {
+                    title   = Color
+                }
+                Field selectOverlayTransparency {
+                    title   = Alpha
+                }
+                Field imageAlpha {
+                    step   = 0.1
+                    slider = Yes
+                }
+                Field thresholdInterval {
+                    step   = 0.1
+                    slider = Yes
+                }
+                Field isoValueImage {
+                    step   = 2
+                    slider = Yes
+                }
+                Field markerPosition {}
+                Field applyMarker {}
+                ComboBox selected3DView {
+                    alignX   = Left
+                    editable = False
+                }
+            }
+            Box Info {
+                layout    = Horizontal
+                Field totalVolume {}
+            }
+        }
     }
-    Box Viewing {
-      layout = Horizontal
-      RemoteRendering out2D {
-        expandX = True
-        expandY = True
-      }
-      RemoteRendering out3D {
-        expandX = True
-        expandY = True
-      }
-    }
-    Box Settings {
-      layout = Horizontal
-      Field selectOverlayColor {
-        title   = Color
-      }
-      Field selectOverlayTransparency {
-        title   = Alpha
-      }
-      Field imageAlpha {
-        step   = 0.1
-        slider = True
-      }
-      Field thresholdInterval {
-        step   = 0.1
-        slider = True
-      }
-      Field isoValueImage {
-        step   = 2
-        slider = True
-      }
-      Field markerPosition {}
-      Field applyMarker {}
-      ComboBox selected3DView {
-        alignX   = Left
-        editable = False
-      }
-    }
-    Box Info {
-      layout    = Horizontal
-      Field totalVolume {}
-    }
-  }
 }
 ```
 {{</highlight>}}
@@ -285,31 +291,31 @@ MLABRemote.setup(ctx)
 
 @allowedRemoteCall
 def viewSelectionChanged(field):
-  if field.value == "Segmented":
-    ctx.field("SoSwitch.whichChild").value = 0
-  if field.value == "File":
-    ctx.field("SoSwitch.whichChild").value = 1
-  if field.value == "Both":
-    ctx.field("SoSwitch.whichChild").value = 2
+    if field.value == "Segmented":
+        ctx.field("SoSwitch.whichChild").value = 0
+    if field.value == "File":
+        ctx.field("SoSwitch.whichChild").value = 1
+    if field.value == "Both":
+        ctx.field("SoSwitch.whichChild").value = 2
 
 @allowedRemoteCall
 def resetApplication():
-  ctx.field("RegionGrowing.clear").touch()
-  ctx.field("SoView2DMarkerEditor.deleteAll").touch()
-  ctx.field("LocalImage.close").touch()
-  ctx.field("imageAlpha").value = 0.5
-  ctx.field("thresholdInterval").value = 1.0
-  ctx.field("isoValueImage").value = 200
-  ctx.field("selected3DView").value = "Both"
+    ctx.field("RegionGrowing.clear").touch()
+    ctx.field("SoView2DMarkerEditor.deleteAll").touch()
+    ctx.field("LocalImage.close").touch()
+    ctx.field("imageAlpha").value = 0.5
+    ctx.field("thresholdInterval").value = 1.0
+    ctx.field("isoValueImage").value = 200
+    ctx.field("selected3DView").value = "Both"
 
 @allowedRemoteCall
 def insertPosition(field):
-  ctx.field("SoView2DMarkerEditor.newPosXYZ").value = field.value
+    ctx.field("SoView2DMarkerEditor.newPosXYZ").value = field.value
 
 @allowedRemoteCall
 def applyPosition():
-  ctx.field("SoView2DMarkerEditor.useInsertTemplate").value = True
-  ctx.field("SoView2DMarkerEditor.add").touch()
+    ctx.field("SoView2DMarkerEditor.useInsertTemplate").value = True
+    ctx.field("SoView2DMarkerEditor.add").touch()
 ```
 {{</highlight>}}
 

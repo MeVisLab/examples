@@ -38,22 +38,22 @@ In MATE, add another field to your *Parameters* section and reuse the field by s
 ```Stan
 Interface {
 ...
-  Parameters {
-    ...
-    Field selectOverlayTransparency {
-      internalName = SoView2DOverlay.alphaFactor
+    Parameters {
+        ...
+        Field selectOverlayTransparency {
+            internalName = SoView2DOverlay.alphaFactor
+        }
+        ...
     }
-    ...
-  }
 }
 
 Window {
 ...
     Box Settings {
     ...
-      Field selectOverlayTransparency {
-        title   = Alpha
-      }
+        Field selectOverlayTransparency {
+            title   = Alpha
+        }
     ...
     }
 ...

@@ -59,20 +59,20 @@ In order to call Python functions, we also need a Python file. Add a *Commands* 
 {{< highlight filename="csoList.script" >}}
 ```Stan
 Interface  {
-  Inputs {}
-  Outputs  {
-    Field baseOut0 {
-      internalName = CSOListContainer.outCSOList
+    Inputs {}
+    Outputs  {
+        Field baseOut0 {
+            internalName = CSOListContainer.outCSOList
+        }
     }
-  }
-  Parameters {
-    Field areaThreshold { type = Float value = 2000.0 }
-  }
+    Parameters {
+        Field areaThreshold { type = Float value = 2000.0 }
+    }
 }
 
 Commands {
-  source = $(LOCAL)/csoList.py
-  initCommand = initCSOList
+    source = $(LOCAL)/csoList.py
+    initCommand = initCSOList
 }
 ```
 {{</highlight>}}

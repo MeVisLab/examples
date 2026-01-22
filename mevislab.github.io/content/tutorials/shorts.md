@@ -123,19 +123,18 @@ Enter the following:
 {{< highlight filename="MyScripts.def" >}}
 ```Stan
 UserIDEActions {
-  Action "Set Dark Theme" {
-    name       = changeTheme
-    userScript = $(LOCAL)/changeTheme.py
-    statusTip  = "Change theme to dark mode"
-    accel      = "ctrl+F9"
-  }
-
+    Action "Set Dark Theme" {
+        name       = changeTheme
+        userScript = $(LOCAL)/changeTheme.py
+        statusTip  = "Change theme to dark mode"
+        accel      = "ctrl+F9"
+    }
 }
 
 UserIDEMenus {
-  SubMenu "Theme" {
-    ActionReference = changeTheme
-  }
+    SubMenu "Theme" {
+        ActionReference = changeTheme
+    }
 }
 ```
 {{</highlight>}}

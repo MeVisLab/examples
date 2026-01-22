@@ -60,9 +60,10 @@ Now open the *.script* file of your newly created macro through the context menu
 {{< highlight filename = "BaseNetwork.script">}}
 ```Stan
     Commands{
-      source = $(LOCAL)/BaseNetwork.py
+        source = $(LOCAL)/BaseNetwork.py
     }
-``` {{</highlight>}}
+```
+{{</highlight>}}
 
 
 Click the "Reload" button, which is located above the script for the *.py* file to be added into the module definition folder, then open it using the "Files" button on the same bar as demonstrated below:

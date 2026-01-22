@@ -52,19 +52,19 @@ You should also already add a Python file in the *Commands* section.
 {{< highlight filename="DemoAI.script" >}}
 ```Stan
 Interface {
-  Inputs {
-    Field inputImage { type = Image }
-  }
-  Outputs {
-    Field outImage { internalName = PythonImage.output0 }
-  }
-  Parameters {
-    Field start { type = Trigger }
-  }
+    Inputs {
+        Field inputImage { type = Image }
+    }
+    Outputs {
+        Field outImage { internalName = PythonImage.output0 }
+    }
+    Parameters {
+        Field start { type = Trigger }
+    }
 }
 
 Commands {
-  source = $(LOCAL)/DemoAI.py
+    source = $(LOCAL)/DemoAI.py
 }
 ```
 {{</highlight>}}
@@ -102,9 +102,9 @@ Add the following code to your *Commands* section:
 {{< highlight filename="DemoAI.script" >}}
 ```Stan
 Commands {
-  source = $(LOCAL)/DemoAI.py
-  
-  FieldListener start { command = onStart }
+    source = $(LOCAL)/DemoAI.py
+    
+    FieldListener start { command = onStart }
 }
 ```
 {{</highlight>}}
@@ -118,31 +118,31 @@ The Python file opens automatically and the function is created.
 import torch
 
 def onStart():
-  # Step 1: Get input image
-  image = ctx.field("inputImage").image()
-  imageArray = image.getTile((0, 0, 0, 0, 0, 0), image.imageExtent())
-  inputImage = imageArray[0,0,0,:,:,:].astype("float")
-  
-  # Step 2: Normalize input image
-  values = inputImage[inputImage > inputImage.mean()]
-  inputImage = (inputImage - values.mean()) / values.std()
-  
-  # Step 3: Convert into torch tensor of size: [Batch, Channel, z, y, x]
-  inputTensor = torch.Tensor(inputImage[None, None, :, :, :])
-  
-  # Step 4: Load and prepare AI model
-  device = torch.device("cpu")
-  model = torch.hub.load("fepegar/highresnet", "highres3dnet", pretrained=True, trust_repo=True)
-  model.to(device).eval()
-  
-  output = model(inputTensor.to(device))
+    # Step 1: Get input image
+    image = ctx.field("inputImage").image()
+    imageArray = image.getTile((0, 0, 0, 0, 0, 0), image.imageExtent())
+    inputImage = imageArray[0, 0, 0, :, :, :].astype("float")
     
-  brainParcellationMap = output.argmax(dim=1, keepdim=True).cpu()[0]
-  print('...done.')
-  
-  # Step 6: Set output image to module
-  interface = ctx.module("PythonImage").call("getInterface")
-  interface.setImage(brainParcellationMap.numpy(), voxelToWorldMatrix=image.voxelToWorldMatrix())
+    # Step 2: Normalize input image
+    values = inputImage[inputImage > inputImage.mean()]
+    inputImage = (inputImage - values.mean()) / values.std()
+    
+    # Step 3: Convert into torch tensor of size: [Batch, Channel, z, y, x]
+    inputTensor = torch.Tensor(inputImage[None, None, :, :, :])
+    
+    # Step 4: Load and prepare AI model
+    device = torch.device("cpu")
+    model = torch.hub.load("fepegar/highresnet", "highres3dnet", pretrained=True, trust_repo=True)
+    model.to(device).eval()
+    
+    output = model(inputTensor.to(device))
+      
+    brainParcellationMap = output.argmax(dim=1, keepdim=True).cpu()[0]
+    print('...done.')
+    
+    # Step 6: Set output image to module
+    interface = ctx.module("PythonImage").call("getInterface")
+    interface.setImage(brainParcellationMap.numpy(), voxelToWorldMatrix=image.voxelToWorldMatrix())
 ```
 {{</highlight>}}
 
