@@ -50,19 +50,19 @@ Related Files
 &rarr;
 DemoAI.script
 ]</i>. MATE opens showing the <em>.script</em> file of our module. Add an input <em>Field</em> of type <em>Image</em>, an output <em>Field</em> using the <em>internalName</em> of the output of our <code>PythonImage</code>, and a <em>Trigger</em> to start the segmentation.</p><p>You should also already add a Python file in the <em>Commands</em> section.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">DemoAI.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  Inputs {
-    Field inputImage { type = Image }
-  }
-  Outputs {
-    Field outImage { internalName = PythonImage.output0 }
-  }
-  Parameters {
-    Field start { type = Trigger }
-  }
+    Inputs {
+        Field inputImage { type = Image }
+    }
+    Outputs {
+        Field outImage { internalName = PythonImage.output0 }
+    }
+    Parameters {
+        Field start { type = Trigger }
+    }
 }
 
 Commands {
-  source = $(LOCAL)/DemoAI.py
+    source = $(LOCAL)/DemoAI.py
 }
 </code></pre></div></div><p>In MATE, right-click
 <img width=22px src=images/rmb.svg alt="Right Mouse Button">
@@ -77,9 +77,9 @@ Related Files
 &rarr;
 DemoAI.script
 ]</i>. The Python function is supposed to be called whenever the <em>Trigger</em> is touched.</p><p>Add the following code to your <em>Commands</em> section:</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">DemoAI.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Commands {
-  source = $(LOCAL)/DemoAI.py
-  
-  FieldListener start { command = onStart }
+    source = $(LOCAL)/DemoAI.py
+    
+    FieldListener start { command = onStart }
 }
 </code></pre></div></div><p>The <em>FieldListener</em> always calls the Python function <em>onStart</em> when the <em>Trigger</em> <em>start</em> is touched. We now need to implement the Python function. Right-click
 <img width=22px src=images/rmb.svg alt="Right Mouse Button">
@@ -88,31 +88,31 @@ Create Python Function 'onStart'
 ]</i>.</p><p>The Python file opens automatically and the function is created.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">DemoAI.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#f92672>import</span> torch
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>onStart</span>():
-</span></span><span style=display:flex><span>  <span style=color:#75715e># Step 1: Get input image</span>
-</span></span><span style=display:flex><span>  image <span style=color:#f92672>=</span> ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;inputImage&#34;</span>)<span style=color:#f92672>.</span>image()
-</span></span><span style=display:flex><span>  imageArray <span style=color:#f92672>=</span> image<span style=color:#f92672>.</span>getTile((<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>), image<span style=color:#f92672>.</span>imageExtent())
-</span></span><span style=display:flex><span>  inputImage <span style=color:#f92672>=</span> imageArray[<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,:,:,:]<span style=color:#f92672>.</span>astype(<span style=color:#e6db74>&#34;float&#34;</span>)
-</span></span><span style=display:flex><span>  
-</span></span><span style=display:flex><span>  <span style=color:#75715e># Step 2: Normalize input image</span>
-</span></span><span style=display:flex><span>  values <span style=color:#f92672>=</span> inputImage[inputImage <span style=color:#f92672>&gt;</span> inputImage<span style=color:#f92672>.</span>mean()]
-</span></span><span style=display:flex><span>  inputImage <span style=color:#f92672>=</span> (inputImage <span style=color:#f92672>-</span> values<span style=color:#f92672>.</span>mean()) <span style=color:#f92672>/</span> values<span style=color:#f92672>.</span>std()
-</span></span><span style=display:flex><span>  
-</span></span><span style=display:flex><span>  <span style=color:#75715e># Step 3: Convert into torch tensor of size: [Batch, Channel, z, y, x]</span>
-</span></span><span style=display:flex><span>  inputTensor <span style=color:#f92672>=</span> torch<span style=color:#f92672>.</span>Tensor(inputImage[<span style=color:#66d9ef>None</span>, <span style=color:#66d9ef>None</span>, :, :, :])
-</span></span><span style=display:flex><span>  
-</span></span><span style=display:flex><span>  <span style=color:#75715e># Step 4: Load and prepare AI model</span>
-</span></span><span style=display:flex><span>  device <span style=color:#f92672>=</span> torch<span style=color:#f92672>.</span>device(<span style=color:#e6db74>&#34;cpu&#34;</span>)
-</span></span><span style=display:flex><span>  model <span style=color:#f92672>=</span> torch<span style=color:#f92672>.</span>hub<span style=color:#f92672>.</span>load(<span style=color:#e6db74>&#34;fepegar/highresnet&#34;</span>, <span style=color:#e6db74>&#34;highres3dnet&#34;</span>, pretrained<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>, trust_repo<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
-</span></span><span style=display:flex><span>  model<span style=color:#f92672>.</span>to(device)<span style=color:#f92672>.</span>eval()
-</span></span><span style=display:flex><span>  
-</span></span><span style=display:flex><span>  output <span style=color:#f92672>=</span> model(inputTensor<span style=color:#f92672>.</span>to(device))
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Step 1: Get input image</span>
+</span></span><span style=display:flex><span>    image <span style=color:#f92672>=</span> ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;inputImage&#34;</span>)<span style=color:#f92672>.</span>image()
+</span></span><span style=display:flex><span>    imageArray <span style=color:#f92672>=</span> image<span style=color:#f92672>.</span>getTile((<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>), image<span style=color:#f92672>.</span>imageExtent())
+</span></span><span style=display:flex><span>    inputImage <span style=color:#f92672>=</span> imageArray[<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, :, :, :]<span style=color:#f92672>.</span>astype(<span style=color:#e6db74>&#34;float&#34;</span>)
 </span></span><span style=display:flex><span>    
-</span></span><span style=display:flex><span>  brainParcellationMap <span style=color:#f92672>=</span> output<span style=color:#f92672>.</span>argmax(dim<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span>, keepdim<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)<span style=color:#f92672>.</span>cpu()[<span style=color:#ae81ff>0</span>]
-</span></span><span style=display:flex><span>  print(<span style=color:#e6db74>&#39;...done.&#39;</span>)
-</span></span><span style=display:flex><span>  
-</span></span><span style=display:flex><span>  <span style=color:#75715e># Step 6: Set output image to module</span>
-</span></span><span style=display:flex><span>  interface <span style=color:#f92672>=</span> ctx<span style=color:#f92672>.</span>module(<span style=color:#e6db74>&#34;PythonImage&#34;</span>)<span style=color:#f92672>.</span>call(<span style=color:#e6db74>&#34;getInterface&#34;</span>)
-</span></span><span style=display:flex><span>  interface<span style=color:#f92672>.</span>setImage(brainParcellationMap<span style=color:#f92672>.</span>numpy(), voxelToWorldMatrix<span style=color:#f92672>=</span>image<span style=color:#f92672>.</span>voxelToWorldMatrix())
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Step 2: Normalize input image</span>
+</span></span><span style=display:flex><span>    values <span style=color:#f92672>=</span> inputImage[inputImage <span style=color:#f92672>&gt;</span> inputImage<span style=color:#f92672>.</span>mean()]
+</span></span><span style=display:flex><span>    inputImage <span style=color:#f92672>=</span> (inputImage <span style=color:#f92672>-</span> values<span style=color:#f92672>.</span>mean()) <span style=color:#f92672>/</span> values<span style=color:#f92672>.</span>std()
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Step 3: Convert into torch tensor of size: [Batch, Channel, z, y, x]</span>
+</span></span><span style=display:flex><span>    inputTensor <span style=color:#f92672>=</span> torch<span style=color:#f92672>.</span>Tensor(inputImage[<span style=color:#66d9ef>None</span>, <span style=color:#66d9ef>None</span>, :, :, :])
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Step 4: Load and prepare AI model</span>
+</span></span><span style=display:flex><span>    device <span style=color:#f92672>=</span> torch<span style=color:#f92672>.</span>device(<span style=color:#e6db74>&#34;cpu&#34;</span>)
+</span></span><span style=display:flex><span>    model <span style=color:#f92672>=</span> torch<span style=color:#f92672>.</span>hub<span style=color:#f92672>.</span>load(<span style=color:#e6db74>&#34;fepegar/highresnet&#34;</span>, <span style=color:#e6db74>&#34;highres3dnet&#34;</span>, pretrained<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>, trust_repo<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)
+</span></span><span style=display:flex><span>    model<span style=color:#f92672>.</span>to(device)<span style=color:#f92672>.</span>eval()
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    output <span style=color:#f92672>=</span> model(inputTensor<span style=color:#f92672>.</span>to(device))
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>    brainParcellationMap <span style=color:#f92672>=</span> output<span style=color:#f92672>.</span>argmax(dim<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span>, keepdim<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)<span style=color:#f92672>.</span>cpu()[<span style=color:#ae81ff>0</span>]
+</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>&#39;...done.&#39;</span>)
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Step 6: Set output image to module</span>
+</span></span><span style=display:flex><span>    interface <span style=color:#f92672>=</span> ctx<span style=color:#f92672>.</span>module(<span style=color:#e6db74>&#34;PythonImage&#34;</span>)<span style=color:#f92672>.</span>call(<span style=color:#e6db74>&#34;getInterface&#34;</span>)
+</span></span><span style=display:flex><span>    interface<span style=color:#f92672>.</span>setImage(brainParcellationMap<span style=color:#f92672>.</span>numpy(), voxelToWorldMatrix<span style=color:#f92672>=</span>image<span style=color:#f92672>.</span>voxelToWorldMatrix())
 </span></span></code></pre></div></div></div><svg style="display:none"><symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8A8 8 0 110 8a8 8 0 0116 0zm-3.97-3.03a.75.75.0 00-1.08.022L7.477 9.417 5.384 7.323a.75.75.0 00-1.06 1.06L6.97 11.03a.75.75.0 001.079-.02l3.992-4.99a.75.75.0 00-.01-1.05z"/></symbol><symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 108 0a8 8 0 000 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194.0.487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703.0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 110-2 1 1 0 010 2z"/></symbol><symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13.0 00-1.96.0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889.0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535.0.954.462.9.995l-.35 3.507a.552.552.0 01-1.1.0L7.1 5.995A.905.905.0 018 5zm.002 6a1 1 0 110 2 1 1 0 010-2z"/></symbol><symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13.0 00-1.96.0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889.0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535.0.954.462.9.995l-.35 3.507a.552.552.0 01-1.1.0L7.1 5.995A.905.905.0 018 5zm.002 6a1 1 0 110 2 1 1 0 010-2z"/></symbol></svg><div class="alert alert-primary alert-warning d-flex align-items-center" role=alert><svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#warning-fill"/></svg><div><b>Warning:&nbsp;</b>
 When executing your Python script for the first time, you will get a ScriptError message in the MeVisLab console. This only happens because the file of the trained network is missing and downloaded initially. You can ignore the message.</div></div><svg style="display:none"><symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8A8 8 0 110 8a8 8 0 0116 0zm-3.97-3.03a.75.75.0 00-1.08.022L7.477 9.417 5.384 7.323a.75.75.0 00-1.06 1.06L6.97 11.03a.75.75.0 001.079-.02l3.992-4.99a.75.75.0 00-.01-1.05z"/></symbol><symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 108 0a8 8 0 000 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194.0.487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703.0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 110-2 1 1 0 010 2z"/></symbol><symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13.0 00-1.96.0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889.0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535.0.954.462.9.995l-.35 3.507a.552.552.0 01-1.1.0L7.1 5.995A.905.905.0 018 5zm.002 6a1 1 0 110 2 1 1 0 010-2z"/></symbol><symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13.0 00-1.96.0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889.0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535.0.954.462.9.995l-.35 3.507a.552.552.0 01-1.1.0L7.1 5.995A.905.905.0 018 5zm.002 6a1 1 0 110 2 1 1 0 010-2z"/></symbol></svg><div class="alert alert-primary alert-info d-flex align-items-center" role=alert><svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg><div><b>Info:&nbsp;</b>
 The script uses the CPU; in the case you want to use CUDA, you can replace the line <em>device = torch.device(&ldquo;cpu&rdquo;)</em> with: <em>device = torch.device(&lsquo;cuda&rsquo; if torch.cuda.is_available() else &lsquo;cpu&rsquo;)</em></div></div><p>The function does the following:</p><ul><li>Get the input image of the module <code>PythonImage</code></li><li>Normalize the input image</li><li>Convert the image into a torch tensor of size: [Batch, Channel, z, y, x]</li><li>Load and prepare AI model</li><li>Set output image to module output</li></ul><h2 id=execute-the-segmentation>Execute the Segmentation</h2><p>Change the alpha value of your <code>SoView2DOverlayMPR</code> to have a better visualization of the results.</p><p>Switch back to the MeVisLab IDE and select your module <code>DemoAI</code>. In <em>Module Inspector</em>, click <em>Trigger</em> for <em>start</em> and wait a little bit until you can see the results.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/pytorch_example2_9.png title="Final result"><img id="Final result" class="img-fluid rounded" src=images/tutorials/thirdparty/pytorch_example2_9.png alt="Final result" title="Final result"></a><figcaption class=figure-caption>Final result</figcaption></p>.</p><p>Without adding a <code>SubImage</code>, the segmentation results should look like this:</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/pytorch_example2_10.png title=Results><img id=Results class="img-fluid rounded" src=images/tutorials/thirdparty/pytorch_example2_10.png alt=Results title=Results></a><figcaption class=figure-caption>Results</figcaption></p>.</p><h2 id=summary>Summary</h2><ul><li>Pretrained PyTorch networks can be used directly in MeVisLab via <code>PythonImage</code> module.</li></ul><div class="alert alert-secondary d-flex align-items-center" role=alert><div><img width=24px src=archive.png>&nbsp;&nbsp;&nbsp;Download Archive <a href=https://mevislab.github.io/examples/examples/thirdparty/pytorch2/DemoAI.zip target=_blank>here</a>.</div></div></div></div><script>const body_element=document.querySelector("html body"),modal_div=document.createElement("div");let modal_window=document.body.appendChild(modal_div),modal_html='<div class="modal fade" id="lightboxModalFullscreen" tabindex="-1" aria-labelledby="lightboxModalFullscreenLabel" aria-hidden="true"><div class="modal-dialog modal-fullscreen" data-bs-dismiss="modal" aria-label="Close"><div class="modal-content border-0"><div class="modal-body d-flex align-self-center align-items-center justify-content-center"><div class="modal-custom"><img src="" id="LightboxCanvas" class="img-fluid" data-bs-dismiss="modal" aria-label="Close" /><figcaption id="LightboxCaption" class="figure-caption"></figcaption></div></div></div></div></div>';modal_window.innerHTML=modal_html,Array.from(document.querySelectorAll('[data-modal*="bs-lightbox"]')).forEach(e=>{e.setAttribute("data-bs-toggle","modal"),e.setAttribute("data-bs-target","#lightboxModalFullscreen"),e.addEventListener("click",t=>{const n=e.getAttribute("href"),s=e.getAttribute("title");document.getElementById("LightboxCanvas").src=n,document.getElementById("LightboxCaption").innerHTML=s,t.preventDefault(),console.log(n)})})</script><hr><div class=row style=margin:25px!important><div class=col><a href=https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample1/ title="Example 1: Installing PyTorch Using the PythonPip Module" class="btn btn-outline-secondary btn-sm" role=button aria-pressed=true><svg width="16" height="16" fill="currentColor" class="bi bi-skip-start-fill" viewBox="0 0 16 16"><path d="M4 4a.5.5.0 011 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5.0 01-1 0V4z"/></svg>&nbsp;Example 1: Installing PyTorch Using the PythonPip Module</a></div><div class=col style=text-align:right><a href=https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample3/ title="Example 3: Segment Persons in Webcam Videos" class="btn btn-outline-secondary btn-sm" role=button aria-pressed=true>Example 3: Segment Persons in Webcam Videos&nbsp;

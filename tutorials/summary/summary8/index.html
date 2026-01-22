@@ -46,153 +46,159 @@ Related Files
 &rarr;
 TutorialSummaryBrowser.script
 ]</i>.</p><p>The file opens in MATE and you will see that it looks similar to the <em>.script</em> file of a normal macro module. The only difference is an additional <em>Web</em> section at the end of the file. It defines the locations of some <em>JavaScript</em> libraries and the <em>URL</em> to be used for a preview of your website.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">TutorialSummaryBrowser.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Web {
-  plugin = &#34;$(MLAB_MeVisLab_Private)/Sources/Web/application/js/jquery/Plugin.js&#34;
-  plugin = &#34;$(MLAB_MeVisLab_Private)/Sources/Web/application/js/yui/Plugin.js&#34;
-  
-  // Specify web plugins here. If you have additional JavaScript files, you can load them from 
-  // the plugin. It is also possible to load other plugins here.
-  plugin = &#34;$(LOCAL)/www/js/Plugin.js&#34;
+    plugin = &#34;$(MLAB_MeVisLab_Private)/Sources/Web/application/js/jquery/Plugin.js&#34;
+    plugin = &#34;$(MLAB_MeVisLab_Private)/Sources/Web/application/js/yui/Plugin.js&#34;
+    
+    // Specify web plugins here. If you have additional JavaScript files, you can load them from 
+    // the plugin. It is also possible to load other plugins here.
+    plugin = &#34;$(LOCAL)/www/js/Plugin.js&#34;
 
-  Deployment {
-    // Deploy the www directory recursively when building web application installers
-    directory = &#34;$(LOCAL)/www&#34;
-  }
-  
-  // The developer URL is used by the startWorkerService.py user script.
-  developerUrl = &#34;MeVis/TutorialSummary/Projects/TutorialSummaryBrowser/Modules/www/TutorialSummaryBrowser.html&#34;
+    Deployment {
+        // Deploy the www directory recursively when building web application installers
+        directory = &#34;$(LOCAL)/www&#34;
+    }
+    
+    // The developer URL is used by the startWorkerService.py user script.
+    developerUrl = &#34;MeVis/TutorialSummary/Projects/TutorialSummaryBrowser/Modules/www/TutorialSummaryBrowser.html&#34;
 }
 </code></pre></div></div><p>Open the script file of the <em>TutorialSummary</em> module from <a href=tutorials/summary/summary3/>Step 3</a>. Copy the output section to your web macro and define <em>internalName</em> as the output of your <code>RemoteRendering</code> modules.</p><p>You can also copy all fields from <em>Parameters</em> section to your web macro module script.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">TutorialSummaryBrowser.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  Inputs {}
-  Outputs {
-    Field out2D { internalName = RemoteRendering2D.output }
-    Field out3D { internalName = RemoteRendering3D.output }
-    Field outSegmentationMask { internalName = CloseGap.output0 }
-  }
-  Parameters {
-    Field openFile {
-      type         = String
-      internalName = LocalImage.name
+    Inputs {}
+    Outputs {
+        Field out2D { internalName = RemoteRendering2D.output }
+        Field out3D { internalName = RemoteRendering3D.output }
+        Field outSegmentationMask { internalName = CloseGap.output0 }
     }
-    Field selectOverlayColor {
-      internalName = SoView2DOverlay.baseColor
-      type         = Color
+    Parameters {
+        Field openFile {
+            type         = String
+            internalName = LocalImage.name
+        }
+        Field selectOverlayColor {
+            internalName = SoView2DOverlay.baseColor
+            type         = Color
+        }
+        Field selectOverlayTransparency {
+            internalName = SoView2DOverlay.alphaFactor
+        }
+        Field imageAlpha {
+            internalName = SoWEMRendererImage.faceAlphaValue
+            type         = Integer
+            min          = 0
+            max          = 1
+        }
+        Field thresholdInterval {
+            internalName = RegionGrowing.autoThresholdIntervalSizeInPercent
+            type         = Integer
+            min          = 0
+            max          = 100
+        }
+        Field isoValueImage  {
+            internalName = IsoSurfaceImage.isoValue
+            type         = Integer
+            min          = 0
+            max          = 1000
+        }
+        Field selected3DView {
+            type   = Enum
+            items {
+                item Segmented {}
+                item File {}
+                item Both {}
+            }
+        }
+        Field totalVolume {
+            internalName = CalculateVolume.totalVolume
+            editable     = False
+        }
+        Field resetApplication {
+            type  = Trigger
+            title = Reset
+        }
+        Field markerPosition {
+            type         = Vector3
+        }
+        Field applyMarker {
+            type  = Trigger
+            title = Add
+        }
     }
-    Field selectOverlayTransparency {
-      internalName = SoView2DOverlay.alphaFactor
-    }
-    Field imageAlpha {
-      internalName = SoWEMRendererImage.faceAlphaValue
-      type         = Integer
-      min          = 0
-      max          = 1
-    }
-    Field thresholdInterval {
-      internalName = RegionGrowing.autoThresholdIntervalSizeInPercent
-      type         = Integer
-      min          = 0
-      max          = 100
-    }
-    Field isoValueImage  {
-      internalName = IsoSurfaceImage.isoValue
-      type         = Integer
-      min          = 0
-      max          = 1000
-    }
-    Field selected3DView {
-      type   = Enum
-      values = Segmented,File,Both
-    }
-    Field totalVolume {
-      internalName = CalculateVolume.totalVolume
-      editable     = False
-    }
-    Field resetApplication {
-      type  = Trigger
-      title = Reset
-    }
-    Field markerPosition {
-      type         = Vector3
-    }
-    Field applyMarker {
-      type  = Trigger
-      title = Add
-    }
-  }
 }
 </code></pre></div></div><p>Reloading your web macro in MeVisLab SDK now shows the same outputs as the original macro module. The only difference is the type of your output. It changed from MLImage and Open Inventor scene to MLBase from your <code>RemoteRendering</code> modules.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/summary/Example8_7.png title="Macro modules"><img id="Macro modules" class="img-fluid rounded" src=images/tutorials/summary/Example8_7.png alt="Macro modules" title="Macro modules"></a><figcaption class=figure-caption>Macro modules</figcaption></p></p><p>The internal network of your web macro should look like this:</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/summary/Example8_8.png title="Macro modules"><img id="Macro modules" class="img-fluid rounded" src=images/tutorials/summary/Example8_8.png alt="Macro modules" title="Macro modules"></a><figcaption class=figure-caption>Macro modules</figcaption></p></p><p>You can emulate the final viewer by adding a <code>RemoteRenderingClient</code> module to the outputs of your web macro.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/summary/Example8_9.png title=RemoteRenderingClient><img id=RemoteRenderingClient class="img-fluid rounded" src=images/tutorials/summary/Example8_9.png alt=RemoteRenderingClient title=RemoteRenderingClient></a><figcaption class=figure-caption>RemoteRenderingClient</figcaption></p></p><p>Open the <em>.script</em> files of your macro modules and copy the <em>FieldListeners</em> from the <em>Commands</em> section of your <em>TutorialSummary.script</em> to <em>TutorialSummaryBrowser.script</em>.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">TutorialSummaryBrowser.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Commands {
-  source = $(LOCAL)/TutorialSummaryBrowser.py
-  
-  FieldListener selected3DView {
-    command = viewSelectionChanged
-  }
-  FieldListener resetApplication {
-    command = resetApplication
-  }
-  FieldListener markerPosition {
-    command = insertPosition
-  }
-  FieldListener applyMarker {
-    command = applyPosition
-  }
+    source = $(LOCAL)/TutorialSummaryBrowser.py
+    
+    FieldListener selected3DView {
+        command = viewSelectionChanged
+    }
+    FieldListener resetApplication {
+        command = resetApplication
+    }
+    FieldListener markerPosition {
+        command = insertPosition
+    }
+    FieldListener applyMarker {
+        command = applyPosition
+    }
 }
 </code></pre></div></div><p>Also copy the <em>Window</em> section to your web macro module. The <em>Box</em> of the <em>Viewing</em> tab needs to be modified because we are now using the <code>RemoteRendering</code> outputs instead of the <code>View3D</code> and <code>SoExaminerViewer</code> outputs.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">TutorialSummaryBrowser.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Window &#34;MainPanel&#34; {
-  // Define minimum width and height
-  minimumWidth  = 400
-  minimumHeight = 300
-  initCommand   = resetApplication
-  // Vertical Layout and 4 Boxes with Horizontal Layout
-  Vertical {
-    Box Source {
-      layout = Horizontal
-      Field openFile {
-        browseButton = True
-        browseMode   = open
-      }
-      Field resetApplication { }
+    // Define minimum width and height
+    minimumWidth  = 400
+    minimumHeight = 300
+    initCommand   = resetApplication
+    Category {
+        // Vertical Layout and four Boxes with Horizontal Layout
+        Vertical {
+            Box Source {
+                layout = Horizontal
+                Field openFile {
+                    browseButton = Yes
+                    browseMode   = open
+                }
+                Field resetApplication { }
+            }
+            Box Viewing {
+                layout = Horizontal
+                RemoteRendering out2D {
+                    expandX = Yes
+                    expandY = Yes
+                }
+                RemoteRendering out3D {
+                    expandX = Yes
+                    expandY = Yes
+                }
+            }
+            Box Settings {
+                layout = Horizontal
+                Field selectOverlayColor {
+                    title   = Color
+                }
+                Field selectOverlayTransparency {
+                    title   = Alpha
+                }
+                Field imageAlpha {
+                    step   = 0.1
+                    slider = Yes
+                }
+                Field thresholdInterval {
+                    step   = 0.1
+                    slider = Yes
+                }
+                Field isoValueImage {
+                    step   = 2
+                    slider = Yes
+                }
+                Field markerPosition {}
+                Field applyMarker {}
+                ComboBox selected3DView {
+                    alignX   = Left
+                    editable = False
+                }
+            }
+            Box Info {
+                layout    = Horizontal
+                Field totalVolume {}
+            }
+        }
     }
-    Box Viewing {
-      layout = Horizontal
-      RemoteRendering out2D {
-        expandX = True
-        expandY = True
-      }
-      RemoteRendering out3D {
-        expandX = True
-        expandY = True
-      }
-    }
-    Box Settings {
-      layout = Horizontal
-      Field selectOverlayColor {
-        title   = Color
-      }
-      Field selectOverlayTransparency {
-        title   = Alpha
-      }
-      Field imageAlpha {
-        step   = 0.1
-        slider = True
-      }
-      Field thresholdInterval {
-        step   = 0.1
-        slider = True
-      }
-      Field isoValueImage {
-        step   = 2
-        slider = True
-      }
-      Field markerPosition {}
-      Field applyMarker {}
-      ComboBox selected3DView {
-        alignX   = Left
-        editable = False
-      }
-    }
-    Box Info {
-      layout    = Horizontal
-      Field totalVolume {}
-    }
-  }
 }
 </code></pre></div></div><h4 id=python-functions>Python Functions</h4><p>After we reused the scripts, we now need to copy the Python functions from <em>TutorialSummary.py</em> to <em>TutorialSummaryBrowser.py</em>. Open the Python file of your web macro. You will see an additional import from <em>MLABRemote</em>, which is required for remote rendering calls. The <em>MLABRemote</em> context is already setup automatically and can be used.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">TutorialSummaryBrowser.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#f92672>from</span> mevis <span style=color:#f92672>import</span> <span style=color:#f92672>*</span>
 </span></span><span style=display:flex><span>
@@ -205,31 +211,31 @@ TutorialSummaryBrowser.script
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#a6e22e>@allowedRemoteCall</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>viewSelectionChanged</span>(field):
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;Segmented&#34;</span>:
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;File&#34;</span>:
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;Both&#34;</span>:
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;Segmented&#34;</span>:
+</span></span><span style=display:flex><span>        ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;File&#34;</span>:
+</span></span><span style=display:flex><span>        ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;Both&#34;</span>:
+</span></span><span style=display:flex><span>        ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#a6e22e>@allowedRemoteCall</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>resetApplication</span>():
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;RegionGrowing.clear&#34;</span>)<span style=color:#f92672>.</span>touch()
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.deleteAll&#34;</span>)<span style=color:#f92672>.</span>touch()
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;LocalImage.close&#34;</span>)<span style=color:#f92672>.</span>touch()
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;imageAlpha&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.5</span>
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;thresholdInterval&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.0</span>
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;isoValueImage&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>200</span>
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;selected3DView&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Both&#34;</span>
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;RegionGrowing.clear&#34;</span>)<span style=color:#f92672>.</span>touch()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.deleteAll&#34;</span>)<span style=color:#f92672>.</span>touch()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;LocalImage.close&#34;</span>)<span style=color:#f92672>.</span>touch()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;imageAlpha&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.5</span>
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;thresholdInterval&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.0</span>
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;isoValueImage&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>200</span>
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;selected3DView&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Both&#34;</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#a6e22e>@allowedRemoteCall</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>insertPosition</span>(field):
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.newPosXYZ&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> field<span style=color:#f92672>.</span>value
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.newPosXYZ&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> field<span style=color:#f92672>.</span>value
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#a6e22e>@allowedRemoteCall</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>applyPosition</span>():
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.useInsertTemplate&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.add&#34;</span>)<span style=color:#f92672>.</span>touch()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.useInsertTemplate&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.add&#34;</span>)<span style=color:#f92672>.</span>touch()
 </span></span></code></pre></div></div></div><h3 id=run-your-application-in-a-browser>Run Your Application in a Browser</h3><p>MeVisLab provides a local webserver and you can preview your application in a browser by selecting the module and open <i>[
 Scripting
 &rarr;

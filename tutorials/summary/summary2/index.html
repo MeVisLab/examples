@@ -38,24 +38,24 @@ File
 &rarr;
 Run Project Wizard...
 ]</i> and select <em>macro module</em>. Run the Wizard and enter details of your new macro module.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/summary/Example2_2.png title="Macro module wizard"><img id="Macro module wizard" class="img-fluid rounded" src=images/tutorials/summary/Example2_2.png alt="Macro module wizard" title="Macro module wizard"></a><figcaption class=figure-caption>Macro module wizard</figcaption></p></p><p>Select the created package and click <em>Next</em>.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/summary/Example2_3.png title="Macro module wizard"><img id="Macro module wizard" class="img-fluid rounded" src=images/tutorials/summary/Example2_3.png alt="Macro module wizard" title="Macro module wizard"></a><figcaption class=figure-caption>Macro module wizard</figcaption></p></p><p>Select your <em>.mlab</em> file from <a href=tutorials/summary/summary1/>Step 1</a> and check <em>Add Python file</em>. Click <em>Next</em>.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/summary/Example2_4.png title="Macro module wizard"><img id="Macro module wizard" class="img-fluid rounded" src=images/tutorials/summary/Example2_4.png alt="Macro module wizard" title="Macro module wizard"></a><figcaption class=figure-caption>Macro module wizard</figcaption></p></p><p>You do not have to define fields of your macro module now, we will do that later. Click <em>Create</em>. The file explorer opens showing the directory of your macro module. It should be the same directory you selected for your Package.</p><h3 id=directory-structure-of-a-macro-module>Directory Structure of a Macro Module</h3><p>The directory structure for a macro module is as follows:</p><ul><li>From Package Wizard:<ul><li>Package target directory is the root directory of the module</li><li>The next directory is the package group and package name</li></ul></li><li>From macro module Wizard:<ul><li>The name of the macro module defines the directory containing all files of your module</li><li>An additional directory <em>Modules</em> is created containing the following files:<ul><li>&lt;MACRO_NAME>.def</li><li>&lt;MACRO_NAME>.mlab</li><li>&lt;MACRO_NAME>.py</li><li>&lt;MACRO_NAME>.script</li></ul></li></ul></li></ul><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/summary/Example2_6.png title="Directory Structure"><img id="Directory Structure" class="img-fluid rounded" src=images/tutorials/summary/Example2_6.png alt="Directory Structure" title="Directory Structure"></a><figcaption class=figure-caption>Directory Structure</figcaption></p></p><h4 id=definition-def-file>Definition (<em>.def</em>) File</h4><p>The initial <em>.def</em> file contains information you entered into the Wizard for the macro module.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.def</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Macro module TutorialSummary {
-  genre              = &#34;VisualizationMain&#34;
-  author             = &#34;MeVis Medical Solutions AG&#34;
-  comment            = &#34;Macro module for MeVisLab tutorials&#34;
-  keywords           = &#34;2D 3D RegionGrowing&#34;
-  seeAlso            = &#34;&#34;
+    genre              = &#34;VisualizationMain&#34;
+    author             = &#34;MeVis Medical Solutions AG&#34;
+    comment            = &#34;Macro module for MeVisLab tutorials&#34;
+    keywords           = &#34;2D 3D RegionGrowing&#34;
+    seeAlso            = &#34;&#34;
    
-  externalDefinition = &#34;$(LOCAL)/TutorialSummary.script&#34;
+    externalDefinition = &#34;$(LOCAL)/TutorialSummary.script&#34;
 }
 </code></pre></div></div><p>An <em>externalDefinition</em> to a script file is also added (see below for the <em>.script</em> file).</p><h4 id=mevislab-network-mlab-file>MeVisLab Network (<em>.mlab</em>) File</h4><p>The <em>.mlab</em> file is a copy of the <em>.mlab</em> file you developed in <a href=tutorials/summary/summary1/>Step 1</a> and reused in the wizard. In the next chapters, this file will be used as <em>internal network</em>.</p><h4 id=python-py-file>Python (<em>.py</em>) File</h4><p>The initial <em>.py</em> file only contains the import of MeVisLab-specific objects and functions. In the future steps, we will add functionalities to our application in Python.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#f92672>from</span> mevis <span style=color:#f92672>import</span> <span style=color:#f92672>*</span>
 </span></span></code></pre></div></div></div><h4 id=script-script-file>Script (<em>.script</em>) File</h4><p>The script (<em>.script</em>) file defines fields accessible from outside the macro module, inputs and outputs, and allows you to develop a user interface for your prototype and your final application.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  Inputs {}
-  Outputs {}
-  Parameters {}
+    Inputs {}
+    Outputs {}
+    Parameters {}
 }
 
 
 Commands {
-  source = $(LOCAL)/TutorialSummary.py
+    source = $(LOCAL)/TutorialSummary.py
 }
 </code></pre></div></div><p>The source also defines your Python file to be used when calling functions and events from the user interface.</p><h3 id=using-your-macro-module>Using Your Macro Module</h3><p>As you created a global macro module, you can search for it in the MeVisLab <em>Module Search</em>.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/summary/Example2_7.png title="Module Search"><img id="Module Search" class="img-fluid rounded" src=images/tutorials/summary/Example2_7.png alt="Module Search" title="Module Search"></a><figcaption class=figure-caption>Module Search</figcaption></p></p><p>We did not define inputs or outputs. You cannot connect your module to others. In addition to that, we did not develop a user interface. Double-clicking your module
 <img width=22px src=images/lmb.svg alt="Left Mouse Button">

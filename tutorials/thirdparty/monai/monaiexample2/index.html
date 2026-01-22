@@ -48,19 +48,19 @@ Related Files
 &rarr;
 MONAIDemo.script
 ]</i>.</p><p>Add the following code into the <em>.script</em> file and save.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MONAIDemo.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  Inputs {
-    Field inputImage { type = Image }
-  }
-  Outputs {
-    Field outImage { internalName = PythonImage.output0 }
-  }
-  Parameters {
-    Field start { type = Trigger }
-  }
+    Inputs {
+        Field inputImage { type = Image }
+    }
+    Outputs {
+        Field outImage { internalName = PythonImage.output0 }
+    }
+    Parameters {
+        Field start { type = Trigger }
+    }
 }
 </code></pre></div></div><p>If you now reload your module in MeVisLab, you can see the new input and output.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/monai_example2_3.png title="MONAIDemo with input and output"><img id="MONAIDemo with input and output" class="img-fluid rounded" src=images/tutorials/thirdparty/monai_example2_3.png alt="MONAIDemo with input and output" title="MONAIDemo with input and output"></a><figcaption class=figure-caption>MONAIDemo with input and output</figcaption></p></p><p>Add a <em>Commands</em> section to your <em>.script</em> file.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MONAIDemo.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>...
 Commands {
-  source = $(LOCAL)/MONAIDemo.py
+    source = $(LOCAL)/MONAIDemo.py
 }
 ...
 </code></pre></div></div><p>Right-click
@@ -80,80 +80,80 @@ Related Files
 &rarr;
 MONAIDemo.script
 ]</i>.</p><p>Define your input image field to reuse the internal name of the left input of the <code>Resample3D</code> module.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MONAIDemo.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  Inputs {
-    Field inputImage { internalName = Resample3D.input0 }
-  }
+    Inputs {
+        Field inputImage { internalName = Resample3D.input0 }
+    }
   ...
 }
 </code></pre></div></div><p>If you now open the internal network of your macro module, you can see that the input image is connected to the input of the <code>Resample3D</code> module.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/monai_example2_3b.png title="MonaiDemo Internal Network"><img id="MonaiDemo Internal Network" class="img-fluid rounded" src=images/tutorials/thirdparty/monai_example2_3b.png alt="MONAIDemo Internal Network" title="MonaiDemo Internal Network"></a><figcaption class=figure-caption>MonaiDemo Internal Network</figcaption></p></p><p>Again, open the <em>.script</em> file and change the internal name of your <em>outImage</em> field to reuse the field <em>Resample3D1.output0</em>.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MONAIDemo.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  ...
-  Outputs {
-    Field outImage { internalName = Resample3D1.output0 }
-  }
-  ...
+    ...
+    Outputs {
+        Field outImage { internalName = Resample3D1.output0 }
+    }
+    ...
 }
 </code></pre></div></div><p>If you now open the internal network of your macro module, you can see that the output image is connected to the output of the <code>Resample3D1</code> module.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/monai_example2_3c.png title="MonaiDemo Internal Network"><img id="MonaiDemo Internal Network" class="img-fluid rounded" src=images/tutorials/thirdparty/monai_example2_3c.png alt="MONAIDemo Internal Network" title="MonaiDemo Internal Network"></a><figcaption class=figure-caption>MonaiDemo Internal Network</figcaption></p></p><h3 id=adapt-input-image-to-monai-parameters-from-training>Adapt Input Image to <em>MONAI</em> Parameters from Training</h3><p>The model has been trained for strictly defined assumptions for the input image. All values can normally be found in the <em>inference.json</em> file in your <em>configs</em> directory.</p><p>Use the <code>itkImageFileReader</code> module to load the file <em>Task09_Spleen/Task09_SpleenimagesTr/spleen_7.nii.gz</em> from dowloaded example patients. The <em>Output Inspector</em> shows the image and additional information about the size.</p><p>We can see that the image size is 512 x 512 x 114 and the voxel size is 0.9766 x 0.9766 x 2.5.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/monai_example2_3d.png title="Output Inspector"><img id="Output Inspector" class="img-fluid rounded" src=images/tutorials/thirdparty/monai_example2_3d.png alt="Output Inspector" title="Output Inspector"></a><figcaption class=figure-caption>Output Inspector</figcaption></p></p><p>Connect the module to your local macro module <code>MonaiDemo</code>. The result of the segmentation shall be visualized as a semitransparent overlay on your original image.</p><p>Add a <code>SoView2DOverlay</code> and a <code>View2D</code> module and connect them to your local macro module <code>MonaiDemo</code>.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/monai_example2_4.png title="Final network"><img id="Final network" class="img-fluid rounded" src=images/tutorials/thirdparty/monai_example2_4.png alt="Final network" title="Final network"></a><figcaption class=figure-caption>Final network</figcaption></p></p><p>The <strong>Spleen CT Segmentation</strong> network expects images having a defined voxel size of 1.5 x 1.5 x 2. We want to define these values via fields in the Module Inspector.</p><p>Open the <em>.script</em> file and add the fields <em>start</em> and <em>voxelSize</em> to your local macro module <code>MonaiDemo</code>:</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MONAIDemo.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  ...
-  Parameters {
-    Field start { type = Trigger }
-    Field voxelSize { internalName = Resample3D.voxelSize }
-  }
-  ...
+    ...
+    Parameters {
+        Field start { type = Trigger }
+        Field voxelSize { internalName = Resample3D.voxelSize }
+    }
+    ...
 }
 </code></pre></div></div><p>If you reload your module now, we can set the voxel size to use for the segmentation directly in our macro module <code>MonaiDemo</code>. Additionally, we can trigger a start function for running the segmentation. This is implemented later.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/monai_example2_4a.png title="Voxel Size"><img id="Voxel Size" class="img-fluid rounded" src=images/tutorials/thirdparty/monai_example2_4a.png alt="Voxel Size" title="Voxel Size"></a><figcaption class=figure-caption>Voxel Size</figcaption></p></p><p>If you select the output field of the <code>Resample3D</code> module in the internal network, you can see the extent of the currently opened image after changing the voxel size to 1.5 x 1.5 x 2. It shows 333 x 333 x 143.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/monai_example2_5.png title="Original Image Size"><img id="Original Image Size" class="img-fluid rounded" src=images/tutorials/thirdparty/monai_example2_5.png alt="Original Image Size" title="Original Image Size"></a><figcaption class=figure-caption>Original Image Size</figcaption></p></p><p>The algorithm expects image sizes of 160 x 160 x 160. We add this expected size of the image to our macro module in the same way.</p><p>Open the <em>.script</em> file and add the following fields to your local macro module <code>MonaiDemo</code>:</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MONAIDemo.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  ...
-  Parameters {
     ...
-    Field sizeX { type = Int }
-    Field sizeY { type = Int }
-    Field sizeZ { type = Int }
+    Parameters {
+        ...
+        Field sizeX { type = Int }
+        Field sizeY { type = Int }
+        Field sizeZ { type = Int }
+        ...
+    }
     ...
-  }
-  ...
 }
 </code></pre></div></div><p>Reload your macro module and enter the following values for your new fields:</p><ul><li>sizeX = 160</li><li>sizeY = 160</li><li>sizeZ = 160</li></ul><p>Next, we change the gray values of the image, because the algorithm has been trained on values between -57 and 164. Again, the values can be found in the <em>inference.json</em> file in your <em>configs</em> directory.</p><p>Open the <em>.script</em> file and add the following fields to your local macro module <code>MonaiDemo</code>:</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MONAIDemo.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  ...
-  Parameters {
     ...
-    Field thresholdMin { internalName = IntervalThreshold.threshMin }
-    Field thresholdMax { internalName = IntervalThreshold.threshMax }
+    Parameters {
+        ...
+        Field thresholdMin { internalName = IntervalThreshold.threshMin }
+        Field thresholdMax { internalName = IntervalThreshold.threshMax }
+        ...
+    }
     ...
-  }
-  ...
 }
 </code></pre></div></div><p>As already done before, we can now defined the threshold values for our module via Module Inspector. Set the following:</p><ul><li>thresholdMin = -57</li><li>thresholdMax = 164</li></ul><p>As defined in the <em>inference.json</em> file in your <em>configs</em> directory, the gray values in the image must be between 0 and 1.</p><p>Open the <em>.script</em> file and add the following fields to your local macro module <code>MonaiDemo</code>:</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MONAIDemo.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  ...
-  Parameters {
     ...
-    Field scaleMin { internalName = Scale.outputMin }
-    Field scaleMax { internalName = Scale.outputMax }
+    Parameters {
+        ...
+        Field scaleMin { internalName = Scale.outputMin }
+        Field scaleMax { internalName = Scale.outputMax }
+        ...
+    }
     ...
-  }
-  ...
 }
 </code></pre></div></div><p>Set the following:</p><ul><li>scaleMin = 0</li><li>scaleMax = 1</li></ul><p>The algorithm expects NumPy images. NumPy uses the order Z, Y, X, other than MeVisLab. We are using X, Y, Z. The image needs to be transformed.</p><p>Open the panel of the <code>SwapFlipDimensions</code> module and select X as <em>Axis 1</em> and Z as <em>Axis 2</em>.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/monai_example2_11.png title=SwapFlipDimensions><img id=SwapFlipDimensions class="img-fluid rounded" src=images/tutorials/thirdparty/monai_example2_11.png alt=SwapFlipDimensions title=SwapFlipDimensions></a><figcaption class=figure-caption>SwapFlipDimensions</figcaption></p></p><p>After the algorithm has finished, we have to flip the images back to the original order. Open the panel of the <code>SwapFlipDimensions1</code> module and select X as <em>Axis 1</em> and Z as <em>Axis 2</em>.</p><p>Finally, we want to show the results of the algorithm as a semitransparent overlay on the image. Open the panel of the <code>View2DOverlay</code> and define the following settings:</p><ul><li>Blend Mode: Blend</li><li>Alpha Factor: 0.5</li><li>Base Color: red</li></ul><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/monai_example2_12.png title=View2DOverlay><img id=View2DOverlay class="img-fluid rounded" src=images/tutorials/thirdparty/monai_example2_12.png alt=View2DOverlay title=View2DOverlay></a><figcaption class=figure-caption>View2DOverlay</figcaption></p></p><h3 id=field-listeners>Field Listeners</h3><p>We add some Field Listeners to our <em>Commands</em> section of the <em>.script</em> file. They are necessary to react on changes the user makes on the fields of our module.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MONAIDemo.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>...
 Commands {
-  source = $(LOCAL)/MONAIDemo.py
-  
-  FieldListener start {
-    command = onStart
-  }
-  
-  FieldListener sizeX {
-    command = _sizeChanged
-  }
-  
-  FieldListener sizeY {
-    command = _sizeChanged
-  }
-  
-  FieldListener sizeZ {
-    command = _sizeChanged
-  }
-  
-  FieldListener inputImage {
-    command = _setDefaultValues
-  }
+    source = $(LOCAL)/MONAIDemo.py
+    
+    FieldListener start {
+        command = onStart
+    }
+    
+    FieldListener sizeX {
+        command = _sizeChanged
+    }
+    
+    FieldListener sizeY {
+        command = _sizeChanged
+    }
+    
+    FieldListener sizeZ {
+        command = _sizeChanged
+    }
+    
+    FieldListener inputImage {
+        command = _setDefaultValues
+    }
 }
 ...
 </code></pre></div></div><p>If the user touches the trigger <em>start</em>, a Python function <em>onStart</em> will be executed. Whenever the size of our image is changed, we call a function called <em>_sizeChanged</em> and if the input image changes, we want to reset the module to its default values.</p><h3 id=python-scripting>Python Scripting</h3><p>The next step is to write our Python code.</p><p>Right-click
@@ -193,101 +193,101 @@ Commands {
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>None</span>
 </span></span><span style=display:flex><span><span style=color:#f92672>...</span>
 </span></span></code></pre></div></div></div><p>We want to use the image that has been modified according to our pretrained network requirements discussed above. We use the output image of the <code>SwapFlipDimensions</code> module when clicking <em>start</em>.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MONAIDemo.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#f92672>...</span>
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>onStart</span>():
-</span></span><span style=display:flex><span>    print(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>--- Start ---&#34;</span>)
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span>:
-</span></span><span style=display:flex><span>        inputImage <span style=color:#f92672>=</span> _getImage()
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>onStart</span>():
+</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>--- Start ---&#34;</span>)
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>try</span>:
+</span></span><span style=display:flex><span>            inputImage <span style=color:#f92672>=</span> _getImage()
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> inputImage:
-</span></span><span style=display:flex><span>            imageArray <span style=color:#f92672>=</span> inputImage<span style=color:#f92672>.</span>getTile(
-</span></span><span style=display:flex><span>                (<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>), inputImage<span style=color:#f92672>.</span>imageExtent()
-</span></span><span style=display:flex><span>            )
-</span></span><span style=display:flex><span>            <span style=color:#75715e># We only need x, y and z-dimensions</span>
-</span></span><span style=display:flex><span>            image <span style=color:#f92672>=</span> imageArray[<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, :, :, :]
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> inputImage:
+</span></span><span style=display:flex><span>                imageArray <span style=color:#f92672>=</span> inputImage<span style=color:#f92672>.</span>getTile(
+</span></span><span style=display:flex><span>                    (<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>), inputImage<span style=color:#f92672>.</span>imageExtent()
+</span></span><span style=display:flex><span>                )
+</span></span><span style=display:flex><span>                <span style=color:#75715e># We only need x, y and z-dimensions</span>
+</span></span><span style=display:flex><span>                image <span style=color:#f92672>=</span> imageArray[<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, :, :, :]
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Using image </span><span style=color:#e6db74>{</span>image<span style=color:#f92672>.</span>shape<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>                print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Using image </span><span style=color:#e6db74>{</span>image<span style=color:#f92672>.</span>shape<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>            <span style=color:#75715e># prepare tensor</span>
-</span></span><span style=display:flex><span>            inputTensor <span style=color:#f92672>=</span> torch<span style=color:#f92672>.</span>tensor(image[<span style=color:#66d9ef>None</span>, <span style=color:#66d9ef>None</span>, :, :, :])<span style=color:#f92672>.</span>to(DEVICE)
-</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34; Tensorform: </span><span style=color:#e6db74>{</span>tuple(inputTensor<span style=color:#f92672>.</span>shape)<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
-</span></span><span style=display:flex><span>            <span style=color:#75715e># Load Bundle-Configuration</span>
-</span></span><span style=display:flex><span>            parser <span style=color:#f92672>=</span> load_bundle_config(MODEL_DIR, <span style=color:#e6db74>&#34;train.json&#34;</span>)
+</span></span><span style=display:flex><span>                <span style=color:#75715e># prepare tensor</span>
+</span></span><span style=display:flex><span>                inputTensor <span style=color:#f92672>=</span> torch<span style=color:#f92672>.</span>tensor(image[<span style=color:#66d9ef>None</span>, <span style=color:#66d9ef>None</span>, :, :, :])<span style=color:#f92672>.</span>to(DEVICE)
+</span></span><span style=display:flex><span>                print(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34; Tensorform: </span><span style=color:#e6db74>{</span>tuple(inputTensor<span style=color:#f92672>.</span>shape)<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>                <span style=color:#75715e># Load Bundle-Configuration</span>
+</span></span><span style=display:flex><span>                parser <span style=color:#f92672>=</span> load_bundle_config(MODEL_DIR, <span style=color:#e6db74>&#34;train.json&#34;</span>)
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>            <span style=color:#75715e># Create network from train.json</span>
-</span></span><span style=display:flex><span>            model <span style=color:#f92672>=</span> parser<span style=color:#f92672>.</span>get_parsed_content(<span style=color:#e6db74>&#34;network_def&#34;</span>)
-</span></span><span style=display:flex><span>            model<span style=color:#f92672>.</span>load_state_dict(torch<span style=color:#f92672>.</span>load(MODEL_PATH, map_location<span style=color:#f92672>=</span>DEVICE))
-</span></span><span style=display:flex><span>            model<span style=color:#f92672>.</span>to(DEVICE)
-</span></span><span style=display:flex><span>            model<span style=color:#f92672>.</span>eval()
-</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;Model loaded and initialized.&#34;</span>)
+</span></span><span style=display:flex><span>                <span style=color:#75715e># Create network from train.json</span>
+</span></span><span style=display:flex><span>                model <span style=color:#f92672>=</span> parser<span style=color:#f92672>.</span>get_parsed_content(<span style=color:#e6db74>&#34;network_def&#34;</span>)
+</span></span><span style=display:flex><span>                model<span style=color:#f92672>.</span>load_state_dict(torch<span style=color:#f92672>.</span>load(MODEL_PATH, map_location<span style=color:#f92672>=</span>DEVICE))
+</span></span><span style=display:flex><span>                model<span style=color:#f92672>.</span>to(DEVICE)
+</span></span><span style=display:flex><span>                model<span style=color:#f92672>.</span>eval()
+</span></span><span style=display:flex><span>                print(<span style=color:#e6db74>&#34;Model loaded and initialized.&#34;</span>)
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>            <span style=color:#75715e># Inference</span>
-</span></span><span style=display:flex><span>            <span style=color:#66d9ef>with</span> torch<span style=color:#f92672>.</span>no_grad():
-</span></span><span style=display:flex><span>                output <span style=color:#f92672>=</span> model(inputTensor)
-</span></span><span style=display:flex><span>                prediction <span style=color:#f92672>=</span> output<span style=color:#f92672>.</span>argmax(dim<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span>, keepdim<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)<span style=color:#f92672>.</span>cpu()<span style=color:#f92672>.</span>numpy()[<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>]
+</span></span><span style=display:flex><span>                <span style=color:#75715e># Inference</span>
+</span></span><span style=display:flex><span>                <span style=color:#66d9ef>with</span> torch<span style=color:#f92672>.</span>no_grad():
+</span></span><span style=display:flex><span>                    output <span style=color:#f92672>=</span> model(inputTensor)
+</span></span><span style=display:flex><span>                    prediction <span style=color:#f92672>=</span> output<span style=color:#f92672>.</span>argmax(dim<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span>, keepdim<span style=color:#f92672>=</span><span style=color:#66d9ef>True</span>)<span style=color:#f92672>.</span>cpu()<span style=color:#f92672>.</span>numpy()[<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>]
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;Inference done.&#34;</span>)
+</span></span><span style=display:flex><span>                print(<span style=color:#e6db74>&#34;Inference done.&#34;</span>)
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>            <span style=color:#75715e># Result back into MeVisLab</span>
-</span></span><span style=display:flex><span>            interface <span style=color:#f92672>=</span> ctx<span style=color:#f92672>.</span>module(<span style=color:#e6db74>&#34;PythonImage&#34;</span>)<span style=color:#f92672>.</span>call(<span style=color:#e6db74>&#34;getInterface&#34;</span>)
-</span></span><span style=display:flex><span>            interface<span style=color:#f92672>.</span>setImage(
-</span></span><span style=display:flex><span>                prediction, voxelToWorldMatrix<span style=color:#f92672>=</span>inputImage<span style=color:#f92672>.</span>voxelToWorldMatrix()
-</span></span><span style=display:flex><span>            )
+</span></span><span style=display:flex><span>                <span style=color:#75715e># Result back into MeVisLab</span>
+</span></span><span style=display:flex><span>                interface <span style=color:#f92672>=</span> ctx<span style=color:#f92672>.</span>module(<span style=color:#e6db74>&#34;PythonImage&#34;</span>)<span style=color:#f92672>.</span>call(<span style=color:#e6db74>&#34;getInterface&#34;</span>)
+</span></span><span style=display:flex><span>                interface<span style=color:#f92672>.</span>setImage(
+</span></span><span style=display:flex><span>                    prediction, voxelToWorldMatrix<span style=color:#f92672>=</span>inputImage<span style=color:#f92672>.</span>voxelToWorldMatrix()
+</span></span><span style=display:flex><span>                )
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;--- Segmentation done ---</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>)
+</span></span><span style=display:flex><span>                print(<span style=color:#e6db74>&#34;--- Segmentation done ---</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>)
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>Exception</span> <span style=color:#66d9ef>as</span> e:
-</span></span><span style=display:flex><span>        print(<span style=color:#e6db74>&#34;Error:&#34;</span>, e)
-</span></span><span style=display:flex><span>        <span style=color:#f92672>import</span> traceback
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>Exception</span> <span style=color:#66d9ef>as</span> e:
+</span></span><span style=display:flex><span>            print(<span style=color:#e6db74>&#34;Error:&#34;</span>, e)
+</span></span><span style=display:flex><span>            <span style=color:#f92672>import</span> traceback
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        traceback<span style=color:#f92672>.</span>print_exc()
+</span></span><span style=display:flex><span>            traceback<span style=color:#f92672>.</span>print_exc()
 </span></span><span style=display:flex><span><span style=color:#f92672>...</span>
 </span></span></code></pre></div></div></div><p>This function now already calculates the segmentation using the <em>MONAI</em> model. The problem is that it may happen that our subimage with the size 160 x 160 x 160 is located somewhere in our original image where no spleen is visible.</p><p>We have to calculate a bounding box in our <code>ROISelect</code> module and need to be able to move this bounding box to the correct location.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MONAIDemo.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#f92672>...</span>
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_sizeChanged</span>(field: <span style=color:#e6db74>&#34;mevislab.MLABField&#34;</span>):
-</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;Resample3D.output0&#34;</span>)<span style=color:#f92672>.</span>isValid():
-</span></span><span style=display:flex><span>        voxelSizeImage <span style=color:#f92672>=</span> ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;Resample3D.output0&#34;</span>)<span style=color:#f92672>.</span>image()
-</span></span><span style=display:flex><span>        <span style=color:#75715e># Get the size of this image</span>
-</span></span><span style=display:flex><span>        voxelSizeImageExtent <span style=color:#f92672>=</span> voxelSizeImage<span style=color:#f92672>.</span>imageExtent()
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_sizeChanged</span>(field: <span style=color:#e6db74>&#34;mevislab.MLABField&#34;</span>):
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;Resample3D.output0&#34;</span>)<span style=color:#f92672>.</span>isValid():
+</span></span><span style=display:flex><span>            voxelSizeImage <span style=color:#f92672>=</span> ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;Resample3D.output0&#34;</span>)<span style=color:#f92672>.</span>image()
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Get the size of this image</span>
+</span></span><span style=display:flex><span>            voxelSizeImageExtent <span style=color:#f92672>=</span> voxelSizeImage<span style=color:#f92672>.</span>imageExtent()
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e># Calculate region of interest by defining start point and size</span>
-</span></span><span style=display:flex><span>        roiStartX <span style=color:#f92672>=</span> voxelSizeImageExtent[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>-</span> ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;sizeX&#34;</span>)<span style=color:#f92672>.</span>value
-</span></span><span style=display:flex><span>        roiStartY <span style=color:#f92672>=</span> voxelSizeImageExtent[<span style=color:#ae81ff>1</span>] <span style=color:#f92672>-</span> ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;sizeY&#34;</span>)<span style=color:#f92672>.</span>value
-</span></span><span style=display:flex><span>        roiStartZ <span style=color:#f92672>=</span> voxelSizeImageExtent[<span style=color:#ae81ff>2</span>] <span style=color:#f92672>-</span> ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;sizeZ&#34;</span>)<span style=color:#f92672>.</span>value
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Calculate region of interest by defining start point and size</span>
+</span></span><span style=display:flex><span>            roiStartX <span style=color:#f92672>=</span> voxelSizeImageExtent[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>-</span> ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;sizeX&#34;</span>)<span style=color:#f92672>.</span>value
+</span></span><span style=display:flex><span>            roiStartY <span style=color:#f92672>=</span> voxelSizeImageExtent[<span style=color:#ae81ff>1</span>] <span style=color:#f92672>-</span> ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;sizeY&#34;</span>)<span style=color:#f92672>.</span>value
+</span></span><span style=display:flex><span>            roiStartZ <span style=color:#f92672>=</span> voxelSizeImageExtent[<span style=color:#ae81ff>2</span>] <span style=color:#f92672>-</span> ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;sizeZ&#34;</span>)<span style=color:#f92672>.</span>value
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;ROISelect.startVoxelX&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> roiStartX
-</span></span><span style=display:flex><span>        ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;ROISelect.startVoxelY&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> roiStartY
-</span></span><span style=display:flex><span>        ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;ROISelect.startVoxelZ&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> roiStartZ
+</span></span><span style=display:flex><span>            ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;ROISelect.startVoxelX&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> roiStartX
+</span></span><span style=display:flex><span>            ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;ROISelect.startVoxelY&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> roiStartY
+</span></span><span style=display:flex><span>            ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;ROISelect.startVoxelZ&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> roiStartZ
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>        <span style=color:#75715e># Subtract 1 because the voxel values start with 0</span>
-</span></span><span style=display:flex><span>        ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;ROISelect.endVoxelX&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> voxelSizeImageExtent[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>        ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;ROISelect.endVoxelY&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> voxelSizeImageExtent[<span style=color:#ae81ff>1</span>] <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>        ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;ROISelect.endVoxelZ&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> voxelSizeImageExtent[<span style=color:#ae81ff>2</span>] <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Subtract 1 because the voxel values start with 0</span>
+</span></span><span style=display:flex><span>            ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;ROISelect.endVoxelX&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> voxelSizeImageExtent[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>            ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;ROISelect.endVoxelY&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> voxelSizeImageExtent[<span style=color:#ae81ff>1</span>] <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>            ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;ROISelect.endVoxelZ&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> voxelSizeImageExtent[<span style=color:#ae81ff>2</span>] <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>
 </span></span><span style=display:flex><span><span style=color:#f92672>...</span>
 </span></span></code></pre></div></div></div><p>Whenever our size fields are modified, the bounding box is recalculated using the size of the given image and the values of the sizes defined by the user. The calculated bounding box is not positioned. This needs to be done manually, if necessary.</p><p>Open the <em>.script</em> file and add a <em>Window</em> section. In this window, we reuse the panel of the <code>ROISelect</code> module to manually correct the location of our calculated bounding box.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MONAIDemo.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>...
 Window {
-  height = 100
-  width = 100
-  Category {
-    Viewer ROISelect.scene.self {
-      type = SoRenderArea
-      expandX = True
-      expandY = True
+    height = 100
+    width = 100
+    Category {
+        Viewer ROISelect.scene.self {
+            type    = SoRenderArea
+            expandX = Yes
+            expandY = Yes
+        }
     }
-  }
 }
 ...
 </code></pre></div></div><p>If you now open the panel of our <code>MONAIDemo</code> module, we can manually move the box in all three dimensions.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/monai_example2_5.png title="MONAIDemo panel"><img id="MONAIDemo panel" class="img-fluid rounded" src=images/tutorials/thirdparty/monai_example2_5.png alt="MONAIDemo panel" title="MONAIDemo panel"></a><figcaption class=figure-caption>MONAIDemo panel</figcaption></p>.</p><p>Back to Python, we now need to reset our module to default in the case the input image changes. This also removes previous segmentations from the <code>PythonImage</code> module.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MONAIDemo.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#f92672>...</span>
 </span></span><span style=display:flex><span>  <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>_setDefaultValues</span>():
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;voxelSize&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> [<span style=color:#ae81ff>1.5</span>, <span style=color:#ae81ff>1.5</span>, <span style=color:#ae81ff>2</span>]
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;sizeX&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>160</span>
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;sizeY&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>160</span>
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;sizeZ&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>160</span>
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;thresholdMin&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>57</span>
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;thresholdMax&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>164</span>
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;scaleMin&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;scaleMax&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>      ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;voxelSize&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> [<span style=color:#ae81ff>1.5</span>, <span style=color:#ae81ff>1.5</span>, <span style=color:#ae81ff>2</span>]
+</span></span><span style=display:flex><span>      ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;sizeX&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>160</span>
+</span></span><span style=display:flex><span>      ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;sizeY&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>160</span>
+</span></span><span style=display:flex><span>      ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;sizeZ&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>160</span>
+</span></span><span style=display:flex><span>      ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;thresholdMin&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>57</span>
+</span></span><span style=display:flex><span>      ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;thresholdMax&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>164</span>
+</span></span><span style=display:flex><span>      ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;scaleMin&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>      ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;scaleMax&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>    interface <span style=color:#f92672>=</span> ctx<span style=color:#f92672>.</span>module(<span style=color:#e6db74>&#34;PythonImage&#34;</span>)<span style=color:#f92672>.</span>call(<span style=color:#e6db74>&#34;getInterface&#34;</span>)
-</span></span><span style=display:flex><span>    interface<span style=color:#f92672>.</span>unsetImage()
+</span></span><span style=display:flex><span>      interface <span style=color:#f92672>=</span> ctx<span style=color:#f92672>.</span>module(<span style=color:#e6db74>&#34;PythonImage&#34;</span>)<span style=color:#f92672>.</span>call(<span style=color:#e6db74>&#34;getInterface&#34;</span>)
+</span></span><span style=display:flex><span>      interface<span style=color:#f92672>.</span>unsetImage()
 </span></span><span style=display:flex><span><span style=color:#f92672>...</span>
 </span></span></code></pre></div></div></div><h2 id=execute-the-segmentation>Execute the Segmentation</h2><p>If you now load an image using the <code>itkImageFileReader</code> module, you can manually adapt your bounding box to include the spleen and start segmentation.</p><p>The results are shown as a semitransparent overlay.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/monai_example2_6.png title="Segmentation result"><img id="Segmentation result" class="img-fluid rounded" src=images/tutorials/thirdparty/monai_example2_6.png alt="Segmentation result" title="Segmentation result"></a><figcaption class=figure-caption>Segmentation result</figcaption></p>.</p><p>You can also use the other examples from <em>MONAI Model Zoo</em> the same way, just make sure to apply the necessary changes on the input images like size, voxel size, and other parameters defined in the <em>inference.json</em> file of the model.</p><h2 id=summary>Summary</h2><ul><li>Pretrained <em>MONAI</em> networks can be used directly in MeVisLab via <code>PythonImage</code> module.</li><li>The general principles are always the same for all models.</li></ul><div class="alert alert-secondary d-flex align-items-center" role=alert><div><img width=24px src=archive.png>&nbsp;&nbsp;&nbsp;Download Archive <a href=https://mevislab.github.io/examples/examples/thirdparty/monai/MONAIDemo.zip target=_blank>here</a>.</div></div></div></div><script>const body_element=document.querySelector("html body"),modal_div=document.createElement("div");let modal_window=document.body.appendChild(modal_div),modal_html='<div class="modal fade" id="lightboxModalFullscreen" tabindex="-1" aria-labelledby="lightboxModalFullscreenLabel" aria-hidden="true"><div class="modal-dialog modal-fullscreen" data-bs-dismiss="modal" aria-label="Close"><div class="modal-content border-0"><div class="modal-body d-flex align-self-center align-items-center justify-content-center"><div class="modal-custom"><img src="" id="LightboxCanvas" class="img-fluid" data-bs-dismiss="modal" aria-label="Close" /><figcaption id="LightboxCaption" class="figure-caption"></figcaption></div></div></div></div></div>';modal_window.innerHTML=modal_html,Array.from(document.querySelectorAll('[data-modal*="bs-lightbox"]')).forEach(e=>{e.setAttribute("data-bs-toggle","modal"),e.setAttribute("data-bs-target","#lightboxModalFullscreen"),e.addEventListener("click",t=>{const n=e.getAttribute("href"),s=e.getAttribute("title");document.getElementById("LightboxCanvas").src=n,document.getElementById("LightboxCaption").innerHTML=s,t.preventDefault(),console.log(n)})})</script><hr><div class=row style=margin:25px!important><div class=col><a href=https://mevislab.github.io/examples/tutorials/thirdparty/monai/monaiexample1/ title="Example 1: Installing MONAI Using the PythonPip Module" class="btn btn-outline-secondary btn-sm" role=button aria-pressed=true><svg width="16" height="16" fill="currentColor" class="bi bi-skip-start-fill" viewBox="0 0 16 16"><path d="M4 4a.5.5.0 011 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5.0 01-1 0V4z"/></svg>&nbsp;Example 1: Installing MONAI Using the PythonPip Module</a></div><div class=col style=text-align:right><a href=https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/ title=Matplotlib class="btn btn-outline-secondary btn-sm" role=button aria-pressed=true>Matplotlib&nbsp;
 <svg width="16" height="16" fill="currentColor" class="bi bi-skip-end-fill" viewBox="0 0 16 16"><path d="M12.5 4a.5.5.0 00-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5.0 001 0V4z"/></svg></a></div></div></div><footer class="footer fixed-bottom mt-auto py-3"><div class="row footer-text"><div class="col-12 col-md text-center text-md-left text-white">&copy; Copyright 2026 <a href=https://www.mevis.de target=_blank>MeVis Medical Solutions AG</a> | <a href=https://www.mevislab.de/imprint target=_blank>Imprint</a> | <a href=https://www.mevislab.de target=_blank>https://www.mevislab.de</a></div></div><script src=https://mevislab.github.io/examples/js/bundle.min.js defer></script><script>hljs.highlightAll(),hljs.configure({ignoreUnescapedHTML:!0}),hljs.addPlugin(new CopyButtonPlugin)</script></footer></body></html>

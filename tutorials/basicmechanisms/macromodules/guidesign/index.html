@@ -80,20 +80,18 @@ on your module now opens your first self-developed user interface.</p><div class
             internalName = Arithmetic2.output0
         }
     }
-    Parameters {
-
-    }
+    Parameters {}
 }
 
 Window MyWindowName {
-    title = MyWindowTitle
+    Category {
+        title = MyWindowTitle
 
-    Box MyBox {
-
+        Box MyBox {}
     }
 }
 </code></pre></div></div><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/basicmechanics/ModulePanel.png title="Module Panel"><img id="Module Panel" class="img-fluid rounded" src=images/tutorials/basicmechanics/ModulePanel.png alt="Module Panel" title="Module Panel"></a><figcaption class=figure-caption>Module Panel</figcaption></p></p><p>You can define different properties of your control. For a window, you can, for example, define a title, or whether the
-window should be shown in full screen (<em>fullscreen = True</em>).</p><p>These properties are called
+window should be shown in full screen (<em>fullscreen = Yes</em>).</p><p>These properties are called
 <a href=https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/MDLReference/#SyntaxTagsAndValues target=_blank>tags</a>
 and are individually different for each control. Which tags exist for the control window can be found
 <a href=https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Window target=_blank>here</a>
@@ -106,13 +104,14 @@ the following examples:</p><div class=card style=margin-bottom:2rem><div class="
     title = MyWindowTitle
     w = 100
     h = 50
-
-    Vertical {
-        Box MyBox {
-            title = &#34;Title of my Box&#34;
-        }
-        Label MyLabel {
+    Category {
+        Vertical {
+            Box MyBox {
+                title = &#34;Title of my Box&#34;
+            }
+            Label MyLabel {
             title = &#34;This is a label below the box&#34;
+            }
         }
     }
 }
@@ -120,13 +119,14 @@ the following examples:</p><div class=card style=margin-bottom:2rem><div class="
     title = MyWindowTitle
     w = 100
     h = 50
-
-    Horizontal {
-        Box MyBox {
-            title = &#34;Title of my Box&#34;
-        }
-        Label MyLabel {
-            title = &#34;This is a label beside the box&#34;
+    Category {
+        Horizontal {
+            Box MyBox {
+                title = &#34;Title of my Box&#34;
+            }
+            Label MyLabel {
+                title = &#34;This is a label beside the box&#34;
+            }
         }
     }
 }
@@ -149,8 +149,10 @@ creating a new field in our panel and reference to the internal
 field <em>Convolution.predefKernel</em>, which already exist in the internal network.</p><p>Changes of the properties of this field can be done in the curled brackets using tags (here, we changed the title).</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">Filter.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Window MyWindowName {
     title = MyWindowTitle
     
-    Field Convolution.predefKernel {
-        title = Kernel
+    Category {
+        Field Convolution.predefKernel {
+            title = Kernel
+        }
     }
 }
 </code></pre></div></div><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/basicmechanics/SelectingKernel.png title="Selecting the kernel"><img id="Selecting the kernel" class="img-fluid rounded" src=images/tutorials/basicmechanics/SelectingKernel.png alt="Selecting the kernel" title="Selecting the kernel"></a><figcaption class=figure-caption>Selecting the kernel</figcaption></p></p><p>As an alternative, you can define the field <em>kernel</em> in the <em>Parameters</em> section, and reference the defined field by its name. The result in the panel is the same. You can see a difference in the automatic panel. All fields that are defined in the interface in the <em>Parameters</em> section appear in the automatic panel. Fields of the internal network, which are used but not declared in the section <em>Parameters</em> of the module interface, do not appear in the automatic panel.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">Filter.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
@@ -174,14 +176,18 @@ field <em>Convolution.predefKernel</em>, which already exist in the internal net
 
 Window MyWindowName {
     title = MyWindowTitle
-    Field kernel {}
+    Category {
+        Field kernel {}
+    }
 }
 </code></pre></div></div><h4 id=commands>Commands</h4><p>We not only can use existing functionalities, but also add new interactions via Python scripting.</p><p>In the example below, we added a <em>wakeupCommand</em> to the Window and a simple <em>command</em> to the Button.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">Filter.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Window MyWindowName {
     title = MyWindowTitle
     wakeupCommand = myWindowCommand
     
-    Button MyButton {
-        command = myButtonAction
+    Category {
+        Button MyButton {
+            command = myButtonAction
+        }
     }
 }
 </code></pre></div></div><p>The <em>wakeupCommand</em> defines a Python function that is executed as soon as the Window is opened. The Button <em>command</em> is executed when the user clicks on the Button.</p><p>Both commands reference a Python function that is executed whenever both actions (open the Window or click the Button) are executed.</p><p>If you like to learn more about Python scripting, take a look at <a href=tutorials/basicmechanisms/macromodules/pythonscripting>Example 2.5</a>.</p><p>We need to define the Python script that contains our Python functions. In order to do this, add a

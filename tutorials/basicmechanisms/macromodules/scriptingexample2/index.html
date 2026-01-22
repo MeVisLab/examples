@@ -46,23 +46,25 @@ with two
 , with its items
 <a href=https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_TabViewItem target=_blank>TabViewItem</a>
 . The control <em>TabView</em> enables to add a command, which is executed when opening the tab. For adding the viewers to the panel, we use the control <em>Viewer</em>.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">IsoCSOs.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Window {
-    TabView {
-        TabViewItem Main {
-            Horizontal {
-                Viewer View2D.self {
-                    type = SoRenderArea
-                    pw = 400
-                    ph = 400
-                }
-                Viewer SoExaminerViewer.self {
-                    type = SoExaminerViewer
-                    pw = 400
-                    ph = 400
+    Category {
+        TabView {
+            TabViewItem Main {
+                Horizontal {
+                    Viewer View2D.self {
+                        type = SoRenderArea
+                        pw   = 400
+                        ph   = 400
+                    }
+                    Viewer SoExaminerViewer.self {
+                        type = SoExaminerViewer
+                        pw   = 400
+                        ph   = 400
+                    }
                 }
             }
-        }
-        
-        TabViewItem Settings {
+            
+            TabViewItem Settings {
+            }
         }
     }
 }
@@ -85,26 +87,28 @@ the module <code>LocalImage</code>. Right-click
 the desired field: In this case, right-click the label
 <em>Name:</em>. Select <em>Copy Name</em>, to copy the internal name of this field.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/basicmechanics/GUI_Exp_09.png title="Copy the field name"><img id="Copy the field name" class="img-fluid rounded" src=images/tutorials/basicmechanics/GUI_Exp_09.png alt="Copy the field name" title="Copy the field name"></a><figcaption class=figure-caption>Copy the field name</figcaption></p></p><p>Now, you can add this field as a new field to your window by pasting the
 name. All field settings are taken over from the internal field from the module <code>LocalImage</code>.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">IsoCSOs.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Window {
-    TabView {
-        TabViewItem Main {
-            Vertical {
-                Field LocalImage.name {}
-                Horizontal {
-                    Viewer View2D.self {
-                        type = SoRenderArea
-                        pw = 400
-                        ph = 400
-                    }
-                    Viewer SoExaminerViewer.self {
-                        type = SoExaminerViewer
-                        pw = 400
-                        ph = 400
+    Category {
+        TabView {
+            TabViewItem Main {
+                Vertical {
+                    Field LocalImage.name {}
+                    Horizontal {
+                        Viewer View2D.self {
+                            type = SoRenderArea
+                            pw   = 400
+                            ph   = 400
+                        }
+                        Viewer SoExaminerViewer.self {
+                            type = SoExaminerViewer
+                            pw   = 400
+                            ph   = 400
+                        }
                     }
                 }
             }
-        }
-        
-        TabViewItem Settings {
+            
+            TabViewItem Settings {
+            }
         }
     }
 }
@@ -127,35 +131,37 @@ Commands {
 }
 
 Window {
-    TabView {
-        TabViewItem Main {
-            Vertical {
-                Horizontal {
-                    Field LocalImage.name {}
-                    Button {
-                        title = &#34;Browse...&#34;
-                        command = fileDialog
+    Category {
+        TabView {
+            TabViewItem Main {
+                Vertical {
+                    Horizontal {
+                        Field LocalImage.name {}
+                        Button {
+                            title = &#34;Browse...&#34;
+                            command = fileDialog
+                        }
+                        Button IsoGenerator {
+                            title = &#34;Iso Generator&#34;
+                        }
                     }
-                    Button IsoGenerator {
-                        title = &#34;Iso Generator&#34;
-                    }
-                }
-                Horizontal {
-                    Viewer View2D.self {
-                        type = SoRenderArea
-                        pw = 400
-                        ph = 400
-                    }
-                    Viewer SoExaminerViewer.self {
-                        type = SoExaminerViewer
-                        pw = 400
-                        ph = 400
+                    Horizontal {
+                        Viewer View2D.self {
+                            type = SoRenderArea
+                            pw   = 400
+                            ph   = 400
+                        }
+                        Viewer SoExaminerViewer.self {
+                            type = SoExaminerViewer
+                            pw   = 400
+                            ph   = 400
+                        }
                     }
                 }
             }
-        }
-        
-        TabViewItem Settings {
+            
+            TabViewItem Settings {
+            }
         }
     }
 }
@@ -173,9 +179,11 @@ mouse in the 2D viewer. Additionally, when clicking a CSO with the left mouse bu
 scripting (even though MeVisLab has a build-in function to do that). We
 can do this in the following way:</p><ol><li><p>Enable the View <em>Scripting Assistant</em>, which translates actions into Python code.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/basicmechanics/GUI_Exp_15.png title="Scripting Assistant"><img id="Scripting Assistant" class="img-fluid rounded" src=images/tutorials/basicmechanics/GUI_Exp_15.png alt="Scripting Assistant" title="Scripting Assistant"></a><figcaption class=figure-caption>Scripting Assistant</figcaption></p></p></li><li><p>Enable a functionality that allows us to notice the ID of the CSO we are currently hovering over with our mouse. For this, open the internal network of our macro module. We will use the module <code>SoView2DCSOExtensibleEditor</code>. Open its panel and select the tab <em>Advanced</em>. You can check a box to enable <em>Update CSO id under mouse</em>. If you now hover over a CSO, you can see its ID in the panel. We can save the internal network to save this functionality, but we can also solve our problem via scripting. The Scripting Assistant translated our action into code that we can use.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/basicmechanics/GUI_Exp_16.png title="Enabling CSO id identification"><img id="Enabling CSO id identification" class="img-fluid rounded" src=images/tutorials/basicmechanics/GUI_Exp_16.png alt="Enabling CSO id identification" title="Enabling CSO id identification"></a><figcaption class=figure-caption>Enabling CSO id identification</figcaption></p></p><p>We like to activate this functionality when opening the panel of our macro module <code>IsoCSOs</code>. Thus, we add a starting command to the control Window. We can call this command, for example, <em>enableFunctionalities</em>.</p><p>In the <em>.script</em> file:</p></li></ol><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">IsoCSOs.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Window {
     windowActivatedCommand = enableFunctionalities
-    TabView {
-        TabViewItem Main {
-            ...
+    Category {
+        TabView {
+            TabViewItem Main {
+                ...
+            }
         }
     }
 }

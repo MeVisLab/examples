@@ -89,19 +89,18 @@ Close Unselected Panels
 ]</i> and select <em>Edit User Script</em>. The Python file opens in <em>MATE</em>. Right-click
 <img width=22px src=images/rmb.svg alt="Right Mouse Button">
 on the tab in the editor and select <em>Show Enclosing Folder</em>.</p><p>The opened directory contains all available user scripts. Add a new file <em>MyScripts.def</em> and open the file in <em>MATE</em>.</p><p>Enter the following:<div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MyScripts.def</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>UserIDEActions {
-  Action &#34;Set Dark Theme&#34; {
-    name       = changeTheme
-    userScript = $(LOCAL)/changeTheme.py
-    statusTip  = &#34;Change theme to dark mode&#34;
-    accel      = &#34;ctrl+F9&#34;
-  }
-
+    Action &#34;Set Dark Theme&#34; {
+        name       = changeTheme
+        userScript = $(LOCAL)/changeTheme.py
+        statusTip  = &#34;Change theme to dark mode&#34;
+        accel      = &#34;ctrl+F9&#34;
+    }
 }
 
 UserIDEMenus {
-  SubMenu &#34;Theme&#34; {
-    ActionReference = changeTheme
-  }
+    SubMenu &#34;Theme&#34; {
+        ActionReference = changeTheme
+    }
 }
 </code></pre></div></div></p><p>We define an action <em>Set Dark Theme</em>, which is added to the submenu <em>Theme</em> in the MeVisLab IDE menu item <i>[
 Scripting

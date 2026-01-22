@@ -44,20 +44,20 @@ Related Files
 &rarr;
 csoList.script
 ]</i>.</p><p>The MeVisLab text editor MATE opens, showing your <em>.script</em> file. You can see the output of your module as <em>CSOListContainer.outCSOList</em>. We want to define a threshold for the color of our CSOs. For this, add another field to the <em>Parameters</em> section of your script file named <em>areaThreshold</em>. Define the <em>type</em> as <em>Float</em> and <em>value</em> as <em>2000.0</em>.</p><p>In order to call Python functions, we also need a Python file. Add a <em>Commands</em> section and define the <em>source</em> of the Python file as <em>$(LOCAL)/csoList.py</em>. Also add an <em>initCommand</em> as <em>initCSOList</em>. The initCommand defines the Python function that is called whenever the module is added to the workspace or reloaded.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">csoList.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface  {
-  Inputs {}
-  Outputs  {
-    Field baseOut0 {
-      internalName = CSOListContainer.outCSOList
+    Inputs {}
+    Outputs  {
+        Field baseOut0 {
+            internalName = CSOListContainer.outCSOList
+        }
     }
-  }
-  Parameters {
-    Field areaThreshold { type = Float value = 2000.0 }
-  }
+    Parameters {
+        Field areaThreshold { type = Float value = 2000.0 }
+    }
 }
 
 Commands {
-  source = $(LOCAL)/csoList.py
-  initCommand = initCSOList
+    source = $(LOCAL)/csoList.py
+    initCommand = initCSOList
 }
 </code></pre></div></div><p>Right-click
 <img width=22px src=images/rmb.svg alt="Right Mouse Button">

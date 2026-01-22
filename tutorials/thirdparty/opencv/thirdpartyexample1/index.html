@@ -45,59 +45,61 @@ Related Files
 ]</i>. The text editor
 <a href=https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html target=_blank>MATE</a>
 opens. You can see the <em>.script</em> file of your module.</p><p>Add the following to your file:<div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;YOUR_MODULE_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface  {
-  Inputs {}
-  Outputs {}
-  Parameters {}
+    Inputs {}
+    Outputs {}
+    Parameters {}
 }
 
 Commands {
-  source = $(LOCAL)/&lt;YOUR_MODULE_NAME&gt;.py
+    source = $(LOCAL)/&lt;YOUR_MODULE_NAME&gt;.py
 }
 
 Window {
-  h = 500
-  w = 500
-  initCommand = setupInterface
-  destroyedCommand = releaseCamera
-  
-  Vertical {
-    Horizontal {
-      Button {
-        title = Start
-        command = startCapture
-      }
-      Button {
-        title = Pause
-        command = stopCapture
-      }
+    h = 500
+    w = 500
+    initCommand = setupInterface
+    destroyedCommand = releaseCamera
+    
+    Category {
+        Vertical {
+            Horizontal {
+                Button {
+                    title = Start
+                    command = startCapture
+                }
+                Button {
+                    title = Pause
+                    command = stopCapture
+                }
+            }
+            Horizontal {
+                expandX = Yes
+                expandY = Yes
+                
+                Viewer View2D.self {
+                    type = SoRenderArea
+                }
+            }
+        }
     }
-    Horizontal {
-      expandX = True
-      expandY = True
-      
-      Viewer View2D.self {
-        type = SoRenderArea
-      }
-    }
-  }
 }
 </code></pre></div></div></p><p>Now open the Python file of your module and define the commands to be called from the <em>.script</em> file:<div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;YOUR_MODULE_NAME>.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#75715e># from mevis import *</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Set up the interface for PythonImage module</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>setupInterface</span>():
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>pass</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>pass</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Release camera in the end</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>releaseCamera</span>(_):
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>pass</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>pass</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Start capturing webcam</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>startCapture</span>():
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>pass</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>pass</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Stop capturing webcam</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>stopCapture</span>():
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>pass</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>pass</span>
 </span></span></code></pre></div></div></div></p><h3 id=use-opencv>Use OpenCV</h3><p>Your <code>View2D</code> is still empty, let&rsquo;s get access to the webcam and show the video in your module. Open the Python file of your network again and enter the following code:<div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;YOUR_MODULE_NAME>.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#75715e># from mevis import *</span>
 </span></span><span style=display:flex><span><span style=color:#f92672>import</span> cv2
 </span></span><span style=display:flex><span><span style=color:#f92672>import</span> OpenCVUtils
@@ -107,51 +109,51 @@ Window {
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Set up the interface for PythonImage module</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>setupInterface</span>():
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>global</span> _interfaces
-</span></span><span style=display:flex><span>  _interfaces <span style=color:#f92672>=</span> []
-</span></span><span style=display:flex><span>  interface <span style=color:#f92672>=</span> ctx<span style=color:#f92672>.</span>module(<span style=color:#e6db74>&#34;PythonImage&#34;</span>)<span style=color:#f92672>.</span>call(<span style=color:#e6db74>&#34;getInterface&#34;</span>)
-</span></span><span style=display:flex><span>  _interfaces<span style=color:#f92672>.</span>append(interface)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>global</span> _interfaces
+</span></span><span style=display:flex><span>    _interfaces <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    interface <span style=color:#f92672>=</span> ctx<span style=color:#f92672>.</span>module(<span style=color:#e6db74>&#34;PythonImage&#34;</span>)<span style=color:#f92672>.</span>call(<span style=color:#e6db74>&#34;getInterface&#34;</span>)
+</span></span><span style=display:flex><span>    _interfaces<span style=color:#f92672>.</span>append(interface)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Release camera in the end</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>releaseCamera</span>(_):
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>pass</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>pass</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Start capturing webcam</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>startCapture</span>():
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>pass</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>pass</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Stop capturing webcam</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>stopCapture</span>():
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>pass</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>pass</span>
 </span></span></code></pre></div></div></div></p><p>We now imported <em>cv2</em> and <em>OpenCVUtils</em>, so that we can use them in Python. Additionally, we defined a list of <em>_interfaces</em> and a <em>camera</em>. The import of <em>mevis</em> is not necessary for this example.</p><p>The <em>setupInterfaces</em> function is called whenever the <em>Window</em> of your module is opened. Here we are getting the interface of the <code>PythonImage</code> module and append it to our global list.</p><h3 id=accessing-the-webcam>Accessing the Webcam</h3><p>Now we want to start capturing the camera.<div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;YOUR_MODULE_NAME>.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#75715e># Start capturing webcam</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>startCapture</span>():
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>global</span> camera
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> camera:
-</span></span><span style=display:flex><span>    camera <span style=color:#f92672>=</span> cv2<span style=color:#f92672>.</span>VideoCapture(<span style=color:#ae81ff>0</span>)
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>callWithInterval(<span style=color:#ae81ff>0.1</span>, grabImage)
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>global</span> camera
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> camera:
+</span></span><span style=display:flex><span>        camera <span style=color:#f92672>=</span> cv2<span style=color:#f92672>.</span>VideoCapture(<span style=color:#ae81ff>0</span>)
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>callWithInterval(<span style=color:#ae81ff>0.1</span>, grabImage)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Grab image from camera and update</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>grabImage</span>():
-</span></span><span style=display:flex><span>  _, img <span style=color:#f92672>=</span> camera<span style=color:#f92672>.</span>read()
-</span></span><span style=display:flex><span>  updateImage(img)
+</span></span><span style=display:flex><span>    _, img <span style=color:#f92672>=</span> camera<span style=color:#f92672>.</span>read()
+</span></span><span style=display:flex><span>    updateImage(img)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Update image in interface</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>updateImage</span>(image):
-</span></span><span style=display:flex><span>  _interfaces[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>.</span>setImage(OpenCVUtils<span style=color:#f92672>.</span>convertImageToML(image), minMaxValues <span style=color:#f92672>=</span> [<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>255</span>])
+</span></span><span style=display:flex><span>    _interfaces[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>.</span>setImage(OpenCVUtils<span style=color:#f92672>.</span>convertImageToML(image), minMaxValues <span style=color:#f92672>=</span> [<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>255</span>])
 </span></span></code></pre></div></div></div></p><p>The <em>startCapture</em> function gets the camera from the <em>cv2</em> object if not already available. Then, it calls the current MeVisLab network context and creates a timer that calls a <em>grabImage</em> function every 0.1 seconds.</p><p>The <em>grabImage</em> function reads an image from the <em>camera</em> and calls <em>updateImage</em>. The interface from the <code>PythonImage</code> module is used to set the image from the webcam. The MeVisLab <em>OpenCVUtils</em> converts the OpenCV image to the MeVisLab image format <em>MLImage</em>.</p><p>Next, we define what happens if you click the <em>Pause</em> button.<div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;YOUR_MODULE_NAME>.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#f92672>...</span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Stop capturing webcam</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>stopCapture</span>():
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>removeTimers()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>removeTimers()
 </span></span><span style=display:flex><span><span style=color:#f92672>...</span>
 </span></span></code></pre></div></div></div></p><p>As we started a timer in our network context that updates the image every 0.1 seconds, we just stop this timer and the camera is paused.</p><p>In the end, we need to release the camera whenever you close the Window of your macro module.<div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;YOUR_MODULE_NAME>.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#f92672>...</span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Release camera in the end</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>releaseCamera</span>(_):
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>global</span> camera, _interfaces
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>removeTimers()
-</span></span><span style=display:flex><span>  _interfaces <span style=color:#f92672>=</span> []
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> camera:
-</span></span><span style=display:flex><span>    camera<span style=color:#f92672>.</span>release()
-</span></span><span style=display:flex><span>    camera <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>global</span> camera, _interfaces
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>removeTimers()
+</span></span><span style=display:flex><span>    _interfaces <span style=color:#f92672>=</span> []
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> camera:
+</span></span><span style=display:flex><span>        camera<span style=color:#f92672>.</span>release()
+</span></span><span style=display:flex><span>        camera <span style=color:#f92672>=</span> <span style=color:#66d9ef>None</span>
 </span></span><span style=display:flex><span><span style=color:#f92672>...</span>
 </span></span></code></pre></div></div></div></p><p>Again, the timers are removed, all interfaces are reset, and the camera is released. The light indicating webcam usage should turn off.</p><p>Opening your macro module via double-click
 <img width=22px src=images/lmb.svg alt="Left Mouse Button">

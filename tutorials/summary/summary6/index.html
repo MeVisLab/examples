@@ -36,22 +36,22 @@ Related Files
 &lt;MACRO_NAME>.script
 ]</i>.</p><p>In MATE, add another field to your <em>Parameters</em> section and reuse the field by setting the <em>internalName</em>. Add the field to the <em>Settings</em> section of your <em>Window</em>, maybe directly after the color selection.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
 ...
-  Parameters {
-    ...
-    Field selectOverlayTransparency {
-      internalName = SoView2DOverlay.alphaFactor
+    Parameters {
+        ...
+        Field selectOverlayTransparency {
+            internalName = SoView2DOverlay.alphaFactor
+        }
+        ...
     }
-    ...
-  }
 }
 
 Window {
 ...
     Box Settings {
     ...
-      Field selectOverlayTransparency {
-        title   = Alpha
-      }
+        Field selectOverlayTransparency {
+            title   = Alpha
+        }
     ...
     }
 ...

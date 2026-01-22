@@ -38,197 +38,206 @@ Related Files
 &rarr;
 &lt;MACRO_MODULE_NAME>.script
 ]</i>.</p><p>The MeVisLab text editor MATE opens showing the <em>.script</em> file of your module.</p><h4 id=layout>Layout</h4><p>You can see that the interface is divided into four parts in vertical direction:</p><ul><li>Source or file/directory selection</li><li>Viewing (2D and 3D)</li><li>Settings</li><li>Info</li></ul><p>Inside the vertical parts, the elements are placed next to each other horizontally.</p><p>Add a <em>Window</em> section to your <em>.script</em> file. Inside the <em>Window</em>, we need a <em>Vertical</em> for the four parts and a <em>Box</em> for each part. Name the boxes &ldquo;Source&rdquo;, &ldquo;Viewing&rdquo;, &ldquo;Settings&rdquo;, and &ldquo;Info&rdquo;. The layout inside each <em>Box</em> shall be <em>Horizontal</em>.</p><p>In addition to that, we define the minimal size of the Window as 400 x 300 pixels.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Window {
-  // Define minimum width and height
-  minimumWidth  = 400
-  minimumHeight = 300
-  // Vertical Layout and 4 Boxes with Horizontal Layout
-  Vertical {
-    Box Source {
-      layout = Horizontal
+    // Define minimum width and height
+    minimumWidth  = 400
+    minimumHeight = 300
+
+    Category {
+        // Vertical Layout and 4 Boxes with Horizontal Layout
+        Vertical {
+            Box Source {
+                layout = Horizontal
+            }
+            Box Viewing {
+                layout = Horizontal
+            }
+            Box Settings {
+                layout = Horizontal
+            }
+            Box Info {
+                layout = Horizontal
+            }
+        }
     }
-    Box Viewing {
-      layout = Horizontal
-    }
-    Box Settings {
-      layout = Horizontal
-    }
-    Box Info {
-      layout = Horizontal
-    }
-  }
 }
 </code></pre></div></div><p>You can preview your initial layout in MeVisLab by double-clicking your module
 <img width=22px src=images/lmb.svg alt="Left Mouse Button">
 .</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/summary/Example3_1.png title="Initial Window Layout"><img id="Initial Window Layout" class="img-fluid rounded" src=images/tutorials/summary/Example3_1.png alt="Initial Window Layout" title="Initial Window Layout"></a><figcaption class=figure-caption>Initial Window Layout</figcaption></p></p><p>You can see the four vertical aligned parts as defined in the <em>.script</em> file. Now, we are going to add the content of the boxes.</p><svg style="display:none"><symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8A8 8 0 110 8a8 8 0 0116 0zm-3.97-3.03a.75.75.0 00-1.08.022L7.477 9.417 5.384 7.323a.75.75.0 00-1.06 1.06L6.97 11.03a.75.75.0 001.079-.02l3.992-4.99a.75.75.0 00-.01-1.05z"/></symbol><symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 108 0a8 8 0 000 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194.0.487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703.0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 110-2 1 1 0 010 2z"/></symbol><symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13.0 00-1.96.0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889.0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535.0.954.462.9.995l-.35 3.507a.552.552.0 01-1.1.0L7.1 5.995A.905.905.0 018 5zm.002 6a1 1 0 110 2 1 1 0 010-2z"/></symbol><symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13.0 00-1.96.0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889.0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535.0.954.462.9.995l-.35 3.507a.552.552.0 01-1.1.0L7.1 5.995A.905.905.0 018 5zm.002 6a1 1 0 110 2 1 1 0 010-2z"/></symbol></svg><div class="alert alert-primary alert-info d-flex align-items-center" role=alert><svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Additional Info:"><use xlink:href="#info-fill"/></svg><div><b>Additional Info:&nbsp;</b>
 An overview over the existing layout elements in MeVisLab Definition Language (MDL) can be found
-<a href=https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/MDLReference/index.html#N11695 target=_blank>here</a></div></div><h4 id=adding-the-ui-elements>Adding the UI Elements</h4><h5 id=source>Source</h5><p>The <em>Source Box</em> shall provide the possibility to select a file for loading into the viewers. You have many options to achieve that in MeVisLab and Python. The easiest way is to reuse the existing field of the <code>LocalImage</code> module in your internal network.</p><p>Add a field to the <em>Parameters</em> section of your <em>.script</em> file. Name the field <em>openFile</em> and set type to <em>String</em> and internalName to <em>LocalImage.name</em>.</p><p>Then, add another field to your <em>Box</em> for the <em>Source</em> and use the field name from <em>Parameters</em> section, in this case <em>openFile</em>. Set <em>browseButton = True</em> and <em>browseMode = open</em> and save your script.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  Inputs {}
-  Outputs {}
-  Parameters {
-    Field openFile {
-      type         = String
-      internalName = LocalImage.name
+<a href=https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/MDLReference/index.html#N11695 target=_blank>here</a></div></div><h4 id=adding-the-ui-elements>Adding the UI Elements</h4><h5 id=source>Source</h5><p>The <em>Source Box</em> shall provide the possibility to select a file for loading into the viewers. You have many options to achieve that in MeVisLab and Python. The easiest way is to reuse the existing field of the <code>LocalImage</code> module in your internal network.</p><p>Add a field to the <em>Parameters</em> section of your <em>.script</em> file. Name the field <em>openFile</em> and set type to <em>String</em> and internalName to <em>LocalImage.name</em>.</p><p>Then, add another field to your <em>Box</em> for the <em>Source</em> and use the field name from <em>Parameters</em> section, in this case <em>openFile</em>. Set <em>browseButton = Yes</em> and <em>browseMode = open</em> and save your script.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
+    Inputs {}
+    Outputs {}
+    Parameters {
+      Field openFile {
+          type         = String
+          internalName = LocalImage.name
+      }
     }
-  }
 }
 
 ...
 
 Window {
-  // Define minimum width and height
-  minimumWidth  = 400
-  minimumHeight = 300
-  // Vertical Layout and 4 Boxes with Horizontal Layout
-  Vertical {
-    Box Source {
-      layout = Horizontal
-      Field openFile {
-        browseButton = True
-        browseMode   = open
-      }
+    // Define minimum width and height
+    minimumWidth  = 400
+    minimumHeight = 300
+    
+    Category {
+        // Vertical Layout and 4 Boxes with Horizontal Layout
+        Vertical {
+            Box Source {
+                layout = Horizontal
+                Field openFile {
+                    browseButton = Yes
+                    browseMode   = open
+                }
+            }
+            Box Viewing {
+                layout = Horizontal
+            }
+            Box Settings {
+                layout = Horizontal
+            }
+            Box Info {
+                layout = Horizontal
+            }
+        }
     }
-    Box Viewing {
-      layout = Horizontal
-    }
-    Box Settings {
-      layout = Horizontal
-    }
-    Box Info {
-      layout = Horizontal
-    }
-  }
 }
 </code></pre></div></div><p>Again, you can preview your user interface in MeVisLab directly. You can already select a file to open. The image is available at the output of the <code>LocalImage</code> module in your internal network but the viewers are missing in our interface.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/summary/Example3_2.png title="Source Box"><img id="Source Box" class="img-fluid rounded" src=images/tutorials/summary/Example3_2.png alt="Source Box" title="Source Box"></a><figcaption class=figure-caption>Source Box</figcaption></p></p><h5 id=viewing>Viewing</h5><p>Add the two viewer modules to the <em>Viewing</em> section of your <em>.script</em> file and define their field as <em>View2D.self</em> and <em>SoExaminerViewer.self</em>. Set <em>expandX = Yes</em> and <em>expandY = Yes</em> for both viewing modules. We want them to resize in the case the size of the Window changes.</p><p>Set the 2D viewer&rsquo;s type to <em>SoRenderArea</em> and the 3D viewer&rsquo;s type to <em>SoExaminerViewer</em> and inspect your new user interface in MeVisLab.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>...
 
     Box Viewing {
-      layout = Horizontal
-      Viewer View2D.self {
-        expandX = True
-        expandY = True
-        type    = SoRenderArea
-      }
-      Viewer SoExaminerViewer.self {
-        expandX = True
-        expandY = True
-        type    = SoExaminerViewer
-      }
+        layout = Horizontal
+        Viewer View2D.self {
+            expandX = Yes
+            expandY = Yes
+            type    = SoRenderArea
+        }
+        Viewer SoExaminerViewer.self {
+            expandX = Yes
+            expandY = Yes
+            type    = SoExaminerViewer
+        }
     }
 
 ...
 </code></pre></div></div><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/summary/Example3_3.png title="2D and 3D Viewer"><img id="2D and 3D Viewer" class="img-fluid rounded" src=images/tutorials/summary/Example3_3.png alt="2D and 3D Viewer" title="2D and 3D Viewer"></a><figcaption class=figure-caption>2D and 3D Viewer</figcaption></p></p><p>The images selected in the <em>Source</em> section are shown in 2D and 3D. We simply reused the existing fields and viewers from your internal network and are already able to interact with the images. As the <code>View2D</code> of your internal network itself provides the possibility to accept markers and starts the <code>RegionGrowing</code>, this is also already possible and the segmentations are shown in 2D and 3D.</p><h5 id=settings>Settings</h5><p>Let&rsquo;s define the <em>Settings</em> section. Once again, we first define the necessary fields. For automated tests that we are going to develop later, it makes sense to make some of the fields of the internal network available from outside.</p><p>The following shall be accessible as <em>Field</em> for our macro module:</p><ul><li>Filename to be opened</li><li>Color of the 2D overlay and 3D segmentation</li><li>Transparency of the 3D image</li><li>Threshold to be used for <code>RegionGrowing</code></li><li>Isovalue of the 3D surface to use for rendering</li><li>Position of the marker to use for <code>RegionGrowing</code></li><li>Selection for 3D visualization (image, segmentation, or both)</li><li>Trigger to reset the application to its initial state</li></ul><p>We already defined the filename as a field. Next we want to change the color of the overlay. Add another field to your <em>Parameters</em> section as <em>selectOverlayColor</em>. Define <em>internalName = SoView2DOverlay.baseColor</em> and <em>type = Color</em>. You may also define a title for the field, for example, <em>Color</em>.</p><p>The <em>baseColor</em> field of the <code>SoView2DOverlay</code> already has a parameter connection to the color of the <code>SoWEMRendererSegmentation</code>. This has been done in the internal network. The defined color is used for 2D and 3D automatically.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  Inputs {}
-  Outputs {}
-  Parameters {
-    ...
-    Field selectOverlayColor {
-      internalName = SoView2DOverlay.baseColor
-      type         = Color
+    Inputs {}
+    Outputs {}
+    Parameters {
+        ...
+        Field selectOverlayColor {
+            internalName = SoView2DOverlay.baseColor
+            type         = Color
+        }
     }
-  }
 }
 
 ...
 
     Box Settings {
-      layout = Horizontal
-      Field selectOverlayColor {
-        title   = Color
-      }
+        layout = Horizontal
+        Field selectOverlayColor {
+            title   = Color
+        }
     }
 
 ...
-</code></pre></div></div><p>The next elements follow the same rules; therefore, the final script will be available at the end for completeness.</p><p>In order to set the transparency of the 3D image, we need another field reusing the <em>SoWEMRendererImage.faceAlphaValue</em>. Add a field <em>imageAlpha</em> to the <em>Parameters</em> section. Define <em>internalName = SoWEMRendererImage.faceAlphaValue</em>, <em>type = Integer</em>, <em>min = 0</em>, and <em>max = 1</em>.</p><p>Add the field to the <em>Settings Box</em> and set <em>step = 0.1</em> and <em>slider = True</em>.</p><p>For the <code>RegionGrowing</code> threshold, add the field <em>thresholdInterval</em> to <em>Parameters</em> section and set <em>type = Integer</em>, <em>min = 1</em>, <em>max = 100</em>, and <em>internalName = RegionGrowing.autoThresholdIntervalSizeInPercent</em>.</p><p>Add the field to the <em>Settings</em> UI, and define <em>step = 0.1</em> and <em>slider = True</em>.</p><p>Define a field <em>isoValueImage</em> in the <em>Parameters</em> section and set <em>internalName = IsoSurfaceImage.isoValue</em>, <em>type = Integer</em>, <em>min = 1</em>, and <em>max = 1000</em>.</p><p>In the <em>Settings</em> section of the UI, set <em>step = 2</em> and <em>slider = True</em>.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  Inputs {}
-  Outputs {}
-  Parameters {
-    Field openFile {
-      type         = String
-      internalName = LocalImage.name
+</code></pre></div></div><p>The next elements follow the same rules; therefore, the final script will be available at the end for completeness.</p><p>In order to set the transparency of the 3D image, we need another field reusing the <em>SoWEMRendererImage.faceAlphaValue</em>. Add a field <em>imageAlpha</em> to the <em>Parameters</em> section. Define <em>internalName = SoWEMRendererImage.faceAlphaValue</em>, <em>type = Integer</em>, <em>min = 0</em>, and <em>max = 1</em>.</p><p>Add the field to the <em>Settings Box</em> and set <em>step = 0.1</em> and <em>slider = Yes</em>.</p><p>For the <code>RegionGrowing</code> threshold, add the field <em>thresholdInterval</em> to <em>Parameters</em> section and set <em>type = Integer</em>, <em>min = 1</em>, <em>max = 100</em>, and <em>internalName = RegionGrowing.autoThresholdIntervalSizeInPercent</em>.</p><p>Add the field to the <em>Settings</em> UI, and define <em>step = 0.1</em> and <em>slider = Yes</em>.</p><p>Define a field <em>isoValueImage</em> in the <em>Parameters</em> section and set <em>internalName = IsoSurfaceImage.isoValue</em>, <em>type = Integer</em>, <em>min = 1</em>, and <em>max = 1000</em>.</p><p>In the <em>Settings</em> section of the UI, set <em>step = 2</em> and <em>slider = Yes</em>.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
+    Inputs {}
+    Outputs {}
+    Parameters {
+        Field openFile {
+            type         = String
+            internalName = LocalImage.name
+        }
+        Field selectOverlayColor {
+            internalName = SoView2DOverlay.baseColor
+            type         = Color
+        }
+        Field imageAlpha {
+            internalName = SoWEMRendererImage.faceAlphaValue
+            type         = Integer
+            min          = 0
+            max          = 1
+        }
+        Field thresholdInterval {
+            internalName = RegionGrowing.autoThresholdIntervalSizeInPercent
+            type         = Integer
+            min          = 0
+            max          = 100
+        }
+        Field isoValueImage  {
+            internalName = IsoSurfaceImage.isoValue
+            type         = Integer
+            min          = 0
+            max          = 1000
+        }
     }
-    Field selectOverlayColor {
-      internalName = SoView2DOverlay.baseColor
-      type         = Color
-    }
-    Field imageAlpha {
-      internalName = SoWEMRendererImage.faceAlphaValue
-      type         = Integer
-      min          = 0
-      max          = 1
-    }
-    Field thresholdInterval {
-      internalName = RegionGrowing.autoThresholdIntervalSizeInPercent
-      type         = Integer
-      min          = 0
-      max          = 100
-    }
-    Field isoValueImage  {
-      internalName = IsoSurfaceImage.isoValue
-      type         = Integer
-      min          = 0
-      max          = 1000
-    }
-  }
 }
 
 Commands {
-  source = $(LOCAL)/TutorialSummary.py
+    source = $(LOCAL)/TutorialSummary.py
 }
 
 Window {
-  // Define minimum width and height
-  minimumWidth  = 400
-  minimumHeight = 300
-  // Vertical Layout and 4 Boxes with Horizontal Layout
-  Vertical {
-    Box Source {
-      layout = Horizontal
-      Field openFile {
-        browseButton = True
-        browseMode   = open
-      }
+    // Define minimum width and height
+    minimumWidth  = 400
+    minimumHeight = 300
+
+    Category {
+        // Vertical Layout and 4 Boxes with Horizontal Layout
+        Vertical {
+            Box Source {
+                layout = Horizontal
+                Field openFile {
+                    browseButton = Yes
+                    browseMode   = open
+                }
+            }
+            Box Viewing {
+                layout = Horizontal
+                Viewer View2D.self {
+                    expandX = Yes
+                    expandY = Yes
+                    type    = SoRenderArea
+                }
+                Viewer SoExaminerViewer.self {
+                    expandX = Yes
+                    expandY = Yes
+                    type    = SoExaminerViewer
+                }
+            }
+            Box Settings {
+                layout = Horizontal
+                Field selectOverlayColor {
+                    title   = Color
+                }
+                Field imageAlpha {
+                    step    = 0.1
+                    slider  = Yes
+                }
+                Field thresholdInterval {
+                    step    = 0.1
+                    slider  = Yes
+                }
+                Field isoValueImage {
+                    step    = 2
+                    slider  = Yes
+                }
+            }
+            Box Info {
+                layout = Horizontal
+            }
+        }
     }
-    Box Viewing {
-      layout = Horizontal
-      Viewer View2D.self {
-        expandX = True
-        expandY = True
-        type    = SoRenderArea
-      }
-      Viewer SoExaminerViewer.self {
-        expandX = True
-        expandY = True
-        type    = SoExaminerViewer
-      }
-    }
-    Box Settings {
-      layout = Horizontal
-      Field selectOverlayColor {
-        title   = Color
-      }
-      Field imageAlpha {
-        step    = 0.1
-        slider  = True
-      }
-      Field thresholdInterval {
-        step    = 0.1
-        slider  = True
-      }
-      Field isoValueImage {
-        step    = 2
-        slider  = True
-      }
-    }
-    Box Info {
-      layout    = Horizontal
-    }
-  }
 }
 </code></pre></div></div><p>Your user interface of the macro module should now look similar to this:</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/summary/Example3_4.png title="User Interface without Python Scripting"><img id="User Interface without Python Scripting" class="img-fluid rounded" src=images/tutorials/summary/Example3_4.png alt="User Interface without Python Scripting" title="User Interface without Python Scripting"></a><figcaption class=figure-caption>User Interface without Python Scripting</figcaption></p></p><p>For the next elements, we require Python scripting. Nevertheless, you are already able to use your application and perform the basic functionalities without writing any line of code.</p><h3 id=python-scripting>Python Scripting</h3><p>Python scripting is always necessary in the case you do not want to reuse an existing field for your user interface but implement functions to define what happens in the case of any event.</p><p>Events can be raised by the user (e.g., by clicking a button) or by the application itself (e.g., when the window is opened).</p><h4 id=3d-visualization-selection>3D Visualization Selection</h4><p>You will now add a selection possibility for the 3D viewer. This allows you to define the visibility of the 3D objects File, Segmented, or Both.</p><p>Add another field to your <em>Parameters</em> section. Define the field as <em>selected3DView</em> and set <em>type = Enum</em> and <em>values =Segmented,File,Both</em>.</p><p>Add a <em>ComboBox</em> to your <em>Settings</em> and use the field name defined above. Set <em>alignX = Left</em> and <em>editable = False</em> and open the <em>Window</em> of the macro module in MeVisLab.</p><p>The values of the field can be selected, but nothing happens in our viewers. We need to implement a <em>FieldListener</em> in Python that reacts on any value changes of the field <em>selected3DView</em>.</p><p>Open your script file and go to the <em>Commands</em> section. Add a <em>FieldListener</em> and reuse the name of our internal field <em>selected3DView</em>. Add a <em>Command</em> to the <em>FieldListener</em> calling a Python function <em>viewSelectionChanged</em>.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Commands {
-  source = $(LOCAL)/TutorialSummary.py
-  
-  FieldListener selected3DView {
-    command = viewSelectionChanged
-  }
+    source = $(LOCAL)/TutorialSummary.py
+    
+    FieldListener selected3DView {
+        command = viewSelectionChanged
+    }
 }
 </code></pre></div></div><p>Right-click
 <img width=22px src=images/rmb.svg alt="Right Mouse Button">
@@ -237,247 +246,253 @@ Create Python Function 'viewSelectionChanged'
 ]</i>. MATE automatically opens the Python file of your macro module and creates a function <em>viewSelectionChanged</em>.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#f92672>from</span> mevis <span style=color:#f92672>import</span> <span style=color:#f92672>*</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>viewSelectionChanged</span>(field):
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;Segmented&#34;</span>:
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;File&#34;</span>:
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;Both&#34;</span>:
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;Segmented&#34;</span>:
+</span></span><span style=display:flex><span>        ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;File&#34;</span>:
+</span></span><span style=display:flex><span>        ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;Both&#34;</span>:
+</span></span><span style=display:flex><span>        ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>
 </span></span></code></pre></div></div></div><p>The function sets the <code>SoSwitch</code> to the child value depending on the selected field value from the <em>ComboBox</em> and you should now be able to switch the 3D rendering by selecting an entry in the user interface.</p><h4 id=setting-the-marker>Setting the Marker</h4><p>The marker for the <code>RegionGrowing</code> is defined by the clicked position as Vector3. Add another field <em>markerPosition</em> to the <em>Parameters</em> section and define <em>type = Vector3</em>.</p><p>Then, add a trigger field <em>applyMarker</em> to your <em>Parameters</em> section. Set <em>type = Trigger</em> and <em>title = Add</em>.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>...
     Field markerPosition {
-      type         = Vector3
+        type         = Vector3
     }
     Field applyMarker {
-      type         = Trigger
-      title        = Add
+        type         = Trigger
+        title        = Add
     }
 ...
 </code></pre></div></div><p>Add another <em>FieldListener</em> to both fields:<div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>...
-  FieldListener markerPosition {
-    command = insertPosition
-  }
-  FieldListener applyMarker {
-    command = applyPosition
-  }
+    FieldListener markerPosition {
+        command = insertPosition
+    }
+    FieldListener applyMarker {
+        command = applyPosition
+    }
 ...
 </code></pre></div></div></p><p>Finally, add both fields to the <em>Settings</em> section of your user interface:<div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>...
-      Field markerPosition {}
-      Field applyMarker {}
+    Field markerPosition {}
+    Field applyMarker {}
 ...
 </code></pre></div></div></p><p>The Python functions should look like this:<div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#f92672>...</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>insertPosition</span>(field):
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.newPosXYZ&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> field<span style=color:#f92672>.</span>value
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.newPosXYZ&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> field<span style=color:#f92672>.</span>value
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>applyPosition</span>():
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.useInsertTemplate&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.add&#34;</span>)<span style=color:#f92672>.</span>touch()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.useInsertTemplate&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.add&#34;</span>)<span style=color:#f92672>.</span>touch()
 </span></span><span style=display:flex><span><span style=color:#f92672>...</span>
 </span></span></code></pre></div></div></div></p><p>Whenever the field <em>markerPosition</em> changes its value, the value is automatically applied to the <em>SoView2DMarkerEditor.newPosXYZ</em>. Clicking <em>SoView2DMarkerEditor.add</em> adds the new position to the <code>SoView2DMarkerEditor</code> and the region growing starts.</p><svg style="display:none"><symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8A8 8 0 110 8a8 8 0 0116 0zm-3.97-3.03a.75.75.0 00-1.08.022L7.477 9.417 5.384 7.323a.75.75.0 00-1.06 1.06L6.97 11.03a.75.75.0 001.079-.02l3.992-4.99a.75.75.0 00-.01-1.05z"/></symbol><symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 108 0a8 8 0 000 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194.0.487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703.0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 110-2 1 1 0 010 2z"/></symbol><symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13.0 00-1.96.0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889.0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535.0.954.462.9.995l-.35 3.507a.552.552.0 01-1.1.0L7.1 5.995A.905.905.0 018 5zm.002 6a1 1 0 110 2 1 1 0 010-2z"/></symbol><symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13.0 00-1.96.0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889.0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535.0.954.462.9.995l-.35 3.507a.552.552.0 01-1.1.0L7.1 5.995A.905.905.0 018 5zm.002 6a1 1 0 110 2 1 1 0 010-2z"/></symbol></svg><div class="alert alert-primary alert-info d-flex align-items-center" role=alert><svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg><div><b>Info:&nbsp;</b>
 The <em>Field</em> <em>SoView2DMarkerEditor.useInsertTemplate</em> needs to be set to <em>True</em> in order to allow adding markers via Python.</div></div><h4 id=reset>Reset</h4><p>Add a new field <em>resetApplication</em> to the <em>Parameters</em> section and set <em>type = Trigger</em> and <em>title = Reset</em>.</p><p>Add another <em>FieldListener</em> to your <em>Commands</em> and define <em>command = resetApplication</em>.</p><p>Add the field to your <em>Source</em> region.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>...
   Parameters {
-    Field resetApplication {
-      type         = Trigger
-      title        = Reset
-    }
+      Field resetApplication {
+          type         = Trigger
+          title        = Reset
+      }
   }
 ...
 Commands {
-  ...
-  FieldListener resetApplication {
-    command = resetApplication
-  }
+    ...
+    FieldListener resetApplication {
+        command = resetApplication
+    }
 }
 ...
-  Box Source {
-    layout = Horizontal
-    Field openFile {
-      browseButton = True
-      browseMode   = open
+    Box Source {
+        layout = Horizontal
+        Field openFile {
+            browseButton = Yes
+            browseMode   = open
+        }
+        Field resetApplication { }
     }
-    Field resetApplication { }
-  }
 ...
 </code></pre></div></div><p>What shall happen when we reset the application?</p><ul><li>The loaded image shall be unloaded, the viewer shall be empty</li><li>The marker shall be reset if available</li></ul><p>Add the Python function <em>resetApplication</em> and implement the following:<div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#f92672>from</span> mevis <span style=color:#f92672>import</span> <span style=color:#f92672>*</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>resetApplication</span>():
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;RegionGrowing.clear&#34;</span>)<span style=color:#f92672>.</span>touch()
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.deleteAll&#34;</span>)<span style=color:#f92672>.</span>touch()
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;LocalImage.close&#34;</span>)<span style=color:#f92672>.</span>touch()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;RegionGrowing.clear&#34;</span>)<span style=color:#f92672>.</span>touch()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.deleteAll&#34;</span>)<span style=color:#f92672>.</span>touch()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;LocalImage.close&#34;</span>)<span style=color:#f92672>.</span>touch()
 </span></span></code></pre></div></div></div></p><p>You can also reset the application to initial state by adding a <em>initCommand</em> to your <em>Window</em>. Call the <em>resetApplication</em> function here, too, and whenever the window is opened, the application is reset to its initial state.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Window {
-  // Define minimum width and height
-  minimumWidth  = 400
-  minimumHeight = 300
-  initCommand   = resetApplication
-
+    // Define minimum width and height
+    minimumWidth  = 400
+    minimumHeight = 300
+    initCommand   = resetApplication
   ...
 }
 </code></pre></div></div><p>This can also be used for setting/resetting to default values of the application. For example, update your Python function <em>resetApplication</em> the following way:</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#f92672>from</span> mevis <span style=color:#f92672>import</span> <span style=color:#f92672>*</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>resetApplication</span>():
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;RegionGrowing.clear&#34;</span>)<span style=color:#f92672>.</span>touch()
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.deleteAll&#34;</span>)<span style=color:#f92672>.</span>touch()
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;LocalImage.close&#34;</span>)<span style=color:#f92672>.</span>touch()
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;imageAlpha&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.5</span>
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;thresholdInterval&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.0</span>
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;isoValueImage&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>200</span>
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;selected3DView&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Both&#34;</span>
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;RegionGrowing.clear&#34;</span>)<span style=color:#f92672>.</span>touch()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.deleteAll&#34;</span>)<span style=color:#f92672>.</span>touch()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;LocalImage.close&#34;</span>)<span style=color:#f92672>.</span>touch()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;imageAlpha&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.5</span>
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;thresholdInterval&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.0</span>
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;isoValueImage&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>200</span>
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;selected3DView&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Both&#34;</span>
 </span></span></code></pre></div></div></div><h3 id=information>Information</h3><p>In the end, we want to provide some information about the volume of the segmented area (in ml).</p><p>Add one more field to your <em>Parameters</em> section and reuse the internal network fields <em>CalculateVolume.totalVolume</em>. Set field to <em>editable = False</em></p><p>Add the field to the <em>Info</em> section of your window.</p><p>Opening the window of your macro module in MeVisLab now provides all functionalities we wanted to achieve. You can also play around in the window and define some additional boxes or other MDL controls but the basic application prototype is now finished.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/summary/Example3_5.png title="Final Macro module"><img id="Final Macro module" class="img-fluid rounded" src=images/tutorials/summary/Example3_5.png alt="Final Macro module" title="Final Macro module"></a><figcaption class=figure-caption>Final Macro module</figcaption></p></p><h3 id=mevislab-gui-editor>MeVisLab GUI Editor</h3><p>MATE provides a powerful GUI editor showing a preview of your current user interface and allowing to reorder elements in the UI via drag and drop. In MATE, open <i>[
 Extras
 &rarr;
 Enable GUI Editor
 ]</i>.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/summary/Example3_4b.png title="MeVisLab GUI Editor"><img id="MeVisLab GUI Editor" class="img-fluid rounded" src=images/tutorials/summary/Example3_4b.png alt="MeVisLab GUI Editor" title="MeVisLab GUI Editor"></a><figcaption class=figure-caption>MeVisLab GUI Editor</figcaption></p></p><p>Changing the layout via drag and drop automatically adapts your <em>.script</em> file. Save and reload the script and your changes are applied.</p><svg style="display:none"><symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8A8 8 0 110 8a8 8 0 0116 0zm-3.97-3.03a.75.75.0 00-1.08.022L7.477 9.417 5.384 7.323a.75.75.0 00-1.06 1.06L6.97 11.03a.75.75.0 001.079-.02l3.992-4.99a.75.75.0 00-.01-1.05z"/></symbol><symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8 16A8 8 0 108 0a8 8 0 000 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194.0.487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703.0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 110-2 1 1 0 010 2z"/></symbol><symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13.0 00-1.96.0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889.0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535.0.954.462.9.995l-.35 3.507a.552.552.0 01-1.1.0L7.1 5.995A.905.905.0 018 5zm.002 6a1 1 0 110 2 1 1 0 010-2z"/></symbol><symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16"><path d="M8.982 1.566a1.13 1.13.0 00-1.96.0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889.0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535.0.954.462.9.995l-.35 3.507a.552.552.0 01-1.1.0L7.1 5.995A.905.905.0 018 5zm.002 6a1 1 0 110 2 1 1 0 010-2z"/></symbol></svg><div class="alert alert-primary alert-info d-flex align-items-center" role=alert><svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg><div><b>Info:&nbsp;</b>
 If the GUI editor is not shown in MATE, make sure to check <em>[View → Preview]</em>.</div></div><h2 id=final-script-and-python-files>Final Script and Python Files</h2><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  Inputs {}
-  Outputs {}
-  Parameters {
-    Field openFile {
-      type         = String
-      internalName = LocalImage.name
+    Inputs {}
+    Outputs {}
+    Parameters {
+        Field openFile {
+            type         = String
+            internalName = LocalImage.name
+        }
+        Field selectOverlayColor {
+            internalName = SoView2DOverlay.baseColor
+            type         = Color
+        }
+        Field imageAlpha {
+            internalName = SoWEMRendererImage.faceAlphaValue
+            type         = Integer
+            min          = 0
+            max          = 1
+        }
+        Field thresholdInterval {
+            internalName = RegionGrowing.autoThresholdIntervalSizeInPercent
+            type         = Integer
+            min          = 0
+            max          = 100
+        }
+        Field isoValueImage  {
+            internalName = IsoSurfaceImage.isoValue
+            type         = Integer
+            min          = 0
+            max          = 1000
+        }
+        Field selected3DView {
+            type   = Enum
+            items {
+                item Segmented {}
+                item File {}
+                item Both {}
+            }
+        }
+        Field totalVolume {
+            internalName = CalculateVolume.totalVolume
+            editable     = False
+        }
+        Field resetApplication {
+            type  = Trigger
+            title = Reset
+        }
+        Field markerPosition {
+            type         = Vector3
+        }
+        Field applyMarker {
+            type  = Trigger
+            title = Add
+        }
     }
-    Field selectOverlayColor {
-      internalName = SoView2DOverlay.baseColor
-      type         = Color
-    }
-    Field imageAlpha {
-      internalName = SoWEMRendererImage.faceAlphaValue
-      type         = Integer
-      min          = 0
-      max          = 1
-    }
-    Field thresholdInterval {
-      internalName = RegionGrowing.autoThresholdIntervalSizeInPercent
-      type         = Integer
-      min          = 0
-      max          = 100
-    }
-    Field isoValueImage  {
-      internalName = IsoSurfaceImage.isoValue
-      type         = Integer
-      min          = 0
-      max          = 1000
-    }
-    Field selected3DView {
-      type   = Enum
-      values = Segmented,File,Both
-    }
-    Field totalVolume {
-      internalName = CalculateVolume.totalVolume
-      editable     = False
-    }
-    Field resetApplication {
-      type  = Trigger
-      title = Reset
-    }
-    Field markerPosition {
-      type         = Vector3
-    }
-    Field applyMarker {
-      type  = Trigger
-      title = Add
-    }
-  }
 }
 
 Commands {
-  source = $(LOCAL)/&lt;MACRO_NAME&gt;.py
-  
-  FieldListener selected3DView {
-    command = viewSelectionChanged
-  }
-  FieldListener resetApplication {
-    command = resetApplication
-  }
-  FieldListener markerPosition {
-    command = insertPosition
-  }
-  FieldListener applyMarker {
-    command = applyPosition
-  }
+    source = $(LOCAL)/&lt;MACRO_NAME&gt;.py
+    
+    FieldListener selected3DView {
+        command = viewSelectionChanged
+    }
+    FieldListener resetApplication {
+        command = resetApplication
+    }
+    FieldListener markerPosition {
+        command = insertPosition
+    }
+    FieldListener applyMarker {
+        command = applyPosition
+    }
 }
 
 Window {
-  // Define minimum width and height
-  minimumWidth  = 400
-  minimumHeight = 300
-  initCommand   = resetApplication
-  // Vertical Layout and 4 Boxes with Horizontal Layout
-  Vertical {
-    Box Source {
-      layout = Horizontal
-      Field openFile {
-        browseButton = True
-        browseMode   = open
-      }
-      Field resetApplication { }
+    // Define minimum width and height
+    minimumWidth  = 400
+    minimumHeight = 300
+    initCommand   = resetApplication
+
+    Category {
+        // Vertical Layout and 4 Boxes with Horizontal Layout
+        Vertical {
+            Box Source {
+              layout = Horizontal
+              Field openFile {
+                  browseButton = Yes
+                  browseMode   = open
+              }
+              Field resetApplication { }
+            }
+            Box Viewing {
+              layout = Horizontal
+              Viewer View2D.self {
+                  expandX = Yes
+                  expandY = Yes
+                  type    = SoRenderArea
+              }
+              Viewer SoExaminerViewer.self {
+                  expandX = Yes
+                  expandY = Yes
+                  type    = SoExaminerViewer
+              }
+            }
+            Box Settings {
+              layout = Horizontal
+              Field selectOverlayColor {
+                  title   = Color
+              }
+              Field imageAlpha {
+                  step   = 0.1
+                  slider = Yes
+              }
+              Field thresholdInterval {
+                  step   = 0.1
+                  slider = Yes
+              }
+              Field isoValueImage {
+                  step   = 2
+                  slider = Yes
+              }
+              Field markerPosition {}
+              Field applyMarker {}
+              ComboBox selected3DView {
+                  alignX   = Left
+                  editable = False
+              }
+            }
+            Box Info {
+                layout    = Horizontal
+                Field totalVolume {}
+            }
+        }
     }
-    Box Viewing {
-      layout = Horizontal
-      Viewer View2D.self {
-        expandX = True
-        expandY = True
-        type    = SoRenderArea
-      }
-      Viewer SoExaminerViewer.self {
-        expandX = True
-        expandY = True
-        type    = SoExaminerViewer
-      }
-    }
-    Box Settings {
-      layout = Horizontal
-      Field selectOverlayColor {
-        title   = Color
-      }
-      Field imageAlpha {
-        step   = 0.1
-        slider = True
-      }
-      Field thresholdInterval {
-        step   = 0.1
-        slider = True
-      }
-      Field isoValueImage {
-        step   = 2
-        slider = True
-      }
-      Field markerPosition {}
-      Field applyMarker {}
-      ComboBox selected3DView {
-        alignX   = Left
-        editable = False
-      }
-    }
-    Box Info {
-      layout    = Horizontal
-      Field totalVolume {}
-    }
-  }
 }
 </code></pre></div></div><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">&lt;MACRO_NAME>.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#f92672>from</span> mevis <span style=color:#f92672>import</span> <span style=color:#f92672>*</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>viewSelectionChanged</span>(field):
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;Segmented&#34;</span>:
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;File&#34;</span>:
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
-</span></span><span style=display:flex><span>  <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;Both&#34;</span>:
-</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;Segmented&#34;</span>:
+</span></span><span style=display:flex><span>        ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;File&#34;</span>:
+</span></span><span style=display:flex><span>        ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> field<span style=color:#f92672>.</span>value <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;Both&#34;</span>:
+</span></span><span style=display:flex><span>        ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoSwitch.whichChild&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>resetApplication</span>():
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;RegionGrowing.clear&#34;</span>)<span style=color:#f92672>.</span>touch()
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.deleteAll&#34;</span>)<span style=color:#f92672>.</span>touch()
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;LocalImage.close&#34;</span>)<span style=color:#f92672>.</span>touch()
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;imageAlpha&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.5</span>
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;thresholdInterval&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.0</span>
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;isoValueImage&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>200</span>
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;selected3DView&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Both&#34;</span>
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;RegionGrowing.clear&#34;</span>)<span style=color:#f92672>.</span>touch()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.deleteAll&#34;</span>)<span style=color:#f92672>.</span>touch()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;LocalImage.close&#34;</span>)<span style=color:#f92672>.</span>touch()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;imageAlpha&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.5</span>
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;thresholdInterval&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.0</span>
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;isoValueImage&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#ae81ff>200</span>
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;selected3DView&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Both&#34;</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>insertPosition</span>(field):
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.newPosXYZ&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> field<span style=color:#f92672>.</span>value
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.newPosXYZ&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> field<span style=color:#f92672>.</span>value
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>applyPosition</span>():
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.useInsertTemplate&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
-</span></span><span style=display:flex><span>  ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.add&#34;</span>)<span style=color:#f92672>.</span>touch()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.useInsertTemplate&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DMarkerEditor.add&#34;</span>)<span style=color:#f92672>.</span>touch()
 </span></span></code></pre></div></div></div><h2 id=summary>Summary</h2><ul><li>You now added a user interface to your macro module.</li><li>The window opens automatically on double-click
 <img width=22px src=images/rmb.svg alt="Right Mouse Button">
 .</li><li>Fields defined in the <em>Parameters</em> section can be modified in the MeVisLab Module Inspector.</li><li>Python allows to implement functions executed on events raised by the user or by the application itself.</li></ul><div class="alert alert-secondary d-flex align-items-center" role=alert><div><img width=24px src=archive.png>&nbsp;&nbsp;&nbsp;Download Archive <a href=https://mevislab.github.io/examples/examples/summary/TutorialSummary_UI.zip target=_blank>here</a>.</div></div></div></div><script>const body_element=document.querySelector("html body"),modal_div=document.createElement("div");let modal_window=document.body.appendChild(modal_div),modal_html='<div class="modal fade" id="lightboxModalFullscreen" tabindex="-1" aria-labelledby="lightboxModalFullscreenLabel" aria-hidden="true"><div class="modal-dialog modal-fullscreen" data-bs-dismiss="modal" aria-label="Close"><div class="modal-content border-0"><div class="modal-body d-flex align-self-center align-items-center justify-content-center"><div class="modal-custom"><img src="" id="LightboxCanvas" class="img-fluid" data-bs-dismiss="modal" aria-label="Close" /><figcaption id="LightboxCaption" class="figure-caption"></figcaption></div></div></div></div></div>';modal_window.innerHTML=modal_html,Array.from(document.querySelectorAll('[data-modal*="bs-lightbox"]')).forEach(e=>{e.setAttribute("data-bs-toggle","modal"),e.setAttribute("data-bs-target","#lightboxModalFullscreen"),e.addEventListener("click",t=>{const n=e.getAttribute("href"),s=e.getAttribute("title");document.getElementById("LightboxCanvas").src=n,document.getElementById("LightboxCaption").innerHTML=s,t.preventDefault(),console.log(n)})})</script><hr><div class=row style=margin:25px!important><div class=col><a href=https://mevislab.github.io/examples/tutorials/summary/summary2/ title="Step 2: Prototyping - Create a Macro Module" class="btn btn-outline-secondary btn-sm" role=button aria-pressed=true><svg width="16" height="16" fill="currentColor" class="bi bi-skip-start-fill" viewBox="0 0 16 16"><path d="M4 4a.5.5.0 011 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5.0 01-1 0V4z"/></svg>&nbsp;Step 2: Prototyping - Create a Macro Module</a></div><div class=col style=text-align:right><a href=https://mevislab.github.io/examples/tutorials/summary/summary4/ title="Step 4: Review - Automated Tests" class="btn btn-outline-secondary btn-sm" role=button aria-pressed=true>Step 4: Review - Automated Tests&nbsp;

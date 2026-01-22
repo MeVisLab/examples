@@ -31,42 +31,42 @@ Examples</button></h2><div id=collapseexamples class="accordion-collapse collaps
 <a href=/tags/matplotlib title=Matplotlib><span class="badge bg-secondary">Matplotlib</span></a>
 <a href=/tags/visualization title=Visualization><span class="badge bg-secondary">Visualization</span></a><h1 id=example-3-slice-comparison>Example 3: Slice Comparison</h1><h2 id=introduction>Introduction</h2><p>We will adapt the previously created macro module to be able to overlay two defined slices to compare their grayscale distributions.</p><ul><li>The module we are adapting has been set up in the <a href=tutorials/thirdparty/matplotlib/modulesetup>Example 1: Module Setup</a> tutorial.</li><li>The panel and two-dimensional plotting functionality has been added in [Example 2: 2D Plotting]
 (tutorials/thirdparty/matplotlib/2dplotting).</li></ul><h2 id=steps-to-do>Steps to Do</h2><p>At first, we will extend the panel: Open your <code>BaseNetwork</code> macro module within an empty MeVisLab workspace and select the <em>.script</em> file from its related files.</p><p>Add the following code into your <em>.script</em> file between the &ldquo;Single Slice&rdquo; and the &ldquo;Sequence&rdquo; box.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">BaseNetwork.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>        Box {
-          title = &#34;Comparison&#34;
-          Field &#34;SubImage.z&#34; {
-            title = &#34;Compare slice&#34;
-          }
-          Field &#34;SubImage.sz&#34; {
-            title = &#34;With slice&#34;
-          }
-          Button {
-            title   = &#34;Plot&#34;
-            command = &#34;comparison&#34;
-          }
+            title = &#34;Comparison&#34;
+            Field &#34;SubImage.z&#34; {
+                title = &#34;Compare slice&#34;
+            }
+            Field &#34;SubImage.sz&#34; {
+                title = &#34;With slice&#34;
+            }
+            Button {
+                title   = &#34;Plot&#34;
+                command = &#34;comparison&#34;
+            }
         }
-</code></pre></div></div><p>Your panel should now be changed to look like this:</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/Matplotlib14.PNG title><img class="img-fluid rounded" src=images/tutorials/thirdparty/Matplotlib14.PNG alt="MATE Preview"></a><figcaption class=figure-caption></figcaption></p></p><p>We will now add the &ldquo;comparison&rdquo; function, to give the &ldquo;Plot&rdquo; button in our &ldquo;Comparison&rdquo; box a purpose. To do so, switch to your module&rsquo;s <em>.py</em> file and choose a cosy place for the following piece of code:</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">BaseNetwork.py</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>def comparison():
-    clearFigure()
-    figure = ctx.control(&#34;canvas&#34;).object().figure()
-
-    values = [startSlice, endSlice]
-    ctx.field(&#34;SubImage.z&#34;).value = values[0]
-    ctx.field(&#34;SubImage.sz&#34;).value = values[0]
-    y1 = getY()
-    x1 = getX()
-    ctx.field(&#34;SubImage.z&#34;).value = values[1]
-    ctx.field(&#34;SubImage.sz&#34;).value = values[1]
-    y2 = getY()
-    x2 = getX()
-
-    subplot = figure.add_subplot(211)
-    subplot.bar(x1, y1, bins, color=&#39;r&#39;)
-    subplot.bar(x2, y2, bins, color=&#39;b&#39;)
-    subplot.legend([f&#39;Slice {i}&#39; for i in values])
-    subplot.plot()
-    subplot = figure.add_subplot(212)
-    subplot.bar(x2, y2, bins, color=&#39;b&#39;)
-    subplot.bar(x1, y1, bins, color=&#39;r&#39;)
-    subplot.legend([f&#39;Slice {i}&#39; for i in values])
-    figure.canvas.draw()
-    ctx.field(&#34;SubImage.z&#34;).value = values[0]
-</code></pre></div></div><p>You should now be able to reproduce results like these:</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/Matplotlib16.PNG title><img class="img-fluid rounded" src=images/tutorials/thirdparty/Matplotlib16.PNG alt=Comparison></a><figcaption class=figure-caption></figcaption></p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/Matplotlib17.PNG title><img class="img-fluid rounded" src=images/tutorials/thirdparty/Matplotlib17.PNG alt=Comparison></a><figcaption class=figure-caption></figcaption></p></p><h2 id=summary>Summary</h2><ul><li>Grayscale distributions of two slices can be layered to compare them and make deviations noticeable.</li></ul></div></div><script>const body_element=document.querySelector("html body"),modal_div=document.createElement("div");let modal_window=document.body.appendChild(modal_div),modal_html='<div class="modal fade" id="lightboxModalFullscreen" tabindex="-1" aria-labelledby="lightboxModalFullscreenLabel" aria-hidden="true"><div class="modal-dialog modal-fullscreen" data-bs-dismiss="modal" aria-label="Close"><div class="modal-content border-0"><div class="modal-body d-flex align-self-center align-items-center justify-content-center"><div class="modal-custom"><img src="" id="LightboxCanvas" class="img-fluid" data-bs-dismiss="modal" aria-label="Close" /><figcaption id="LightboxCaption" class="figure-caption"></figcaption></div></div></div></div></div>';modal_window.innerHTML=modal_html,Array.from(document.querySelectorAll('[data-modal*="bs-lightbox"]')).forEach(e=>{e.setAttribute("data-bs-toggle","modal"),e.setAttribute("data-bs-target","#lightboxModalFullscreen"),e.addEventListener("click",t=>{const n=e.getAttribute("href"),s=e.getAttribute("title");document.getElementById("LightboxCanvas").src=n,document.getElementById("LightboxCaption").innerHTML=s,t.preventDefault(),console.log(n)})})</script><hr><div class=row style=margin:25px!important><div class=col><a href=https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/2dplotting/ title="Example 2: 2D Plotting" class="btn btn-outline-secondary btn-sm" role=button aria-pressed=true><svg width="16" height="16" fill="currentColor" class="bi bi-skip-start-fill" viewBox="0 0 16 16"><path d="M4 4a.5.5.0 011 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5.0 01-1 0V4z"/></svg>&nbsp;Example 2: 2D Plotting</a></div><div class=col style=text-align:right><a href=https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/3dplotting/ title="Example 4: 3D Plotting" class="btn btn-outline-secondary btn-sm" role=button aria-pressed=true>Example 4: 3D Plotting&nbsp;
+</code></pre></div></div><p>Your panel should now be changed to look like this:</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/Matplotlib14.PNG title><img class="img-fluid rounded" src=images/tutorials/thirdparty/Matplotlib14.PNG alt="MATE Preview"></a><figcaption class=figure-caption></figcaption></p></p><p>We will now add the &ldquo;comparison&rdquo; function, to give the &ldquo;Plot&rdquo; button in our &ldquo;Comparison&rdquo; box a purpose. To do so, switch to your module&rsquo;s <em>.py</em> file and choose a cosy place for the following piece of code:</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">BaseNetwork.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>comparison</span>():
+</span></span><span style=display:flex><span>    clearFigure()
+</span></span><span style=display:flex><span>    figure <span style=color:#f92672>=</span> ctx<span style=color:#f92672>.</span>control(<span style=color:#e6db74>&#34;canvas&#34;</span>)<span style=color:#f92672>.</span>object()<span style=color:#f92672>.</span>figure()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    values <span style=color:#f92672>=</span> [startSlice, endSlice]
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SubImage.z&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> values[<span style=color:#ae81ff>0</span>]
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SubImage.sz&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> values[<span style=color:#ae81ff>0</span>]
+</span></span><span style=display:flex><span>    y1 <span style=color:#f92672>=</span> getY()
+</span></span><span style=display:flex><span>    x1 <span style=color:#f92672>=</span> getX()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SubImage.z&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> values[<span style=color:#ae81ff>1</span>]
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SubImage.sz&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> values[<span style=color:#ae81ff>1</span>]
+</span></span><span style=display:flex><span>    y2 <span style=color:#f92672>=</span> getY()
+</span></span><span style=display:flex><span>    x2 <span style=color:#f92672>=</span> getX()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    subplot <span style=color:#f92672>=</span> figure<span style=color:#f92672>.</span>add_subplot(<span style=color:#ae81ff>211</span>)
+</span></span><span style=display:flex><span>    subplot<span style=color:#f92672>.</span>bar(x1, y1, bins, color<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;r&#39;</span>)
+</span></span><span style=display:flex><span>    subplot<span style=color:#f92672>.</span>bar(x2, y2, bins, color<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;b&#39;</span>)
+</span></span><span style=display:flex><span>    subplot<span style=color:#f92672>.</span>legend([<span style=color:#e6db74>f</span><span style=color:#e6db74>&#39;Slice </span><span style=color:#e6db74>{</span>i<span style=color:#e6db74>}</span><span style=color:#e6db74>&#39;</span> <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> values])
+</span></span><span style=display:flex><span>    subplot<span style=color:#f92672>.</span>plot()
+</span></span><span style=display:flex><span>    subplot <span style=color:#f92672>=</span> figure<span style=color:#f92672>.</span>add_subplot(<span style=color:#ae81ff>212</span>)
+</span></span><span style=display:flex><span>    subplot<span style=color:#f92672>.</span>bar(x2, y2, bins, color<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;b&#39;</span>)
+</span></span><span style=display:flex><span>    subplot<span style=color:#f92672>.</span>bar(x1, y1, bins, color<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;r&#39;</span>)
+</span></span><span style=display:flex><span>    subplot<span style=color:#f92672>.</span>legend([<span style=color:#e6db74>f</span><span style=color:#e6db74>&#39;Slice </span><span style=color:#e6db74>{</span>i<span style=color:#e6db74>}</span><span style=color:#e6db74>&#39;</span> <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> values])
+</span></span><span style=display:flex><span>    figure<span style=color:#f92672>.</span>canvas<span style=color:#f92672>.</span>draw()
+</span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SubImage.z&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> values[<span style=color:#ae81ff>0</span>]
+</span></span></code></pre></div></div></div><p>You should now be able to reproduce results like these:</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/Matplotlib16.PNG title><img class="img-fluid rounded" src=images/tutorials/thirdparty/Matplotlib16.PNG alt=Comparison></a><figcaption class=figure-caption></figcaption></p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/thirdparty/Matplotlib17.PNG title><img class="img-fluid rounded" src=images/tutorials/thirdparty/Matplotlib17.PNG alt=Comparison></a><figcaption class=figure-caption></figcaption></p></p><h2 id=summary>Summary</h2><ul><li>Grayscale distributions of two slices can be layered to compare them and make deviations noticeable.</li></ul></div></div><script>const body_element=document.querySelector("html body"),modal_div=document.createElement("div");let modal_window=document.body.appendChild(modal_div),modal_html='<div class="modal fade" id="lightboxModalFullscreen" tabindex="-1" aria-labelledby="lightboxModalFullscreenLabel" aria-hidden="true"><div class="modal-dialog modal-fullscreen" data-bs-dismiss="modal" aria-label="Close"><div class="modal-content border-0"><div class="modal-body d-flex align-self-center align-items-center justify-content-center"><div class="modal-custom"><img src="" id="LightboxCanvas" class="img-fluid" data-bs-dismiss="modal" aria-label="Close" /><figcaption id="LightboxCaption" class="figure-caption"></figcaption></div></div></div></div></div>';modal_window.innerHTML=modal_html,Array.from(document.querySelectorAll('[data-modal*="bs-lightbox"]')).forEach(e=>{e.setAttribute("data-bs-toggle","modal"),e.setAttribute("data-bs-target","#lightboxModalFullscreen"),e.addEventListener("click",t=>{const n=e.getAttribute("href"),s=e.getAttribute("title");document.getElementById("LightboxCanvas").src=n,document.getElementById("LightboxCaption").innerHTML=s,t.preventDefault(),console.log(n)})})</script><hr><div class=row style=margin:25px!important><div class=col><a href=https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/2dplotting/ title="Example 2: 2D Plotting" class="btn btn-outline-secondary btn-sm" role=button aria-pressed=true><svg width="16" height="16" fill="currentColor" class="bi bi-skip-start-fill" viewBox="0 0 16 16"><path d="M4 4a.5.5.0 011 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5.0 01-1 0V4z"/></svg>&nbsp;Example 2: 2D Plotting</a></div><div class=col style=text-align:right><a href=https://mevislab.github.io/examples/tutorials/thirdparty/matplotlib/3dplotting/ title="Example 4: 3D Plotting" class="btn btn-outline-secondary btn-sm" role=button aria-pressed=true>Example 4: 3D Plotting&nbsp;
 <svg width="16" height="16" fill="currentColor" class="bi bi-skip-end-fill" viewBox="0 0 16 16"><path d="M12.5 4a.5.5.0 00-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5.0 001 0V4z"/></svg></a></div></div></div><footer class="footer fixed-bottom mt-auto py-3"><div class="row footer-text"><div class="col-12 col-md text-center text-md-left text-white">&copy; Copyright 2026 <a href=https://www.mevis.de target=_blank>MeVis Medical Solutions AG</a> | <a href=https://www.mevislab.de/imprint target=_blank>Imprint</a> | <a href=https://www.mevislab.de target=_blank>https://www.mevislab.de</a></div></div><script src=https://mevislab.github.io/examples/js/bundle.min.js defer></script><script>hljs.highlightAll(),hljs.configure({ignoreUnescapedHTML:!0}),hljs.addPlugin(new CopyButtonPlugin)</script></footer></body></html>

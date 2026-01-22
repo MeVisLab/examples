@@ -47,47 +47,47 @@ Related Files (4)
 &rarr;
 MyItemModelView.script
 ]</i>.</p><p>We first define the input for the image.<div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MyItemModelView.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  Inputs {
-    Field inImage            { type = Image  }
-  }
-  Outputs {}
-  Parameters {}
+    Inputs {
+        Field inImage            { type = Image  }
+    }
+    Outputs {}
+    Parameters {}
 }
 </code></pre></div></div></p><p>Then, we define all attributes of the input image we want to use in our <em>ItemModel</em>.</p><ul><li><strong>Patient</strong><ul><li>PatientName</li><li>PatientBirthDate</li><li><strong>Study</strong><ul><li>StudyDescription</li><li>StudyDate</li><li>Modality</li><li><strong>Series</strong><ul><li>SeriesDescription</li><li>SeriesDate</li><li><strong>Image</strong><ul><li>SOPInstanceUID</li></ul></li></ul></li></ul></li></ul></li></ul><p>All of them have to be defined as a <em>Field</em> in the <em>Parameters</em> section of the script.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MyItemModelView.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  Inputs {
-    Field inImage            { type = Image  }
-  }
-  Outputs {}
-  Parameters {
-    Field id                 { type = Int    }
-    Field patientName        { type = String }
-    Field patientBirthdate   { type = String }
-    Field studyDescription   { type = String }
-    Field studyDate          { type = String }
-    Field modality           { type = String }
-    Field seriesDescription  { type = String }
-    Field seriesDate         { type = String }
-    Field sopInstanceUID     { type = String }
-  }
+    Inputs {
+        Field inImage            { type = Image  }
+    }
+    Outputs {}
+    Parameters {
+        Field id                 { type = Int    }
+        Field patientName        { type = String }
+        Field patientBirthdate   { type = String }
+        Field studyDescription   { type = String }
+        Field studyDate          { type = String }
+        Field modality           { type = String }
+        Field seriesDescription  { type = String }
+        Field seriesDate         { type = String }
+        Field sopInstanceUID     { type = String }
+    }
 }
 </code></pre></div></div><p>If you now open your panel, you should see the <em>Input</em> <em>inImage</em> and the just created <em>Fields</em>. The <em>Field</em> <em>id</em> is necessary to identify unique objects in your <em>ItemModel</em> later. In order to make this example easier to understand, we defined all types of the <em>Fields</em> as <em>String</em>. You can also use different types, if you like.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/basicmechanics/ItemModel_5.png title="Module Input and Fields"><img id="Module Input and Fields" class="img-fluid rounded" src=images/tutorials/basicmechanics/ItemModel_5.png alt="Module Input and Fields" title="Module Input and Fields"></a><figcaption class=figure-caption>Module Input and Fields</figcaption></p></p><h3 id=add-the-itemmodelview-to-your-panel>Add the ItemModelView to Your Panel</h3><p>We can now add the <em>ItemModelView</em> to our panel and define the columns of the view, that we want to see. Add a <em>Window</em> section to your script file and define it as seen below.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MyItemModelView.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Window {
-  Category {
-  Vertical {
-      ItemModelView myItemModel {
-        name        = itemModelView
-        idAttribute = id
-        Column id {}
-        Column patientName {}
-        Column patientBirthdate {}
-        Column studyDescription {}
-        Column studyDate {}
-        Column modality {}
-        Column seriesDescription {}
-        Column seriesDate {}
-        Column sopInstanceUID {}
-      }
+    Category {
+        Vertical {
+            ItemModelView myItemModel {
+                name        = itemModelView
+                idAttribute = id
+                Column id {}
+                Column patientName {}
+                Column patientBirthdate {}
+                Column studyDescription {}
+                Column studyDate {}
+                Column modality {}
+                Column seriesDescription {}
+                Column seriesDate {}
+                Column sopInstanceUID {}
+            }
+        }
     }
-  }
 }
 </code></pre></div></div><p>Every <em>Field</em> that we defined in the <em>Parameters</em> section is now used as a column in our view. The <em>Field</em> <em>id</em> has been defined to be the <em>idAttribute</em>. If you now open your panel, MeVisLab will complain that you did not define the <em>Field</em> <em>myItemModel</em>. You have to add a <em>Field</em> with this name to your <em>Parameters</em> section or as an <em>Output Field</em>. We will add an <em>Output Field</em>, so that our model can also be used by other modules, if necessary. The type is <em>MLBase</em>.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MyItemModelView.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Outputs {
     Field myItemModel {
@@ -95,11 +95,11 @@ MyItemModelView.script
     }
 }
 </code></pre></div></div><p>Your module now also shows an output <em>MLBase</em> object and the columns you defined for the <em>ItemModelView</em>.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/basicmechanics/ItemModel_6.png title="Module Output and Columns"><img id="Module Output and Columns" class="img-fluid rounded" src=images/tutorials/basicmechanics/ItemModel_6.png alt="Module Output and Columns" title="Module Output and Columns"></a><figcaption class=figure-caption>Module Output and Columns</figcaption></p></p><h3 id=fill-your-table-with-data>Fill Your Table with Data</h3><p>We want to get the necessary information from the defined input image <em>inImage</em>. We want the module to update the content whenever the input image changes. Therefore, we need a <em>Field Listener</em> calling a Python function whenever the input image changes. Add it to your <em>Commands</em> section.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MyItemModelView.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Commands {
-  source = $(LOCAL)/MyItemModelView.py
+    source = $(LOCAL)/MyItemModelView.py
   
-  FieldListener inImage {
-    command = imageChanged
-  }
+    FieldListener inImage {
+        command = imageChanged
+    }
 }
 </code></pre></div></div><p>Whenever the input image changes, the Python function <em>imageChanged</em> is executed. Right-click on the
 <img width=22px src=images/rmb.svg alt="Right Mouse Button">
@@ -171,23 +171,24 @@ Create Python Function 'imageChanged'
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>clearAll</span>(self):
 </span></span><span style=display:flex><span>        self<span style=color:#f92672>.</span>model<span style=color:#f92672>.</span>clear()
 </span></span></code></pre></div></div></div><p>You can see that the above Python code uses a field <em>selection</em> that contains the ID of the selected item in our table. We have to add this <em>Field</em> to our <em>.script</em> file, too.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MyItemModelView.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Interface {
-  ...
-  Parameters {
-    ...    
-    Field selection          { type = String }
     ...
-  }
-}
-Window {
-  Category {
-    Vertical {
-      ItemModelView myItemModel {
-        ...
-        selectionField       = selection
-        ...
-      }
+    Parameters {
+      ...    
+      Field selection { type = String }
+      ...
     }
-  }
+}
+
+Window {
+    Category {
+        Vertical {
+            ItemModelView myItemModel {
+                ...
+                selectionField = selection
+                ...
+            }
+        }
+    }
 }
 </code></pre></div></div><h4 id=fill-the-model-with-your-data>Fill the Model With Your Data</h4><p>Now, we can implement the function <em>imageChanged</em>.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MyItemModelView.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>imageChanged</span>(field: <span style=color:#e6db74>&#34;mevislab.MLABField &#34;</span>):
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>global</span> gModel, gNextId
@@ -249,11 +250,11 @@ Window {
 </span></span><span style=display:flex><span>    
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> patientName, patientBirthdate, studyDescription, studyDate, modality, seriesDescription, seriesDate, numberOfSlices
 </span></span></code></pre></div></div></div><p>The image data is then used to create the root item of our model. We use the selected index of our first entry to walk through all available slices of the image and add the <em>SOP Instance UID</em> of each slice as a child object to our root item.</p><p>If you now open the panel of your module, you can already see the results.</p><p><p class=page-image><a data-modal=bs-lightbox href=images/tutorials/basicmechanics/ItemModel_7.png title="Module Panel"><img id="Module Panel" class="img-fluid rounded" src=images/tutorials/basicmechanics/ItemModel_7.png alt="Module Panel" title="Module Panel"></a><figcaption class=figure-caption>Module Panel</figcaption></p></p><p>The first line shows the information of the patient, the study and the series and each child item represents a single slice of the image.</p><h2 id=interact-with-your-model>Interact With Your Model</h2><p>We can now add options to interact with the <em>ItemModelView</em>. Open the <em>.script</em> file of your module and go to the <em>Commands</em> section. We add a <em>FieldListener</em> to our <em>selection</em> field. Whenever the user selects a different item in our view, the Python function <em>itemClicked</em> in the <em>FieldListener</em> is executed.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MyItemModelView.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Commands {
-  ...
-  FieldListener selection {
-    command = itemClicked
-  }
-  ...
+    ...
+    FieldListener selection {
+        command = itemClicked
+    }
+    ...
 }
 </code></pre></div></div><p>Before adding the new Python function, we need a function in our model that returns the values of items from our model. Implement the function <em>getItemByID</em> in our model the following way:</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">MyItemModelView.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>getItemByID</span>(self, id):
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> self<span style=color:#f92672>.</span>map[id]
