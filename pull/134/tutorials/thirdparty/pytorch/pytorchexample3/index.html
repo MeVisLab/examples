@@ -106,13 +106,13 @@ Window {
 </span></span><span style=display:flex><span>    gray <span style=color:#f92672>=</span> cv2<span style=color:#f92672>.</span>cvtColor(img, cv2<span style=color:#f92672>.</span>COLOR_BGR2GRAY)
 </span></span><span style=display:flex><span>    faces <span style=color:#f92672>=</span> face_cascade<span style=color:#f92672>.</span>detectMultiScale(gray, <span style=color:#ae81ff>1.1</span>, <span style=color:#ae81ff>4</span>)
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (x, y, w, h) <span style=color:#f92672>in</span> faces:
-</span></span><span style=display:flex><span>        cv2<span style=color:#f92672>.</span>rectangle(img, (x, y), (x<span style=color:#f92672>+</span>w, y<span style=color:#f92672>+</span>h), (<span style=color:#ae81ff>255</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>), <span style=color:#ae81ff>2</span>)
+</span></span><span style=display:flex><span>        cv2<span style=color:#f92672>.</span>rectangle(img, (x, y), (x <span style=color:#f92672>+</span> w, y <span style=color:#f92672>+</span> h), (<span style=color:#ae81ff>255</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>), <span style=color:#ae81ff>2</span>)
 </span></span><span style=display:flex><span>    <span style=color:#75715e># Display the output</span>
 </span></span><span style=display:flex><span>    cv2<span style=color:#f92672>.</span>imshow(<span style=color:#e6db74>&#39;img&#39;</span>, img)
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Update image in interface</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>updateImage</span>(image):
-</span></span><span style=display:flex><span>    _interfaces[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>.</span>setImage(OpenCVUtils<span style=color:#f92672>.</span>convertImageToML(image), minMaxValues <span style=color:#f92672>=</span> [<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>255</span>])
+</span></span><span style=display:flex><span>    _interfaces[<span style=color:#ae81ff>0</span>]<span style=color:#f92672>.</span>setImage(OpenCVUtils<span style=color:#f92672>.</span>convertImageToML(image), minMaxValues <span style=color:#f92672>=</span> [<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>255</span>])
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Start capturing webcam</span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>startCapture</span>():
@@ -167,7 +167,7 @@ Window {
 </span></span><span style=display:flex><span>    <span style=color:#75715e># Step 1: Get image from webcam capture</span>
 </span></span><span style=display:flex><span>    stopCapture()
 </span></span><span style=display:flex><span>    inImage <span style=color:#f92672>=</span> ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;PythonImage.output0&#34;</span>)<span style=color:#f92672>.</span>image()
-</span></span><span style=display:flex><span>    img <span style=color:#f92672>=</span> inImage<span style=color:#f92672>.</span>getTile((<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>), inImage<span style=color:#f92672>.</span>imageExtent())[<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,:,<span style=color:#ae81ff>0</span>,:,:]
+</span></span><span style=display:flex><span>    img <span style=color:#f92672>=</span> inImage<span style=color:#f92672>.</span>getTile((<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>), inImage<span style=color:#f92672>.</span>imageExtent())[<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, :, <span style=color:#ae81ff>0</span>, :, :]
 </span></span><span style=display:flex><span>      
 </span></span><span style=display:flex><span>    <span style=color:#75715e># Step 2: Convert image into torch tensor</span>
 </span></span><span style=display:flex><span>    img <span style=color:#f92672>=</span> torch<span style=color:#f92672>.</span>Tensor(img)<span style=color:#f92672>.</span>type(torch<span style=color:#f92672>.</span>uint8)

@@ -91,7 +91,7 @@ Create Python Function 'onStart'
 </span></span><span style=display:flex><span>    <span style=color:#75715e># Step 1: Get input image</span>
 </span></span><span style=display:flex><span>    image <span style=color:#f92672>=</span> ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;inputImage&#34;</span>)<span style=color:#f92672>.</span>image()
 </span></span><span style=display:flex><span>    imageArray <span style=color:#f92672>=</span> image<span style=color:#f92672>.</span>getTile((<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>), image<span style=color:#f92672>.</span>imageExtent())
-</span></span><span style=display:flex><span>    inputImage <span style=color:#f92672>=</span> imageArray[<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,<span style=color:#ae81ff>0</span>,:,:,:]<span style=color:#f92672>.</span>astype(<span style=color:#e6db74>&#34;float&#34;</span>)
+</span></span><span style=display:flex><span>    inputImage <span style=color:#f92672>=</span> imageArray[<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>, :, :, :]<span style=color:#f92672>.</span>astype(<span style=color:#e6db74>&#34;float&#34;</span>)
 </span></span><span style=display:flex><span>    
 </span></span><span style=display:flex><span>    <span style=color:#75715e># Step 2: Normalize input image</span>
 </span></span><span style=display:flex><span>    values <span style=color:#f92672>=</span> inputImage[inputImage <span style=color:#f92672>&gt;</span> inputImage<span style=color:#f92672>.</span>mean()]
