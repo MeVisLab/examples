@@ -210,7 +210,7 @@ Window "MainPanel" {
     minimumHeight = 300
     initCommand   = resetApplication
     Category {
-        // Vertical Layout and 4 Boxes with Horizontal Layout
+        // Vertical Layout and four Boxes with Horizontal Layout
         Vertical {
             Box Source {
                 layout = Horizontal

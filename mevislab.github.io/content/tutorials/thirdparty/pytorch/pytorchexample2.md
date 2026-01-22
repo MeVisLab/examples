@@ -121,7 +121,7 @@ def onStart():
     # Step 1: Get input image
     image = ctx.field("inputImage").image()
     imageArray = image.getTile((0, 0, 0, 0, 0, 0), image.imageExtent())
-    inputImage = imageArray[0,0,0,:,:,:].astype("float")
+    inputImage = imageArray[0, 0, 0, :, :, :].astype("float")
     
     # Step 2: Normalize input image
     values = inputImage[inputImage > inputImage.mean()]

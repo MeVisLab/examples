@@ -118,13 +118,13 @@ def grabImage():
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray, 1.1, 4)
     for (x, y, w, h) in faces:
-        cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
+        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
     # Display the output
     cv2.imshow('img', img)
 
 # Update image in interface
 def updateImage(image):
-    _interfaces[0].setImage(OpenCVUtils.convertImageToML(image), minMaxValues = [0,255])
+    _interfaces[0].setImage(OpenCVUtils.convertImageToML(image), minMaxValues = [0, 255])
 
 # Start capturing webcam
 def startCapture():
@@ -249,7 +249,7 @@ def segmentSnapshot():
     # Step 1: Get image from webcam capture
     stopCapture()
     inImage = ctx.field("PythonImage.output0").image()
-    img = inImage.getTile((0,0,0,0,0,0), inImage.imageExtent())[0,0,:,0,:,:]
+    img = inImage.getTile((0, 0, 0, 0, 0, 0), inImage.imageExtent())[0, 0, :, 0, :, :]
       
     # Step 2: Convert image into torch tensor
     img = torch.Tensor(img).type(torch.uint8)
