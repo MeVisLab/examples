@@ -52,7 +52,7 @@ The behavior of your network does not change. You can still draw the same CSOs a
 
 Open the context menu of your `csoList` module {{< mousebutton "right" >}} and select {{<menuitem "Related Files" "csoList.script" >}}.
 
-The MeVisLab text editor MATE opens, showing your *.script* file. You can see the output of your module as *CSOListContainer.outCSOList*. We want to define a threshold for the color of our CSOs. For this, add another field to the *Parameters* section of your script file named *areaThreshold*. Define the *type* as *Float* and *value* as *2000.0*.
+The MeVisLab text editor MATE opens, showing your *.script* file. You can see the output of your module as *CSOListContainer.outCSOList*. We want to define a threshold for the color of our CSOs. For this, add another field to the *Parameters* section of your script file named <field>areaThreshold</field>. Define the <field>type</field> as <field>Float</field> and <field>value</field> as <field>2000.0</field>.
 
 In order to call Python functions, we also need a Python file. Add a *Commands* section and define the *source* of the Python file as *$(LOCAL)/csoList.py*. Also add an *initCommand* as *initCSOList*. The initCommand defines the Python function that is called whenever the module is added to the workspace or reloaded.
 
@@ -77,9 +77,9 @@ Commands {
 ```
 {{</highlight>}}
 
-Right-click {{< mousebutton "right" >}} on the *initCSOList* command and select {{<menuitem "Create Python Function initCSOList" >}}. The Python file and the function are generated automatically.
+Right-click {{< mousebutton "right" >}} on the *initCSOList* command and select {{< menuitem "Create Python Function initCSOList" >}}. The Python file and the function are generated automatically.
 
-Back in MeVisLab, the new field *areaThreshold* can be seen in Module Inspector when selecting your module. The next step is to write the Python function *initCSOList*.
+Back in MeVisLab, the new field <field>areaThreshold</field> can be seen in Module Inspector when selecting your module. The next step is to write the Python function *initCSOList*.
 
 ### Write Python Script
 Whenever the local macro module is added to the workspace or reloaded, new CSOLists shall be created and we need a possibility to update the lists whenever a new CSO has been created or existing contours changed.
@@ -107,7 +107,7 @@ def _getCSOList():
 
 The function gets the current CSOList from the output field of the `CSOListContainer`. Initially, it should be empty. If not, we want to start with an empty list; therefore, we remove all existing CSOs.
 
-We also create two new CSO lists: one list for small contours, one list for larger contours, depending on the defined *areaThreshold* from the modules parameter.
+We also create two new CSO lists: one list for small contours, one list for larger contours, depending on the defined <field>areaThreshold</field> from the modules fields.
 
 Additionally, we also want to define different colors for the CSOs in the lists. Small contours shall be drawn in green, large contours shall be drawn in red.
 
@@ -138,7 +138,7 @@ The function gets all currently existing CSOs from the `CSOListContainer`. Then,
 
 The *csoFinished* function again needs all existing contours. We walk through each CSO in the list and remove it from all groups. As we do not know which CSO has been changed from the notification, we evaluate the area of each CSO and add them to the correct list again.
 
-The function *getAreaThreshold* returns the current value of our parameter field *areaThreshold*.
+The function *getAreaThreshold* returns the current value of our parameter field <field>areaThreshold</field>.
 
 Now, we can call our functions in the *initCSOList* function and test our module.
 

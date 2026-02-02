@@ -85,28 +85,18 @@ Window {
 ![Panel with Tabs and Viewers](images/tutorials/basicmechanics/PanelWithTabsAndViewers.png "Panel with Tabs and Viewers")
 
 ### Edit Viewer Settings in the Panel
-You may want to change the design setting of the right viewer. This is
-still possible via the internal network of the macro module. Open the
-internal network either via the context menu or using the middle mouse
-button {{< mousebutton "middle" >}} and click on the module. After that, open the automatic panel of
-the module `SoExaminerViewer` via context menu {{< menuitem "Show Windows" "Automatic Panel" >}} and change the field *decoration* to *False*. Keep in mind, as we did not create CSOs by now, the right viewer stays black.
+You may want to change the design setting of the right viewer. This is still possible via the internal network of the macro module. Open the internal network either via the context menu or using the middle mouse button {{< mousebutton "middle" >}} and click on the module. After that, open the automatic panel of the module `SoExaminerViewer` via context menu {{< menuitem "Show Windows" "Automatic Panel" >}} and change the field <field>decoration</field> to <field>False</field>. Keep in mind, as we did not create CSOs by now, the right viewer stays black.
 
 ![Change viewer settings](images/tutorials/basicmechanics/ChangeViewerSettings.png "Change viewer settings")
 
 ![Changed viewer settings](images/tutorials/basicmechanics/ChangedViewerSettings.png "Changed viewer settings")
 
 ### Selection of Images
-Next, we like to add the option to browse through the folders and select
-the image, we like to create CSOs from. This functionality is already given in the internal network in the module `LocalImage`. We can copy this functionality from `LocalImage` and add this option to the panel above both viewers. But, how should we know, which field name we
-reference to? To find this out, open the
-internal network of your macro module. Now you are able to open the panel of
-the module `LocalImage`. Right-click {{< mousebutton "right" >}} the desired field: In this case, right-click the label
-*Name:*. Select *Copy Name*, to copy the internal name of this field.
+Next, we like to add the option to browse through the folders and select the image, we like to create CSOs from. This functionality is already given in the internal network in the module `LocalImage`. We can copy this functionality from `LocalImage` and add this option to the panel above both viewers. But, how should we know, which field name we reference to? To find this out, open the internal network of your macro module. Now you are able to open the panel of the module `LocalImage`. Right-click {{< mousebutton "right" >}} the desired field: In this case, right-click the label <field>Name</field>. Select {{< menuitem "Copy Name" >}}, to copy the internal name of this field.
 
 ![Copy the field name](images/tutorials/basicmechanics/GUI_Exp_09.png "Copy the field name")
 
-Now, you can add this field as a new field to your window by pasting the
-name. All field settings are taken over from the internal field from the module `LocalImage`.
+Now, you can add this field as a new field to your window by pasting the name. All field settings are taken over from the internal field from the module `LocalImage`.
 
 {{< highlight filename="IsoCSOs.script" >}}
 ```Stan
@@ -142,8 +132,7 @@ Window {
 ![Add name field](images/tutorials/basicmechanics/AddNameField.png "Add name field")
 
 ### Add Buttons to Your Panel
-As a next step, we like to add a *Browse\...* button, like in the module
-`LocalImage`, and also a button to create the CSOs.
+As a next step, we like to add a *Browse\...* button, like in the module `LocalImage`, and also a button to create the CSOs.
 
 To create the *Browse\...* button:
 
@@ -153,11 +142,10 @@ To create the *Browse\...* button:
 
 To create the Iso Generator Button:
 
-We like to copy the field of the *Update* button from the internal module
-`IsoCSOGenerator`, but not its layout so:
+We like to copy the field of the <field>Update</field> button from the internal module `IsoCSOGenerator`, but not its layout so:
 
-1.  Create a new Field in the interface, called *IsoGenerator*, which contains the internal field *Update* from the module `IsoCSOGenerator`.
-2.  Create a new Button in your Window that uses the field *IsoGenerator*.
+1.  Create a new Field in the interface, called <field>IsoGenerator</field>, which contains the internal field <field>Update</field> from the module `IsoCSOGenerator`.
+2.  Create a new Button in your Window that uses the field <field>IsoGenerator</field>.
 
 After these steps, you can use the Iso Generator button to create CSOs.
 
@@ -230,16 +218,13 @@ def fileDialog():
 ![Automatically generate CSOs based on Iso value](images/tutorials/basicmechanics/GUI_Exp_14.png "Automatically generate CSOs based on Iso value")
 
 ### Colorizing CSOs
-We like to colorize the CSO we hover over with our
-mouse in the 2D viewer. Additionally, when clicking a CSO with the left mouse button {{< mousebutton "left" >}}, this CSO shall be colorized in the 3D viewer. This functionality can be implemented via Python
-scripting (even though MeVisLab has a build-in function to do that). We
-can do this in the following way:
+We like to colorize the CSO we hover over with our mouse in the 2D viewer. Additionally, when clicking a CSO with the left mouse button {{< mousebutton "left" >}}, this CSO shall be colorized in the 3D viewer. This functionality can be implemented via Python scripting (even though MeVisLab has a build-in function to do that). We can do this in the following way:
 
 1. Enable the View *Scripting Assistant*, which translates actions into Python code. 
     
     ![Scripting Assistant](images/tutorials/basicmechanics/GUI_Exp_15.png "Scripting Assistant")
 
-2. Enable a functionality that allows us to notice the ID of the CSO we are currently hovering over with our mouse. For this, open the internal network of our macro module. We will use the module `SoView2DCSOExtensibleEditor`. Open its panel and select the tab *Advanced*. You can check a box to enable *Update CSO id under mouse*. If you now hover over a CSO, you can see its ID in the panel. We can save the internal network to save this functionality, but we can also solve our problem via scripting. The Scripting Assistant translated our action into code that we can use.
+2. Enable a functionality that allows us to notice the ID of the CSO we are currently hovering over with our mouse. For this, open the internal network of our macro module. We will use the module `SoView2DCSOExtensibleEditor`. Open its panel and select the tab *Advanced*. You can check a box to enable <field>Update CSO id under mouse</field>. If you now hover over a CSO, you can see its ID in the panel. We can save the internal network to save this functionality, but we can also solve our problem via scripting. The Scripting Assistant translated our action into code that we can use.
     
     ![Enabling CSO id identification](images/tutorials/basicmechanics/GUI_Exp_16.png "Enabling CSO id identification")
 
@@ -319,8 +304,7 @@ def colorizeCSO():
 ```
 {{</highlight>}}
 
-Reload your module ({{< keyboard "F5" >}}) and open the panel. After generating CSOs, the CSO under your mouse is marked. Clicking this CSO {{< mousebutton "left" >}} enables the marking in the 3D viewer. If you like, you can add some settings to your *Settings*
-page. For example:
+Reload your module ({{< keyboard "F5" >}}) and open the panel. After generating CSOs, the CSO under your mouse is marked. Clicking this CSO {{< mousebutton "left" >}} enables the marking in the 3D viewer. If you like, you can add some settings to your *Settings* page. For example:
 
 {{< highlight filename="IsoCSOs.script" >}}
 ```Stan

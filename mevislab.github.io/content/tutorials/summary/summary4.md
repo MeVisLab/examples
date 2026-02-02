@@ -92,11 +92,11 @@ def loadImage(full_path):
 ```
 {{</highlight>}}
 
-We define the path to a file to be loaded. The function *loadImage* sets the *openFile* field of the `TutorialSummary` module.
+We define the path to a file to be loaded. The function *loadImage* sets the <field>openFile</field> field of the `TutorialSummary` module.
 
 The arrays for the marker location and color will be used later.
 
-Next, we need a function to check if the loaded image available at the first output of our macro module (*out2D*) is valid.
+Next, we need a function to check if the loaded image available at the first output of our macro module (<field>out2D</field>) is valid.
 
 {{< highlight filename="<TEST_CASE_NAME>.py" >}}
 ```Python
@@ -131,7 +131,7 @@ def setMarkerPosition(vector):
 ```
 {{</highlight>}}
 
-The *setMarkerPosition* function gets a three-dimensional vector and sets the *markerPosition* field of our module. Then, the *applyMarker* trigger is touched. As the region growing algorithm might need some time to segment, we need to wait until the *outSegmentationMask* output field is valid, meaning that there is a valid segmentation mask at the segmentation mask output of our macro module.
+The *setMarkerPosition* function gets a three-dimensional vector and sets the <field>markerPosition</field> field of our module. Then, the *applyMarker* trigger is touched. As the region growing algorithm might need some time to segment, we need to wait until the <field>outSegmentationMask</field> output field is valid, meaning that there is a valid segmentation mask at the segmentation mask output of our macro module.
 
 Finally, we need to reset the application to its initial state, so that each test case has the initial start conditions of the application. A test case should never depend on another test case so that they all can be executed exclusively.
 
@@ -148,7 +148,7 @@ def reset():
 ```
 {{</highlight>}}
 
-For a reset, we just touch the *resetApplication* field of our macro module `TutorialSummary`.
+For a reset, we just touch the <field>resetApplication</field> field of our macro module `TutorialSummary`.
 
 #### Requirement 1: The application shall be able to load DICOM data
 The first requirement we want to test is the possibility to load DICOM data. After setting the file to be loaded, the output provides a valid image. Resetting the application shall unload the image.
@@ -291,7 +291,7 @@ Finally, an image comparison is done for the 3D rendering using the old and the 
 The call *MLAB.processInventorQueue()* is sometimes necessary if an Open Inventor scene changed via Python scripting, because the viewers might not update immediately after changing the field. MeVisLab is now forced to process the queue in Open Inventor and to update the renderings.
 
 #### Requirement 8: The total volume of the segmented volume shall be calculated and shown (in ml)
-For the correctness of the volume calculation, we added the `CalculateVolume` module to our test network. The volume given by our macro is compared to the volume of the segmentation from output *outSegmentationMask* calculated by the `CalculateVolume` module.
+For the correctness of the volume calculation, we added the `CalculateVolume` module to our test network. The volume given by our macro is compared to the volume of the segmentation from output <field>outSegmentationMask</field> calculated by the `CalculateVolume` module.
 
 {{< highlight filename="<TEST_CASE_NAME>.py" >}}
 ```Python

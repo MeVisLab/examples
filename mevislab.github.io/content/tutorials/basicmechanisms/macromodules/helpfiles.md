@@ -37,13 +37,7 @@ We will start by creating a help file using the built-in text editor {{< docuLin
 
 ![Edit module help file via MATE](images/tutorials/basicmechanics/GUI_07.png "Edit module help file via MATE")
 
-When creating the help file of a module, all important information of the
-module down to the field specifications are extracted and created automatically. Thus, the
-basic module information is always available in the module
-help. Additional documentation should be added by the module's author. On the left
-side, you can find the outline of the help file. Each section can be
-edited. In this example, we added the purpose of the module
-to the help file.
+When creating the help file of a module, all important information of the module down to the field specifications are extracted and created automatically. Thus, the basic module information is always available in the module help. Additional documentation should be added by the module's author. On the left side, you can find the outline of the help file. Each section can be edited. In this example, we added the purpose of the module to the help file.
 
 ![Edit module help file via MATE](images/tutorials/basicmechanics/GUI_08.png "Edit module help file via MATE")
 
@@ -69,7 +63,7 @@ Depending on the way the macro module was created, more or less features are aut
 {{</alert>}}
 
 ### Creation of an Example Network
-To add an example network to your module, you need to add a reference to the respective *.mlab* file to the module definition file (*.def*). Open the file *Filter.def*. You can find the line *exampleNetwork     = "$(LOCAL)/networks/FilterExample.mlab"*, which defines the reference to the *.mlab* file containing the example network. By default, the name of the example network is *ModulenameExample.mlab*. An *.mlab* file containing only the module *Filter* is created inside the folder *networks*.
+To add an example network to your module, you need to add a reference to the respective *.mlab* file to the module definition file (*.def*). Open the file *Filter.def*. You can find the line *exampleNetwork     = "$(LOCAL)/networks/FilterExample.mlab"*, which defines the reference to the *.mlab* file containing the example network. By default, the name of the example network is *ModulenameExample.mlab*. An *.mlab* file containing only the module `Filter` is created inside the folder *networks*.
 
 It is possible that the reference to the example network or the file *FilterExample.mlab* is missing. One reason could be that its creation was not selected when creating the macro module. In this case, add the reference and the file manually.
 

@@ -98,7 +98,7 @@ Parameter Fields allow users to control the behavior of the internal network. Th
 You have two options when adding fields to your macro module:
 
 * **Define your own fields:** You can define your own fields by specifying their name, type, and default value in the *.script* file. This allows you to provide custom parameters for your macro module, tailored to your specific needs. These parameters can be use as input from the user or output from the modules processing.
-* **Reuse fields from the internal network:**  Instead of defining your own field, you can expose an existing field from one of the modules of your internal network. To do this, you reference the *internalName* of the internal field you want to reuse. This makes the internal field accessible at the macro module level, allowing users to interact with it directly without duplicating parameters. Changes of the field value are automatically applied in your internal network.
+* **Reuse fields from the internal network:**  Instead of defining your own field, you can expose an existing field from one of the modules of your internal network. To do this, you reference the <field>internalName</field> of the internal field you want to reuse. This makes the internal field accessible at the macro module level, allowing users to interact with it directly without duplicating parameters. Changes of the field value are automatically applied in your internal network.
 
 ![Inputs, Outputs, and Fields](images/tutorials/basicmechanics/fields.png "Inputs, Outputs, and Fields")
 

@@ -31,7 +31,7 @@ Add a `LocalImage` and a `SynchroView2D` module to your network and connect the 
 
 ![Example Network](images/tutorials/image_processing/network_example2a.png "Example Network")
 
-Open the Automatic Panel of the `SynchroView2D` module via context menu {{< mousebutton "right" >}} and selecting {{< menuitem "Show Window" "Automatic Panel" >}}. Set the field *synchLUTs* to *TRUE*.
+Open the Automatic Panel of the `SynchroView2D` module via context menu {{< mousebutton "right" >}} and selecting {{< menuitem "Show Window" "Automatic Panel" >}}. Set the field <field>synchLUTs</field> to <field>TRUE</field>.
 
 ![Synchronize LUTs in SynchroView2D](images/tutorials/image_processing/synchLUTs.png "Synchronize LUTs in SynchroView2D")
 

@@ -64,7 +64,7 @@ Add the modules `WEMInitialize`, `SoWEMRenderer`, and `SoBackground` to your wor
 
 ![WEMLoad and SoWEMRenderer](images/tutorials/dataobjects/surfaces/WEMExample3_5.png "WEMLoad and SoWEMRenderer")
 
-You can see the WEM and interact with it in the viewer (zoom, move, and rotate). In the case the object does not rotate around its center, trigger the field *viewAll* of the `SoExaminerViewer`.
+You can see the WEM and interact with it in the viewer (zoom, move, and rotate). In the case the object does not rotate around its center, trigger the field <field>viewAll</field> of the `SoExaminerViewer`.
 
 Add a `WEMBulgeEditor` and a `SoWEMBulgeEditor` to your network and connect them as seen below. 
 

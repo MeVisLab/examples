@@ -78,7 +78,7 @@ def testPatient(path, windowCenter):
 ```
 {{</highlight>}}
 
-1. Initially, the path and filename for the module `LocalImage` are set. The data is loaded automatically, because the module has the *AutoLoad* flag enabled by default.
+1. Initially, the path and filename for the module `LocalImage` are set. The data is loaded automatically, because the module has the <field>AutoLoad</field> flag enabled by default.
 ![LocalImage](images/tutorials/testing/LocalImage.png "LocalImage")
 2. Then, the DICOM tree of the loaded file is used to get the *WindowCenter* value (*importValue*).
 3. The previously defined value of the `DicomTagViewer` is set as *dicomValue*.

@@ -63,7 +63,7 @@ Now, right-click on your *MyViewerApplication* and select {{< menuitem "Related 
 
 {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens showing your script file. You already learned how to create simple UI elements in [Example 2.4](tutorials/basicmechanisms/macromodules/guidesign). Now, we will create a little more complex UI including your `View2D` and `View3D`.
 
-First we need a new *Field* in your *Parameters* section. Name the field *filepath* and set *internalName* to *ImageLoad.filename*. 
+First we need a new *Field* in your *Parameters* section. Name the field <field>filepath</field> and set <field>internalName</field> to <field>ImageLoad.filename</field>. 
 
 {{< highlight filename="MyViewerApplication.script" >}}
 ``` Stan
@@ -79,7 +79,7 @@ Interface {
 ``` 
 {{</highlight>}}
 
-We now reuse the *filepath* field from the `ImageLoad` module for our interface. Add a *Window* and a *Vertical* to the bottom of your *.script* file. Add the just created parameter field *filepath* inside your *Vertical* as seen below.
+We now reuse the <field>filepath</field> field from the `ImageLoad` module for our interface. Add a *Window* and a *Vertical* to the bottom of your *.script* file. Add the just created parameter field <field>filepath</field> inside your *Vertical* as seen below.
 
 {{< highlight filename="MyViewerApplication.script" >}}
 ``` Stan
@@ -98,14 +98,16 @@ Commands {
 }
 
 Window {
-  Vertical {
-    Field filepath {}
-  }
+    Category {
+        Vertical {
+            Field filepath {}
+        }
+    }
 }
 ``` 
 {{</highlight>}}
 
-If you now double-click {{< mousebutton "left" >}} on your module, you can see your just created filepath field.
+If you now double-click {{< mousebutton "left" >}} on your module, you can see your just created <field>filepath</field> field.
 
 ![Filepath field in UI](images/tutorials/basicmechanics/SimpleApp_08.png "Filepath field in UI")
 
@@ -114,35 +116,37 @@ Next, we will add your 2D and 3D viewers and a *Button* to your *Window*. Change
 {{< highlight filename="MyViewerApplication.script" >}}
 ``` Stan
 Window {
-  Vertical {
-    Horizontal {
-      Field filepath {}
-      Button {
-        title = "Reset"
-        
-      }
+    Category {
+        Vertical {
+            Horizontal {
+                Field filepath {}
+                Button {
+                  title = "Reset"
+                  
+                }
+            }
+            Horizontal {
+                Viewer View2D.self {
+                    type    = SoRenderArea
+                    pw      = 400 ph = 400
+                    expandX = yes
+                    expandY = yes
+                }
+                Viewer View3D.self {
+                    pw      = 400 ph = 400
+                    expandX = yes
+                    expandY = yes
+                }
+            }
+        }
     }
-    Horizontal {
-      Viewer View2D.self {
-        type    = SoRenderArea
-        pw      = 400 ph = 400
-        expandX = yes
-        expandY = yes
-      }
-      Viewer View3D.self {
-        pw      = 400 ph = 400
-        expandX = yes
-        expandY = yes
-      }
-    }
-  }
 }
 ```
 {{</highlight>}}
 
 We have a vertical layout having two items placed horizontally next to each other. The new *Button* gets the title *Reset* but does nothing yet, because we did not add a Python function to a command.
 
-Additionally, we added the `View2D` and the `View3D` to our *Window* and defined the *height*, *width*, and the *expandX/Y* property to *yes*. This leads our viewers to resize together with our *Window*.
+Additionally, we added the `View2D` and the `View3D` to our *Window* and defined the <field>height</field>, <field>width</field>, and the <field>expandX/Y</field> property to <field>yes</field>. This leads our viewers to resize together with our *Window*.
 
 {{<alert class="info" caption="Extra Infos">}}
 Additional information about the `View2D` and `View3D` options can be found in the MeVisLab {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Viewer" "MDL Reference">}}
@@ -196,7 +200,7 @@ Commands {
 ```
 {{</highlight>}}
 
-In the above example, we react on changes of the field *startSlice* of the module `View2D`. Whenever the field value (currently displayed slice) changes, the Python function *printCurrentSliceNumber* is executed.
+In the above example, we react on changes of the field <field>startSlice</field> of the module `View2D`. Whenever the field value (currently displayed slice) changes, the Python function *printCurrentSliceNumber* is executed.
 
 In your Python file `MyViewerApplication.py`, you can now add the following:
 
@@ -211,7 +215,7 @@ Scrolling through slices in the `View2D` module now logs a message containing th
 
 ## Summary
 * You can add any viewers to your application UI by reusing them in MDL.
-* Parameter fields using the *internalName* of an existing field in your network allows reusing this UI element in your own UI. Changes in your UI are applied to the field in the module.
+* Parameter fields using the <field>internalName</field> of an existing field in your network allows reusing this UI element in your own UI. Changes in your UI are applied to the field in the module.
 * Field Listeners allow reacting on changes of a field value in Python.
 
 {{< networkfile "examples/basic_mechanisms/viewer_application/viewerexample.mlab" >}}

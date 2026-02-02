@@ -27,7 +27,7 @@ Add a `SoBackground`, a `SoMaterial` and a `SoOrientationModel` module to your w
 
 ![SoRenderArea without camera and lights](images/tutorials/openinventor/Camera_1.png "SoRenderArea without camera and lights")
 
-You cannot interact with your scene and the rendered content is very dark. Open the `SoOrientationModel` and change *Model* to *Skeleton* to see that a little bit better. You can also change the material by using the panel of the `SoMaterial` module.
+You cannot interact with your scene and the rendered content is very dark. Open the `SoOrientationModel` and change <field>Model</field> to <field>Skeleton</field> to see that a little bit better. You can also change the material by using the panel of the `SoMaterial` module.
 
 Add a `SoCameraInteraction` module and connect it between the `SoGroup` and the `SoRenderArea`.
 
@@ -41,7 +41,7 @@ The `SoCameraInteraction` can also be extended by a `SoPerspectiveCamera` or a `
 
 ![SoPerspectiveCamera and SoOrthographicCamera](images/tutorials/openinventor/Camera_3.png "SoPerspectiveCamera and SoOrthographicCamera")
 
-You can now switch between both cameras, but you cannot interact with them in the viewer. Select the `SoCameraInteraction` and toggle *detectCamera*. Now the default camera of the `SoCameraInteraction` is replaced by the camera selected in the `SoSwitch`. 
+You can now switch between both cameras, but you cannot interact with them in the viewer. Select the `SoCameraInteraction` and toggle <field>detectCamera</field>. Now the default camera of the `SoCameraInteraction` is replaced by the camera selected in the `SoSwitch`. 
 
 Whenever you change the camera in the switch, you need to detect the new camera in the `SoCameraInteraction`.
 
@@ -49,13 +49,13 @@ Whenever you change the camera in the switch, you need to detect the new camera 
 
 A `SoPerspectiveCamera` camera defines a perspective projection from a viewpoint.
 
-The viewing volume for a perspective camera is a truncated pyramid. By default, the camera is located at (0, 0, 1) and looks along the negative z-axis; the *Position* and *Orientation* fields can be used to change these values. The *Height Angle* field defines the total vertical angle of the viewing volume; this and the *Aspect Ratio* field determine the horizontal angle.
+The viewing volume for a perspective camera is a truncated pyramid. By default, the camera is located at (0, 0, 1) and looks along the negative z-axis; the <field>Position</field> and <field>Orientation</field> fields can be used to change these values. The <field>Height Angle</field> field defines the total vertical angle of the viewing volume; this and the <field>Aspect Ratio</field> field determine the horizontal angle.
 
 A `SoOrthographicCamera` camera defines a parallel projection from a viewpoint.
 
 This camera does not diminish objects with distance as an SoPerspectiveCamera does. The viewing volume for an orthographic camera is a cuboid (a box).
 
-By default, the camera is located at (0, 0, 1) and looks along the negative z-axis; the *Position* and *Orientation* fields can be used to change these values. The *Height* field defines the total height of the viewing volume; this and the *Aspect Ratio* field determine its width.
+By default, the camera is located at (0, 0, 1) and looks along the negative z-axis; the <field>Position</field> and <field>Orientation</field> fields can be used to change these values. The <field>Height</field> field defines the total height of the viewing volume; this and the <field>Aspect Ratio</field> field determine its width.
 
 Add a `SoCameraWidget` and connect it to your `SoGroup`. 
 
@@ -74,7 +74,7 @@ Add a `SoExaminerViewer` to your workspace and connect it to the `SoBackground`,
 
 The difference to the `SoRenderArea` can be seen immediately. You can interact with your scene and a light is available initially.
 
-The module also allows you to switch between perspective and orthographic camera by changing the field *cameraType*.
+The module also allows you to switch between perspective and orthographic camera by changing the field <field>cameraType</field>.
 
 {{< imagegallery 2 "images/tutorials/openinventor" "SoExaminerViewer_Perspective" "SoExaminerViewer_Orthographic" >}}
 

@@ -154,15 +154,15 @@ You should now have the complete functionality of the [Example 2: Face Detection
 ### Adapt the Network
 For *PyTorch*, we require some additional modules in our network. Open the internal network of your module and add another `PythonImage` module. Connect a `Resample3D` and an `ImagePropertyConvert` module.
 
-In `Resample3D` module, define the *Image Size* 693, 520, 1. Change *VoxelSize* for all dimensions to 1.
+In `Resample3D` module, define the <field>Image Size</field> as <field>693, 520, 1</field>. Change <field>VoxelSize</field> for all dimensions to <field>1</field>.
 
 ![Resample3D](images/tutorials/thirdparty/pytorch_example3_7.png "Resample3D")
 
-Open the Panel of the `ImagePropertyConvert` module and check *World Matrix*. 
+Open the Panel of the `ImagePropertyConvert` module and check <field>World Matrix</field>. 
 
 ![ImagePropertyConvert](images/tutorials/thirdparty/pytorch_example3_9.png "ImagePropertyConvert")
 
-Then, add a `SoView2DOverlayMPR` module and connect it to the `ImagePropertyConvert` and the `View2D`. Change *Blend Mode* to *Blend*, *Alpha* to something between 0 and 1, and define a color for the overlay.
+Then, add a `SoView2DOverlayMPR` module and connect it to the `ImagePropertyConvert` and the `View2D`. Change <field>Blend Mode</field> to <field>Blend</field>, <field>Alpha</field> to something between <field>0</field> and <field>1</field>, and define a color for the overlay.
 
 ![SoView2DOverlayMPR](images/tutorials/thirdparty/pytorch_example3_8.png "SoView2DOverlayMPR")
 

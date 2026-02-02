@@ -155,7 +155,7 @@ Add a `SoView2DOverlay` and a `View2D` module and connect them to your local mac
 
 The **Spleen CT Segmentation** network expects images having a defined voxel size of 1.5 x 1.5 x 2. We want to define these values via fields in the Module Inspector.
 
-Open the *.script* file and add the fields *start* and *voxelSize* to your local macro module `MonaiDemo`:
+Open the *.script* file and add the fields <field>start</field> and <field>voxelSize</field> to your local macro module `MonaiDemo`:
 
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
@@ -199,9 +199,9 @@ Interface {
 {{</highlight>}}
 
 Reload your macro module and enter the following values for your new fields:
-* sizeX = 160
-* sizeY = 160
-* sizeZ = 160
+* <field>sizeX</field> = 160
+* <field>sizeY</field> = 160
+* <field>sizeZ</field> = 160
 
 Next, we change the gray values of the image, because the algorithm has been trained on values between -57 and 164. Again, the values can be found in the *inference.json* file in your *configs* directory.
 
@@ -223,8 +223,8 @@ Interface {
 {{</highlight>}}
 
 As already done before, we can now defined the threshold values for our module via Module Inspector. Set the following:
-* thresholdMin = -57
-* thresholdMax = 164
+* <field>thresholdMin</field> = -57
+* <field>thresholdMax</field> = 164
 
 As defined in the *inference.json* file in your *configs* directory, the gray values in the image must be between 0 and 1.
 
@@ -246,8 +246,8 @@ Interface {
 {{</highlight>}}
 
 Set the following:
-* scaleMin = 0
-* scaleMax = 1
+* <field>scaleMin</field> = 0
+* <field>scaleMax</field> = 1
 
 The algorithm expects NumPy images. NumPy uses the order Z, Y, X, other than MeVisLab. We are using X, Y, Z. The image needs to be transformed.
 
@@ -297,7 +297,7 @@ Commands {
 ```
 {{</highlight>}}
 
-If the user touches the trigger *start*, a Python function *onStart* will be executed. Whenever the size of our image is changed, we call a function called *_sizeChanged* and if the input image changes, we want to reset the module to its default values.
+If the user touches the trigger <field>start</field>, a Python function *onStart* will be executed. Whenever the size of our image is changed, we call a function called *_sizeChanged* and if the input image changes, we want to reset the module to its default values.
 
 ### Python Scripting
 The next step is to write our Python code. 

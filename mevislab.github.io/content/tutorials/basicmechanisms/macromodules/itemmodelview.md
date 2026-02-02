@@ -97,7 +97,7 @@ Interface {
 ```
 {{</highlight>}}
 
-If you now open your panel, you should see the *Input* *inImage* and the just created *Fields*. The *Field* *id* is necessary to identify unique objects in your *ItemModel* later. In order to make this example easier to understand, we defined all types of the *Fields* as *String*. You can also use different types, if you like.
+If you now open your panel, you should see the *Input* <field>inImage</field> and the just created *Fields*. The *Field* <field>id</field> is necessary to identify unique objects in your *ItemModel* later. In order to make this example easier to understand, we defined all types of the *Fields* as *String*. You can also use different types, if you like.
 
 ![Module Input and Fields](images/tutorials/basicmechanics/ItemModel_5.png "Module Input and Fields")
 
@@ -128,7 +128,7 @@ Window {
 ```
 {{</highlight>}}
 
-Every *Field* that we defined in the *Parameters* section is now used as a column in our view. The *Field* *id* has been defined to be the *idAttribute*. If you now open your panel, MeVisLab will complain that you did not define the *Field* *myItemModel*. You have to add a *Field* with this name to your *Parameters* section or as an *Output Field*. We will add an *Output Field*, so that our model can also be used by other modules, if necessary. The type is *MLBase*.
+Every *Field* that we defined in the *Parameters* section is now used as a column in our view. The *Field* <field>id</field> has been defined to be the <field>idAttribute</field>. If you now open your panel, MeVisLab will complain that you did not define the *Field* <field>myItemModel</field>. You have to add a *Field* with this name to your *Parameters* section or as an *Output Field*. We will add an *Output Field*, so that our model can also be used by other modules, if necessary. The type is *MLBase*.
 
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan
@@ -145,7 +145,7 @@ Your module now also shows an output *MLBase* object and the columns you defined
 ![Module Output and Columns](images/tutorials/basicmechanics/ItemModel_6.png "Module Output and Columns")
 
 ### Fill Your Table with Data
-We want to get the necessary information from the defined input image *inImage*. We want the module to update the content whenever the input image changes. Therefore, we need a *Field Listener* calling a Python function whenever the input image changes. Add it to your *Commands* section.
+We want to get the necessary information from the defined input image <field>inImage</field>. We want the module to update the content whenever the input image changes. Therefore, we need a *Field Listener* calling a Python function whenever the input image changes. Add it to your *Commands* section.
 
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan
@@ -254,7 +254,7 @@ class MyItemModel:
 ```
 {{</highlight>}}
 
-You can see that the above Python code uses a field *selection* that contains the ID of the selected item in our table. We have to add this *Field* to our *.script* file, too.
+You can see that the above Python code uses a field <field>selection</field> that contains the ID of the selected item in our table. We have to add this *Field* to our *.script* file, too.
 
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan
@@ -364,7 +364,7 @@ If you now open the panel of your module, you can already see the results.
 The first line shows the information of the patient, the study and the series and each child item represents a single slice of the image.
 
 ## Interact With Your Model
-We can now add options to interact with the *ItemModelView*. Open the *.script* file of your module and go to the *Commands* section. We add a *FieldListener* to our *selection* field. Whenever the user selects a different item in our view, the Python function *itemClicked* in the *FieldListener* is executed.
+We can now add options to interact with the *ItemModelView*. Open the *.script* file of your module and go to the *Commands* section. We add a *FieldListener* to our <field>selection</field> field. Whenever the user selects a different item in our view, the Python function *itemClicked* in the *FieldListener* is executed.
 
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan
@@ -406,7 +406,7 @@ The *itemClicked* function uses *id* from the selected item to get the value of 
 
 ![Clicked Item](images/tutorials/basicmechanics/ItemModel_8.png "Clicked Item")
 
-The problem is that the *Field* *selection* also changes whenever a new item is added to the model. Your debug output is already flooded with SOP Instance UIDs without interaction.
+The problem is that the *Field* <field>selection</field> also changes whenever a new item is added to the model. Your debug output is already flooded with SOP Instance UIDs without interaction.
 
 ![Debug Output](images/tutorials/basicmechanics/ItemModel_9.png "Debug Output")
 
