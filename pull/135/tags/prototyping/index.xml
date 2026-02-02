@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Prototyping on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/135/tags/prototyping/</link><description>Recent content in Prototyping on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 24 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/135/tags/prototyping/index.xml" rel="self" type="application/rss+xml"/><item><title>Step 1: Prototyping - Develop Your Network</title><link>https://mevislab.github.io/examples/pull/135/tutorials/summary/summary1/</link><pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/135/tutorials/summary/summary1/</guid><description>&lt;h1 id="step-1-prototyping---develop-your-network"&gt;Step 1: Prototyping - Develop Your Network&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=-hbddg0bXcA" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/-hbddg0bXcA/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=-hbddg0bXcA" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this example, we will develop a network that fulfills the requirements mentioned on the &lt;a href="tutorials/summary#DevelopNetwork"&gt;overview page&lt;/a&gt;. The network will be developed by reusing existing modules and defining basic field values.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
+&lt;h3 id="2d-viewer"&gt;2D Viewer&lt;/h3&gt;
+&lt;p&gt;The 2D viewer shall visualize the loaded images. In addition to that, it shall be possible to click into the image to trigger a region growing algorithm to segment parts of the loaded image based on a position and a threshold.&lt;/p&gt;</description></item><item><title>Step 2: Prototyping - Create a Macro Module</title><link>https://mevislab.github.io/examples/pull/135/tutorials/summary/summary2/</link><pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/135/tutorials/summary/summary2/</guid><description>&lt;h1 id="step-2-prototyping---create-a-macro-module"&gt;Step 2: Prototyping - Create a Macro Module&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=gNlOTiEOJgU" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/gNlOTiEOJgU/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=gNlOTiEOJgU" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this example, we encapsulate the previously developed prototype network into a macro module for future application development and automated testing.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
+&lt;p&gt;Make sure to have your &lt;em&gt;.mlab&lt;/em&gt; file from the previous &lt;a href="tutorials/summary/summary1/"&gt;tutorial&lt;/a&gt; available.&lt;/p&gt;
+&lt;h3 id="package-creation"&gt;Package Creation&lt;/h3&gt;
+&lt;p&gt;Packages are described in detail in &lt;a href="tutorials/basicmechanisms/macromodules/package/"&gt;Example 2.1: Package creation&lt;/a&gt;. If you already have your own package, you can skip this part and continue creating a macro module.&lt;/p&gt;</description></item><item><title>Step 3: Prototyping - User Interface and Python Scripting</title><link>https://mevislab.github.io/examples/pull/135/tutorials/summary/summary3/</link><pubDate>Tue, 17 Jan 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/135/tutorials/summary/summary3/</guid><description>&lt;h1 id="step-3-prototyping---user-interface-and-python-scripting"&gt;Step 3: Prototyping - User Interface and Python Scripting&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=dOyncLUpclU" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/dOyncLUpclU/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=dOyncLUpclU" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this step, we will develop a user interface and add Python scripting to the macro module you created in &lt;a href="tutorials/summary/summary2"&gt;Step 2&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
+&lt;h3 id="develop-the-user-interface"&gt;Develop the User Interface&lt;/h3&gt;
+&lt;p&gt;A mockup of the user interface you are going to develop is available &lt;a href="tutorials/summary#UIDesign"&gt;here&lt;/a&gt;. The interface provides the possibility to load files and shows a 2D and a 3D viewer. In addition to that, some settings and information for our final application are available.&lt;/p&gt;</description></item><item><title>Step 4: Review - Automated Tests</title><link>https://mevislab.github.io/examples/pull/135/tutorials/summary/summary4/</link><pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/135/tutorials/summary/summary4/</guid><description>&lt;h1 id="step-4-review---automated-tests"&gt;Step 4: Review - Automated Tests&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=_wheDC8TBJQ" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/_wheDC8TBJQ/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=_wheDC8TBJQ" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In the previous chapters you developed a macro module with a user interface and Python scripting. In this step you will see how to implement an automated test to verify and validate the requirements defined in &lt;a href="tutorials/summary"&gt;Overview&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
+&lt;h3 id="create-a-test-network-using-your-macro-module"&gt;Create a Test Network Using Your Macro Module&lt;/h3&gt;
+&lt;p&gt;Create a new and empty network and save it as &lt;em&gt;.mlab&lt;/em&gt; file. Remember the location.&lt;/p&gt;</description></item><item><title>Step 5: Review - Installer creation</title><link>https://mevislab.github.io/examples/pull/135/tutorials/summary/summary5/</link><pubDate>Thu, 19 Jan 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/135/tutorials/summary/summary5/</guid><description>&lt;h1 id="step-5-review---installer-creation"&gt;Step 5: Review - Installer creation&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=64l3igSmeWY" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/64l3igSmeWY/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=64l3igSmeWY" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Your macro module has been tested manually and/or automatically? Then, you should create your first installable executable and deliver it to your customer(s) for final evaluation.&lt;/p&gt;
+
+&lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&gt;
+ &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&gt;
+ &lt;/symbol&gt;
+&lt;/svg&gt;
+
+&lt;div class="alert alert-primary alert-warning d-flex align-items-center" role="alert"&gt;
+ &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Licensing:"&gt;&lt;use xlink:href="#warning-fill"/&gt;&lt;/svg&gt;
+ &lt;div&gt;
+ &lt;b&gt;Licensing:&amp;nbsp;&lt;/b&gt;
+ &lt;p&gt;This step requires a valid &lt;strong&gt;MeVisLab ApplicationBuilder&lt;/strong&gt; license. It extends the &lt;strong&gt;MeVisLab SDK&lt;/strong&gt;, so that you can generate an installer of your developed macro module.&lt;/p&gt;</description></item><item><title>Step 6: Refine - Update Application</title><link>https://mevislab.github.io/examples/pull/135/tutorials/summary/summary6/</link><pubDate>Fri, 20 Jan 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/135/tutorials/summary/summary6/</guid><description>&lt;h1 id="step-6-refine---update-application"&gt;Step 6: Refine - Update Application&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=1v_UyGs8W1g" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/1v_UyGs8W1g/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=1v_UyGs8W1g" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In the previous step you developed an application that can be installed on your customers systems for usage. In this step we are going to integrate simple feedback into our executable and recreate the installer.&lt;/p&gt;
+&lt;p&gt;We want to show you how easy it is to update your application using MeVisLab.&lt;/p&gt;
+&lt;p&gt;Your customer requests an additional requirement to define the transparency of your 2D overlay in addition to defining the color.&lt;/p&gt;</description></item><item><title>Step 7: Refine - Rebuild Installer</title><link>https://mevislab.github.io/examples/pull/135/tutorials/summary/summary7/</link><pubDate>Sat, 21 Jan 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/135/tutorials/summary/summary7/</guid><description>&lt;h1 id="step-7-refine---rebuild-installer"&gt;Step 7: Refine - Rebuild Installer&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=E0GnWPXT8Og" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/E0GnWPXT8Og/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=E0GnWPXT8Og" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this step you are recreating your application installer after changing the UI in previous &lt;a href="tutorials/summary/summary6/"&gt;Step 6: Refine - Update Application&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
+&lt;h3 id="update-the-mlinstall-file"&gt;Update the &lt;em&gt;.mlinstall&lt;/em&gt; File&lt;/h3&gt;
+&lt;p&gt;You do not need to use the Project Wizard now, because you already have a valid &lt;em&gt;.mlinstall&lt;/em&gt; file. The location should be in your package under &lt;em&gt;.\Configuration\Installers\TutorialSummary&lt;/em&gt;. Open the file in any text editor and search for the &lt;em&gt;$VERSION 0.5&lt;/em&gt;. Change the version to something else, in our case, we now have our first major release 1.0.&lt;/p&gt;</description></item><item><title>Extra: Run Your Application in a Browser</title><link>https://mevislab.github.io/examples/pull/135/tutorials/summary/summary8/</link><pubDate>Fri, 24 Feb 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/135/tutorials/summary/summary8/</guid><description>&lt;h1 id="extra-run-your-application-in-a-browser"&gt;Extra: Run Your Application in a Browser&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=XgOyeu65f7Q" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/XgOyeu65f7Q/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=XgOyeu65f7Q" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This step explains how to run your developed application in a browser. The MeVisLab network remains the same, only some adaptations are necessary for running any macro module in a browser window.&lt;/p&gt;
+
+&lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&gt;
+ &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&gt;
+ &lt;/symbol&gt;
+&lt;/svg&gt;
+
+&lt;div class="alert alert-primary alert-warning d-flex align-items-center" role="alert"&gt;
+ &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Licensing:"&gt;&lt;use xlink:href="#warning-fill"/&gt;&lt;/svg&gt;
+ &lt;div&gt;
+ &lt;b&gt;Licensing:&amp;nbsp;&lt;/b&gt;
+ &lt;p&gt;This step requires a valid &lt;strong&gt;MeVisLab Webtoolkit&lt;/strong&gt; license. It extends the &lt;strong&gt;MeVisLab SDK&lt;/strong&gt;, so that you can develop web macro modules.&lt;/p&gt;</description></item></channel></rss>
