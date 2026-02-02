@@ -165,7 +165,7 @@ Window {
         }
     }
 }
-</code></pre></div></div><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">IsoCSOs.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#f92672>from</span> mevis <span style=color:#f92672>import</span> <span style=color:#f92672>*</span>
+</code></pre></div></div><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">IsoCSOs.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#f92672>from</span> mevis <span style=color:#f92672>import</span> <span style=color:#f92672>*</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>fileDialog</span>():
 </span></span><span style=display:flex><span>    exp <span style=color:#f92672>=</span> ctx<span style=color:#f92672>.</span>expandFilename(ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;LocalImage.name&#34;</span>)<span style=color:#f92672>.</span>stringValue())
@@ -187,7 +187,7 @@ can do this in the following way:</p><ol><li><p>Enable the View <em>Scripting As
         }
     }
 }
-</code></pre></div></div><p>In the Python file, we define the function <em>enableFunctionalities</em>. We see our action as Python code in the <em>Scripting Assistant</em>. Just copy the code into our Python function.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">IsoCSOs.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>enableFunctionalities</span>():
+</code></pre></div></div><p>In the Python file, we define the function <em>enableFunctionalities</em>. We see our action as Python code in the <em>Scripting Assistant</em>. Just copy the code into our Python function.</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">IsoCSOs.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#66d9ef>def</span> <span style=color:#a6e22e>enableFunctionalities</span>():
 </span></span><span style=display:flex><span>    ctx<span style=color:#f92672>.</span>field(<span style=color:#e6db74>&#34;SoView2DCSOExtensibleEditor.updateCSOIdUnderMouseCursor&#34;</span>)<span style=color:#f92672>.</span>value <span style=color:#f92672>=</span> <span style=color:#66d9ef>True</span>
 </span></span></code></pre></div></div></div><ol start=3><li>Implement a field listener. This field listener will detect when you hover over a CSO and the CSO ID changes. Triggered by a CSO ID change, a colorization function will be executed that will colorize the selected CSO.</li></ol><p>In the <em>.script</em> file:</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">IsoCSOs.script</p></div><div class=card-body><pre tabindex=0><code class=language-Stan data-lang=Stan>Commands {
     source = $(LOCAL)/IsoCSOs.py
@@ -195,7 +195,7 @@ can do this in the following way:</p><ol><li><p>Enable the View <em>Scripting As
         command = colorizeCSO
     }
 }
-</code></pre></div></div><p>In the Python file:</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">IsoCSOs.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#75715e># global variables</span>
+</code></pre></div></div><p>In the Python file:</p><div class=card style=margin-bottom:2rem><div class="card-header d-flex justify-content-between"><p class="card-title m-0">IsoCSOs.py</p></div><div class=card-body><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Python data-lang=Python><span style=display:flex><span><span style=color:#75715e># global variables</span>
 </span></span><span style=display:flex><span>listCSOs <span style=color:#f92672>=</span> []
 </span></span><span style=display:flex><span>idxCSO <span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>
 </span></span><span style=display:flex><span>
