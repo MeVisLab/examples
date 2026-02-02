@@ -10,23 +10,23 @@
                 {{ $currentPage := . }}
                 {{ range .Site.Menus.main }}
                     {{ if .HasChildren }}
-                    <ol class="list-group list-group-numbered">
+                    <ol class="list-group">
                         {{ range .Children }}
                             {{ if eq $currentPage.Section .Parent }}
                         <li class="list-group-item" style="position: inherit; !important"><a class="fw-bold" href="{{ .URL }}" title="{{ .Title }}" target="_self">{{ .Name }}</a>
                             <div class="ps-4">{{ .Title }}</div>
                                 {{ if .HasChildren }}
-                            <ol class="list-group list-group-numbered list-group-flush">
+                            <ol class="list-group list-group-flush">
                                     {{ range .Children }}
                                     <li class="list-group-item" style="position: inherit; !important"><a class="fw-bold" href="{{ .URL }}" title="{{ .Title }}" target="_self">{{ .Name }}</a>
                                         <div class="ps-4">{{ .Title }}</div>
                                     {{ if .HasChildren }}
-                                    <ol class="list-group list-group-numbered list-group-flush">
+                                    <ol class="list-group list-group-flush">
                                         {{ range .Children }}
                                         <li class="list-group-item" style="position: inherit; !important"><a class="fw-bold" href="{{ .URL }}" title="{{ .Title }}" target="_self">{{ .Name }}</a>
                                             <div class="ps-4">{{ .Title }}</div>
                                         {{ if .HasChildren }}
-                                            <ol class="list-group list-group-numbered list-group-flush">
+                                            <ol class="list-group list-group-flush">
                                                     {{ range .Children }}
                                                     <li class="list-group-item" style="position: inherit; !important"><a class="fw-bold" href="{{ .URL }}" title="{{ .Title }}" target="_self">{{ .Name }}</a>
                                                         <div class="ps-4">{{ .Title }}</div>
