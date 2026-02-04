@@ -87,7 +87,7 @@ The *Source Box* shall provide the possibility to select a file for loading into
 
 Add a field to the *Parameters* section of your *.script* file. Name the field <field>openFile</field> and set <attribute>type</attribute> to *String* and <attribute>internalName</attribute> to <field>LocalImage.name</field>.
 
-Then, add another field to your *Box* for the *Source* and use the field name from *Parameters* section, in this case <field>openFile</field>. Set <attribute>browseButton</attribute> = *Yes* and <attribute>browseMode</attribute> = *open* and save your script.
+Then, add another field to your *Box* for the *Source* and use the field name from *Parameters* section, in this case <field>openFile</field>. Set <attribute>browseButton</attribute> to *Yes* and <attribute>browseMode</attribute> to *open* and save your script.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan

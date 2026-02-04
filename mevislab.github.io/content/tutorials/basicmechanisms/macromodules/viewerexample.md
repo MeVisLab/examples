@@ -129,13 +129,13 @@ Window {
                 Viewer View2D.self {
                     type    = SoRenderArea
                     pw      = 400 ph = 400
-                    expandX = yes
-                    expandY = yes
+                    expandX = Yes
+                    expandY = Yes
                 }
                 Viewer View3D.self {
                     pw      = 400 ph = 400
-                    expandX = yes
-                    expandY = yes
+                    expandX = Yes
+                    expandY = Yes
                 }
             }
         }

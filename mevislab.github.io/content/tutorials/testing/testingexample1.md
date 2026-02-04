@@ -94,7 +94,7 @@ The *OpenFiles* function first defines the `DicomImport` field <field>inputMode<
 When calling the function *TEST_DicomImport*, an expected value of 1.0 is defined. Then, the DICOM files are opened.
 
 {{<alert class="check" caption="Check">}}
-Call *Base.ignoreWarningAndError(MLAB.processEvents)* instead of *MLAB.processEvents()* if you receive error messages regarding invalid DICOM tags.
+Call <inlineCode>Base.ignoreWarningAndError(MLAB.processEvents)</inlineCode> instead of <inlineCode>MLAB.processEvents()</inlineCode> if you receive error messages regarding invalid DICOM tags.
 {{</alert>}}
 
 When <field>ready</field> is true, the test touches the <field>selectNextItem</field> trigger, so that the first images of the patient are selected and shown. The source directory will be written on the console as an additional log message for informative purposes. 
