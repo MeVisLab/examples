@@ -306,7 +306,7 @@ In this chapter in particular, we will focus on simple image interaction with tw
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this example we will use the &lt;code&gt;OrthoView2D&lt;/code&gt; module and add a 3D viewer to the layout &lt;field&gt;Cube&lt;/field&gt;.&lt;/p&gt;
+&lt;p&gt;In this example we will use the &lt;code&gt;OrthoView2D&lt;/code&gt; module and add a 3D viewer to the layout &lt;em&gt;Cube&lt;/em&gt;.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
 &lt;h3 id="develop-your-network"&gt;Develop Your Network&lt;/h3&gt;
 &lt;p&gt;Add the modules &lt;code&gt;LocalImage&lt;/code&gt; and &lt;code&gt;OrthoView2D&lt;/code&gt; to your workspace and connect them.&lt;/p&gt;
@@ -315,7 +315,7 @@ In this chapter in particular, we will focus on simple image interaction with tw
  &lt;figcaption class="figure-caption"&gt;Network&lt;/figcaption&gt;
 &lt;/p&gt;
 &lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;OrthoView2D&lt;/code&gt; module allows you to select multiple layouts. Select layout &lt;field&gt;Cube Equal&lt;/field&gt;. The layout shows your image in three orthogonal viewing directions. The top left segment remains empty.&lt;/p&gt;</description></item><item><title>Chapter IV: Image Processing</title><link>https://mevislab.github.io/examples/pull/136/tutorials/image_processing/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/136/tutorials/image_processing/</guid><description>&lt;h1 id="TutorialImageProcessing"&gt;Image Processing in MeVisLab&lt;/h1&gt;
+&lt;p&gt;The &lt;code&gt;OrthoView2D&lt;/code&gt; module allows you to select multiple layouts. Select layout &lt;em&gt;Cube Equal&lt;/em&gt;. The layout shows your image in three orthogonal viewing directions. The top left segment remains empty.&lt;/p&gt;</description></item><item><title>Chapter IV: Image Processing</title><link>https://mevislab.github.io/examples/pull/136/tutorials/image_processing/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/136/tutorials/image_processing/</guid><description>&lt;h1 id="TutorialImageProcessing"&gt;Image Processing in MeVisLab&lt;/h1&gt;
 &lt;p&gt;Digital image processing is the use of a digital computer to process digital images through an algorithm (see &lt;a href="https://en.wikipedia.org/wiki/Digital_image_processing" target="_blank" rel="noopener"&gt;Wikipedia&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;MeVisLab provides multiple modules for image processing tasks, such as:&lt;/p&gt;
 &lt;ul&gt;
