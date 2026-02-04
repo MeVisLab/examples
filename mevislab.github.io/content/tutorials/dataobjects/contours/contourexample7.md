@@ -52,7 +52,7 @@ The behavior of your network does not change. You can still draw the same CSOs a
 
 Open the context menu of your `csoList` module {{< mousebutton "right" >}} and select {{<menuitem "Related Files" "csoList.script" >}}.
 
-The MeVisLab text editor MATE opens, showing your *.script* file. You can see the output of your module as *CSOListContainer.outCSOList*. We want to define a threshold for the color of our CSOs. For this, add another field to the *Parameters* section of your script file named <field>areaThreshold</field>. Define the <field>type</field> as <field>Float</field> and <field>value</field> as <field>2000.0</field>.
+The MeVisLab text editor MATE opens, showing your *.script* file. You can see the output of your module as *CSOListContainer.outCSOList*. We want to define a threshold for the color of our CSOs. For this, add another field to the *Parameters* section of your script file named <field>areaThreshold</field>. Define the <attribute>type</attribute> as *Float* and <attribute>value</attribute> as *2000.0*.
 
 In order to call Python functions, we also need a Python file. Add a *Commands* section and define the *source* of the Python file as *$(LOCAL)/csoList.py*. Also add an *initCommand* as *initCSOList*. The initCommand defines the Python function that is called whenever the module is added to the workspace or reloaded.
 
@@ -107,7 +107,7 @@ def _getCSOList():
 
 The function gets the current CSOList from the output field of the `CSOListContainer`. Initially, it should be empty. If not, we want to start with an empty list; therefore, we remove all existing CSOs.
 
-We also create two new CSO lists: one list for small contours, one list for larger contours, depending on the defined <field>areaThreshold</field> from the modules fields.
+We also create two new CSO lists: one list for small contours, one list for larger contours, depending on the defined <field>areaThreshold</field> from the module's fields.
 
 Additionally, we also want to define different colors for the CSOs in the lists. Small contours shall be drawn in green, large contours shall be drawn in red.
 

@@ -131,7 +131,7 @@ def setMarkerPosition(vector):
 ```
 {{</highlight>}}
 
-The *setMarkerPosition* function gets a three-dimensional vector and sets the <field>markerPosition</field> field of our module. Then, the *applyMarker* trigger is touched. As the region growing algorithm might need some time to segment, we need to wait until the <field>outSegmentationMask</field> output field is valid, meaning that there is a valid segmentation mask at the segmentation mask output of our macro module.
+The *setMarkerPosition* function gets a three-dimensional vector and sets the <field>markerPosition</field> field of our module. Then, the <field>applyMarker</field> trigger is touched. As the region growing algorithm might need some time to segment, we need to wait until the <field>outSegmentationMask</field> output field is valid, meaning that there is a valid segmentation mask at the segmentation mask output of our macro module.
 
 Finally, we need to reset the application to its initial state, so that each test case has the initial start conditions of the application. A test case should never depend on another test case so that they all can be executed exclusively.
 

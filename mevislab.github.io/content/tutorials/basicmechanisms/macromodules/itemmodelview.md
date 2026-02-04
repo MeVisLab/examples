@@ -128,7 +128,7 @@ Window {
 ```
 {{</highlight>}}
 
-Every *Field* that we defined in the *Parameters* section is now used as a column in our view. The *Field* <field>id</field> has been defined to be the <field>idAttribute</field>. If you now open your panel, MeVisLab will complain that you did not define the *Field* <field>myItemModel</field>. You have to add a *Field* with this name to your *Parameters* section or as an *Output Field*. We will add an *Output Field*, so that our model can also be used by other modules, if necessary. The type is *MLBase*.
+Every *Field* that we defined in the *Parameters* section is now used as a column in our view. The *Field* <field>id</field> has been defined to be the <attribute>idAttribute</attribute>. If you now open your panel, MeVisLab will complain that you did not define the *Field* <field>myItemModel</field>. You have to add a *Field* with this name to your *Parameters* section or as an *Output Field*. We will add an *Output Field*, so that our model can also be used by other modules, if necessary. The type is *MLBase*.
 
 {{< highlight filename="MyItemModelView.script" >}}
 ```Stan

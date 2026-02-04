@@ -84,9 +84,9 @@ The result should be a three-dimensional rendering of your image.
 If the rendering is not immediately applied, click *Apply* in your `IsoSurface` module.
 {{</alert>}}
 
-Define the field <field>instanceName</field> of your `IsoSurface` module as <field>IsoSurfaceImage</field> and add another `IsoSurface` module to your network. Set the <field>instanceName</field> to <field>IsoSurfaceSegmentation</field> and connect the module to the output of the `CloseGap` module from the image segmentation. Set <field>IsoValue</field> to <field>420</field>, <field>Resolution</field> to <field>1</field>, and check <field>Auto-Update</field> and <field>Auto-Apply</field>.
+Define the field <attribute>instanceName</attribute> of your `IsoSurface` module as <field>IsoSurfaceImage</field> and add another `IsoSurface` module to your network. Set the <field>instanceName</field> to *IsoSurfaceSegmentation* and connect the module to the output of the `CloseGap` module from the image segmentation. Set <field>IsoValue</field> to *420*, <field>Resolution</field> to *1*, and check <field>Auto-Update</field> and <field>Auto-Apply</field>.
 
-Set <field>instanceName</field> of the `SoWEMRenderer` module to <field>SoWEMRendererImage</field> and add another `SoWEMRenderer` module. Set this <field>instanceName</field> to <field>SoWEMRendererSegmentation</field> and connect it to the *IsoSurfaceSegmentation* module. Selecting the output of the new `SoWEMRenderer` shows the segmented parts as a 3D object in the output inspector.
+Set <field>instanceName</field> of the `SoWEMRenderer` module to *SoWEMRendererImage* and add another `SoWEMRenderer` module. Set this <field>instanceName</field> to *SoWEMRendererSegmentation* and connect it to the `IsoSurfaceSegmentation` module. Selecting the output of the new `SoWEMRenderer` shows the segmented parts as a 3D object in the output inspector.
 
 ![Segmentation preview in output inspector](images/tutorials/summary/Example1_7.png "Segmentation preview in output inspector")
 
@@ -103,7 +103,7 @@ Add a `SoSwitch` module to your network. Connect the switch to both of your `SoW
 
 ![SoSwitch](images/tutorials/summary/Example1_9.png "SoSwitch")
 
-The default input of the switch is <field>None</field>. Your 3D viewer remains black. Using the arrows on the `SoSwitch` allows you to toggle between the segmentation and the image. Input <field>0</field> shows the segmented brain, input <field>1</field> shows the head. You are now able to toggle between them. A view with both objects is still missing.
+The default input of the switch is *None*. Your 3D viewer remains black. Using the arrows on the `SoSwitch` allows you to toggle between the segmentation and the image. Input *0* shows the segmented brain, input *1* shows the head. You are now able to toggle between them. A view with both objects is still missing.
 
 {{< imagegallery 2 "images/tutorials/summary" "Example1_Segmentation" "Example1_Image" >}}
 
@@ -111,7 +111,7 @@ Add a `SoGroup` module and connect both `SoWEMRenderer` modules as input. The ou
 
 ![SoGroup](images/tutorials/summary/Example1_10.png "SoGroup")
 
-You can now also toggle input <field>2</field> of the switch showing both 3D objects. The only problem is: You cannot see the brain because it is located inside the head. Open the `SoWEMRendererImage` module panel and set <field>faceAlphaValue</field> to <field>0.5</field>. The viewer now shows the head in a semitransparent manner, so that you can see the brain. Certain levels of opacity are difficult to render. Add a `SoDepthPeelRenderer` module and connect it to the semitransparent `SoWEMRendererImage` module. Set <field>Layers</field> of the renderer to <field>1</field>.
+You can now also toggle input *2* of the switch showing both 3D objects. The only problem is: You cannot see the brain because it is located inside the head. Open the `SoWEMRendererImage` module panel and set <field>faceAlphaValue</field> to *0.5*. The viewer now shows the head in a semitransparent manner, so that you can see the brain. Certain levels of opacity are difficult to render. Add a `SoDepthPeelRenderer` module and connect it to the semitransparent `SoWEMRendererImage` module. Set <field>Layers</field> of the renderer to *1*.
 
 ![SoDepthPeelRenderer](images/tutorials/summary/Example1_Both.png "SoDepthPeelRenderer")
 

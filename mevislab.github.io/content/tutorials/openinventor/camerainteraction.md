@@ -27,7 +27,7 @@ Add a `SoBackground`, a `SoMaterial` and a `SoOrientationModel` module to your w
 
 ![SoRenderArea without camera and lights](images/tutorials/openinventor/Camera_1.png "SoRenderArea without camera and lights")
 
-You cannot interact with your scene and the rendered content is very dark. Open the `SoOrientationModel` and change <field>Model</field> to <field>Skeleton</field> to see that a little bit better. You can also change the material by using the panel of the `SoMaterial` module.
+You cannot interact with your scene and the rendered content is very dark. Open the `SoOrientationModel` and change <field>Model</field> to *Skeleton* to see that a little bit better. You can also change the material by using the panel of the `SoMaterial` module.
 
 Add a `SoCameraInteraction` module and connect it between the `SoGroup` and the `SoRenderArea`.
 
@@ -55,7 +55,7 @@ A `SoOrthographicCamera` camera defines a parallel projection from a viewpoint.
 
 This camera does not diminish objects with distance as an SoPerspectiveCamera does. The viewing volume for an orthographic camera is a cuboid (a box).
 
-By default, the camera is located at (0, 0, 1) and looks along the negative z-axis; the <field>Position</field> and <field>Orientation</field> fields can be used to change these values. The <field>Height</field> field defines the total height of the viewing volume; this and the <field>Aspect Ratio</field> field determine its width.
+By default, the camera is located at *(0, 0, 1)* and looks along the negative z-axis; the <field>Position</field> and <field>Orientation</field> fields can be used to change these values. The <field>Height</field> field defines the total height of the viewing volume; this and the <field>Aspect Ratio</field> field determine its width.
 
 Add a `SoCameraWidget` and connect it to your `SoGroup`. 
 
@@ -74,7 +74,7 @@ Add a `SoExaminerViewer` to your workspace and connect it to the `SoBackground`,
 
 The difference to the `SoRenderArea` can be seen immediately. You can interact with your scene and a light is available initially.
 
-The module also allows you to switch between perspective and orthographic camera by changing the field <field>cameraType</field>.
+The module also allows you to switch between *perspective* and *orthographic* camera by changing the field <field>cameraType</field>.
 
 {{< imagegallery 2 "images/tutorials/openinventor" "SoExaminerViewer_Perspective" "SoExaminerViewer_Orthographic" >}}
 

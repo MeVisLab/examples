@@ -85,7 +85,7 @@ Window {
 ![Panel with Tabs and Viewers](images/tutorials/basicmechanics/PanelWithTabsAndViewers.png "Panel with Tabs and Viewers")
 
 ### Edit Viewer Settings in the Panel
-You may want to change the design setting of the right viewer. This is still possible via the internal network of the macro module. Open the internal network either via the context menu or using the middle mouse button {{< mousebutton "middle" >}} and click on the module. After that, open the automatic panel of the module `SoExaminerViewer` via context menu {{< menuitem "Show Windows" "Automatic Panel" >}} and change the field <field>decoration</field> to <field>False</field>. Keep in mind, as we did not create CSOs by now, the right viewer stays black.
+You may want to change the design setting of the right viewer. This is still possible via the internal network of the macro module. Open the internal network either via the context menu or using the middle mouse button {{< mousebutton "middle" >}} and click on the module. After that, open the automatic panel of the module `SoExaminerViewer` via context menu {{< menuitem "Show Windows" "Automatic Panel" >}} and change the field <field>decoration</field> to *False*. Keep in mind, as we did not create CSOs by now, the right viewer stays black.
 
 ![Change viewer settings](images/tutorials/basicmechanics/ChangeViewerSettings.png "Change viewer settings")
 
@@ -142,9 +142,9 @@ To create the *Browse\...* button:
 
 To create the Iso Generator Button:
 
-We like to copy the field of the <field>Update</field> button from the internal module `IsoCSOGenerator`, but not its layout so:
+We like to copy the field of the *Update* button from the internal module `IsoCSOGenerator`, but not its layout so:
 
-1.  Create a new Field in the interface, called <field>IsoGenerator</field>, which contains the internal field <field>Update</field> from the module `IsoCSOGenerator`.
+1.  Create a new Field in the interface, called <field>IsoGenerator</field>, which contains the internal field <field>apply</field> from the module `CSOIsoGenerator`.
 2.  Create a new Button in your Window that uses the field <field>IsoGenerator</field>.
 
 After these steps, you can use the Iso Generator button to create CSOs.

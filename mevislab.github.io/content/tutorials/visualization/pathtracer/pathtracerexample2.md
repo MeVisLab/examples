@@ -80,7 +80,7 @@ As an alternative, you can replace the `SoLUTEditor` with a `LUTLoad` and load t
 
 Now, let's enhance your rendering further by using the `SoPathTracerMaterial` module. This module provides essential material properties for geometry and volumes within the `SoPathTracer` scene.
 
-Add a `SoPathTracerMaterial` module to your `SoPathTracerVolume`. Open its panel and navigate to the tab *Surface Brdf*. Change the <field>Diffuse</field> color for altering the visual appearance of surfaces. The <field>Diffuse</field> color determines how light interacts with the surface, influencing its overall color and brightness. Set <field>Specular</field> to *0.5*, *Shininess* to *1.0*, and *Specular Intensity* to *0.5*.
+Add a `SoPathTracerMaterial` module to your `SoPathTracerVolume`. Open its panel and navigate to the tab *Surface Brdf*. Change the <field>Diffuse</field> color for altering the visual appearance of surfaces. The <field>Diffuse</field> color determines how light interacts with the surface, influencing its overall color and brightness. Set <field>Specular</field> to *0.5*, <field>Shininess</field> to *1.0*, and <field>Specular Intensity</field> to *0.5*.
 
 ![SoPathTracerMaterial](images/tutorials/visualization/pathtracer/SoPathTracerMaterial_Knee.png "SoPathTracerMaterial")
 
@@ -99,7 +99,7 @@ Load the [Bones mask](examples/visualization/example6/edited_Bones.mlimage) by u
 
 ![Bones mask](images/tutorials/visualization/pathtracer/View2D_Bones.png "Bones mask")
 
-Start by disabling the visibility of your first volume by toggeling `SoPathTracerVolume` <field>Enabled</field> field to off. This helps to improve the rendering of the bones itself and makes it easier to define colors for your LUT.
+Start by disabling the visibility of your first volume by toggeling `SoPathTracerVolume` <field>Enabled</field> field off. This helps to improve the rendering of the bones itself and makes it easier to define colors for your LUT.
 
 #### Load Example LUT from File
 Once again, you can decide to define the LUT yourself in `SoLUTEditor` module, or load a prepared XML File in a `LUTLoad` module as provided [here](examples/visualization/example6/LUT_Bones.xml).
@@ -113,7 +113,7 @@ Open the panel of `SoLUTEditor1` for the bones and go to tab *Range* and set *Ne
 
 ![SoLUTEditor1](images/tutorials/visualization/pathtracer/V6.2_11_LUT_Bones.png "SoLUTEditor1")
 
-You can increase the <field>Shininess</field> of the bones and change the *Diffuse* color in the *Surface Brdf* tab within the `SoPathTracerMaterial1`. Also set <field>Specular</field> to <field>0.5</field>, <field>Shininess</field> to <field>0.904</field>, and <field>Specular Intensity</field> to <field>0.466</field>.
+You can increase the <field>Shininess</field> of the bones and change the <field>Diffuse</field> color in the *Surface Brdf* tab within the `SoPathTracerMaterial1`. Also set <field>Specular</field> to *0.5*, <field>Shininess</field> to *0.904*, and <field>Specular Intensity</field> to *0.466*.
 
 ![SoPathTracerMaterial1](images/tutorials/visualization/pathtracer/V6.2_SoPathTracerMaterial.png "SoPathTracerMaterial1")
 
@@ -128,7 +128,7 @@ Load a prepared XML File in a `LUTLoad` module as provided [here](examples/visua
 #### Manually Define LUT
 Connect the `MinMaxScan` to your `LocalImage2`.
 
-Access the `SoLUTEditor2` panel in the tab *Range* and set the <field>New Range Min</field> to <field>0</field> and the <field>New Range Max</field> to <field>255</field>. Additionally, modify the illustrated color settings within the *Editor* tab. 
+Access the `SoLUTEditor2` panel in the tab *Range* and set the <field>New Range Min</field> to *0* and the <field>New Range Max</field> to *255*. Additionally, modify the illustrated color settings within the *Editor* tab. 
 
 ![Vessels](images/tutorials/visualization/pathtracer/MinMaxScan_Vessels.png "MinMaxScan of Vessels mask")
 

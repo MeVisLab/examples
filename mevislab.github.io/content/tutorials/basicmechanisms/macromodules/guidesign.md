@@ -65,7 +65,7 @@ Interface {
 {{</highlight>}}
 
 ##### Module Inputs and Outputs
-To create an input/output, you need to define a *Field* in the respective input/output section. Each input/output gets a name (here <field>input0</field>/<field>output0</field>) that you can use to reference this field. The module input maps to an input of the internal network. You need to define this mapping. In this case, the input of the macro module `Filter` maps to the input of the module `Convolution` of the internal network (<field>internalName = Convolution.input0</field>). Similarly, you need to define which output of the internal network maps to the output of the macro module `Filter`. In this example, the output of the internal module `Arithmethic2` maps to the output of our macro module `Filter` (<field>internalName = Arithmetic2.output0</field>).
+To create an input/output, you need to define a *Field* in the respective input/output section. Each input/output gets a name (here <field>input0</field>/<field>output0</field>) that you can use to reference this field. The module input maps to an input of the internal network. You need to define this mapping. In this case, the input of the macro module `Filter` maps to the input of the module `Convolution` of the internal network (<field>internalName</field> = <field>Convolution.input0</field>). Similarly, you need to define which output of the internal network maps to the output of the macro module `Filter`. In this example, the output of the internal module `Arithmethic2` maps to the output of our macro module `Filter` (<field>internalName</field> = <field>Arithmetic2.output0</field>).
 
 Creating an input/output causes:
 1. Input/output connectors are added to the module.
@@ -76,7 +76,7 @@ Creating an input/output causes:
 ![Internal Network of your macro module](images/tutorials/basicmechanics/BM_23.png "Internal Network of your macro module")
 
 ##### Module Fields
-In the *Parameters* section, you can define *fields* of your macro module. These fields may map to existing fields of the internal network (<field>internalName = ...</field> ), but they do not need to and can also be completely new. You can reference these fields when creating a panel, to allow interactions with these fields. All fields appear in the *Automatic Panel*.
+In the *Parameters* section, you can define *fields* of your macro module. These fields may map to existing fields of the internal network (<field>internalName</field> = ...), but they do not need to and can also be completely new. You can reference these fields when creating a panel, to allow interactions with these fields. All fields appear in the *Automatic Panel*.
 
 ### Module Panel Layout
 To create your own user interface, we need to create a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Window" "Window" >}}. A window is one of the layout elements that exist in MDL. These layout elements are called {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#Controls" "controls" >}}. The curled brackets define the window section, in which you can define properties of the window and insert further controls like a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Box" "Box" >}}.

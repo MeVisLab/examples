@@ -48,7 +48,7 @@ We like to calculate the minimum and maximum distance of the green marker to all
 ![Module DistanceFromXMarkerList](images/tutorials/dataobjects/markers/DO_Markers_06.png "Module DistanceFromXMarkerList")
 
 ### Automation of Distance Calculation
-To automatically update the calculation when placing a new marker, we need to tell the module `DistanceFromXMarkerList` **when** a new green marker is placed. Open the panels of `DistanceFromXMarkerList` and `GreenMarker` and draw a parameter connection from the field <field>Currently busy</field> in the panel of `GreenMarker` to *Calculate Distance* in the panel of `DistanceFromXMarkerList`. If you now place a new green marker, the distance from the new green marker to all red markers is calculated automatically.
+To automatically update the calculation when placing a new marker, we need to tell the module `DistanceFromXMarkerList` **when** a new green marker is placed. Open the panels of `DistanceFromXMarkerList` and `GreenMarker` and draw a parameter connection from the field <field>Currently busy</field> in the panel of `GreenMarker` to <field>Calculate Distance</field> in the panel of `DistanceFromXMarkerList`. If you now place a new green marker, the distance from the new green marker to all red markers is calculated automatically.
 ![Calculation of Distance between Markers](images/tutorials/dataobjects/markers/DO_Markers_07.png "Calculation of Distance between Markers")
 
 {{<alert class="info" caption="Additional Information">}}

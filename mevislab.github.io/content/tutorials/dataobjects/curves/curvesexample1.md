@@ -38,7 +38,7 @@ Double-click {{<mousebutton "left">}} on the `CurveCreator` module and open the 
 
 ![CurveCreator Module](images/tutorials/dataobjects/curves/CurveCreatorModule.png "CurveCreator Module")
 
-You can see a large input field <field>Curve Table</field>. Here you can enter the x- and y-values of your curve. The values of the first column will become the x-values and the 2nd any further column will become the y-series. Comment lines start with a '#' character.
+You can see a large input field <field>Curve Table</field>. Here you can enter the x- and y-values of your curve. The values of the first column will become the x-values and the second column will become the y-series. Comment lines start with a '#' character.
 
 Enter the following into the *Curve Table*:
 {{< highlight filename="Curve Table" >}}

@@ -69,11 +69,11 @@ We rename the `DecomposeVector3` modules (press {{< keyboard "F2" >}} to do that
 
 In the panel of the module `Rectangle` in the box *Position*, you can see the position of the rectangle given in two 3D vectors.
 
-We like to use the modules `DecomposeVector3` to extract the single x, y, and z values of the vector. For that, create a parameter connection from the field <field>Start Wold Pos</field> to the vector of the module we named `StartWorldPos_Rectangle` and create a connection from the field <field>End World Pos</field> to the vector of module `EndWorldPos_Rectangle`. The decomposed coordinates can be now used for further parameter connections.
+We like to use the modules `DecomposeVector3` to extract the single x, y, and z values of the vector. For that, create a parameter connection from the field <field>Start World Pos</field> to the vector of the module we named `StartWorldPos_Rectangle` and create a connection from the field <field>End World Pos</field> to the vector of module `EndWorldPos_Rectangle`. The decomposed coordinates can be now used for further parameter connections.
 
 ![Parameter Connections](images/tutorials/visualization/V2_09.png "Parameter Connections")
 
-Open the panel of the module `SubImage`. Select the <field>Mode World Start & End</field> (<field>Image Axis Aligned</field>). Enable the function <field>Auto apply</field>.
+Open the panel of the module `SubImage`. Select the <field>Mode</field> *World Start & End (Image Axis Aligned)*. Toggle the field <field>Auto apply</field> *on*.
 
 {{<alert class="info" caption="Extra Infos">}}
 Make sure to also check <field>Auto-correct for negative subimage extents</field>, so that you can draw rectangles from left to right and from right to left.

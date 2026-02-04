@@ -94,6 +94,13 @@ field {
     word-wrap: break-word;
 }
 
+attribute {
+    font-family: monospace;
+    font-size: .875em;
+    color: var(--bs-secondary);
+    word-wrap: break-word;
+}
+
 kbd {
     display: inline-block;
     border: 1px solid #ccc;
