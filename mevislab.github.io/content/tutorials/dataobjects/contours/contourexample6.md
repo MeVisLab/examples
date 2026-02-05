@@ -76,7 +76,7 @@ If you want to define your static text as a parameter in multiple labels, you ca
 
 ![User Data](images/tutorials/dataobjects/contours/Ex6_Parameters.png "User Data")
 
-You can also add multiple CSO editors to see the different options. Add the `SoCSORectangleEditor` module to your workspace and connect it to the `SoGroup` module. As we now have two different editors, we need to tell the `CSOLabelRenderer` which CSO is to be rendered. Open the panel of the `SoCSODistanceLineEditor`. You can see the field *Extension Id* set to *distanceLine*. Open the panel of the `SoCSORectangleEditor`. You can see the field *Extension Id* set to *rectangle*.
+You can also add multiple CSO editors to see the different options. Add the `SoCSORectangleEditor` module to your workspace and connect it to the `SoGroup` module. As we now have two different editors, we need to tell the `CSOLabelRenderer` which CSO is to be rendered. Open the panel of the `SoCSODistanceLineEditor`. You can see the field <field>Extension Id</field> set to *distanceLine*. Open the panel of the `SoCSORectangleEditor`. You can see the field <field>Extension Id</field> set to *rectangle*.
 
 ![Extension ID](images/tutorials/dataobjects/contours/Ex6_ExtensionID.png "Extension ID")
 
@@ -100,11 +100,11 @@ deviceOffsetY = 0
 
 ![SoCSORectangleEditor](images/tutorials/dataobjects/contours/Ex6_LineAndRectangle.png "SoCSORectangleEditor")
 
-If you now draw new CSOs, you will notice that you still always create distance lines. Open the panel of the `SoView2DCSOExtensibleEditor`. You can see that the *Creator Extension Id* is set to *__default*. By default, the first found eligible editor is used to create a new CSO. In our case this is the `SoCSODistanceLineEditor`.
+If you now draw new CSOs, you will notice that you still always create distance lines. Open the panel of the `SoView2DCSOExtensibleEditor`. You can see that the <field>Creator Extension Id</field> is set to *__default*. By default, the first found eligible editor is used to create a new CSO. In our case this is the `SoCSODistanceLineEditor`.
 
 ![SoCSORectangleEditor](images/tutorials/dataobjects/contours/Ex6_DefaultExtension.png "SoCSORectangleEditor")
 
-Change *Creator Extension Id* to *rectangle*.
+Change <field>Creator Extension Id</field> to *rectangle*.
 
 ![SoCSORectangleEditor & SoView2DCSOExtensibleEditor ](images/tutorials/dataobjects/contours/Ex6_8.png "SoCSORectangleEditor & SoView2DCSOExtensibleEditor")
 
@@ -113,7 +113,7 @@ Newly created CSOs are now rectangles. The label values are shown as defined in 
 ![Labeled Rectangle in View2D](images/tutorials/dataobjects/contours/Ex6_9.png "Labeled Rectangle in View2D")
 
 {{<alert class="info" caption="Extra Infos">}}
-The *Length* attribute in the context of rectangles represents the perimeter of the rectangle, calculated as *2a + 2b*, where *a* and *b* are the lengths of the two sides of the rectangle.
+The *Length* in the context of rectangles represents the perimeter of the rectangle, calculated as *2a + 2b*, where *a* and *b* are the lengths of the two sides of the rectangle.
 {{</alert>}}
 
 You will find a lot more information in the `CSOInfo` module for your rectangles. The exact meaning of the values for each type of CSO is explained in the table below.

@@ -46,7 +46,7 @@ We want to move the object when dragging the plane. Thus, we need to modify the 
 
 ![Interactive dragging of objects](images/tutorials/dataobjects/surfaces/DO10_03.png "Interactive dragging of objects")
 
-As a next step, we want to adapt the size of the plane to the size of the object we have. Add the modules `WEMInfo` and `DecomposeVector3` to your workspace and open their panels. The module `WEMInfo` presents information about the given WEM, for example, its position and size. The module `DecomposeVector3` splits a 3D vector into its components. Now, draw a parameter connection from *Size* of `WEMInfo` to the vector in `DecomposeVector3`. As a next step, open the panel of `SoCube` and draw parameter connections from the fields *Y* and *Z* of `DecomposeVector3` to *Height* and *Depth* of `SoCube`. Now, the size of the plane adapts to the size of the object. 
+As a next step, we want to adapt the size of the plane to the size of the object we have. Add the modules `WEMInfo` and `DecomposeVector3` to your workspace and open their panels. The module `WEMInfo` presents information about the given WEM, for example, its position and size. The module `DecomposeVector3` splits a 3D vector into its components. Now, draw a parameter connection from *Size* of `WEMInfo` to the vector in `DecomposeVector3`. As a next step, open the panel of `SoCube` and draw parameter connections from the fields <field>Y</field> and <field>Z</field> of `DecomposeVector3` to <field>Height</field> and <field>Depth</field> of `SoCube`. Now, the size of the plane adapts to the size of the object. 
 
 ![Interactive dragging of objects](images/tutorials/dataobjects/surfaces/DO10_04.png "Interactive dragging of objects")
 
@@ -59,7 +59,7 @@ For changing the visualization of the dragger plane, add the modules `SoGroup`, 
 
 ![Interactive dragging of objects](images/tutorials/dataobjects/surfaces/DO10_06.png "Interactive dragging of objects")
 
-We want to switch the visualization of the plane dependent on the mouse position in the viewer. In other words, when hovering over the plane, the plane should be visible, when the mouse is in another position and the possibility to drag the object is not given, the plane should be invisible. We use the module `SoMaterial` to edit the appearance of the plane. Open the panel of the module `SoMITranslate1Dragger`. The box of the field *Highlighted* is ticked when the mouse hovers over the plane. Thus, we can use the field's status to switch between different presentations of the plane. In order to do this, open the panel of `SoSwitch` and draw a parameter connection from *Highlighted* of `SoMITranslate1Dragger` to *Which Child* of `SoSwitch`.
+We want to switch the visualization of the plane dependent on the mouse position in the viewer. In other words, when hovering over the plane, the plane should be visible, when the mouse is in another position and the possibility to drag the object is not given, the plane should be invisible. We use the module `SoMaterial` to edit the appearance of the plane. Open the panel of the module `SoMITranslate1Dragger`. The box of the field <field>Highlighted</field> is ticked when the mouse hovers over the plane. Thus, we can use the field's status to switch between different presentations of the plane. In order to do this, open the panel of `SoSwitch` and draw a parameter connection from <field>Highlighted</field> of `SoMITranslate1Dragger` to <field>Which Child</field> of `SoSwitch`.
 
 ![Interactive dragging of objects](images/tutorials/dataobjects/surfaces/DO10_06_02.png "Interactive dragging of objects")
 
@@ -74,19 +74,19 @@ When hovering over the plane, the plane becomes visible and the option to move t
 #### Interactive Object Translation in Three Dimensions
 We do not only want to move the object in one direction, we like to be able to do interactive object translations in all three dimensions. For this, copy the modules responsible for the translation in one direction and change the properties to enable translations in other directions.
 
-We need to change the size of `SoCube1` and `SoCube2` to form planes that cover surfaces in x- and z-, as well as x- and y-directions. To do that, draw the respective parameter connections from `DecomposeVector3` to the fields of the modules `SoCube`. In addition, we need to adapt the field *Direction* in the panels of the modules `SoMITranslate1Dragger`. 
+We need to change the size of `SoCube1` and `SoCube2` to form planes that cover surfaces in x- and z-, as well as x- and y-directions. To do that, draw the respective parameter connections from `DecomposeVector3` to the fields of the modules `SoCube`. In addition, we need to adapt the field <field>Direction</field> in the panels of the modules `SoMITranslate1Dragger`. 
 
 ![Interactive dragging of objects](images/tutorials/dataobjects/surfaces/DO10_09.png "Interactive dragging of objects")
 
 Change width, height, and depth of the three cubes, so that each of them represents one plane. The values need to be set to (0, 2, 2), (2, 0, 2), and (2, 2, 0). 
 
-As a next step, we like to make sure that all planes always intersect the object, even though the object is moved. To do this, we need to synchronize the field *Translation* of all `SoMIDraggerContainer` modules and the module `WEMModify`. Draw parameter connections from one *Translation* field to the next, as shown below.
+As a next step, we like to make sure that all planes always intersect the object, even though the object is moved. To do this, we need to synchronize the field <field>Translation</field> of all `SoMIDraggerContainer` modules and the module `WEMModify`. Draw parameter connections from one <field>Translation</field> field to the next, as shown below.
 
 ![Interactive dragging of objects](images/tutorials/dataobjects/surfaces/DO10_10.png "Interactive dragging of objects")
 
-We like to close the loop, so that a change in one field *Translation* causes a change in all the other *Translation* fields. To do this, we need to include the module `SyncVector`. The module `SyncVector` avoids an infinite processing loop causing a permanent update of all fields *Translation*.
+We like to close the loop, so that a change in one field <field>Translation</field> causes a change in all the other <field>Translation</field> fields. To do this, we need to include the module `SyncVector`. The module `SyncVector` avoids an infinite processing loop causing a permanent update of all fields <field>Translation</field>.
 
-Add the module `SyncVector` to your workspace and open its panel. Draw a parameter connection from the field *Translation* of the module `SoMIDraggerContainer2` to *Vector1* of `SyncVector`. The field *Vector1* is automatically synchronized to the field *Vector2*. Now, connect the field *Vector2* to the field *Translate* of the module `WEMModify`. Your synchronization network is now established.
+Add the module `SyncVector` to your workspace and open its panel. Draw a parameter connection from the field <field>Translation</field> of the module `SoMIDraggerContainer2` to *Vector1* of `SyncVector`. The field <field>Vector1</field> is automatically synchronized to the field <field>Vector2</field>. Now, connect the field <field>Vector2</field> to the field <field>Translate</field> of the module `WEMModify`. Your synchronization network is now established.
 
 ![Interactive dragging of objects](images/tutorials/dataobjects/surfaces/DO10_11.png "Interactive dragging of objects")
 
@@ -94,7 +94,7 @@ To enable transformations in all directions, we need to connect the modules `SoM
 
 ![Interactive dragging of objects](images/tutorials/dataobjects/surfaces/DO10_12.png "Interactive dragging of objects")
 
-As a next step, we like to enlarge the planes to make them exceed the object. For that, add the module `CalculateVectorFromVectors` to your network. Open its panel and connect the field *Size* of `WEMInfo` to *Vector 1*. We like to enlarge the size by one, so we add the vector (1, 1, 1), by editing the field *Vector 2*. Now, connect the *Result* to the field *V* of the module `DecomposeVector3`.
+As a next step, we like to enlarge the planes to make them exceed the object. For that, add the module `CalculateVectorFromVectors` to your network. Open its panel and connect the field <field>Size</field> of `WEMInfo` to <field>Vector 1</field>. We like to enlarge the size by one, so we add the vector (1, 1, 1), by editing the field <field>Vector 2</field>. Now, connect the <field>Result</field> to the field <field>V</field> of the module `DecomposeVector3`.
 
 ![Interactive dragging of objects](images/tutorials/dataobjects/surfaces/DO10_13.png "Interactive dragging of objects")
 

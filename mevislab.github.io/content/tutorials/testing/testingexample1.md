@@ -87,21 +87,21 @@ def TEST_DicomImport():
 ```
 {{</highlight>}}
 
-The *filePath* variable defines the absolute path to the DICOM files that will be given to *source* field of the `DicomImport` module in the second step of the *OpenFiles* function. 
+The *filePath* variable defines the absolute path to the DICOM files that will be given to <field>source</field> field of the `DicomImport` module in the second step of the *OpenFiles* function. 
 
-The *OpenFiles* function first defines the `DicomImport` field *inputMode* to be a *Directory*. If you want to open single files, set this field's value to *Files*. Then, the *source* field is set to your previously defined *filePath*. After clicking *triggerImport*, the `DicomImport` module needs some time to load all images in the directory and process the DICOM tree. We have to wait until the field *ready* is *True*. While the import is not ready yet, we wait for 1 millisecond at a time and check again. *MLAB.processEvents()* lets MeVisLab continue execution while waiting for the `DicomImport` to be ready.
+The *OpenFiles* function first defines the `DicomImport` field <field>inputMode</field> to be a *Directory*. If you want to open single files, set this field's value to *Files*. Then, the <field>source</field> field is set to your previously defined <field>filePath</field>. After clicking <field>triggerImport</field>, the `DicomImport` module needs some time to load all images in the directory and process the DICOM tree. We have to wait until the field <field>ready</field> is *True*. While the import is not ready yet, we wait for 1 millisecond at a time and check again. *MLAB.processEvents()* lets MeVisLab continue execution while waiting for the `DicomImport` to be ready.
 
-When calling the function *TEST_DicomImport*, an expected value of *1.0* is defined. Then, the DICOM files are opened.
+When calling the function *TEST_DicomImport*, an expected value of 1.0 is defined. Then, the DICOM files are opened.
 
 {{<alert class="check" caption="Check">}}
-Call *Base.ignoreWarningAndError(MLAB.processEvents)* instead of *MLAB.processEvents()* if you receive error messages regarding invalid DICOM tags.
+Call <inlineCode>Base.ignoreWarningAndError(MLAB.processEvents)</inlineCode> instead of <inlineCode>MLAB.processEvents()</inlineCode> if you receive error messages regarding invalid DICOM tags.
 {{</alert>}}
 
-When *ready* is true, the test touches the *selectNextItem* trigger, so that the first images of the patient are selected and shown. The source directory will be written on the console as an additional log message for informative purposes. 
+When <field>ready</field> is true, the test touches the <field>selectNextItem</field> trigger, so that the first images of the patient are selected and shown. The source directory will be written on the console as an additional log message for informative purposes. 
 
-The value of our `DicomImport`s *progress* field is saved as the *currentValue* variable and compared to the *expectedValue* variable by calling *ASSERT_FLOAT_EQ(expectedValue,currentValue)* to determine if the DICOM import has finished (*currentValue* and *expectedValue* are equal) or not. 
+The value of our `DicomImport`s <field>progress</field> field is saved as the *currentValue* variable and compared to the *expectedValue* variable by calling *ASSERT_FLOAT_EQ(expectedValue,currentValue)* to determine if the DICOM import has finished (*currentValue* and *expectedValue* are equal) or not. 
 
-You can play around with the differences between **ASSERT_FLOAT_EQ()** and **EXPECT_FLOAT_EQ()** and le your test fail to see the differences.
+You can play around with the differences between **ASSERT_FLOAT_EQ()** and **EXPECT_FLOAT_EQ()** and let your test fail to see the differences.
 
 ### Run Your Test Case
 Open the TestCase Manager und run your test by selecting your test case and clicking on the *Play* button in the bottom right corner.

@@ -94,7 +94,7 @@ Web {
 ```
 {{</highlight>}}
 
-Open the script file of the *TutorialSummary* module from [Step 3](tutorials/summary/summary3/). Copy the output section to your web macro and define *internalName* as the output of your `RemoteRendering` modules.
+Open the script file of the *TutorialSummary* module from [Step 3](tutorials/summary/summary3/). Copy the output section to your web macro and define <field>internalName</field> as the output of your `RemoteRendering` modules.
 
 You can also copy all fields from *Parameters* section to your web macro module script.
 

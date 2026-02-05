@@ -32,7 +32,7 @@ Use the module search to add your macro module to your workspace. We need an add
 
 Right-click {{< mousebutton "right" >}} your module and select {{< menuitem "Related Files" "<MACRO_NAME>.script" >}}.
 
-In MATE, add another field to your *Parameters* section and reuse the field by setting the *internalName*. Add the field to the *Settings* section of your *Window*, maybe directly after the color selection.
+In MATE, add another field to your *Parameters* section and reuse the field by setting the <field>internalName</field>. Add the field to the *Settings* section of your *Window*, maybe directly after the color selection.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan

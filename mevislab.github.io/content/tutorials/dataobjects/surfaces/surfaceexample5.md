@@ -58,7 +58,7 @@ To translate the LUT values from the PVLs into color, open the panel of `SoLUTEd
 
 Our goal is to colorize faces of the *Octasphere* in red if they are close to or even intersect the cubic WEM. And we like to colorize faces of the *Octasphere* in green if these faces are far away from the cubic WEM.
 
-Open the tab *Editor* of the panel of `SoLUTEditor`. This tab allows to interactively select a color for each PVL value. Select the color point on the left side. Its *Position* value is supposed to be 0, so we like to select the *Color* *red* in order to color-code small distances between the WEMs in red. In addition to that, increase the *Opacity* of this color point. Next, select the right color point. Its *Position* is supposed to be 3 and thus equals the value of the field *New Range Max*. As these color points colorize large distances between WEMs, select the *Color* *green*. You can add new color points by clicking on the colorized bar in the panel. Select, for example, the *Color* *yellow* for a color point in the middle. Select and shift the color points to get the desired visualization.
+Open the tab *Editor* of the panel of `SoLUTEditor`. This tab allows to interactively select a color for each PVL value. Select the color point on the left side. Its <field>Position</field> value is supposed to be *0*, so we like to set the color to *red* in order to color-code small distances between the WEMs in red. In addition to that, increase the <field>Opacity</field> of this color point. Next, select the right color point. Its <field>Position</field> is supposed to be *3* and thus equals the value of the field <field>New Range Max</field>. As these color points colorize large distances between WEMs, set the color to *green*. You can add new color points by clicking on the colorized bar in the panel. Select, for example, the color *yellow* for a color point in the middle. Select and shift the color points to get the desired visualization.
 
 ![Changing the LUT](images/tutorials/dataobjects/surfaces/DO12_09.png "Changing the LUT")
 
@@ -67,13 +67,13 @@ Add the module `WEMModify` to your workspace and connect the module as shown. If
 ![WEMModify](images/tutorials/dataobjects/surfaces/DO12_10.png "WEMModify")
 
 ### Interactive Shift of WEMs
-As a next step, we like to implement the interactive shift of the WEM. Add the modules `SoTranslateDragger1` and `SyncVector`. Connect all translation vectors: Draw connections from the field *Translate* of `SoTranslateDragger1` to *Vector1* of `SyncVector`, from *Vector2* of `SyncVector` to *Translate* of `WEMModify`, and at last from *Translate* of `WEMModify` to *Translate* of `SoTranslateDragger1`.
+As a next step, we like to implement the interactive shift of the WEM. Add the modules `SoTranslateDragger1` and `SyncVector`. Connect all translation vectors: Draw connections from the field <field>Translate</field> of `SoTranslateDragger1` to <field>Vector1</field> of `SyncVector`, from <field>Vector2</field> of `SyncVector` to <field>Translate</field> of `WEMModify`, and at last from <field>Translate</field> of `WEMModify` to <field>Translate</field> of `SoTranslateDragger1`.
 
 You can now interactively drag the WEM inside the viewer.
 
 ![Dragging the WEM](images/tutorials/dataobjects/surfaces/DO12_11.png "Dragging the WEM")
 
-At last, exchange the `WEMInitialize` module showing the cube with `WEMLoad` and load *venus.off*. You can decrease the *Face Alpha* in the panel of `SoWEMRenderer1` to make that WEM transparent.
+At last, exchange the `WEMInitialize` module showing the cube with `WEMLoad` and load *venus.off*. You can decrease the <field>Face Alpha</field> in the panel of `SoWEMRenderer1` to make that WEM transparent.
 
 ![WEM transparency](images/tutorials/dataobjects/surfaces/DO12_12.png "WEM transparency")
 

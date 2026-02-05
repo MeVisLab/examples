@@ -21,7 +21,7 @@ To create markers, you can use a marker editor, for example, the `SoView2DMarker
 
 ![Create Markers](images/tutorials/dataobjects/markers/DO_Markers_01.png "Create Markers")
 
-Using the `StylePalette` module, you can define a style for your markers. In order to set different styles for different markers, change the field *Color Mode* in the panel of `SoView2DMarkerEditor` to *Index*.
+Using the `StylePalette` module, you can define a style for your markers. In order to set different styles for different markers, change the field <field>Color Mode</field> in the panel of `SoView2DMarkerEditor` to *Index*.
 
 ![Style of Markers](images/tutorials/dataobjects/markers/DO_Markers_08.png "Style of Markers")
 

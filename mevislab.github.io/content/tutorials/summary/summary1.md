@@ -84,9 +84,9 @@ The result should be a three-dimensional rendering of your image.
 If the rendering is not immediately applied, click *Apply* in your `IsoSurface` module.
 {{</alert>}}
 
-Define the field instanceName of your `IsoSurface` module as *IsoSurfaceImage* and add another `IsoSurface` module to your network. Set the instanceName to *IsoSurfaceSegmentation* and connect the module to the output of the `CloseGap` module from the image segmentation. Set *IsoValue* to *420*, *Resolution* to *1*, and check *Auto-Update* and *Auto-Apply*.
+Define the field <attribute>instanceName</attribute> of your `IsoSurface` module as <field>IsoSurfaceImage</field> and add another `IsoSurface` module to your network. Set the <field>instanceName</field> to *IsoSurfaceSegmentation* and connect the module to the output of the `CloseGap` module from the image segmentation. Set <field>IsoValue</field> to *420*, <field>Resolution</field> to *1*, and check <field>Auto-Update</field> and <field>Auto-Apply</field>.
 
-Set instanceName of the `SoWEMRenderer` module to *SoWEMRendererImage* and add another `SoWEMRenderer` module. Set this instanceName to *SoWEMRendererSegmentation* and connect it to the *IsoSurfaceSegmentation* module. Selecting the output of the new `SoWEMRenderer` shows the segmented parts as a 3D object in the output inspector.
+Set <field>instanceName</field> of the `SoWEMRenderer` module to *SoWEMRendererImage* and add another `SoWEMRenderer` module. Set this <field>instanceName</field> to *SoWEMRendererSegmentation* and connect it to the `IsoSurfaceSegmentation` module. Selecting the output of the new `SoWEMRenderer` shows the segmented parts as a 3D object in the output inspector.
 
 ![Segmentation preview in output inspector](images/tutorials/summary/Example1_7.png "Segmentation preview in output inspector")
 
@@ -103,7 +103,7 @@ Add a `SoSwitch` module to your network. Connect the switch to both of your `SoW
 
 ![SoSwitch](images/tutorials/summary/Example1_9.png "SoSwitch")
 
-The default input of the switch is *None*. Your 3D viewer remains black. Using the arrows on the `SoSwitch` allows you to toggle between the segmentation and the image. Input 0 shows the segmented brain, input 1 shows the head. You are now able to toggle between them. A view with both objects is still missing.
+The default input of the switch is *None*. Your 3D viewer remains black. Using the arrows on the `SoSwitch` allows you to toggle between the segmentation and the image. Input *0* shows the segmented brain, input *1* shows the head. You are now able to toggle between them. A view with both objects is still missing.
 
 {{< imagegallery 2 "images/tutorials/summary" "Example1_Segmentation" "Example1_Image" >}}
 
@@ -111,14 +111,14 @@ Add a `SoGroup` module and connect both `SoWEMRenderer` modules as input. The ou
 
 ![SoGroup](images/tutorials/summary/Example1_10.png "SoGroup")
 
-You can now also toggle input 2 of the switch showing both 3D objects. The only problem is: You cannot see the brain because it is located inside the head. Open the `SoWEMRendererImage` module panel and set *faceAlphaValue* to *0.5*. The viewer now shows the head in a semitransparent manner, so that you can see the brain. Certain levels of opacity are difficult to render. Add a `SoDepthPeelRenderer` module and connect it to the semitransparent `SoWEMRendererImage` module. Set *Layers* of the renderer to *1*.
+You can now also toggle input *2* of the switch showing both 3D objects. The only problem is: You cannot see the brain because it is located inside the head. Open the `SoWEMRendererImage` module panel and set <field>faceAlphaValue</field> to *0.5*. The viewer now shows the head in a semitransparent manner, so that you can see the brain. Certain levels of opacity are difficult to render. Add a `SoDepthPeelRenderer` module and connect it to the semitransparent `SoWEMRendererImage` module. Set <field>Layers</field> of the renderer to *1*.
 
 ![SoDepthPeelRenderer](images/tutorials/summary/Example1_Both.png "SoDepthPeelRenderer")
 
 You have a 2D and a 3D viewer now. Let's define the colors of the overlay to be reused for the 3D segmentation.
 
 ### Parameter Connections for Visualization
-Open the panels of the `SoView2DOverlay` and the `SoWEMRendererSegmentation` module. Draw a parameter connection from *SoView2DOverlay.baseColor* to *SoWEMRendererSegmentation.faceDiffuseColor*.
+Open the panels of the `SoView2DOverlay` and the `SoWEMRendererSegmentation` module. Draw a parameter connection from <field>SoView2DOverlay.baseColor</field> to <field>SoWEMRendererSegmentation.faceDiffuseColor</field>.
 
 ![Synchronized segmentation colors](images/tutorials/summary/Example1_11.png "Synchronized segmentation colors")
 

@@ -34,7 +34,7 @@ More information about GUI design in MeVisLab can be found {{< docuLinks "/Resou
 ### Creation of a Module Panel
 In [Example 2.2](tutorials/basicmechanisms/macromodules/globalmacromodules) we created the global macro module `Filter`. By now, this module does not have a proper panel. When double-clicking {{< mousebutton "left" >}} the module, the *Automatic Panel* is shown.
 
-The *Automatic Panel* contains fields, as well as module inputs and outputs. In this case, no fields exists except the *instanceName*. Accordingly, there is no possibility to interact with the module. Only the input and the output of the module are given.
+The *Automatic Panel* contains fields, as well as module inputs and outputs. In this case, no fields exists except the <field>instanceName</field>. Accordingly, there is no possibility to interact with the module. Only the input and the output of the module are given.
 
 ![Automatic Panel](images/tutorials/basicmechanics/GUI_10.png "Automatic Panel")
 
@@ -65,7 +65,7 @@ Interface {
 {{</highlight>}}
 
 ##### Module Inputs and Outputs
-To create an input/output, you need to define a *Field* in the respective input/output section. Each input/output gets a name (here *input0/output0*) that you can use to reference this field. The module input maps to an input of the internal network. You need to define this mapping. In this case, the input of the macro module `Filter` maps to the input of the module `Convolution` of the internal network (*internalName = Convolution.input0*). Similarly, you need to define which output of the internal network maps to the output of the macro module `Filter`. In this example, the output of the internal module `Arithmethic2` maps to the output of our macro module `Filter` (*internalName = Arithmetic2.output0*).
+To create an input/output, you need to define a *Field* in the respective input/output section. Each input/output gets a name (here <field>input0</field>/<field>output0</field>) that you can use to reference this field. The module input maps to an input of the internal network. You need to define this mapping. In this case, the input of the macro module `Filter` maps to the input of the module `Convolution` of the internal network (<inlineCode>internalName = Convolution.input0</inlineCode>). Similarly, you need to define which output of the internal network maps to the output of the macro module `Filter`. In this example, the output of the internal module `Arithmethic2` maps to the output of our macro module `Filter` (<inlineCode>internalName = Arithmetic2.output0</inlineCode>).
 
 Creating an input/output causes:
 1. Input/output connectors are added to the module.
@@ -76,7 +76,7 @@ Creating an input/output causes:
 ![Internal Network of your macro module](images/tutorials/basicmechanics/BM_23.png "Internal Network of your macro module")
 
 ##### Module Fields
-In the *Parameters* section, you can define *fields* of your macro module. These fields may map to existing fields of the internal network (*internalName = ...* ), but they do not need to and can also be completely new. You can reference these fields when creating a panel, to allow interactions with these fields. All fields appear in the *Automatic Panel*.
+In the *Parameters* section, you can define *fields* of your macro module. These fields may map to existing fields of the internal network (<attribute>internalName</attribute> = ...), but they do not need to and can also be completely new. You can reference these fields when creating a panel, to allow interactions with these fields. All fields appear in the *Automatic Panel*.
 
 ### Module Panel Layout
 To create your own user interface, we need to create a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Window" "Window" >}}. A window is one of the layout elements that exist in MDL. These layout elements are called {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#Controls" "controls" >}}. The curled brackets define the window section, in which you can define properties of the window and insert further controls like a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Box" "Box" >}}.
@@ -186,19 +186,13 @@ You can add the module `GUIExample` to your workspace and play around with is.
 {{</alert>}}
 
 #### Access to Existing Fields of the Internal Network
-To interact with fields of the internal network in your user interface, we
-need to access these fields. To access the field of the internal module
-`Convolution`, which defines the kernel, we need to use the internal
-network name. To find the internal field name, open the internal network of the macro module `Filter` (click on the module using the middle mouse button {{< mousebutton "middle" >}}).
+To interact with fields of the internal network in your user interface, we need to access these fields. To access the field of the internal module `Convolution`, which defines the *Kernel*, we need to use the internal network name. To find the internal field name, open the internal network of the macro module `Filter` (click on the module using the middle mouse button {{< mousebutton "middle" >}}).
 
-Then, open the panel of the module `Convolution` and right-click {{< mousebutton "right" >}} the field title *Use* of the box *Predefined Kernel* and select *Copy Name*. You now copied the internal network name of the field to your clipboard. The name is made up of *ModuleName.FieldName*, in this case *Convolution.predefKernel*.
+Then, open the panel of the module `Convolution` and right-click {{< mousebutton "right" >}} the field title *Use* of the box *Predefined Kernel* and select *Copy Name*. You now copied the internal network name of the field to your clipboard. The name is made up of *ModuleName.FieldName*, in this case <field>Convolution.predefKernel</field>.
 
 ![Convolution Module](images/tutorials/basicmechanics/Convolution.png "Convolution Module")
 
-In the panel of the module `Convolution`, you can change this variable *Kernel* via a drop-down menu. In
-MDL, a drop-down menu is called a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_ComboBox" "ComboBox" >}}. We can take over the field *predefKernel*, its drop-down menu and all its properties by
-creating a new field in our panel and reference to the internal
-field *Convolution.predefKernel*, which already exist in the internal network.
+In the panel of the module `Convolution`, you can change this variable *Kernel* via a drop-down menu. In MDL, a drop-down menu is called a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_ComboBox" "ComboBox" >}}. We can take over the field <field>predefKernel</field>, its drop-down menu and all its properties by creating a new field in our panel and reference to the internal field <field>Convolution.predefKernel</field>, which already exist in the internal network.
 
 Changes of the properties of this field can be done in the curled brackets using tags (here, we changed the title).
 
@@ -220,7 +214,7 @@ Window MyWindowName {
 
 ![Selecting the kernel](images/tutorials/basicmechanics/SelectingKernel.png "Selecting the kernel")
 
-As an alternative, you can define the field *kernel* in the *Parameters* section, and reference the defined field by its name. The result in the panel is the same. You can see a difference in the automatic panel. All fields that are defined in the interface in the *Parameters* section appear in the automatic panel. Fields of the internal network, which are used but not declared in the section *Parameters* of the module interface, do not appear in the automatic panel.
+As an alternative, you can define the field <field>kernel</field> in the *Parameters* section, and reference the defined field by its name. The result in the panel is the same. You can see a difference in the automatic panel. All fields that are defined in the interface in the *Parameters* section appear in the automatic panel. Fields of the internal network, which are used but not declared in the section *Parameters* of the module interface, do not appear in the automatic panel.
 
 {{< highlight filename="Filter.script" >}}
 ```Stan
@@ -272,7 +266,7 @@ Window MyWindowName {
 ```
 {{</highlight>}}
 
-The *wakeupCommand* defines a Python function that is executed as soon as the Window is opened. The Button *command* is executed when the user clicks on the Button.
+The *wakeupCommand* defines a Python function that is executed as soon as the Window is opened. The Button *command* is executed when the user clicks {{< mousebutton "left" >}} on the Button.
 
 Both commands reference a Python function that is executed whenever both actions (open the Window or click the Button) are executed.
 

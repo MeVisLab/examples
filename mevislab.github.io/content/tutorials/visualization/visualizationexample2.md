@@ -69,19 +69,19 @@ We rename the `DecomposeVector3` modules (press {{< keyboard "F2" >}} to do that
 
 In the panel of the module `Rectangle` in the box *Position*, you can see the position of the rectangle given in two 3D vectors.
 
-We like to use the modules `DecomposeVector3` to extract the single x, y, and z values of the vector. For that, create a parameter connection from the field *Start Wold Pos* to the vector of the module we named `StartWorldPos_Rectangle` and create a connection from the field *End World Pos* to the vector of module `EndWorldPos_Rectangle`. The decomposed coordinates can be now used for further parameter connections.
+We like to use the modules `DecomposeVector3` to extract the single x, y, and z values of the vector. For that, create a parameter connection from the field <field>Start World Pos</field> to the vector of the module we named `StartWorldPos_Rectangle` and create a connection from the field <field>End World Pos</field> to the vector of module `EndWorldPos_Rectangle`. The decomposed coordinates can be now used for further parameter connections.
 
 ![Parameter Connections](images/tutorials/visualization/V2_09.png "Parameter Connections")
 
-Open the panel of the module `SubImage`. Select the *Mode World Start & End* (*Image Axis Aligned*). Enable the function *Auto apply*.
+Open the panel of the module `SubImage`. Select the <field>Mode</field> *World Start & End (Image Axis Aligned)*. Toggle the field <field>Auto apply</field> *on*.
 
 {{<alert class="info" caption="Extra Infos">}}
-Make sure to also check *Auto-correct for negative subimage extents*, so that you can draw rectangles from left to right and from right to left.
+Make sure to also check <field>Auto-correct for negative subimage extents</field>, so that you can draw rectangles from left to right and from right to left.
 {{</alert>}}
 
 ![World Coordinates](images/tutorials/visualization/V2_10.png "World Coordinates")
 
-Now, create parameter connections from the fields *X*, *Y*, *Z* of the module `StartWorldPos_Rectangle` to the field *Start X*, *Start Y*, *Start Z* in the panel of the module `SubImage`. Similarly, connect the parameter fields *X*, *Y*, *Z* of the module `EndWorldPos_Rectangle` to the field *End X*, *End Y*, *End Z* in the panel of the module `SubImage`.
+Now, create parameter connections from the fields <field>X</field>, <field>Y</field>, <field>Z</field> of the module `StartWorldPos_Rectangle` to the field <field>Start X</field>, <field>Start Y</field>, <field>Start Z</field> in the panel of the module `SubImage`. Similarly, connect the parameter fields <field>X</field>, <field>Y</field>, <field>Z</field> of the module `EndWorldPos_Rectangle` to the field <field>End X</field>, <field>End Y</field>, <field>End Z</field> in the panel of the module `SubImage`.
 
 ![Another Parameter Connection](images/tutorials/visualization/V2_11.png "Another Parameter Connection")
 

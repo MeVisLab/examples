@@ -30,8 +30,8 @@ In this example, we like to dynamically change the color of a cube in an Open In
 ### Scripting Using the Module `RunPythonScript`
 Open the panel of `RunPythonScript`. There is an option to display input and output fields. For that, tick the box *Fields* on the top left side of the panel. 
 
-You can also name these fields individually by ticking the box *Edit field titles*. Call the first input field *TimeCounter* and draw a parameter connection from the field *Value* of the panel of `TimeCounter` to the input field *TimeCounter* of the module `RunPythonScript`.
-We can name the first output field *DiffuseColor* and draw a parameter connection from this field to the field *Diffuse Color* in the panel of the module `SoMaterial`.
+You can also name these fields individually by ticking the box *Edit field titles*. Call the first input field <field>TimeCounter</field> and draw a parameter connection from the field <field>Value</field> of the panel of `TimeCounter` to the input field <field>TimeCounter</field> of the module `RunPythonScript`.
+We can name the first output field <field>DiffuseColor</field> and draw a parameter connection from this field to the field <field>Diffuse Color</field> in the panel of the module `SoMaterial`.
 
 ![TimeCounter](images/tutorials/basicmechanics/Scripting_07.png "TimeCounter")
 
@@ -49,7 +49,7 @@ updateOutputValue("DiffuseColor", str(red) + " " + str(green) + " " + str(blue))
 ```
 {{</highlight>}}
 
-To update the output field *DiffuseColor*, it is important to use the methods *updateOutputValue(name, value)* or *setOutputValue(name, value)* instead of simply assigning a value to the output field.
+To update the output field <field>DiffuseColor</field>, it is important to use the methods *updateOutputValue(name, value)* or *setOutputValue(name, value)* instead of simply assigning a value to the output field.
 
 You can now see a color change in the viewer `SoExaminerViewer` every time the `TimeCounter` counts.
 

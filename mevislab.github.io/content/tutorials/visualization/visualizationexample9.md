@@ -67,26 +67,26 @@ We want to show and hide the single segmentations during camera movements. Add t
 ![ LUTRescale](images/tutorials/visualization//pathtracer/V9_3.png " LUTRescale")
 
 ## Animate Bones and Vessels
-Now, let's shift our focus to highlighting bones and vessels within the animation. Right-click on the `LUTRescale` module, navigate to *Show Window*, and select *Automatic Panel*. This will bring up the control window for the `LUTRescale` module. Search for the field named *targetMax*. You can either drag and drop it directly from the *Automatic Panel*, or alternatively, locate the *Max* field in the *Output Index Range* box within the module panel and then drag and drop it onto the fields section in the `AnimationRecorder` module, specifically under the *Perspective Camera* field.
+Now, let's shift our focus to highlighting bones and vessels within the animation. Right-click on the `LUTRescale` module, navigate to *Show Window*, and select *Automatic Panel*. This will bring up the control window for the `LUTRescale` module. Search for the field named <field>targetMax</field>. You can either drag and drop it directly from the *Automatic Panel*, or alternatively, locate the <field>Max</field> field in the *Output Index Range* box within the module panel and then drag and drop it onto the fields section in the `AnimationRecorder` module, specifically under the *Perspective Camera* field.
  
-By linking the *targetMax* field of the `LUTRescale` module to the `AnimationRecorder`, you establish a connection that allows you to define different values of the field for specific timepoints. The values between these timepoints can be interpolated as described above. 
+By linking the <field>targetMax</field> field of the `LUTRescale` module to the `AnimationRecorder`, you establish a connection that allows you to define different values of the field for specific timepoints. The values between these timepoints can be interpolated as described above. 
 
 ![ LUTRescale & AnimationRecorder](images/tutorials/visualization//pathtracer/LUTRescale_AnimationRecorder2.png " LUTRescale & AnimationRecorder")
 
-To initiate the animation sequence, start by adding a keyframe at position *0* for the *targetMax* field. Set the *Target Max* value in the *Edit Key Frame – [LUTRescale.targetMax]* window to *1*, and click on the *Store Current Field Value* button to save it.
+To initiate the animation sequence, start by adding a keyframe at position *0* for the <field>targetMax</field> field. Set the <field>Target Max</field> value in the *Edit Key Frame – [LUTRescale.targetMax]* window to *1*, and click on the *Store Current Field Value* button to save it.
 
-Next, proceed to add keyframes at the same timepoints as the desired keyframes of the *Perspective Camera* field's first sequence. For each selected keyframe, progressively set values for the *Target Max* field, gradually increasing to *10*. This ensures specific synchronization between the visibility adjustments controlled by the `LUTRescale` module and the camera movements in the animation, creating a seamless transition. This gradual shift visually reveals the bones and vessels while concealing the knee structures and muscles.
+Next, proceed to add keyframes at the same timepoints as the desired keyframes of the *Perspective Camera's* first sequence. For each selected keyframe, progressively set values for the <field>Target Max</field> field, gradually increasing to *10*. This ensures specific synchronization between the visibility adjustments controlled by the `LUTRescale` module and the camera movements in the animation, creating a seamless transition. This gradual shift visually reveals the bones and vessels while concealing the knee structures and muscles.
 
-To seamlessly incorporate the new keyframe at the same timepoints as the *Perspective Camera* field, you have two efficient options. Simply click on the keyframe of the first sequence, and the line will automatically appear in the middle of the keyframe. A double-click will effortlessly insert a keyframe at precisely the same position. If you prefer more accurate adjustments, you can also set your frame manually using the *Edit Key Frame - [LUTRescale.targetMax]* window. This flexibility allows for precise control over the animation timeline, ensuring keyframes align precisely with your intended moments.
+To seamlessly incorporate the new keyframe at the same timepoints as the *Perspective Camera*, you have two efficient options. Simply click on the keyframe of the first sequence, and the line will automatically appear in the middle of the keyframe. A double-click will effortlessly insert a keyframe at precisely the same position. If you prefer more accurate adjustments, you can also set your frame manually using the *Edit Key Frame - LUTRescale.targetMax* window. This flexibility allows for precise control over the animation timeline, ensuring keyframes align precisely with your intended moments.
 
 ![ LUTRescale & AnimationRecorder](images/tutorials/visualization//pathtracer/V9_7.png " LUTRescale & AnimationRecorder")
 
 ## Showcasing Only Bones
-To control the visibility of the vessels, right-click on the ` LUTRescale1` module connected to the vessels. Open the *Show Window* and select *Automatic Panel*. Drag and drop the *targetMax* field into the `AnimationRecorder` module's fields section. 
+To control the visibility of the vessels, right-click on the ` LUTRescale1` module connected to the vessels. Open the *Show Window* and select *Automatic Panel*. Drag and drop the <field>targetMax</field> field into the `AnimationRecorder` module's fields section. 
 
 ![ LUTRescale1 & AnimationRecorder](images/tutorials/visualization//pathtracer/V9_8.png " LUTRescale1 & AnimationRecorder")
 
-Add keyframes for both the *Perspective Camera* field and the *targetMax* in `LUTRescale1` at the same timepoints. Access the *Edit Camera Key Frame* window for the added keyframe in the *Perspective Camera* field and save the *current camera state*. To exclusively highlight only bones, adjust the *Target Max* values from *1* to *10000* in *Edit Key Frame - [LUTRescale1.targetMax]*.
+Add keyframes for both the *Perspective Camera* and the <field>targetMax</field> in `LUTRescale1` at the same timepoints. Access the *Edit Camera Key Frame* window for the added keyframe in the Perspective Camera and save the *current camera state*. To exclusively highlight only bones, adjust the <field>Target Max</field> values from *1* to *10000* in *Edit Key Frame - LUTRescale1.targetMax*.
 
 ![ LUTRescale1 & AnimationRecorder](images/tutorials/visualization//pathtracer/V9_9.png " LUTRescale1 & AnimationRecorder")
 

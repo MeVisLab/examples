@@ -138,10 +138,10 @@ Draw parameter connections from one `SoExaminerViewer` to the other. Use the fie
 
 ![ Camera positions](images/tutorials/visualization/V8_SyncFloat.png " Camera positions")
 
-Connect the backwards direction of the two `SoExaminerViewer` by using multiple `SyncFloat` modules and two `SyncVector` modules for *position* and *orientation* fields.
+Connect the backwards direction of the two `SoExaminerViewer` by using multiple `SyncFloat` modules and two `SyncVector` modules for <field>position</field> and <field>orientation</field> fields.
 
 {{<alert class="info" caption="Extra Infos">}}
-To establish connections between fields with the type *Float*, you can use the *SyncFloat* module. For fields containing vector, the appropriate connection can be achieved using the *SyncVector* module.
+To establish connections between fields with the type *Float*, you can use the `SyncFloat` module. For fields containing vector, the appropriate connection can be achieved using the `SyncVector` module.
 {{</alert>}}
 
 ![ SyncFloat & SyncVector](images/tutorials/visualization/V8_SyncFloat_Network.png " SyncFloat & SyncVector")
@@ -152,7 +152,7 @@ Now, you can notice the difference between the two modules. We use `SoVascularSy
 
 ![ SoVascularSystem & SoGVRVolumeRenderer](images/tutorials/visualization/V8_Difference1.png " SoVascularSystem & SoGVRVolumeRenderer")
 
-The `SoVascularSystem` module has additional visualization examples unlike `SoGVRVolumeRenderer`. Open the panel of the `SoVascularSystem` module and select *Random Points* for *Display Mode* in the *Main* tab to see the difference. 
+The `SoVascularSystem` module has additional visualization examples unlike `SoGVRVolumeRenderer`. Open the panel of the `SoVascularSystem` module and select *Random Points* for <field>Display Mode</field> in the *Main* tab to see the difference. 
 
 ![ Random Points](images/tutorials/visualization/V8_SoVasularSystem_DisplayMode1.png " Random Points")
 
@@ -167,7 +167,7 @@ For volume calculations, use the original image mask instead of the result from 
 ### Enhance Vessel Visualization Based on Distance Information
 Now that you've successfully obtained the vessel skeleton graph using `DtfSkeletonization`, let's take the next step to enhance the vessel visualization based on the radius information of the vessels. We will modify the existing code to use the minimum distance between centerline and surface of the vessels for defining the color.
 
-The values for the provided vascular tree vary between 0mm and 10mm. Therefore, define the range of the `SoLUTEditor` to *New Range Min* as *1* and *New Range Max* as *10*. On *Editor* tab, define the following LUT:
+The values for the provided vascular tree vary between 0mm and 10mm. Therefore, define the range of the `SoLUTEditor` to <field>New Range Min</field> as *1* and <field>New Range Max</field> as *10*. On *Editor* tab, define the following LUT:
 
 ![SoLUTEditor](images/tutorials/visualization/V8_SoLUTEditor2.png "SoLUTEditor")
 
@@ -194,10 +194,10 @@ ctx.field("SoVascularSystem.apply").touch()
 
 
 {{<alert class="warning" caption="Warning">}}
-Be aware that the *MinDistance* and *MaxDistance* values are algorithm-specific and don't precisely represent vessel diameters. The result of `DTFSkeletonization` is a vascular graph with an idealized, circular profile while in reality, the vessels have more complicated profiles. It is an idealized graph where all vessels have a circular cross section. This cross section only has one radius, described by *MinDistance* and *MaxDistance*. Those are not the two radii of an elliptical cross section, but the results of two different algorithms to measure the one, idealized radius at Skeletons.
+Be aware that the <attribute>MinDistance</attribute> and <attribute>MaxDistance</attribute> values are algorithm-specific and don't precisely represent vessel diameters. The result of `DTFSkeletonization` is a vascular graph with an idealized, circular profile while in reality, the vessels have more complicated profiles. It is an idealized graph where all vessels have a circular cross section. This cross section only has one radius, described by <attribute>MinDistance</attribute> and <attribute>MaxDistance</attribute>. Those are not the two radii of an elliptical cross section, but the results of two different algorithms to measure the one, idealized radius at Skeletons.
 {{</alert>}}
 
-Instead of using the ID of each edge for the label property, we are now using the *MinDistance* property of the skeleton. The result is a color-coded 3D visualization depending on the radius of the vessels. Small vessels are red, large vessels are green.
+Instead of using the ID of each edge for the label property, we are now using the <attribute>MinDistance</attribute> property of the skeleton. The result is a color-coded 3D visualization depending on the radius of the vessels. Small vessels are red, large vessels are green.
 
 ![Radius based Visualization](images/tutorials/visualization/V8_010new.png "Radius based Visualization") 
 

@@ -31,7 +31,7 @@ Add the modules `SoSceneLoader`, `SoBackground`, and `SoExaminerViewer` to your 
 Select the file *vtkCow.obj* from MeVisLab demo data directory. Open `SoExaminerViewer` and inspect the scene. You will see a 3D cow.
 
 {{<alert class="info" caption="Info">}}
-In the case you cannot see the cow, it might be located outside your current camera location. Trigger the field *rescanScene* in the case the cow is not visible.
+In the case you cannot see the cow, it might be located outside your current camera location. Trigger the field <field>rescanScene</field> in the case the cow is not visible.
 {{</alert>}}
 
 ![Cow in SoExaminerViewer](images/tutorials/thirdparty/vtkCow.png "Cow in SoExaminerViewer")

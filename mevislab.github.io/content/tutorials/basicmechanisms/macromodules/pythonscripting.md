@@ -110,7 +110,7 @@ If you now use the menu item {{< menuitem "Scripting" "Start Network Script" >}}
 
 Under {{< menuitem "View" "Views" "Scripting Assistant" >}} you can find the view *Scripting Assistant*. In this view, the actions you execute in the workspace are translated into Python script.
 
-For example: Open the *Scripting Assistant*. Add the module `WEMInitialize` to your workspace. You can select a *Model*, for example, the cube. In addition, you can change the *Translation* and press *Apply*. All these actions can be seen in the *Scripting Assistant* translated into Python code. Therefore, the *Scripting Assistant* is a powerful tool to help you to script you actions.
+For example: Open the *Scripting Assistant*. Add the module `WEMInitialize` to your workspace. You can select a <field>Model</field>, for example, the <field>cube</field>. In addition, you can change the <field>Translation</field> and press *Apply*. All these actions can be seen in the *Scripting Assistant* translated into Python code. Therefore, the *Scripting Assistant* is a powerful tool to help you to script you actions.
 
 ![Scripting Assistant](images/tutorials/basicmechanics/Scripting_01.png "Scripting Assistant")
 

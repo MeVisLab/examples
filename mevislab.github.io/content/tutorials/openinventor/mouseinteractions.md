@@ -42,7 +42,7 @@ Make sure to configure `SoMouseGrabber` fields as seen below.
 ![SoMouseGrabber](images/tutorials/openinventor/V5_02.png "SoMouseGrabber")
 
 **You can see:**
-1. *Button 3*, the right mouse button {{< mousebutton "right" >}}, is tagged as being pressed
+1. <field>Button 3</field>, the right mouse button {{< mousebutton "right" >}}, is tagged as being pressed
 2. Changes of the mouse coordinates are displayed in the box *Output*
 
 ![Mouse Interactions](images/tutorials/openinventor/V5_03.png "Mouse Interactions")

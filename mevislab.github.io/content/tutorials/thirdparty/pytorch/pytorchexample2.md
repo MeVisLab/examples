@@ -45,7 +45,7 @@ Our new module does not provide any input or output.
 ![DemoAI local macro](images/tutorials/thirdparty/pytorch_example2_4.png "DemoAI local macro").
 
 ### Adding an Interface to the Local Macro
-Right-click {{< mousebutton "right" >}} the local macro and select {{< menuitem "Related Files" "DemoAI.script">}}. MATE opens showing the *.script* file of our module. Add an input *Field* of type *Image*, an output *Field* using the *internalName* of the output of our `PythonImage`, and a *Trigger* to start the segmentation.
+Right-click {{< mousebutton "right" >}} the local macro and select {{< menuitem "Related Files" "DemoAI.script">}}. MATE opens showing the *.script* file of our module. Add an input *Field* of type *Image*, an output *Field* using the <field>internalName</field> of the output of our `PythonImage`, and a *Trigger* to start the segmentation.
 
 You should also already add a Python file in the *Commands* section.
 
