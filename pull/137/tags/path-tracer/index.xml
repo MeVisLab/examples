@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Path Tracer on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/137/tags/path-tracer/</link><description>Recent content in Path Tracer on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/137/tags/path-tracer/index.xml" rel="self" type="application/rss+xml"/><item><title>Example 6: MeVis Path Tracer</title><link>https://mevislab.github.io/examples/pull/137/tutorials/visualization/visualizationexample6/</link><pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/137/tutorials/visualization/visualizationexample6/</guid><description>&lt;h1 id="example-6-mevis-path-tracer"&gt;Example 6: MeVis Path Tracer&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://youtube.com/shorts/U23QH2Pvwew" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/U23QH2Pvwew/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;We have a Short video showing the possibilities of the &lt;b&gt;MeVis Path Tracer&lt;/b&gt; on &lt;a href="https://youtube.com/shorts/U23QH2Pvwew" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The MeVis Path Tracer offers a Monte Carlo Path Tracing framework running on CUDA GPUs. It offers photorealistic rendering of volumes and meshes, physically based lightning with area lights and soft shadows and fully integrates into MeVisLab Open Inventor (camera, depth buffer, clipping planes, etc.).&lt;/p&gt;
+
+&lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&gt;
+ &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&gt;
+ &lt;/symbol&gt;
+&lt;/svg&gt;
+
+&lt;div class="alert alert-primary alert-info d-flex align-items-center" role="alert"&gt;
+ &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Extra Infos:"&gt;&lt;use xlink:href="#info-fill"/&gt;&lt;/svg&gt;
+ &lt;div&gt;
+ &lt;b&gt;Extra Infos:&amp;nbsp;&lt;/b&gt;
+ CUDA is a parallel computing platform and programming model created by NVIDIA. For further information, see &lt;a href="https://blogs.nvidia.com/blog/2012/09/10/what-is-cuda-2/" target="_blank" rel="noopener"&gt;NVIDIA website&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="container"&gt;
+ 
+ 
+ &lt;div class="row row-cols-1 row-cols-sm-2 row-cols-md-5"&gt;
+ &lt;div class="col mt-5"&gt;
+ &lt;p class="page-image"&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/visualization/pathtracer/PathTracer1.png" title="PathTracer1"&gt;&lt;img src="images/tutorials/visualization/pathtracer/PathTracer1.png" class="img-fluid" alt="PathTracer1"&gt;&lt;/a&gt;
+ &lt;figcaption class="figure-caption"&gt;PathTracer1&lt;/figcaption&gt;
+ &lt;/p&gt;</description></item><item><title>Example 6.1: Volume Rendering vs. Path Tracer</title><link>https://mevislab.github.io/examples/pull/137/tutorials/visualization/pathtracer/pathtracerexample1/</link><pubDate>Thu, 23 Feb 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/137/tutorials/visualization/pathtracer/pathtracerexample1/</guid><description>&lt;h1 id="example-61-volume-rendering-vs-path-tracer"&gt;Example 6.1: Volume Rendering vs. Path Tracer&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=E0H87Cimu_M" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/E0H87Cimu_M/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=E0H87Cimu_M" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this example, you develop a network to show some differences between volume rendering and the MeVisLab Path Tracer. You will visualize the same scene using both 3D rendering techniques and some of the modules for path tracing.&lt;/p&gt;
+
+&lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&gt;
+ &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&gt;
+ &lt;/symbol&gt;
+&lt;/svg&gt;
+
+&lt;div class="alert alert-primary alert-warning d-flex align-items-center" role="alert"&gt;
+ &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Attention:"&gt;&lt;use xlink:href="#warning-fill"/&gt;&lt;/svg&gt;
+ &lt;div&gt;
+ &lt;b&gt;Attention:&amp;nbsp;&lt;/b&gt;
+ &lt;p&gt;The MeVis Path Tracer requires an NVIDIA graphics card with CUDA support. In order to check your hardware, open MeVisLab and add a &lt;code&gt;SoPathTracer&lt;/code&gt; module to your workspace. You will see a message if your hardware does not support CUDA:&lt;/p&gt;</description></item><item><title>Example 6.2: Visualization Using Path Tracer</title><link>https://mevislab.github.io/examples/pull/137/tutorials/visualization/pathtracer/pathtracerexample2/</link><pubDate>Tue, 02 Jan 2024 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/137/tutorials/visualization/pathtracer/pathtracerexample2/</guid><description>&lt;h1 id="example-62-visualization-using-sopathtracer"&gt;Example 6.2: Visualization Using SoPathTracer&lt;/h1&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this tutorial, we will explain the basics of using the &lt;code&gt;SoPathTracer&lt;/code&gt; module in MeVisLab. You will learn how to create a scene, assign materials, add light sources, and configure the PathTracer to generate enhanced renderings.&lt;/p&gt;
+
+&lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&gt;
+ &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&gt;
+ &lt;/symbol&gt;
+&lt;/svg&gt;
+
+&lt;div class="alert alert-primary alert-warning d-flex align-items-center" role="alert"&gt;
+ &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Attention:"&gt;&lt;use xlink:href="#warning-fill"/&gt;&lt;/svg&gt;
+ &lt;div&gt;
+ &lt;b&gt;Attention:&amp;nbsp;&lt;/b&gt;
+ &lt;p&gt;The MeVis Path Tracer requires an NVIDIA graphics card with CUDA support. In order to check your hardware, open MeVisLab and add a &lt;code&gt;SoPathTracer&lt;/code&gt; module to your workspace. You will see a message if your hardware does not support CUDA:&lt;/p&gt;</description></item></channel></rss>
