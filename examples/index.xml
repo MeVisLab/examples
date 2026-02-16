@@ -3616,7 +3616,7 @@ This example highlights ways of creating CSOs using modules of the &lt;code&gt;S
 &lt;/p&gt;
 &lt;h1 id="download"&gt;Download&lt;/h1&gt;
 &lt;p&gt;You can download the example network &lt;a href="examples/data_objects/surface_objects/example1/SurfaceExample1.mlab"&gt;here&lt;/a&gt;&lt;/p&gt;</description></item><item><title>Display Images Converted to Open Inventor Scene Objects</title><link>https://mevislab.github.io/examples/examples/visualization/example4/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/examples/visualization/example4/</guid><description>&lt;h1 id="visualization-example-4-display-images-converted-to-open-inventor-scene-objects"&gt;Visualization Example 4: Display Images Converted to Open Inventor Scene Objects&lt;/h1&gt;
-&lt;p&gt;This example shows how to convert images to Open Inventor scene objects using the module &lt;code&gt;SoView2D&lt;/code&gt; and modules based on &lt;code&gt;SoView2D&lt;/code&gt;.
+&lt;p&gt;This example shows how to convert a slice or slab of voxel images to 2D renderings on the screen using the module &lt;code&gt;SoView2D&lt;/code&gt; and modules based on SoView2DExtension.
 &lt;p class="page-image"&gt;
  &lt;a data-modal="bs-lightbox" href="examples/visualization/example4/image.png" title=""&gt;&lt;img id="" class="img-fluid rounded" src="examples/visualization/example4/image.png" alt="Screenshot" /&gt;&lt;/a&gt;
  &lt;figcaption class="figure-caption"&gt;&lt;/figcaption&gt;
