@@ -18,7 +18,7 @@ menu:
 {{< youtube "WaD6zuvVNek" >}}
 
 ## Introduction
-In the previous example you learned how to use the module `SoView2DOverlay` together with a `View2D`. MeVisLab provides a whole family of `SoView2D*` modules (`SoView2DOverlay`, `SoView2DRectangle`, `SoView2DGrid`, ...). All these modules create or interact with scene objects and are based on the module `SoView2D`, which can convert a voxel image into a scene object. In this example, you will get to know some members of the `SoView2D` family.
+In the previous example you learned how to use the module `SoView2DOverlay` together with a `View2D`. MeVisLab provides a whole family of `SoView2D*` modules (`SoView2DOverlay`, `SoView2DRectangle`, `SoView2DGrid`, ...). These modules are derived from SoView2DExtension, which extends the SoView2D with specialized interaction and rendering. `SoView2D` itself renders a slice or a slab of a voxel image as a 2D image on the screen.
 
 {{<alert class="info" caption="Extra Infos">}}
 
