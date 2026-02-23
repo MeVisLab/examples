@@ -1,0 +1,200 @@
+// MDL v1 utf8
+mevislabVersion = 3.5.90.1190
+network  {
+  watchlist = ""
+}
+module SoCube {
+  internal  {
+    frame = "801 293 80 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "578 683 144 94"
+        sizeHint = "117 94"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoCube
+    width = 1
+    height = 1
+    depth = 1.1500001
+  }
+}
+module SoExaminerViewer {
+  internal  {
+    frame = "709 197 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _viewer {
+        geometry = "991 150 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+      window _default {
+        geometry = "129 151 490 362"
+        sizeHint = "490 362"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoExaminerViewer
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    border = FALSE
+    background = "0 0 0"
+    transparency = DELAYED_BLEND
+    antialiasing = FALSE
+    antialiasingNumPasses = 1
+    useSampleBuffers = FALSE
+    numSamples = 8
+    grabKeyFocus = TRUE
+    enableKeyCommands = TRUE
+    snapshotFormat = SNAPSHOT_RGB
+    outputAviFile = ""
+    autoRedrawWhenRecording = TRUE
+    frameRate = 7
+    frameRateAvi = 15
+    outputSnapshotFile = none
+    outputSnapshotFileWritten = none
+    autoIncreaseFile = TRUE
+    showSnapshotWithShell = FALSE
+    snapCount = 0
+    inputDevicesList = ""
+    headlight = TRUE
+    decoration = FALSE
+    popupMenuEnabled = FALSE
+    viewing = FALSE
+    autoClipping = TRUE
+    drawStyle = VIEW_AS_IS
+    interactiveDrawStyle = VIEW_LOW_COMPLEXITY
+    viewAllFlag = FALSE
+    initialCameraOrientation = CAMERA_KEEP_AS_IS
+    applyCameraOrientation = CAMERA_KEEP_AS_IS
+    cameraType = CAMERA_PERSPECTIVE
+    autoApplyUserSettingOrientation = FALSE
+    userSettingOrientation = "0 0 1 0"
+    automaticViewAll = FALSE
+    storeCurrentState = TRUE
+    saveCamera = TRUE
+    cursor = TRUE
+    isCameraStored = TRUE
+    perspective = TRUE
+    stereoViewing = FALSE
+    stereoOffset = 3
+    height = 0.78539801
+    position = "2.38996052742004 1.00690674781799 2.38664031028748"
+    orientation = "-0.184235528111458 0.895387530326843 0.405386835336685 0.910086631774902"
+    nearDistance = 2.6505392
+    farDistance = 4.4001255
+    focalDistance = 3.5244601
+    forceRedrawOnInteraction = FALSE
+    button1events = TO_VIEWER
+    button2events = TO_VIEWER
+    button3events = TO_SCENE
+    keyEvents = TO_VIEWER
+    animationEnabled = FALSE
+    feedback = FALSE
+    feedbackSize = 32
+    mouseInteraction = ""
+    rotationAxis = "0 1 0"
+    rotationAngle = 360
+    rotationSteps = 80
+    recordRotation = TRUE
+    wheelZoomEnabled = FALSE
+    wheelRotationEnabled = FALSE
+  }
+}
+module SoMouseGrabber {
+  internal  {
+    frame = "657 293 128 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "61 295 476 475"
+        sizeHint = "476 475"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoMouseGrabber
+    interactionProviderID = ""
+    on = TRUE
+    useManagedInteraction = FALSE
+    normalized = FALSE
+    clamp = TRUE
+    button1 = RELEASED
+    button2 = RELEASED
+    button3 = PRESSED
+    shift = RELEASED
+    ctrl = RELEASED
+    alt = IGNORED
+    cursorShape = UNDEFINED_CURSOR
+    xmin = 1
+    xmax = 4
+    ymin = 1
+    ymax = 4
+    setEventHandled = FALSE
+    setWheelEventHandled = FALSE
+    flipX = FALSE
+    flipY = FALSE
+    swapXY = FALSE
+    sensitivity = 1
+    wheelOverflow = FALSE
+    wheel = 0
+    wheelStep = 1
+    wheelMin = 0
+    wheelMax = 100
+  }
+}
+connections  {
+  SoCube.width = SoMouseGrabber.x
+  SoCube.depth = SoMouseGrabber.y
+  SoExaminerViewer.children = "SoMouseGrabber.self SoCube.self"
+}
+networkModel  {
+  parentItems  {
+    0  {
+      MLABNetworkModelItem MLABNoteItem {
+        uniqueId = 8
+        objectName = ""
+        parentUniqueId = 0
+        frame = "426 181 200 200"
+        backgroundColor  {
+          r = 252
+          g = 242
+          b = 2
+          a = 255
+        }
+        text = "Open the viewer. Press the right mouse button and move the mouse to change the size of the Open Inventor object. "
+        richText = "*<html>
+  <head>
+    <style type="text/css">
+      a.headerlink {
+        visibility: hidden;
+      }
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+
+  <p>Open the viewer. Press the right mouse button and move the mouse to change the size of the Open Inventor object.</p>
+
+
+  </body>
+</html>*"
+        titleText = ""
+        isCollapsed = False
+        drawAsComment = False
+        titleFrame = "431 186 190 22"
+      }
+    }
+  }
+}
