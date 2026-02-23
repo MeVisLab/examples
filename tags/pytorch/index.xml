@@ -20,11 +20,11 @@
  &lt;/symbol&gt;
 &lt;/svg&gt;
 
-&lt;div class="alert alert-primary alert-warning d-flex align-items-center" role="alert"&gt;
- &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"&gt;&lt;use xlink:href="#warning-fill"/&gt;&lt;/svg&gt;
+&lt;div class="alert alert-primary alert-info d-flex align-items-center" role="alert"&gt;
+ &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"&gt;&lt;use xlink:href="#info-fill"/&gt;&lt;/svg&gt;
  &lt;div&gt;
- &lt;b&gt;Warning:&amp;nbsp;&lt;/b&gt;
- You should not use the general Python &lt;em&gt;pip&lt;/em&gt; command from a locally installed Python, because MeVisLab will not know these packages and they cannot be used in MeVisLab directly.
+ &lt;b&gt;Info:&amp;nbsp;&lt;/b&gt;
+ Alternatively, you can use the command-line tool &lt;strong&gt;mevislab_pip&lt;/strong&gt; with the option &amp;ldquo;&amp;ndash;target-mlab-package-path &lt;em&gt;&amp;lt;UserPackagePath&amp;gt;&lt;/em&gt;&amp;rdquo;
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The module either allows to install packages into the global MeVisLab installation directory, or into your defined user package. We will use the user package directory, because then the installed packages remain available in your packages even if you uninstall or update MeVisLab. In addition to that, no administrative rights are necessary if you did install MeVisLab for all users.&lt;/p&gt;</description></item><item><title>Example 2: Brain Parcellation Using PyTorch</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample2/</link><pubDate>Fri, 30 Jun 2023 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/pytorch/pytorchexample2/</guid><description>&lt;h1 id="example-2-brain-parcellation-using-pytorch"&gt;Example 2: Brain Parcellation Using PyTorch&lt;/h1&gt;
