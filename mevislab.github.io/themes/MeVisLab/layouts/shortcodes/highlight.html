@@ -1,7 +1,9 @@
 <div class="card" style="margin-bottom: 2rem">
+    {{ if not (eq (.Get "filename") "") }}
     <div class="card-header d-flex justify-content-between">
         <p class="card-title m-0">{{ with .Get "filename" }}{{.}}{{end}}</p>
     </div>
+    {{ end }}
     <div class="card-body">
         {{ .Inner | markdownify }}
     </div>
