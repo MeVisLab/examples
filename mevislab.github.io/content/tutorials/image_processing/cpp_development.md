@@ -63,3 +63,6 @@ Generally, however, it is not always a good solution to combine that, as the pro
 Therefore, rather separate the ML and Open Inventor functionalities into two modules. This way,
 * functionality is encapsulated and can be reused as module
 * modules for the single steps may already be available in MeVisLab and spare you a new development
+
+## Code examples
+In addition to the tutorials in this chapter, you can find additional code examples in your MeVisLab installation directory.
