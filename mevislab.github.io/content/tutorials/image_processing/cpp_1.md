@@ -143,7 +143,7 @@ Your compiled **.dll* is available in your project directory under *Sources/lib*
 
 This only works in a post-build step.
 
-If the environment variable *MLAB_AUTOMATIC_POSTBUILD_COPY* is set, the newly compiled DLLs and .lib files are copied to the correct location when MeVisLab restarts. Otherwise, they must be copied manually.
+If the environment variable *MLAB_AUTOMATIC_POSTBUILD_COPY* is set, the newly compiled DLLs and *.lib* files are copied to the correct location when MeVisLab restarts. Otherwise, they must be copied manually.
 
 For testing purposes, you can use a `LocalImage` module and two `View2D` modules. Connect the `SimpleAdd` module to the second `View2D` and change the <field>Constant Value</field> field.
 
@@ -177,5 +177,5 @@ The output image of the module `SimpleAdd` is automatically recalculated on chan
 
 ## Summary
 * MeVisLab allows to develop your own C++ modules.
-* The Project Wizard already generates all necessary \**.cpp* and \**.h* files and a loop through all voxels of the input image.
+* The Project Wizard already generates all necessary *.cpp* and *.h* files and a loop through all voxels of the input image.
 * Changes of user-defined fields automatically lead to a recalculation of the input image.
