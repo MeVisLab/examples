@@ -18,7 +18,7 @@ menu:
 The development of your own C++ modules can be done by ML modules and by Open Inventor modules.
 
 {{<alert class="info" caption="Important Information">}}
-Make sure to use a compiler that is compatible to your currently installed MeVisLab version.
+Make sure to use a compiler that is compatible with your currently installed MeVisLab version.
 {{</alert>}}
 
 ### ML Modules on the C++ Level
@@ -27,9 +27,9 @@ Make sure to use a compiler that is compatible to your currently installed MeVis
 * Inputs and outputs for abstract data structures are connectors to pointers of objects derived from class Base and are called Base objects.
 
 ### Open Inventor Modules on the C++ Level
-* Most Open Inventor modules are objects derived from class SoNode defined in the Open Inventor library.
-* Open Inventor inputs and outputs are connectors to objects derived from class SoNode defined in the Open Inventor library. Many Open Inventor modules will return themselves as outputs (“self”). On inputs, they may have connectors to child Open Inventor modules.
-* Some Open Inventor modules are objects derived from class SoEngine. They are used for calculations and return their output not via output connectors but via fields.
+* Most Open Inventor modules are objects derived from class SoNode, defined in the Open Inventor library.
+* Open Inventor inputs and outputs are connectors to objects derived from class SoNode, defined in the Open Inventor library. Many Open Inventor modules will return themselves as outputs (“self”). On inputs, they may have connectors to child Open Inventor modules.
+* Some Open Inventor modules are objects derived from class SoEngine. They are used for calculations and return their output not via output connectors but via parameter fields.
 * Open Inventor modules may also have input and output connectors to Base objects and Image objects.
 * All standard Open Inventor nodes defined in the Open Inventor library are available in MeVisLab as Open Inventor modules.
 
