@@ -478,9 +478,9 @@ In this chapter in particular, we will focus on simple image interaction with tw
 &lt;a href="https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/GettingStarted/ch06.html#FOImageProcessing" target="_blank"&gt;MeVisLab Documentation&lt;/a&gt;
 
 &lt;/p&gt;
-&lt;p&gt;In this chapter, you will find some examples for different types of image processing in MeVisLab.&lt;/p&gt;</description></item><item><title>Developing your own C++ Modules</title><link>https://mevislab.github.io/examples/pull/139/tutorials/image_processing/cpp_development/</link><pubDate>Sun, 15 Mar 2026 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/139/tutorials/image_processing/cpp_development/</guid><description>&lt;h1 id="c-module-development"&gt;C++ Module development&lt;/h1&gt;
+&lt;p&gt;In this chapter, you will find some examples for different types of image processing in MeVisLab.&lt;/p&gt;</description></item><item><title>Developing Your Own C++ Modules</title><link>https://mevislab.github.io/examples/pull/139/tutorials/image_processing/cpp_development/</link><pubDate>Sun, 15 Mar 2026 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/139/tutorials/image_processing/cpp_development/</guid><description>&lt;h1 id="c-module-development"&gt;C++ Module Development&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;The development of your own C++ modules can be done by ML modules and by Inventor modules.&lt;/p&gt;
+&lt;p&gt;The development of your own C++ modules can be done by ML modules and by Open Inventor modules.&lt;/p&gt;
 
 &lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&gt;
  &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
@@ -504,25 +504,25 @@ In this chapter in particular, we will focus on simple image interaction with tw
  Make sure to use a compiler that is compatible to your currently installed MeVisLab version.
  &lt;/div&gt;
 &lt;/div&gt;
-&lt;h3 id="ml-modules-on-the-c-level"&gt;ML modules on the C++ level&lt;/h3&gt;
+&lt;h3 id="ml-modules-on-the-c-level"&gt;ML Modules on the C++ Level&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Image processing modules are objects derived from class Module defined in the ML library and therefore are also called ML modules.&lt;/li&gt;
 &lt;li&gt;Image inputs and outputs are connectors to objects of class PagedImage, which are defined in the ML library.&lt;/li&gt;
 &lt;li&gt;Inputs and outputs for abstract data structures are connectors to pointers of objects derived from class Base and are called Base objects.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="inventor-modules-on-the-c-level"&gt;Inventor modules on the C++-level:&lt;/h3&gt;
+&lt;h3 id="open-inventor-modules-on-the-c-level"&gt;Open Inventor Modules on the C++ Level&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Most Inventor modules are objects derived from class SoNode defined in the Open Inventor library.&lt;/li&gt;
-&lt;li&gt;Inventor inputs and outputs are connectors to objects derived from class SoNode defined in the Open Inventor library. Many Inventor modules will return themselves as outputs (“self”). On inputs, they may have connectors to child Inventor modules.&lt;/li&gt;
-&lt;li&gt;Some Inventor modules are objects derived from class SoEngine. They are used for calculations and return their output not via output connectors but via fields.&lt;/li&gt;
-&lt;li&gt;Inventor modules may also have input and output connectors to Base objects and Image objects.&lt;/li&gt;
-&lt;li&gt;All standard Inventor nodes defined in the Open Inventor library are available in MeVisLab as Inventor modules.&lt;/li&gt;
+&lt;li&gt;Most Open Inventor modules are objects derived from class SoNode defined in the Open Inventor library.&lt;/li&gt;
+&lt;li&gt;Open Inventor inputs and outputs are connectors to objects derived from class SoNode defined in the Open Inventor library. Many Open Inventor modules will return themselves as outputs (“self”). On inputs, they may have connectors to child Open Inventor modules.&lt;/li&gt;
+&lt;li&gt;Some Open Inventor modules are objects derived from class SoEngine. They are used for calculations and return their output not via output connectors but via fields.&lt;/li&gt;
+&lt;li&gt;Open Inventor modules may also have input and output connectors to Base objects and Image objects.&lt;/li&gt;
+&lt;li&gt;All standard Open Inventor nodes defined in the Open Inventor library are available in MeVisLab as Open Inventor modules.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;This chapter describes some examples for developing your own ML and Inventor modules.&lt;/p&gt;</description></item><item><title>Example 1: Creating a New ML Module for Adding Values</title><link>https://mevislab.github.io/examples/pull/139/tutorials/image_processing/cpp_1/</link><pubDate>Sun, 15 Mar 2026 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/139/tutorials/image_processing/cpp_1/</guid><description>&lt;h1 id="example-1-creating-a-new-ml-module-for-adding-values"&gt;Example 1: Creating a New ML Module for Adding Values&lt;/h1&gt;
+&lt;p&gt;This chapter describes some examples for developing your own ML and Open Inventor modules.&lt;/p&gt;</description></item><item><title>Example 1: Creating a New ML Module for Adding a Value to Each Voxel</title><link>https://mevislab.github.io/examples/pull/139/tutorials/image_processing/cpp_1/</link><pubDate>Sun, 15 Mar 2026 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/139/tutorials/image_processing/cpp_1/</guid><description>&lt;h1 id="example-1-creating-a-new-ml-module-for-adding-a-value-to-each-voxel"&gt;Example 1: Creating a New ML Module for Adding a Value to Each Voxel&lt;/h1&gt;
 &lt;h2 id="precondition"&gt;Precondition&lt;/h2&gt;
 &lt;p&gt;Make sure to have &lt;a href="https://cmake.org/download" target="_blank" rel="noopener"&gt;cmake&lt;/a&gt; installed. This example has been created using CMake Legacy Release (3.31.11).&lt;/p&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this example, we develop our own C++ ML module which adds a constant value to each voxel of the given input image.&lt;/p&gt;
+&lt;p&gt;In this example, we develop our own C++ ML module, which adds a constant value to each voxel of the given input image.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
 &lt;h3 id="create-a-new-ml-module"&gt;Create a new ML Module&lt;/h3&gt;
 &lt;p&gt;Before creating the module, make sure to have your own user package available. See &lt;a href="tutorials/basicmechanisms/macromodules/package/"&gt;Package creation&lt;/a&gt; for details about Packages.&lt;/p&gt;</description></item><item><title>Example 1: Applying Scalar Functions to Two Images</title><link>https://mevislab.github.io/examples/pull/139/tutorials/image_processing/image_processing1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/139/tutorials/image_processing/image_processing1/</guid><description>&lt;h1 id="example-1-arithmetic-operations-on-two-images"&gt;Example 1: Arithmetic Operations on Two Images&lt;/h1&gt;
