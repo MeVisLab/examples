@@ -12,7 +12,7 @@ This example has been taken from the [MeVisLab forum](https://forum.mevislab.de/
 ## Summary
 A local macro `flightControl` allows you to navigate with the camera through the scene.
 
-![Screenshot](examples/open_inventor/example4/image.png)
+![Flying through a spline](examples/open_inventor/example4/image.png "Flying through a spline")
 
 # Download
 You can download the example network [here](examples/open_inventor/example4/flight2.zip)

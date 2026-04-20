@@ -14,7 +14,7 @@ menu:
 ---
 
 # Example 2.3: Creation of Module Help
-Generating help of a macro module is part of the video about macro modules from [Example 2: Creation of global macro modules](tutorials/basicmechanisms/macromodules/globalmacromodules)
+Generating help of a macro module is part of the video about macro modules from [Example 2: Creation of Global Macro Modules](tutorials/basicmechanisms/macromodules/globalmacromodules)
 {{< youtube "M4HnA0d1V5k">}}
 
 ## Introduction
@@ -29,21 +29,25 @@ We will start by creating a help file using the built-in text editor {{< docuLin
 
 [//]: <> (MVL-653)
 
-![Creation of module help](images/tutorials/basicmechanics/GUI_06.png "Creation of module help")
+![Creation of module help: context menu](images/tutorials/basicmechanics/GUI_06.png "Creation of module help: context menu")
 
 {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MeVisLab MATE">}} opens. An *.mhelp* file (*Filter.mhelp*) is created automatically and stored in the folder your macro module `Filter` is stored in. You can find the folder structure in MATE on the left side. Editing the text field, you can edit the help file. 
 
 [//]: <> (MVL-653)
 
-![Edit module help file via MATE](images/tutorials/basicmechanics/GUI_07.png "Edit module help file via MATE")
+![Edit module help file via MATE: IDE](images/tutorials/basicmechanics/GUI_07.png "Edit module help file via MATE: IDE")
 
 When creating the help file of a module, all important information of the module down to the field specifications are extracted and created automatically. Thus, the basic module information is always available in the module help. Additional documentation should be added by the module's author. On the left side, you can find the outline of the help file. Each section can be edited. In this example, we added the purpose of the module to the help file.
 
-![Edit module help file via MATE](images/tutorials/basicmechanics/GUI_08.png "Edit module help file via MATE")
+![Edit module help file via MATE: filled out chapter](images/tutorials/basicmechanics/GUI_08.png "Edit module help file via MATE: filled out chapter")
 
 MATE offers the possibility to format the text. By using the button *M*, module names can be formatted in such a way that links to the respective help file of the modules are created.
 
-![Edit module help file via MATE](images/tutorials/basicmechanics/GUI_08_2.png "Edit module help file via MATE")
+![Edit module help file via MATE: using a format role](images/tutorials/basicmechanics/GUI_08_2.png "Edit module help file via MATE: using a format role")
+
+{{<alert class="info" caption="Extra Infos">}}
+To be safe against renaming, it is best to use *:module:\`this\`*. When generating the help file's HTML, the keyword *this* is automatically replaced by the current module's name.
+{{</alert>}}
 
 After finishing your documentation, you can click *Generate Help* or {{< keyboard "F7" >}} and your final help file is generated.
 
@@ -63,15 +67,15 @@ Depending on the way the macro module was created, more or less features are aut
 {{</alert>}}
 
 ### Creation of an Example Network
-To add an example network to your module, you need to add a reference to the respective *.mlab* file to the module definition file (*.def*). Open the file *Filter.def*. You can find the line *exampleNetwork     = "$(LOCAL)/networks/FilterExample.mlab"*, which defines the reference to the *.mlab* file containing the example network. By default, the name of the example network is *ModulenameExample.mlab*. An *.mlab* file containing only the module `Filter` is created inside the folder *networks*.
+To add an example network to your module, you need to add a reference to the respective *.mlab* file to the module definition file (*.def*). Open the file *Filter.def*. You can find the line <inlineCode>exampleNetwork = "$(LOCAL)/networks/FilterExample.mlab"</inlineCode>, which defines the reference to the *.mlab* file containing the example network. By default, the name of the example network is *ModulenameExample.mlab*. An *.mlab* file containing only the module `Filter` is created inside the folder *networks*.
 
 It is possible that the reference to the example network or the file *FilterExample.mlab* is missing. One reason could be that its creation was not selected when creating the macro module. In this case, add the reference and the file manually.
 
-![Reference to Example Network](images/tutorials/basicmechanics/ExpNetwork_01.png "Reference to Example Network")
+![Reference to the example network](images/tutorials/basicmechanics/ExpNetwork_01.png "Reference to the example network")
 
 To create the example network, open the file *FilterExample.mlab* in MeVisLab and create an appropriate example.
 
-![Example Network](images/tutorials/basicmechanics/ExpNetwork_02.png "Example Network")
+![Example network](images/tutorials/basicmechanics/ExpNetwork_02.png "Example network")
 
 ## Summary
 * {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MeVisLab MATE">}} is a built-in text editor that can be used to create module help files and module panels, or to create module interactions via Python scripting.

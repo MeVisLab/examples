@@ -38,17 +38,17 @@ Opening your viewers should now show the images in 2D and 3D.
 Now, save your network as *.mlab* file and remember the location.
 
 ### Create a Macro Module
-Open the Project Wizard via {{< menuitem "File" "Run Project Wizard" >}} and run the Wizard for a *macro module*. Name your module *MyViewerApplication*, enter your details, and click *Next >*.
+Open the Project Wizard via {{< menuitem "File" "Run Project Wizard" >}} and run the Wizard for a *macro module*. Name your module *MyViewerApplication*, enter your details, and click <field>Next ></field>.
 
-![Module Properties](images/tutorials/basicmechanics/SimpleApp_03.png "Module Properties")
+![Module properties](images/tutorials/basicmechanics/SimpleApp_03.png "Module properties")
 
-On the next screen, make sure to add a Python file and use the existing network you previously saved. Click *Next >*.
+On the next screen, make sure to add a Python file and use the existing network you previously saved. Click <field>Next ></field>.
 
-![Macro module Properties](images/tutorials/basicmechanics/SimpleApp_04.png "Macro module Properties")
+![Macro module properties](images/tutorials/basicmechanics/SimpleApp_04.png "Macro module properties")
 
-You can leave all fields empty for now and just click *Create*.
+You can leave all fields empty for now and just click <field>Create</field>.
 
-![Module Field Interface](images/tutorials/basicmechanics/SimpleApp_05.png "Module Field Interface")
+![Module field interface](images/tutorials/basicmechanics/SimpleApp_05.png "Module field interface")
 
 MeVisLab reloads its internal database and you can open a new tab. Search for your newly created module, in our case it was *MyViewerApplication*.
 
@@ -59,9 +59,9 @@ In the case you double-click {{< mousebutton "left" >}} your module now, you wil
 ### Develop Your User Interface
 Before adding your own UI, open the internal network of your macro module via right-click {{< mousebutton "right" >}} and {{< menuitem "Related Files" "MyViewerApplication.mlab" >}}. Open the panel of your `ImageLoad` module and set *filename* to an empty string (clear). This is necessary for later.
 
-Now, right-click on your *MyViewerApplication* and select {{< menuitem "Related Files" "MyViewerApplication.script" >}}
+Now, right-click {{< mousebutton "right" >}} on your *MyViewerApplication* and select {{< menuitem "Related Files" "MyViewerApplication.script" >}}
 
-{{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens showing your script file. You already learned how to create simple UI elements in [Example 2.4](tutorials/basicmechanisms/macromodules/guidesign). Now, we will create a little more complex UI including your `View2D` and `View3D`.
+{{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens showing your *.script* file. You already learned how to create simple UI elements in [Example 2.4](tutorials/basicmechanisms/macromodules/guidesign). Now, we will create a little more complex UI including your `View2D` and `View3D`.
 
 First we need a new *Field* in your *Parameters* section. Name the field <field>filepath</field> and set <attribute>internalName</attribute> to <field>ImageLoad.filename</field>. 
 
@@ -146,10 +146,10 @@ Window {
 
 We have a vertical layout having two items placed horizontally next to each other. The new *Button* gets the title *Reset* but does nothing yet, because we did not add a Python function to a command.
 
-Additionally, we added the `View2D` and the `View3D` to our *Window* and defined the <attribute>height</attribute>, <attribute>width</attribute>, and the <attribute>expandX/Y</attribute> property to *yes*. This leads our viewers to resize together with our *Window*.
+Additionally, we added the `View2D` and the `View3D` to our *Window* and defined the <attribute>height</attribute>, <attribute>width</attribute>, and the <attribute>expandX/Y</attribute> property to *Yes*. This leads our viewers to resize together with our *Window*.
 
 {{<alert class="info" caption="Extra Infos">}}
-Additional information about the `View2D` and `View3D` options can be found in the MeVisLab {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Viewer" "MDL Reference">}}
+Additional information about the `View2D` and `View3D` options can be found in the MeVisLab {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Viewer" "MDL Reference" >}}
 {{</alert>}}
 
 You can now play around with your module in MeVisLab SDK. Open the *Window* and select a file. You can see the two viewers showing the 2D and 3D images. You can interact with your viewers the same way as in your MeVisLab network. All functionalities are taken from the modules and transferred to your user interface.
@@ -157,7 +157,7 @@ You can now play around with your module in MeVisLab SDK. Open the *Window* and 
 ![2D and 3D viewers in our application](images/tutorials/basicmechanics/SimpleApp_09.png "2D and 3D viewers in our application")
 
 ### Develop a Python Function for Your Button
-Next, we want to reset the filepath to an empty string on clicking our *Reset* button. Add the *reset* command to your Button.
+Next, we want to reset the filepath to an empty string on clicking our <field>Reset</field> button. Add the *reset* command to your Button.
 {{< highlight filename="MyViewerApplication.script" >}}
 ``` Stan
 ...
@@ -200,7 +200,7 @@ Commands {
 ```
 {{</highlight>}}
 
-In the above example, we react on changes of the field <field>startSlice</field> of the module `View2D`. Whenever the field value (currently displayed slice) changes, the Python function *printCurrentSliceNumber* is executed.
+In the above example, we react on changes of the field <field>startSlice</field> of the module `View2D`. Whenever the field value (currently displayed slice) changes, the Python function <inlineCode>printCurrentSliceNumber</inlineCode> is executed.
 
 In your Python file `MyViewerApplication.py`, you can now add the following:
 

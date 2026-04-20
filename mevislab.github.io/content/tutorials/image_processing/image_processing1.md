@@ -26,7 +26,7 @@ Add two `LocalImage` modules to your workspace for the input images. Select *$(D
 
 In the end, add the `Arithmetic2` module and connect them as seen below.
 
-![Example Network](images/tutorials/image_processing/network_example1.png "Example Network")
+![Example network](images/tutorials/image_processing/network_example1.png "Example network")
 
 Your `SynchroView2D` shows two images. On the left hand side, you can see the original image from your left `LocalImage` module. The right image shows the result of the arithmetic operation performed by the `Arithmetic2` module on the two input images.
 

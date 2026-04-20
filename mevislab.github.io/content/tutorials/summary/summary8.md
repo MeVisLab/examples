@@ -20,6 +20,8 @@ menu:
 ## Introduction
 This step explains how to run your developed application in a browser. The MeVisLab network remains the same, only some adaptations are necessary for running any macro module in a browser window.
 
+<!--more-->
+
 {{<alert class="warning" caption="Licensing">}}
 This step requires a valid **MeVisLab Webtoolkit** license. It extends the **MeVisLab SDK**, so that you can develop web macro modules.
 
@@ -36,11 +38,11 @@ Open Project Wizard via {{< menuitem "File" "Run Project Wizard..." >}} and sele
 
 Run the Wizard and enter details of your web macro module.
 
-![Web macro module properties](images/tutorials/summary/Example8_2.png "Web macro module properties")
+![Web macro: module properties](images/tutorials/summary/Example8_2.png "Web macro: module properties")
 
-Click *Next* and select optional web plugin features. Click *Create*.
+Click <field>Next ></field> and select optional web plugin features. Click <field>Create</field>.
 
-![Web macro module](images/tutorials/summary/Example8_3.png "Web macro module")
+![Web macro module: plugin](images/tutorials/summary/Example8_3.png "Web macro module: plugin")
 
 The folder of your project automatically opens in an Explorer window.
 
@@ -58,11 +60,11 @@ Open the internal network of your previously created macro module from [Step 2](
 
 We are going to develop a web application; therefore, we need special `RemoteRendering` modules for the viewer. Add two `RemoteRendering` modules and a `SoCameraInteraction` to your workspace and connect them to your existing modules as seen below.
 
-![Remote Rendering](images/tutorials/summary/Example8_5b.png "Remote Rendering")
+![Remote rendering modules](images/tutorials/summary/Example8_5b.png "Remote rendering modules")
 
-{{<alert class="info" caption="Additional Info">}}
+{{< alert class="info" caption="Additional Info" >}}
 We are using the hidden outputs of the `View2D` and the `SoExaminerViewer`. You can show them by pressing the *SPACE* key.
-{{</alert>}}
+{{< /alert >}}
 
 #### Develop the User Interface
 Make sure to have both macro modules visible in MeVisLab SDK, we are reusing the *.script* and *.py* files developed in [Step 3](tutorials/summary/summary3/).
@@ -94,7 +96,7 @@ Web {
 ```
 {{</highlight>}}
 
-Open the script file of the *TutorialSummary* module from [Step 3](tutorials/summary/summary3/). Copy the output section to your web macro and define <field>internalName</field> as the output of your `RemoteRendering` modules.
+Open the script file of the `TutorialSummary` module from [Step 3](tutorials/summary/summary3/). Copy the output section to your web macro and define <field>internalName</field> as the output of your `RemoteRendering` modules.
 
 You can also copy all fields from *Parameters* section to your web macro module script.
 
@@ -167,11 +169,11 @@ Interface {
 
 Reloading your web macro in MeVisLab SDK now shows the same outputs as the original macro module. The only difference is the type of your output. It changed from MLImage and Open Inventor scene to MLBase from your `RemoteRendering` modules.
 
-![Macro modules](images/tutorials/summary/Example8_7.png "Macro modules")
+![Macro modules: with RemoteRendering outputs](images/tutorials/summary/Example8_7.png "Macro modules: with RemoteRendering outputs")
 
 The internal network of your web macro should look like this:
 
-![Macro modules](images/tutorials/summary/Example8_8.png "Macro modules")
+![Macro modules: internal network](images/tutorials/summary/Example8_8.png "Macro modules: internal network")
 
 You can emulate the final viewer by adding a `RemoteRenderingClient` module to the outputs of your web macro.
 
@@ -280,7 +282,7 @@ MLABRemote.setup(ctx)
 ```
 {{</highlight>}}
 
-Copy the Python functions from *TutorialSummary.py* to *TutorialSummaryBrowser.py*. They can remain unchanged but require an additional *@allowedRemoteCall* function. This is necessary to explicitly allow remote execution of the function and is disabled by default for security reasons.
+Copy the Python functions from *TutorialSummary.py* to *TutorialSummaryBrowser.py*. They can remain unchanged but require an additional <inlineCode>@allowedRemoteCall</inlineCode> function. This is necessary to explicitly allow remote execution of the function and is disabled by default for security reasons.
 
 {{< highlight filename="TutorialSummaryBrowser.py" >}}
 ```Python

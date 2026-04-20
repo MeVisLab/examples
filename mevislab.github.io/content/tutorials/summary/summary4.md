@@ -51,16 +51,16 @@ Interface {
 
 You can now add a viewer or any other module to your macro module and use them for testing. In our example, we add a `CalculateVolume` module to the segmentation mask and a `SoCameraInteraction` with two `OffscreenRenderer` modules to the 3D output. In the end, we need an `ImageCompare` module to compare expected and real image in our test.
 
-![Test Network](images/tutorials/summary/Example4_3.png "Test Network")
+![Test network](images/tutorials/summary/Example4_3.png "Test network")
 
 ### Create Test Case
-Open MeVisLab TestCaseManager via {{< menuitem "File" "Run TestCaseManager..." >}}. On the tab *Test Creation*, define a name of your test case, for example, *TutorialSummaryTest*. Select "Type" as *Macros*, define the package and use the same as for your macro module, select *Import Network*, and select your saved *.mlab* file from the step above. Click *Create*.
+Open the TestCaseManager via {{< menuitem "File" "Run TestCaseManager..." >}} or by pressing {{< keyboard "Ctrl" "Alt" "T" >}}. On the tab *Test Creation*, define a name of your test case, for example, *TutorialSummaryTest*. Select <field>Type</field> as *Macros*, define the package and use the same as for your macro module, select *Import Network*, and select your saved *.mlab* file from the step above. Click <field>Create</field>.
 
-![Test Creation](images/tutorials/summary/Example4_4.png "Test Creation")
+![Test creation](images/tutorials/summary/Example4_4.png "Test creation")
 
-MATE automatically opens the Python file of your test case and it appears in MeVisLab TestCaseManager. 
+MATE automatically opens the Python file of your test case and it appears in the TestCaseManager. 
 
-![Test Creation](images/tutorials/summary/Example4_5.png "Test Creation")
+![Test is created and listed](images/tutorials/summary/Example4_5.png "Test is created and listed")
 
 ### Write Test Functions in Python
 
@@ -92,7 +92,7 @@ def loadImage(full_path):
 ```
 {{</highlight>}}
 
-We define the path to a file to be loaded. The function *loadImage* sets the <field>openFile</field> field of the `TutorialSummary` module.
+We define the path to a file to be loaded. The function <inlineCode>loadImage</inlineCode> sets the <field>openFile</field> field of the `TutorialSummary` module.
 
 The arrays for the marker location and color will be used later.
 
@@ -131,7 +131,7 @@ def setMarkerPosition(vector):
 ```
 {{</highlight>}}
 
-The *setMarkerPosition* function gets a three-dimensional vector and sets the <field>markerPosition</field> field of our module. Then, the <field>applyMarker</field> trigger is touched. As the region growing algorithm might need some time to segment, we need to wait until the <field>outSegmentationMask</field> output field is valid, meaning that there is a valid segmentation mask at the segmentation mask output of our macro module.
+The <inlineCode>setMarkerPosition</inlineCode> function gets a three-dimensional vector and sets the <field>markerPosition</field> field of our module. Then, the <field>applyMarker</field> trigger is touched. As the region growing algorithm might need some time to segment, we need to wait until the <field>outSegmentationMask</field> output field is valid, meaning that there is a valid segmentation mask at the segmentation mask output of our macro module.
 
 Finally, we need to reset the application to its initial state, so that each test case has the initial start conditions of the application. A test case should never depend on another test case so that they all can be executed exclusively.
 
@@ -288,7 +288,7 @@ Again, we reset the application to an initial state, load the image, and set a m
 
 Finally, an image comparison is done for the 3D rendering using the old and the new color. The images shall differ.
 
-The call *MLAB.processInventorQueue()* is sometimes necessary if an Open Inventor scene changed via Python scripting, because the viewers might not update immediately after changing the field. MeVisLab is now forced to process the queue in Open Inventor and to update the renderings.
+The call <inlineCode>MLAB.processInventorQueue()</inlineCode> is sometimes necessary if an Open Inventor scene changed via Python scripting, because the viewers might not update immediately after changing the field. MeVisLab is now forced to process the queue in Open Inventor and to update the renderings.
 
 #### Requirement 8: The total volume of the segmented volume shall be calculated and shown (in ml)
 For the correctness of the volume calculation, we added the `CalculateVolume` module to our test network. The volume given by our macro is compared to the volume of the segmentation from output <field>outSegmentationMask</field> calculated by the `CalculateVolume` module.
@@ -330,7 +330,7 @@ def TEST_VolumeCalculation():
 ##### Requirement 9.2: Segmentation results
 
 ##### Requirement 9.3: All
-In the end, we want to develop a testcase for the 3D toggling of the view. We cannot exactly test if the rendering is correct; therefore, we will check if the 3D rendering image changes when toggling the 3D view. We will use the modules `OffscreenRenderer`, `ImageCompare`, and `SoCameraInteraction`, which we added to our test network.
+In the end, we want to develop a test case for the 3D toggling of the view. We cannot exactly test if the rendering is correct; therefore, we will check if the 3D rendering image changes when toggling the 3D view. We will use the modules `OffscreenRenderer`, `ImageCompare`, and `SoCameraInteraction`, which we added to our test network.
 
 Initially, without any marker and segmentation, the views *Both* and *Head* show the same result. After adding a marker, we are going to test if different views result in different images.
 
@@ -383,13 +383,13 @@ def TEST_Toggle3DVolumes():
 {{</highlight>}}
 
 ### Sorting Order in TestCaseManager
-The MeVisLab TestCaseManager sorts your test cases alphabetically. Your test cases should look like this now:
+The TestCaseManager sorts your test cases alphabetically. Your test cases should look like this now:
 
-![TestCaseManager Sorting](images/tutorials/summary/Example4_6.png "TestCaseManager Sorting")
+![TestCaseManager sorting](images/tutorials/summary/Example4_6.png "TestCaseManager sorting")
 
 Generally, test cases should not depend on each other and the order of their execution should not matter. Sometimes it makes sense though to execute tests in a certain order, for example, for performance reasons. In this case, you can add numeric prefixes to your test cases. This might look like this then:
 
-![TestCaseManager Custom Sorting](images/tutorials/summary/Example4_7.png "TestCaseManager Custom Sorting")
+![TestCaseManager custom sorting](images/tutorials/summary/Example4_7.png "TestCaseManager custom sorting")
 
 ### Not Testable Requirements
 As already mentioned, some requirements cannot be tested in an automated environment. Human inspection cannot be replaced completely.
@@ -425,7 +425,7 @@ Logging.showFile("Link to screenshot file", result)
 * Testcase numbering allows you to sort them and define execution order.
 
 {{<alert class="info" caption="Info">}}
-Additional information about MeVisLab TestCenter can be found in {{< docuLinks "/Resources/Documentation/Publish/SDK/TestCenterManual/index.html" "TestCenter Manual" >}}
+Additional information about the MeVisLab TestCenter can be found in {{< docuLinks "/Resources/Documentation/Publish/SDK/TestCenterManual/index.html" "TestCenter Manual" >}}
 {{</alert>}}
 
 {{< networkfile "examples/summary/TutorialSummaryTest.zip" >}}

@@ -35,7 +35,7 @@ The `SynchroView2D` module is explained {{< docuLinks "/Standard/Documentation/P
 ### Develop Your Network
 Start the example by adding the module `LocalImage` to your workspace to load the example image *Tumor1_Head_t1.small.tif*. Next, add and connect the following modules as shown.
 
-![SynchroView2D](images/tutorials/visualization/V1_01.png "SynchroView2D Viewer")
+![SynchroView2D viewer](images/tutorials/visualization/V1_01.png "SynchroView2D viewer")
 
 ## Summary
 * Multiple images can be synchronized by the `SynchroView2D` module.

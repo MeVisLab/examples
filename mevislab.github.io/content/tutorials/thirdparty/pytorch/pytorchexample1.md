@@ -13,7 +13,7 @@ menu:
     parent: "pytorch"
 ---
 
-# Example 1: Installing PyTorch using the PythonPip module
+# Example 1: Installing PyTorch Using the PythonPip Module
 
 ## Introduction
 The module `PythonPip` allows you to install additional Python packages to be used in MeVisLab. 
@@ -39,19 +39,19 @@ Double-click {{< mousebutton "left" >}} the module and inspect the panel.
 
 ![PythonPip panel](images/tutorials/thirdparty/pytorch_example1_2.png "PythonPip panel")
 
-The panel shows all currently installed Python packages including their version and the MeVisLab package they are saved in. You can see a warning that the target package is set to read-only in the case you are selecting a MeVisLab package. Changing to one of your user packages (see [Example 2.1: Package creation](tutorials/basicmechanisms/macromodules/package/) for details) makes the warning disappear.
+The panel shows all currently installed Python packages including their version and the MeVisLab package they are saved in. You can see a warning that the target package is set to read-only in the case you are selecting a MeVisLab package. Changing to one of your user packages (see [Example 2.1: Package Creation](tutorials/basicmechanisms/macromodules/package/) for details) makes the warning disappear.
 
 ![Select user package](images/tutorials/thirdparty/pytorch_example1_3.png "Select user package")
 
 {{<alert class="info" caption="Additional information">}}
-Additional information on the `PythonPip` module can be found in [Example 4: Install additional Python packages via PythonPip module](tutorials/basicmechanisms/macromodules/pythonpip "PythonPip module").
+Additional information on the `PythonPip` module can be found in [Example 4: Install Additional Python Packages via PythonPip Module](tutorials/basicmechanisms/macromodules/pythonpip "PythonPip Module").
 {{</alert>}}
 
 #### Install Torch and Torchvision
-For our tutorials, we need to install *torch* and *torchvision*. Enter *torch torchvision* into the *Command* textbox and press *Install*.
+For our tutorials, we need to install *torch* and *torchvision*. Enter *torch torchvision* into the <field>>Command</field> textbox and press <field>Install</field>*.
 
 {{<alert class="info" caption="Info">}}
-We are using the CPU version of PyTorch for our tutorials as we want them to be as accessible as possible. If you happen to have a large GPU capacity (and CUDA support), you can also use the GPU version. You can install the necessary packages by using the PyTorch documentation available [here](https://pytorch.org/get-started/locally "PyTorch documentation").
+We are using the CPU version of PyTorch for our tutorials as we want them to be as accessible as possible. If you happen to have a large GPU capacity (and CUDA support), you can also use the GPU version. You can install the necessary packages by using the PyTorch documentation available [here](https://pytorch.org/get-started/locally "PyTorch Documentation").
 {{</alert>}}
 
 Continuing with CUDA support:
@@ -70,7 +70,7 @@ Alternatively, you can also add a parameter to *pip install* command: *--proxy h
 
 ![Install torch and torchvision](images/tutorials/thirdparty/pytorch_example1_4.png "Install torch and torchvision")
 
-After clicking *Install*, the *pip* console output opens and you can follow the process of the installation.
+After clicking <field>Install</field>, the *pip* console output opens and you can follow the process of the installation.
 
 ![Python pip output](images/tutorials/thirdparty/pytorch_example1_5.png "Python pip output")
 

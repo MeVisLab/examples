@@ -26,7 +26,7 @@ In this step you are recreating your application installer after changing the UI
 You do not need to use the Project Wizard now, because you already have a valid *.mlinstall* file. The location should be in your package under *.\Configuration\Installers\TutorialSummary*. Open the file in any text editor and search for the *$VERSION 0.5*. Change the version to something else, in our case, we now have our first major release 1.0.
 
 {{<alert class="info" caption="Info">}}
-You can also run the Project Wizard again but keep in mind that manual changes on your *.mlinstall* file might be overwritten. The wizard recreates your *.mlinstall* file whereas the ToolRunner just uses it.
+You can also run the Project Wizard again but keep in mind that manual changes on your *.mlinstall* file might be overwritten. The Wizard recreates your *.mlinstall* file whereas the ToolRunner just uses it.
 {{</alert>}}
 
 ### Use MeVisLab ToolRunner
@@ -34,14 +34,14 @@ Save the file and open *MeVisLab ToolRunner*.
 
 ![MeVisLab ToolRunner](images/tutorials/summary/Example7_1.png "MeVisLab ToolRunner")
 
-Open the *.mlinstall* file in ToolRunner and select the file. Click *Run on Selection*.
+Open the *.mlinstall* file in ToolRunner and select the file. Click <field>Run on Selection</field> or just double-click {{< mousebutton "left" >}} the installer entry.
 
 ![Run on Selection](images/tutorials/summary/Example7_2.png "Run on Selection")
 
 The ToolRunner automatically builds your new installer using version 1.0.
 
 ### Install Application Again
-Execute your installable executable again. You do not have to uninstall previous version(s) of your application first. Already existing applications will be replaced by new installation - at least if you select the same target directory.
+Execute your installable executable again. You do not have to uninstall previous version(s) of your application first. Already existing applications will be replaced by new installation &mdash; at least if you select the same target directory.
 
 ![Install new version](images/tutorials/summary/Example7_3.png "Install new version")
 

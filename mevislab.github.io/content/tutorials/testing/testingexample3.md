@@ -18,26 +18,26 @@ menu:
 {{<youtube "1JidUyfz0xU">}}
 
 ## Introduction
-In this example you are writing an iterative test. Iterative test functions run a function for every specified input. They return a tuple consisting of the function object called and the inputs iterated over. The iterative test functions are useful if the same function should be applied to different input data. These could be input values, names of input images, etc.
+In this example, you are writing an iterative test. Iterative test functions run a function for every specified input. They return a tuple consisting of the inputs iterated over and the function object called. The iterative test functions are useful if the same function should be applied to different input data. These could be input values, names of input images, etc.
 
 ## Steps to Do
 
 ### Creating the Network to be Used for Testing
 Add a `LocalImage` and a `DicomTagViewer` module to your workspace and connect them.
 
-![Example Network](images/tutorials/testing/network_test3.png "Example Network")
+![Example network](images/tutorials/testing/network_test3.png "Example network")
 
 ### Test Case Creation
-Open the panel of the `DicomTagViewer` and set *Tag Name* to *WindowCenter*. The value of the DICOM tag from the current input image is automatically set as value.
+Open the panel of the `DicomTagViewer` and set <field>Tag Name</field> to *WindowCenter*. The value of the DICOM tag from the current input image is automatically set as value.
 
 Save the network.
 
-Start MeVisLab TestCaseManager and create a new test case called *IterativeTestCase* as seen in [Example 1: Writing a simple testcase in MeVisLab](tutorials/testing/testingexample1).
+Start the TestCaseManager and create a new test case called *IterativeTestCase* as seen in [Example 1: Writing a Simple Ttest Case in MeVisLab](tutorials/testing/testingexample1).
 
 ![DicomTagViewer](images/tutorials/testing/DicomTagViewer.png "DicomTagViewer")
 
 ### Defining the Test Data
-In TestCaseManager open the test case Python file via *Edit File*.
+In the TestCaseManager, open the test case Python file via <field>Edit File</field>.
 
 Add a list for test data to be used as input and a prefix for the path of the test data as seen below.
 
@@ -65,7 +65,7 @@ def ITERATIVETEST_TestWindowCenter():
 ```
 {{</highlight>}}
 
-This function defines that *testPatient* shall be called for each entry available in the defined list *testData*. Define the function *testPatient*:
+This function defines that <inlineCode>testPatient</inlineCode> shall be called for each entry available in the defined list <inlineCode>testData</inlineCode>. Define the function <inlineCode>testPatient</inlineCode>:
 {{< highlight filename="IterativeTestCase.py" >}}
 ```Python
 def testPatient(path, windowCenter):
@@ -80,27 +80,27 @@ def testPatient(path, windowCenter):
 
 1. Initially, the path and filename for the module `LocalImage` are set. The data is loaded automatically, because the module has the <field>AutoLoad</field> flag enabled by default.
 ![LocalImage](images/tutorials/testing/LocalImage.png "LocalImage")
-2. Then, the DICOM tree of the loaded file is used to get the *WindowCenter* value (*importValue*).
-3. The previously defined value of the `DicomTagViewer` is set as *dicomValue*.
+2. Then, the DICOM tree of the loaded file is used to get the *WindowCenter* value (<inlineCode>importValue</inlineCode>).
+3. The previously defined value of the `DicomTagViewer` is set as <inlineCode>dicomValue</inlineCode>.
 4. The final test functions *ASSERT_EQ* evaluate if the given values are equal.
 
 {{<alert class="info" caption="Info">}}
-You can use many other **ASSERT*** possibilities, just try using the MATE autocompletion and play around with them. **ASSERT*** functions throw an exception in case expected and actul values do not fit. Your test execution stops in this case.
+You can use many other **ASSERT*** possibilities, just try using the MATE autocompletion and play around with them. **ASSERT*** functions throw an exception in the case expected and actul values do not fit. Your test execution stops in this case.
 
-You can also use **EXPECT*** functions. They return *true* or *false* and you can decide yourself ho your test continues.
+You can also use **EXPECT*** functions. They return *true* or *false* and you can decide yourself how your test continues.
 
 For details, see {{< docuLinks "/Resources/Documentation/Publish/SDK/TestCenterReference/namespaceTestSupport_1_1Macros.html" "TestCenter Reference" >}}
 {{</alert>}}
 
 ### Run Your Iterative Test
-Open MeVisLab TestCase Manager and select your package and test case. You will see two test functions on the right side.
+Open the TestCaseManager and select your package and test case. You will see two test functions on the right side.
 
-![Iterative Test](images/tutorials/testing/TestCaseManager_TestWindowCenter.png "Iterative Test")
+![Iterative test](images/tutorials/testing/TestCaseManager_TestWindowCenter.png "Iterative test")
 
-The identifiers of your test functions are shown as defined in the list (*ProbandT1/2*). The *TestWindowCenter* now runs for each entry in the list and calls the function *testPatient* for each entry using the given values.
+The identifiers of your test functions are shown as defined in the list (*ProbandT1/2*). The *TestWindowCenter* now runs for each entry in the list and calls the function <inlineCode>testPatient</inlineCode> for each entry using the given values.
 
 ### Adding Screenshots to Your TestReport
-Now, extend your network by adding a `View2D` module and connect it with the `LocalImage` module. Add the following lines to the end of your function *testPatient*:
+Now, extend your network by adding a `View2D` module and connect it with the `LocalImage` module. Add the following lines to the end of your function <inlineCode>testPatient</inlineCode>:
 {{< highlight filename="IterativeTestCase.py" >}}
 ```Python
 def testPatient(path, windowCenter):

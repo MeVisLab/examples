@@ -29,27 +29,27 @@ Image masking is a very good way to select a defined region where image processi
 ### Develop Your Network
 Add a `LocalImage` and a `SynchroView2D` module to your network and connect the modules as seen below.
 
-![Example Network](images/tutorials/image_processing/network_example2a.png "Example Network")
+![Example network](images/tutorials/image_processing/network_example2a.png "Example network")
 
 Open the Automatic Panel of the `SynchroView2D` module via context menu {{< mousebutton "right" >}} and selecting {{< menuitem "Show Window" "Automatic Panel" >}}. Set the field <field>synchLUTs</field> to *Yes*.
 
 ![Synchronize LUTs in SynchroView2D](images/tutorials/image_processing/synchLUTs.png "Synchronize LUTs in SynchroView2D")
 
-Double-click the `SynchroView2D` and change window/level values via right mouse button {{< mousebutton "right" >}}. You can see that the background of your images gets very bright and changes based on the LUT are applied to all voxels of your input image - even on the background. Hovering your mouse over the image(s) shows the current gray value under your cursor in [Hounsfield Unit (HU)](https://en.wikipedia.org/wiki/Hounsfield_scale).
+Double-click {{< mousebutton "left" >}} the `SynchroView2D` and change window/level values via right mouse button {{< mousebutton "right" >}}. You can see that the background of your images gets very bright and changes based on the LUT are applied to all voxels of your input image - even on the background. Hovering your mouse over the image(s) shows the current gray value under your cursor in [Hounsfield Unit (HU)](https://en.wikipedia.org/wiki/Hounsfield_scale).
 
 ![Without masking the image](images/tutorials/image_processing/SynchroView2D_before.png "Without masking the image")
 
-Hovering the mouse over black background voxels shows a value between 0 and about 60. This means we want to create a mask that only allows modifications on voxels having a gray value larger than 60.
+Hovering the mouse over black background voxels shows a value between *0* and about *60*. This means we want to create a mask that only allows modifications on voxels having a gray value larger than *60*.
 
 Add a `Mask` and a `Threshold` module to your workspace and connect them as seen below.
 
-![Example Network](images/tutorials/image_processing/network_example2b.png "Example Network")
+![Example network: using Mask](images/tutorials/image_processing/network_example2b.png "Example network: using Mask")
 
-Changing the window/level values in your viewer still also changes background voxels. The `Threshold` module still leaves the voxels as is because the threshold value is configured as larger than 0. Open the panels of the modules `Threshold` and `Mask` via double-click {{< mousebutton "left" >}} and set the values as seen below.
+Changing the window/level values in your viewer still also changes background voxels. The `Threshold` module still leaves the voxels as is because the threshold value is configured as larger than *0*. Open the panels of the modules `Threshold` and `Mask` via double-click {{< mousebutton "left" >}} and set the values as seen below.
 
 {{< imagegallery 2 "images/tutorials/image_processing" "Threshold" "Mask">}}
 
-Now, all voxels having a value lower or equal 60 are set to 0, all others are set to 1. The resulting image from the `Threshold` module is a binary image that can now be used as a mask by the `Mask` module.
+Now, all voxels having a value lower or equal *60* are set to *0*, all others are set to *1*. The resulting image from the `Threshold` module is a binary image that can now be used as a mask by the `Mask` module.
 
 ![Output of the Threshold module](images/tutorials/image_processing/OutputInspector_Threshold.png "Output of the Threshold module")
 

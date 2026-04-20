@@ -16,12 +16,12 @@ menu:
 # PyTorch {#pytorch}
 
 ## Introduction
-[PyTorch](http://www.pytorch.org "pytorch") is a machine learning framework based on the Torch library, used for applications such as Computer Vision and Natural Language Processing, originally developed by Meta AI and now part of the Linux Foundation umbrella.
+[PyTorch](https://www.pytorch.org "PyTorch") is a machine learning framework based on the Torch library, used for applications such as Computer Vision and Natural Language Processing, originally developed by Meta AI and now part of the Linux Foundation umbrella.
 
-A lot of AI frameworks can be used within MeVisLab. We currently do not provide a preintegrated AI framework though as we try to avoid compatibility issues, and AI frameworks are very fast-moving by nature.
+A lot of AI frameworks can be used within MeVisLab. We do not provide a preintegrated AI framework though as we try to avoid compatibility issues, and AI frameworks are very fast-moving by nature.
 
 Maybe also take a look at:
-* [TensorFlow](https://www.tensorflow.org "tensorflow")
+* [TensorFlow](https://www.tensorflow.org "Tensorflow")
 * [Keras](https://keras.io "Keras")
 * [scikit-learn](https://scikit-learn.org "scikit-learn")
 
@@ -38,5 +38,5 @@ The first example shows how to install *torch* and *torchvision* by using the Me
 In this example, we are using a pretrained network from [torch.hub](https://pytorch.org/hub/) to generate an AI based image overlay of a brain parcellation map.
 
 ### Segment Persons in Webcam Videos
-The second tutorial adapts the [Example 2: Face Detection with OpenCV](tutorials/thirdparty/opencv/thirdpartyexample2/ "Example 2: Face Detection with OpenCV") to segment a person shown in a webcam stream. The network has been taken from [torchvision](https://pytorch.org/vision/stable/index.html).
+The second tutorial adapts the [Example 2: Face Detection With OpenCV](tutorials/thirdparty/opencv/thirdpartyexample2/ "Example 2: Face Detection With OpenCV") to segment a person shown in a webcam stream. The network has been taken from [torchvision](https://pytorch.org/vision/stable/index.html).
 

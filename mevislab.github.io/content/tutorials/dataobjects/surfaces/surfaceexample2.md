@@ -25,7 +25,7 @@ In this example, you will learn how to modify and process WEMs.
 ### Develop Your Network
 
 #### Modification of WEMs
-Use the module `WEMLoad` to load the file *venus.off*. Then, add and connect the shown modules. We like to display the WEM *venus* two times, one time this WEM is modified. You can use the module `WEMModify` to apply modifications. In its panel, change the scale and the size of the WEM. Now, you see two times the `venus` next to each other.
+Use the module `WEMLoad` to load the file *venus.off*. Then, add and connect the shown modules. We like to display the WEM *venus* two times, one time this WEM is modified. You can use the module `WEMModify` to apply modifications. In its panel, change the scale and the size of the WEM. Now, you see two times the *venus* next to each other.
 
 ![WEMModify](images/tutorials/dataobjects/surfaces/DO7_01.png "WEMModify")
 
@@ -40,17 +40,17 @@ Now, we like to calculate the distance between our two WEMs. In order to do this
 ![Calculate surface distance](images/tutorials/dataobjects/surfaces/DO7_03.png "Calculate surface distance")
 
 #### Annotations in 3D
-As a last step, we like to draw the calculated distances as annotations into the image. This is a little bit tricky as we need the module `SoView2DAnnotation` to create annotations in a 3D viewer. Add and connect the following modules as shown. What is done here? We use the module `SoView2D` to display a 2D image in the `SoExaminerViewer`, in addition to the WEMs we already see in the viewer. We do not see an additional image in the viewer, as we chose no proper input image to the module `SoView2D` using the module `ConstantImage` with value 0. Thus, we pretend to have a 2D image, which we can annotate. Now, we use the module `SoView2DAnnotation` to annotate the pretended 2D image, displayed in the viewer of `SoExaminerViewer`. We already used the module `SoView2DAnnotation` in [Contour Example 4](tutorials/dataobjects/contours/contourexample4/).
+As a last step, we like to draw the calculated distances as annotations into the image. This is a little bit tricky as we need the module `SoView2DAnnotation` to create annotations in a 3D viewer. Add and connect the following modules as shown. What is done here? We use the module `SoView2D` to display a 2D image in the `SoExaminerViewer`, in addition to the WEMs we already see in the viewer. We do not see an additional image in the viewer, as we chose no proper input image to the module `SoView2D` using the module `ConstantImage` with value *0*. Thus, we pretend to have a 2D image, which we can annotate. Now, we use the module `SoView2DAnnotation` to annotate the pretended 2D image, displayed in the viewer of `SoExaminerViewer`. We already used the module `SoView2DAnnotation` in [Contour Example 4](tutorials/dataobjects/contours/contourexample4/).
 
-In the `SoView2D` module, you need to uncheck the option *Draw image data*.
+In the `SoView2D` module, you need to uncheck the option <field>Draw image data</field>.
 
 ![Annotation modules](images/tutorials/dataobjects/surfaces/DO7_05.png "Annotation modules")
 
-Now, change the *Annotation Mode* to *User*, as we like to insert custom annotations. In addition, disable to *Show vertical ruler*.
+Now, change the <field>Annotation Mode</field> to *User*, as we like to insert custom annotations. In addition, disable to <field>Show vertical ruler</field>.
 
 ![Select annotation mode](images/tutorials/dataobjects/surfaces/DO7_06.png "Select annotation mode")
 
-Next, open the tab *Input* and draw parameter connections from the results of the distance calculations, which can be found in the panel of `WEMSufaceDistance`, to the input fields in the panel of `SoView2DAnnotation`.
+Next, open the tab *Input* and establish parameter connections from the results of the distance calculations, which can be found in the panel of `WEMSufaceDistance`, to the input fields in the panel of `SoView2DAnnotation`.
 
 ![Define annotation parameters](images/tutorials/dataobjects/surfaces/DO7_07.png "Define annotation parameters")
 

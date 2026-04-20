@@ -21,33 +21,33 @@ menu:
 In this example, we'd like to use the created CSOs to display an overlay.
 This allows us to mark one of two lungs. In addition to
 that, we will display the whole segmented lobe of the lung in a 3D
-image.
+viewer.
 
 ## Steps to Do
 ### Develop Your Network
 Use the network from the [contour example 2](tutorials/dataobjects/contours/contourexample2) and add the modules `VoxelizeCSO`,
 `SoView2DOverlay` and `View2D` to your workspace. Connect the module as
-shown. The module `VoxelizeCSO` allows to convert CSOs into voxel images.
+shown. The module `VoxelizeCSO` allows to convert CSOs into a voxel image.
 
-![Data Objects Contours Example 3](images/tutorials/dataobjects/contours/DO3_02.png "Data Objects Contours Example 3")
+![Network for segmenting and viewing contours in 2D](images/tutorials/dataobjects/contours/DO3_02.png "Network for segmenting and viewing contours in 2D")
 
-### Convert CSOs into Voxel Images
+### Convert CSOs into a Voxel Image
 Update the module `VoxelizeCSOs` to create voxel masks based on your CSOs.
 The result can be seen in `View2D1`.
 
-![Overlay](images/tutorials/dataobjects/contours/DO3_03.png "Overlay")
+![Showing an overlay of the voxel mask in 2D](images/tutorials/dataobjects/contours/DO3_03.png "Showing an overlay of the voxel mask in 2D")
 
 Next, we like to inspect the marked lobe of the lung. This means we
 like to inspect the object that is built out of CSOs. In order to do that, add
 the `View3D` module. The 3D version of the lung can be seen in the
 viewer.
 
-![Additional 3D Viewer](images/tutorials/dataobjects/contours/DO3_04.png "Additional 3D Viewer")
-![Extracted Object](images/tutorials/dataobjects/contours/DO3_05.png "Extracted Object")
+![Additional 3D viewer](images/tutorials/dataobjects/contours/DO3_04.png "Additional 3D viewer")
+![Extracted object](images/tutorials/dataobjects/contours/DO3_05.png "Extracted object")
 
 ## Summary
-* The module `VoxelizeCSO` converts CSOs to voxel images.
-* Create an overlay out of voxel images using `SoView2DOverlay`.
+* The module `VoxelizeCSO` converts CSOs to a voxel image.
+* Create an overlay out of a voxel image using `SoView2DOverlay`.
 
 {{< networkfile "examples/data_objects/contours/example3/ContourExample3.mlab" >}}
 

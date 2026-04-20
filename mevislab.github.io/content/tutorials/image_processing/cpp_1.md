@@ -16,7 +16,7 @@ menu:
 # Example 1: Creating a New ML Module for Adding a Value to Each Voxel
 
 ## Precondition
-Make sure to have [cmake](https://cmake.org/download) installed. This example has been created using CMake Legacy Release (3.31.11).
+Make sure to have [CMake](https://cmake.org/download) installed. This example has been created using CMake Legacy Release (3.31.11).
 
 ## Introduction
 In this example, we develop our own C++ ML module, which adds a constant value to each voxel of the given input image.
@@ -25,31 +25,31 @@ In this example, we develop our own C++ ML module, which adds a constant value t
 ### Create a New ML Module
 Before creating the module, make sure to have your own user package available. See [Package creation](tutorials/basicmechanisms/macromodules/package/) for details about Packages.
 
-Use the *Project Wizard* via the menu entry {{< menuitem "File" "Run Project Wizard ..." >}} to create a new ML module. Select *ML Module* and click *Run Wizard*.
+Use the *Project Wizard* via the menu entry {{< menuitem "File" "Run Project Wizard ..." >}} to create a new ML module. Select *ML Module* and click <field>Run Wizard</field>.
 
-![ML Module Project Wizard](images/tutorials/image_processing/cpp/cpp1_1.png "ML Module Project Wizard")
+![ML module Project Wizard](images/tutorials/image_processing/cpp/cpp1_1.png "ML module Project Wizard")
 
 Enter properties of your new module and give your module the name `SimpleAdd`. Make sure to select your user package and name your project *SimpleAdd*.
 
-![ML Module Properties](images/tutorials/image_processing/cpp/cpp1_2.png "ML Module Properties")
+![ML module properties](images/tutorials/image_processing/cpp/cpp1_2.png "ML module properties")
 
- Click *Next*. The next screen of the Wizard allows you to define the inputs and outputs of your module. Select *Module Type* as *New style ML Module*, make sure to have one input and one output and leave the rest of the settings unchanged. 
+ Click <field>Next ></field>. The next screen of the Wizard allows you to define the inputs and outputs of your module. Select <field>Module Type</field> as *New style ML Module*, make sure to have one input and one output and leave the rest of the settings unchanged. 
 
-![ML Module Properties](images/tutorials/image_processing/cpp/cpp1_3.png "ML Module Properties")
+![ML module properties](images/tutorials/image_processing/cpp/cpp1_3.png "ML module properties")
 
-Click *Next*. On the next screen, we can define some additional properties of our module. Select *Add activateAttachments()*, unselect *Add configuration hints* and select *Add MDL window with fields*.
+Click <field>Next ></field>. On the next screen, we can define some additional properties of our module. Select <field>Add activateAttachments()</field>, unselect <field>Add configuration hints</field>, and select <field>Add MDL window with fields</field>.
 
-![ML Module Additional Properties](images/tutorials/image_processing/cpp/cpp1_4.png "ML Module Additional Properties")
+![ML module additional properties](images/tutorials/image_processing/cpp/cpp1_4.png "ML module additional properties")
 
-Click *Next*. The Module Field Interface allows you to define additional fields for the module. More fields can be added later but this is the easiest way to add fields. Click *New* to create a new field, then enter the following:
+Click <field>Next ></field>. The *Module Field Interface* allows you to define additional fields for the module. More fields can be added later but this is the easiest way to add fields. Click <field>New</field> to create a new field, then enter the following:
 * **Field Name:** constantValue
 * **Field Type:** Double
 * **Field Comment:** This constant value is added to each voxel.
 * **Field Value:** 0.
 
-![ML Module Field Interface](images/tutorials/image_processing/cpp/cpp1_5.png "ML Module Field Interface")
+![Module field interface](images/tutorials/image_processing/cpp/cpp1_5.png "Module field interface")
 
-Click *Create*. You see a screen showing the results of the module creation process. In the case the Wizard finished succesfully, you can close the window. Additionally, an explorer window opens showing the created folder containing your sources and the *CMakeLists.txt*.
+Click <field>Create</field>. You see a screen showing the results of the module creation process. In the case the Wizard finished succesfully, you can close the window. Additionally, an explorer window opens showing the created folder containing your sources and the *CMakeLists.txt*.
 
 The foundation of the module has been created with the Wizard. From here on, the programming starts.
 
@@ -60,7 +60,7 @@ The Project Wizard creates a *CMakeLists.txt* file that describes the typical pr
 
 Just make sure that the MLAB_ROOT environment variable is set on your system and points to the packages directory of your MeVisLab installation, because this is used to resolve the reference to the 'MeVisLab' project.
 
-Open a command line and change to your current module directory (the directory containing your *CMakeLists.txt* file). Enter **cmake . -G "Visual Studio 17"**. After execution, a lot of files are generated by CMake. 
+Open a command line and change to your current module directory (the directory containing your *CMakeLists.txt* file). Enter <inlineCode>cmake . -G "Visual Studio 17"</inlineCode>. After execution, a lot of files are generated by CMake. 
 
 For further documentation about our use of CMake, see: [CMake for MeVisLab - Documentation](https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/CMakeManual/#mainBook).
 
@@ -111,7 +111,7 @@ void SimpleAdd::calculateOutputImageProperties(int /*outputIndex*/, PagedImage* 
 {{</highlight>}}
 
 {{<alert class="info" caption="Note">}}
-*outputIndex* is the index number of the output connector. It is commented out in this example, because we only defined one output. In the case of more than one outputs, uncomment this parameter.
+*outputIndex* is the index number of the output connector. It is commented in this example, because we only defined one output. In the case of more than one outputs, uncomment this parameter.
 {{</alert>}}
 
 #### Implementing *typedCalculateOutputSubImage*
@@ -139,7 +139,7 @@ Then, change the inner line of the loop so that the constant value is added to t
 Compile the project in the development environment. Make sure to select a *Release* build.
 
 ### Use Your Module in MeVisLab
-Your compiled **.dll* is available in your project directory under *Sources/lib*. In order to use it in MeVisLab, it needs to be copied to the *lib* folder of your user package.
+Your compiled *.dll* is available in your project directory under *Sources/lib*. In order to use it in MeVisLab, it needs to be copied to the *lib* folder of your user package.
 
 This only works in a post-build step.
 
@@ -147,7 +147,7 @@ If the environment variable *MLAB_AUTOMATIC_POSTBUILD_COPY* is set, the newly co
 
 For testing purposes, you can use a `LocalImage` module and two `View2D` modules. Connect the `SimpleAdd` module to the second `View2D` and change the <field>Constant Value</field> field.
 
-![Testing Network](images/tutorials/image_processing/cpp/cpp1_6.png "Testing Network")
+![Testing network](images/tutorials/image_processing/cpp/cpp1_6.png "Testing network")
 
 The output image of the module `SimpleAdd` is automatically recalculated on changing the field <field>Constant Value</field>. This is already implemented in the generated code of the file below:
 

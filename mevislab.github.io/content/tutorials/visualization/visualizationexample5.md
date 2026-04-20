@@ -30,7 +30,7 @@ Implement the following network and open the image *$(DemoDataPath)/BrainMultiMo
 The module `SoGVRVolumeRenderer` allows volume rendering of 3D and 4D images.
 
 {{<alert class="info" caption="Extra Infos">}}
-Additional information about Volume Rendering can be found here: {{< docuLinks "/Standard/Documentation/Publish/Overviews/GVROverview.html#top" "Giga Voxel Renderer">}}
+Additional information about volume rendering can be found here: {{< docuLinks "/Standard/Documentation/Publish/Overviews/GVROverview.html#top" "Giga Voxel Renderer">}}
 {{</alert>}}
 
 [//]: <> (MVL-653)
@@ -40,11 +40,11 @@ We like to add a surface color to the head. In order to do that, we add the modu
 
 ![SoLUTEditor](images/tutorials/visualization/V6_02.png "SoLUTEditor")
 
-To change the color, open the panel of `SoLUTEditor`. In this editor we can change color and transparency interactively (for more information, see the {{< docuLinks "/Standard/Documentation/Publish/ModuleReference/SoLUTEditor.html" "help page">}}). Here, we have a range from black to white and from complete transparency to full opacity.
+To change the color, open the panel of `SoLUTEditor`. In this editor, we can change color and transparency interactively (for more information, see the {{< docuLinks "/Standard/Documentation/Publish/ModuleReference/SoLUTEditor.html" "help page">}}). Here, we have a range from black to white and from complete transparency to full opacity.
 
 ![SoLUTEditor change colors](images/tutorials/visualization/V6_03.png "SoLUTEditor change colors")
 
-We now like to add color. New color points can be added by clicking on the color bar at the bottom side of the graph and existing points can be moved by dragging. You can change the color of each point under *Color*.
+We now like to add color. New color points can be added by clicking {{< mousebutton "left" >}} on the color bar at the bottom side of the graph and existing points can be moved by dragging. You can change the color of each point with the field <field>Color</field>.
 
 ![SoLUTEditor add colors](images/tutorials/visualization/V6_04.png "SoLUTEditor add colors")
 
@@ -53,9 +53,9 @@ As a next step, we add some dynamics to the 3D scene: We like to rotate the head
 
 ![SoRotationXYZ](images/tutorials/visualization/V6_05.png "SoRotationXYZ")
 
-Open the panels of both modules and select the axis the image should rotate around. In this case, the z-axis was selected. Now, build a parameter connection from the parameter *Time* out of the module `SoElapsedTime` to the parameter *Angle* of the module `SoRotationXYZ`. The angle changes with time and the head starts turning.
+Open the panels of both modules and select the axis the image should rotate around. In this case, the z-axis was selected. Now, build a parameter connection from the parameter <field>Time</field> out of the module `SoElapsedTime` to the parameter <field>Angle</field> of the module `SoRotationXYZ`. The angle changes with time and the head starts turning.
 
-![Time and Angle](images/tutorials/visualization/V6_06.png "Time and Angle")
+![Time and angle](images/tutorials/visualization/V6_06.png "Time and angle")
 
 ## Exercises
 1. Change the rotation speed.
@@ -63,7 +63,7 @@ Open the panels of both modules and select the axis the image should rotate arou
 3. Pause the rotation on pressing {{< keyboard "SPACE" >}}.
 
 ## Summary
-* The module `SoGVRVolumeRenderer` renders paged images like DICOM files in a GVR.
+* The module `SoGVRVolumeRenderer` renders paged images like DICOM files with a gigavoxel renderer (GVR).
 * Lookup tables (LUT) allow you to modify the color of your renderings.
 
 {{< networkfile "examples/visualization/example5/VisualizationExample5.mlab" >}}

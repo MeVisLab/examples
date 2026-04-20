@@ -18,7 +18,7 @@ menu:
 {{< youtube "tdQUkkROWBg">}}
 
 ## Introduction
-This chapter will give you an introduction into the creation of module panels and user
+This chapter gives you an introduction into the creation of module panels and user
 interfaces. For the implementation, you will need to
 use the {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html" "MeVisLab Definition Language (MDL)">}}.
 
@@ -36,7 +36,7 @@ In [Example 2.2](tutorials/basicmechanisms/macromodules/globalmacromodules) we c
 
 The *Automatic Panel* contains fields, as well as module inputs and outputs. In this case, no fields exists except the <field>instanceName</field>. Accordingly, there is no possibility to interact with the module. Only the input and the output of the module are given.
 
-![Automatic Panel](images/tutorials/basicmechanics/GUI_10.png "Automatic Panel")
+![Automatic panel](images/tutorials/basicmechanics/GUI_10.png "Automatic panel")
 
 To add and edit a panel, open the context menu and select {{< menuitem "Related Files" "Filter.script" >}}. The text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the file *Filter.script*, which you can edit to define a custom user interface for the module.
 
@@ -65,7 +65,7 @@ Interface {
 {{</highlight>}}
 
 ##### Module Inputs and Outputs
-To create an input/output, you need to define a *Field* in the respective input/output section. Each input/output gets a name (here <field>input0</field>/<field>output0</field>) that you can use to reference this field. The module input maps to an input of the internal network. You need to define this mapping. In this case, the input of the macro module `Filter` maps to the input of the module `Convolution` of the internal network (<inlineCode>internalName = Convolution.input0</inlineCode>). Similarly, you need to define which output of the internal network maps to the output of the macro module `Filter`. In this example, the output of the internal module `Arithmethic2` maps to the output of our macro module `Filter` (<inlineCode>internalName = Arithmetic2.output0</inlineCode>).
+To create an input/output, you need to define a *Field* in the respective input/output section. Each input/output gets a name (here <field>input0</field> and <field>output0</field>) that you can use to reference this field. The module input maps to an input of the internal network. You need to define this mapping. In this case, the input of the macro module `Filter` maps to the input of the module `Convolution` of the internal network (<inlineCode>internalName = Convolution.input0</inlineCode>). Similarly, you need to define which output of the internal network maps to the output of the macro module `Filter`. In this example, the output of the internal module `Arithmethic2` maps to the output of our macro module `Filter` (<inlineCode>internalName = Arithmetic2.output0</inlineCode>).
 
 Creating an input/output causes:
 1. Input/output connectors are added to the module.
@@ -73,13 +73,17 @@ Creating an input/output causes:
 3. Input/output fields are added to the automatic panel.
 4. A description of the input/output fields is automatically added to the module help file, when opening the *.mhelp* file after input/output creation. Helpfile creation is explained in [Example 2.3](tutorials/basicmechanisms/macromodules/helpfiles/).
 
-![Internal Network of your macro module](images/tutorials/basicmechanics/BM_23.png "Internal Network of your macro module")
+![Internal network of your macro module](images/tutorials/basicmechanics/BM_23.png "Internal network of your macro module")
 
 ##### Module Fields
 In the *Parameters* section, you can define *fields* of your macro module. These fields may map to existing fields of the internal network (<attribute>internalName</attribute> = ...), but they do not need to and can also be completely new. You can reference these fields when creating a panel, to allow interactions with these fields. All fields appear in the *Automatic Panel*.
 
 ### Module Panel Layout
 To create your own user interface, we need to create a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Window" "Window" >}}. A window is one of the layout elements that exist in MDL. These layout elements are called {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#Controls" "controls" >}}. The curled brackets define the window section, in which you can define properties of the window and insert further controls like a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Box" "Box" >}}.
+
+{{<alert class="info" caption="Info">}}
+We use *Category* as the top-level layouter in the *Window* to give the inner content a small margin. Otherwise, the controls touch the border of the window and look unappealing.
+{{</alert>}}
 
 Initially, we call the window *MyWindowTitle*, which can be used to reference this window.
 
@@ -103,16 +107,16 @@ Interface {
 }
 
 Window MyWindowName {
-    Category {
-        title = MyWindowTitle
+    title = MyWindowTitle
 
+    Category {
         Box MyBox {}
     }
 }
 ```
 {{</highlight>}}
 
-![Module Panel](images/tutorials/basicmechanics/ModulePanel.png "Module Panel")
+![Module panel](images/tutorials/basicmechanics/ModulePanel.png "Module panel")
 
 You can define different properties of your control. For a window, you can, for example, define a title, or whether the
 window should be shown in full screen (*fullscreen = Yes*).
@@ -132,8 +136,8 @@ the following examples:
 ```Stan
 Window MyWindowName {
     title = MyWindowTitle
-    w = 100
-    h = 50
+    w     = 100
+    h     = 50
     Category {
         Vertical {
             Box MyBox {
@@ -148,14 +152,14 @@ Window MyWindowName {
 ```
 {{</highlight>}}
 
-![Vertical layout of Box and Text](images/tutorials/basicmechanics/VerticalLayout.png "Vertical layout of Box and Text")
+![Vertical layout of Box and Label](images/tutorials/basicmechanics/VerticalLayout.png "Vertical layout of Box and Label")
 
 {{< highlight filename="Filter.script" >}}
 ```Stan
 Window MyWindowName {
     title = MyWindowTitle
-    w = 100
-    h = 50
+    w     = 100
+    h     = 50
     Category {
         Horizontal {
             Box MyBox {
@@ -170,7 +174,7 @@ Window MyWindowName {
 ```
 {{</highlight>}}
 
-![Horizontal layout of Box and Text](images/tutorials/basicmechanics/HorizontalLayout.png "Horizontal layout of Box and Text")
+![Horizontal layout of Box and Label](images/tutorials/basicmechanics/HorizontalLayout.png "Horizontal layout of Box and Label")
 
 
 There are much more controls that can be used. For example, a CheckBox,
@@ -182,7 +186,7 @@ a Table, a Grid, or a Button. To find out more, take a look into the {{< docuLin
 Until now, we learned how to create the layout of a panel. As a next step, we like to get an overview over interactions.
 
 {{<alert class="info" caption="Extra Infos">}}
-You can add the module `GUIExample` to your workspace and play around with is.
+You can add the module `GUIExample` to your workspace and play around with it.
 {{</alert>}}
 
 #### Access to Existing Fields of the Internal Network
@@ -190,9 +194,9 @@ To interact with fields of the internal network in your user interface, we need 
 
 Then, open the panel of the module `Convolution` and right-click {{< mousebutton "right" >}} the field title *Use* of the box *Predefined Kernel* and select *Copy Name*. You now copied the internal network name of the field to your clipboard. The name is made up of *ModuleName.FieldName*, in this case <field>Convolution.predefKernel</field>.
 
-![Convolution Module](images/tutorials/basicmechanics/Convolution.png "Convolution Module")
+![Convolution module](images/tutorials/basicmechanics/Convolution.png "Convolution module")
 
-In the panel of the module `Convolution`, you can change this variable *Kernel* via a drop-down menu. In MDL, a drop-down menu is called a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_ComboBox" "ComboBox" >}}. We can take over the field <field>predefKernel</field>, its drop-down menu and all its properties by creating a new field in our panel and reference to the internal field <field>Convolution.predefKernel</field>, which already exist in the internal network.
+In the panel of the module `Convolution`, you can change this variable *Kernel* via a drop-down menu. In MDL, a drop-down menu is called a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_ComboBox" "ComboBox" >}}. We can take over the field <field>predefKernel</field>, its drop-down menu, and all its properties by creating a new field in our panel and reference to the internal field <field>Convolution.predefKernel</field>, which already exists in the internal network.
 
 Changes of the properties of this field can be done in the curled brackets using tags (here, we changed the title).
 
@@ -239,6 +243,7 @@ Interface {
 
 Window MyWindowName {
     title = MyWindowTitle
+
     Category {
         Field kernel {}
     }
@@ -247,14 +252,14 @@ Window MyWindowName {
 {{</highlight>}}
 
 #### Commands
-We not only can use existing functionalities, but also add new interactions via Python scripting.
+We can not only use existing functionality but also add new interactions via Python scripting.
 
 In the example below, we added a *wakeupCommand* to the Window and a simple *command* to the Button.
 
 {{< highlight filename="Filter.script" >}}
 ```Stan
 Window MyWindowName {
-    title = MyWindowTitle
+    title         = MyWindowTitle
     wakeupCommand = myWindowCommand
     
     Category {
@@ -266,7 +271,7 @@ Window MyWindowName {
 ```
 {{</highlight>}}
 
-The *wakeupCommand* defines a Python function that is executed as soon as the Window is opened. The Button *command* is executed when the user clicks {{< mousebutton "left" >}} on the Button.
+The *wakeupCommand* defines a Python function that is executed as soon as the Window is opened. The Button's *command* is executed when the user clicks {{< mousebutton "left" >}} on the Button.
 
 Both commands reference a Python function that is executed whenever both actions (open the Window or click the Button) are executed.
 
@@ -289,7 +294,7 @@ The section *Source* should already be available and generated automatically in 
 
 [//]: <> (MVL-653)
 
-You can right-click {{< mousebutton "right" >}} on the command (*myWindowCommand* or *myButtonAction*) in your *.script* file and select {{< menuitem "Create Python Funtion......" >}}. The text editor MATE opens automatically and generates an initial Python function for you. You can simply add a logging function or implement complex logic here.
+You can right-click {{< mousebutton "right" >}} on the command (<inlineCode>myWindowCommand</inlineCode> or <inlineCode>myButtonAction</inlineCode>) in your *.script* file and select {{< menuitem "Create Python Funtion......" >}}. The text editor MATE opens automatically and generates an initial Python function for you. You can simply add a logging function or implement complex logic here.
 
 **Example:**
 {{< highlight filename="Filter.py" >}}

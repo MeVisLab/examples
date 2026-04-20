@@ -8,12 +8,12 @@ tags: ["Beginner", "Tutorial", "SoViewportRegion", "Layout", "Multi-View"]
 menu: 
   main:
     identifier: "soviewportregion"
-    title: "Creating Multi View Layouts Using SoViewportRegion"
+    title: "Creating Multi-View Layouts Using SoViewportRegion"
     weight: 460
     parent: "basicmechanisms"
 ---
 
-# Example 6: Creating Multi View Layouts Using SoViewportRegion
+# Example 6: Creating Multi-View Layouts Using SoViewportRegion
 
 ## Introduction
 In this guide, we will show how to use the `SoViewportRegion` module to create custom layouts within the `SoRenderArea` module. This allows you to display multiple views or slices in a single window.
@@ -28,17 +28,17 @@ We will demonstrate how to:
 ### Displaying Three Images in One Panel
 Add an `ImageLoad` module to your workspace and select a 3D image like *./MeVisLab/Resources/DemoData/MRI_Head.tif* from the MeVisLab demo data directory. Connect an `OrthoReformat3` module and add three `View2D` modules.
 
-![Image Display Setup](images/tutorials/basicmechanics/E6_1.png "Image Display Setup")
+![Image display setup](images/tutorials/basicmechanics/E6_1.png "Image display setup")
 
 Opening the three `View2D` module panels now shows the image data in three orthogonal views. The module `OrthoReformat3` transforms the input image (by rotating and/or flipping) into the three main views commonly used.
 
-![3 Views in 3 Viewers](images/tutorials/basicmechanics/E6_2.png "3 Views in 3 Viewers")
+![Three views in three viewers](images/tutorials/basicmechanics/E6_2.png "Three views in three viewers")
 
 The module `SoViewportRegion` divides the render window into multiple areas, allowing different views or slices to be shown in the same window. It's useful in medical applications, like displaying MRI or CT images from different angles (axial, sagittal, coronal) at once, making data analysis easier and faster.
 
 Add three `SoViewportRegion` modules and connect each one to a `View2D` module. To display the hidden outputs of the `View2D` module, press {{< keyboard "SPACE" >}} and connect the output to the input of `SoViewportRegion` as shown below.
 
-![Connect SoViewportRegion with View2D](images/tutorials/basicmechanics/E6_3.png "Connect SoViewportRegion with View2D")
+![Connect SoViewportRegion to View2D](images/tutorials/basicmechanics/E6_3.png "Connect SoViewportRegion to View2D")
 
 Add a `SoRenderArea` for your final result to the network and connect all three `SoViewportRegion` modules to it.
 
@@ -63,7 +63,7 @@ We want to create a layout with the following setting:
 * Coronal view on the top right side
 * Sagittal view on the bottom right side 
 
-![Target Layout](images/tutorials/basicmechanics/E6_6.png "Target Layout")
+![Target layout](images/tutorials/basicmechanics/E6_6.png "Target layout")
 
 Now, open the left `SoViewportRegion` module and change settings:
 
@@ -78,7 +78,7 @@ Now, open the left `SoViewportRegion` module and change settings:
   * *Domain* Fraction of height
   * *Reference* Upper window border
 
-![Axial View](images/tutorials/basicmechanics/E6_7.png "Axial View")
+![Axial view](images/tutorials/basicmechanics/E6_7.png "Axial view")
 
 Continue with the middle `SoViewportRegion` module and change settings:
 
@@ -93,7 +93,7 @@ Continue with the middle `SoViewportRegion` module and change settings:
   * *Domain* Fraction of smallest dimension
   * *Reference* Upper window border
 
-![Coronal View](images/tutorials/basicmechanics/E6_8.png "Coronal View")
+![Coronal view](images/tutorials/basicmechanics/E6_8.png "Coronal view")
 
 The right `SoViewportRegion` module should look as follows:
 
@@ -108,16 +108,16 @@ The right `SoViewportRegion` module should look as follows:
   * *Domain* Fraction of smallest dimension
   * *Reference* Upper window border
 
-![Sagittal View](images/tutorials/basicmechanics/E6_9.png "Sagittal View")
+![Sagittal view](images/tutorials/basicmechanics/E6_9.png "Sagittal view")
 
 #### Displaying Four Images in One Panel
 In the next example, the `SoRenderArea` will display four views at the same time: axial, coronal, sagittal, and a 3D view.
 
-![3D View Layout](images/tutorials/basicmechanics/E6_11.png "3D View Layout")
+![3D view layout](images/tutorials/basicmechanics/E6_11.png "3D view layout")
 
 These views will be arranged in a single panel that is split into two sides with each side showing two images. To add the 3D view, insert a `View3D` module and connect it to the `ImageLoad` module. Then, connect the `View3D` to `SoCameraInteraction`, connect that to another `SoViewportRegion`, and finally to `SoRenderArea`.
 
-![3D View Network](images/tutorials/basicmechanics/E6_10.png "3D View Network")
+![3D view network](images/tutorials/basicmechanics/E6_10.png "3D view network")
 
 Now, open the left `SoViewportRegion` module and change settings:
 
@@ -147,11 +147,11 @@ Open the right `SoViewportRegion` connected to the `SoCameraInteraction` module 
 
 This setup will let you interact with the 3D view and display all four views together as shown in the figure below.
 
-![3D View](images/tutorials/basicmechanics/E6_12.png "3D View")
+![3D view](images/tutorials/basicmechanics/E6_12.png "3D view")
 
 You will see that the orientation cube of the 3D viewer appears in the bottom right corner of the `SoRenderArea`. To resolve this, you can check *Render delayed paths* in the `SoViewportRegion` module of the 3D viewer.
 
-![Final Network](images/tutorials/basicmechanics/E6_13.png "Final Network")
+![Final network](images/tutorials/basicmechanics/E6_13.png "Final network")
 
 ## Alternatively Using `SoView2D`
 In the case you want the same dataset to be visualized in multiple viewers, the module `SoView2D` already provides this functionality.
@@ -160,11 +160,11 @@ In the case you want the same dataset to be visualized in multiple viewers, the 
 
 Whenever you are using the `SoView2D` module to visualize a 2D dataset, you need to add a `View2DExtensions` module and, for example, a `SoRenderArea` module. Without the `View2DExtensions` module, interactions like scrolling through slices or changing the window and level settings will not be possible.
 
-By default, you will see your images in a single viewer the same way as if you use the `View2D` module. The *number of columns* is defined as *1* by default. If you now change the *Number of Slices* to something like *3*, you will see three viewers shown in a single column. As we can only connect one dataset, this network cannot display multiple series at the same time.
+By default, you will see your images in a single viewer the same way as if you use the `View2D` module. The number of <field>Columns</field> is defined as *1* by default. If you now change the <field>Number of Slices</field> to something like *3*, you will see three viewers shown in a single column. As we can only connect one dataset, this network cannot display multiple series at the same time.
 
 ![Multiple slices in SoView2D](images/tutorials/basicmechanics/SoView2D_2.png "Multiple slices in SoView2D")
 
-Changing the *number of columns* to *3* and the *Number of Slices* to *9* results in a 3x3 layout.
+Changing the number of <field>Columns</field> to *3* and the <field>Number of Slices</field> to *9* results in a 3x3 layout.
 
 ![Multiple slices and columns in SoView2D](images/tutorials/basicmechanics/SoView2D_3.png "Multiple slices and columns in SoView2D")
 

@@ -49,28 +49,28 @@ Whenever you change the camera in the switch, you need to detect the new camera 
 
 A `SoPerspectiveCamera` camera defines a perspective projection from a viewpoint.
 
-The viewing volume for a perspective camera is a truncated pyramid. By default, the camera is located at (0, 0, 1) and looks along the negative z-axis; the <field>Position</field> and <field>Orientation</field> fields can be used to change these values. The <field>Height Angle</field> field defines the total vertical angle of the viewing volume; this and the <field>Aspect Ratio</field> field determine the horizontal angle.
+The viewing volume for a perspective camera is a truncated pyramid. By default, the camera is located at *(0, 0, 1)* and looks along the negative z-axis; the <field>Position</field> and <field>Orientation</field> fields can be used to change these values. The <field>Height Angle</field> field defines the total vertical angle of the viewing volume; this and the <field>Aspect Ratio</field> field determine the horizontal angle.
 
 A `SoOrthographicCamera` camera defines a parallel projection from a viewpoint.
 
-This camera does not diminish objects with distance as an SoPerspectiveCamera does. The viewing volume for an orthographic camera is a cuboid (a box).
+This camera does not diminish objects with distance as a `SoPerspectiveCamera` does. The viewing volume for an orthographic camera is a cuboid (a box).
 
 By default, the camera is located at *(0, 0, 1)* and looks along the negative z-axis; the <field>Position</field> and <field>Orientation</field> fields can be used to change these values. The <field>Height</field> field defines the total height of the viewing volume; this and the <field>Aspect Ratio</field> field determine its width.
 
 Add a `SoCameraWidget` and connect it to your `SoGroup`. 
 
-![SoCameraWidget](images/tutorials/openinventor/Camera_3.png "SoCameraWidget")
+![SoCameraWidget](images/tutorials/openinventor/Camera_4.png "SoCameraWidget")
 
-This module shows a simple widget on an Inventor viewer that can be used to rotate, pan, or zoom the scene. You can configure the *Main Interaction* in the panel of the `SoCameraWidget`.
+This module shows a simple widget on an Open Inventor viewer that can be used to rotate, pan, or zoom the scene. You can configure the *Main Interaction* in the panel of the `SoCameraWidget`.
 
 You can also add more than one widget to show multiple widgets in the same scene, see example network of the `SoCameraWidget` module.
 
 ## The `SoExaminerViewer` Module
 The `SoExaminerViewer` makes some things much easier, because a camera and a light are already integrated. 
 
-Add a `SoExaminerViewer` to your workspace and connect it to the `SoBackground`, the `SoMaterial` and the `SoOrientationModel` modules.
+Add a `SoExaminerViewer` to your workspace and connect it to the `SoBackground`, the `SoMaterial`, and the `SoOrientationModel` modules.
 
-![SoExaminerViewer](images/tutorials/openinventor/Camera_4.png "SoExaminerViewer")
+![SoExaminerViewer](images/tutorials/openinventor/Camera_5.png "SoExaminerViewer")
 
 The difference to the `SoRenderArea` can be seen immediately. You can interact with your scene and a light is available initially.
 

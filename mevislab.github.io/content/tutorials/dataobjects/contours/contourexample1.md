@@ -18,19 +18,19 @@ menu:
 {{< youtube "ygYJMmQ95v8">}}
 
 ## Introduction
-We like to start with the creation of CSOs. To create CSOs, you need a `SoCSO*`-Editor. There are several different editors that can be used to create CSOs (see [here](tutorials/dataobjects/contourobjects#CSOEditors)). Some of them are introduced in this example.
+We like to start with the creation of CSOs. To create CSOs, you need a `SoCSO*Editor`. There are several different editors that can be used to create CSOs (see [here](tutorials/dataobjects/contourobjects#CSOEditors)). Some of them are introduced in this example.
 
 ## Steps to Do
 
 ### Develop Your Network
 For this example, we need the following modules. Add the modules to your workspace, connect them as shown below, and load the example image *$(DemoDataPath)/BrainMultiModal/ProbandT1.tif*.
 
-![Data Objects Contours Example 1](images/tutorials/dataobjects/contours/DO1_01.png "Data Objects Contours Example 1")
+![Simple network to create rectangle CSOs on a 2D image](images/tutorials/dataobjects/contours/DO1_01.png "Simple network to create rectangle CSOs on a 2D image")
 
 ### Edit Rectangular CSO
 Now, open the module `View2D`. Use your left mouse button {{< mousebutton "left" >}}, to draw a rectangle as your first CSO.
 
-![Rectangle Contour](images/tutorials/dataobjects/contours/DO1_02.png "Rectangle Contour")
+![Rectangle contour](images/tutorials/dataobjects/contours/DO1_02.png "Rectangle contour")
 
 The involved modules have the following tasks:
 
@@ -42,25 +42,25 @@ The involved modules have the following tasks:
 
 If you now open the panel of the `CSOManager`, you will find one CSO, the one we created before. If you like, you can name the CSO.
 
-![CSO Manager](images/tutorials/dataobjects/contours/DO1_04.png "CSO Manager")
+![Panel of CSOManager](images/tutorials/dataobjects/contours/DO1_04.png "Panel of CSOManager")
 
 ### Change Properties of CSO
 Now, add the module `SoCSOVisualizationSettings` to your workspace and connect it as shown below.
 
-![CSO Manager](images/tutorials/dataobjects/contours/DO1_05.png "CSO Manager")
+![Added a SoCSOVisualizationSettings](images/tutorials/dataobjects/contours/DO1_05.png "Added a SoCSOVisualizationSettings")
 
 Open the module to change the visualization settings of your CSOs. In
 this case, we change the line style (to dashed lines) and the color (to
-be red). Tick the *Auto apply* box at the bottom or press *Apply*.
+be red). Tick the <field>Auto apply</field> checkbox at the bottom or press <field>Apply</field>.
 
-![Visualization Settings](images/tutorials/dataobjects/contours/DO1_07.png "Visualization Settings")
+![Panel of SoCSOVisualizationSettings](images/tutorials/dataobjects/contours/DO1_07.png "Panel of SoCSOVisualizationSettings")
 
 ### CSOs of Different Shapes
 Exchange the module `SoCSORectangleEditor` with another editor, for
 example, the `SoSCOPolygonEditor` or `SoCSOSplineEditor`. Other editors
 allow to draw CSOs of other shapes. For polygon-shaped CSOs or CSOs
-consisting of splines, left-click on the image viewer to add new points
-to form the CSO. Double-click to finish the CSO.
+consisting of splines, left-click {{< mousebutton "left" >}} on the image viewer to add new points
+to form the CSO. Double-click {{< mousebutton "left" >}} to finish the CSO.
 
 ![SoSCOPolygonEditor](images/tutorials/dataobjects/contours/DO1_08.png "SoSCOPolygonEditor")
 ![SoCSOSplineEditor](images/tutorials/dataobjects/contours/DO1_09.png "SoCSOSplineEditor")
@@ -73,7 +73,7 @@ If you want to fill the shapes, you can simply add a `SoCSOFillingRenderer` modu
 Create CSOs with green color and ellipsoid shapes.
 
 ## Summary
-* CSOs can be created using a SoCSO\*-Editor.
+* CSOs can be created using a `SoCSO*Editor`.
 * CSOs of different shapes can be created.
 * A list of CSOs can be stored in the `CSOManager`.
 * Properties of CSOs can be changed using `SoCSOVisualizationSettings`.

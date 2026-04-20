@@ -16,7 +16,6 @@ menu:
 # Example 2.5: Module Interactions Using Python Scripting {#TutorialPythonScripting}
 
 ## Introduction
-
 This chapter will give you an overview over Python scripting in MeVisLab. Here, no introduction into Python will be given. However, basic knowledge in Python is helpful. Instead, we will show how to integrate and use Python in the MeVisLab SDK. 
 
 In fact, nearly everything in MeVisLab can be done via Python scripting: You can add modules to your network, or remove modules, you can dynamically establish and remove connections, and so on. But, much more important: You can access module inputs and outputs, as well as module fields to process their parameters and data. You can equip user interfaces and panel with custom functionalities. Python can be used to implement module interactions. When you open a panel or you press a button in a panel, the executed actions are implemented via Python scripting.
@@ -37,7 +36,7 @@ In the *Scripting Console*, you can add and connect modules using the following 
 
 * *ctx.addModule("*< ModuleName >*")* : Add the desired module to your workspace.
 * *ctx.field("* < ModuleName.FieldName> *")* : Access a field of a module.
-* *ctx.field("* < ModuleInput > *").connectFrom("* < ModuleOutput > *")* : Draw a connection from one module's output to another module's input.
+* *ctx.field("* < ModuleInput > *").connectFrom("* < ModuleOutput > *")* : Establish a connection from one module's output to another module's input.
 
 In this case, we added the modules `DicomImport` and `View2D` to the workspace and connected both modules.
 
@@ -45,7 +44,7 @@ In this case, we added the modules `DicomImport` and `View2D` to the workspace a
 
 It is also possible to add notes to your workspace.
 
-![Add a note to the workspace](images/tutorials/basicmechanics/Scripting_04.png "Add a note to your workspace")
+![Add a note to your workspace](images/tutorials/basicmechanics/Scripting_04.png "Add a note to your workspace")
 
 ### Access Modules and Module Fields
 You can access modules via *ctx.module("* < ModuleName > *")*. From this object, you can access module fields, module inputs and outputs, and everything in context of this module. 
@@ -57,15 +56,14 @@ You can also directly access a module field via *ctx.field("* < ModuleName.Field
 ![Access modules and module fields](images/tutorials/basicmechanics/Scripting_05.png "Access modules and module fields")
 
 ### Python Scripting Reference
-{{< docuLinks "/Resources/Documentation/Publish/SDK/ScriptingReference/group__scripting.html" "Here" >}} you can find the Scripting Reference. In the Scripting Reference you can find information about different Python classes used in MeVisLab and their methods.
+{{< docuLinks "/Resources/Documentation/Publish/SDK/ScriptingReference/group__scripting.html" "Here" >}} you can find the Scripting Reference. In the Scripting Reference, you can find information about different Python classes used in MeVisLab and their methods.
 
 [//]: <> (MVL-653)
 
 ## Where and How to Use Python Scripting
 
 #### Scripting View
-
-Under {{< menuitem "View" "Views" "Scripting" >}} you can find the View *Scripting*. The view offers a standard Python console, without any meaningful network or module context. This means only general Python functionalities can be tested and used. Access to modules or your network is not possible.
+Under {{< menuitem "View" "Views" "Scripting" >}} you can find the View *Scripting*. The view offers a standard Python console without any meaningful network or module context. This means only general Python functionalities can be tested and used. Access to modules or your network is not possible.
 
 #### Scripting Console
 You can open the *Scripting Console* via {{< menuitem "Scripting" "Show Scripting Console" >}}. In the context of your workspace, you can access your network and modules.
@@ -74,10 +72,10 @@ You can open the *Scripting Console* via {{< menuitem "Scripting" "Show Scriptin
 Every module offers a scripting console. Open the context menu of a module and select {{< menuitem "Show Window" "Scripting Console" >}}. You can work in the context (*ctx.*) of this module. 
 
 #### Module `RunPythonScript`
-The module `RunPythonScript` allows to execute Python scripts from within a MeVisLab network. You can draw parameter connection from modules to `RunPythonScript` and back, to process parameter fields using Python scripting. An example for the usage of `RunPythonScript` can be found [here](../scriptingexample1/).
+The module `RunPythonScript` allows to execute Python scripts from within a MeVisLab network. You can establish parameter connection from modules to `RunPythonScript` and back to process parameter fields using Python scripting. An example for the usage of `RunPythonScript` can be found [here](../scriptingexample1/).
 
 #### Module Interactions via Python Scripting
-You can reference to a Python function in a *.script* file of a macro module. With this, you can, for example, execute a Python function whenever you open a panel, or define the action that is executed when pressing a button or specify the command triggered by a [field listener](tutorials/basicmechanisms/macromodules/scriptingexample2). An example for module interactions via Python scripting is given in the same example.
+You can reference to a Python function in a *.script* file of a macro module. With this, you can, for example, execute a Python function whenever you open a panel, define the action that is executed when pressing a button, or specify the command triggered by a [field listener](tutorials/basicmechanisms/macromodules/scriptingexample2). An example for module interactions via Python scripting is given in the same example.
 
 #### Python Scripting in Network Files (*.mlab*)
 If you do not want to create a macro module, you can also execute Python scripts in a network file (*.mlab*). Save your network using a defined name, for example, *mytest.mlab*. Then, create a *.script* and a *.py* file in the same directory, using the same names (*mytest.script* and *mytest.py*).
@@ -103,14 +101,14 @@ print("Hello")
 ```
 {{</highlight>}}
 
-If you now use the menu item {{< menuitem "Scripting" "Start Network Script" >}}, the script can be executed inside your network. You can also use the keyboard shortcut {{< keyboard "ctrl+R" >}}.
+If you now use the menu item {{< menuitem "Scripting" "Start Network Script" >}}, the script can be executed inside your network. You can also use the keyboard shortcut {{< keyboard "Ctrl" "R" >}}.
 
 ## Tips and Tricks
+
 #### Scripting Assistant
+Under {{< menuitem "View" "Views" "Scripting Assistant" >}} you can find the view Scripting Assistant. In this view, the actions you execute in the workspace are translated into Python script.
 
-Under {{< menuitem "View" "Views" "Scripting Assistant" >}} you can find the view *Scripting Assistant*. In this view, the actions you execute in the workspace are translated into Python script.
-
-For example: Open the *Scripting Assistant*. Add the module `WEMInitialize` to your workspace. You can select a <field>Model</field>, for example, the <field>cube</field>. In addition, you can change the <field>Translation</field> and press *Apply*. All these actions can be seen in the *Scripting Assistant* translated into Python code. Therefore, the *Scripting Assistant* is a powerful tool to help you to script you actions.
+For example: Open the Scripting Assistant. Add the module `WEMInitialize` to your workspace. You can select a <field>Model</field>, for example, the <field>cube</field>. In addition, you can change the <field>Translation</field> and press *Apply*. All these actions can be seen in the Scripting Assistant translated into Python code. Therefore, the Scripting Assistant is a powerful tool to help you to script you actions.
 
 ![Scripting Assistant](images/tutorials/basicmechanics/Scripting_01.png "Scripting Assistant")
 

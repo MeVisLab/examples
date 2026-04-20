@@ -21,11 +21,11 @@ In this tutorial, we will equip the macro module we created in the [previous tut
 ## Steps to Do
 Open the module definition folder of your macro module and the related *.script* file in MATE. Then, activate the preview as shown below: 
 
-![MATE Preview](images/tutorials/thirdparty/Matplotlib7.png)
+![MATE's Preview view](images/tutorials/thirdparty/Matplotlib7.png "MATE's Preview view")
 
-Drag the small preview window to the bottom right corner of your window where it does not bother you. We will now be adding contents to be displayed there. 
+Drag the small preview window to the bottom right corner of your window where it does not bother you. We will now add contents to be displayed there. 
 
-Adding the following code to your *.script* file will open a panel window if the macro module is clicked.
+Adding the following code to your *.script* file will open a panel window if the macro module is double-clicked {{< mousebutton "left" >}}.
 This new panel window contains a Matplotlib canvas where the plots will be displayed later on as well as two prepared boxes that we will add functions to in the next step.
 
 {{< highlight filename = "BaseNetwork.script">}}
@@ -65,25 +65,25 @@ Window {
 Letting a box expand on the x- or y-axis or adding an empty object do so contributes to the panel looking a certain way and helps the positioning of the elements. You can also try to vary the positioning by adding or removing "expand" statements or moving boxes from a vertical to a horizontal alignment. Hover over the boxes in the preview to explore the concept.
 
 {{<alert class="info" caption="Info">}}
-You can click and hold onto a box to move it within the preview. Your code will automatically be changed according to the new positioning.
+You can click {{< mousebutton "left" >}} and hold onto a box to move it within the preview. Your code will automatically be changed according to the new positioning.
 {{</alert>}}
 
 **Now, we need to identify which module parameters we want to be able to access from the panel of our macro:**
 
 To plot a slice or a defined sequence of slices, we need to be able to set a start and an end. 
-Go back into your MeVisLab workspace, right-click your `BaseNetwork` module and choose "Show Internal Network". 
+Go back into your MeVisLab workspace, right-click {{< mousebutton "right" >}} your `BaseNetwork` module and choose "Show Internal Network". 
 
-![SubImage module info](images/tutorials/thirdparty/Matplotlib8.png "The `SubImage` module provides the option to set sequences of slices.")
-![SubImage module panel](images/tutorials/thirdparty/Matplotlib9.PNG "The starting and ending slices of the sequence can be set in the module panel.")
+![The SubImage module provides the option to set sequences of slices](images/tutorials/thirdparty/Matplotlib8.png "The SubImage module provides the option to set sequences of slices")
+![The starting and ending slices of the sequence can be set in the module panel](images/tutorials/thirdparty/Matplotlib9.PNG "The starting and ending slices of the sequence can be set in the module panel")
 
 {{<alert class="info" caption="Info">}}
-To find out what the parameters are called, what type of values they contain and receive, and what they refer to, you can right-click on them within the panel.
+To find out what the parameters are called, what type of values they contain and receive, and what they refer to, you can right-click {{< mousebutton "right" >}} on them within the panel.
 {{</alert>}}
 
-We now know that we will need `SubImage.z` and `SubImage.sz` to define the start and end of a sequence. 
+We now know that we will need <field>SubImage.z</field> and <field>SubImage.sz</field> to define the start and end of a sequence. 
 But there are a few other module parameters that must be set beforehand to make sure the data we extract to plot later is compareable and correct.
 
-To do so, we will be defining a "setDefaults" function for our module. Open the *.py* file and add the code below.
+To do so, we will be defining a <inlineCode>setDefaults</inlineCode> function for our module. Open the *.py* file and add the code below.
 
 {{< highlight filename = "BaseNetwork.py">}}
 ```Python
@@ -118,7 +118,7 @@ def updateSlices():
 ```
 {{</highlight>}}
 
-Make sure that the variable declarations as "None" are put above the "setDefaults" function and add the execution of the "updateSlices()" function into the "setDefaults" function, like so:
+Make sure that the variable definitions as <inlinceCode>None</inlineCode> are put above the <inlineCode>setDefaults</inlineCode> function and add the execution of the <inlineCode>updateSlices</inlineCode> function into the <inlineCode>setDefaults</inlineCode> function, like so:
 
 {{< highlight filename = "BaseNetwork.py">}}
 ```Python
@@ -137,7 +137,7 @@ def setDefaults():
 ```
 {{</highlight>}}
 
-Now we are ensuring that the "setDefaults" function and therefore also the "updateSlices" function are executed every time the panel is opened by setting "setDefaults" as a wakeup command.
+Now we are ensuring that the <inlineCode>setDefaults</inlineCode> function and therefore also the <inlineCode>updateSlices</inlineCode> function are executed every time the panel is opened by setting <inlineCode>setDefaults</inlineCode> as a wakeup command.
 
 {{< highlight filename = "BaseNetwork.script">}}
 ```Stan
@@ -169,7 +169,7 @@ Commands {
 ``` {{</highlight>}}
 
 To see if all of this is working, we need to embed fields into our panel. 
-Put this inside of the box titled "Single Slice":
+Put this inside of the box titled *Single Slice*:
 
 {{< highlight filename = "BaseNetwork.script">}}
 ```Stan
@@ -188,7 +188,7 @@ Put this inside of the box titled "Single Slice":
 ```
 {{</highlight>}}
 
-And then add this to your box titled "Sequence":
+And then add this to your box titled *Sequence*:
 
 {{< highlight filename = "BaseNetwork.script">}}
 ```Stan
@@ -219,11 +219,11 @@ Lastly, put this under your two boxes, but above the empty element in the vertic
 {{</highlight>}}
 
 If you followed all of the listed steps, your panel preview should look like this and display all the current parameter values. 
-![Adapted macro panel](images/tutorials/thirdparty/Matplotlib10.PNG)
+![Adapted macro panel](images/tutorials/thirdparty/Matplotlib10.PNG "Adapted macro panel")
 
 We can now work on the functions that visualize the data as plots on the Matplotlib canvas. 
 You will have noticed how all of the buttons in the *.script* file have a command. Whenever that button is clicked, its designated command is executed.
-However, for any of the functions referenced via "command" to work, we need one that ensures that the plots are shown on the integrated Matplotlib canvas. We will start with that one.
+However, for any of the functions referenced via *command* to work, we need one that ensures that the plots are shown on the integrated Matplotlib canvas. We will start with that one.
 
 {{< highlight filename = "BaseNetwork.py">}}
 ```Python
@@ -302,18 +302,18 @@ def click2D():
 
 You should now be able to reproduce results like these: 
 
-![Single Slice 2D](images/tutorials/thirdparty/Matplotlib13.PNG "2D plot of slice 28")
-![Small Sequence 2D](images/tutorials/thirdparty/Matplotlib112.PNG "Smaller sequences are displayed as multiple single slice plots.")
+![2D plot of slice 28](images/tutorials/thirdparty/Matplotlib13.PNG "2D plot of slice 28")
+![Smaller sequences are displayed as multiple single slice plots](images/tutorials/thirdparty/Matplotlib112.PNG "Smaller sequences are displayed as multiple single slice plots")
 ![Sequence in 2D](images/tutorials/thirdparty/Matplotlib122.PNG "Sequence in 2D")
 
 {{<alert class="info" caption="Info">}}
 Notice how the bin size affects the plots appearance.
 {{</alert>}}
 
-You can download the .py file below if you want. 
+You can download the *.py* file below if you want. 
 {{< networkfile "/tutorials/thirdparty/matplotlib/BaseNetwork.py" >}}
 
 ## Summary 
-* Functions are connected to fields of the panel via commands.
+* Functions are connected to fields of the panel via *command*s.
 * The panel preview in MATE can be used to change positioning of panel components without touching the code.
-* An "expand" statement can help the positioning of components in the panel.
+* An *expand* statement can help the positioning of components in the panel.

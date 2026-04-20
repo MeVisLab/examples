@@ -8,7 +8,7 @@ tags: ["Beginner", "Tutorial", "Macro", "Macro modules", "Global Macro"]
 menu: 
   main:
     identifier: "globalmacromodules"
-    title: "Creation of Global Macro Modules From a Local Macro Using the Project Wizard"
+    title: "Creation of Global Macro Modules from a Local Macro Using the Project Wizard"
     weight: 390
     parent: "macro_modules"
 ---
@@ -18,7 +18,7 @@ menu:
 {{< youtube "M4HnA0d1V5k">}}
 
 ## Introduction
-In this chapter you will learn how to create global macro modules. There are many ways to do this. You can convert local macros into global macro modules or you can directly create global macro modules using the *Project Wizard*. In contrast to local macro modules, global macro modules are commonly available throughout projects and can be found via module search and under {{< menuitem "Modules" >}}.
+In this chapter, you will learn how to create global macro modules. There are many ways to do this. You can convert local macros into global macro modules or you can directly create global macro modules using the *Project Wizard*. In contrast to local macro modules, global macro modules are commonly available throughout projects and can be found via module search and under {{< menuitem "Modules" >}}.
 
 ## Steps to Do
 
@@ -77,7 +77,7 @@ Instead of converting a local macro module into a global macro module, you can a
 Make sure to choose *Directory Structure* as *self-contained*. This ensures that all files of your module are stored in a single directory.
 {{</alert>}}
  
- Press *Next >* to edit further properties. You have the opportunity to directly define the internal network of the macro module, for example, by copying an existing network. In this case, we could copy the network of the local macro module `Filter` we already created. In addition, you have the opportunity to directly create a Python file. Python scripting can be used for the implementation of module interactions and other module functionalities. More information about Python scripting can be found [here](./tutorials/basicmechanisms/macromodules/pythonscripting).
+ Click <field>Next ></field> to edit further properties. You have the opportunity to directly define the internal network of the macro module, for example, by copying an existing network. In this case, we could copy the network of the local macro module `Filter` we already created. In addition, you have the opportunity to directly create a Python file. Python scripting can be used for the implementation of module interactions and other module functionalities. More information about Python scripting can be found [here](./tutorials/basicmechanisms/macromodules/pythonscripting).
 
 {{< imagegallery 2 "images" "ProjectWizard1" "ProjectWizard2" >}}
 

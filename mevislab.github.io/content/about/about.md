@@ -19,7 +19,7 @@ Hints common mistakes or steps you should consider beforehand.
 {{</alert>}}
 
 ## Keyboard Shortcuts
-Keyboard shortcuts are incorporated like this:  {{< keyboard "CTRL" "ALT" "2" >}}.
+Keyboard shortcuts are incorporated like this:  {{< keyboard "Ctrl" "Alt" "2" >}}.
 
 ## Networks
 The networks shown and used in the tutorials can be found in the [Examples](examples) section of this page. 

@@ -21,11 +21,11 @@ In this example, you are using a pretrained PyTorch deep learning model (HighRes
 HighRes3DNet is a 3D residual network presented by Li et al. in [On the Compactness, Efficiency, and Representation of 3D Convolutional Networks: Brain Parcellation as a Pretext Task](https://link.springer.com/chapter/10.1007/978-3-319-59050-9_28).
 
 ## Steps to Do
-Add a `LocalImage` module to your workspace and select the file *MRI_Head.dcm*. For PyTorch it is necessary to resample the data to a defined size. Add a `Resample3D` module to the `LocalImage` and open the panel. Change *Keep Constant* to *Voxel Size* and define *Image Size* as 176, 217, 160.
+Add a `LocalImage` module to your workspace and select the file *MRI_Head.dcm*. For PyTorch, it is necessary to resample the data to a defined size. Add a `Resample3D` module to the `LocalImage` and open the panel. Change <field>Keep Constant</field> to *Voxel Size* and define <field>Image Size</field> as *176, 217, 160*.
 
 ![Resample3D module](images/tutorials/thirdparty/pytorch_example2_1.png "Resample3D module").
 
-The coordinates in PyTorch are also a little bit different than in MeVisLab; therefore, you have to rotate the image. Add an `OrthoSwapFlip` module and connect it to the `Resample3D` module. Change *View* to *Other* and set *Orientation* to *YXZ*. Also check *Flip horizontal*, *Flip vertical*, and *Flip depth*. *Apply* your changes.
+The coordinates in PyTorch are also a little bit different than in MeVisLab; therefore, you have to rotate the image. Add an `OrthoSwapFlip` module and connect it to the `Resample3D` module. Change <field>View</field> to *Other* and set <field>Orientation</field> to *YXZ*. Also check <field>Flip horizontal</field>, <field>Flip vertical</field>, and <field>Flip depth</field>. <field>Apply</field> your changes.
 
 ![OrthoSwapFlip module](images/tutorials/thirdparty/pytorch_example2_2.png "OrthoSwapFlip module").
 
@@ -69,9 +69,9 @@ Commands {
 ```
 {{</highlight>}}
 
-In MATE, right-click {{< mousebutton "right" >}} the Project Workspace and add a new file *DemoAI.py* to your project. The workspace now contains an empty Python file.
+In MATE, right-click {{< mousebutton "right" >}} the *Project Workspace* and add a new file *DemoAI.py* to your project. The workspace now contains an empty Python file.
 
-![Project Workspace](images/tutorials/thirdparty/pytorch_example2_5.png "Project Workspace").
+![Project workspace](images/tutorials/thirdparty/pytorch_example2_5.png "Project workspace").
 
 Switch back to MeVisLab IDE, right-click {{< mousebutton "right" >}} the local macro, and select {{< menuitem "Reload Definition">}}. Your new input and output interface is now available and you can connect images to your module.
 
@@ -85,7 +85,7 @@ Add a `LoadBase` module and connect it to a `SoMLLUT` module. The `SoMLLUT` need
 ![Final network](images/tutorials/thirdparty/pytorch_example2_7.png "Final network").
 
 {{<alert class="info" caption="Info">}}
-If your PC is equipped with less than 16GBs of RAM/working memory, we recommend to add a `SubImage` module between the `OrthoSwapFlip` and the `Resample3D` module. You should configure less slices in the z-direction to prevent your system from running out of memory.
+If your PC is equipped with less than 16GB of RAM/working memory, we recommend to add a `SubImage` module between the `OrthoSwapFlip` and the `Resample3D` module. You should configure less slices in the z-direction to prevent your system from running out of memory.
 
 ![SubImage module](images/tutorials/thirdparty/pytorch_example2_7b.png "SubImage module").
 {{</alert>}}
@@ -109,7 +109,7 @@ Commands {
 ```
 {{</highlight>}}
 
-The *FieldListener* always calls the Python function *onStart* when the *Trigger* *start* is touched. We now need to implement the Python function. Right-click {{< mousebutton "right" >}} the command *onStart* and select {{< menuitem "Create Python Function 'onStart'">}}.
+The *FieldListener* always calls the Python function <inlineCode>onStart</inlineCode> when the *Trigger* *start* is touched. We now need to implement the Python function. Right-click {{< mousebutton "right" >}} the command <inlineCode>onStart</inlineCode> and select {{< menuitem "Create Python Function 'onStart'">}}.
 
 The Python file opens automatically and the function is created. 
 
@@ -151,7 +151,7 @@ When executing your Python script for the first time, you will get a ScriptError
 {{</alert>}}
 
 {{<alert class="info" caption="Info">}}
-The script uses the CPU; in the case you want to use CUDA, you can replace the line *device = torch.device("cpu")* with: *device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')*
+The script uses the CPU; in the case you want to use CUDA, you can replace the line <inlineCode>device = torch.device("cpu")</inlineCode> with <inlineCode>device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')</inlineCode>.
 {{</alert>}}
 
 The function does the following:
@@ -164,13 +164,13 @@ The function does the following:
 ## Execute the Segmentation
 Change the alpha value of your `SoView2DOverlayMPR` to have a better visualization of the results.
 
-Switch back to the MeVisLab IDE and select your module `DemoAI`. In *Module Inspector*, click *Trigger* for *start* and wait a little bit until you can see the results.
+Switch back to the MeVisLab IDE and select your module `DemoAI`. In the Module Inspector, click *Trigger* for *start* and wait a little bit until you can see the results.
 
 ![Final result](images/tutorials/thirdparty/pytorch_example2_9.png "Final result").
 
 Without adding a `SubImage`, the segmentation results should look like this:
 
-![Results](images/tutorials/thirdparty/pytorch_example2_10.png "Results").
+![Result without SubImage](images/tutorials/thirdparty/pytorch_example2_10.png "Result without SubImage").
 
 ## Summary
 * Pretrained PyTorch networks can be used directly in MeVisLab via `PythonImage` module.

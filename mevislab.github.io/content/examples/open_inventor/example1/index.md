@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Open Inventor objects"
+title: "Open Inventor Objects"
 category: "open_inventor"
 ---
 
@@ -14,7 +14,7 @@ Three 3D objects are created (`SoCone`, `SoSphere`, and `SoCube`) having a defin
 
 In the end, all three objects including their materials and transformations are added to the `SoExaminerViewer` by a `SoGroup`.
 
-![Screenshot](examples/open_inventor/example1/image.png)
+![Localizing material and transformation properties with SoSeparator](examples/open_inventor/example1/image.png "Localizing material and transformation properties with SoSeparator")
 
 # Download
 You can download the example network [here](examples/open_inventor/example1/OpenInventorExample1.mlab)

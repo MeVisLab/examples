@@ -40,7 +40,7 @@ Next you need to:
 
 3.  Select the path your package group is supposed to be stored in. If you
     like to add a package to an existing package group, select its name
-    and chose the path the package group is stored in.
+    and choose the path the package group is stored in.
 
 If you now create the package, you can find a folder structure in the
 desired directory. The folder of your package group contains the folder

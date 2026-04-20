@@ -8,7 +8,7 @@ category: "basic_mechanisms"
 This example contains an entire package structure. Inside, you can find the example contour filter for which a panel was created.
 
 ## Summary
-A new macro module `Filter` has been created. Initially, macro modules do not provide an own panel containing user interface elements such as buttons. The *Automatic Panel* is shown on double-clicking the module providing the name of the module.
+A new macro module `Filter` has been created. Initially, macro modules do not provide an own panel containing user interface elements such as buttons. The *Automatic Panel* is shown on double-clicking {{< mousebutton "left" >}} the module providing the name of the module.
 
 In this example we update the *.script* file of the `Filter` module to display the <field>Kernel</field> field of the `Convolution` module within its network. 
 

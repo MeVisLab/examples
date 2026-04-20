@@ -75,9 +75,9 @@ def releaseCamera(_):
 ```
 {{</highlight>}}
 
-Opening your macro module and pressing *Start* should now open your webcam stream and an additional OpenCV window, which shows a blue rectangle around a detected face.
+Opening your macro module and pressing <field>Start</field> should now open your webcam stream and an additional OpenCV window, which shows a blue rectangle around a detected face.
 
-![Face Detection in MeVisLab using OpenCV](images/tutorials/thirdparty/bigbang.png "Face Detection in MeVisLab using OpenCV")
+![Face detection in MeVisLab using OpenCV](images/tutorials/thirdparty/bigbang.png "Face detection in MeVisLab using OpenCV")
 
 ## Summary
 * This is just one example for using OpenCV in MeVisLab. You will find lots of other examples and tutorials online, we just wanted to show one possibility.

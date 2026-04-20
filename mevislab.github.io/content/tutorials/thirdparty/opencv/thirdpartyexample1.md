@@ -8,7 +8,7 @@ tags: ["Advanced", "Tutorial", "OpenCV", "Python", "Webcam", "Macro", "Macro mod
 menu: 
   main:
     identifier: "thirdpartyexample1"
-    title: "Access Your Webcam and Use the Live Video in MeVisLab Via OpenCV."
+    title: "Access Your Webcam and Use the Live Video in MeVisLab via OpenCV."
     weight: 855
     parent: "opencv"
 ---
@@ -23,7 +23,7 @@ In this example, we are using the `PythonImage` module and access your webcam to
 ### Creating the Network to be Used for Testing
 Add the modules to your workspace and connect them as seen below. 
 
-![Example Network ](images/tutorials/thirdparty/network_example1.png "Example Network ")
+![Example network](images/tutorials/thirdparty/network_example1.png "Example network")
 
 The viewer is empty because the image needs to be set via Python scripting.
 
@@ -32,14 +32,14 @@ More information about the `PythonImage` module can be found {{< docuLinks "/Sta
 {{</alert>}}
 
 ### Create a Macro Module
-Now you need to create a macro module from your network. You can either group your modules, create a local macro, and convert it to a global macro module, or you use the Project Wizard and load your *.mlab* file.
+Now you need to create a macro module from your network. You can either group your modules, create a local macro and convert it to a global macro module, or you use the Project Wizard and load your *.mlab* file.
 
 {{<alert class="info" caption="Info">}}
-A tutorial on how to create your own macro modules can be found in [Example 2.2: Global macro modules](tutorials/basicmechanisms/macromodules/globalmacromodules "Example 2.2: Global macro modules"). Make sure to add a Python file to your macro module.
+A tutorial on how to create your own macro modules can be found in [Example 2.2: Global Macro Modules](tutorials/basicmechanisms/macromodules/globalmacromodules "Example 2.2: Global Macro Modules"). Make sure to add a Python file to your macro module.
 {{</alert>}}
 
 ### Add the View2D to Your UI
-Next, we need to add the `View2D` to a Window of your macro module. Right-click on your module {{< mousebutton "right" >}}, open the context menu and select {{< menuitem "Related Files" "<YOUR_MODULE_NAME>.script" >}}. The text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the *.script* file of your module.
+Next, we need to add the `View2D` to a window of your macro module. Right-click on your module {{< mousebutton "right" >}}, open the context menu and select {{< menuitem "Related Files" "<YOUR_MODULE_NAME>.script" >}}. The text editor {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch26.html" "MATE">}} opens. You can see the *.script* file of your module.
 
 Add the following to your file:
 {{< highlight filename="<YOUR_MODULE_NAME>.script" >}}
@@ -142,9 +142,9 @@ def stopCapture():
 ```
 {{</highlight>}}
 
-We now imported *cv2* and *OpenCVUtils*, so that we can use them in Python. Additionally, we defined a list of *_interfaces* and a *camera*. The import of *mevis* is not necessary for this example.
+We now imported *cv2* and *OpenCVUtils*, so that we can use them in Python. Additionally, we defined a list of <inlineCode>_interfaces</inlineCode> and a <inlineCode>camera</inlineCode>. The import of *mevis* is not necessary for this example.
 
-The *setupInterfaces* function is called whenever the *Window* of your module is opened. Here we are getting the interface of the `PythonImage` module and append it to our global list.
+The <inlineCode>setupInterfaces</inlineCode> function is called whenever the *Window* of your module is opened. Here we are getting the interface of the `PythonImage` module and append it to our global list.
 
 ### Accessing the Webcam
 Now we want to start capturing the camera.
@@ -168,11 +168,11 @@ def updateImage(image):
 ```
 {{</highlight>}}
 
-The *startCapture* function gets the camera from the *cv2* object if not already available. Then, it calls the current MeVisLab network context and creates a timer that calls a *grabImage* function every 0.1 seconds.
+The <inlineCode>startCapture</inlineCode> function gets the camera from the *cv2* object if not already available. Then, it calls the current MeVisLab network context and creates a timer that calls a <inlineCode>grabImage</inlineCode> function every 0.1 seconds.
 
-The *grabImage* function reads an image from the *camera* and calls *updateImage*. The interface from the `PythonImage` module is used to set the image from the webcam. The MeVisLab *OpenCVUtils* converts the OpenCV image to the MeVisLab image format *MLImage*.
+The <inlineCode>grabImage</inlineCode> function reads an image from the <inlineCode>camera</inlineCode> and calls <inlineCode>updateImage</inlineCode>. The interface from the `PythonImage` module is used to set the image from the webcam. The MeVisLab *OpenCVUtils* converts the OpenCV image to the MeVisLab image format *MLImage*.
 
-Next, we define what happens if you click the *Pause* button.
+Next, we define what happens if you click the <field>Pause</field> button.
 {{< highlight filename="<YOUR_MODULE_NAME>.py" >}}
 ```Python
 ...
@@ -185,7 +185,7 @@ def stopCapture():
 
 As we started a timer in our network context that updates the image every 0.1 seconds, we just stop this timer and the camera is paused.
 
-In the end, we need to release the camera whenever you close the Window of your macro module.
+In the end, we need to release the camera whenever you close the window of your macro module.
 {{< highlight filename="<YOUR_MODULE_NAME>.py" >}}
 ```Python
 ...
