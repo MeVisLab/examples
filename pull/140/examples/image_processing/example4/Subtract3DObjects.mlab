@@ -1,0 +1,389 @@
+// MDL v1 utf8
+mevislabVersion = 3.6.1.7
+network  {
+  watchlist = ""
+}
+module LocalImage {
+  internal  {
+    frame = "473 509 144 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = LocalImage
+    name = $(DemoDataPath)/BrainMultiModal/ProbandT1.dcm
+    autoLoad = TRUE
+  }
+}
+module WEMIsoSurface {
+  internal  {
+    frame = "469 397 152 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "710 281 404 337"
+        sizeHint = "404 337"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = WEMIsoSurface
+    id = 0
+    autoApply = TRUE
+    updateMode = AutoUpdate
+    overwriteLabelDescription = FALSE
+    label = ""
+    description = ""
+    shouldComputeNormals = TRUE
+    isoMinValue = 420
+    isoMaxValue = 2000
+    useMinValue = FALSE
+    useMaxValue = TRUE
+    cellExtend = "1 1 1"
+    useWorldCoords = TRUE
+    useInterpolation = TRUE
+    useQuadrification = FALSE
+    useFaceValueList = FALSE
+    useLUTValueList = TRUE
+    useValenceThreeRemoval = TRUE
+    useZeroLengthEdgeRemoval = TRUE
+    useEdgeRemoval = FALSE
+    timePointIndex = 0
+    taskVerboseLogging = FALSE
+    useVoxelSampling = TRUE
+    voxelSampling = 1
+  }
+}
+module SoWEMRenderer {
+  internal  {
+    frame = "481 141 160 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = SoWEMRenderer
+    interactionProviderID = ""
+    autoApply = TRUE
+    autoUpdate = TRUE
+    autoClear = TRUE
+    enableCreaseAngle = FALSE
+    creaseAngle = 75
+    useHighlightSelected = FALSE
+    highlightColor = "1 0 0"
+    highlightIntensity = 0.5
+    faceRenderingMode = WEM_FACE_RENDERING_MODE_AUTO
+    allowHits = FALSE
+    performPreHitTest = FALSE
+    cursorShape = CROSS_CURSOR
+    colorMode = WEM_COLOR_GENERAL
+    drawFaces = TRUE
+    faceDiffuseColor = "0.792156994342804 0.792156994342804 0.792156994342804"
+    useFaceAmbientColor = TRUE
+    faceAmbientColor = "0.266667008399963 0.266667008399963 0.266667008399963"
+    useFaceSpecularColor = TRUE
+    faceSpecularColor = "0.0666669979691505 0.0666669979691505 0.0666669979691505"
+    faceAlphaValue = 1
+    faceShininessValue = 1
+    primitiveValueLists = LUT
+    selectedPrimitiveValueList = LUT
+    selectedPrimitiveValueAlphaList = LUT
+    primitiveValueListValid = TRUE
+    primitiveValueListAlphaValid = TRUE
+    overwriteAlphaWithPVL = FALSE
+    wemPatchToRender = -1
+    maxWEMPatchIndex = 0
+    cachePatches = FALSE
+    sendAdjacency = FALSE
+    hitModifierKey = AllModifiersMask
+    selectedTab = 0
+  }
+}
+module SoExaminerViewer {
+  internal  {
+    frame = "581 -75 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _viewer {
+        geometry = "958 165 508 517"
+        sizeHint = "400 400"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = SoExaminerViewer
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    border = FALSE
+    background = "0 0 0"
+    transparency = BLEND
+    antialiasing = FALSE
+    antialiasingNumPasses = 1
+    useSampleBuffers = FALSE
+    numSamples = 8
+    grabKeyFocus = TRUE
+    enableKeyCommands = TRUE
+    snapshotFormat = SNAPSHOT_RGB
+    outputAviFile = ""
+    autoRedrawWhenRecording = TRUE
+    frameRate = 7
+    frameRateAvi = 15
+    outputSnapshotFile = none
+    outputSnapshotFileWritten = none
+    autoIncreaseFile = TRUE
+    showSnapshotWithShell = FALSE
+    snapCount = 0
+    inputDevicesList = ""
+    headlight = TRUE
+    decoration = TRUE
+    popupMenuEnabled = FALSE
+    viewing = TRUE
+    autoClipping = TRUE
+    drawStyle = VIEW_AS_IS
+    interactiveDrawStyle = VIEW_LOW_COMPLEXITY
+    viewAllFlag = FALSE
+    initialCameraOrientation = CAMERA_KEEP_AS_IS
+    applyCameraOrientation = CAMERA_KEEP_AS_IS
+    cameraType = CAMERA_PERSPECTIVE
+    autoApplyUserSettingOrientation = FALSE
+    userSettingOrientation = "0 0 1 0"
+    automaticViewAll = FALSE
+    storeCurrentState = TRUE
+    saveCamera = TRUE
+    cursor = TRUE
+    isCameraStored = TRUE
+    perspective = TRUE
+    stereoViewing = FALSE
+    stereoOffset = 3
+    height = 0.78539819
+    position = "-228.286819458008 -172.202133178711 525.012084960938"
+    orientation = "-0.58172869682312 0.50002110004425 0.641537666320801 5.6281418800354"
+    nearDistance = 434.3728
+    farDistance = 708.30298
+    focalDistance = 597.82288
+    forceRedrawOnInteraction = FALSE
+    button1events = TO_VIEWER
+    button2events = TO_VIEWER
+    button3events = TO_VIEWER
+    keyEvents = TO_VIEWER
+    animationEnabled = FALSE
+    feedback = FALSE
+    feedbackSize = 32
+    mouseInteraction = ""
+    rotationAxis = "0 1 0"
+    rotationAngle = 360
+    rotationSteps = 80
+    recordRotation = TRUE
+    wheelZoomEnabled = TRUE
+    wheelRotationEnabled = TRUE
+  }
+}
+module SoBackground {
+  internal  {
+    frame = "449 29 112 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SoBackground
+    rotate = TRUE
+    flip = FALSE
+    on = TRUE
+    depthBuffer = TRUE
+  }
+}
+module SoMaterial {
+  internal  {
+    frame = "681 501 96 56"
+    moduleGroupName = ""
+    windows  {
+      window _materialeditor {
+        geometry = "39 233 217 182"
+        sizeHint = "217 182"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoMaterial
+    ambientColor = "0.200000002980232 0.200000002980232 0.200000002980232"
+    diffuseColor = "1 0 0"
+    specularColor = "0 0 0"
+    emissiveColor = "0 0 0"
+    shininess = 0.200000002980232
+    transparency = 0
+  }
+}
+module SoSeparator {
+  internal  {
+    frame = "769 429 128 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SoSeparator
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+  }
+}
+module SoSphere {
+  internal  {
+    frame = "901 501 88 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "795 246 294 118"
+        sizeHint = "153 118"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoSphere
+    radius = 50
+    subdivision = 0
+  }
+}
+module SoTranslation {
+  internal  {
+    frame = "785 533 112 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "730 304 273 34"
+        sizeHint = "273 34"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoTranslation
+    translation = "0 20 80"
+  }
+}
+module SoWEMRenderer {
+  internal  {
+    frame = "717 141 168 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = SoWEMRenderer1
+    interactionProviderID = ""
+    autoApply = TRUE
+    autoUpdate = TRUE
+    autoClear = TRUE
+    enableCreaseAngle = FALSE
+    creaseAngle = 75
+    useHighlightSelected = FALSE
+    highlightColor = "1 0 0"
+    highlightIntensity = 0.5
+    faceRenderingMode = WEM_FACE_RENDERING_MODE_AUTO
+    allowHits = FALSE
+    performPreHitTest = FALSE
+    cursorShape = CROSS_CURSOR
+    colorMode = WEM_COLOR_GENERAL
+    drawFaces = TRUE
+    faceDiffuseColor = "0.792156994342804 0.792156994342804 0.792156994342804"
+    useFaceAmbientColor = TRUE
+    faceAmbientColor = "0.266667008399963 0.266667008399963 0.266667008399963"
+    useFaceSpecularColor = TRUE
+    faceSpecularColor = "0.0666669979691505 0.0666669979691505 0.0666669979691505"
+    faceAlphaValue = 1
+    faceShininessValue = 1
+    primitiveValueLists = LUT
+    selectedPrimitiveValueList = LUT
+    selectedPrimitiveValueAlphaList = LUT
+    primitiveValueListValid = TRUE
+    primitiveValueListAlphaValid = TRUE
+    overwriteAlphaWithPVL = FALSE
+    wemPatchToRender = -1
+    maxWEMPatchIndex = 0
+    cachePatches = FALSE
+    sendAdjacency = FALSE
+    hitModifierKey = AllModifiersMask
+    selectedTab = 0
+  }
+}
+module SoSwitch {
+  internal  {
+    frame = "609 29 128 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = SoSwitch
+    whichChild = 0
+  }
+}
+module WEMLevelSetBoolean {
+  internal  {
+    frame = "725 253 184 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "815 372 290 396"
+        sizeHint = "290 396"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = WEMLevelSetBoolean
+    id = 0
+    autoApply = TRUE
+    updateMode = AutoUpdate
+    overwriteLabelDescription = FALSE
+    label = ""
+    description = ""
+    shouldComputeNormals = TRUE
+    workDirectlyOnInputWEMs = FALSE
+    listenToFinishNotifications = TRUE
+    listenToRepaintNotifications = TRUE
+    listenToSelectionChangedNotifications = TRUE
+    triangulationMode = Strip
+    gridCellSize = 1
+    adaptivity = 0.2
+    buildEdges = TRUE
+    enablePVLSupport = FALSE
+    interpolatePerNodePVLs = FALSE
+    mode = Difference
+  }
+}
+module SoWEMConvertInventor {
+  internal  {
+    frame = "733 341 200 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = SoWEMConvertInventor
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    progress = 1
+    convertInfo = Ready
+    autoApply = TRUE
+    useNodeColors = FALSE
+    isProcessing = FALSE
+  }
+}
+connections  {
+  WEMIsoSurface.input0 = LocalImage.outImage
+  SoWEMRenderer.inWEM = WEMIsoSurface.outWEM
+  SoExaminerViewer.children = "SoBackground.self SoSwitch.self"
+  SoSeparator.children = "SoMaterial.self SoTranslation.self SoSphere.self"
+  SoWEMRenderer1.inWEM = WEMLevelSetBoolean.outWEM
+  SoSwitch.children = "SoWEMRenderer.self SoWEMRenderer1.self"
+  WEMLevelSetBoolean.inWEM0 = WEMIsoSurface.outWEM
+  WEMLevelSetBoolean.inWEM1 = SoWEMConvertInventor.outWEM
+  SoWEMConvertInventor.inScene = SoSeparator.self
+}
+networkModel = ""

@@ -1,0 +1,329 @@
+// MDL v1 utf8
+mevislabVersion = 3.6.90.1503
+network  {
+  watchlist = ""
+}
+module SoBackground {
+  internal  {
+    frame = "-23 396 112 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SoBackground
+    rotate = TRUE
+    flip = FALSE
+    on = TRUE
+    depthBuffer = TRUE
+  }
+}
+module SoMaterial {
+  internal  {
+    frame = "108 396 96 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SoMaterial
+    ambientColor = "0.200000002980232 0.200000002980232 0.200000002980232"
+    diffuseColor = "0.800000011920929 0.800000011920929 0.800000011920929"
+    specularColor = "0 0 0"
+    emissiveColor = "0 0 0"
+    shininess = 0.200000002980232
+    transparency = 0
+  }
+}
+module SoOrientationModel {
+  internal  {
+    frame = "223 396 144 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "775 473 371 195"
+        sizeHint = "371 195"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoOrientationModel
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    model = SKELETON
+    modifyColors = FALSE
+    ambientColor1 = "0.200000002980232 0.200000002980232 0.200000002980232"
+    diffuseColor1 = "0.699999988079071 0.699999988079071 0.699999988079071"
+    ambientColor2 = "0.200000002980232 0.200000002980232 0.200000002980232"
+    diffuseColor2 = "1 0 0"
+    shininess = 0.2
+    specularColor = "0 0 0"
+  }
+}
+module SoGroup {
+  internal  {
+    frame = "23 281 152 56"
+    moduleGroupName = ""
+    windows  {
+      window _viewer {
+        geometry = "760 370 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoGroup
+  }
+}
+module SoRenderArea {
+  internal  {
+    frame = "43 51 112 56"
+    moduleGroupName = ""
+    windows  {
+      window _viewer {
+        geometry = "730 164 559 525"
+        sizeHint = "400 400"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = SoRenderArea
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    border = FALSE
+    background = "0 0 0"
+    transparency = BLEND
+    antialiasing = FALSE
+    antialiasingNumPasses = 1
+    useSampleBuffers = FALSE
+    numSamples = 8
+    grabKeyFocus = TRUE
+    enableKeyCommands = TRUE
+    snapshotFormat = SNAPSHOT_RGB
+    outputAviFile = ""
+    autoRedrawWhenRecording = TRUE
+    frameRate = 7
+    frameRateAvi = 15
+    outputSnapshotFile = none
+    outputSnapshotFileWritten = none
+    autoIncreaseFile = TRUE
+    showSnapshotWithShell = FALSE
+    snapCount = 0
+    inputDevicesList = ""
+  }
+}
+module SoCameraInteraction {
+  internal  {
+    frame = "23 166 152 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "831 376 259 389"
+        sizeHint = "259 389"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoCameraInteraction
+    interactionProviderID = ""
+    headlight = TRUE
+    eventMode = SceneFirst
+    interactiveLowComplexity = Force
+    zoomSensitivity = 1
+    enableZoomWithMouseWheel = TRUE
+    cursorShapeRotate = ROTATE_XY_CURSOR
+    cursorShapePan = MOVE_ALL_CURSOR
+    cursorShapeZoom = MOVE_INOUT_CURSOR
+  }
+}
+module SoPerspectiveCamera {
+  internal  {
+    frame = "-275 509 152 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "756 446 448 248"
+        sizeHint = "409 248"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoPerspectiveCamera
+    viewportMapping = ADJUST_CAMERA
+    position = "-0.980955541133881 -66.5098114013672 9.3444938659668"
+    orientation = "0.944594740867615 -0.20679397881031 0.254905790090561 1.44113838672638"
+    aspectRatio = 1
+    nearDistance = 57.922665
+    farDistance = 81.510841
+    focalDistance = 67.271667
+    heightAngle = 0.78539819
+  }
+}
+module SoOrthographicCamera {
+  internal  {
+    frame = "-111 509 160 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "756 446 448 248"
+        sizeHint = "409 248"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoOrthographicCamera
+    viewportMapping = ADJUST_CAMERA
+    position = "-2.57491207122803 -0.333078771829605 -4.01326608657837"
+    orientation = "0.949551522731781 0.129480704665184 -0.28563404083252 3.11961197853088"
+    aspectRatio = 1
+    nearDistance = 7.267755
+    farDistance = 9.8032503
+    focalDistance = 5
+    height = 0.87055027
+  }
+}
+module SoSwitch {
+  internal  {
+    frame = "-170 396 128 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = SoSwitch
+    whichChild = 0
+  }
+}
+module SoCameraWidget {
+  internal  {
+    frame = "385 405 128 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "387 289 375 516"
+        sizeHint = "296 516"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoCameraWidget
+    interactionProviderID = ""
+    overlayReferenceCorner = LOWER_RIGHT
+    margin = "10 10"
+    size = "80 80"
+    nativeSize = FALSE
+    disableZBuffer = TRUE
+    overlayImage = $(LOCAL)/images/RotatePanWidget.png
+    overlayColor = "1 1 1"
+    overlayAlpha = 0.80000001
+    overlayBlendMode = OverlayBlend
+    interactionShape = RECTANGLE
+    enableStepping = TRUE
+    interactiveLowComplexity = Force
+    mainInteraction = ROTATE
+    dragSensitivity = 1
+    stepSensitivity = 1
+    cursorShapeRotate = ROTATE_XY_CURSOR
+    cursorShapePan = MOVE_ALL_CURSOR
+    cursorShapeZoom = ZOOM_CURSOR
+    cursorShapeZoomIn = ZOOM_IN_CURSOR
+    cursorShapeZoomOut = ZOOM_OUT_CURSOR
+  }
+}
+module SoExaminerViewer {
+  internal  {
+    frame = "317 149 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _viewer {
+        geometry = "864 233 400 400"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoExaminerViewer
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    border = FALSE
+    background = "0 0 0"
+    transparency = BLEND
+    antialiasing = FALSE
+    antialiasingNumPasses = 1
+    useSampleBuffers = FALSE
+    numSamples = 8
+    grabKeyFocus = TRUE
+    enableKeyCommands = TRUE
+    snapshotFormat = SNAPSHOT_RGB
+    outputAviFile = ""
+    autoRedrawWhenRecording = TRUE
+    frameRate = 7
+    frameRateAvi = 15
+    outputSnapshotFile = none
+    outputSnapshotFileWritten = none
+    autoIncreaseFile = TRUE
+    showSnapshotWithShell = FALSE
+    snapCount = 0
+    inputDevicesList = ""
+    headlight = TRUE
+    decoration = TRUE
+    popupMenuEnabled = FALSE
+    viewing = TRUE
+    autoClipping = TRUE
+    drawStyle = VIEW_AS_IS
+    interactiveDrawStyle = VIEW_LOW_COMPLEXITY
+    viewAllFlag = FALSE
+    initialCameraOrientation = CAMERA_KEEP_AS_IS
+    applyCameraOrientation = CAMERA_KEEP_AS_IS
+    cameraType = CAMERA_ORTHOGRAPHIC
+    autoApplyUserSettingOrientation = FALSE
+    userSettingOrientation = "0 0 1 0"
+    automaticViewAll = FALSE
+    storeCurrentState = TRUE
+    saveCamera = TRUE
+    cursor = TRUE
+    isCameraStored = TRUE
+    perspective = FALSE
+    stereoViewing = FALSE
+    stereoOffset = 3
+    height = 1.9122534
+    position = "-1.18575966358185 1.33715212345123 1.46089696884155"
+    orientation = "-0.715697586536407 -0.692435741424561 -0.0911573991179466 0.88948255777359"
+    nearDistance = 1.4266739
+    farDistance = 3.1916749
+    focalDistance = 2.3082941
+    forceRedrawOnInteraction = FALSE
+    button1events = TO_VIEWER
+    button2events = TO_VIEWER
+    button3events = TO_VIEWER
+    keyEvents = TO_VIEWER
+    animationEnabled = FALSE
+    feedback = FALSE
+    feedbackSize = 32
+    mouseInteraction = ""
+    rotationAxis = "0 1 0"
+    rotationAngle = 360
+    rotationSteps = 80
+    recordRotation = TRUE
+    wheelZoomEnabled = TRUE
+    wheelRotationEnabled = TRUE
+  }
+}
+connections  {
+  SoGroup.children = "SoSwitch.self SoBackground.self SoMaterial.self SoOrientationModel.self SoCameraWidget.self"
+  SoRenderArea.children = SoCameraInteraction.self
+  SoCameraInteraction.inScene = SoGroup.self
+  SoSwitch.children = "SoPerspectiveCamera.self SoOrthographicCamera.self"
+  SoExaminerViewer.children = "SoBackground.self SoMaterial.self SoOrientationModel.self"
+}
+networkModel = ""

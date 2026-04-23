@@ -1,0 +1,79 @@
+// MDL v1 utf8
+mevislabVersion = 3.6.90.1560
+network  {
+  watchlist = ""
+}
+module LocalImage {
+  internal  {
+    frame = "785 493 144 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = LocalImage
+    name = $(DemoDataPath)/BrainMultiModal/ProbandT1.dcm
+    autoLoad = TRUE
+  }
+}
+module SubImage {
+  internal  {
+    frame = "821 381 88 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SubImage
+    boxInput = "0 0 0 0 0 0 -1 -1 -1 -1 -1 -1"
+    autoApplyBox = FALSE
+    correctForNegativeSubImageExtents = FALSE
+    enableBoxClamping = FALSE
+    x = 0
+    sx = 32
+    modifyX = TRUE
+    y = 0
+    sy = 32
+    modifyY = TRUE
+    z = 0
+    sz = 32
+    modifyZ = TRUE
+    c = 0
+    sc = 1
+    modifyC = FALSE
+    t = 0
+    st = 1
+    modifyT = TRUE
+    u = 0
+    su = 1
+    modifyU = FALSE
+    fillValue = 0
+    mode = VoxelStartSize
+    autoApply = FALSE
+  }
+}
+module Histogram {
+  internal  {
+    frame = "813 253 120 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = Histogram
+    useMask = TRUE
+    xRange = "Image Min/Max"
+    maskMode = Weights
+    curveType = Line
+    curveStyle = 0
+    curveTitle = ""
+    updateMode = Off
+    useStepFunction = FALSE
+    useZeroAsBinCenter = TRUE
+    useBackgroundValue = FALSE
+    backgroundValue = 0
+    binSize = 1
+    maxBinCount = 25000000
+  }
+}
+connections  {
+  SubImage.input0 = LocalImage.outImage
+  Histogram.input0 = SubImage.output0
+}
+networkModel = ""
