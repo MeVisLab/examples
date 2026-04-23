@@ -30,7 +30,14 @@ The **MeVis Path Tracer** offers a Monte Carlo Path Tracing framework running on
 CUDA is a parallel computing platform and programming model created by NVIDIA. For further information, see [NVIDIA website](https://blogs.nvidia.com/blog/2012/09/10/what-is-cuda-2/).
 {{</alert>}}
 
-{{< imagegallery 5 "images/tutorials/visualization/pathtracer" "PathTracer1" "PathTracer2" "PathTracer3" "PathTracer4" "PathTracer5" >}}
+{{< imagegallery 5 
+  "images/tutorials/visualization/pathtracer" 
+  "PathTracer1|Human heart"
+  "PathTracer2|Motor block"
+  "PathTracer3|Liver with lobes and vascular systems"
+  "PathTracer4|Stag beetle"
+  "PathTracer5|Colored nerve fibers of the brain" 
+>}}
 
 The `SoPathTracer` module implements the main renderer (like the `SoGVRVolumeRenderer`). It collects all `SoPathTracer*` extensions (on its left side) in the scene and renders them. Picking is also supported, but it supports only the first hit position instead of a full hit profile. It supports an arbitrary number of objects with different orientation and bounding boxes.
 

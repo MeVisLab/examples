@@ -63,7 +63,11 @@ Scrolling through the slices, you will see that your segmentation is not closed.
 
 The difference before and after closing the gaps can be seen in the Output Inspector.
 
-{{< imagegallery 2 "images/tutorials/image_processing" "Output_Before" "Output_After">}}
+{{< imagegallery 2 
+    "images/tutorials/image_processing"
+    "Output_Before|Original result of the region growing algorithm"
+    "Output_After|Gaps are closed"
+>}}
 
 You can play around with the different settings of the `RegionGrowing` and `CloseGap` modules to get a better result.
 

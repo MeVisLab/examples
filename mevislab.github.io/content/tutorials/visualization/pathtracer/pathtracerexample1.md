@@ -45,7 +45,12 @@ Group your modules and name the group *Initialization*. Your network should now 
 
 Use the Output Inspector for your `SoWEMRenderer` outputs and inspect the 3D rendering. You should have a yellow and a red sphere, and a grey cube.
 
-{{< imagegallery 3 "images/tutorials/visualization/pathtracer" "Sphere1" "Sphere2" "Cube" >}}
+{{< imagegallery 3 
+    "images/tutorials/visualization/pathtracer"
+    "Sphere1|Yellow sphere"
+    "Sphere2|Red sphere"
+    "Cube|Gray cube"
+>}}
 
 #### Rendering
 Add two `SoGroup` modules and one `SoBackground` to your network. Connect the modules as seen below.
@@ -58,7 +63,12 @@ If you now inspect the output of the `SoGroup`, you will see an orange sphere.
 
 You did not translate the locations of the three objects; they are all located at the same place in world coordinates. Open the `WEMInitialize` panels of your 3D objects and define the following translations and scalings:
 
-{{< imagegallery 3 "images/tutorials/visualization/pathtracer" "WEMInitializeSphere1" "WEMInitializeSphere2" "WEMInitializeCube" >}}
+{{< imagegallery 3
+    "images/tutorials/visualization/pathtracer"
+    "WEMInitializeSphere1|Initializing the first sphere"
+    "WEMInitializeSphere2|Initializing the second sphere"
+    "WEMInitializeCube|Initializing the cube for a flat underground"
+>}}
 
 The result of the `SoGroup` now shows two spheres on a rectangular cube.
 
@@ -123,7 +133,12 @@ Finally, you want to have the same camera perspective in both viewers, so that y
 Path tracing requires a lot of iterations before reaching the best possible result. You can see the maximum number of iterations defined and the current iteration in the `SoPathTracer` panel. The more iterations, the better the result but the more time it takes to finalize your image.
 {{</alert>}}
 
-{{< imagegallery 3 "images/tutorials/visualization/pathtracer" "PathTracer_1_Iteration" "PathTracer_100_Iterations" "PathTracer_1000_Iterations" >}}
+{{< imagegallery 3
+    "images/tutorials/visualization/pathtracer"
+    "PathTracer_1_Iteration|Path tracer result after one iteration"
+    "PathTracer_100_Iterations|Path tracer result after hundred iterations"
+    "PathTracer_1000_Iterations|Path tracer result after thousand iterations"
+>}}
 
 ## Results
 Path tracing provides a much more realistic way to visualize the behavior of light in a scene. It simulates the scattering and absorption of light within the volume. 

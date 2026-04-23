@@ -31,7 +31,12 @@ The coordinates in PyTorch are also a little bit different than in MeVisLab; the
 
 You can use the Output Inspector to see the changes on the images after applying the resample and a swap or flip.
 
-{{< imagegallery 3 "images/tutorials/thirdparty/" "Original" "Resample3D" "OrthoSwapFlip">}}
+{{< imagegallery 3
+    "images/tutorials/thirdparty/"
+    "Original"
+    "Resample3D"
+    "OrthoSwapFlip"
+>}}
 
 Add an `OrthoView2D` module to your network and save the *.mlab* file.
 

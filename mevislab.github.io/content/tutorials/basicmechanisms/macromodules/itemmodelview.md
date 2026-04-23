@@ -35,7 +35,12 @@ We can leave the *Fields* empty for now. We can add them in the *.script* file.
 
 Click *Create* {{< mousebutton "left" >}}.
 
-{{< imagegallery 3 "images/tutorials/basicmechanics" "ItemModel_1" "ItemModel_2" "ItemModel_3">}}
+{{< imagegallery 3 
+    "images/tutorials/basicmechanics" 
+    "ItemModel_1|Module properties" 
+    "ItemModel_2|Macro module properties" 
+    "ItemModel_3|Module field interface"
+>}}
 
 If you cannot find your module via *Module Search*, reload module cache by clicking the menu item {{< menuitem "Extras" "Reload Module Database (Clear Cache)" >}}
 

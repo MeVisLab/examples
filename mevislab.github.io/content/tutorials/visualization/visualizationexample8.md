@@ -95,7 +95,11 @@ We now want the edge ID to be used for coloring each of the skeletons differentl
 
 The `SoGVRVolumeRenderer` module also needs a different setting. Open its panel in the *Main* tab, select *Illuminated* as the <field>Render Mode</field>. Adjust the <field>Quality</field> setting to *0.10*. On tab *Advanced*, set <field>Filter Volume Data</field> to *Nearest*. Change to the *Illumination* tab and define below parameters:
 
-{{<imagegallery 2 "images/tutorials/visualization" "SoGVRVolumeRendererMain" "SoGVRVolumeRendererIllumination">}}
+{{< imagegallery 2 
+    "images/tutorials/visualization"
+    "SoGVRVolumeRendererMain|SoGVRVolumeRenderer: main panel"
+    "SoGVRVolumeRendererIllumination|SoGVRVolumeRenderer: illumination panel"
+>}}
 
 Change your Python script as follows:
 {{< highlight >}}

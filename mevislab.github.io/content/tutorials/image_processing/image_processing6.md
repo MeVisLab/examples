@@ -60,7 +60,13 @@ In order to see the images, add a `View2D` module and connect it to the `DicomIm
 
 The *RTPLAN* and *RTSTRUCT* files do not contain pixel data. Therefore, the `DicomImport` module informs that there is no image data available. The *CT* series contains the original CT data and the *RTDOSE* series contains a mask providing three-dimensional dose data.
 
-{{< imagegallery 4 "images/tutorials/image_processing/" "RTPLAN" "RTSTRUCT" "CT512" "RTDOSE">}}
+{{< imagegallery 4
+    "images/tutorials/image_processing/"
+    "RTPLAN"
+    "RTSTRUCT"
+    "CT512"
+    "RTDOSE"
+>}}
 
 Select the *CT 512×512×272×1* series.
 

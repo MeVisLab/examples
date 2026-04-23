@@ -47,7 +47,11 @@ Add a `Mask` and a `Threshold` module to your workspace and connect them as seen
 
 Changing the window/level values in your viewer still also changes background voxels. The `Threshold` module still leaves the voxels as is because the threshold value is configured as larger than *0*. Open the panels of the modules `Threshold` and `Mask` via double-click {{< mousebutton "left" >}} and set the values as seen below.
 
-{{< imagegallery 2 "images/tutorials/image_processing" "Threshold" "Mask">}}
+{{< imagegallery 2 
+    "images/tutorials/image_processing"
+    "Threshold|Threshold panel"
+    "Mask|Mask panel"
+>}}
 
 Now, all voxels having a value lower or equal *60* are set to *0*, all others are set to *1*. The resulting image from the `Threshold` module is a binary image that can now be used as a mask by the `Mask` module.
 
