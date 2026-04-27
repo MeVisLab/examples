@@ -5,4 +5,4 @@
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this example, we implement some image or object interactions. We will create a 3D scene, in which we display a cube and change its size using the mouse. We also get to know another viewer, the module &lt;code&gt;SoExaminerViewer&lt;/code&gt;. This viewer is important. It enables the rendering of Open Inventor scenes and allows interactions with the Open Inventor scenes.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;In this example, we implement some image or object interactions. We will create a 3D scene in which we display a cube and change its size using the mouse. We also get to know another viewer, the module &lt;code&gt;SoExaminerViewer&lt;/code&gt;. This viewer is important: It enables the rendering of Open Inventor scenes and allows interactions with the Open Inventor scenes.&lt;/p&gt;</description></item></channel></rss>

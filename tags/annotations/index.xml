@@ -5,7 +5,7 @@
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this example we like to calculate the volume of our object, in this
+&lt;p&gt;In this example, we like to calculate the volume of our object, in this
 case, the part of the lung we have segmented.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
 &lt;h3 id="develop-your-network-and-calculate-the-lung-volume"&gt;Develop Your Network and Calculate the Lung Volume&lt;/h3&gt;

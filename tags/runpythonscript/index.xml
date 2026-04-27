@@ -5,7 +5,7 @@
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;The module &lt;code&gt;RunPythonScript&lt;/code&gt; allows to execute Python scripts from within a MeVisLab network. You can draw parameter connection from modules to &lt;code&gt;RunPythonScript&lt;/code&gt; and back to process parameter fields using Python scripting.&lt;/p&gt;
+&lt;p&gt;The module &lt;code&gt;RunPythonScript&lt;/code&gt; allows to execute Python scripts from within a MeVisLab network. You can establish parameter connection from modules to &lt;code&gt;RunPythonScript&lt;/code&gt; and back to process parameter fields using Python scripting.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
 &lt;h3 id="develop-your-network"&gt;Develop Your Network&lt;/h3&gt;
 &lt;p&gt;In this example, we like to dynamically change the color of a cube in an Open Inventor scene. For that, add and connect the following modules as shown.&lt;/p&gt;</description></item></channel></rss>

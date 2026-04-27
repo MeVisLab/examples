@@ -3,12 +3,36 @@
 &lt;p&gt;The MeVisLab Integrated Development Environment (IDE) provides tools to write automated tests in Python, to profile your network performance, and to debug your Python code.
 All of these funtionalities will be addressed in this chapter.&lt;/p&gt;
 &lt;h3 id="testing"&gt;Testing&lt;/h3&gt;
-&lt;p&gt;The MeVisLab TestCenter is the starting point of your tests. Select &lt;i&gt;[
+&lt;p&gt;The &lt;em&gt;MeVisLab TestCenter&lt;/em&gt; is the starting point of your tests. Select &lt;i&gt;[
  
  File
  &amp;rarr; 
  Run TestCaseManager
-]&lt;/i&gt; to open the user interface of the TestCaseManager.&lt;/p&gt;</description></item><item><title>Example 2: Profiling in MeVisLab</title><link>https://mevislab.github.io/examples/tutorials/testing/testingexample2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/testing/testingexample2/</guid><description>&lt;h1 id="example-2-profiling-in-mevislab"&gt;Example 2: Profiling in MeVisLab&lt;/h1&gt;
+]&lt;/i&gt; or press 
+ 
+ &lt;kbd&gt;
+ 
+ 
+ 
+ 
+ Ctrl
+ &lt;/kbd&gt;
+ +
+ &lt;kbd&gt;
+ 
+ 
+ 
+ 
+ Alt
+ &lt;/kbd&gt;
+ +
+ &lt;kbd&gt;
+ 
+ 
+ 
+ 
+ T
+ &lt;/kbd&gt; to open the user interface of the &lt;code&gt;TestCaseManager&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Example 2: Profiling in MeVisLab</title><link>https://mevislab.github.io/examples/tutorials/testing/testingexample2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/testing/testingexample2/</guid><description>&lt;h1 id="example-2-profiling-in-mevislab"&gt;Example 2: Profiling in MeVisLab&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
  &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=DZ4BcAne4hM" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/DZ4BcAne4hM/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=DZ4BcAne4hM" target="_blank"&gt;YouTube&lt;/a&gt;.

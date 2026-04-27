@@ -48,14 +48,14 @@ In this chapter in particular, we will focus on simple image interaction with tw
 &lt;p&gt;In this example we will show you how to blend a 2D image over another one. With the help of the module &lt;code&gt;SoView2DOverlay&lt;/code&gt; we will create an overlay, which allows us to highlight all bones in the scan.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
 &lt;h3 id="develop-your-network"&gt;Develop Your Network&lt;/h3&gt;
-&lt;p&gt;Start this example by adding the shown modules, connecting the modules to form a network and loading the example image &lt;em&gt;Bone.tiff&lt;/em&gt;.&lt;/p&gt;</description></item><item><title>Example 4: Display 2D Images in Open Inventor SoRenderArea</title><link>https://mevislab.github.io/examples/tutorials/visualization/visualizationexample4/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/visualization/visualizationexample4/</guid><description>&lt;h1 id="TutorialVisualizationExample4"&gt;Example 4: Display Images Converted to Open Inventor Scene Objects&lt;/h1&gt;
+&lt;p&gt;Start this example by adding the shown modules, connecting the modules to form a network, and loading the example image &lt;em&gt;Bone.tiff&lt;/em&gt;.&lt;/p&gt;</description></item><item><title>Example 4: Display 2D Images in Open Inventor SoRenderArea</title><link>https://mevislab.github.io/examples/tutorials/visualization/visualizationexample4/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/visualization/visualizationexample4/</guid><description>&lt;h1 id="TutorialVisualizationExample4"&gt;Example 4: Display Images Converted to Open Inventor Scene Objects&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
  &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=WaD6zuvVNek" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/WaD6zuvVNek/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=WaD6zuvVNek" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In the previous example you learned how to use the module &lt;code&gt;SoView2DOverlay&lt;/code&gt; together with a &lt;code&gt;View2D&lt;/code&gt;. MeVisLab provides a whole family of &lt;code&gt;SoView2D*&lt;/code&gt; modules (&lt;code&gt;SoView2DOverlay&lt;/code&gt;, &lt;code&gt;SoView2DRectangle&lt;/code&gt;, &lt;code&gt;SoView2DGrid&lt;/code&gt;, &amp;hellip;). These modules are derived from &lt;code&gt;SoView2DExtension&lt;/code&gt;, which extends the &lt;code&gt;SoView2D&lt;/code&gt; with specialized interaction and rendering. &lt;code&gt;SoView2D&lt;/code&gt; itself renders a slice or a slab of a voxel image as a 2D image on the screen.&lt;/p&gt;</description></item><item><title>Chapter V: Data Objects</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/</guid><description>&lt;h2 id="TutorialDataObjects"&gt;Data Objects in MeVisLab&lt;/h2&gt;
+&lt;p&gt;In the previous example you learned how to use the module &lt;code&gt;SoView2DOverlay&lt;/code&gt; together with a &lt;code&gt;View2D&lt;/code&gt;. MeVisLab provides a whole family of &lt;em&gt;SoView2D&lt;/em&gt; modules (&lt;code&gt;SoView2DOverlay&lt;/code&gt;, &lt;code&gt;SoView2DRectangle&lt;/code&gt;, &lt;code&gt;SoView2DGrid&lt;/code&gt;, &amp;hellip;). These modules are derived from &lt;code&gt;SoView2DExtension&lt;/code&gt;, which extends the &lt;code&gt;SoView2D&lt;/code&gt; with specialized interaction and rendering. &lt;code&gt;SoView2D&lt;/code&gt; itself renders a slice or a slab of a voxel image as a 2D image on the screen.&lt;/p&gt;</description></item><item><title>Chapter V: Data Objects</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/</guid><description>&lt;h2 id="TutorialDataObjects"&gt;Data Objects in MeVisLab&lt;/h2&gt;
 &lt;p&gt;MeVisLab provides predefined data objects, for example:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="tutorials/dataobjects/contourobjects"&gt;Contour Segmentation Objects (CSOs)&lt;/a&gt; &lt;br&gt;
@@ -67,7 +67,7 @@ are used to mark specific locations or aspects of an image and allow to process 
 &lt;li&gt;&lt;a href="tutorials/dataobjects/curves"&gt;Curves&lt;/a&gt; &lt;br&gt;
 can print the results of a function as two-dimensional mathematical graphs into a diagram.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Usage, advantages, and disadvantages of each above-mentioned data object type will be covered in the following specified chapters, where you will be building example networks for some of the most common use cases.&lt;/p&gt;</description></item><item><title>Contour Objects (CSO)</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/contourobjects/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/contourobjects/</guid><description>&lt;h1 id="CSO"&gt;Contour Segmentation Objects (CSOs) in MeVisLab&lt;/h1&gt;
+&lt;p&gt;Usage, advantages, and disadvantages of each above-mentioned data object type will be covered in the following chapters, where you will build example networks for some of the most common use cases.&lt;/p&gt;</description></item><item><title>Contour Objects (CSO)</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/contourobjects/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/contourobjects/</guid><description>&lt;h1 id="CSO"&gt;Contour Segmentation Objects (CSOs) in MeVisLab&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;h3 id="structure-of-csos"&gt;Structure of CSOs&lt;/h3&gt;
 &lt;p&gt;MeVisLab provides modules to create contours in images. 3D objects that encapsulate these contours are called Contour Segmentation Objects (CSOs).&lt;/p&gt;
@@ -79,7 +79,7 @@ can print the results of a function as two-dimensional mathematical graphs into 
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;We like to start with the creation of CSOs. To create CSOs, you need a &lt;code&gt;SoCSO*&lt;/code&gt;-Editor. There are several different editors that can be used to create CSOs (see &lt;a href="tutorials/dataobjects/contourobjects#CSOEditors"&gt;here&lt;/a&gt;). Some of them are introduced in this example.&lt;/p&gt;
+&lt;p&gt;We like to start with the creation of CSOs. To create CSOs, you need a &lt;code&gt;SoCSO*Editor&lt;/code&gt;. There are several different editors that can be used to create CSOs (see &lt;a href="tutorials/dataobjects/contourobjects#CSOEditors"&gt;here&lt;/a&gt;). Some of them are introduced in this example.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
 &lt;h3 id="develop-your-network"&gt;Develop Your Network&lt;/h3&gt;
 &lt;p&gt;For this example, we need the following modules. Add the modules to your workspace, connect them as shown below, and load the example image &lt;em&gt;$(DemoDataPath)/BrainMultiModal/ProbandT1.tif&lt;/em&gt;.&lt;/p&gt;</description></item><item><title>Contour Example 2: Contour Interpolation</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/contours/contourexample2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/contours/contourexample2/</guid><description>&lt;h1 id="TutorialContoursExample2"&gt;Contour Example 2: Creating Contours using Live Wire and Interpolation&lt;/h1&gt;
@@ -89,8 +89,9 @@ can print the results of a function as two-dimensional mathematical graphs into 
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this example, we like to create CSOs using the &lt;strong&gt;Live Wire
-Algorithm&lt;/strong&gt;, which allows semiautomatic CSO creation. The algorithm
+&lt;p&gt;In this example, we like to create CSOs using the &lt;a href="https://en.wikipedia.org/wiki/Livewire_Segmentation_Technique" target="_blank" rel="noopener"&gt;&lt;strong&gt;Live Wire
+Algorithm&lt;/strong&gt;&lt;/a&gt;,
+which allows semiautomatic CSO creation. The algorithm
 uses edge detection to support the user creating CSOs.&lt;/p&gt;
 &lt;p&gt;We also like to interpolate CSOs over slices. That means additional CSOs are
 generated between manual segmentations based on a linear interpolation.&lt;/p&gt;</description></item><item><title>Contour Example 3: 2D and 3D Visualization of Contours</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/contours/contourexample3/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/contours/contourexample3/</guid><description>&lt;h1 id="TutorialContoursExample3"&gt;Contour Example 3: Overlay Creation and 3D Visualization of Contours&lt;/h1&gt;
@@ -103,19 +104,19 @@ generated between manual segmentations based on a linear interpolation.&lt;/p&gt
 &lt;p&gt;In this example, we&amp;rsquo;d like to use the created CSOs to display an overlay.
 This allows us to mark one of two lungs. In addition to
 that, we will display the whole segmented lobe of the lung in a 3D
-image.&lt;/p&gt;
+viewer.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
 &lt;h3 id="develop-your-network"&gt;Develop Your Network&lt;/h3&gt;
 &lt;p&gt;Use the network from the &lt;a href="tutorials/dataobjects/contours/contourexample2"&gt;contour example 2&lt;/a&gt; and add the modules &lt;code&gt;VoxelizeCSO&lt;/code&gt;,
 &lt;code&gt;SoView2DOverlay&lt;/code&gt; and &lt;code&gt;View2D&lt;/code&gt; to your workspace. Connect the module as
-shown. The module &lt;code&gt;VoxelizeCSO&lt;/code&gt; allows to convert CSOs into voxel images.&lt;/p&gt;</description></item><item><title>Contour Example 4: Annotation of Images</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/contours/contourexample4/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/contours/contourexample4/</guid><description>&lt;h1 id="TutorialContoursExample4"&gt;Contour Example 4: Annotation of Images&lt;/h1&gt;
+shown. The module &lt;code&gt;VoxelizeCSO&lt;/code&gt; allows to convert CSOs into a voxel image.&lt;/p&gt;</description></item><item><title>Contour Example 4: Annotation of Images</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/contours/contourexample4/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/contours/contourexample4/</guid><description>&lt;h1 id="TutorialContoursExample4"&gt;Contour Example 4: Annotation of Images&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
  &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=bT2ZprYcuOU" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/bT2ZprYcuOU/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=bT2ZprYcuOU" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this example we like to calculate the volume of our object, in this
+&lt;p&gt;In this example, we like to calculate the volume of our object, in this
 case, the part of the lung we have segmented.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
 &lt;h3 id="develop-your-network-and-calculate-the-lung-volume"&gt;Develop Your Network and Calculate the Lung Volume&lt;/h3&gt;
@@ -134,21 +135,25 @@ which directly shows the volume of our object.&lt;/p&gt;</description></item><it
 &lt;p&gt;Add the following modules to your workspace and connect them as shown.
 Load the example image &lt;em&gt;Bone.tiff&lt;/em&gt;.&lt;/p&gt;
 &lt;h3 id="automatic-creation-of-csos-based-on-the-isovalue"&gt;Automatic Creation of CSOs Based on the Isovalue&lt;/h3&gt;
-&lt;p&gt;Now, open the panel of &lt;code&gt;CSOIsoGenerator&lt;/code&gt; to set the &lt;em&gt;Iso Value&lt;/em&gt; to 1200. If you press &lt;em&gt;Update&lt;/em&gt; in
+&lt;p&gt;Now, open the panel of &lt;code&gt;CSOIsoGenerator&lt;/code&gt; to set the &lt;field&gt;Iso Value&lt;/field&gt; to &lt;em&gt;1200&lt;/em&gt;. If you press &lt;field&gt;Update&lt;/field&gt; in
 the panel, you can see the creation of CSOs on each image slice when opening
 the module &lt;code&gt;View2D&lt;/code&gt;. In addition to that, the number of CSOs is displayed in the &lt;code&gt;CSOManager&lt;/code&gt;. The module
-&lt;code&gt;CSOIsoGenerator&lt;/code&gt; generates isocontours for each slice at a fixed isovalue. This means that closed CSOs are formed based on the detection of the
-voxel value of 1200 on every slice.&lt;/p&gt;</description></item><item><title>Contour Example 6: Adding Labels to Contours</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/contours/contourexample6/</link><pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/contours/contourexample6/</guid><description>&lt;h1 id="TutorialContoursExample6"&gt;Contour Example 6: Adding Labels to Contours&lt;/h1&gt;
+&lt;code&gt;CSOIsoGenerator&lt;/code&gt; generates isocontours for each slice at a fixed isovalue. This means that closed CSOs are formed based on the detection of the voxel value of &lt;em&gt;1200&lt;/em&gt; on every slice.&lt;/p&gt;</description></item><item><title>Contour Example 6: Adding Labels to Contours</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/contours/contourexample6/</link><pubDate>Mon, 11 Mar 2024 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/contours/contourexample6/</guid><description>&lt;h1 id="TutorialContoursExample6"&gt;Contour Example 6: Adding Labels to Contours&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
  &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=-ACAoeK2Fm8" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/-ACAoeK2Fm8/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=-ACAoeK2Fm8" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this example, we are adding a label to a contour. The label provides information about measurements and about the contour itself. The label remains connected to the contour and can be moved via mouse interactions.&lt;/p&gt;
+&lt;p&gt;In this example, we are adding a label to a contour. The label provides information about measurements and about the contour itself. The label remains connected to the contour and can be moved via mouse interactions 
+
+&lt;img width="22px" src="images/lmb.svg" alt="Left Mouse Button" /&gt;
+
+
+.&lt;/p&gt;
 &lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
 &lt;h3 id="develop-your-network"&gt;Develop Your Network&lt;/h3&gt;
-&lt;p&gt;Add the modules &lt;code&gt;LocalImage&lt;/code&gt; and &lt;code&gt;View2D&lt;/code&gt; to your workspace and connect them as shown below. Load the file &lt;em&gt;ProbandT1.dcm&lt;/em&gt; from MeVisLab demo data. In order to create contours (CSOs), we need a &lt;code&gt;SoView2DCSOExtensibleEditor&lt;/code&gt; module. It manages attached CSO editors, renderers and offers an optional default renderer for all types of CSOs.&lt;/p&gt;</description></item><item><title>Contour Example 7: Using the CSOListContainer</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/contours/contourexample7/</link><pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/contours/contourexample7/</guid><description>&lt;h1 id="TutorialContoursExample7"&gt;Contour Example 7: Using the CSOListContainer&lt;/h1&gt;
+&lt;p&gt;Add the modules &lt;code&gt;LocalImage&lt;/code&gt; and &lt;code&gt;View2D&lt;/code&gt; to your workspace and connect them as shown below. Load the file &lt;em&gt;ProbandT1.dcm&lt;/em&gt; from MeVisLab demo data. In order to create contours (CSOs), we need a &lt;code&gt;SoView2DCSOExtensibleEditor&lt;/code&gt; module. It manages attached CSO editors, renderers, and offers an optional default renderer for all types of CSOs.&lt;/p&gt;</description></item><item><title>Contour Example 7: Using the CSOListContainer</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/contours/contourexample7/</link><pubDate>Thu, 01 Aug 2024 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/contours/contourexample7/</guid><description>&lt;h1 id="TutorialContoursExample7"&gt;Contour Example 7: Using the CSOListContainer&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
  &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=4quJcvvt-GQ" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/4quJcvvt-GQ/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=4quJcvvt-GQ" target="_blank"&gt;YouTube&lt;/a&gt;.
@@ -156,7 +161,7 @@ voxel value of 1200 on every slice.&lt;/p&gt;</description></item><item><title>C
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;In this example, we are using the module &lt;code&gt;CSOListContainer&lt;/code&gt; instead of the &lt;code&gt;CSOManager&lt;/code&gt;. The &lt;code&gt;CSOManager&lt;/code&gt; is a heavyweight, UI driven module. You can use it to see all of your CSOs and CSOGroups in the module panel. The &lt;code&gt;CSOListContainer&lt;/code&gt; is a lightweight module with focus on Python scripting. We recommend to use this module for final application development, because Python provides much more flexibility in handling CSO objects.&lt;/p&gt;</description></item><item><title>Marker Objects</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/markerobjects/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/markerobjects/</guid><description>&lt;h1 id="MarkersInMeVisLab"&gt;Markers in MeVisLab&lt;/h1&gt;
-&lt;p&gt;In MeVisLab you can attach markers to images and other data objects. In this example you will see how to create, process, and use markers.&lt;/p&gt;
+&lt;p&gt;In MeVisLab, you can attach markers to images and other data objects. In this example, you will see how to create, process, and use markers.&lt;/p&gt;
 &lt;h2 id="creation-and-rendering"&gt;Creation and Rendering&lt;/h2&gt;
 &lt;p&gt;To create markers, you can use a marker editor, for example, the &lt;code&gt;SoView2DMarkerEditor&lt;/code&gt;. Connect this editor to a viewer as shown below. Now you can interactively create new markers. Connect the module &lt;code&gt;XMarkerListContainer&lt;/code&gt; to your marker editor to store markers in a list.&lt;/p&gt;</description></item><item><title>Example 1: Distance Between Markers</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/markers/markerexample1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/markers/markerexample1/</guid><description>&lt;h1 id="example-1-calculating-the-distance-between-markers"&gt;Example 1: Calculating the Distance Between Markers&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
@@ -169,7 +174,7 @@ voxel value of 1200 on every slice.&lt;/p&gt;</description></item><item><title>C
 &lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
 &lt;h3 id="develop-your-network"&gt;Develop Your Network&lt;/h3&gt;
 &lt;p&gt;Add the following modules and connect them as shown.&lt;/p&gt;
-&lt;p&gt;We changed the names of the modules &lt;code&gt;SoView2DMarkerEditor&lt;/code&gt; and &lt;code&gt;XMarkerListContainer&lt;/code&gt;, to distinguish these modules from two similar modules we will add later on. Open the panel of &lt;code&gt;SoView2DMarkerEditor&lt;/code&gt; and select the tab &lt;em&gt;Drawing&lt;/em&gt;. Now choose the &lt;em&gt;Color&lt;/em&gt; &lt;em&gt;red&lt;/em&gt;.&lt;/p&gt;</description></item><item><title>Curves</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/curves/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/curves/</guid><description>&lt;h1 id="CurvesInMeVisLab"&gt;Curves in MeVisLab&lt;/h1&gt;
+&lt;p&gt;We changed the names of the modules &lt;code&gt;SoView2DMarkerEditor&lt;/code&gt; and &lt;code&gt;XMarkerListContainer&lt;/code&gt;, to distinguish these modules from two similar modules we will add later on. Open the panel of &lt;code&gt;SoView2DMarkerEditor&lt;/code&gt; and select the tab &lt;em&gt;Drawing&lt;/em&gt;. Now choose the &lt;field&gt;Color&lt;/field&gt; &lt;em&gt;red&lt;/em&gt;.&lt;/p&gt;</description></item><item><title>Curves</title><link>https://mevislab.github.io/examples/tutorials/dataobjects/curves/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/dataobjects/curves/</guid><description>&lt;h1 id="CurvesInMeVisLab"&gt;Curves in MeVisLab&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;Curves can be used in MeVisLab to print the results of a function as two-dimensional mathematical curves into a diagram.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;

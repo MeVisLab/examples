@@ -5,7 +5,7 @@
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This chapter will give you an introduction into the creation of module panels and user
+&lt;p&gt;This chapter gives you an introduction into the creation of module panels and user
 interfaces. For the implementation, you will need to
 use the 
 &lt;a href="https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/MDLReference/index.html" target="_blank"&gt;MeVisLab Definition Language (MDL)&lt;/a&gt;

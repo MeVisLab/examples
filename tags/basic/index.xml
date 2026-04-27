@@ -5,8 +5,8 @@
 &lt;li&gt;&lt;a href="tutorials/shorts#snippets"&gt;Using Snippets&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="tutorials/shorts#scriptingassistant"&gt;Scripting Assistant&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="tutorials/shorts#user_scripts"&gt;User Scripts&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="tutorials/shorts#mlimagestate"&gt;Show status of module in- and output&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="tutorials/shorts#modulesuggest"&gt;Module suggestion of module in- and output&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="tutorials/shorts#mlimagestate"&gt;Show Status of Module Inputs and Outputs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="tutorials/shorts#modulesuggest"&gt;Module Suggestion of Module Inputs and Outputs&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="shortcuts"&gt;Keyboard Shortcuts&lt;/h2&gt;
 &lt;p&gt;This is a collection of useful keyboard shortcuts in MeVisLab.&lt;/p&gt;
@@ -26,7 +26,7 @@
  
  
  
- CTRL
+ Ctrl
  &lt;/kbd&gt;
  +
  &lt;kbd&gt;
@@ -46,7 +46,7 @@
  
  
  
- CTRL
+ Ctrl
  &lt;/kbd&gt;
  +
  &lt;kbd&gt;
@@ -66,7 +66,7 @@
  
  
  
- CTRL
+ Ctrl
  &lt;/kbd&gt;
  +
  &lt;kbd&gt;
@@ -86,7 +86,7 @@
  
  
  
- CTRL
+ Ctrl
  &lt;/kbd&gt;
  +
  &lt;kbd&gt;
@@ -102,7 +102,7 @@
  
  
  
- CTRL
+ Ctrl
  &lt;/kbd&gt;
  +
  &lt;kbd&gt;
@@ -122,7 +122,7 @@
  
  
  
- CTRL
+ Ctrl
  &lt;/kbd&gt;
  +
  &lt;kbd&gt;
@@ -140,7 +140,7 @@
  
  TAB
  &lt;/kbd&gt;&lt;/td&gt;
- &lt;td&gt;Layout *.script* file (in MATE)&lt;/td&gt;
+ &lt;td&gt;Layout &lt;i&gt;.script&lt;/i&gt; file (in MATE)&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td&gt;
@@ -150,7 +150,7 @@
  
  
  
- CTRL
+ Ctrl
  &lt;/kbd&gt;
  +
  &lt;kbd&gt;
@@ -170,7 +170,7 @@
  
  
  
- CTRL
+ Ctrl
  &lt;/kbd&gt; and Left Mouse Button 
 
 &lt;img width="22px" src="images/lmb.svg" alt="Left Mouse Button" /&gt;
@@ -204,7 +204,7 @@
  
  
  
- CTRL
+ Ctrl
  &lt;/kbd&gt;
  +
  &lt;kbd&gt;
@@ -212,7 +212,7 @@
  
  
  
- ALT
+ Alt
  &lt;/kbd&gt;
  +
  &lt;kbd&gt;
@@ -222,7 +222,7 @@
  
  T
  &lt;/kbd&gt;&lt;/td&gt;
- &lt;td&gt;Start test center&lt;/td&gt;
+ &lt;td&gt;Start TestCaseManager&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td&gt;
@@ -232,7 +232,7 @@
  
  
  
- CTRL
+ Ctrl
  &lt;/kbd&gt;
  +
  &lt;kbd&gt;
@@ -252,7 +252,7 @@
  
  
  
- CTRL
+ Ctrl
  &lt;/kbd&gt;
  +
  &lt;kbd&gt;
@@ -262,7 +262,7 @@
  
  R
  &lt;/kbd&gt;&lt;/td&gt;
- &lt;td&gt;Run script file with the same name of your network file if available in the same directory.&lt;/td&gt;
+ &lt;td&gt;Run script file with the same name of your network file if available in the same directory&lt;/td&gt;
  &lt;/tr&gt;
  &lt;tr&gt;
  &lt;td&gt;
@@ -272,7 +272,7 @@
  
  
  
- ALT
+ Alt
  &lt;/kbd&gt; Double-click 
 
 &lt;img width="22px" src="images/lmb.svg" alt="Left Mouse Button" /&gt;
@@ -289,4 +289,4 @@
  &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=xX7wJiyfxhA" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/xX7wJiyfxhA/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=xX7wJiyfxhA" target="_blank"&gt;YouTube&lt;/a&gt;.
  &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Sometimes you have to create the same network over and over again &amp;ndash; for example, to quickly preview DICOM files. Generally, you will at least add one module to load and another module to display your images. Sometimes you may also want to view the DICOM header data. A network you possibly generate whenever opening DICOM files will be the following:&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Sometimes you have to create the same network over and over again — for example, to quickly preview DICOM files. Generally, you will at least add one module to load and another module to display your images. Sometimes you may also want to view the DICOM header data. A network you possibly generate whenever opening DICOM files will be the following:&lt;/p&gt;</description></item></channel></rss>

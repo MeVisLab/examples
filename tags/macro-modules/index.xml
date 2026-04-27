@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Macro Modules on MeVisLab Examples</title><link>https://mevislab.github.io/examples/tags/macro-modules/</link><description>Recent content in Macro Modules on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://mevislab.github.io/examples/tags/macro-modules/index.xml" rel="self" type="application/rss+xml"/><item><title>Chapter I: Basic Mechanisms of MeVisLab</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/</link><pubDate>Wed, 15 Jun 2022 08:54:53 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/</guid><description>&lt;h2 id="TutorialBasicMechanics"&gt;Basic Mechanisms of MeVisLab (Example: Building a Contour Filter)&lt;/h2&gt;
-&lt;p&gt;In this chapter you will learn the basic mechanisms of the MeVisLab IDE. You will learn how to reuse existing modules to load and view data, and you will build your first processing pipeline.&lt;/p&gt;
+&lt;p&gt;In this chapter, you will learn the basic mechanisms of the MeVisLab IDE. You will learn how to reuse existing modules to load and view data, and you will build your first processing pipeline.&lt;/p&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
  &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=hRspMChITE4" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/hRspMChITE4/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=hRspMChITE4" target="_blank"&gt;YouTube&lt;/a&gt;.
@@ -40,11 +40,11 @@
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;In this chapter you will learn how to create global macro modules. There are many ways to do this. You can convert local macros into global macro modules or you can directly create global macro modules using the &lt;em&gt;Project Wizard&lt;/em&gt;. In contrast to local macro modules, global macro modules are commonly available throughout projects and can be found via module search and under &lt;i&gt;[
+&lt;p&gt;In this chapter, you will learn how to create global macro modules. There are many ways to do this. You can convert local macros into global macro modules or you can directly create global macro modules using the &lt;em&gt;Project Wizard&lt;/em&gt;. In contrast to local macro modules, global macro modules are commonly available throughout projects and can be found via module search and under &lt;i&gt;[
  
  Modules
 ]&lt;/i&gt;.&lt;/p&gt;</description></item><item><title>Example 2.3: Creation of Module Help</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/helpfiles/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/helpfiles/</guid><description>&lt;h1 id="example-23-creation-of-module-help"&gt;Example 2.3: Creation of Module Help&lt;/h1&gt;
-&lt;p&gt;Generating help of a macro module is part of the video about macro modules from &lt;a href="tutorials/basicmechanisms/macromodules/globalmacromodules"&gt;Example 2: Creation of global macro modules&lt;/a&gt;
+&lt;p&gt;Generating help of a macro module is part of the video about macro modules from &lt;a href="tutorials/basicmechanisms/macromodules/globalmacromodules"&gt;Example 2: Creation of Global Macro Modules&lt;/a&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
  &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=M4HnA0d1V5k" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/M4HnA0d1V5k/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=M4HnA0d1V5k" target="_blank"&gt;YouTube&lt;/a&gt;.
@@ -58,7 +58,7 @@
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;This chapter will give you an introduction into the creation of module panels and user
+&lt;p&gt;This chapter gives you an introduction into the creation of module panels and user
 interfaces. For the implementation, you will need to
 use the 
 &lt;a href="https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/MDLReference/index.html" target="_blank"&gt;MeVisLab Definition Language (MDL)&lt;/a&gt;
@@ -98,7 +98,7 @@ use the
  the module, the &lt;em&gt;Automatic Panel&lt;/em&gt; is shown.&lt;/p&gt;</description></item><item><title>Example 2.5: Interactions via Python Scripting</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/pythonscripting/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/pythonscripting/</guid><description>&lt;h1 id="TutorialPythonScripting"&gt;Example 2.5: Module Interactions Using Python Scripting&lt;/h1&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;This chapter will give you an overview over Python scripting in MeVisLab. Here, no introduction into Python will be given. However, basic knowledge in Python is helpful. Instead, we will show how to integrate and use Python in the MeVisLab SDK.&lt;/p&gt;
-&lt;p&gt;In fact, nearly everything in MeVisLab can be done via Python scripting: You can add modules to your network, or remove modules, you can dynamically establish and remove connections, and so on. But, much more important: You can access module inputs and outputs, as well as module fields to process their parameters and data. You can equip user interfaces and panel with custom functionalities. Python can be used to implement module interactions. When you open a panel or you press a button in a panel, the executed actions are implemented via Python scripting.&lt;/p&gt;</description></item><item><title>Example 2.5.2: Module Interactions via Python Scripting</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/scriptingexample2/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/scriptingexample2/</guid><description>&lt;h1 id="example-252-module-interactions-via-python-scripting"&gt;Example 2.5.2: Module Interactions Via Python Scripting&lt;/h1&gt;
+&lt;p&gt;In fact, nearly everything in MeVisLab can be done via Python scripting: You can add modules to your network, or remove modules, you can dynamically establish and remove connections, and so on. But, much more important: You can access module inputs and outputs, as well as module fields to process their parameters and data. You can equip user interfaces and panel with custom functionalities. Python can be used to implement module interactions. When you open a panel or you press a button in a panel, the executed actions are implemented via Python scripting.&lt;/p&gt;</description></item><item><title>Example 2.5.2: Module Interactions via Python Scripting</title><link>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/scriptingexample2/</link><pubDate>Wed, 15 Jun 2022 08:58:44 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/basicmechanisms/macromodules/scriptingexample2/</guid><description>&lt;h1 id="example-252-module-interactions-via-python-scripting"&gt;Example 2.5.2: Module Interactions via Python Scripting&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
  &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=hGq6vA7Ll9Q" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/hGq6vA7Ll9Q/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=hGq6vA7Ll9Q" target="_blank"&gt;YouTube&lt;/a&gt;.
@@ -138,8 +138,8 @@ use the
 &lt;h3 id="creating-the-network-to-be-used-for-testing"&gt;Creating the Network to be Used for Testing&lt;/h3&gt;
 &lt;p&gt;Add the modules to your workspace and connect them as seen below.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/network_example1.png" title="Example Network "&gt;&lt;img id="Example Network " class="img-fluid rounded" src="images/tutorials/thirdparty/network_example1.png" alt="Example Network " title="Example Network " /&gt;&lt;/a&gt;
- &lt;figcaption class="figure-caption"&gt;Example Network &lt;/figcaption&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/network_example1.png" title="Example network"&gt;&lt;img id="Example network" class="img-fluid rounded" src="images/tutorials/thirdparty/network_example1.png" alt="Example network" title="Example network" /&gt;&lt;/a&gt;
+ &lt;figcaption class="figure-caption"&gt;Example network&lt;/figcaption&gt;
 &lt;/p&gt;
 &lt;/p&gt;
 &lt;p&gt;The viewer is empty because the image needs to be set via Python scripting.&lt;/p&gt;</description></item></channel></rss>

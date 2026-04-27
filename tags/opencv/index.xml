@@ -10,8 +10,8 @@
 &lt;h3 id="creating-the-network-to-be-used-for-testing"&gt;Creating the Network to be Used for Testing&lt;/h3&gt;
 &lt;p&gt;Add the modules to your workspace and connect them as seen below.&lt;/p&gt;
 &lt;p&gt;&lt;p class="page-image"&gt;
- &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/network_example1.png" title="Example Network "&gt;&lt;img id="Example Network " class="img-fluid rounded" src="images/tutorials/thirdparty/network_example1.png" alt="Example Network " title="Example Network " /&gt;&lt;/a&gt;
- &lt;figcaption class="figure-caption"&gt;Example Network &lt;/figcaption&gt;
+ &lt;a data-modal="bs-lightbox" href="images/tutorials/thirdparty/network_example1.png" title="Example network"&gt;&lt;img id="Example network" class="img-fluid rounded" src="images/tutorials/thirdparty/network_example1.png" alt="Example network" title="Example network" /&gt;&lt;/a&gt;
+ &lt;figcaption class="figure-caption"&gt;Example network&lt;/figcaption&gt;
 &lt;/p&gt;
 &lt;/p&gt;
 &lt;p&gt;The viewer is empty because the image needs to be set via Python scripting.&lt;/p&gt;</description></item><item><title>Example 2: Face Detection with OpenCV</title><link>https://mevislab.github.io/examples/tutorials/thirdparty/opencv/thirdpartyexample2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/thirdparty/opencv/thirdpartyexample2/</guid><description>&lt;h1 id="example-2-face-detection-with-opencv"&gt;Example 2: Face Detection with OpenCV&lt;/h1&gt;
