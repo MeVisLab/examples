@@ -29,13 +29,13 @@ First, add the modules `SoExaminerViewer` and `SoCone` to the workspace and conn
 
 We like to change the color of the cone. In order to do so, add the module `SoMaterial` to the workspace and connect the module as shown below. When creating an Open Inventor scene (by creating networks of Open Inventor modules), the sequence of module connections, in this case the sequence of the inputs to the module `SoExaminerViewer`, determines the functionality of the network.
 
-Open Inventor modules are executed like scene graphs. This means modules are executed from top to bottom and from left to right. Here, it is important to connect the module `SoMaterial` to an input on the left side of the connection between `SoCone` and `SoExaminerViewer`. With this, we first select features like a color and these features are then assigned to all objects, which were executed afterward. Now, open the panel of the module `SoMaterial` and select any *Diffuse Color* you like. Here, we choose green.
+Open Inventor modules are executed like scene graphs. This means modules are traversed from top to bottom and from left to right. Here, it is important to connect the module `SoMaterial` to an input on the left side of the connection between `SoCone` and `SoExaminerViewer`. With this, we first select features like a color and these features are then assigned to all objects, which were executed afterward. Now, open the panel of the module `SoMaterial` and select any *Diffuse Color* you like. Here, we choose green.
 
-![Colors and Material in Open Inventor](images/tutorials/openinventor/OI1_02.png "Colors and Material in Open Inventor")
+![Color and material in Open Inventor](images/tutorials/openinventor/OI1_02.png "Color and material in Open Inventor")
 
 We like to add a second object to the scene.
 
-In order to do that, add the module `SoSphere` to the workspace. Connect this module to `SoExaminerViewer`. When connecting `SoSphere` to an input on the right side of the connection between the viewer and the module `SoMaterial`, the sphere is also colored in green. One problem now is, that currently both objects are displayed at the same position.
+In order to do that, add the module `SoSphere` to the workspace. Connect this module to `SoExaminerViewer`. When connecting `SoSphere` to an input on the right side of the connection between the viewer and the module `SoMaterial`, the sphere is also colored in green. One problem now is that currently both objects are displayed at the same position.
 
 ![Adding a SoSphere](images/tutorials/openinventor/OI1_03.png "Adding a SoSphere")
 
@@ -44,7 +44,7 @@ They display both objects at different positions, add the modules `SoSeparator` 
 1. The sphere loses its green color
 2. The cone is shifted to the side
 
-![Transformation](images/tutorials/openinventor/OI1_05.png "Transformation")
+![Transformation with SoTransform](images/tutorials/openinventor/OI1_05.png "Transformation with SoTransform")
 
 The module `SoTransform` is responsible for shifting objects, in this case the cone, to the side. The module `SoSeparator` ensures that only the cone is shifted and also only the cone is colored in green. It separates this features from the rest of the scene.
 
@@ -54,23 +54,23 @@ We like to add a third object, a cube, and shift it to the other side of the sph
 
 Again, we use the module `SoMaterial` to select a color for the cone and the sphere.
 
-![Multiple Materials](images/tutorials/openinventor/OI1_08.png "Multiple Materials")
+![Multiple materials](images/tutorials/openinventor/OI1_08.png "Multiple materials")
 
 For an easier handling, we group an object together with its features by using the module `SoGroup`. This does not separate features, which is the reason for the cube to be colorized. All modules that are derived from `SoGroup` offer a basically infinite number of input connectors (a new connector is added for every new connection).
 
-![SoGroup](images/tutorials/openinventor/OI1_09.png "SoGroup")
+![Grouping modules with SoGroup](images/tutorials/openinventor/OI1_09.png "Grouping modules with SoGroup")
 
 If we do not want to colorize the cube, we have to exchange the module `SoGroup` for another `SoSeparator` module.
 
-![SoSeparator](images/tutorials/openinventor/OI1_10.png "SoSeparator")
+![Grouping modules with SoSeparator](images/tutorials/openinventor/OI1_10.png "Grouping modules with SoSeparator")
 
 The implementation of all objects can be grouped together.
 
-![Grouping](images/tutorials/openinventor/OI1_11.png "Grouping")
+![Grouping modules in the network with a network group](images/tutorials/openinventor/OI1_11.png "Grouping modules in the network with a network group")
 
 In addition to the objects, a background can be added to the scene using the module `SoBackground`.
 
-![SoBackground](images/tutorials/openinventor/OI1_12.png "SoBackground")
+![Using a SoBackground](images/tutorials/openinventor/OI1_12.png "Using a SoBackground")
 
 ## Summary
 * Scene objects are represented by nodes.

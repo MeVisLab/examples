@@ -101,6 +101,13 @@ attribute {
     word-wrap: break-word;
 }
 
+inlineCode {
+  font-family: monospace;
+  background-color: #eeeeee;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
 kbd {
     display: inline-block;
     border: 1px solid #ccc;

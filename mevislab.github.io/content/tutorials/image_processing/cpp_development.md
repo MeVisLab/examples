@@ -15,44 +15,44 @@ menu:
 
 # C++ Module Development
 ## Introduction
-The development of your own C++ modules can be done by ML modules and by Open Inventor modules.
+The development of your own C++ modules can be done by implementing ML modules or Open Inventor modules.
 
 {{<alert class="info" caption="Important Information">}}
 Make sure to use a compiler that is compatible with your currently installed MeVisLab version.
 {{</alert>}}
 
 ### ML Modules on the C++ Level
-* Image processing modules are objects derived from class Module defined in the ML library and therefore are also called ML modules.
-* Image inputs and outputs are connectors to objects of class PagedImage, which are defined in the ML library.
-* Inputs and outputs for abstract data structures are connectors to pointers of objects derived from class Base and are called Base objects.
+* Image processing modules are objects derived from class {{< docuLinks "/Resources/Documentation/Publish/SDK/MLReference/classml_1_1Module.html" "Module">}} defined in the ML library and therefore are also called ML modules.
+* Image inputs and outputs are connectors to objects of class {{< docuLinks "/Resources/Documentation/Publish/SDK/MLReference/classml_1_1PagedImage.html" "PagedImage">}}, which are defined in the ML library.
+* Inputs and outputs for abstract data structures are connectors to pointers of objects derived from class {{< docuLinks "/Resources/Documentation/Publish/SDK/MLReference/classml_1_1Base.html" "Base">}} and are called Base objects.
 
 ### Open Inventor Modules on the C++ Level
-* Most Open Inventor modules are objects derived from class SoNode, defined in the Open Inventor library.
+* Most Open Inventor modules are objects derived from class {{< docuLinks "/../MeVis/ThirdParty/Documentation/Publish/OpenInventorReference/classSoNode.html" "SoNode">}}, defined in the Open Inventor library.
 * Open Inventor inputs and outputs are connectors to objects derived from class SoNode, defined in the Open Inventor library. Many Open Inventor modules will return themselves as outputs (“self”). On inputs, they may have connectors to child Open Inventor modules.
-* Some Open Inventor modules are objects derived from class SoEngine. They are used for calculations and return their output not via output connectors but via parameter fields.
-* Open Inventor modules may also have input and output connectors to Base objects and Image objects.
+* Some Open Inventor modules are objects derived from class {{< docuLinks "/../MeVis/ThirdParty/Documentation/Publish/OpenInventorReference/classSoEngine.html" "SoEngine">}}. They are used for calculations and return their output not via output connectors but via parameter fields.
+* Open Inventor modules may also have input and output connectors to Base objects and image objects.
 * All standard Open Inventor nodes defined in the Open Inventor library are available in MeVisLab as Open Inventor modules.
 
 This chapter describes some examples for developing your own ML and Open Inventor modules.
 
 ## Some Tips for Module Design
 ### Macro Modules or C++ Modules?
-In [Example 2: Macro Modules](tutorials/basicmechanisms/macromodules/), we already described Macro Modules and how to create them yourself.
+In [Example 2: Macro Modules](tutorials/basicmechanisms/macromodules/), we already described macro modules and how to create them yourself.
 
 **Advantages of macros:**
-* Macros are useful for creating a layer of abstraction by hierarchical grouping of existing modules.
-* Scripts can be edited on the fly:
+* Macro modules are useful for creating a layer of abstraction by hierarchical grouping of existing modules.
+* Scripts can be edited on-the-fly:
   * no compilation and reload of the module database necessary
   * scripting possible on the module or network level
   * scripting supported by the Scripting Assistant View (basically a recorder for actions performed on the network)
 
 **Conclusion:**
-* For rapid prototyping based on existing image processing algorithms, use macros.
+* For rapid prototyping based on existing image processing algorithms, use macro modules.
 * For implementing new image processing, write new ML or Open Inventor modules.
 
 ### Combining Functionalities
 It is possible to have ML and Open Inventor connectors in the same module. Two cases are possible:
-* Type 1: **ML -> visualization:** Image data or properties are displayed by a visualization module. Usually a <field>SoSFXVImage</field> field gets random access to an ML image by *getTile()*. Examples: `SoView2D`, `GlobalStatistics`.
+* Type 1: **ML -> visualization:** Image data or properties are displayed by a visualization module. Usually a <field>SoSFXVImage</field> field gets random access to an ML image by <inlineCode>getTile()</inlineCode>. Examples: `SoView2D`, `GlobalStatistics`.
 * Type 2: **visualization -> ML:** Modules generate an ML image from an Open Inventor scene. Examples: `VoxelizeInventorScene`, `SoExaminerViewer` (hidden functionality).
 
 Generally, however, it is not always a good solution to combine that, as the processes of image processing and image visualization are usually separated.

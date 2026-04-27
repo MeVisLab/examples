@@ -16,7 +16,7 @@ menu:
 # Example 2: Applying a Spleen Segmentation Model from MONAI in MeVisLab
 
 ## Introduction
-In the following, we will perform a spleen segmentation using a model from the *MONAI Model Zoo*. The MONAI Model Zoo is a collection of pretrained models for medical imaging, offering standardized bundles for tasks like segmentation, classification, and detection across MRI, CT, and pathology data, all built for easy use and reproducibility within the MONAI framework. Further information and the required files can be found [here](https://github.com/Project-MONAI/model-zoo/tree/dev "here").
+In the following, we will perform a spleen segmentation using a model from the *MONAI Model Zoo*. The MONAI Model Zoo is a collection of pretrained models for medical imaging, offering standardized bundles for tasks like segmentation, classification, and detection across MRI, CT, and pathology data, all built for easy use and reproducibility within the MONAI framework. Further information and the required files can be found [here](https://github.com/Project-MONAI/model-zoo/tree/dev "MONAI Model Zoo").
 
 This example shows how to use the model for **Spleen CT Segmentation** directly in MeVisLab.
 
@@ -24,11 +24,11 @@ This example shows how to use the model for **Spleen CT Segmentation** directly 
 
 ### Download Necessary Files
 Create a folder named *spleen_ct_segmentation* somewhere on your system.
-Inside this folder, create two subfolders, one named *configs* and another one named *models*, and remember their paths.
+Inside this folder, create two subfolders, one named *configs* and another named *models*, and remember their paths.
 
-![Directory Structure](images/tutorials/thirdparty/monai_example2_1.png "Directory Structure").
+![Directory structure](images/tutorials/thirdparty/monai_example2_1.png "Directory structure")
 
-Download all *config* files from [MONAI-Model-Zoo](https://github.com/Project-MONAI/model-zoo/tree/dev/models/spleen_ct_segmentation/configs "MONAI Model-Zoo") and save them in your local *configs* directory.
+Download all *config* files from [MONAI Model Zoo](https://github.com/Project-MONAI/model-zoo/tree/dev/models/spleen_ct_segmentation/configs "MONAI Model Zoo") and save them in your local *configs* directory.
 
 
 Download *model* files from [NVIDIA Download Server](https://developer.download.nvidia.com/assets/Clara/monai/tutorials/model_zoo/model_spleen_ct_segmentation_v1.pt "NVIDIA Download Server") and save it in your local *models* directory.
@@ -38,7 +38,7 @@ The path to the latest model *.pt* file can be found in [large_files.yml](https:
 {{</alert>}}
 
 ### Download Example Images
-The recommended CT images used for training the algorithm can be found [here](https://msd-for-monai.s3-us-west-2.amazonaws.com/Task09_Spleen.tar "here").
+The recommended CT images used for training the algorithm can be found [here](https://msd-for-monai.s3-us-west-2.amazonaws.com/Task09_Spleen.tar).
 
 ### Create a Macro Module and Add Inputs and Outputs
 Add a `PythonImage` module and save the network as *MONAISpleenSegmentation.mlab*.
@@ -51,7 +51,7 @@ Right-click {{< mousebutton "right" >}} on the group's name and choose *Convert 
 
 Our new module does not provide any input or output.
 
-![Local Macro Module MONAIDemo](images/tutorials/thirdparty/monai_example2_2.png "Local Macro Module MONAIDemo")
+![Local macro module MONAIDemo](images/tutorials/thirdparty/monai_example2_2.png "Local macro module MONAIDemo")
 
 Right-click {{< mousebutton "right" >}} on the macro module and select {{< menuitem "Related Files" "MONAIDemo.script">}}.
 
@@ -94,7 +94,7 @@ Right-click {{< mousebutton "right" >}} on the *MONAIDemo.py* and select {{< men
 ### Create the Network for the Segmentation
 Right-click {{< mousebutton "right" >}} on the macro module and select {{< menuitem "Related Files" "MONAIDemo.mlab">}}. Create the network seen below.
 
-![MONAIDemo Network](images/tutorials/thirdparty/monai_example2_3a.png "MonaiDemo Network")
+![MONAIDemo network](images/tutorials/thirdparty/monai_example2_3a.png "MONAIDemo network")
 
 Fields of the internal network can be left with default values; we will change them later.
 
@@ -117,9 +117,9 @@ Interface {
 
 If you now open the internal network of your macro module, you can see that the input image is connected to the input of the `Resample3D` module.
 
-![MONAIDemo Internal Network](images/tutorials/thirdparty/monai_example2_3b.png "MonaiDemo Internal Network")
+![MONAIDemo internal network: Resample3D connect to the macro's input](images/tutorials/thirdparty/monai_example2_3b.png "MonaiDemo internal network: Resample3D connect to the macro's input")
 
-Again, open the *.script* file and change the internal name of your *outImage* field to reuse the field *Resample3D1.output0*.
+Again, open the *.script* file and change the internal name of your <field>outImage</field> field to reuse the field <field>Resample3D1.output0</field>.
 
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
@@ -133,29 +133,28 @@ Interface {
 ```
 {{</highlight>}}
 
-
 If you now open the internal network of your macro module, you can see that the output image is connected to the output of the `Resample3D1` module.
 
-![MONAIDemo Internal Network](images/tutorials/thirdparty/monai_example2_3c.png "MonaiDemo Internal Network")
+![MONAIDemo internal network: Resample3D1 connected to the macro's output](images/tutorials/thirdparty/monai_example2_3c.png "MONAIDemo internal network: Resample3D1 connected to the macro's output")
 
 ### Adapt Input Image to *MONAI* Parameters from Training
 The model has been trained for strictly defined assumptions for the input image. All values can normally be found in the *inference.json* file in your *configs* directory.
 
-Use the `itkImageFileReader` module to load the file *Task09_Spleen/Task09_SpleenimagesTr/spleen_7.nii.gz* from dowloaded example patients. The *Output Inspector* shows the image and additional information about the size.
+Use the `itkImageFileReader` module to load the file *Task09_Spleen/Task09_SpleenimagesTr/spleen_7.nii.gz* from dowloaded example patients. The Output Inspector shows the image and additional information about the size.
 
-We can see that the image size is 512 x 512 x 114 and the voxel size is 0.9766 x 0.9766 x 2.5.
+We can see that the image size is *512 x 512 x 114* and the voxel size is *0.9766 x 0.9766 x 2.5*.
 
 ![Output Inspector](images/tutorials/thirdparty/monai_example2_3d.png "Output Inspector")
 
-Connect the module to your local macro module `MonaiDemo`. The result of the segmentation shall be visualized as a semitransparent overlay on your original image.
+Connect the module to your local macro module `MONAIDemo`. The result of the segmentation shall be visualized as a semitransparent overlay on your original image.
 
-Add a `SoView2DOverlay` and a `View2D` module and connect them to your local macro module `MonaiDemo`.
+Add a `SoView2DOverlay` and a `View2D` module and connect them to your local macro module `MONAIDemo`.
 
 ![Final network](images/tutorials/thirdparty/monai_example2_4.png "Final network")
 
-The **Spleen CT Segmentation** network expects images having a defined voxel size of 1.5 x 1.5 x 2. We want to define these values via fields in the Module Inspector.
+The **Spleen CT Segmentation** network expects images having a defined voxel size of *1.5 x 1.5 x 2*. We want to define these values via fields in the Module Inspector.
 
-Open the *.script* file and add the fields <field>start</field> and <field>voxelSize</field> to your local macro module `MonaiDemo`:
+Open the *.script* file and add the fields <field>start</field> and <field>voxelSize</field> to your local macro module `MONAIDemo`:
 
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
@@ -170,17 +169,15 @@ Interface {
 ```
 {{</highlight>}}
 
-If you reload your module now, we can set the voxel size to use for the segmentation directly in our macro module `MonaiDemo`. Additionally, we can trigger a start function for running the segmentation. This is implemented later.
+If you reload your module now, we can set the voxel size to use for the segmentation directly in our macro module `MONAIDemo`. Additionally, we can trigger a start function for running the segmentation. This is implemented later.
 
-![Voxel Size](images/tutorials/thirdparty/monai_example2_4a.png "Voxel Size")
+![Voxel size](images/tutorials/thirdparty/monai_example2_4a.png "Voxel size")
 
-If you select the output field of the `Resample3D` module in the internal network, you can see the extent of the currently opened image after changing the voxel size to 1.5 x 1.5 x 2. It shows 333 x 333 x 143.
+If you select the output field of the `Resample3D` module in the internal network, you can see the extent of the currently opened image after changing the voxel size to *1.5 x 1.5 x 2*. It shows *333 x 333 x 143*.
 
-![Original Image Size](images/tutorials/thirdparty/monai_example2_5.png "Original Image Size")
+The algorithm expects image sizes of *160 x 160 x 160*. We add this expected size of the image to our macro module in the same way.
 
-The algorithm expects image sizes of 160 x 160 x 160. We add this expected size of the image to our macro module in the same way.
-
-Open the *.script* file and add the following fields to your local macro module `MonaiDemo`:
+Open the *.script* file and add the following fields to your local macro module `MONAIDemo`:
 
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
@@ -205,7 +202,7 @@ Reload your macro module and enter the following values for your new fields:
 
 Next, we change the gray values of the image, because the algorithm has been trained on values between -57 and 164. Again, the values can be found in the *inference.json* file in your *configs* directory.
 
-Open the *.script* file and add the following fields to your local macro module `MonaiDemo`:
+Open the *.script* file and add the following fields to your local macro module `MONAIDemo`:
 
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
@@ -228,7 +225,7 @@ As already done before, we can now defined the threshold values for our module v
 
 As defined in the *inference.json* file in your *configs* directory, the gray values in the image must be between 0 and 1.
 
-Open the *.script* file and add the following fields to your local macro module `MonaiDemo`:
+Open the *.script* file and add the following fields to your local macro module `MONAIDemo`:
 
 {{< highlight filename="MONAIDemo.script" >}}
 ```Stan
@@ -251,16 +248,16 @@ Set the following:
 
 The algorithm expects NumPy images. NumPy uses the order Z, Y, X, other than MeVisLab. We are using X, Y, Z. The image needs to be transformed.
 
-Open the panel of the `SwapFlipDimensions` module and select X as *Axis 1* and Z as *Axis 2*. 
+Open the panel of the `SwapFlipDimensions` module and select *X* as <field>Axis 1</field> and *Z* as <field>Axis 2</field>.
 
 ![SwapFlipDimensions](images/tutorials/thirdparty/monai_example2_11.png "SwapFlipDimensions")
 
-After the algorithm has finished, we have to flip the images back to the original order. Open the panel of the `SwapFlipDimensions1` module and select X as *Axis 1* and Z as *Axis 2*. 
+After the algorithm has finished, we have to flip the images back to the original order. Open the panel of the `SwapFlipDimensions1` module and select *X* as <field>Axis 1</field> and *Z* as <field>Axis 2</field>. 
 
 Finally, we want to show the results of the algorithm as a semitransparent overlay on the image. Open the panel of the `View2DOverlay` and define the following settings:
-* Blend Mode: Blend
-* Alpha Factor: 0.5
-* Base Color: red
+* <field>Blend Mode</field> = *Blend*
+* <field>Alpha Factor</field> = *0.5*
+* <field>Base Color</field> =  *red*
 
 ![View2DOverlay](images/tutorials/thirdparty/monai_example2_12.png "View2DOverlay")
 
@@ -297,12 +294,12 @@ Commands {
 ```
 {{</highlight>}}
 
-If the user touches the trigger <field>start</field>, a Python function *onStart* will be executed. Whenever the size of our image is changed, we call a function called *_sizeChanged* and if the input image changes, we want to reset the module to its default values.
+If the user touches the trigger <field>start</field>, a Python function <inlineCode>onStart</inlineCode> will be executed. Whenever the size of our image is changed, we call a function called <inlineCode>_sizeChanged</inlineCode> and if the input image changes, we want to reset the module to its default values.
 
 ### Python Scripting
 The next step is to write our Python code. 
 
-Right-click {{< mousebutton "right" >}} *MONAIDemo.py* in *Commands* section line *source*. MATE opens showing the *.py* file of our module.
+Right-click {{< mousebutton "right" >}} *MONAIDemo.py* in the *Commands* section line *source*. MATE opens showing the *.py* file of our module.
 
 Insert the following code:
 
@@ -336,9 +333,9 @@ def _sizeChanged():
 ```
 {{</highlight>}}
 
-These functions should be enough to run the module. You can try them by changing the input image of our module, by changing any of the size values in *Module Inspector*, or by clicking *start*.
+These functions should be enough to run the module. You can try them by changing the input image of our module, by changing any of the size values in Module Inspector, or by clicking *start*.
 
-Let's implement the *_getImage* function first:
+Let's implement the <inlineCode>_getImage</inlineCode> function first:
 
 {{< highlight filename="MONAIDemo.py" >}}
 ```Python
@@ -411,7 +408,7 @@ We want to use the image that has been modified according to our pretrained netw
 ```
 {{</highlight>}}
 
-This function now already calculates the segmentation using the *MONAI* model. The problem is that it may happen that our subimage with the size 160 x 160 x 160 is located somewhere in our original image where no spleen is visible.
+This function now already calculates the segmentation using the *MONAI* model. The problem is that it may happen that our subimage with the size *160 x 160 x 160* is located somewhere in our original image where no spleen is visible.
 
 We have to calculate a bounding box in our `ROISelect` module and need to be able to move this bounding box to the correct location.
 
@@ -502,4 +499,3 @@ You can also use the other examples from *MONAI Model Zoo* the same way, just ma
 * The general principles are always the same for all models.
 
 {{< networkfile "examples/thirdparty/monai/MONAIDemo.zip" >}}
-

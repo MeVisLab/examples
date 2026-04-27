@@ -16,12 +16,15 @@ menu:
 # Example 6.2: Visualization Using SoPathTracer
 
 ## Introduction
-In this tutorial, we will explain the basics of using the `SoPathTracer` module in MeVisLab. You will learn how to create a scene, assign materials, add light sources, and configure the PathTracer to generate enhanced renderings.
+In this tutorial, we will explain the basics of using the `SoPathTracer` module in MeVisLab. You will learn how to create a scene, assign materials, add light sources, and configure the **MeVis Path Tracer** to generate enhanced renderings.
+
+<!--more-->
 
 {{<alert class="warning" caption="Attention">}}
-The MeVis Path Tracer requires an NVIDIA graphics card with CUDA support. In order to check your hardware, open MeVisLab and add a `SoPathTracer` module to your workspace. You will see a message if your hardware does not support CUDA:
+The **MeVis Path Tracer** requires an NVIDIA graphics card with CUDA support. In order to check your hardware, open MeVisLab and add a `SoPathTracer` module to your workspace. You will see a message if your hardware does not support CUDA:
 
-*MeVisLab detected an Intel onboard graphics adapter. If you experience rendering problems, try setting the environment variables SOVIEW2D_NO_SHADERS and GVR_NO_GLSL.* <br />
+*MeVisLab detected an Intel onboard graphics adapter. If you experience rendering problems, try setting the environment variables SOVIEW2D_NO_SHADERS and GVR_NO_GLSL.*<br/>
+
 *Handling cudaGetDeviceCount returned 35 (CUDA driver version is insufficient for CUDA runtime version)*
 {{</alert>}}
 
@@ -30,11 +33,11 @@ The MeVis Path Tracer requires an NVIDIA graphics card with CUDA support. In ord
 ### Develop Your Network
 Download and open the [images](examples/visualization/example6/Volume_1.mlimage) by using a `LocalImage` module. Connect it to a `View2D` to visually inspect its contents.
 
-![MR Image of Knee](images/tutorials/visualization/pathtracer/V6.2_1.png "MR Image of Knee in 2D")
+![MR image of a knee in 2D](images/tutorials/visualization/pathtracer/V6.2_1.png "MR image of a knee in 2D")
 
 Replace the `View2D` module by a `SoExaminerViewer`. Add the modules `SoPathTracerVolume` and `SoPathTracer` to your workspace and connect them as seen below. 
 
-The `SoPathTracerVolume` enables the loading and transforming the data into renderable volumes for Path Tracing. The `SoPathTracer` is the main rendering module of the MeVis Path Tracer framework. It provides a much more realistic way to visualize the behavior of light in a scene. It simulates the scattering and absorption of light within the volume.
+The `SoPathTracerVolume` enables the loading and transforming the data into renderable volumes for path tracing. The `SoPathTracer` is the main rendering module of the **MeVis Path Tracer** framework. It provides a much more realistic way to visualize the behavior of light in a scene. It simulates the scattering and absorption of light within the volume.
 
 {{<alert class="info" caption="Additional Info">}}
 It's essential to consistently position the `SoPathTracer `module on the right side of the scene. This strategic placement ensures that the module can render all objects located in the scene before it accurately. 
@@ -50,11 +53,11 @@ Now, connect the `SoLUTEditor` module to your `SoPathTracerVolume` as illustrate
 
 ![SoLUTEditor](images/tutorials/visualization/pathtracer/SoLUTEditor1.png "SoLUTEditor")
 
-Add a `MinMaxScan` module to the `LocalImage` module and open the panel. The module shows the actual minimal and maximal gray values of the volume.
+Add a `MinMaxScan` module to the `LocalImage` module and open the panel. The module shows the actual minimal and maximal gray values of the volume image.
 
-Open the panel of the `SoLUTEditor` module and define Range between *0* and *2047* as calculated by the `MinMaxScan`.
+Open the panel of the `SoLUTEditor` module and define *Range* between *0* and *2047* as calculated by the `MinMaxScan`.
 
-![SoLUTEditor](images/tutorials/visualization/pathtracer/Range_MinMaxScan.png "MinMaxScan")
+![MinMaxScan](images/tutorials/visualization/pathtracer/Range_MinMaxScan.png "MinMaxScan")
 
 Next, add lights to your scene. Connect a `SoPathTracerAreaLight` and a `SoPathTracerBackgroundLight` module to your `SoExaminerViewer` to improve scene lighting. 
 
@@ -99,7 +102,7 @@ Load the [Bones mask](examples/visualization/example6/edited_Bones.mlimage) by u
 
 ![Bones mask](images/tutorials/visualization/pathtracer/View2D_Bones.png "Bones mask")
 
-Start by disabling the visibility of your first volume by toggeling `SoPathTracerVolume` <field>Enabled</field> field off. This helps to improve the rendering of the bones itself and makes it easier to define colors for your LUT.
+Start by disabling the visibility of your first volume by toggling `SoPathTracerVolume` <field>Enabled</field> field off. This helps to improve the rendering of the bones itself and makes it easier to define colors for your LUT.
 
 #### Load Example LUT from File
 Once again, you can decide to define the LUT yourself in `SoLUTEditor` module, or load a prepared XML File in a `LUTLoad` module as provided [here](examples/visualization/example6/LUT_Bones.xml).
@@ -107,15 +110,15 @@ Once again, you can decide to define the LUT yourself in `SoLUTEditor` module, o
 #### Manually Define LUT
 If you want to define your own LUT, connect a `MinMaxScan` module to your `LocalImage1` and define the *Range* for the `SoLUTEditor` as already done before. 
 
-![MinMaxScan of Bones mask](images/tutorials/visualization/pathtracer/MinMaxScan_Bones.png "MinMaxScan of Bones mask")
+![MinMaxScan of bones mask](images/tutorials/visualization/pathtracer/MinMaxScan_Bones.png "MinMaxScan of bones mask")
 
-Open the panel of `SoLUTEditor1` for the bones and go to tab *Range* and set *New Range Min* to *0* and *New Range Max* to *127*. Define the following colors in the tab *Editor*. 
+Open the panel of `SoLUTEditor1` for the bones and go to tab *Range* and set <field>New Range Min</field> to *0* and <field>New Range Max</field> to *127*. Define the following colors in the tab *Editor*. 
 
-![SoLUTEditor1](images/tutorials/visualization/pathtracer/V6.2_11_LUT_Bones.png "SoLUTEditor1")
+![Using a SoLUTEditor for visualizing the bones](images/tutorials/visualization/pathtracer/V6.2_11_LUT_Bones.png "Using a SoLUTEditor for visualizing the bones")
 
 You can increase the <field>Shininess</field> of the bones and change the <field>Diffuse</field> color in the *Surface Brdf* tab within the `SoPathTracerMaterial1`. Also set <field>Specular</field> to *0.5*, <field>Shininess</field> to *0.904*, and <field>Specular Intensity</field> to *0.466*.
 
-![SoPathTracerMaterial1](images/tutorials/visualization/pathtracer/V6.2_SoPathTracerMaterial.png "SoPathTracerMaterial1")
+![Setting material properties with SoPathTracerMaterial](images/tutorials/visualization/pathtracer/V6.2_SoPathTracerMaterial.png "Setting material properties with SoPathTracerMaterial")
 
 ## Visualize Vessels
 Repeat the process for the vessels. Add another `LocalImage`, `SoPathTracerVolume`, `SoLUTEditor` (or `LUTLoad`), and `View2D` module as seen below. Load this [Vessels mask](examples/visualization/example6/edited_Vessels.mlimage) and check it using `View2D`.
@@ -130,19 +133,19 @@ Connect the `MinMaxScan` to your `LocalImage2`.
 
 Access the `SoLUTEditor2` panel in the tab *Range* and set the <field>New Range Min</field> to *0* and the <field>New Range Max</field> to *255*. Additionally, modify the illustrated color settings within the *Editor* tab. 
 
-![Vessels](images/tutorials/visualization/pathtracer/MinMaxScan_Vessels.png "MinMaxScan of Vessels mask")
+![MinMaxScan of vessels mask](images/tutorials/visualization/pathtracer/MinMaxScan_Vessels.png "MinMaxScan of vessels mask")
 
-![SoLUTEditor2](images/tutorials/visualization/pathtracer/V6.2_SoLUTEditor1_Vessels.png "SoLUTEditor2")
+![Using a SoLUTEditor for visualizing blood vessels](images/tutorials/visualization/pathtracer/V6.2_SoLUTEditor1_Vessels.png "Using a SoLUTEditor for visualizing blood vessels")
 
-Now you should set your first volume visible again by toggling `SoPathTracerVolume` *Enabled* field to on.
+Now you should set your first volume visible again by toggling `SoPathTracerVolume` <field>Enabled</field> field to on.
 
-![Final Resul](images/tutorials/visualization/pathtracer/FinalResult.png "Final Result")
+![Final result](images/tutorials/visualization/pathtracer/FinalResult.png "Final result")
 
 {{<alert class="info" caption="Additional Info">}}
 The resulting rendering in `SoExaminerViewer` might look different depending on your defined LUTs.
 {{</alert>}}
 
-![Final Resul](images/tutorials/visualization/pathtracer/FinalResult2.png "Final Result with Enhanced Visualization")
+![Final result with enhanced visualization](images/tutorials/visualization/pathtracer/FinalResult2.png "Final result with enhanced visualization")
 
 ## Summary:
 * You can generate photorealistic renderings using `SoPathTracer` and associated modules.

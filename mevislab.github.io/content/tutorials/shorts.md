@@ -20,8 +20,8 @@ This chapter shows some features and functionalities that are helpful but do not
 * [Using Snippets](tutorials/shorts#snippets)
 * [Scripting Assistant](tutorials/shorts#scriptingassistant)
 * [User Scripts](tutorials/shorts#user_scripts)
-* [Show status of module in- and output](tutorials/shorts#mlimagestate)
-* [Module suggestion of module in- and output](tutorials/shorts#modulesuggest)
+* [Show Status of Module Inputs and Outputs](tutorials/shorts#mlimagestate)
+* [Module Suggestion of Module Inputs and Outputs](tutorials/shorts#modulesuggest)
 
 ## Keyboard Shortcuts {#shortcuts}
 This is a collection of useful keyboard shortcuts in MeVisLab.
@@ -34,31 +34,31 @@ This is a collection of useful keyboard shortcuts in MeVisLab.
   </thead>
   <tbody>
     <tr>
-      <td>{{< keyboard "CTRL" "1" >}}</td>
+      <td>{{< keyboard "Ctrl" "1" >}}</td>
       <td>Automatically arrange selection of modules in the current network</td>
     </tr>
     <tr>
-      <td>{{< keyboard "CTRL" "2" >}}</td>
+      <td>{{< keyboard "Ctrl" "2" >}}</td>
       <td>Open most recent network file</td>
     </tr>
     <tr>
-      <td>{{< keyboard "CTRL" "3" >}}</td>
+      <td>{{< keyboard "Ctrl" "3" >}}</td>
       <td>Run most recent test case (extremely useful for developers)</td>
     </tr>
     <tr>
-      <td>{{< keyboard "CTRL" "A" >}} then {{< keyboard "CTRL" "1" >}}</td>
+      <td>{{< keyboard "Ctrl" "A" >}} then {{< keyboard "Ctrl" "1" >}}</td>
       <td>Layout network</td>
     </tr>
     <tr>
-      <td>{{< keyboard "CTRL" "A" >}} then {{< keyboard "TAB" >}}</td>
-      <td>Layout *.script* file (in MATE)</td>
+      <td>{{< keyboard "Ctrl" "A" >}} then {{< keyboard "TAB" >}}</td>
+      <td>Layout <i>.script</i> file (in MATE)</td>
     </tr>
     <tr>
-      <td>{{< keyboard "CTRL" "D" >}}</td>
+      <td>{{< keyboard "Ctrl" "D" >}}</td>
       <td>Duplicate currently selected module (including all field values)</td>
     </tr>
     <tr>
-      <td>{{< keyboard "CTRL" >}} and Left Mouse Button {{< mousebutton "left" >}} or Middle Mouse Button {{< mousebutton "middle" >}}</td>
+      <td>{{< keyboard "Ctrl" >}} and Left Mouse Button {{< mousebutton "left" >}} or Middle Mouse Button {{< mousebutton "middle" >}}</td>
       <td>Show internal network</td>
     </tr>
     <tr>
@@ -66,19 +66,19 @@ This is a collection of useful keyboard shortcuts in MeVisLab.
       <td>Show hidden outputs of the currently selected module</td>
     </tr>
     <tr>
-      <td>{{< keyboard "CTRL" "ALT" "T" >}}</td>
-      <td>Start test center</td>
+      <td>{{< keyboard "Ctrl" "Alt" "T" >}}</td>
+      <td>Start TestCaseManager</td>
     </tr>
     <tr>
-      <td>{{< keyboard "CTRL" "K" >}}</td>
+      <td>{{< keyboard "Ctrl" "K" >}}</td>
       <td>Restart MeVisLab with current network(s)</td>
     </tr>
     <tr>
-      <td>{{< keyboard "CTRL" "R" >}}</td>
-      <td>Run script file with the same name of your network file if available in the same directory.</td>
+      <td>{{< keyboard "Ctrl" "R" >}}</td>
+      <td>Run script file with the same name of your network file if available in the same directory</td>
     </tr>
     <tr>
-      <td>{{< keyboard "ALT" >}} Double-click {{< mousebutton "left" >}} on a module</td>
+      <td>{{< keyboard "Alt" >}} Double-click {{< mousebutton "left" >}} on a module</td>
       <td>Open automatic panel of the module.</td>
     </tr>
   </tbody>
@@ -87,13 +87,13 @@ This is a collection of useful keyboard shortcuts in MeVisLab.
 ## Using Snippets {#snippets}
 {{< youtube "xX7wJiyfxhA" >}}
 
-Sometimes you have to create the same network over and over again -- for example, to quickly preview DICOM files. Generally, you will at least add one module to load and another module to display your images. Sometimes you may also want to view the DICOM header data. A network you possibly generate whenever opening DICOM files will be the following:
+Sometimes you have to create the same network over and over again &mdash; for example, to quickly preview DICOM files. Generally, you will at least add one module to load and another module to display your images. Sometimes you may also want to view the DICOM header data. A network you possibly generate whenever opening DICOM files will be the following:
 
-![Open DICOM files](images/tutorials/Snippets_Network.png "Open DICOM files")
+![Open and view DICOM files](images/tutorials/Snippets_Network.png "Open and view DICOM files")
 
-Create a snippet of your commonly used networks by adding the snippets list from the main menu. Open {{< menuitem "View" "Views" "Snippets List">}}. A new panel is shown. Select all modules of your network and double-click *New...* in your *Snippets List*.
+Create a snippet of your commonly used networks by adding the snippets list from the main menu. Open {{< menuitem "View" "Views" "Snippets List">}}. A new panel is shown. Select all modules of your network and double-click *New...* in your Snippets List.
 
-Enter a name for your snippet like *DICOM Viewer* and click *Add*.
+Enter a name for your snippet like *DICOM Viewer* and click {{< mousebutton "left" >}} <field>Add</field>.
 
 A new snippet will be shown in your Snippets List. You can drag and drop the snippet to your workspace and the modules are reused, including all defined field values.
 
@@ -139,7 +139,7 @@ UserIDEMenus {
 ```
 {{</highlight>}}
 
-We define an action *Set Dark Theme*, which is added to the submenu *Theme* in the MeVisLab IDE menu item {{< menuitem "Scripting">}}. The action is named *changeTheme* and a reference to a Python script is added as *$(LOCAL)/changeTheme.py*. We also defined a keyboard shortcut {{< keyboard "ctrl+F9" >}}.
+We define an action *Set Dark Theme*, which is added to the submenu *Theme* in the MeVisLab IDE menu item {{< menuitem "Scripting">}}. The action is named <inlineCode>changeTheme</inlineCode> and a reference to a Python script is added as *$(LOCAL)/changeTheme.py*. We also defined a keyboard shortcut {{< keyboard "Ctrl" "F9" >}}.
 
 Change to MeVisLab IDE and select menu item {{< menuitem "Extras" "Reload Module Database (Clear Cache)">}}. Open the menu item {{< menuitem "Scripting">}}. You can see the new submenu {{< menuitem "Theme" "Set Dark Theme">}}. If you select this entry, you get an error in MeVisLab console: *Could not locate user script: .../changeTheme.py*
 
@@ -166,18 +166,18 @@ QApplication.setPalette(palette)
 
 This script defines the color of the MeVisLab user interface elements. You can define other colors and more items; this is just an example of what you can do with user scripts.
 
-Switch back to the MeVisLab IDE and select the menu item {{< menuitem "Extras" "Reload Module Database (Clear Cache)">}} again. The colors of the MeVisLab IDE change as defined in our Python script. This change persists until you restart MeVisLab and can always be repeated by selecting the menu entry or pressing the keyboard shortcut {{< keyboard "ctrl+F9" >}}.
+Switch back to the MeVisLab IDE and select the menu item {{< menuitem "Extras" "Reload Module Database (Clear Cache)">}} again. The colors of the MeVisLab IDE change as defined in our Python script. This change persists until you restart MeVisLab and can always be repeated by selecting the menu entry or pressing the keyboard shortcut {{< keyboard "Ctrl" "F9" >}}.
 
 ## Show Status of Module Input and Output {#mlimagestate}
 Especially in large networks it is useful to see the state of the input and output connectors of a module. By default, the module connectors do not show if data is available. Below image shows a `DicomImport` module and a `View2D` module where no data is loaded.
 
 ![No status on connector](images/tutorials/LMIMageState_Off.png "No status on connector")
 
-In the MeVisLab preferences dialog, you can see a checkbox *Show ML image state*. By default, the setting is *Off*.
+In the MeVisLab preferences dialog, you can see a checkbox <field>Show ML image state</field>. By default, the setting is *Off*.
 
 ![Show ML image state](images/tutorials/LMIMageState.png "Show ML image state")
 
-After enabling *Show ML image state*, your network changes and the input and output connectors appear red in the case no data is available at the output.
+After enabling <field>Show ML image state</field>, your network changes and the input and output connectors appear red in the case no data is available at the output.
 
 ![No data on connector](images/tutorials/LMIMageState_On_1.png "No data on connector")
 

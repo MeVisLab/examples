@@ -14,7 +14,7 @@ menu:
 ---
 
 # Example 1.1: MeVisLab Coordinate Systems
-Three coordinate systems exist next to each other:
+Three coordinate systems exist side by side:
 * World coordinates
 * Voxel coordinates
 * Device coordinates
@@ -23,7 +23,7 @@ World coordinate systems in MeVisLab are always [right handed](https://en.wikipe
 
 The blue rectangle shows the same region in the three coordinate systems.
 
-![Coordinate Systems in MeVisLab](images/tutorials/basicmechanics/GSExampleImageProcessing10b.png "Coordinate Systems in MeVisLab")
+![Coordinate systems in MeVisLab](images/tutorials/basicmechanics/GSExampleImageProcessing10b.png "Coordinate systems in MeVisLab")
 
 ## World Coordinates
 World coordinates are:
@@ -36,11 +36,11 @@ The origin of the world coordinate system can be anywhere and is not clearly def
 ### World Coordinates in MeVisLab
 You can show the world coordinates in MeVisLab by using the following example network:
 
-![World Coordinates in MeVisLab](images/tutorials/basicmechanics/WorldCoordinates.png "World Coordinates in MeVisLab")
+![World coordinates in MeVisLab](images/tutorials/basicmechanics/WorldCoordinates.png "World coordinates in MeVisLab")
 
-The `ConstantImage` module generates an artificial image with a certain size, data type, and a constant fill value. The origin of the image is at the origin of the world coordinate system; therefore, the `SoCoordinateSystem` module shows the world coordinate system. In order to have a larger z-axis, open the panel of the `ConstantImage` module and set *IMage Size* for *Z* to *256*.
+The `ConstantImage` module generates an artificial image with a certain size, data type, and a constant fill value. The origin of the image is at the origin of the world coordinate system; therefore, the `SoCoordinateSystem` module shows the world coordinate system. In order to have a larger z-axis, open the panel of the `ConstantImage` module and set *Image Size* for *Z* to *256*.
 
-![ConstantImage Info](images/tutorials/basicmechanics/ConstantImageInfo.png "ConstantImage Info")
+![ConstantImage info](images/tutorials/basicmechanics/ConstantImageInfo.png "ConstantImage info")
 
 Placing an object into the Open Inventor scene of the `SoExaminerViewer`, in this case a `SoCube` with *width*, *height*, and *depth* of 10, places the object to the origin of the world coordinate system.
 
@@ -67,9 +67,9 @@ Voxel coordinates are:
 ### Voxel Coordinates in MeVisLab
 You can show the voxel coordinates in MeVisLab by using the following example network:
 
-![Voxel Coordinates](images/tutorials/basicmechanics/VoxelCoordinates.png "Voxel Coordinates")
+![Voxel coordinates](images/tutorials/basicmechanics/VoxelCoordinates.png "Voxel coordinates")
 
-Load the file *Liver1_CT_venous.small.tif*. The `Info` module shows detailed information about the image loaded by the `LocalImage`. Opening the `SoExaminerViewer` shows the voxel coordinate system of the loaded image. You may have to change the LUT in `SoGVRVolumeRenderer`, so that the image looks better.
+Load the file *Liver1_CT_venous.small.tif*. The `Info` module shows detailed information about the image loaded by the `LocalImage`. Opening the `SoExaminerViewer` shows the voxel coordinate system of the loaded image. You may have to change the LUT in `SoGVRVolumeRenderer` so that the image looks better.
 
 ![Voxel coordinates of the loaded image](images/tutorials/basicmechanics/SoExaminerViewer_Voxel.png "Voxel coordinates of the loaded image")
 
@@ -83,7 +83,7 @@ You can change the scaling to 1 by adding a `Resample3D` module to the network: 
 
 ![Resample3D](images/tutorials/basicmechanics/Resample3D.png "Resample3D")
 
-![Image Info after Resampling](images/tutorials/basicmechanics/ImageInfo_AdvancedResampled.png "Image Info after Resampling")
+![Image info after resampling](images/tutorials/basicmechanics/ImageInfo_AdvancedResampled.png "Image info after resampling")
 
 The voxel size is now 1.
 
@@ -97,7 +97,7 @@ Replace the `SoGroup` module from the World Group in your network by a `SoSepara
 
 Opening the `SoExaminerViewer` shows the world coordinate system in white and the voxel coordinate system in yellow.
 
-![World and Voxel coordinates](images/tutorials/basicmechanics/SoExaminerViewer_both.png "World and Voxel coordinates")
+![World and voxel coordinates](images/tutorials/basicmechanics/SoExaminerViewer_both.png "World and voxel coordinates")
 
 On the yellow axis, we can see that the coordinate systems are located as already seen in the `Info` module *Advanced* tab. On the x-axis, the voxel coordinate origin is translated by -186.993 and on the y-axis, it is translated by -173.993.
 

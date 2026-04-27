@@ -13,7 +13,7 @@ Additionally, the images are modified by a local macro module `Filter` and shown
 
 In order to display the same slice (unchanged and changed), the module `SyncFloat` is used to synchronize the field value <field>startSlice</field> in both viewers. The `SyncFloat` module duplicates the value <field>Float1</field> to the field <field>Float2</field> if it differs by <field>Epsilon</field>.
 
-![Screenshot](examples/basic_mechanisms/contour_filter/image.png)
+![Example network](examples/basic_mechanisms/contour_filter/image.png "Example network")
 
 # Download
 You can download the example network [here](examples/basic_mechanisms/contour_filter/ContourFilter.zip)

@@ -25,7 +25,7 @@ This example uses the *assimp* library to load a 3D file and save the file as *.
 ### Develop Your Network
 Add the modules `SoSceneLoader`, `SoBackground`, and `SoExaminerViewer` to your workspace and connect them as seen below.
 
-![Example Network](images/tutorials/thirdparty/assimp_example1.png "Example Network")
+![Example network](images/tutorials/thirdparty/assimp_example1.png "Example network")
 
 ### Open the 3D File
 Select the file *vtkCow.obj* from MeVisLab demo data directory. Open `SoExaminerViewer` and inspect the scene. You will see a 3D cow.
@@ -38,11 +38,11 @@ In the case you cannot see the cow, it might be located outside your current cam
 
 Add a `SoSphere` to the workspace and connect it to your viewer. Define the *Radius* of your sphere to 2 and inspect your viewer.
 
-![Cow and Sphere in SoExaminerViewer](images/tutorials/thirdparty/CowAndSphere.png "Cow and Sphere in SoExaminerViewer")
+![Cow and sphere in SoExaminerViewer](images/tutorials/thirdparty/CowAndSphere.png "Cow and sphere in SoExaminerViewer")
 
 You can also define a material for your sphere but what we wanted to show is: You can use the loaded 3D files in MeVisLab Open Inventor scenes.
 
-![Cow and red Sphere in SoExaminerViewer](images/tutorials/thirdparty/CowAndSphere_red.png "Cow and red Sphere in SoExaminerViewer")
+![Cow and red sphere in SoExaminerViewer](images/tutorials/thirdparty/CowAndSphere_red.png "Cow and red sphere in SoExaminerViewer")
 
 ### Save Your Scene as *.stl* File for 3D Printing
 Add a `SoSceneWriter` module to your workspace. The `SoExaminerViewer` has a hidden output that can be shown on pressing {{<keyboard "SPACE">}}. Connect the `SoSceneWriter` to the output.
@@ -52,14 +52,14 @@ Name your output *.stl* file and select *Stl Ascii* as output format, so that we
 ![SoSceneWriter](images/tutorials/thirdparty/SoSceneWriter.png "SoSceneWriter")
 
 {{<alert class="info" caption="Info">}}
-The `SoSceneWriter` can save node color information when saving in Open Inventor (ASCII or binary) or in VRML format. The `SoSceneWriter` needs to be attached to a `SoWEMRenderer` that renders in *ColorMode:NodeColor*.
+The `SoSceneWriter` can save node color information when saving in Open Inventor (ASCII or binary) or in a simple VRML format. The `SoSceneWriter` needs to be attached to a `SoWEMRenderer` that renders in <field>ColorMode</field> *NodeColor*.
 
 There are [tools](https://www.patrickmin.com/meshconv/) to convert from at least VRML to STL available for free.
 {{</alert>}}
 
-Write your scene and open the resulting file in your preferred editor. As an alternative, you can also open the file in an *.stl* file reader like Microsoft 3D Viewer.
+Write your scene and open the resulting file in your preferred editor. As an alternative, you can also open the file in an *.stl* file reader like [Microsoft 3D Viewer](https://apps.microsoft.com/detail/9nblggh42ths?hl=en-ca&gl=CA).
 
-![Microsoft 3D-Viewer](images/tutorials/thirdparty/Microsoft_3D_Viewer.png "Microsoft 3D-Viewer")
+![Microsoft 3D viewer](images/tutorials/thirdparty/Microsoft_3D_Viewer.png "Microsoft 3D viewer")
 
 ### Load the File Again
 For loading your *.stl* file, you can use a `SoSceneLoader` and a `SoExaminerViewer`. 

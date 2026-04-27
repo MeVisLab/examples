@@ -14,7 +14,7 @@ menu:
 ---
 
 ## Basic Mechanisms of MeVisLab (Example: Building a Contour Filter) {#TutorialBasicMechanics}
-In this chapter you will learn the basic mechanisms of the MeVisLab IDE. You will learn how to reuse existing modules to load and view data, and you will build your first processing pipeline.
+In this chapter, you will learn the basic mechanisms of the MeVisLab IDE. You will learn how to reuse existing modules to load and view data, and you will build your first processing pipeline.
 
 {{< youtube "hRspMChITE4">}}
 
@@ -27,11 +27,11 @@ Additional information on the basics of MeVisLab are explained {{< docuLinks "/R
 ### Loading Data {#TutorialLoadingData}
 First, we need to load the data we would like to work on, e.g., a CT scan. In MeVisLab, modules are used to perform their associated specific task: they are the basic entities you will be working with. Each module has a different functionality for processing, visualization, and interaction. Connecting modules enables the development of complex processing pipelines. You will get to know different types of modules throughout the course of this tutorial.
 
-Starting off, we will add the module `ImageLoad` to our network to load our data. The module can be found by typing its name into the search bar on the top-right corner and is added to your network by clicking it  {{< mousebutton "left" >}}.
+Starting off, we will add the module `ImageLoad` to our network to load our data. The module can be found by typing its name into the search bar on the top-right corner and is added to your network by clicking it {{< mousebutton "left" >}}.
 
 ![Search for ImageLoad](images/tutorials/basicmechanics/BM_01.png "Search for ImageLoad")
 
-Next, we select and load the data we'd like to process. Double-click {{< mousebutton "left" >}} the module `ImageLoad` to open its panel. You can browse through your folders to select the data you'd like to open. Example data can be found in the MeVisLab DemoData directory *$(InstallDir)/Packages/MeVisLab/Resources/DemoData* located in the MeVisLab installation path. Select a file, for example, an MRI scan of a shoulder *Shoulder_Fracture.tif*. The image is loaded immediately and basic information of the loaded image can be seen in the Panel.
+Next, we select and load the data we'd like to process. Double-click {{< mousebutton "left" >}} the module `ImageLoad` to open its panel. You can browse through your folders to select the data you'd like to open. Example data can be found in the MeVisLab DemoData directory *$(InstallDir)/Packages/MeVisLab/Resources/DemoData* located in the MeVisLab installation path. Select a file, for example, an MRI scan of a shoulder *Shoulder_Fracture.tif*. The image is loaded immediately and basic information of the loaded image can be seen in the panel.
 
 {{<alert class="info" caption="Extra Infos">}}
 There also are modules to load multiple other formats of data. These are the most common ones:
@@ -66,16 +66,16 @@ You are not restricted to 2D. The Output Inspector offers a 3D View of most load
 * F = feet
 {{</alert>}}
 
-Below the Output Inspector, you'll find the Module Inspector. The Module Inspector displays properties and parameters of the selected module. Parameters are stored in so called **Fields**. Using the Module Inspector, you can examine different fields of your `ImageLoad` module. The module has, for example, the fields <field>filename</field> (the path the loaded image is stored in), as well as <field>sizeX</field>, <field>sizeY</field>, and <field>sizeZ</field> (the extent of the loaded image).
+Below the Output Inspector, you'll find the Module Inspector. The Module Inspector displays properties and parameters of the selected module. Parameters are stored in so-called **Fields**. Using the Module Inspector, you can examine different fields of your `ImageLoad` module. The module has, for example, the fields <field>filename</field> (the path the loaded image is stored in), as well as <field>sizeX</field>, <field>sizeY</field>, and <field>sizeZ</field> (the extent of the loaded image).
 
 ![Module Inspector](images/tutorials/basicmechanics/BM_04.png "Module Inspector")
 
 ### Viewer {#TutorialViewer}
-Instead of using the Output Inspector to inspect images, we'd suggest to add another viewer to the network. Search for the module `View2D` and add it to your workspace. Most modules have different connector options. Data is generally transmitted from the top side of a module to another modules bottom side.
+Instead of using the Output Inspector to inspect images, we'd suggest to add another viewer to the network. Search for the module `View2D` and add it to your workspace. Most modules have different connector options. Data is generally transmitted from the top side of a module to another module's bottom side.
 
 The module `View2D` has one input connector for voxel images (triangle-shaped) and three other possible input connectors (shaped like half-circles) on the bottom. The half-circle-shaped input connectors will be explained later on. Generally, module outputs can be connected to module inputs with the same symbol and thus transmit information and data between those modules.
 
-![2D Viewer](images/tutorials/basicmechanics/BM_05.png "2D Viewer")
+![2D viewer](images/tutorials/basicmechanics/BM_05.png "2D viewer")
 
 You can now display the loaded image in the newly added viewer module by connecting the output of the module `ImageLoad` to the input connector of the module `View2D`. Follow these steps to do so:
 
@@ -91,26 +91,26 @@ You can now display the loaded image in the newly added viewer module by connect
 
 Although the connection is established, no image rendering has started yet. To initialize rendering, open the `View2D` panel by double-clicking {{< mousebutton "left" >}} on the module. Similar to the Output Inspector, you can scroll through the slices and set different levels of contrast. The amount of displayed annotations is altered by pressing {{< keyboard "A" >}} on the keyboard (annotation-mode).
 
-![View2D Panel](images/tutorials/basicmechanics/BM_07.png "View2D Panel")
+![View2D panel](images/tutorials/basicmechanics/BM_07.png "View2D panel")
 
 By dragging the connection away from either the input or the output connector, the connection is interrupted.
 
 Connections between compatible outputs and inputs are established automatically if two modules get close enough to each other.
 
 {{<alert class="info" caption="Extra Infos">}}
-Connecting, Disconnecting, Moving, and Replacing Connections is explained in more detail {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s04.html" "here" >}}
+Connecting, disconnecting, moving, and replacing connections is explained in more detail {{< docuLinks "/Resources/Documentation/Publish/SDK/MeVisLabManual/ch03s04.html" "here" >}}
 {{</alert>}}
 
 [//]: <> (MVL-653)
 
 ### Image Processing {#TutorialImageProcessing}
-An average kernel will be used to smooth the image as our next step will be to actually process our image. Add the `Convolution` module to your workspace and disconnect the `View2D` module from the `ImageLoad` module by clicking {{< mousebutton "left" >}} on the connection and pressing {{< keyboard "DEL" >}}. Now, you can build new connections from the module `ImageLoad` to the module `Convolution` and the `Convolution` module to `View2D`.
+An average kernel will be used to smooth the image as our next step will be to actually process our image. Add the `Convolution` module to your workspace and disconnect the `View2D` module from the `ImageLoad` module by clicking {{< mousebutton "left" >}} on the connection and pressing {{< keyboard "DEL" >}}. Now, you can establish new connections from the module `ImageLoad` to the module `Convolution` and the `Convolution` module to `View2D`.
 
-![Convolution Module](images/tutorials/basicmechanics/BM_08.png "Convolution Module")
+![Convolution module](images/tutorials/basicmechanics/BM_08.png "Convolution module")
 
 Open the panel of the `Convolution` module by double-clicking {{< mousebutton "left" >}} it. The panel allows configuration of the module. You can adjust parameters or select a kernel. We will be using the *3x3 Average Kernel* for now.
 
-![Select a Kernel](images/tutorials/basicmechanics/BM_09.png "Select a Kernel")
+![Select a kernel](images/tutorials/basicmechanics/BM_09.png "Select a kernel")
 
 The module `View2D` is now displaying the smoothed image.
 
@@ -118,7 +118,7 @@ To compare the processed and unprocessed image, click {{< mousebutton "left" >}}
 
 You can also inspect changes between processed (output connector) and unprocessed (input connector) images by adding a second or even third viewer to your network. "Layers" of applied changes can be inspected next to each other using more than one viewer and placing as well as connecting them accordingly. We will be using a second `View2D` module. Notice how the second viewer is numbered for you to be able to distinguish them better. It might be important to know at this point that numerous connections can be established from one output connector but an input connector can only receive one stream of data. Connect the module `ImageLoad` to the second viewer to display the images twice. You can now scroll through the slices of both viewers and inspect the images.
 
-![Multiple Viewers](images/tutorials/basicmechanics/BM_10.png "Multiple Viewers")
+![Multiple viewers](images/tutorials/basicmechanics/BM_10.png "Multiple viewers")
 
 ### Parameter Connection for Synchronization {#TutorialParameterConnection}
 You're now able to scroll through the slices of the image in two separate windows. To examine the effect of the filter even better, we will now synchronize both viewers.
@@ -127,12 +127,12 @@ We already know data connections between module inputs and outputs. Besides modu
 
 In order to practice establishing parameter connections, add the `SyncFloat` module to your workspace.
 
-![SyncFloat Module](images/tutorials/basicmechanics/BM_11.png "SyncFloat Module")
+![SyncFloat module](images/tutorials/basicmechanics/BM_11.png "SyncFloat module")
 
 We will be synchronizing the <field>startSlice</field> fields of our viewers to be able to directly compare the effect our processing module has on the slices:
 Right-click {{< mousebutton "right" >}} the viewer `View2D` to open its context menu and select {{< menuitem "Show Window" "Automatic Panel" >}}.
 
-![Automatic Panel View2D](images/tutorials/basicmechanics/BM_12.png "Automatic Panel View2D")
+![Automatic panel View2D](images/tutorials/basicmechanics/BM_12.png "Automatic panel View2D")
 
 Doing so shows all parameter fields of the module `View2D`.
 
@@ -142,40 +142,40 @@ Now, double-click {{< mousebutton "left" >}} the module `SyncFloat` to open its 
 
 Click {{< mousebutton "left" >}} on the label <field>startSlice</field> in the automatic panel of the module `View2D`, keep the button pressed, and drag the connection to the label <field>Float1</field> in the panel of the module `SyncFloat`.
 
-![Synchronize StartSlice](images/tutorials/basicmechanics/BM_13.png "Synchronize StartSlice")
+![Synchronize startSlice](images/tutorials/basicmechanics/BM_13.png "Synchronize startSlice")
 
-The connection is drawn as a thin gray arrow between both modules with the arrowhead pointing to the module that receives the field value as input. The value of the field <field>startSlice</field> is now transmitted to the field <field>Float1</field>. Changing <field>startSlice</field> automatically changes <field>Float1</field>, but not the other way round.
+The connection is rendered as a thin gray arrow between both modules with the arrowhead pointing to the module that receives the field value as input. The value of the field <field>startSlice</field> is now transmitted to the field <field>Float1</field>. Changing <field>startSlice</field> automatically changes <field>Float1</field>, but not the other way round.
 
-![Parameter Connection StartSlice](images/tutorials/basicmechanics/BM_14.png "Parameter Connection StartSlice")
+![Parameter connection startSlice](images/tutorials/basicmechanics/BM_14.png "Parameter connection startSlice")
 
-We will now establish a connection from the module `SyncFloat` to the second viewer, `Viewer2D1`. In order to do that, open the automatic panel `View2D1`. Draw a connection from the label <field>Float2</field> of the panel of the module `SyncFloat` to the label <field>startSlice</field> in the automatic panel of the module `View2D1`. Lastly, implement a connection between the parameter fields <field>startSlice</field> of both viewers. Draw the connection from `View2D1` to `View2D`.
+We will now establish a connection from the module `SyncFloat` to the second viewer, `Viewer2D1`. In order to do that, open the automatic panel `View2D1`. Establish a connection from the label <field>Float2</field> of the panel of the module `SyncFloat` to the label <field>startSlice</field> in the automatic panel of the module `View2D1`. Lastly, establish a connection between the parameter fields <field>startSlice</field> of both viewers. Establish the connection from `View2D1` to `View2D`.
 
 ![Synchronize both directions](images/tutorials/basicmechanics/BM_15.png "Synchronize both directions")
 
 As a result, scrolling through the slices with the mouse wheel {{< mousebutton "middle" >}} in one of the viewers synchronizes the rendered slice in the second viewer. In this case, you can inspect the differences between smoothed and unsmoothed data on every single slice.
 
-![Your final Network](images/tutorials/basicmechanics/BM_16.png "Your final Network")
+![Your final network](images/tutorials/basicmechanics/BM_16.png "Your final network")
 
 It is also possible to use the predefined module `SynchroView2D` to accomplish a similar result.(`SynchroView2D`'s usage is described in more detail in [this chapter](tutorials/visualization/visualizationexample1/) ).
 
 ### Grouping Modules {#TutorialGroupingModules}
-A contour filter can be created based on our previously created network. To finalize the filter, add the modules `Arithmetic2` and `Morphology` to your workspace and connect the modules as shown below. Double-click {{< mousebutton "left" >}} the module `Arithmetic2` to open its panel. Change the field <field>Function</field> of the module `Arithmetic2` to use the function <field>subtract</field> in the panel of the module. The contour filter is done now. You can inspect each processing step using the Output Inspector by clicking {{< mousebutton "left" >}} on the input and output connectors of the respective modules. The final results can be displayed using the viewer modules. If necessary, adjust the contrast by pressing the right mouse button and moving the cursor.
+A contour filter can be created based on our previously created network. To finalize the filter, add the modules `Arithmetic2` and `Morphology` to your workspace and connect the modules as shown below. Double-click {{< mousebutton "left" >}} the module `Arithmetic2` to open its panel. Change the field <field>Function</field> of the module `Arithmetic2` to use the function *subtract* in the panel of the module. The contour filter is done now. You can inspect each processing step using the Output Inspector by clicking {{< mousebutton "left" >}} on the input and output connectors of the respective modules. The final results can be displayed using the viewer modules. If necessary, adjust the contrast by pressing the right mouse button and moving the cursor.
 
 ![Grouping modules](images/tutorials/basicmechanics/BM_17.png "Grouping modules")
 
 If you'd like to know more about specific modules, search for help. You can do this by right-clicking {{< mousebutton "right" >}} the module and select  {{< menuitem "Help" >}}, which offers an example network and further information about the selected module in particular.
 
-![Module Help](images/tutorials/basicmechanics/BM_18.png "Module Help")
+![Module help](images/tutorials/basicmechanics/BM_18.png "Module help")
 
-To be able to better distinguish the image processing pipeline, you can encapsulate it in a group: select the three modules, for example, by dragging a selection rectangle around them. Then, right- {{< mousebutton "right" >}} the selection to open the context menu and select {{< menuitem "Add to New Group" >}}.
+To be able to better distinguish the image processing pipeline, you can encapsulate it in a group: select the three modules, for example, by dragging a selection rectangle around them. Then, right-click {{< mousebutton "right" >}} the selection to open the context menu and select {{< menuitem "Add to New Group" >}}.
 
-![Add modules to new group](images/tutorials/basicmechanics/BM_19.png "Add to new group")
+![Add modules to new group](images/tutorials/basicmechanics/BM_19.png "Add modules to new group")
 
 Enter a name for the new group, for example, *Filter*. The new group is created and displayed as a green rectangle. The group allows for quick interactions with all its modules.
 
-![Your Filter Group](images/tutorials/basicmechanics/BM_20.png "Your Filter Group")
+![Your filter group](images/tutorials/basicmechanics/BM_20.png "Your filter group")
 
-Your network got very complex and you lost track? No problem. Let MeVisLab arrange your modules automatically via {{< menuitem "Mein Menu" "Edit" "Auto Arrange Selection" >}} (or via keyboard shortcut {{< keyboard "CTRL" "1" >}}).
+Your network got very complex and you lost track? No problem. Let MeVisLab arrange your modules automatically via {{< menuitem "Main Menu" "Edit" "Auto Arrange Selection" >}} (or via keyboard shortcut {{< keyboard "Ctrl" "1" >}}).
 
 Now, it is time to save your first network. Open the tab {{< menuitem "File" "Save" >}} to save the network in an *.mlab* file.
 
@@ -197,9 +197,9 @@ To condense our filter into one single module, we will now be creating a macro m
 ![Convert to local macro](images/tutorials/basicmechanics/BM_21.png "Convert to local macro")
 ![Your first local macro](images/tutorials/basicmechanics/BM_22.png "Your first local macro")
 
-Right-click {{< mousebutton "right" >}} the macro module and select  {{< menuitem "Show Internal Network" >}} to inspect and change the internal network. You can change the properties of the new macro module by changing the properties in the internal network. You can, for example, click {{< mousebutton "left" >}} the module `Convolution` and change the kernel.
+Right-click {{< mousebutton "right" >}} the macro module and select  {{< menuitem "Show Internal Network" >}} to inspect and change the internal network. You can change the properties of the new macro module by changing the properties in the internal network. You can, for example, double-click {{< mousebutton "left" >}} the module `Convolution` and change the kernel.
 
-![Internal Network of your local macro](images/tutorials/basicmechanics/BM_23.png "Internal Network of your local macro")
+![Internal network of your local macro](images/tutorials/basicmechanics/BM_23.png "Internal network of your local macro")
 
 {{< youtube "VmK6qx-vKWk">}}
 
@@ -211,7 +211,7 @@ More information on macro modules can be found {{< docuLinks "/Resources/Documen
 [//]: <> (MVL-651)
 
 ## Summary
-* MeVisLab provides predefined modules you can reuse and connect for building more or less complex networks.
+* MeVisLab provides predefined modules that you can reuse and connect for building more or less complex networks.
 * Each module's output can be previewed using the Output Inspector.
 * Each module provides example networks to explain their usage.
 * Parameters of each module can be changed in the Module Inspector or automatic panel of the module.

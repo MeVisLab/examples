@@ -29,7 +29,7 @@ Add the modules `LocalImage` and `OrthoView2D` to your workspace and connect the
 
 The `OrthoView2D` module allows you to select multiple layouts. Select layout *Cube Equal*. The layout shows your image in three orthogonal viewing directions. The top left segment remains empty.
 
-![OrthoView2D Layouts](images/tutorials/image_processing/network_example7_2.png "OrthoView2D Layouts")
+![OrthoView2D layouts](images/tutorials/image_processing/network_example7_2.png "OrthoView2D layouts")
 
 We now want to use a 3D rendering in the top left segment whenever the layout *Cube Equal* is chosen. Add a `View3D` and a `SoViewportRegion` module to your workspace. Connect the `LocalImage` with your `View3D`. The image is rendered in 3D. Hit {{< keyboard "SPACE" >}} on your keyboard to make the hidden output of the `View3D` module visible. Connect it with your `SoViewportRegion` and connect the `SoViewportRegion` with the <field>inInvPreLUT</field> input of the `OrthoView2D`.
 
@@ -51,13 +51,13 @@ Add a `SoCameraInteraction` module between the `View3D` and the `SoViewportRegio
 
 You have now successfully added the `View3D` to the `OrthoView2D`, but there is still a problem remaining: If you change the layout to something different than *LAYOUT_CUBE_EQUAL*, the 3D content remains visible.
 
-We can use a `StringUtils` module to resolve that. Set <field>Operation</field> to *Compare* and draw a parameter connection from the field <field>OrthoView2D.layout</field> to the field <field>StringUtils.string1</field>. The currently selected layout is displayed as <field>String A</field>. Enter *LAYOUT_CUBE_EQUAL* as <field>String B</field>. Now, draw a parameter connection from the field <field>StringUtils.boolResult</field> to the field <field>SoViewportRegion.on</field>.
+We can use a `StringUtils` module to resolve that. Set <field>Operation</field> to *Compare* and establish a parameter connection from the field <field>OrthoView2D.layout</field> to the field <field>StringUtils.string1</field>. The currently selected layout is displayed as <field>String A</field>. Enter *LAYOUT_CUBE_EQUAL* as <field>String B</field>. Now, draw a parameter connection from the field <field>StringUtils.boolResult</field> to the field <field>SoViewportRegion.on</field>.
 
 ![StringUtils](images/tutorials/image_processing/network_example7_7.png "StringUtils")
 
 If the selected layout in `OrthoView2D` now matches the string *LAYOUT_CUBE_EQUAL* (the field <field>boolResult</field> of the `StringUtils` module is *TRUE*), the `SoViewportRegion` is turned *on*. In any other case, the 3D segment is not visible.
 
-![Final Network](images/tutorials/image_processing/network_example7_8.png "Final Network")
+![Final network](images/tutorials/image_processing/network_example7_8.png "Final network")
 
 ## Summary
 * The module `SoViewportRegion` renders a subgraph into a specified viewport region (VPR).

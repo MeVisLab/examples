@@ -23,6 +23,4 @@ MeVisLab provides multiple modules for image processing tasks, such as:
 * Arithmetics
 * Statistics
 
-For details about Image Processing in MeVisLab, see the {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch06.html#FOImageProcessing" "MeVisLab Documentation">}}
-
 In this chapter, you will find some examples for different types of image processing in MeVisLab.

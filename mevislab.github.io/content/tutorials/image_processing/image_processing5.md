@@ -27,9 +27,9 @@ First, we need to develop the network to scroll through the slices. Add a `Local
 
 Add the modules `OrthoReformat3`, `Switch`, `SoView2D`, `View2DExtensions`, and `SoRenderArea` and connect them as seen below.
 
-![Example Network](images/tutorials/image_processing/network_example5.png "Example Network")
+![Example network](images/tutorials/image_processing/network_example5.png "Example network")
 
-In previous tutorials, we already learned that it is possible to show 2D slices in a `SoRenderArea`. For scrolling through the slices, a `View3DExtensions` module is necessary. In this network, we also have a `OrthoReformat3` module. It allows us to transform the input image (by rotating and/or flipping) into the three main views commonly used:
+In previous tutorials, we have already seen that it is possible to show 2D slices in a `SoRenderArea`. For scrolling through the slices, a `View3DExtensions` module is necessary. In this network, we also have a `OrthoReformat3` module. It allows us to transform the input image (by rotating and/or flipping) into the three main views commonly used:
 * Axial
 * Coronal
 * Sagittal
@@ -43,7 +43,7 @@ The `SoRenderArea` now shows the 2D images in a view defined by the `Switch`.
 ### Current 2D Slice in 3D
 We now want to visualize the slice visible in the 2D images as a 3D plane. Add a `SoGVRDrawOnPlane` and a `SoExaminerViewer` to your workspace and connect them. We should also add a `SoBackground` and a `SoLUTEditor`. The viewer remains empty because no source image is selected to display. Add a `SoGVRVolumeRenderer` and connect it to your viewer and the `LocalImage`.
 
-![Example Network](images/tutorials/image_processing/network_example5b.png "Example Network")
+![Network with an additional 3D renderer](images/tutorials/image_processing/network_example5b.png "Network with an additional 3D renderer")
 
 A three-dimensional plane of the image is shown. Adapt the LUT as seen below.
 
@@ -51,9 +51,9 @@ A three-dimensional plane of the image is shown. Adapt the LUT as seen below.
 
 We now have a single slice of the image in 3D, but the slice is static and cannot be changed. In order to use the currently visible slice from the 2D viewer, we need to create a parameter connection from the `SoView2D` position *Slice as plane* to the `SoGVRDrawOnPlane` plane vector.
 
-![SoView2D Position](images/tutorials/image_processing/SoView2D_Position.png "SoView2D Position")
+![SoView2D position](images/tutorials/image_processing/SoView2D_Position.png "SoView2D position")
 
-![SoGVRDrawOnPlane Plane](images/tutorials/image_processing/SoGVRDrawOnPlane_Plane.png "SoGVRDrawOnPlane Plane")
+![SoGVRDrawOnPlane plane](images/tutorials/image_processing/SoGVRDrawOnPlane_Plane.png "SoGVRDrawOnPlane plane")
 
 Now, the plane representation of the visible slice is synchronized to the plane of the 3D view. Scrolling through your 2D slices changes the plane in 3D.
 
@@ -62,7 +62,7 @@ Now, the plane representation of the visible slice is synchronized to the plane 
 ### Current 2D Slice as Clip Plane in 3D
 This slice shall now be used as a clip plane in 3D. In order to achieve this, you need another `SoExaminerViewer` and a `SoClipPlane`. Add them to your workspace and connect them as seen below. You can also use the same `SoLUTEditor` and `SoBackground` for the 3D view. Also use the same `SoGVRVolumeRenderer`; the 3D volume does not change.
 
-![Example Network](images/tutorials/image_processing/network_example5c.png "Example Network")
+![Example network](images/tutorials/image_processing/network_example5c.png "Example network")
 
 Now, your 3D scene shows a three-dimensional volume cut by a plane in the middle. Once again, the clipping is not the same slice as your 2D view shows.
 
@@ -70,11 +70,11 @@ Now, your 3D scene shows a three-dimensional volume cut by a plane in the middle
 
 Again, create a parameter connection from the `SoView2D` position *Slice as plane*, but this time to the `SoClipPlane`. 
 
-![SoClipPlane Plane](images/tutorials/image_processing/SoClipPlane_Plane.png "SoClipPlane Plane")
+![SoClipPlane plane](images/tutorials/image_processing/SoClipPlane_Plane.png "SoClipPlane plane")
 
 If you now open all three viewers and scroll through the slices in 2D, the 3D viewers are both synchronized with the current slice. You can even toggle the view in the `Switch` and the plane is adapted automatically.
 
-![Final 3 views](images/tutorials/image_processing/Final3Views.png "Final 3 views")
+![Final three views](images/tutorials/image_processing/Final3Views.png "Final three views")
 
 ## Summary
 * The module `OrthoReformat3` transforms input images to the three viewing directions: coronal, axial, and sagittal.

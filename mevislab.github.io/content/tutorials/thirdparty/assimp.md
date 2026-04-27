@@ -16,7 +16,7 @@ menu:
 # Asset-Importer-Lib (assimp) {#assimp}
 
 ## Introduction
-[Assimp](http://www.assimp.org "assimp") (Asset-Importer-Lib) is a library to load and process geometric scenes from various 3D data formats.
+[Assimp](https://www.assimp.org "assimp") (Asset-Importer-Lib) is a library to load and process geometric scenes from various 3D data formats.
 
 This chapter provides some examples of how 3D formats can be imported into MeVisLab. In general, you always need a `SoSceneLoader` module. The `SoSceneLoader` allows to load meshes as Open Inventor points/lines/triangles/faces using the Open Asset Import Library.
 

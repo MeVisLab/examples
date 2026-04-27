@@ -22,7 +22,9 @@ menu:
 </div>
 
 ## Introduction
-The MeVis Path Tracer offers a Monte Carlo Path Tracing framework running on CUDA GPUs. It offers photorealistic rendering of volumes and meshes, physically based lightning with area lights and soft shadows and fully integrates into MeVisLab Open Inventor (camera, depth buffer, clipping planes, etc.).
+The **MeVis Path Tracer** offers a Monte Carlo Path Tracing framework running on CUDA GPUs. It offers photorealistic rendering of volumes and meshes, physically based lighting with area lights and soft shadows and fully integrates into MeVisLab Open Inventor (camera, depth buffer, clipping planes, etc.).
+
+<!--more-->
 
 {{<alert class="info" caption="Extra Infos">}}
 CUDA is a parallel computing platform and programming model created by NVIDIA. For further information, see [NVIDIA website](https://blogs.nvidia.com/blog/2012/09/10/what-is-cuda-2/).
@@ -30,7 +32,7 @@ CUDA is a parallel computing platform and programming model created by NVIDIA. F
 
 {{< imagegallery 5 "images/tutorials/visualization/pathtracer" "PathTracer1" "PathTracer2" "PathTracer3" "PathTracer4" "PathTracer5" >}}
 
-The `SoPathTracer` module implements the main renderer (like the `SoGVRVolumeRenderer`). It collects all `SoPathTracer*` extensions (on its left side) in the scene and renders them. Picking is also supported, but it supports currently only the first hit position instead of a full hit profile. It supports an arbitrary number of objects with different orientation and bounding boxes.
+The `SoPathTracer` module implements the main renderer (like the `SoGVRVolumeRenderer`). It collects all `SoPathTracer*` extensions (on its left side) in the scene and renders them. Picking is also supported, but it supports only the first hit position instead of a full hit profile. It supports an arbitrary number of objects with different orientation and bounding boxes.
 
 ## Path Tracing
 Path Tracing allows interactive, photorealistic 3D environments with dynamic light and shadow, reflections, and refractions.
@@ -42,7 +44,7 @@ Monte Carlo path tracing is a technique used to simulate the behavior of light i
 [Ray tracing](https://en.wikipedia.org/wiki/Ray_tracing_(graphics)) is a technique for modelling light transport. It follows all light rays throughout the entire scene. Depending on the scene, this takes a lot of time to fully compute the resulting pixels. In contrast to ray tracing, path tracing only traces the most likely path of the light by using the [Monte Carlo method](https://en.wikipedia.org/wiki/Monte_Carlo_method). Computation is much faster but the results are comparable.
 
 {{<alert class="info" caption="Extra Infos">}}
-For more information about Path Tracing, see the [NVIDIA website](https://blogs.nvidia.com/blog/2022/03/23/what-is-path-tracing/).
+For more information about path tracing, see the [NVIDIA website](https://blogs.nvidia.com/blog/2022/03/23/what-is-path-tracing/).
 {{</alert>}}
 
 ## Modules
@@ -69,7 +71,7 @@ There are various extensions that can be used.
   * Allows to load a 8-bit tag volume
   * The tags are used to select a per-object LUT and/or material
   * A 2D LUT can be provided using `LUTConcat` or `SoLUTEditor2D`
-  * Per-tag materials can be provided by adding multiple materials to the *inMaterial* scene
+  * Per-tag materials can be provided by adding multiple materials to the <field>inMaterial</field>* input
   * Useful to render segmented objects
 * [SoPathTracerVolumeInstance](https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Standard/Documentation/Publish/ModuleReference/SoPathTracerVolumeInstance.html#SoPathTracerVolumeInstance) can be used to render a [SoPathTracerVolume](https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Standard/Documentation/Publish/ModuleReference/SoPathTracerVolume.html#SoPathTracerVolume) with differnt transformation, subvolume, LUT, material, ...
   * Allows to instantiate an existing volume
@@ -84,7 +86,7 @@ There are various extensions that can be used.
   * Allows to render a cut slice through a volume
   * Allows to set an arbitrary plane and works on volumes and instances
   * Has its own LUT and can be opaque or transparent
-* [SoPathTracerIsoSurface](https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Standard/Documentation/Publish/ModuleReference/SoPathTracerIsoSurface.html#SoPathTracerIsoSurface) renders an iso surface (with first hit refinement) on the given base volume.
+* [SoPathTracerIsoSurface](https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Standard/Documentation/Publish/ModuleReference/SoPathTracerIsoSurface.html#SoPathTracerIsoSurface) renders an isosurface (with first hit refinement) on the given base volume.
   * Allows to render an isosurface of a volume
   * Works on volumes and instances
   * Supports opaque and transparent surfaces
@@ -93,7 +95,7 @@ There are various extensions that can be used.
   * Arbitrary material can be specified
 
 ### Geometry
-* [SoPathTracerMesh](https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Standard/Documentation/Publish/ModuleReference/SoPathTracerMesh.html#SoPathTracerMesh) scans the input scene for triangle meshes and ray traces them.
+* [SoPathTracerMesh](https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Standard/Documentation/Publish/ModuleReference/SoPathTracerMesh.html#SoPathTracerMesh) scans the input scene for triangle meshes and renders them using ray tracing.
   * Allows to render arbitrary triangle meshes
   * Scans the input scene for triangle meshes and converts them to a bounding volume hierarchy (BVH)
   * Supports different materials by adding `SoPathTracerMaterials`

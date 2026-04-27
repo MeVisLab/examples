@@ -14,7 +14,7 @@ The module `VoxelizeCSO` is used to create a three-dimensional voxel mask of the
 
 Lastly, the panel of the `View3D` module is used to visualize the voxel mask in 3D.
 
-![Screenshot](examples/data_objects/contours/example3/image.png)
+![Manually created CSOs are automatically interpolated and shown in 2D and in 3D](examples/data_objects/contours/example3/image.png "Manually created CSOs are automatically interpolated and shown in 2D and in 3D")
 
 # Download
 You can download the example network [here](examples/data_objects/contours/example3/ContourExample3.mlab)

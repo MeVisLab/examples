@@ -21,9 +21,9 @@ menu:
 MeVisLab provides the powerful integrated text editor MATE. By default, MATE is used to create/edit files like Python scripts. In this tutorial, we want to show you how to debug Python scripts in MeVisLab. 
 
 ## Prepare Your Network
-We are using a very simple network of predefined modules, but you can also debug your self-written Python scripts. Add a `LocalImage` module to your workspace and connect it to a `DicomTagBrowser` module. The `DicomTagBrowser` module shows a table containing the DICOM tags of your currently opened file.
+We are using a very simple network of predefined modules but you can also debug your self-written Python scripts. Add a `LocalImage` module to your workspace and connect it to a `DicomTagBrowser` module. The `DicomTagBrowser` module shows a table containing the DICOM tags of your currently opened file.
 
-![Example Network](images/tutorials/basicmechanics/Debug1.png "Example Network")
+![Example network](images/tutorials/basicmechanics/Debug1.png "Example network")
 
 ## Open Python Script in MATE
 To debug our module, we need to open the Python file. Right-click {{< mousebutton "right" >}} the module `DicomTagBrowser` and select {{< menuitem "Related Files (3)" "DicomTagBrowser.py" >}}. The file is opened in MATE.
@@ -55,19 +55,19 @@ First we need to enable debugging. In the MATE main menu, select {{< menuitem "D
 ### Debugging Panel
 The *Debugging* panel allows you to step through your code.
 
-![Debugging Panel](images/tutorials/basicmechanics/Debug3.png "Debugging Panel")
+![Debugging panel](images/tutorials/basicmechanics/Debug3.png "Debugging panel")
 
 ### Stack Frames Panel
 The *Stack Frames* panel shows your current stack trace while debugging.
 
-![Stack Frames](images/tutorials/basicmechanics/Debug4.png "Stack Frames")
+![Stack frames](images/tutorials/basicmechanics/Debug4.png "Stack frames")
 
 ### Variables/Watches/Evaluate Expression Panel
 Another panel *Variables/Watches/Evaluate Expression* appears, where you can see all current local and global variables. Add your own variables to watch their current value and evaluate your own expressions.
 
-![Variables/Watches/Evaluate Expression](images/tutorials/basicmechanics/Debug5.png "Variables/Watches/Evaluate Expression")
+![Variables/Watches/Evaluate Expression panel](images/tutorials/basicmechanics/Debug5.png "Variables/Watches/Evaluate Expression panel")
 
-Scroll to line 180 and left click {{< mousebutton "left" >}} on the line number.
+Scroll to line 180 and left-click {{< mousebutton "left" >}} on the line number.
 
 {{< highlight >}}
 ```Python
@@ -80,13 +80,13 @@ Scroll to line 180 and left click {{< mousebutton "left" >}} on the line number.
 
 You can see a red dot marking a break point for debugging. Whenever this line of code is executed, execution will stop here and you can evaluate your variables. This line will be reached whenever you right-click {{< mousebutton "right" >}} on the list in the `DicomTagBrowser` module and select {{< menuitem "Copy Tag Name" >}}.
 
-Go back to MeVisLab and right click {{< mousebutton "right" >}} on any DICOM tag in the `DicomTagBrowser` module. Select {{< menuitem "Copy Tag Name" >}}.
+Go back to MeVisLab and right-click {{< mousebutton "right" >}} on any DICOM tag in the `DicomTagBrowser` module. Select {{< menuitem "Copy Tag Name" >}}.
 
-![Copy Tag Name](images/tutorials/basicmechanics/Debug6.png "Copy Tag Name")
+![Copy tag name](images/tutorials/basicmechanics/Debug6.png "Copy tag name")
 
 MATE opens automatically and you can see an additional yellow arrow indicating the line about to be executed next.
 
-![MATE Debugger](images/tutorials/basicmechanics/Debug7.png "MATE Debugger")
+![MATE debugger](images/tutorials/basicmechanics/Debug7.png "MATE debugger")
 
 You can now use the controls of the *Debugging* panels to step through your code or just continue execution of your code. Whenever your execution is stopped, you can use the *Stack Frames* and the *Variables/Watches/Evaluate Expression* panel to see the current value of all or just watched variables.
 
@@ -112,14 +112,14 @@ The *Variables* panel now shows all currently available local and global variabl
 ![Variables/Watches panel](images/tutorials/basicmechanics/Debug7a.png "Variables/Watches panel")
 
 ## Conditions for Breakpoints
-You can also define conditions for your breakpoints. Remove breakpoint in line 180 and set a new one in line 181. In the case you only want to stop the execution of your script if a specific condition is met, right click {{< mousebutton "right" >}} on your breakpoint and select {{< menuitem "Set Condition for Breakpoint" >}}. A dialog opens where you can define your condition. Enter **item.text(1) == 'SOPClassUID'** as condition.
+You can also define conditions for your breakpoints. Remove breakpoint in line 180 and set a new one in line 181. In the case you only want to stop the execution of your script if a specific condition is met, right-click {{< mousebutton "right" >}} on your breakpoint and select {{< menuitem "Set Condition for Breakpoint" >}}. A dialog opens where you can define your condition. Enter **item.text(1) == 'SOPClassUID'** as condition.
 
-![Conditions for Breakpoints](images/tutorials/basicmechanics/Debug8.png "Conditions for Breakpoints")
+![Conditions for breakpoints](images/tutorials/basicmechanics/Debug8.png "Conditions for breakpoints")
 
 Now, the code execution is only stopped if you copy the tag name *SOPClassUID*. In the case another line is copied, the execution does not stop and just continues.
 
 ## Evaluate Expression
-The *Evaluate Expression* tab allows you to modify variables during execution. In our example you can set the result **item.text(1)** to something like **item.setText(1, "Hello")**. If you now step to the next line via {{< keyboard "F10" >}}, your watched value shows *"Hello"* instead of *"SOPClassUID"*.
+The *Evaluate Expression* tab allows you to modify variables during execution. In our example, you can set the result <inlineCode>item.text(1)</inlineCode> to something like <inlineCode>item.setText(1, "Hello")</inlineCode>. If you now step to the next line via {{< keyboard "F10" >}}, your watched value shows *"Hello"* instead of *"SOPClassUID"*.
 
 {{< imagegallery 2 "images/tutorials/basicmechanics" "Debug9" "Debug9a" >}}
 

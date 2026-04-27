@@ -33,7 +33,7 @@ An easy way to display data and images in 2D and 3D is by using them modules `Vi
 
 2. Change the contrast of the image by clicking the right mouse button {{< mousebutton "right" >}} and moving the mouse.
 
-3. Zoom in and out by pressing {{< keyboard "CTRL" >}} and middle mouse button {{< mousebutton "middle" >}}.
+3. Zoom in and out by pressing {{< keyboard "Ctrl" >}} and middle mouse button {{< mousebutton "middle" >}}.
 
 4. Toggle between multiple timepoints (if available) via {{< keyboard "ArrowLeft" >}} and {{< keyboard "ArrowRight" >}}.
 
@@ -55,7 +55,3 @@ The `View2DExtensions` module provides additional ways to interact with an image
 5. More features, like recording movies, can be found on the help page.
 
 6. Toggle between multiple timepoints (if available) via {{< keyboard "ArrowLeft" >}} and {{< keyboard "ArrowRight" >}}.
-
-{{<alert class="info" caption="Info">}}
-More information on Image Processing in MeVisLab can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/GettingStarted/ch12.html" "here" >}}
-{{</alert>}}

@@ -18,11 +18,11 @@ menu:
 {{< youtube "WaD6zuvVNek" >}}
 
 ## Introduction
-In the previous example you learned how to use the module `SoView2DOverlay` together with a `View2D`. MeVisLab provides a whole family of `SoView2D*` modules (`SoView2DOverlay`, `SoView2DRectangle`, `SoView2DGrid`, ...). These modules are derived from `SoView2DExtension`, which extends the `SoView2D` with specialized interaction and rendering. `SoView2D` itself renders a slice or a slab of a voxel image as a 2D image on the screen.
+In the previous example you learned how to use the module `SoView2DOverlay` together with a `View2D`. MeVisLab provides a whole family of *SoView2D* modules (`SoView2DOverlay`, `SoView2DRectangle`, `SoView2DGrid`, ...). These modules are derived from `SoView2DExtension`, which extends the `SoView2D` with specialized interaction and rendering. `SoView2D` itself renders a slice or a slab of a voxel image as a 2D image on the screen.
 
 {{<alert class="info" caption="Extra Infos">}}
 
-More information about the SoView2D family can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/ToolBoxReference/SoView2DDocPage.html" "here" >}} and in the {{< docuLinks "/Resources/Documentation/Publish/SDK/ToolBoxReference/classSoView2D.html" "SoView2D Reference" >}}.
+More information about the *SoView2D* family can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/ToolBoxReference/SoView2DDocPage.html" "here" >}} and in the {{< docuLinks "/Resources/Documentation/Publish/SDK/ToolBoxReference/classSoView2D.html" "SoView2D Reference" >}}.
 
 {{</alert>}}
 
@@ -31,7 +31,7 @@ More information about the SoView2D family can be found {{< docuLinks "/Resource
 ## Steps to Do
 
 ### Develop Your Network
-We will start the example by creating an overlay again. Add the following modules and connect them as shown. Select a *Threshold* and a *Comparison Operator* for the module `Threshold` as in the previous example. The module `SoView2D` converts the image into a scene object. The image as well as the overlay is rendered and displayed by the module `SoRenderArea`.
+We will start the example by creating an overlay again. Add the following modules and connect them as shown. Select a <field>Threshold</field> and a <field>Comparison</field> operator for the module `Threshold` as in the previous example. The module `SoView2D` converts the image slice(s) into a texture. The image as well as the overlay is rendered and displayed by the module `SoRenderArea`.
 
 ![SoRenderArea](images/tutorials/visualization/V4_01.png "SoRenderArea")
 
@@ -48,13 +48,13 @@ With the help of the module `SoRenderArea` you can record screenshots and movies
 ### Create Screenshots and Movies
 If you now select your favorite slice of the bone in the viewer `SoRenderArea` and press {{< keyboard "F11" >}}, a screenshot is taken and displayed in the Screenshot Gallery. For recording a movie, press {{< keyboard "F9" >}} to start the movie and {{< keyboard "F10" >}} to stop recording. You can find the movie in the Screenshot Gallery.
 
-![Record Movies and Snapshots](images/tutorials/visualization/V4_05.png "Record Movies and Snapshots")
+![Record movies and snapshots](images/tutorials/visualization/V4_05.png "Record movies and snapshots")
 
 ## Exercises
 1. Create movies of a 3D scene.
 
 ## Summary
-* Modules of the `SoView2D` family create or interact with scene objects and are based on the module `SoView2D`, which can convert a voxel image into a scene object.
+* Modules of the *SoView2D* family create or interact with scene objects and are based on the module `SoView2D`, which can convert voxel image slice(s) into a texture.
 * The `SoRenderArea` module provides functionalities for screenshots and movie generation.
 
 {{< networkfile "examples/visualization/example4/VisualizationExample4.mlab" >}}

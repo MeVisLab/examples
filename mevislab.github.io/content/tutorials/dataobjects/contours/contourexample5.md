@@ -27,18 +27,17 @@ Add the following modules to your workspace and connect them as shown.
 Load the example image *Bone.tiff*.
 
 ### Automatic Creation of CSOs Based on the Isovalue
-Now, open the panel of `CSOIsoGenerator` to set the *Iso Value* to 1200. If you press *Update* in
+Now, open the panel of `CSOIsoGenerator` to set the <field>Iso Value</field> to *1200*. If you press <field>Update</field> in
 the panel, you can see the creation of CSOs on each image slice when opening
 the module `View2D`. In addition to that, the number of CSOs is displayed in the `CSOManager`. The module
-`CSOIsoGenerator` generates isocontours for each slice at a fixed isovalue. This means that closed CSOs are formed based on the detection of the
-voxel value of 1200 on every slice.
+`CSOIsoGenerator` generates isocontours for each slice at a fixed isovalue. This means that closed CSOs are formed based on the detection of the voxel value of *1200* on every slice.
 
-![Data Objects Contours Example 5](images/tutorials/dataobjects/contours/DO5_02.png "Data Objects Contours Example 5")
+![Automatically generated isocontours](images/tutorials/dataobjects/contours/DO5_02.png "Automatically generated isocontours")
 
 ### Ghosting
 Now, we like to make CSOs of previous and subsequent slices visible (ghosting). In
 order to do that, open the panel of `SoCSOVisualizationSettings` and
-open the tab *Misc*. Increase the parameter `Ghosting depth in voxel`,
+open the tab *Misc*. Increase the parameter <field>Ghosting Depth In Voxel</field>,
 which shows you the number of slices above and below the current slice in
 which CSOs are also seen in the viewer. The result can be seen in the
 viewer.
@@ -51,7 +50,7 @@ add the modules `SoCSO3DRenderer` and `SoExaminerViewer` to your network
 and connect them as shown. In the viewer `SoExaminerViewer`, you can see
 all CSOs together. In this case all scanned bones can be seen.
 
-![CSOs in 3D View](images/tutorials/dataobjects/contours/DO5_05.png "CSOs in 3D View")
+![CSOs in a 3D viewer](images/tutorials/dataobjects/contours/DO5_05.png "CSOs in a 3D viewer")
 
 ## Summary
 * `CSOIsoGenerator` enables automatic CSO generation based on an isovalue.
@@ -60,3 +59,4 @@ all CSOs together. In this case all scanned bones can be seen.
 {{< networkfile "examples/data_objects/contours/example5/ContourExample5.mlab" >}}
 
  [//]: <> (MVL-682)
+ 

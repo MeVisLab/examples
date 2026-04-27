@@ -56,8 +56,8 @@ After saving, you should be able to reproduce results like these:
 You cannot zoom into 3D plots on a Matplotlib canvas. Try changing the viewing angle instead.
 {{</alert>}}
 
-![Single Slice 3D](images/tutorials/thirdparty/Matplotlib27.PNG)
-![Single Slice 3D](images/tutorials/thirdparty/Matplotlib29.PNG)
+![Show a single slice in 3D](images/tutorials/thirdparty/Matplotlib27.PNG "Show a single slice in 3D")
+![Compare two slices in 3D](images/tutorials/thirdparty/Matplotlib29.PNG "Compare two slices in 3D")
 
 You can download the *.py* file below if you want.
 {{< networkfile "/tutorials/thirdparty/matplotlib/BaseNetwork3D.py" >}}

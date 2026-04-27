@@ -12,9 +12,9 @@ A new macro module `IsoCSOs` is created providing two viewers in its internal ne
 
 To showcase how Python functions can be implemented in MeVisLab and called from within a module, additional buttons to browse directories and create contours via the `CSOIsoGenerator` are added. Lastly, a field listener is implemented that reacts to field changes by colorizing contours when the user hovers over them with the mouse. 
 
-![Screenshot](examples/basic_mechanisms/macro_modules_and_module_interaction/example2/image2.png)
+![Example network](examples/basic_mechanisms/macro_modules_and_module_interaction/example2/image2.png "Example network")
 
-![Screenshot](examples/basic_mechanisms/macro_modules_and_module_interaction/example2/image.png)
+![Coloring a contour with Python](examples/basic_mechanisms/macro_modules_and_module_interaction/example2/image.png "Coloring a contour with Python")
 
 # Download
 The files need to be added to a package. You can download the example network [here](examples/basic_mechanisms/macro_modules_and_module_interaction/example2/ScriptingExample2.zip)

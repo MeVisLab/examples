@@ -26,11 +26,11 @@ As *MONAI* requires *PyTorch*, install it by using the `PythonPip` module as des
 #### Install MONAI
 After installing *torch* and *torchvision*, we install *MONAI*.
 
-For installing *MONAI* enter \"*monai*\" into the Command textbox and press *Install*.
+For installing *MONAI*, enter \"*monai*\" into the <field>Command</field> textbox and press <field>Install</field>.
 
 ![Install MONAI](images/tutorials/thirdparty/monai_example1_1.png "Install MONAI")
 
-After clicking *Install*, the pip console output opens and you can follow the process of the installation.
+After clicking <field>Install</field>, the pip console output opens and you can follow the process of the installation.
 
 {{<alert class="info" caption="Attention">}}
 If you are behind a proxy server, you may have to set the **HTTP_PROXY** and **HTTPS_PROXY** environment variables to the hostname and port of your proxy. These are used by pip when accessing the internet.

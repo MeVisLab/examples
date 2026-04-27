@@ -18,7 +18,7 @@ menu:
 {{< youtube "Ye5lOHDWcRo" >}}
 
 ## Introduction
-In this example, we implement some image or object interactions. We will create a 3D scene, in which we display a cube and change its size using the mouse. We also get to know another viewer, the module `SoExaminerViewer`. This viewer is important. It enables the rendering of Open Inventor scenes and allows interactions with the Open Inventor scenes.
+In this example, we implement some image or object interactions. We will create a 3D scene in which we display a cube and change its size using the mouse. We also get to know another viewer, the module `SoExaminerViewer`. This viewer is important: It enables the rendering of Open Inventor scenes and allows interactions with the Open Inventor scenes.
 
 ## Steps to Do
 
@@ -31,7 +31,7 @@ Additional information about the `SoMouseGrabber` can be found here: {{< docuLin
 
 [//]: <> (MVL-653)
 
-![SoMouseGrabber](images/tutorials/openinventor/V5_01.png "SoMouseGrabber")
+![Network with a SoMouseGrabber](images/tutorials/openinventor/V5_01.png "Network with a SoMouseGrabber")
 ### Configure Mouse Interactions
 Now, open the panels of the module `SoMouseGrabber` and the module `SoExaminerViewer`, which displays a cube. In the viewer, press the right button of your mouse {{< mousebutton "right" >}} and move the mouse around. This action can be seen in the panel of the module SoMouseGrabber.
 
@@ -39,23 +39,23 @@ Now, open the panels of the module `SoMouseGrabber` and the module `SoExaminerVi
 Make sure to configure `SoMouseGrabber` fields as seen below.
 {{</alert>}}
 
-![SoMouseGrabber](images/tutorials/openinventor/V5_02.png "SoMouseGrabber")
+![Network with a SoMouseGrabber and panels](images/tutorials/openinventor/V5_02.png "Network with a SoMouseGrabber and panels")
 
 **You can see:**
 1. <field>Button 3</field>, the right mouse button {{< mousebutton "right" >}}, is tagged as being pressed
 2. Changes of the mouse coordinates are displayed in the box *Output*
 
-![Mouse Interactions](images/tutorials/openinventor/V5_03.png "Mouse Interactions")
+![Mouse interactions](images/tutorials/openinventor/V5_03.png "Mouse interactions")
 
 ### Resize Cube via Mouse Interactions
-We like to use the detected mouse movements to change the size of our cube. In order to that, open the panel of `SoCube`. Build parameter connections from the mouse coordinates to the width and depth of the cube.
+We like to use the detected mouse movements to change the size of our cube. In order to that, open the panel of `SoCube`. Establish parameter connections from the mouse coordinates to the width and depth of the cube.
 
-![Change Cube Size With Mouse Events](images/tutorials/openinventor/V5_04.png "Change Cube Size With Mouse Events")
+![Change cube size with mouse events](images/tutorials/openinventor/V5_04.png "Change cube size with mouse events")
 
 If you now press the right mouse button {{< mousebutton "right" >}} in the viewer and move the mouse around, the size of the cube changes.
 
 ## Exercises
-1. Change location of the cube via Mouse Interactions by using the Module `SoTransform`.
+1. Change location of the cube via Mouse Interactions by using the module `SoTransform`.
 1. Add more objects to the scene and interact with them.
 
 ## Summary

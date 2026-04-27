@@ -24,7 +24,7 @@ In this example, we are using the module `CSOListContainer` instead of the `CSOM
 
 ![CSOListContainer](images/tutorials/dataobjects/contours/Example_7_2.png "CSOListContainer")
 
-We will create multiple CSOs by using the `SoCSOEllipseEditor` and dynamically add these CSOs to different groups via Python scripting depending on their size. CSOs larger than a configurable threshold will be drawn in red, small CSOs will be drawn in green. The colors will also be adapted if we manually resize the contours.
+We will create multiple CSOs by using the `SoCSOEllipseEditor` and dynamically add these CSOs to different groups via Python scripting depending on their area. CSOs larger than a configurable threshold will be drawn in red, smaller CSOs will be drawn in green. The colors will also be adapted if we manually resize the contours.
 
 ## Steps to Do
 
@@ -33,20 +33,20 @@ Add a `LocalImage` and a `View2D` module to your workspace and connect them as s
 
 Add a `SoCSOEllipseEditor` and a `CSOListContainer` to the `SoView2DCSOExtensibleEditor`
 
-![Initial Network](images/tutorials/dataobjects/contours/Example_7_3.png "Initial Network")
+![Initial network](images/tutorials/dataobjects/contours/Example_7_3.png "Initial network")
 
 You are now able to draw CSOs.
 
 Create a separate directory for this tutorial and save your network in this empty directory. This makes the final structure easier to read.
 
 ### Create a Local Macro Module
-Select the module `CSOListContainer` and open menu {{<menuitem "File" "Create Local Macro" >}}. Enter some details about your new local macro module and click *Finish*. Leave the already defined output as is.
+Select the module `CSOListContainer` and open menu {{<menuitem "File" "Create Local Macro" >}}. Enter some details about your new local macro module and click <field>Finish</field>. Leave the already defined output as is.
 
-![Create Local Macro](images/tutorials/dataobjects/contours/Example_7_4.png "Create Local Macro")
+![Create a local macro](images/tutorials/dataobjects/contours/Example_7_4.png "Create a local macro")
 
-The appearance of the `CSOListContainer` module changes, because it is a macro module named `csoList` now.
+The appearance of the `CSOListContainer` module changes, because it is a macro module named *csoList* now.
 
-![Network with new local macro](images/tutorials/dataobjects/contours/Example_7_5.png "Network with new local macro")
+![Network with the new local macro](images/tutorials/dataobjects/contours/Example_7_5.png "Network with the new local macro")
 
 The behavior of your network does not change. You can still draw the same CSOs and they are still managed by the `CSOListContainer` module. The reason why we created a local macro with a single module inside is that we want to add Python scripting to the module. Python scripts can only be added to macro modules.
 
@@ -54,7 +54,7 @@ Open the context menu of your `csoList` module {{< mousebutton "right" >}} and s
 
 The MeVisLab text editor MATE opens, showing your *.script* file. You can see the output of your module as *CSOListContainer.outCSOList*. We want to define a threshold for the color of our CSOs. For this, add another field to the *Parameters* section of your script file named <field>areaThreshold</field>. Define the <attribute>type</attribute> as *Float* and <attribute>value</attribute> as *2000.0*.
 
-In order to call Python functions, we also need a Python file. Add a *Commands* section and define the *source* of the Python file as *$(LOCAL)/csoList.py*. Also add an *initCommand* as *initCSOList*. The initCommand defines the Python function that is called whenever the module is added to the workspace or reloaded.
+In order to call Python functions, we also need a Python file. Add a *Commands* section and define the *source* of the Python file as *$(LOCAL)/csoList.py*. Also add an <inlineCode>initCommand</inlineCode> as *initCSOList*. The <inlineCode>initCommand</inlineCode> defines the Python function that is called whenever the module is added to the workspace or reloaded.
 
 {{< highlight filename="csoList.script" >}}
 ```Stan
@@ -77,14 +77,14 @@ Commands {
 ```
 {{</highlight>}}
 
-Right-click {{< mousebutton "right" >}} on the *initCSOList* command and select {{< menuitem "Create Python Function initCSOList" >}}. The Python file and the function are generated automatically.
+Right-click {{< mousebutton "right" >}} on the <inlineCode>initCSOList</inlineCode> command and select {{< menuitem "Create Python Function 'initCSOList'" >}}. The Python file and the function are generated automatically.
 
-Back in MeVisLab, the new field <field>areaThreshold</field> can be seen in Module Inspector when selecting your module. The next step is to write the Python function *initCSOList*.
+Back in MeVisLab, the new field <field>areaThreshold</field> can be seen in Module Inspector when selecting your module. The next step is to write the Python function <inlineCode>initCSOList</inlineCode>.
 
 ### Write Python Script
 Whenever the local macro module is added to the workspace or reloaded, new CSOLists shall be created and we need a possibility to update the lists whenever a new CSO has been created or existing contours changed.
 
-Define a function *setupCSOList*.
+Define a function <inlineCode>setupCSOList</inlineCode>.
 
 {{< highlight filename="csoList.py" >}}
 ```Python
@@ -107,11 +107,11 @@ def _getCSOList():
 
 The function gets the current CSOList from the output field of the `CSOListContainer`. Initially, it should be empty. If not, we want to start with an empty list; therefore, we remove all existing CSOs.
 
-We also create two new CSO lists: one list for small contours, one list for larger contours, depending on the defined <field>areaThreshold</field> from the module's fields.
+We also create two new CSOGroups: one list for small contours, one list for larger contours, depending on the defined <field>areaThreshold</field> of the module.
 
 Additionally, we also want to define different colors for the CSOs in the lists. Small contours shall be drawn in green, large contours shall be drawn in red.
 
-In order to listen for changes on the contours, we need to register for notifications. Create a new function *registerForNotification*.
+In order to listen for changes on the contours, we need to register for notifications. Create a new function <inlineCode>registerForNotification</inlineCode>.
 
 {{< highlight filename="csoList.py" >}}
 ```Python
@@ -134,13 +134,13 @@ def _getAreaThreshold():
 ```
 {{</highlight>}}
 
-The function gets all currently existing CSOs from the `CSOListContainer`. Then, we register for notifications on this list. Whenever the notification *NOTIFICATION_CSO_FINISHED* is sent in the current context, we call the function *csoFinished*.
+The function gets all currently existing CSOs from the `CSOListContainer`. Then, we register for notifications on this list. Whenever the notification *NOTIFICATION_CSO_FINISHED* is sent in the current context, we call the function <inlineCode>csoFinished</inlineCode>.
 
-The *csoFinished* function again needs all existing contours. We walk through each CSO in the list and remove it from all groups. As we do not know which CSO has been changed from the notification, we evaluate the area of each CSO and add them to the correct list again.
+The <inlineCode>csoFinished</inlineCode> function again needs all existing contours. We walk through each CSO in the list and remove it from all groups. As we do not know which CSO has been changed from the notification, we evaluate the area of each CSO and add them to the correct list again.
 
-The function *getAreaThreshold* returns the current value of our parameter field <field>areaThreshold</field>.
+The function <inlineCode>_getAreaThreshold</inlineCode> returns the current value of our parameter field <field>areaThreshold</field>.
 
-Now, we can call our functions in the *initCSOList* function and test our module.
+Now, we can call our functions in the <inlineCode>initCSOList</inlineCode> function and test our module.
 
 {{< highlight filename="csoList.py" >}}
 ```Python
@@ -182,12 +182,12 @@ def _getCSOList():
 ```
 {{</highlight>}}
 
-![Final Network](images/tutorials/dataobjects/contours/Example_7_6.png "Final Network")
+![Final network](images/tutorials/dataobjects/contours/Example_7_6.png "Final network")
 
-If you now draw contours, they are automatically colored depending on the size. You can also edit existing contours and the color is adapted.
+If you now draw contours, they are automatically colored depending on their area. You can also edit existing contours and the color is adapted.
 
 ## Summary
-* The module `CSOListContainer` provides a lightweight Python interface to manage contours. 
+* The module `CSOListContainer` provides a lightweight container to manage contours. 
 * It makes sense to encapsulate a single module into a macro module to provide additional functionalities via Python scripting.
 * Notifications can be used to react on events.
 

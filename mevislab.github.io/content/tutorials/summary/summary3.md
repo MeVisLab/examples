@@ -70,9 +70,12 @@ Window {
 ```
 {{</highlight>}}
 
+{{<alert class="info" caption="Info">}}
+We use *Category* as the top-level layouter in the *Window* to give the inner content a small margin. Otherwise, the controls touch the border of the window and look unappealing.{{</alert>}}
+
 You can preview your initial layout in MeVisLab by double-clicking your module {{< mousebutton "left" >}}.
 
-![Initial Window Layout](images/tutorials/summary/Example3_1.png "Initial Window Layout")
+![Initial window layout](images/tutorials/summary/Example3_1.png "Initial window layout")
 
 You can see the four vertical aligned parts as defined in the *.script* file. Now, we are going to add the content of the boxes.
 
@@ -136,10 +139,10 @@ Window {
 
 Again, you can preview your user interface in MeVisLab directly. You can already select a file to open. The image is available at the output of the `LocalImage` module in your internal network but the viewers are missing in our interface.
 
-![Source Box](images/tutorials/summary/Example3_2.png "Source Box")
+![Source box](images/tutorials/summary/Example3_2.png "Source box")
 
 ##### Viewing
-Add the two viewer modules to the *Viewing* section of your *.script* file and define their field as <field>View2D.self</field> and <field>SoExaminerViewer.self</field>. Set <attribute>expandX</attribute> = *Yes* and <attribute>expandY</attribute> = *Yes for both viewing modules. We want them to resize in the case the size of the Window changes.
+Add the two viewer modules to the *Viewing* section of your *.script* file and define their field as <field>View2D.self</field> and <field>SoExaminerViewer.self</field>. Set <attribute>expandX</attribute> = *Yes* and <attribute>expandY</attribute> = *Yes for both viewing modules. We want them to resize in the case the size of the window changes.
 
 Set the 2D viewer's <attribute>type</attribute> to *SoRenderArea* and the 3D viewer's <attribute>type</attribute> to *SoExaminerViewer* and inspect your new user interface in MeVisLab.
 
@@ -165,7 +168,7 @@ Set the 2D viewer's <attribute>type</attribute> to *SoRenderArea* and the 3D vie
 ```
 {{</highlight>}}
 
-![2D and 3D Viewer](images/tutorials/summary/Example3_3.png "2D and 3D Viewer")
+![2D and 3D viewer](images/tutorials/summary/Example3_3.png "2D and 3D viewer")
 
 The images selected in the *Source* section are shown in 2D and 3D. We simply reused the existing fields and viewers from your internal network and are already able to interact with the images. As the `View2D` of your internal network itself provides the possibility to accept markers and starts the `RegionGrowing`, this is also already possible and the segmentations are shown in 2D and 3D.
 
@@ -224,7 +227,7 @@ Setting <attribute>min</attribute> and <attribute>max</attribute> is not necessa
 
 Add the field to the *Settings Box* and set <attribute>step</attribute> = *0.1* and <attribute>slider</attribute> = *Yes*.
 
-For the `RegionGrowing` threshold, add the field <field>thresholdInterval</field> to *Parameters* section and set <attribute>type</attribute> = *Integer*,  <attribute>min</attribute> = *1*,  <attribute>max</attribute> = *100*, and <attribute>internalName</attribute> = <field>RegionGrowing.autoThresholdIntervalSizeInPercent</field>.
+For the `RegionGrowing` threshold, add the field <field>thresholdInterval</field> to the *Parameters* section and set <attribute>type</attribute> = *Integer*, <attribute>min</attribute> = *1*, <attribute>max</attribute> = *100*, and <attribute>internalName</attribute> = <field>RegionGrowing.autoThresholdIntervalSizeInPercent</field>.
 
 {{<alert class="info" caption="Additional Info">}}
 Setting <attribute>min</attribute> and <attribute>max</attribute> is not necessary, it is inherited already.
@@ -232,7 +235,7 @@ Setting <attribute>min</attribute> and <attribute>max</attribute> is not necessa
 
 Add the field to the *Settings* UI, and define <attribute>step</attribute> = *0.1* and <attribute>slider</attribute> = *Yes*.
 
-Define a field <field>isoValueImage</field> in the *Parameters* section and set <field>internalName = IsoSurfaceImage.isoValue</field>,  <attribute>type</attribute> = *Integer*,  <attribute>min</attribute> = *1*, and  <attribute>max</attribute> = *1000*.
+Define a field <field>isoValueImage</field> in the *Parameters* section and set <field>internalName = IsoSurfaceImage.isoValue</field>, <attribute>type</attribute> = *Integer*, <attribute>min</attribute> = *1*, and <attribute>max</attribute> = *1000*.
 
 In the *Settings* section of the UI, set <attribute>step</attribute> = *2* and <attribute>slider</attribute> = *Yes*.
 
@@ -333,7 +336,7 @@ Window {
 
 Your user interface of the macro module should now look similar to this:
 
-![User Interface without Python Scripting](images/tutorials/summary/Example3_4.png "User Interface without Python Scripting")
+![User interface without Python scripting](images/tutorials/summary/Example3_4.png "User interface without Python scripting")
 
 For the next elements, we require Python scripting. Nevertheless, you are already able to use your application and perform the basic functionalities without writing any line of code.
 
@@ -345,13 +348,13 @@ Events can be raised by the user (e.g., by clicking a button) or by the applicat
 #### 3D Visualization Selection
 You will now add a selection possibility for the 3D viewer. This allows you to define the visibility of the 3D objects File, Segmented, or Both.
 
-Add another field to your *Parameters* section. Define the field as <field>selected3DView</field> and set <attribute>type</attribute> = *Enum* and values to *Segmented*, *File* and *Both*.
+Add another field to your *Parameters* section. Define the field as <field>selected3DView</field> and set <attribute>type</attribute> = *Enum* and values to *Segmented*, *File*, and *Both*.
 
 Add a *ComboBox* to your *Settings* and use the field name defined above. Set <attribute>alignX</attribute> = *Left* and <attribute>editable</attribute> = *No* and open the *Window* of the macro module in MeVisLab.
 
-The values of the field can be selected, but nothing happens in our viewers. We need to implement a *FieldListener* in Python that reacts on any value changes of the field <field>selected3DView</field>.
+The values of the field can be selected, but nothing happens in our viewers. We need to implement a *FieldListener* in the *.script* file that reacts on any value changes of the field <field>selected3DView</field>.
 
-Open your script file and go to the *Commands* section. Add a *FieldListener* and reuse the name of our internal field <field>selected3DView</field>. Add a *Command* to the *FieldListener* calling a Python function *viewSelectionChanged*.
+Open your script file and go to the *Commands* section. Add a *FieldListener* and reuse the name of our internal field <field>selected3DView</field>. Add a *Command* to the *FieldListener* calling a Python function <inlineCode>viewSelectionChanged</inlineCode>.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -365,7 +368,7 @@ Commands {
 ```
 {{</highlight>}}
 
-Right-click {{< mousebutton "right" >}} the command select {{< menuitem "Create Python Function 'viewSelectionChanged'" >}}. MATE automatically opens the Python file of your macro module and creates a function *viewSelectionChanged*.
+Right-click {{< mousebutton "right" >}} the command select {{< menuitem "Create Python Function 'viewSelectionChanged'" >}}. MATE automatically opens the Python file of your macro module and creates a function <inlineCode>viewSelectionChanged</inlineCode>.
 
 {{< highlight filename="<MACRO_NAME>.py" >}}
 ```Python
@@ -386,7 +389,7 @@ The function sets the `SoSwitch` to the child value depending on the selected fi
 #### Setting the Marker
 The marker for the `RegionGrowing` is defined by the clicked position as Vector3. Add another field <field>markerPosition</field> to the *Parameters* section and define <attribute>type</attribute> = *Vector3*.
 
-Then, add a trigger field <field>applyMarker</field> to your *Parameters* section. Set <attribute>type</attribute>  = *Trigger* and <attribute>title</attribute> = *Add*.
+Then, add a trigger field <field>applyMarker</field> to your *Parameters* section. Set <attribute>type</attribute> = *Trigger* and <attribute>title</attribute> = *Add*.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -443,13 +446,13 @@ def applyPosition():
 Whenever the field <field>markerPosition</field> changes its value, the value is automatically applied to the <field>SoView2DMarkerEditor.newPosXYZ</field>. Clicking <field>SoView2DMarkerEditor.add</field> adds the new position to the `SoView2DMarkerEditor` and the region growing starts.
 
 {{<alert class="info" caption="Info">}}
-The *Field* <field>SoView2DMarkerEditor.useInsertTemplate</field> needs to be set to *True* in order to allow adding markers via Python.
+The field <field>SoView2DMarkerEditor.useInsertTemplate</field> needs to be set to *True* in order to allow adding markers via Python.
 {{</alert>}}
 
 #### Reset
 Add a new field <field>resetApplication</field> to the *Parameters* section and set <attribute>type</attribute> = *Trigger* and <attribute>title</attribute> = *Reset*.
 
-Add another *FieldListener* to your *Commands* and define <attribute>command</attribute> = *resetApplication*.
+Add another *FieldListener* to your *Commands* section and define <attribute>command</attribute> = *resetApplication*.
 
 Add the field to your *Source* region.
 
@@ -486,7 +489,7 @@ What shall happen when we reset the application?
 * The loaded image shall be unloaded, the viewer shall be empty
 * The marker shall be reset if available
 
-Add the Python function *resetApplication* and implement the following:
+Add the Python function <inlineCode>resetApplication</inlineCode> and implement the following:
 {{< highlight filename="<MACRO_NAME>.py" >}}
 ```Python
 from mevis import *
@@ -498,7 +501,7 @@ def resetApplication():
 ```
 {{</highlight>}}
 
-You can also reset the application to initial state by adding a *initCommand* to your *Window*. Call the *resetApplication* function here, too, and whenever the window is opened, the application is reset to its initial state.
+You can also reset the application to initial state by adding a *initCommand* to your *Window*. Call the <inlineCode>resetApplication</inlineCode> function here, too, and whenever the window is opened, the application is reset to its initial state.
 
 {{< highlight filename="<MACRO_NAME>.script" >}}
 ```Stan
@@ -512,7 +515,7 @@ Window {
 ```
 {{</highlight>}}
 
-This can also be used for setting/resetting to default values of the application. For example, update your Python function *resetApplication* the following way:
+This can also be used for setting/resetting to default values of the application. For example, update your Python function <inlineCode>resetApplication</inlineCode> the following way:
 
 {{< highlight filename="<MACRO_NAME>.py" >}}
 ```Python
@@ -530,7 +533,7 @@ def resetApplication():
 {{</highlight>}}
 
 ### Information
-In the end, we want to provide some information about the volume of the segmented area (in ml).
+In the end, we want to provide some information about the volume of the segmented area in milliliter.
 
 Add one more field to your *Parameters* section and reuse the internal network fields <field>CalculateVolume.totalVolume</field>. Set field to <attribute>editable</attribute> = *No*.
 
@@ -538,12 +541,12 @@ Add the field to the *Info* section of your window.
 
 Opening the window of your macro module in MeVisLab now provides all functionalities we wanted to achieve. You can also play around in the window and define some additional boxes or other MDL controls but the basic application prototype is now finished.
 
-![Final Macro module](images/tutorials/summary/Example3_5.png "Final Macro module")
+![Final macro module](images/tutorials/summary/Example3_5.png "Final macro module")
 
 ### MeVisLab GUI Editor
 MATE provides a powerful GUI editor showing a preview of your current user interface and allowing to reorder elements in the UI via drag and drop. In MATE, open {{< menuitem "Extras" "Enable GUI Editor" >}}.
 
-![MeVisLab GUI Editor](images/tutorials/summary/Example3_4b.png "MeVisLab GUI Editor")
+![MeVisLab GUI editor](images/tutorials/summary/Example3_4b.png "MeVisLab GUI editor")
 
 Changing the layout via drag and drop automatically adapts your *.script* file. Save and reload the script and your changes are applied.
 
@@ -723,7 +726,7 @@ def applyPosition():
 
 ## Summary
 * You now added a user interface to your macro module.
-* The window opens automatically on double-click {{< mousebutton "right" >}}.
+* The window opens automatically on double-click {{< mousebutton "left" >}}.
 * Fields defined in the *Parameters* section can be modified in the MeVisLab Module Inspector.
 * Python allows to implement functions executed on events raised by the user or by the application itself.
 

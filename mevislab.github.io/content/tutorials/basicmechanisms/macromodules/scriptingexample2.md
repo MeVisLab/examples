@@ -13,7 +13,7 @@ menu:
     parent: "macro_modules"
 ---
 
-# Example 2.5.2: Module Interactions Via Python Scripting
+# Example 2.5.2: Module Interactions via Python Scripting
 
 {{< youtube "hGq6vA7Ll9Q" >}}
 
@@ -32,7 +32,7 @@ Now, you have to edit:
 3.  Directory Structure: Change to *Self-contained* (this setting is only available in MeVisLab versions before 5.0.0, later versions always use *self-contained*)
 4.  Project: Select your project name
 
-Press *Next* and edit the following:
+Click <field>Next ></field> and edit the following:
 
 1.  Copy existing network: Select the example network
 2.  Check the box: Add Python file
@@ -82,7 +82,7 @@ Window {
 ```
 {{</highlight>}}
 
-![Panel with Tabs and Viewers](images/tutorials/basicmechanics/PanelWithTabsAndViewers.png "Panel with Tabs and Viewers")
+![Panel with tabs and viewers](images/tutorials/basicmechanics/PanelWithTabsAndViewers.png "Panel with tabs and viewers")
 
 ### Edit Viewer Settings in the Panel
 You may want to change the design setting of the right viewer. This is still possible via the internal network of the macro module. Open the internal network either via the context menu or using the middle mouse button {{< mousebutton "middle" >}} and click on the module. After that, open the automatic panel of the module `SoExaminerViewer` via context menu {{< menuitem "Show Windows" "Automatic Panel" >}} and change the field <field>decoration</field> to *False*. Keep in mind, as we did not create CSOs by now, the right viewer stays black.
@@ -92,7 +92,7 @@ You may want to change the design setting of the right viewer. This is still pos
 ![Changed viewer settings](images/tutorials/basicmechanics/ChangedViewerSettings.png "Changed viewer settings")
 
 ### Selection of Images
-Next, we like to add the option to browse through the folders and select the image, we like to create CSOs from. This functionality is already given in the internal network in the module `LocalImage`. We can copy this functionality from `LocalImage` and add this option to the panel above both viewers. But, how should we know, which field name we reference to? To find this out, open the internal network of your macro module. Now you are able to open the panel of the module `LocalImage`. Right-click {{< mousebutton "right" >}} the desired field: In this case, right-click the label <field>Name</field>. Select {{< menuitem "Copy Name" >}}, to copy the internal name of this field.
+Next, we like to add the option to browse through the folders and select the image we like to create CSOs from. This functionality is already given in the internal network in the module `LocalImage`. We can copy this functionality from `LocalImage` and add this option to the panel above both viewers. But how should we know which field name we reference to? To find this out, open the internal network of your macro module. Now, you are able to open the panel of the module `LocalImage`. Right-click {{< mousebutton "right" >}} the desired field: In this case, right-click {{< mousebutton "right" >}} the label <field>Name</field>. Select {{< menuitem "Copy Name" >}} to copy the internal name of this field.
 
 ![Copy the field name](images/tutorials/basicmechanics/GUI_Exp_09.png "Copy the field name")
 
@@ -142,7 +142,7 @@ To create the *Browse\...* button:
 
 To create the Iso Generator Button:
 
-We like to copy the field of the *Update* button from the internal module `IsoCSOGenerator`, but not its layout so:
+We like to copy the field of the *Update* button from the internal module `IsoCSOGenerator` but not its layout, so:
 
 1.  Create a new Field in the interface, called <field>IsoGenerator</field>, which contains the internal field <field>apply</field> from the module `CSOIsoGenerator`.
 2.  Create a new Button in your Window that uses the field <field>IsoGenerator</field>.
@@ -215,20 +215,20 @@ def fileDialog():
 ```
 {{</highlight>}}
 
-![Automatically generate CSOs based on Iso value](images/tutorials/basicmechanics/GUI_Exp_14.png "Automatically generate CSOs based on Iso value")
+![Automatically generate CSOs based on an isovalue](images/tutorials/basicmechanics/GUI_Exp_14.png "Automatically generate CSOs based on an isovalue")
 
 ### Colorizing CSOs
-We like to colorize the CSO we hover over with our mouse in the 2D viewer. Additionally, when clicking a CSO with the left mouse button {{< mousebutton "left" >}}, this CSO shall be colorized in the 3D viewer. This functionality can be implemented via Python scripting (even though MeVisLab has a build-in function to do that). We can do this in the following way:
+We like to colorize the CSO we hover over with our mouse in the 2D viewer. Additionally, when clicking a CSO with the left mouse button {{< mousebutton "left" >}}, this CSO shall be colorized in the 3D viewer. This functionality can be implemented via Python scripting (even though MeVisLab has a built-in function to do that). We can do this in the following way:
 
-1. Enable the View *Scripting Assistant*, which translates actions into Python code. 
+1. Enable the View Scripting Assistant, which translates actions into Python code. 
     
     ![Scripting Assistant](images/tutorials/basicmechanics/GUI_Exp_15.png "Scripting Assistant")
 
-2. Enable a functionality that allows us to notice the ID of the CSO we are currently hovering over with our mouse. For this, open the internal network of our macro module. We will use the module `SoView2DCSOExtensibleEditor`. Open its panel and select the tab *Advanced*. You can check a box to enable <field>Update CSO id under mouse</field>. If you now hover over a CSO, you can see its ID in the panel. We can save the internal network to save this functionality, but we can also solve our problem via scripting. The Scripting Assistant translated our action into code that we can use.
+2. Enable a functionality that allows us to identify the ID of the CSO we are currently hovering over with our mouse. For this, open the internal network of our macro module. We will use the module `SoView2DCSOExtensibleEditor`. Open its panel and select the tab *Advanced*. You can check a box to enable <field>Update CSO id under mouse</field>. If you now hover over a CSO, you can see its ID in the panel. We can save the internal network to save this functionality, but we can also solve our problem via scripting. The Scripting Assistant translated our action into code that we can use.
     
-    ![Enabling CSO id identification](images/tutorials/basicmechanics/GUI_Exp_16.png "Enabling CSO id identification")
+    ![Enabling CSO ID identification](images/tutorials/basicmechanics/GUI_Exp_16.png "Enabling CSO ID identification")
 
-    We like to activate this functionality when opening the panel of our macro module `IsoCSOs`. Thus, we add a starting command to the control Window. We can call this command, for example, *enableFunctionalities*.
+    We like to activate this functionality when opening the panel of our macro module `IsoCSOs`. For this, we add a starting command to the control Window. We can call this command, for example, *enableFunctionalities*.
 
     In the *.script* file:
 
@@ -247,7 +247,7 @@ Window {
 ```
 {{</highlight>}}
 
-In the Python file, we define the function *enableFunctionalities*. We see our action as Python code in the *Scripting Assistant*. Just copy the code into our Python function.
+In the Python file, we define the function *enableFunctionalities*. We see our action as Python code in the Scripting Assistant Just copy the code into our Python function.
 
 {{< highlight filename="IsoCSOs.py" >}}
 ```Python
@@ -271,7 +271,7 @@ Commands {
 ```
 {{</highlight>}}
 
-In the Python file:
+In the *.py* file:
 
 {{< highlight filename="IsoCSOs.py" >}}
 ```Python
@@ -323,6 +323,6 @@ TabViewItem Settings {
 * The control *Button* creates a button executing a Python function when pressed.
 * The tag *WindowActivationCommand* of the control Window triggers Python functions executed when opening the panel.
 * Field listeners can be used to activate Python functions triggered by a change of defined parameter fields.
-* Use the view *Scripting Assistant* to translate actions into Python code.
+* Use the view Scripting Assistant to translate actions into Python code.
 
 {{< networkfile "examples/basic_mechanisms/macro_modules_and_module_interaction/example2/ScriptingExample2.zip" >}}
