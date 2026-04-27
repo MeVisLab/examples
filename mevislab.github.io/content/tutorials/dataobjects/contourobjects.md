@@ -37,7 +37,20 @@ As mentioned, when creating CSOs, you can do this interactively by using an edit
 
 The following images show editors available in MeVisLab for drawing CSOs:
 
-{{< imagegallery 6 "images/tutorials/dataobjects/contours" "SoCSOPointEditor" "SoCSOAngleEditor" "SoCSOArrowEditor" "SoCSODistanceLineEditor" "SoCSODistancePolylineEditor" "SoCSOEllipseEditor" "SoCSORectangleEditor" "SoCSOSplineEditor" "SoCSOPolygonEditor" "SoCSOIsoEditor" "SoCSOLiveWireEditor">}}
+{{< imagegallery 6 
+    "images/tutorials/dataobjects/contours"
+    "SoCSOPointEditor"
+    "SoCSOAngleEditor"
+    "SoCSOArrowEditor"
+    "SoCSODistanceLineEditor"
+    "SoCSODistancePolylineEditor"
+    "SoCSOEllipseEditor"
+    "SoCSORectangleEditor"
+    "SoCSOSplineEditor"
+    "SoCSOPolygonEditor"
+    "SoCSOIsoEditor"
+    "SoCSOLiveWireEditor"
+>}}
 
 {{<alert class="info" caption="Extra Infos">}}
 The `SoCSOIsoEditor` and `SoCSOLiveWireEditor` are special, because they are using an algorithm to detect edges themselves.

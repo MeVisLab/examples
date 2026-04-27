@@ -1,15 +1,28 @@
 <div class="container">
-    {{ $columns := .Get 0 }}
-    {{ $path := .Get 1 }}
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-{{ $columns }}">
-        {{- range (seq 2 (sub (len .Params) 1) ) }}
-            {{- $myArg := $.Get . }}
+  {{ $columns := .Get 0 }}
+  {{ $path := .Get 1 }}
+
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-{{ $columns }}">
+    {{ range $i, $param := .Params }}
+      {{ if ge $i 2 }}
+        {{ $parts := split $param "|" }}
+        {{ $file := index $parts 0 }}
+        {{ $title := "" }}
+        {{ if ge (len $parts) 2 }}
+          {{ $title = index $parts 1 }}
+        {{ else }}
+          {{ $title = $file }}
+        {{ end }}
+
         <div class="col mt-{{ $columns }}">
-            <p class="page-image">
-                <a data-modal="bs-lightbox" href="{{ $path }}/{{ $myArg }}.png" title="{{ $myArg }}"><img src="{{ $path }}/{{ $myArg }}.png" class="img-fluid" alt="{{ $myArg }}"></a>
-                <figcaption class="figure-caption">{{ $myArg }}</figcaption>
-            </p>
+          <p class="page-image">
+            <a data-modal="bs-lightbox" href="{{ $path }}/{{ $file }}.png" title="{{ $title }}">
+              <img src="{{ $path }}/{{ $file }}.png" class="img-fluid" alt="{{ $title }}">
+            </a>
+            <figcaption class="figure-caption">{{ $title }}</figcaption>
+          </p>
         </div>
-        {{- end }}
-    </div>
+      {{ end }}
+    {{ end }}
+  </div>
 </div>

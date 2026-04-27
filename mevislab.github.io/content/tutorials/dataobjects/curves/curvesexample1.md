@@ -77,7 +77,11 @@ Now, update the <field>Curve Table</field>, so that you are using three columns 
 
 You can see two curves. The second and third columns are printed as separate curves. Both appear yellow. After checking <field>Split columns into data sets</field>, you will see one yellow and one red curve.
 
-{{<imagegallery 2 "images/tutorials/dataobjects/curves" "before_split" "after_split">}}
+{{< imagegallery 2 
+  "/images/tutorials/dataobjects/curves"
+  "before_split|Without splitting columns"
+  "after_split|Splitting the columns"
+>}}
 
 If the flag <field>Split columns into data sets</field> is set to *TRUE*, then a table with more than two columns is split into different *CurveData* objects. This gives the user the possibility to assign a different style and title for each series.
 

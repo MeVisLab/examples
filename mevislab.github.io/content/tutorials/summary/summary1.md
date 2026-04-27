@@ -105,7 +105,11 @@ Add a `SoSwitch` module to your network. Connect the switch to both of your `SoW
 
 The default input of the switch is *None*. Your 3D viewer remains black. Using the arrows on the `SoSwitch` allows you to toggle between the segmentation and the image. Input *0* shows the segmented brain, input *1* shows the head. You are now able to toggle between them. A view with both objects is still missing.
 
-{{< imagegallery 2 "images/tutorials/summary" "Example1_Segmentation" "Example1_Image" >}}
+{{< imagegallery 2
+    "images/tutorials/summary"
+    "Example1_Segmentation|Segmentation of the brain"
+    "Example1_Image|Segmentation of the skin"
+>}}
 
 Add a `SoGroup` module and connect both `SoWEMRenderer` modules as input. The output needs to be connected to the right input of the `SoSwitch` module. 
 

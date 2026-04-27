@@ -70,7 +70,11 @@ In order to see all possible parameters of a CSO, add a `CSOInfo` module to your
 
 For labels shown on grayscale images, it makes sense to add a shadow. Open the panel of the `SoCSOVisualizationSettings` module and on tab *Misc* check the option <field>Should render shadow</field>. This increases the readability of your labels.
 
-{{< imagegallery 2 "images/tutorials/dataobjects/contours/" "Ex6_NoShadow" "Ex6_Shadow" >}}
+{{< imagegallery 2 
+    "images/tutorials/dataobjects/contours/"
+    "Ex6_NoShadow|Labels without shadow"
+    "Ex6_Shadow|Labels with shadow"
+>}}
 
 If you want to define your static text as a parameter in multiple labels, you can open the panel of the `CSOLabelRenderer` module and define text as *User Data*. The values can then be used in Python via <inlineCode>userData</inlineCode>.
 

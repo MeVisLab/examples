@@ -11,7 +11,7 @@ Check:                              {{<alert class="check" caption="Check">}}<TE
 Mouse Buttons:                      {{< mousebutton "left" >}}
                                     {{< mousebutton "right" >}}
                                     {{< mousebutton "middle" >}}
-Image Gallery:                      {{< imagegallery <NUMBER OF COLUMNS> "<IMAGE_NAME>" "<IMAGE_NAME>"... }}
+Image Gallery:                      {{< imagegallery <NUMBER OF COLUMNS> <IMAGES_BASE_PATH> "<IMAGE_NAME>|<IMAGE_TITLE>" "<IMAGE_NAME>|<IMAGE_TITLE>"... }}
 MLAB File Download                  {{< networkfile "<RELATIVE_PATH>" >}}
 Syntax Highlighting for Code        {{< highlight filename="<FILENAME>" >}}
                                     ```Python

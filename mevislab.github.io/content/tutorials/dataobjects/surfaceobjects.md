@@ -49,12 +49,22 @@ Between the nodes and alongside the edges, faces are created. The rendering of t
 #### Normals
 Normals display the orthogonal vector either to the faces (face normals) or to the nodes (nodes normals, which are just the average of adjacent face normals). With the help of the module `SoWEMRendererNormals`, these structures can be visualized.  
 ![Network for rendering normals and nodes of a WEM](images/tutorials/dataobjects/surfaces/WEM_01_6.png "Network for rendering normals and nodes of a WEM")
-{{< imagegallery 2 "images/tutorials/dataobjects/surfaces/" "WEMNodeNormals" "WEMFaceNormals">}}
+
+{{< imagegallery 2 
+    "images/tutorials/dataobjects/surfaces/" 
+    "WEMNodeNormals"
+    "WEMFaceNormals"
+>}}
 
 ### WEMs in MeVisLab {#WEMsInMevislab}
 In MeVisLab, WEMs can consist of triangles, quadrilaterals, or other polygons. Most common in MeVisLab are surfaces composed of triangles, as shown in the following example. With the help of the module `WEMLoad`, existing WEMs can be loaded into the network.
 
-{{< imagegallery 3 "images/tutorials/dataobjects/surfaces/" "WEMTriangles" "WEMNetwork" "WEMSurface" >}}
+{{< imagegallery 3 
+    "images/tutorials/dataobjects/surfaces/"
+    "WEMTriangles"
+    "WEMNetwork"
+    "WEMSurface"
+>}}
 
 ## Summary
 * WEMs are polygon meshes, in most cases composed of triangles.

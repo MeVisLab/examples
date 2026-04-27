@@ -35,7 +35,11 @@ Add a `SoCameraInteraction` module and connect it between the `SoGroup` and the 
 
 The `SoCameraInteraction` does not only allow you to change the camera position in your scene but also adds light. The module automatically adds a headlight that you can switch off with a field of the module.
 
-{{< imagegallery 2 "images/tutorials/openinventor" "Headlight_TRUE" "Headlight_FALSE" >}}
+{{< imagegallery 2
+    "images/tutorials/openinventor"
+    "Headlight_TRUE|With headlight"
+    "Headlight_FALSE|Without headlight"
+>}}
 
 The `SoCameraInteraction` can also be extended by a `SoPerspectiveCamera` or a `SoOrthographicCamera`. Add a `SoSwitch` to your `SoGroup` and connect a `SoPerspectiveCamera` and a `SoOrthographicCamera`.
 
@@ -45,7 +49,11 @@ You can now switch between both cameras, but you cannot interact with them in th
 
 Whenever you change the camera in the switch, you need to detect the new camera in the `SoCameraInteraction`.
 
-{{< imagegallery 2 "images/tutorials/openinventor" "SoPerspectiveCamera" "SoOrthographicCamera" >}}
+{{< imagegallery 2
+    "images/tutorials/openinventor"
+    "SoPerspectiveCamera"
+    "SoOrthographicCamera"
+>}}
 
 A `SoPerspectiveCamera` camera defines a perspective projection from a viewpoint.
 
@@ -76,7 +84,11 @@ The difference to the `SoRenderArea` can be seen immediately. You can interact w
 
 The module also allows you to switch between *perspective* and *orthographic* camera by changing the field <field>cameraType</field>.
 
-{{< imagegallery 2 "images/tutorials/openinventor" "SoExaminerViewer_Perspective" "SoExaminerViewer_Orthographic" >}}
+{{< imagegallery 2
+    "images/tutorials/openinventor"
+    "SoExaminerViewer_Perspective|Using a perspective camera"
+    "SoExaminerViewer_Orthographic|Using an orthographic camera"
+>}}
 
 The module also provides UI elements to interact.
 

@@ -119,7 +119,11 @@ The last step is to select the target directory for your application.
 
 After the installer finished the setup, you will find a desktop icon and a start menu entry for your application.
 
-{{< imagegallery 2 "images/tutorials/summary" "Startmenu" "Desktop" >}}
+{{< imagegallery 2
+    "images/tutorials/summary"
+    "Startmenu|Start menu entry"
+    "Desktop|Desktop icon"
+>}}
 
 {{<alert class="warning" caption="Licensing">}}
 MeVisLab executables require an additional **MeVisLab Runtime** license. It makes sure that your resulting application needs to be licensed, too.

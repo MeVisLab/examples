@@ -58,7 +58,11 @@ What happens in your network now?
 4) Both `SoWEMRenderer` (the head on the left side and the subtraction on the right side) are inputs for a `SoSwitch`.
 5) The `SoSwitch` toggles through its inputs and you can show the original WEM of the head or the subtraction.
 
-{{< imagegallery 2 "images/tutorials/image_processing" "SoExaminerViewer_1" "SoExaminerViewer_2" >}}
+{{< imagegallery 2
+    "images/tutorials/image_processing"
+    "SoExaminerViewer_1|Original surface of a head"
+    "SoExaminerViewer_2|Sphere subtracted from the surface"
+>}}
 
 You can now toggle the hole to be shown or not, depending on your setting for the `SoSwitch`.
 

@@ -36,7 +36,11 @@ As a next step, add and connect two modules `WEMSubdivide` to further divide edg
 
 The difference when selecting different maximum edge lengths can be seen in the following images.
 
-{{< imagegallery 2 "images/tutorials/dataobjects/surfaces" "EdgeLength1" "EdgeLength01">}}
+{{< imagegallery 2 
+    "images/tutorials/dataobjects/surfaces"
+    "EdgeLength1|Short edge length"
+    "EdgeLength01|Even shorter edge length"
+>}}
 
 #### Distances Between WEMs are Stored in PVLs
 Now, add the modules `WEMSurfaceDistance` and `WEMInfo` to your workspace and connect them as shown. `WEMSurfaceDistance` calculates the minimum distance between the nodes of both WEM. The distances are stored in the nodes' PVLs as LUT values.

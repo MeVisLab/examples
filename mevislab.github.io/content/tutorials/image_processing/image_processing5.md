@@ -38,7 +38,12 @@ The `Switch` module takes multiple input images and you can toggle between them 
 
 The `SoRenderArea` now shows the 2D images in a view defined by the `Switch`.
 
-{{< imagegallery 3 "images/tutorials/image_processing" "View0" "View1" "View2" >}}
+{{< imagegallery 3
+    "images/tutorials/image_processing"
+    "View0|Sagittal view"
+    "View1|Coronal view"
+    "View2|Transversal (axial) view"
+>}}
 
 ### Current 2D Slice in 3D
 We now want to visualize the slice visible in the 2D images as a 3D plane. Add a `SoGVRDrawOnPlane` and a `SoExaminerViewer` to your workspace and connect them. We should also add a `SoBackground` and a `SoLUTEditor`. The viewer remains empty because no source image is selected to display. Add a `SoGVRVolumeRenderer` and connect it to your viewer and the `LocalImage`.

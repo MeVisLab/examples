@@ -121,7 +121,11 @@ Now, the code execution is only stopped if you copy the tag name *SOPClassUID*. 
 ## Evaluate Expression
 The *Evaluate Expression* tab allows you to modify variables during execution. In our example, you can set the result <inlineCode>item.text(1)</inlineCode> to something like <inlineCode>item.setText(1, "Hello")</inlineCode>. If you now step to the next line via {{< keyboard "F10" >}}, your watched value shows *"Hello"* instead of *"SOPClassUID"*.
 
-{{< imagegallery 2 "images/tutorials/basicmechanics" "Debug9" "Debug9a" >}}
+{{< imagegallery 2 
+    "images/tutorials/basicmechanics" 
+    "Debug9|Evaluate expression"
+    "Debug9a|Watches"
+>}}
 
 ## Summary
 * MATE allows debugging of any Python files including files predefined in MeVisLab.
