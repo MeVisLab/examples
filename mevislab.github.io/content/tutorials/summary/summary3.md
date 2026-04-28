@@ -70,14 +70,16 @@ Window {
 ```
 {{</highlight>}}
 
-{{<alert class="info" caption="Info">}}
-We use *Category* as the top-level layouter in the *Window* to give the inner content a small margin. Otherwise, the controls touch the border of the window and look unappealing.{{</alert>}}
-
 You can preview your initial layout in MeVisLab by double-clicking your module {{< mousebutton "left" >}}.
 
 ![Initial window layout](images/tutorials/summary/Example3_1.png "Initial window layout")
 
 You can see the four vertical aligned parts as defined in the *.script* file. Now, we are going to add the content of the boxes.
+
+{{<alert class="info" caption="Info">}}
+We use *Category* as the top-level layouter in the *Window* to give the inner content a small margin. Otherwise, the controls touch the border of the window and look unappealing.{{</alert>}}
+
+![Initial window layout without margin](images/tutorials/summary/Example3_1_noMargin.png "Initial window layout without margin")
 
 {{<alert class="info" caption="Additional Info">}}
 An overview over the existing layout elements in MeVisLab Definition Language (MDL) can be found {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#N11695" "here" >}}
