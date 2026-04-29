@@ -87,8 +87,8 @@
  &lt;/div&gt;
 &lt;/div&gt;
 &lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;The background of medical images is black for most cases. In the case an image is inverted or window/level values are adapted, these black voxels outside clinical relevant voxels might become very bright or even white.&lt;/p&gt;
-&lt;p&gt;Being in a dark room using a large screen, the user might be blended by these large white regions.&lt;/p&gt;</description></item><item><title>Example 3: Region Growing</title><link>https://mevislab.github.io/examples/tutorials/image_processing/image_processing3/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/image_processing/image_processing3/</guid><description>&lt;h1 id="example-3-region-growing"&gt;Example 3: Region Growing&lt;/h1&gt;
+&lt;p&gt;The background of medical images typically contains small values. When an image is inverted, these small-valued voxels outside clinically relevant regions can become very large-valued. As a result, they appear bright or even white on the screen.&lt;/p&gt;
+&lt;p&gt;In a dark environment, especially when using a large display, these bright background regions can be uncomfortable to look at.&lt;/p&gt;</description></item><item><title>Example 3: Region Growing</title><link>https://mevislab.github.io/examples/tutorials/image_processing/image_processing3/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/tutorials/image_processing/image_processing3/</guid><description>&lt;h1 id="example-3-region-growing"&gt;Example 3: Region Growing&lt;/h1&gt;
 &lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
  &lt;div&gt;
  &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=nQV2o_3BcJI" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/nQV2o_3BcJI/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=nQV2o_3BcJI" target="_blank"&gt;YouTube&lt;/a&gt;.
