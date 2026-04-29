@@ -18,11 +18,13 @@ menu:
 {{< youtube "k003ytr8ZQA" >}}
 
 ## Introduction
-The background of medical images is black for most cases. In the case an image is inverted or window/level values are adapted, these black voxels outside clinical relevant voxels might become very bright or even white.
+The background of medical images typically contains small values. When an image is inverted, these small-valued voxels outside clinically relevant regions can become very large-valued. As a result, they appear bright or even white on the screen.
 
-Being in a dark room using a large screen, the user might be blended by these large white regions.
+In a dark environment, especially when using a large display, these bright background regions can be uncomfortable to look at.
 
-Image masking is a very good way to select a defined region where image processing shall be applied. A mask allows to define a region (the masked region) to allow image modifications whereas voxels outside the mask remain unchanged.
+This effect occurs because the entire image is processed, including regions that are not relevant for analysis. A common way to avoid this is to restrict processing to the relevant regions using image masking. Image masking allows selecting a defined region (the masked region) in which image modifications are applied, while voxels outside the mask remain unchanged.
+
+Beyond avoiding visual artifacts, image masking is generally useful for focusing processing on regions of interest. It helps reduce the influence of irrelevant data, improves the robustness of many algorithms, and can also reduce computation time by limiting operations to a smaller part of the image.
 
 ## Steps to Do
 
@@ -31,21 +33,21 @@ Add a `LocalImage` and a `SynchroView2D` module to your network and connect the 
 
 ![Example network](images/tutorials/image_processing/network_example2a.png "Example network")
 
-Open the Automatic Panel of the `SynchroView2D` module via context menu {{< mousebutton "right" >}} and selecting {{< menuitem "Show Window" "Automatic Panel" >}}. Set the field <field>synchLUTs</field> to *Yes*.
+Open the Automatic Panel of the `SynchroView2D` module via the context menu {{< mousebutton "right" >}} by selecting {{< menuitem "Show Window" "Automatic Panel" >}}. Set the field <field>synchLUTs</field> to *Yes*.
 
 ![Synchronize LUTs in SynchroView2D](images/tutorials/image_processing/synchLUTs.png "Synchronize LUTs in SynchroView2D")
 
-Double-click {{< mousebutton "left" >}} the `SynchroView2D` and change window/level values via right mouse button {{< mousebutton "right" >}}. You can see that the background of your images gets very bright and changes based on the LUT are applied to all voxels of your input image - even on the background. Hovering your mouse over the image(s) shows the current gray value under your cursor in [Hounsfield Unit (HU)](https://en.wikipedia.org/wiki/Hounsfield_scale).
+Double-click {{< mousebutton "left" >}} the `SynchroView2D` and change window/level values via right mouse button {{< mousebutton "right" >}}. You can see that the background of your images gets very bright and changes based on the LUT are applied to all voxels of your input image &mdash; even to the background. Hovering your mouse over the image(s) shows the current value under your cursor.
 
 ![Without masking the image](images/tutorials/image_processing/SynchroView2D_before.png "Without masking the image")
 
-Hovering the mouse over black background voxels shows a value between *0* and about *60*. This means we want to create a mask that only allows modifications on voxels having a gray value larger than *60*.
+Hovering the mouse over black background voxels shows a value between *0* and about *60*. This means we want to create a mask that only allows modifications on voxels having a value larger than *60*.
 
 Add a `Mask` and a `Threshold` module to your workspace and connect them as seen below.
 
 ![Example network: using Mask](images/tutorials/image_processing/network_example2b.png "Example network: using Mask")
 
-Changing the window/level values in your viewer still also changes background voxels. The `Threshold` module still leaves the voxels as is because the threshold value is configured as larger than *0*. Open the panels of the modules `Threshold` and `Mask` via double-click {{< mousebutton "left" >}} and set the values as seen below.
+Changing the window/level values in your viewer still also changes the appearance of background voxels. The `Threshold` module still leaves the voxels as is because the threshold value is configured as larger than *0*. Open the panels of the modules `Threshold` and `Mask` via double-click {{< mousebutton "left" >}} and set the values as seen below.
 
 {{< imagegallery 2 
     "images/tutorials/image_processing"
@@ -53,7 +55,7 @@ Changing the window/level values in your viewer still also changes background vo
     "Mask|Mask panel"
 >}}
 
-Now, all voxels having a value lower or equal *60* are set to *0*, all others are set to *1*. The resulting image from the `Threshold` module is a binary image that can now be used as a mask by the `Mask` module.
+Now, all voxels having a value less than or equal to *60* are set to *0*, all others are set to *1*. The resulting image from the `Threshold` module is a binary image that can now be used as a mask by the `Mask` module.
 
 ![Output of the Threshold module](images/tutorials/image_processing/OutputInspector_Threshold.png "Output of the Threshold module")
 
