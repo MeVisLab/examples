@@ -39,11 +39,9 @@ Click on <field>Check if required tools are installed</field>. The following dia
 
 ![Check required tools](images/tutorials/summary/Example5_2.png "Check required tools")
 
-You can see that [NSIS](https://nsis.sourceforge.io/Download) and either [Dependency Walker](https://www.dependencywalker.com/) or [Dependencies](https://github.com/lucasg/Dependencies) are necessary to create an installable executable. MeVisLab provides information about the necessary version(s).
+You can see that [NSIS](https://nsis.sourceforge.io/Download) is necessary to create an installable executable. MeVisLab provides information about the necessary version.
 
-Download and install/extract *NSIS* and *Dependency Walker* or *Dependencies*. Add both executables to your *PATH* environment variable, for example, *C:\Program Files\depends* and *C:\Program Files (x86)\NSIS*.
-
-Restart MeVisLab and open the Project Wizard again. All required tools should now be available.
+If missing or outdated, download and install NSIS, restart MeVisLab, and open the Project Wizard again. All required tools should now be available.
 
 ### Use MeVisLab Project Wizard to Generate the Installer
 Select your macro module and the package and click <field>Next ></field>.
