@@ -81,10 +81,6 @@ In the *Parameters* section, you can define *fields* of your macro module. These
 ### Module Panel Layout
 To create your own user interface, we need to create a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Window" "Window" >}}. A window is one of the layout elements that exist in MDL. These layout elements are called {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#Controls" "controls" >}}. The curled brackets define the window section, in which you can define properties of the window and insert further controls like a {{< docuLinks "/Resources/Documentation/Publish/SDK/MDLReference/index.html#mdl_Box" "Box" >}}.
 
-{{<alert class="info" caption="Info">}}
-We use *Category* as the top-level layouter in the *Window* to give the inner content a small margin. Otherwise, the controls touch the border of the window and look unappealing.
-{{</alert>}}
-
 Initially, we call the window *MyWindowTitle*, which can be used to reference this window.
 
 Double-clicking {{< mousebutton "left" >}} on your module now opens your first self-developed user interface.
@@ -117,6 +113,12 @@ Window MyWindowName {
 {{</highlight>}}
 
 ![Module panel](images/tutorials/basicmechanics/ModulePanel.png "Module panel")
+
+{{<alert class="info" caption="Info">}}
+We use *Category* as the top-level layouter in the *Window* to give the inner content a small margin. Otherwise, the controls touch the border of the window and look unappealing.
+{{</alert>}}
+
+![Module panel without margin](images/tutorials/basicmechanics/ModulePanel_noMargin.png "Module panel without margin")
 
 You can define different properties of your control. For a window, you can, for example, define a title, or whether the
 window should be shown in full screen (*fullscreen = Yes*).
