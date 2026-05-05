@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Image Processing on MeVisLab Examples</title><link>https://mevislab.github.io/examples/pull/148/tags/image-processing/</link><description>Recent content in Image Processing on MeVisLab Examples</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 15 Mar 2026 08:56:33 +0200</lastBuildDate><atom:link href="https://mevislab.github.io/examples/pull/148/tags/image-processing/index.xml" rel="self" type="application/rss+xml"/><item><title>Chapter IV: Image Processing</title><link>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/</guid><description>&lt;h1 id="TutorialImageProcessing"&gt;Image Processing in MeVisLab&lt;/h1&gt;
+&lt;p&gt;Digital image processing is the use of a digital computer to process digital images through an algorithm (see &lt;a href="https://en.wikipedia.org/wiki/Digital_image_processing" target="_blank" rel="noopener"&gt;Wikipedia&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;MeVisLab provides multiple modules for image processing tasks, such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Filters&lt;/li&gt;
+&lt;li&gt;Masks&lt;/li&gt;
+&lt;li&gt;Transformations&lt;/li&gt;
+&lt;li&gt;Arithmetics&lt;/li&gt;
+&lt;li&gt;Statistics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this chapter, you will find some examples for different types of image processing in MeVisLab.&lt;/p&gt;</description></item><item><title>Developing Your Own C++ Modules</title><link>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/cpp_development/</link><pubDate>Sun, 15 Mar 2026 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/cpp_development/</guid><description>&lt;h1 id="c-module-development"&gt;C++ Module Development&lt;/h1&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The development of your own C++ modules can be done by implementing ML modules or Open Inventor modules.&lt;/p&gt;
+
+&lt;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&gt;
+ &lt;symbol id="check-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="warning-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&gt;
+ &lt;/symbol&gt;
+ &lt;symbol id="danger-fill" fill="currentColor" viewBox="0 0 16 16"&gt;
+ &lt;path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/&gt;
+ &lt;/symbol&gt;
+&lt;/svg&gt;
+
+&lt;div class="alert alert-primary alert-info d-flex align-items-center" role="alert"&gt;
+ &lt;svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Important Information:"&gt;&lt;use xlink:href="#info-fill"/&gt;&lt;/svg&gt;
+ &lt;div&gt;
+ &lt;b&gt;Important Information:&amp;nbsp;&lt;/b&gt;
+ Make sure to use a compiler that is compatible with your currently installed MeVisLab version.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id="ml-modules-on-the-c-level"&gt;ML Modules on the C++ Level&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Image processing modules are objects derived from class 
+&lt;a href="https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/MLReference/classml_1_1Module.html" target="_blank"&gt;Module&lt;/a&gt;
+
+ defined in the ML library and therefore are also called ML modules.&lt;/li&gt;
+&lt;li&gt;Image inputs and outputs are connectors to objects of class 
+&lt;a href="https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/MLReference/classml_1_1PagedImage.html" target="_blank"&gt;PagedImage&lt;/a&gt;
+
+, which are defined in the ML library.&lt;/li&gt;
+&lt;li&gt;Inputs and outputs for abstract data structures are connectors to pointers of objects derived from class 
+&lt;a href="https://mevislabdownloads.mevis.de/docs/current/MeVisLab/Resources/Documentation/Publish/SDK/MLReference/classml_1_1Base.html" target="_blank"&gt;Base&lt;/a&gt;
+
+ and are called Base objects.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="open-inventor-modules-on-the-c-level"&gt;Open Inventor Modules on the C++ Level&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Most Open Inventor modules are objects derived from class 
+&lt;a href="https://mevislabdownloads.mevis.de/docs/current/MeVisLab/../MeVis/ThirdParty/Documentation/Publish/OpenInventorReference/classSoNode.html" target="_blank"&gt;SoNode&lt;/a&gt;
+
+, defined in the Open Inventor library.&lt;/li&gt;
+&lt;li&gt;Open Inventor inputs and outputs are connectors to objects derived from class SoNode, defined in the Open Inventor library. Many Open Inventor modules will return themselves as outputs (“self”). On inputs, they may have connectors to child Open Inventor modules.&lt;/li&gt;
+&lt;li&gt;Some Open Inventor modules are objects derived from class 
+&lt;a href="https://mevislabdownloads.mevis.de/docs/current/MeVisLab/../MeVis/ThirdParty/Documentation/Publish/OpenInventorReference/classSoEngine.html" target="_blank"&gt;SoEngine&lt;/a&gt;
+
+. They are used for calculations and return their output not via output connectors but via parameter fields.&lt;/li&gt;
+&lt;li&gt;Open Inventor modules may also have input and output connectors to Base objects and image objects.&lt;/li&gt;
+&lt;li&gt;All standard Open Inventor nodes defined in the Open Inventor library are available in MeVisLab as Open Inventor modules.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This chapter describes some examples for developing your own ML and Open Inventor modules.&lt;/p&gt;</description></item><item><title>Example 1: Creating a New ML Module for Adding a Value to Each Voxel</title><link>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/cpp_1/</link><pubDate>Sun, 15 Mar 2026 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/cpp_1/</guid><description>&lt;h1 id="example-1-creating-a-new-ml-module-for-adding-a-value-to-each-voxel"&gt;Example 1: Creating a New ML Module for Adding a Value to Each Voxel&lt;/h1&gt;
+&lt;h2 id="precondition"&gt;Precondition&lt;/h2&gt;
+&lt;p&gt;Make sure to have &lt;a href="https://cmake.org/download" target="_blank" rel="noopener"&gt;CMake&lt;/a&gt; installed. This example has been created using CMake Legacy Release (3.31.11).&lt;/p&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this example, we develop our own C++ ML module, which adds a constant value to each voxel of the given input image.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
+&lt;h3 id="create-a-new-ml-module"&gt;Create a New ML Module&lt;/h3&gt;
+&lt;p&gt;Before creating the module, make sure to have your own user package available. See &lt;a href="tutorials/basicmechanisms/macromodules/package/"&gt;Package creation&lt;/a&gt; for details about Packages.&lt;/p&gt;</description></item><item><title>Example 1: Applying Scalar Functions to Two Images</title><link>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/image_processing1/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/image_processing1/</guid><description>&lt;h1 id="example-1-arithmetic-operations-on-two-images"&gt;Example 1: Arithmetic Operations on Two Images&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=ToTQ3XRPmlk" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/ToTQ3XRPmlk/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=ToTQ3XRPmlk" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;We are using the &lt;code&gt;Arithmetic2&lt;/code&gt; module to apply basic scalar functions on two images. The module provides two inputs for images and one output image for the result.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
+&lt;h3 id="develop-your-network"&gt;Develop Your Network&lt;/h3&gt;
+&lt;p&gt;Add two &lt;code&gt;LocalImage&lt;/code&gt; modules to your workspace for the input images. Select &lt;em&gt;$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm&lt;/em&gt; and &lt;em&gt;$(DemoDataPath)/BrainMultiModal/ProbandT2.dcm&lt;/em&gt; from MeVisLab demo data and add a &lt;code&gt;SynchroView2D&lt;/code&gt; to your network.&lt;/p&gt;</description></item><item><title>Example 2: Masking Images</title><link>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/image_processing2/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/image_processing2/</guid><description>&lt;h1 id="example-2-masking-images"&gt;Example 2: Masking Images&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=k003ytr8ZQA" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/k003ytr8ZQA/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=k003ytr8ZQA" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The background of medical images typically contains small values. When an image is inverted, these small-valued voxels outside clinically relevant regions can become very large-valued. As a result, they appear bright or even white on the screen.&lt;/p&gt;
+&lt;p&gt;In a dark environment, especially when using a large display, these bright background regions can be uncomfortable to look at.&lt;/p&gt;</description></item><item><title>Example 3: Region Growing</title><link>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/image_processing3/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/image_processing3/</guid><description>&lt;h1 id="example-3-region-growing"&gt;Example 3: Region Growing&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=nQV2o_3BcJI" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/nQV2o_3BcJI/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=nQV2o_3BcJI" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;A very simple approach to segment parts of an image is the region growing method. A general explanation can be found &lt;a href="%22https://en.wikipedia.org/wiki/Region_growing%22"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this example, you will segment the brain of an image and show the segmentation results as an overlay on the original image.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
+&lt;h3 id="develop-your-network"&gt;Develop Your Network&lt;/h3&gt;
+&lt;p&gt;Add a &lt;code&gt;LocalImage&lt;/code&gt; module to your workspace and select load &lt;em&gt;$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm&lt;/em&gt;. Add a &lt;code&gt;View2D&lt;/code&gt; module and connect both as seen below.&lt;/p&gt;</description></item><item><title>Example 4: Subtracting 3D Surface Objects</title><link>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/image_processing4/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/image_processing4/</guid><description>&lt;h1 id="example-4-subtracting-3d-objects"&gt;Example 4: Subtracting 3D Objects&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=VdvErVvoq2k" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/VdvErVvoq2k/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=VdvErVvoq2k" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this example, we load an image and render it as &lt;code&gt;WEMIsoSurface&lt;/code&gt;. Then, we create a three-dimensional &lt;code&gt;SoSphere&lt;/code&gt; and subtract the sphere from the initial WEM.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
+&lt;h3 id="develop-your-network"&gt;Develop Your Network&lt;/h3&gt;
+&lt;p&gt;Add a &lt;code&gt;LocalImage&lt;/code&gt; module to your workspace and select load &lt;em&gt;$(DemoDataPath)/BrainMultiModal/ProbandT1.dcm&lt;/em&gt;. Add a &lt;code&gt;WEMIsoSurface&lt;/code&gt;, a &lt;code&gt;SoWEMRenderer&lt;/code&gt;, a &lt;code&gt;SoBackground&lt;/code&gt;, and a &lt;code&gt;SoExaminerViewer&lt;/code&gt; module and connect them as seen below. Make sure to configure the &lt;code&gt;WEMIsoSurface&lt;/code&gt; to use a &lt;field&gt;Iso Min. Value&lt;/field&gt; of &lt;em&gt;420&lt;/em&gt; and a &lt;field&gt;Voxel Sampling&lt;/field&gt; of &lt;em&gt;1&lt;/em&gt;.&lt;/p&gt;</description></item><item><title>Example 5: Clip Planes</title><link>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/image_processing5/</link><pubDate>Wed, 15 Jun 2022 08:56:33 +0200</pubDate><guid>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/image_processing5/</guid><description>&lt;h1 id="example-5-clip-planes"&gt;Example 5: Clip Planes&lt;/h1&gt;
+&lt;div class="alert alert-secondary d-flex align-items-center" role="alert"&gt;
+ &lt;div&gt;
+ &lt;img width="100px" src="images/youtube.svg" /&gt;&amp;nbsp;&amp;nbsp;&lt;a href="https://www.youtube.com/watch?v=Lmt7helBl0E" target="_blank"&gt;&lt;img width="100px" src="https://img.youtube.com/vi/Lmt7helBl0E/0.jpg" /&gt;&lt;/a&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;This example is also available on &lt;a href="https://www.youtube.com/watch?v=Lmt7helBl0E" target="_blank"&gt;YouTube&lt;/a&gt;.
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this example, we are using the &lt;code&gt;SoGVRDrawOnPlane&lt;/code&gt; module to define the currently visible slice from a 2D view as a clip plane in 3D.&lt;/p&gt;
+&lt;h2 id="steps-to-do"&gt;Steps to Do&lt;/h2&gt;
+&lt;h3 id="develop-your-network"&gt;Develop Your Network&lt;/h3&gt;
+&lt;p&gt;First, we need to develop the network to scroll through the slices. Add a &lt;code&gt;LocalImage&lt;/code&gt; module to your workspace and select the file &lt;em&gt;ProbandT1&lt;/em&gt; from MeVisLab demo data.&lt;/p&gt;</description></item><item><title>Example 6: DICOM RT Visualization in MeVisLab – RTSTRUCT and RTDOSE Workflow</title><link>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/image_processing6/</link><pubDate>Mon, 05 May 2025 00:00:00 +0000</pubDate><guid>https://mevislab.github.io/examples/pull/148/tutorials/image_processing/image_processing6/</guid><description>&lt;h1 id="example-6-dicom-rt-visualization-in-mevislab--rtstruct-and-rtdose-workflow"&gt;Example 6: DICOM RT Visualization in MeVisLab – RTSTRUCT and RTDOSE Workflow&lt;/h1&gt;
+&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This tutorial explains how to load and visualize DICOM RT (Radiotherapy) data in MeVisLab. You will learn how to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Load CT and related RTSTRUCT data.&lt;/li&gt;
+&lt;li&gt;Visualize RTSTRUCTs as colored CSOs.&lt;/li&gt;
+&lt;li&gt;Show labels next to each RTSTRUCT contour.&lt;/li&gt;
+&lt;li&gt;Visualize RTDOSE as a semitransparent colored overlay.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;DICOM RT&lt;/em&gt; files are essential in radiotherapy treatment planning.&lt;/p&gt;
+&lt;p&gt;They include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;RT Structure Set&lt;/strong&gt;: containing information related to patient anatomy, for example, structures, markers, and isocenters. These entities are typically identified on devices such as CT scanners, physical or virtual simulation workstations, or treatment planning systems.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RT Plan&lt;/strong&gt;: containing geometric and dosimetric data specifying a course of external beam and/or brachytherapy treatment, for example, beam angles, collimator openings, beam modifiers, and brachytherapy channel and source specifications. The &lt;strong&gt;RT Plan&lt;/strong&gt; entity may be created by a simulation workstation, and subsequently enriched by a treatment planning system before being passed on to a record and verify system or treatment device. An instance of the &lt;strong&gt;RT Plan&lt;/strong&gt; object usually references an &lt;strong&gt;RT Structure Set&lt;/strong&gt; instance to define a coordinate system and set of patient structures.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;RT Dose&lt;/strong&gt;: containing dose data generated by a treatment planning system in one or more of several formats: three-dimensional dose data, isodose curves, DVHs, or dose points.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Additional objects not used in this tutorial are:&lt;/p&gt;</description></item></channel></rss>
