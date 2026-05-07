@@ -18,7 +18,7 @@ module LocalImage {
   }
   fields  {
     instanceName = LocalImage
-    name = "C:/Program Files/MeVisLab3.6.1/Packages/MeVisLab/Resources/DemoData/BrainMultiModal/ProbandT1.dcm"
+    name = ""
     autoLoad = TRUE
   }
 }
