@@ -6,4 +6,4 @@ status: "OK"
 ---
 
 ## Glossary
-{{<embed file="/layouts/partials/glossarycontents.html">}}
+{{<embed file="/layouts/_partials/glossarycontents.html">}}
