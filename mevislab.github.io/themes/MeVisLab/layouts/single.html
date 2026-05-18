@@ -7,13 +7,13 @@
               {{ $tagstring := lower . }}
               {{ $tagstring := replace $tagstring " " "-" }}
               {{ if eq . "Beginner" }}
-            <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-success">{{ . }}</span></a>
+            <a href="/examples/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-success">{{ . }}</span></a>
               {{ else if eq . "Advanced" }}
-              <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-warning">{{ . }}</span></a>
+              <a href="/examples/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-warning">{{ . }}</span></a>
               {{ else if eq . "Expert" }}
-              <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-danger">{{ . }}</span></a>
+              <a href="/examples/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-danger">{{ . }}</span></a>
               {{ else }}
-              <a href="/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-secondary">{{ . }}</span></a>
+              <a href="/examples/tags/{{ $tagstring }}" title="{{ . }}"><span class="badge bg-secondary">{{ . }}</span></a>
               {{ end }}
 
             {{ end -}}
