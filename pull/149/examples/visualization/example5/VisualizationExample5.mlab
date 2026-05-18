@@ -1,0 +1,323 @@
+// MDL v1 utf8
+mevislabVersion = 3.5.0.675
+network  {
+  watchlist = ""
+}
+module SoBackground {
+  internal  {
+    frame = "857 701 112 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SoBackground
+    rotate = TRUE
+    flip = FALSE
+    on = TRUE
+    depthBuffer = TRUE
+  }
+}
+module LocalImage {
+  internal  {
+    frame = "1161 821 96 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "431 638 480 144"
+        sizeHint = "480 144"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = LocalImage
+    name = $(DemoDataPath)/BrainMultiModal/ProbandT1.tif
+    autoLoad = TRUE
+  }
+}
+module SoGVRVolumeRenderer {
+  internal  {
+    frame = "1117 701 168 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "277 188 416 574"
+        sizeHint = "416 574"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoGVRVolumeRenderer
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    on = TRUE
+    autoLoad = TRUE
+    interactiveQuality = 0.5
+    staticQuality = 1
+    interactiveSamplingRate = 1
+    staticSamplingRate = 1
+    blendMode = Blend
+    octreeNodeSize = NODE_SIZE_32
+    octreeParentComputationMethod = Rank
+    octreeParentComputationRank = 4
+    currentTimePoint = 0
+    maxTimePoint = 0
+    force8bit = FALSE
+    filterVolumeData = FilterLinear
+    filterLut = TRUE
+    subVolumeStartX = 0
+    subVolumeStartY = 0
+    subVolumeStartZ = 0
+    subVolumeEndX = 109
+    subVolumeEndY = 91
+    subVolumeEndZ = 80
+    zbuffer = TRUE
+    permitClipping = TRUE
+    drawOnPlanes = TRUE
+    sizeOutputX = 109
+    sizeOutputY = 91
+    sizeOutputZ = 80
+    incrementalUpdate = TRUE
+    highQualityStaticUpdate = FALSE
+    staticRenderingAfterInteractionOnly = FALSE
+    adaptQualityToWindowSize = TRUE
+    rayCastTextureStorage = RayCastTextureStorage_Auto
+    renderMode = Illuminated
+    greyCenter = 0.5
+    greyWidth = 0.5
+    greyInvert = FALSE
+    alphaCenter = 0.5
+    alphaWidth = 0.5
+    alphaInvert = FALSE
+    colorFactor = "1 1 1"
+    alphaFactor = 1
+    enhancementAlphaMix = 0
+    boundaryEnhancement = FALSE
+    boundaryEnhancementFactor = 1.37
+    boundaryEnhancementExponent = 0.60000002
+    boundaryEnhancementGradientBias = 0
+    silhouetteEnhancement = FALSE
+    silhouetteEnhancementExponent = 4
+    silhouetteEnhancementFactor = 2
+    toneShading = FALSE
+    toneShadingWarmColor = "0.266667008399963 0.219607993960381 0.164706006646156"
+    toneShadingColdColor = "0.0823530033230782 0.133332997560501 0.32548999786377"
+    toneShadingWarmDiffuse = 0.123
+    toneShadingColdDiffuse = 0.014
+    toneShadingAngle = 45
+    materialAmbient = 0.60299999
+    materialDiffuse = 1
+    materialSpecular = 1
+    materialSpecularity = 14.9
+    reduceLightingOnLowGradientMagnitude = FALSE
+    light1Enabled = TRUE
+    light1DiffuseIntensity = 1
+    light1SpecularIntensity = 1
+    light1Color = "1 1 1"
+    light1PolarPhi = 45
+    light1PolarRho = 0
+    light2Enabled = FALSE
+    light2DiffuseIntensity = 1
+    light2SpecularIntensity = 1
+    light2Color = "1 1 1"
+    light2PolarPhi = 0
+    light2PolarRho = 0
+    light3Enabled = FALSE
+    light3DiffuseIntensity = 1
+    light3SpecularIntensity = 1
+    light3Color = "1 1 1"
+    light3PolarPhi = -45
+    light3PolarRho = 0
+    gradientQuality = GradientQualityHighest
+    selectionAlphaThreshold = 0.2
+    selectionActive = FALSE
+    useWorldCoords = TRUE
+  }
+}
+module SoExaminerViewer {
+  internal  {
+    frame = "981 517 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _viewer {
+        geometry = "805 141 648 704"
+        sizeHint = "400 400"
+        wasOpen = yes
+      }
+      window _default {
+        geometry = "232 418 511 367"
+        sizeHint = "511 367"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "204 271 537 445"
+        sizeHint = "537 445"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoExaminerViewer
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    border = FALSE
+    background = "0 0 0"
+    transparency = DELAYED_BLEND
+    antialiasing = FALSE
+    antialiasingNumPasses = 1
+    useSampleBuffers = FALSE
+    numSamples = 8
+    grabKeyFocus = TRUE
+    enableKeyCommands = TRUE
+    snapshotFormat = SNAPSHOT_RGB
+    outputAviFile = ""
+    autoRedrawWhenRecording = TRUE
+    frameRate = 7
+    frameRateAvi = 15
+    outputSnapshotFile = none
+    outputSnapshotFileWritten = none
+    autoIncreaseFile = TRUE
+    showSnapshotWithShell = FALSE
+    snapCount = 0
+    inputDevicesList = ""
+    headlight = TRUE
+    decoration = TRUE
+    popupMenuEnabled = FALSE
+    viewing = TRUE
+    autoClipping = TRUE
+    drawStyle = VIEW_AS_IS
+    interactiveDrawStyle = VIEW_LOW_COMPLEXITY
+    viewAllFlag = FALSE
+    initialCameraOrientation = CAMERA_KEEP_AS_IS
+    applyCameraOrientation = CAMERA_KEEP_AS_IS
+    cameraType = CAMERA_PERSPECTIVE
+    autoApplyUserSettingOrientation = FALSE
+    userSettingOrientation = "0 0 1 0"
+    automaticViewAll = FALSE
+    storeCurrentState = TRUE
+    saveCamera = TRUE
+    cursor = TRUE
+    isCameraStored = TRUE
+    perspective = TRUE
+    stereoViewing = FALSE
+    stereoOffset = 3
+    height = 0.2
+    position = "808.203430175781 -1498.98229980469 -16.1837749481201"
+    orientation = "0.941976070404053 0.231254413723946 0.243315637111664 1.66244566440582"
+    nearDistance = 1549.0035
+    farDistance = 1809.4836
+    focalDistance = 1681.3563
+    forceRedrawOnInteraction = FALSE
+    button1events = TO_VIEWER
+    button2events = TO_VIEWER
+    button3events = TO_VIEWER
+    keyEvents = TO_VIEWER
+    animationEnabled = FALSE
+    feedback = FALSE
+    feedbackSize = 32
+    mouseInteraction = ""
+    rotationAxis = "0 1 0"
+    rotationAngle = 360
+    rotationSteps = 80
+    recordRotation = TRUE
+    wheelZoomEnabled = FALSE
+    wheelRotationEnabled = FALSE
+  }
+}
+module SoLUTEditor {
+  internal  {
+    frame = "997 701 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "186 317 515 450"
+        sizeHint = "515 450"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoLUTEditor
+    rangeMin = 0
+    rangeMax = 4095
+    viewMin = 0
+    viewMax = 4095
+    window = 1
+    level = 0.5
+    allowNewPoints = TRUE
+    updateLutWhileDragging = TRUE
+    relativeLut = FALSE
+    colorInterpolation = InterpolateRGB
+    colorPoints = "[ 0 0 0 0, 186.908996582031 0 0 0, 696.659973144531 0.505882024765015 0.290196001529694 0.0313725993037224, 1376.32995605469 0.698038995265961 0.662744998931885 0.619607985019684, 4095 1 1 1 ]"
+    alphaPoints = "[ 0 0, 186.908996582031 0, 696.659973144531 0.509202003479004, 1376.32995605469 0.963190019130707, 4095 1 ]"
+    alphaFactor = 1
+    newRangeMin = 0
+    newRangeMax = 4095
+    newRangeMode = ClipFormerLUT
+    colorEditorHeight = 24
+    showColorEditor = TRUE
+    showAlphaEditor = TRUE
+    markerRadius = 4
+    selectedMarkerRadius = 6
+    snapMarkerRadius = 10
+    alphaLineWidth = 2
+    backgroundColor = "0.800000011920929 0.800000011920929 0.800000011920929"
+    marginColor = "0.830999970436096 0.815999984741211 0.783999979496002"
+    borderColor = "0 0 0"
+    alphaLineColor = "0 0 0"
+    histogramColor = "0.400000005960464 0.400000005960464 0.400000005960464"
+    drawColoredMarkers = TRUE
+    markerColor = "1 1 1"
+    selectedMarkerColor = "1 0.5 0.5"
+    selectedTriangleSize = 8
+    triangleSize = 6
+    useAntiAliasing = TRUE
+  }
+}
+module SoRotationXYZ {
+  internal  {
+    frame = "709 701 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "240 507 269 64"
+        sizeHint = "113 64"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoRotationXYZ
+    axis = Z
+    angle = 125.93607
+  }
+}
+module SoElapsedTime {
+  internal  {
+    frame = "709 829 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "231 686 319 150"
+        sizeHint = "166 150"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoElapsedTime
+    speed = 1
+    on = TRUE
+    pause = FALSE
+  }
+}
+connections  {
+  SoGVRVolumeRenderer.image = LocalImage.outImage
+  SoExaminerViewer.children = "SoRotationXYZ.self SoBackground.self SoLUTEditor.outInventorLUT SoGVRVolumeRenderer.self"
+  SoRotationXYZ.angle = SoElapsedTime.timeOut
+}
+networkModel = ""
