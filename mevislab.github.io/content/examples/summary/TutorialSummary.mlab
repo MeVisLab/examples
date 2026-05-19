@@ -1,14 +1,14 @@
 // MDL v1 utf8
-mevislabVersion = 3.6.1.7
-network  {
+mevislabVersion = 4.2.70.9999
+network {
   watchlist = ""
 }
 module LocalImage {
-  internal  {
+  internal {
     frame = "744 814 144 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "718 498 485 144"
         sizeHint = "485 144"
@@ -16,17 +16,17 @@ module LocalImage {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = LocalImage
     name = ""
     autoLoad = TRUE
   }
 }
 module View2D {
-  internal  {
+  internal {
     frame = "756 223 120 56"
     moduleGroupName = "2D Viewer"
-    windows  {
+    windows {
       window _default {
         geometry = "378 527 400 400"
         sizeHint = "400 400"
@@ -34,12 +34,12 @@ module View2D {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = View2D
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
     view2DExtensionsOn = TRUE
-    startSlice = 40
+    startSlice = 0
     numSlices = 1
     numXSlices = 1
     sliceStep = 1
@@ -76,19 +76,20 @@ module View2D {
     borderOn = FALSE
     borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
     valueHighPrecision = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
     maxPrecision = 4
     enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    scaleLUTForNewImage = TRUE
+    computeLUTOnImageChange = FALSE
   }
 }
 module SoView2DOverlay {
-  internal  {
+  internal {
     frame = "732 338 168 56"
     moduleGroupName = "2D Viewer"
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "361 150 438 448"
         sizeHint = "438 448"
@@ -96,12 +97,11 @@ module SoView2DOverlay {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoView2DOverlay
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 1 1"
     selectionTolerance = 4
     needsValidVoxel = TRUE
@@ -139,11 +139,11 @@ module SoView2DOverlay {
   }
 }
 module RegionGrowing {
-  internal  {
+  internal {
     frame = "732 568 168 72"
     moduleGroupName = "2D Viewer"
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "417 157 673 567"
         sizeHint = "639 567"
@@ -151,7 +151,7 @@ module RegionGrowing {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = RegionGrowing
     autoUpdateMode = AutoUpdate
     lowerThreshold = 524.21
@@ -187,10 +187,10 @@ module RegionGrowing {
   }
 }
 module SoView2DMarkerEditor {
-  internal  {
+  internal {
     frame = "736 699 160 56"
     moduleGroupName = "2D Viewer"
-    windows  {
+    windows {
       window _default {
         geometry = "667 279 599 583"
         sizeHint = "587 583"
@@ -198,12 +198,11 @@ module SoView2DMarkerEditor {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoView2DMarkerEditor
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 1 1"
     selectionTolerance = 4
     needsValidVoxel = TRUE
@@ -277,7 +276,8 @@ module SoView2DMarkerEditor {
     overflowMode = RemoveAll
     maxSize = 1
     useInsertTemplate = TRUE
-    posXYZ = "-22 -22 47"
+    autoCopyAndTakeOwnership = FALSE
+    posXYZ = "0 0 0"
     posC = 0
     posT = 0
     posU = 0
@@ -292,10 +292,10 @@ module SoView2DMarkerEditor {
   }
 }
 module CloseGap {
-  internal  {
+  internal {
     frame = "772 453 88 56"
     moduleGroupName = "2D Viewer"
-    windows  {
+    windows {
       window _default {
         geometry = "572 270 290 438"
         sizeHint = "290 438"
@@ -303,7 +303,7 @@ module CloseGap {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = CloseGap
     borderHandling = PadDstFill
     fillValue = 1
@@ -326,10 +326,10 @@ module CloseGap {
   }
 }
 module SoExaminerViewer {
-  internal  {
-    frame = "1198 227 136 56"
+  internal {
+    frame = "1197 229 136 56"
     moduleGroupName = "3D Viewer"
-    windows  {
+    windows {
       window _viewer {
         geometry = "789 530 607 408"
         sizeHint = "400 400"
@@ -337,7 +337,7 @@ module SoExaminerViewer {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoExaminerViewer
     renderCaching = AUTO
     boundingBoxCaching = AUTO
@@ -408,11 +408,11 @@ module SoExaminerViewer {
   }
 }
 module IsoSurface {
-  internal  {
+  internal {
     frame = "1337 841 160 64"
     moduleGroupName = "3D Viewer"
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "563 476 335 318"
         sizeHint = "335 318"
@@ -420,7 +420,7 @@ module IsoSurface {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = IsoSurfaceImage
     isoValue = 200
     quality = 1
@@ -436,11 +436,11 @@ module IsoSurface {
   }
 }
 module SoWEMRenderer {
-  internal  {
+  internal {
     frame = "1345 697 192 80"
     moduleGroupName = "3D Viewer"
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "55 232 449 500"
         sizeHint = "449 500"
@@ -448,7 +448,7 @@ module SoWEMRenderer {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoWEMRendererImage
     interactionProviderID = ""
     autoApply = TRUE
@@ -464,6 +464,7 @@ module SoWEMRenderer {
     performPreHitTest = FALSE
     cursorShape = CROSS_CURSOR
     colorMode = WEM_COLOR_GENERAL
+    useOnlyFirstLUT = TRUE
     drawFaces = TRUE
     faceDiffuseColor = "0.792156994342804 0.792156994342804 0.792156994342804"
     useFaceAmbientColor = TRUE
@@ -472,26 +473,27 @@ module SoWEMRenderer {
     faceSpecularColor = "0.0666669979691505 0.0666669979691505 0.0666669979691505"
     faceAlphaValue = 0.5
     faceShininessValue = 1
-    primitiveValueLists = LUT
+    primitiveValueLists = ""
     selectedPrimitiveValueList = LUT
     selectedPrimitiveValueAlphaList = LUT
     primitiveValueListValid = TRUE
     primitiveValueListAlphaValid = TRUE
     overwriteAlphaWithPVL = FALSE
-    wemPatchToRender = -1
-    maxWEMPatchIndex = 0
-    cachePatches = FALSE
+    renderPatchSelectionMode = WEM_RENDER_PATCH_SELECT_SINGLE
+    renderPatchSelectionIndex = -1
+    renderPatchSelectionIndices = ""
+    maxWEMPatchIndex = -1
     sendAdjacency = FALSE
     hitModifierKey = AllModifiersMask
     selectedTab = 0
   }
 }
 module IsoSurface {
-  internal  {
+  internal {
     frame = "1069 841 200 64"
     moduleGroupName = "3D Viewer"
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "636 319 335 318"
         sizeHint = "335 318"
@@ -499,7 +501,7 @@ module IsoSurface {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = IsoSurfaceSegmentation
     isoValue = 420
     quality = 1
@@ -515,11 +517,11 @@ module IsoSurface {
   }
 }
 module SoWEMRenderer {
-  internal  {
+  internal {
     frame = "1037 641 232 80"
     moduleGroupName = "3D Viewer"
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "843 146 449 500"
         sizeHint = "449 500"
@@ -527,7 +529,7 @@ module SoWEMRenderer {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoWEMRendererSegmentation
     interactionProviderID = ""
     autoApply = TRUE
@@ -543,6 +545,7 @@ module SoWEMRenderer {
     performPreHitTest = FALSE
     cursorShape = CROSS_CURSOR
     colorMode = WEM_COLOR_GENERAL
+    useOnlyFirstLUT = TRUE
     drawFaces = TRUE
     faceDiffuseColor = "1 0 0"
     useFaceAmbientColor = FALSE
@@ -551,45 +554,46 @@ module SoWEMRenderer {
     faceSpecularColor = "0.0666669979691505 0.0666669979691505 0.0666669979691505"
     faceAlphaValue = 1
     faceShininessValue = 1
-    primitiveValueLists = LUT
+    primitiveValueLists = ""
     selectedPrimitiveValueList = LUT
     selectedPrimitiveValueAlphaList = LUT
     primitiveValueListValid = TRUE
     primitiveValueListAlphaValid = TRUE
     overwriteAlphaWithPVL = FALSE
-    wemPatchToRender = -1
-    maxWEMPatchIndex = 0
-    cachePatches = FALSE
+    renderPatchSelectionMode = WEM_RENDER_PATCH_SELECT_SINGLE
+    renderPatchSelectionIndex = -1
+    renderPatchSelectionIndices = ""
+    maxWEMPatchIndex = -1
     sendAdjacency = FALSE
     hitModifierKey = AllModifiersMask
     selectedTab = 0
   }
 }
 module SoSwitch {
-  internal  {
+  internal {
     frame = "1197 317 136 72"
     moduleGroupName = "3D Viewer"
     showNetworkPanel = true
   }
-  fields  {
+  fields {
     instanceName = SoSwitch
     whichChild = 2
   }
 }
 module SoGroup {
-  internal  {
+  internal {
     frame = "1241 453 96 56"
     moduleGroupName = "3D Viewer"
   }
-  fields  {
+  fields {
     instanceName = SoGroup
   }
 }
 module SoDepthPeelRenderer {
-  internal  {
+  internal {
     frame = "1365 605 152 56"
     moduleGroupName = "3D Viewer"
-    windows  {
+    windows {
       window _default {
         geometry = "1151 404 287 218"
         sizeHint = "270 218"
@@ -597,7 +601,7 @@ module SoDepthPeelRenderer {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoDepthPeelRenderer
     renderCaching = AUTO
     boundingBoxCaching = AUTO
@@ -612,12 +616,12 @@ module SoDepthPeelRenderer {
   }
 }
 module CalculateVolume {
-  internal  {
+  internal {
     frame = "545 341 160 72"
     moduleGroupName = "2D Viewer"
     showNetworkPanel = true
   }
-  fields  {
+  fields {
     instanceName = CalculateVolume
     minMode = UserDefined
     intMin = 1
@@ -631,7 +635,7 @@ module CalculateVolume {
     curveStyle = 0
   }
 }
-connections  {
+connections {
   View2D.inImage = LocalImage.outImage
   View2D.inInvPreLUT = SoView2DMarkerEditor.self
   View2D.inInvPostLUT = SoView2DOverlay.self
@@ -650,14 +654,14 @@ connections  {
   SoDepthPeelRenderer.children = SoWEMRendererImage.self
   CalculateVolume.input0 = CloseGap.output0
 }
-networkModel  {
-  parentItems  {
-    0  {
+networkModel {
+  parentItems {
+    0 {
       MLABNetworkModelItem MLABNetworkModelItemGroup {
         uniqueId = 43
         objectName = "2D Viewer"
         parentUniqueId = 0
-        color  {
+        color {
           r = 45
           g = 226
           b = 226
@@ -668,7 +672,7 @@ networkModel  {
         uniqueId = 65
         objectName = "3D Viewer"
         parentUniqueId = 0
-        color  {
+        color {
           r = 45
           g = 226
           b = 226

@@ -1,14 +1,14 @@
 // MDL v1 utf8
-mevislabVersion = 3.5.0.675
-network  {
+mevislabVersion = 4.2.70.9999
+network {
   watchlist = ""
 }
 module LocalImage {
-  internal  {
+  internal {
     frame = "485 717 168 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "716 558 488 144"
         sizeHint = "488 144"
@@ -16,17 +16,17 @@ module LocalImage {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = LocalImage
     name = $(DemoDataPath)/BrainMultiModal/ProbandT1.tif
     autoLoad = TRUE
   }
 }
 module SoCSOVisualizationSettings {
-  internal  {
+  internal {
     frame = "877 701 184 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "772 144 372 745"
         sizeHint = "372 745"
@@ -34,7 +34,7 @@ module SoCSOVisualizationSettings {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoCSOVisualizationSettings
     autoApply = TRUE
     shouldUseAntiAliasing = TRUE
@@ -45,6 +45,8 @@ module SoCSOVisualizationSettings {
     orientationFilterMode = ORIENTATION_MODE_ALL
     parallelThicknessMode = PARALLEL_THICKNESS_MODE_RELATIVE_TO_SLICE
     showParallelThickness = 0.2
+    showOnViewerWithIdMode = SHOW_ON_ALL_VIEWERS
+    viewerId = viewer1
     ghostingDepthInVoxel = 0
     voxelSlabAugment = 0
     shouldRenderShadow = FALSE
@@ -152,10 +154,10 @@ module SoCSOVisualizationSettings {
   }
 }
 module SoView2DCSOExtensibleEditor {
-  internal  {
+  internal {
     frame = "789 477 200 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "437 379 392 365"
         sizeHint = "392 365"
@@ -168,12 +170,11 @@ module SoView2DCSOExtensibleEditor {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoView2DCSOExtensibleEditor
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 1 1"
     selectionTolerance = 16
     needsValidVoxel = FALSE
@@ -202,15 +203,17 @@ module SoView2DCSOExtensibleEditor {
     allowSelectionWithDefaultRenderer = TRUE
     renderCSOsOnImagesDependingOnCreationMode = ON_ALL_IMAGES
     updateCSOIdUnderMouseCursor = FALSE
+    updateGhostedCSOIdUnderMouseCursor = FALSE
+    accumulateTransformations = FALSE
     updateImageStatisticsOnFinishInteraction = FALSE
   }
 }
 module CSOManager {
-  internal  {
+  internal {
     frame = "721 565 144 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "623 215 692 561"
         sizeHint = "692 561"
@@ -223,7 +226,7 @@ module CSOManager {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = CSOManager
     workDirectlyOnInputCSOList = FALSE
     updateCsoDisplayTree = TRUE
@@ -290,8 +293,6 @@ module CSOManager {
     listSingleRemoveEmptyGroupHandling = RemoveAlways
     listDefaultRemoveEmptyGroupHandling = RemoveAlways
     enableUndoRedo = TRUE
-    numUndos = 4
-    numRedos = 0
     undoStackLimit = 16
     useSelectionCSONotification = FALSE
     useSelectionGroupNotification = FALSE
@@ -331,10 +332,10 @@ module CSOManager {
   }
 }
 module View2D {
-  internal  {
+  internal {
     frame = "541 229 120 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "30 207 495 458"
         sizeHint = "400 400"
@@ -347,7 +348,7 @@ module View2D {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = View2D
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
@@ -377,8 +378,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 411.052734375
-    lutWidth = 1238.84252929688
+    lutCenter = 439.962493896484
+    lutWidth = 932.865600585938
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_DETAILED
@@ -389,19 +390,20 @@ module View2D {
     borderOn = FALSE
     borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
     valueHighPrecision = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
     maxPrecision = 4
     enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    scaleLUTForNewImage = TRUE
+    computeLUTOnImageChange = FALSE
   }
 }
 module SoCSORectangleEditor {
-  internal  {
+  internal {
     frame = "905 581 160 56"
     moduleGroupName = ""
   }
-  fields  {
+  fields {
     instanceName = SoCSORectangleEditor
     extensionId = rectangle
     allowCreation = TRUE
@@ -433,17 +435,20 @@ module SoCSORectangleEditor {
     defaultVoxelWriteMode = VOXEL_WRITE_MODULE
     defaultVoxelWriteValue = 1024
     shouldMoveOnlyGrabbedSide = FALSE
+    grabbedSideMouseOverColor = "0 0 1"
+    grabbedSideMouseOverLineWidth = 4
     isSquare = FALSE
+    shouldUseShiftToToggleSquareRectangle = TRUE
     pointDensityMode = DENSITY_SCREEN_PIXEL
     densityFactor = 0.1
   }
 }
 module LocalImage {
-  internal  {
+  internal {
     frame = "-499 733 136 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "716 558 488 144"
         sizeHint = "488 144"
@@ -451,17 +456,17 @@ module LocalImage {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = LocalImage1
     name = $(DemoDataPath)/BrainMultiModal/ProbandT1.tif
     autoLoad = TRUE
   }
 }
 module SoCSOVisualizationSettings {
-  internal  {
+  internal {
     frame = "-127 717 192 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "772 144 372 745"
         sizeHint = "372 745"
@@ -469,7 +474,7 @@ module SoCSOVisualizationSettings {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoCSOVisualizationSettings1
     autoApply = TRUE
     shouldUseAntiAliasing = TRUE
@@ -480,6 +485,8 @@ module SoCSOVisualizationSettings {
     orientationFilterMode = ORIENTATION_MODE_ALL
     parallelThicknessMode = PARALLEL_THICKNESS_MODE_RELATIVE_TO_SLICE
     showParallelThickness = 0.2
+    showOnViewerWithIdMode = SHOW_ON_ALL_VIEWERS
+    viewerId = viewer1
     ghostingDepthInVoxel = 0
     voxelSlabAugment = 0
     shouldRenderShadow = FALSE
@@ -587,10 +594,10 @@ module SoCSOVisualizationSettings {
   }
 }
 module SoView2DCSOExtensibleEditor {
-  internal  {
+  internal {
     frame = "-215 493 208 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "437 379 392 365"
         sizeHint = "392 365"
@@ -603,12 +610,11 @@ module SoView2DCSOExtensibleEditor {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoView2DCSOExtensibleEditor1
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 1 1"
     selectionTolerance = 16
     needsValidVoxel = FALSE
@@ -637,15 +643,17 @@ module SoView2DCSOExtensibleEditor {
     allowSelectionWithDefaultRenderer = TRUE
     renderCSOsOnImagesDependingOnCreationMode = ON_ALL_IMAGES
     updateCSOIdUnderMouseCursor = FALSE
+    updateGhostedCSOIdUnderMouseCursor = FALSE
+    accumulateTransformations = FALSE
     updateImageStatisticsOnFinishInteraction = FALSE
   }
 }
 module CSOManager {
-  internal  {
+  internal {
     frame = "-279 581 144 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "623 215 692 561"
         sizeHint = "692 561"
@@ -658,7 +666,7 @@ module CSOManager {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = CSOManager1
     workDirectlyOnInputCSOList = FALSE
     updateCsoDisplayTree = TRUE
@@ -725,8 +733,6 @@ module CSOManager {
     listSingleRemoveEmptyGroupHandling = RemoveAlways
     listDefaultRemoveEmptyGroupHandling = RemoveAlways
     enableUndoRedo = TRUE
-    numUndos = 0
-    numRedos = 0
     undoStackLimit = 16
     useSelectionCSONotification = FALSE
     useSelectionGroupNotification = FALSE
@@ -766,10 +772,10 @@ module CSOManager {
   }
 }
 module View2D {
-  internal  {
+  internal {
     frame = "-459 245 120 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "30 207 495 458"
         sizeHint = "400 400"
@@ -782,7 +788,7 @@ module View2D {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = View2D1
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
@@ -824,19 +830,20 @@ module View2D {
     borderOn = FALSE
     borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
     valueHighPrecision = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
     maxPrecision = 4
     enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    scaleLUTForNewImage = TRUE
+    computeLUTOnImageChange = FALSE
   }
 }
 module SoCSOPolygonEditor {
-  internal  {
+  internal {
     frame = "-115 589 152 56"
     moduleGroupName = ""
   }
-  fields  {
+  fields {
     instanceName = SoCSOPolygonEditor
     extensionId = polygon
     allowCreation = TRUE
@@ -877,11 +884,11 @@ module SoCSOPolygonEditor {
   }
 }
 module LocalImage {
-  internal  {
+  internal {
     frame = "-1363 757 136 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "716 558 488 144"
         sizeHint = "488 144"
@@ -889,17 +896,17 @@ module LocalImage {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = LocalImage2
     name = $(DemoDataPath)/BrainMultiModal/ProbandT1.tif
     autoLoad = TRUE
   }
 }
 module SoCSOVisualizationSettings {
-  internal  {
+  internal {
     frame = "-983 741 192 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "772 144 372 745"
         sizeHint = "372 745"
@@ -907,7 +914,7 @@ module SoCSOVisualizationSettings {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoCSOVisualizationSettings2
     autoApply = TRUE
     shouldUseAntiAliasing = TRUE
@@ -918,6 +925,8 @@ module SoCSOVisualizationSettings {
     orientationFilterMode = ORIENTATION_MODE_ALL
     parallelThicknessMode = PARALLEL_THICKNESS_MODE_RELATIVE_TO_SLICE
     showParallelThickness = 0.2
+    showOnViewerWithIdMode = SHOW_ON_ALL_VIEWERS
+    viewerId = viewer1
     ghostingDepthInVoxel = 0
     voxelSlabAugment = 0
     shouldRenderShadow = FALSE
@@ -1025,10 +1034,10 @@ module SoCSOVisualizationSettings {
   }
 }
 module SoView2DCSOExtensibleEditor {
-  internal  {
+  internal {
     frame = "-1079 517 208 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "437 379 392 365"
         sizeHint = "392 365"
@@ -1041,12 +1050,11 @@ module SoView2DCSOExtensibleEditor {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoView2DCSOExtensibleEditor2
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 1 1"
     selectionTolerance = 16
     needsValidVoxel = FALSE
@@ -1075,15 +1083,17 @@ module SoView2DCSOExtensibleEditor {
     allowSelectionWithDefaultRenderer = TRUE
     renderCSOsOnImagesDependingOnCreationMode = ON_ALL_IMAGES
     updateCSOIdUnderMouseCursor = FALSE
+    updateGhostedCSOIdUnderMouseCursor = FALSE
+    accumulateTransformations = FALSE
     updateImageStatisticsOnFinishInteraction = FALSE
   }
 }
 module CSOManager {
-  internal  {
+  internal {
     frame = "-1143 605 144 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "623 215 692 561"
         sizeHint = "692 561"
@@ -1096,7 +1106,7 @@ module CSOManager {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = CSOManager2
     workDirectlyOnInputCSOList = FALSE
     updateCsoDisplayTree = TRUE
@@ -1163,8 +1173,6 @@ module CSOManager {
     listSingleRemoveEmptyGroupHandling = RemoveAlways
     listDefaultRemoveEmptyGroupHandling = RemoveAlways
     enableUndoRedo = TRUE
-    numUndos = 0
-    numRedos = 0
     undoStackLimit = 16
     useSelectionCSONotification = FALSE
     useSelectionGroupNotification = FALSE
@@ -1204,10 +1212,10 @@ module CSOManager {
   }
 }
 module View2D {
-  internal  {
+  internal {
     frame = "-1323 269 120 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "30 207 495 458"
         sizeHint = "400 400"
@@ -1220,7 +1228,7 @@ module View2D {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = View2D2
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
@@ -1262,19 +1270,20 @@ module View2D {
     borderOn = FALSE
     borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
     valueHighPrecision = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
     maxPrecision = 4
     enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    scaleLUTForNewImage = TRUE
+    computeLUTOnImageChange = FALSE
   }
 }
 module SoCSOSplineEditor {
-  internal  {
+  internal {
     frame = "-959 613 144 56"
     moduleGroupName = ""
   }
-  fields  {
+  fields {
     instanceName = SoCSOSplineEditor
     extensionId = spline
     allowCreation = TRUE
@@ -1316,7 +1325,7 @@ module SoCSOSplineEditor {
     densityFactor = 0.1
   }
 }
-connections  {
+connections {
   SoView2DCSOExtensibleEditor.inCSOList = CSOManager.outCSOList
   SoView2DCSOExtensibleEditor.inExtensions = SoCSORectangleEditor.self
   View2D.inImage = LocalImage.outImage
