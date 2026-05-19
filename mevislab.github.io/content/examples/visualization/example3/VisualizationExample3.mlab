@@ -1,13 +1,13 @@
 // MDL v1 utf8
-mevislabVersion = 3.5.0.612
-network  {
+mevislabVersion = 4.2.70.9999
+network {
   watchlist = ""
 }
 module View2D {
-  internal  {
-    frame = "284 158 120 50"
+  internal {
+    frame = "285 157 120 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "679 408 583 555"
         sizeHint = "400 400"
@@ -15,12 +15,12 @@ module View2D {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = View2D
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
     view2DExtensionsOn = TRUE
-    startSlice = 21
+    startSlice = 0
     numSlices = 1
     numXSlices = 1
     sliceStep = 1
@@ -45,8 +45,8 @@ module View2D {
     sliceOrigin = "0 0"
     useShaders = TRUE
     useManagedInteraction = FALSE
-    lutCenter = 0.5
-    lutWidth = 1
+    lutCenter = 2047.5
+    lutWidth = 4095
     annotationOn = TRUE
     annotationMode = ANNO_MODE_AUTO
     annotationSizeMode = ANNO_SHOW_SHORT
@@ -57,29 +57,30 @@ module View2D {
     borderOn = TRUE
     borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
     valueHighPrecision = FALSE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
     maxPrecision = 4
     enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = FALSE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    scaleLUTForNewImage = FALSE
+    computeLUTOnImageChange = FALSE
   }
 }
 module LocalImage {
-  internal  {
+  internal {
     frame = "262 497 94 50"
     moduleGroupName = ""
   }
-  fields  {
+  fields {
     instanceName = LocalImage
     name = $(DemoDataPath)/Bone.tiff
     autoLoad = TRUE
   }
 }
 module Threshold {
-  internal  {
+  internal {
     frame = "400 362 85 50"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "827 554 278 290"
         sizeHint = "248 290"
@@ -87,7 +88,7 @@ module Threshold {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = Threshold
     threshold = 1200
     relativeThreshold = FALSE
@@ -99,17 +100,16 @@ module Threshold {
   }
 }
 module SoView2DOverlay {
-  internal  {
+  internal {
     frame = "357 269 168 56"
     moduleGroupName = ""
     showNetworkPanel = true
   }
-  fields  {
+  fields {
     instanceName = SoView2DOverlay
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 1 1"
     selectionTolerance = 4
     needsValidVoxel = TRUE
@@ -146,7 +146,7 @@ module SoView2DOverlay {
     areCheckerTilesInverted = FALSE
   }
 }
-connections  {
+connections {
   View2D.inImage = LocalImage.outImage
   View2D.inInvPreLUT = SoView2DOverlay.self
   Threshold.input0 = LocalImage.outImage

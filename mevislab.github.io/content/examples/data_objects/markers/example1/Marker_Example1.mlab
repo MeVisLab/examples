@@ -1,13 +1,13 @@
 // MDL v1 utf8
-mevislabVersion = 3.5.90.1159
-network  {
+mevislabVersion = 4.2.70.9999
+network {
   watchlist = ""
 }
 module View2D {
-  internal  {
+  internal {
     frame = "589 149 120 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "563 722 400 400"
         sizeHint = "400 400"
@@ -15,7 +15,7 @@ module View2D {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = View2D
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
@@ -57,30 +57,31 @@ module View2D {
     borderOn = FALSE
     borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
     valueHighPrecision = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
     maxPrecision = 4
     enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    scaleLUTForNewImage = TRUE
+    computeLUTOnImageChange = FALSE
   }
 }
 module LocalImage {
-  internal  {
+  internal {
     frame = "441 477 144 72"
     moduleGroupName = ""
     showNetworkPanel = true
   }
-  fields  {
+  fields {
     instanceName = LocalImage
     name = $(DemoDataPath)/BrainMultiModal/ProbandT1.dcm
     autoLoad = TRUE
   }
 }
 module SoView2DMarkerEditor {
-  internal  {
+  internal {
     frame = "625 329 160 64"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "499 206 599 583"
         sizeHint = "599 583"
@@ -88,12 +89,11 @@ module SoView2DMarkerEditor {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = RedMarker
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 0 0"
     selectionTolerance = 4
     needsValidVoxel = TRUE
@@ -158,7 +158,7 @@ module SoView2DMarkerEditor {
     cursorShapeDragMove = MOVE_ALL_CURSOR
     cursorShapeDelete = CROSS_MINUS_CURSOR
     listString = ""
-    index = 7
+    index = 0
     persistent = FALSE
     listStringEnable = FALSE
     applySelect = FALSE
@@ -167,7 +167,8 @@ module SoView2DMarkerEditor {
     overflowMode = None
     maxSize = 0
     useInsertTemplate = FALSE
-    posXYZ = "-4.00570678710938 -112.880470275879 50.5385208129883"
+    autoCopyAndTakeOwnership = FALSE
+    posXYZ = "0 0 0"
     posC = 0
     posT = 0
     posU = 0
@@ -182,10 +183,10 @@ module SoView2DMarkerEditor {
   }
 }
 module XMarkerListContainer {
-  internal  {
+  internal {
     frame = "613 473 152 64"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "540 318 533 625"
         sizeHint = "520 625"
@@ -193,7 +194,7 @@ module XMarkerListContainer {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = RedMarkerList
     listString = ""
     index = 0
@@ -205,7 +206,8 @@ module XMarkerListContainer {
     overflowMode = None
     maxSize = 0
     useInsertTemplate = FALSE
-    posXYZ = "-1.48838806152344 -30.8869934082031 52.4460754394531"
+    autoCopyAndTakeOwnership = FALSE
+    posXYZ = "0 0 0"
     posC = 0
     posT = 0
     posU = 0
@@ -220,10 +222,10 @@ module XMarkerListContainer {
   }
 }
 module SoView2DMarkerEditor {
-  internal  {
+  internal {
     frame = "1017 321 160 64"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "803 168 599 583"
         sizeHint = "599 583"
@@ -231,12 +233,11 @@ module SoView2DMarkerEditor {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = GreenMarker
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "0.333333343267441 1 0"
     selectionTolerance = 4
     needsValidVoxel = TRUE
@@ -310,7 +311,8 @@ module SoView2DMarkerEditor {
     overflowMode = RemoveAll
     maxSize = 1
     useInsertTemplate = FALSE
-    posXYZ = "-2.09951782226563 -77.7817535400391 23.1873397827148"
+    autoCopyAndTakeOwnership = FALSE
+    posXYZ = "0 0 0"
     posC = 0
     posT = 0
     posU = 0
@@ -325,10 +327,10 @@ module SoView2DMarkerEditor {
   }
 }
 module XMarkerListContainer {
-  internal  {
+  internal {
     frame = "1045 481 152 64"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "892 174 533 625"
         sizeHint = "520 625"
@@ -336,7 +338,7 @@ module XMarkerListContainer {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = GreenMarkerList
     listString = ""
     index = 0
@@ -348,7 +350,8 @@ module XMarkerListContainer {
     overflowMode = None
     maxSize = 0
     useInsertTemplate = FALSE
-    posXYZ = "-2.09951782226563 -77.7817535400391 23.1873397827148"
+    autoCopyAndTakeOwnership = FALSE
+    posXYZ = "0 0 0"
     posC = 0
     posT = 0
     posU = 0
@@ -363,10 +366,10 @@ module XMarkerListContainer {
   }
 }
 module DistanceFromXMarkerList {
-  internal  {
+  internal {
     frame = "801 365 176 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "528 170 257 260"
         sizeHint = "257 260"
@@ -374,12 +377,12 @@ module DistanceFromXMarkerList {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = DistanceFromXMarkerList
-    position = "-2.09951782226563 -77.7817535400391 23.1873397827148"
+    position = "0 0 0"
   }
 }
-connections  {
+connections {
   View2D.inImage = LocalImage.outImage
   View2D.inInvPreLUT = RedMarker.self
   View2D.inInvPostLUT = GreenMarker.self
@@ -389,15 +392,15 @@ connections  {
   DistanceFromXMarkerList.position = GreenMarkerList.posXYZ
   DistanceFromXMarkerList.calculateDistance = GreenMarker.busy
 }
-networkModel  {
-  parentItems  {
-    0  {
+networkModel {
+  parentItems {
+    0 {
       MLABNetworkModelItem MLABNoteItem {
         uniqueId = 17
         objectName = ""
         parentUniqueId = 0
         frame = "1028 50 200 200"
-        backgroundColor  {
+        backgroundColor {
           r = 252
           g = 242
           b = 2
