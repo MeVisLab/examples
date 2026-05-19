@@ -1,13 +1,13 @@
 // MDL v1 utf8
-mevislabVersion = 3.5.0.612
-network  {
+mevislabVersion = 4.2.70.9999
+network {
   watchlist = ""
 }
 module LocalImage {
-  internal  {
+  internal {
     frame = "297 -114 96 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "720 558 480 144"
         sizeHint = "480 144"
@@ -15,21 +15,22 @@ module LocalImage {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = LocalImage
     name = $(DemoDataPath)/Bone.tiff
     autoLoad = TRUE
   }
 }
 module SoView2D {
-  internal  {
+  internal {
     frame = "437 -426 88 56"
     moduleGroupName = ""
   }
-  fields  {
+  fields {
     instanceName = SoView2D
     interactionProviderID = ""
     viewerId = viewer
+    userInfo = ""
     startSlice = 3
     sliceStep = 1
     numSlices = 1
@@ -52,6 +53,8 @@ module SoView2D {
     drawImageData = TRUE
     timePoint = 0
     maxTimePoint = 0
+    userIndex = 0
+    maxUserIndex = 0
     snapToCenter = FALSE
     standardKeys = TRUE
     standardKeysNumbers = TRUE
@@ -70,6 +73,7 @@ module SoView2D {
     zoomModeParameter = 1
     invertKeyPanningDirections = FALSE
     invertKeySlicingDirection = FALSE
+    wrapAroundTimePointScrolling = FALSE
     overrideAspectRatio = FALSE
     overrideAspectRatioValue = 1
     alphaFactor = 1
@@ -98,10 +102,10 @@ module SoView2D {
   }
 }
 module SoRenderArea {
-  internal  {
+  internal {
     frame = "281 -538 128 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _viewer {
         geometry = "176 295 400 400"
         sizeHint = "400 400"
@@ -109,7 +113,7 @@ module SoRenderArea {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoRenderArea
     renderCaching = AUTO
     boundingBoxCaching = AUTO
@@ -138,10 +142,10 @@ module SoRenderArea {
   }
 }
 module View2DExtensions {
-  internal  {
+  internal {
     frame = "85 -427 136 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "490 131 711 745"
         sizeHint = "759 745"
@@ -149,7 +153,7 @@ module View2DExtensions {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = View2DExtensions
     slicerOn = TRUE
     zoomOn = TRUE
@@ -163,8 +167,9 @@ module View2DExtensions {
     lutAlphaCenter = 2047.5
     lutAlphaWidth = 4095
     lutIsRelative = FALSE
-    lutSetDefaultOnce = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
+    lutComputeOnInitialization = TRUE
+    shouldComputeLUTOnEachImageChange = TRUE
+    scaleLUTForNewImage = TRUE
     lutColorFactor = "1 1 1"
     lutAlphaFactor = 1
     annoCoords = Voxel
@@ -306,17 +311,16 @@ LUT C/W: $(numInput07) / $(numInput08)"
   }
 }
 module SoView2DOverlay {
-  internal  {
+  internal {
     frame = "253 -427 168 56"
     moduleGroupName = ""
     showNetworkPanel = true
   }
-  fields  {
+  fields {
     instanceName = SoView2DOverlay
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 1 1"
     selectionTolerance = 4
     needsValidVoxel = TRUE
@@ -354,11 +358,11 @@ module SoView2DOverlay {
   }
 }
 module Threshold {
-  internal  {
+  internal {
     frame = "293 -323 88 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "836 485 278 290"
         sizeHint = "248 290"
@@ -366,7 +370,7 @@ module Threshold {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = Threshold
     threshold = 1200
     relativeThreshold = FALSE
@@ -377,7 +381,7 @@ module Threshold {
     userConditionFalseValue = 0
   }
 }
-connections  {
+connections {
   SoView2D.image = LocalImage.outImage
   SoRenderArea.children = "View2DExtensions.outNode SoView2DOverlay.self SoView2D.self"
   View2DExtensions.inLUT = LocalImage.outImage

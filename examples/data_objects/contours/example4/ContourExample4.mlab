@@ -1,13 +1,13 @@
 // MDL v1 utf8
-mevislabVersion = 3.5.90.1190
-network  {
+mevislabVersion = 4.2.70.9999
+network {
   watchlist = ""
 }
 module View2D {
-  internal  {
-    frame = "333 -65 120 56"
+  internal {
+    frame = "333 -67 120 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "117 258 495 458"
         sizeHint = "400 400"
@@ -20,12 +20,12 @@ module View2D {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = View2D
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
     view2DExtensionsOn = TRUE
-    startSlice = 47
+    startSlice = 39
     numSlices = 1
     numXSlices = 1
     sliceStep = 1
@@ -62,19 +62,20 @@ module View2D {
     borderOn = FALSE
     borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
     valueHighPrecision = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
     maxPrecision = 4
     enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    scaleLUTForNewImage = TRUE
+    computeLUTOnImageChange = FALSE
   }
 }
 module CSOManager {
-  internal  {
+  internal {
     frame = "489 373 144 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "623 215 692 561"
         sizeHint = "692 561"
@@ -87,7 +88,7 @@ module CSOManager {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = CSOManager
     workDirectlyOnInputCSOList = FALSE
     updateCsoDisplayTree = TRUE
@@ -154,8 +155,6 @@ module CSOManager {
     listSingleRemoveEmptyGroupHandling = RemoveAlways
     listDefaultRemoveEmptyGroupHandling = RemoveAlways
     enableUndoRedo = TRUE
-    numUndos = 16
-    numRedos = 0
     undoStackLimit = 16
     useSelectionCSONotification = FALSE
     useSelectionGroupNotification = FALSE
@@ -195,10 +194,10 @@ module CSOManager {
   }
 }
 module SoView2DCSOExtensibleEditor {
-  internal  {
+  internal {
     frame = "673 197 208 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "437 379 392 365"
         sizeHint = "392 365"
@@ -211,12 +210,11 @@ module SoView2DCSOExtensibleEditor {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoView2DCSOExtensibleEditor
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 1 1"
     selectionTolerance = 16
     needsValidVoxel = FALSE
@@ -245,14 +243,16 @@ module SoView2DCSOExtensibleEditor {
     allowSelectionWithDefaultRenderer = TRUE
     renderCSOsOnImagesDependingOnCreationMode = ON_ALL_IMAGES
     updateCSOIdUnderMouseCursor = FALSE
+    updateGhostedCSOIdUnderMouseCursor = FALSE
+    accumulateTransformations = FALSE
     updateImageStatisticsOnFinishInteraction = FALSE
   }
 }
 module SoCSOVisualizationSettings {
-  internal  {
+  internal {
     frame = "761 421 192 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "772 144 372 745"
         sizeHint = "372 745"
@@ -260,7 +260,7 @@ module SoCSOVisualizationSettings {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoCSOVisualizationSettings
     autoApply = TRUE
     shouldUseAntiAliasing = TRUE
@@ -271,6 +271,8 @@ module SoCSOVisualizationSettings {
     orientationFilterMode = ORIENTATION_MODE_ALL
     parallelThicknessMode = PARALLEL_THICKNESS_MODE_RELATIVE_TO_SLICE
     showParallelThickness = 0.2
+    showOnViewerWithIdMode = SHOW_ON_ALL_VIEWERS
+    viewerId = viewer1
     ghostingDepthInVoxel = 0
     voxelSlabAugment = 0
     shouldRenderShadow = FALSE
@@ -378,11 +380,11 @@ module SoCSOVisualizationSettings {
   }
 }
 module LocalImage {
-  internal  {
+  internal {
     frame = "253 485 168 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "716 558 488 144"
         sizeHint = "488 144"
@@ -390,18 +392,18 @@ module LocalImage {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = LocalImage
     name = $(DemoDataPath)/Thorax1_CT.small.tif
     autoLoad = TRUE
   }
 }
 module SoCSOLiveWireEditor {
-  internal  {
+  internal {
     frame = "773 293 152 56"
     moduleGroupName = ""
   }
-  fields  {
+  fields {
     instanceName = SoCSOLiveWireEditor
     extensionId = liveWire
     allowCreation = TRUE
@@ -447,10 +449,10 @@ module SoCSOLiveWireEditor {
   }
 }
 module CSOSliceInterpolator {
-  internal  {
+  internal {
     frame = "497 197 144 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "525 245 353 474"
         sizeHint = "353 474"
@@ -458,7 +460,7 @@ module CSOSliceInterpolator {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = CSOSliceInterpolator
     updateMode = Off
     autoApply = FALSE
@@ -494,12 +496,12 @@ module CSOSliceInterpolator {
   }
 }
 module VoxelizeCSO {
-  internal  {
+  internal {
     frame = "149 173 136 56"
     moduleGroupName = ""
     showNetworkPanel = true
   }
-  fields  {
+  fields {
     instanceName = VoxelizeCSO
     mode = Surface
     distanceMode = VoxelDistance
@@ -511,17 +513,16 @@ module VoxelizeCSO {
   }
 }
 module SoView2DOverlay {
-  internal  {
+  internal {
     frame = "133 77 168 56"
     moduleGroupName = ""
     showNetworkPanel = true
   }
-  fields  {
+  fields {
     instanceName = SoView2DOverlay
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 1 1"
     selectionTolerance = 4
     needsValidVoxel = TRUE
@@ -559,10 +560,10 @@ module SoView2DOverlay {
   }
 }
 module View2D {
-  internal  {
+  internal {
     frame = "-19 -51 120 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "126 303 495 458"
         sizeHint = "400 400"
@@ -575,7 +576,7 @@ module View2D {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = View2D1
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
@@ -617,18 +618,19 @@ module View2D {
     borderOn = FALSE
     borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
     valueHighPrecision = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
     maxPrecision = 4
     enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    scaleLUTForNewImage = TRUE
+    computeLUTOnImageChange = FALSE
   }
 }
 module View3D {
-  internal  {
+  internal {
     frame = "-199 -51 144 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "418 213 944 609"
         sizeHint = "1004 609"
@@ -636,7 +638,7 @@ module View3D {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = View3D
     autoViewAll = TRUE
     inventorInputOn = TRUE
@@ -661,6 +663,7 @@ module View3D {
     alphaFactor = 1
     colorFactor = "1 1 1"
     camType = TRUE
+    camProjectionType = CAMERA_PERSPECTIVE
     camPosition = "457.535949707031 -172.237518310547 -261.147155761719"
     camOrientation = "0.28103506565094 0.0115258907899261 0.959628283977509 3.00117707252502"
     initialCameraOrientation = CAMERA_KEEP_AS_IS
@@ -674,7 +677,7 @@ module View3D {
     mode = VolumeRendering
     interactiveQuality = Medium
   }
-  internalFields  {
+  internalFields {
     renderer.gradientQuality = GradientQualityAutomatic
     renderer.enhancementAlphaMix = 0.25
     renderer.boundaryEnhancement = FALSE
@@ -744,11 +747,11 @@ module View3D {
   }
 }
 module CalculateVolume {
-  internal  {
+  internal {
     frame = "-207 229 160 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "345 504 350 279"
         sizeHint = "350 279"
@@ -756,7 +759,7 @@ module CalculateVolume {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = CalculateVolume
     minMode = UserDefined
     intMin = 1
@@ -771,10 +774,10 @@ module CalculateVolume {
   }
 }
 module SoView2DAnnotation {
-  internal  {
+  internal {
     frame = "-203 93 152 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "681 236 711 609"
         sizeHint = "711 609"
@@ -782,12 +785,11 @@ module SoView2DAnnotation {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoView2DAnnotation
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 1 1"
     selectionTolerance = 4
     needsValidVoxel = FALSE
@@ -818,6 +820,7 @@ module SoView2DAnnotation {
     showTechnicalInfo = FALSE
     showAnnotation = ANNO_SHOW_DETAILED
     annotationFontSize = ANNO_SIZE_AUTO
+    useDisplayStringForPN = FALSE
     minDetailFontSize = 10
     maxDetailFontSize = 18
     minShortFontSize = 8
@@ -873,7 +876,7 @@ $(PatientID)"
     shortBottomCenter = ""
     abreviateChars = -1
     abreviateShortChars = 16
-    input00 = 1273.52231230166
+    input00 = 0
     input01 = ""
     input02 = ""
     input03 = ""
@@ -893,6 +896,26 @@ $(PatientID)"
     numInput07 = 0
     numInput08 = 0
     numInput09 = 0
+    input10Name = input10
+    input11Name = input11
+    input12Name = input12
+    input13Name = input13
+    input14Name = input14
+    input15Name = input15
+    input16Name = input16
+    input17Name = input17
+    input18Name = input18
+    input19Name = input19
+    input10Value = ""
+    input11Value = ""
+    input12Value = ""
+    input13Value = ""
+    input14Value = ""
+    input15Value = ""
+    input16Value = ""
+    input17Value = ""
+    input18Value = ""
+    input19Value = ""
     fontWidthDummyString = ""
     targetWidth = 0
     targetHeight = 0
@@ -920,7 +943,7 @@ $(PatientID)"
     backgroundEdgeOpacity = 0.5
   }
 }
-connections  {
+connections {
   View2D.inImage = LocalImage.outImage
   View2D.inInvPreLUT = SoView2DCSOExtensibleEditor.self
   SoView2DCSOExtensibleEditor.inCSOList = CSOManager.outCSOList

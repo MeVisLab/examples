@@ -1,14 +1,14 @@
 // MDL v1 utf8
-mevislabVersion = 3.5.90.1159
-network  {
+mevislabVersion = 4.2.70.9999
+network {
   watchlist = ""
 }
 module LocalImage {
-  internal  {
+  internal {
     frame = "705 629 128 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "1084 562 480 144"
         sizeHint = "480 144"
@@ -16,18 +16,18 @@ module LocalImage {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = LocalImage
     name = $(DemoDataPath)/Bone.tiff
     autoLoad = TRUE
   }
 }
 module WEMIsoSurface {
-  internal  {
+  internal {
     frame = "701 453 152 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "1148 224 405 337"
         sizeHint = "405 337"
@@ -35,7 +35,7 @@ module WEMIsoSurface {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = WEMIsoSurface
     id = 0
     autoApply = TRUE
@@ -64,10 +64,10 @@ module WEMIsoSurface {
   }
 }
 module View2D {
-  internal  {
+  internal {
     frame = "917 85 120 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "959 307 400 400"
         sizeHint = "400 400"
@@ -75,7 +75,7 @@ module View2D {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = View2D
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
@@ -117,19 +117,20 @@ module View2D {
     borderOn = FALSE
     borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
     valueHighPrecision = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
     maxPrecision = 4
     enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    scaleLUTForNewImage = TRUE
+    computeLUTOnImageChange = FALSE
   }
 }
 module SoWEMRenderer {
-  internal  {
+  internal {
     frame = "729 181 160 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "554 358 337 404"
         sizeHint = "337 404"
@@ -137,7 +138,7 @@ module SoWEMRenderer {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoWEMRenderer
     interactionProviderID = ""
     autoApply = TRUE
@@ -153,6 +154,7 @@ module SoWEMRenderer {
     performPreHitTest = FALSE
     cursorShape = CROSS_CURSOR
     colorMode = WEM_COLOR_GENERAL
+    useOnlyFirstLUT = TRUE
     drawFaces = TRUE
     faceDiffuseColor = "0.792156994342804 0.792156994342804 0.792156994342804"
     useFaceAmbientColor = TRUE
@@ -167,20 +169,21 @@ module SoWEMRenderer {
     primitiveValueListValid = TRUE
     primitiveValueListAlphaValid = TRUE
     overwriteAlphaWithPVL = FALSE
-    wemPatchToRender = -1
+    renderPatchSelectionMode = WEM_RENDER_PATCH_SELECT_SINGLE
+    renderPatchSelectionIndex = -1
+    renderPatchSelectionIndices = ""
     maxWEMPatchIndex = 0
-    cachePatches = FALSE
     sendAdjacency = FALSE
     hitModifierKey = AllModifiersMask
     selectedTab = 0
   }
 }
 module SoBackground {
-  internal  {
+  internal {
     frame = "601 181 112 56"
     moduleGroupName = ""
   }
-  fields  {
+  fields {
     instanceName = SoBackground
     rotate = TRUE
     flip = FALSE
@@ -189,10 +192,10 @@ module SoBackground {
   }
 }
 module SoExaminerViewer {
-  internal  {
+  internal {
     frame = "693 77 136 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "114 175 511 352"
         sizeHint = "511 352"
@@ -205,7 +208,7 @@ module SoExaminerViewer {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoExaminerViewer
     renderCaching = AUTO
     boundingBoxCaching = AUTO
@@ -276,12 +279,12 @@ module SoExaminerViewer {
   }
 }
 module VoxelizeWEM {
-  internal  {
+  internal {
     frame = "361 213 144 56"
     moduleGroupName = ""
     showNetworkPanel = true
   }
-  fields  {
+  fields {
     instanceName = VoxelizeWEM
     mode = Surface
     distanceMode = VoxelDistance
@@ -304,10 +307,10 @@ module VoxelizeWEM {
   }
 }
 module View2D {
-  internal  {
+  internal {
     frame = "381 77 120 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "133 226 400 400"
         sizeHint = "400 400"
@@ -315,12 +318,12 @@ module View2D {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = View2D1
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
     view2DExtensionsOn = TRUE
-    startSlice = 30
+    startSlice = 0
     numSlices = 1
     numXSlices = 1
     sliceStep = 1
@@ -357,18 +360,19 @@ module View2D {
     borderOn = FALSE
     borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
     valueHighPrecision = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
     maxPrecision = 4
     enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    scaleLUTForNewImage = TRUE
+    computeLUTOnImageChange = FALSE
   }
 }
 module View2D {
-  internal  {
+  internal {
     frame = "2237 181 120 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "117 258 495 458"
         sizeHint = "400 400"
@@ -381,7 +385,7 @@ module View2D {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = View2D2
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
@@ -423,19 +427,20 @@ module View2D {
     borderOn = FALSE
     borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
     valueHighPrecision = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
     maxPrecision = 4
     enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    scaleLUTForNewImage = TRUE
+    computeLUTOnImageChange = FALSE
   }
 }
 module CSOManager {
-  internal  {
+  internal {
     frame = "2385 597 144 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "623 215 692 561"
         sizeHint = "692 561"
@@ -448,7 +453,7 @@ module CSOManager {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = CSOManager
     workDirectlyOnInputCSOList = FALSE
     updateCsoDisplayTree = TRUE
@@ -515,8 +520,6 @@ module CSOManager {
     listSingleRemoveEmptyGroupHandling = RemoveAlways
     listDefaultRemoveEmptyGroupHandling = RemoveAlways
     enableUndoRedo = TRUE
-    numUndos = 0
-    numRedos = 0
     undoStackLimit = 16
     useSelectionCSONotification = FALSE
     useSelectionGroupNotification = FALSE
@@ -556,10 +559,10 @@ module CSOManager {
   }
 }
 module SoView2DCSOExtensibleEditor {
-  internal  {
+  internal {
     frame = "2485 429 200 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "437 379 392 365"
         sizeHint = "392 365"
@@ -572,12 +575,11 @@ module SoView2DCSOExtensibleEditor {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoView2DCSOExtensibleEditor
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 1 1"
     selectionTolerance = 16
     needsValidVoxel = FALSE
@@ -606,14 +608,16 @@ module SoView2DCSOExtensibleEditor {
     allowSelectionWithDefaultRenderer = TRUE
     renderCSOsOnImagesDependingOnCreationMode = ON_ALL_IMAGES
     updateCSOIdUnderMouseCursor = FALSE
+    updateGhostedCSOIdUnderMouseCursor = FALSE
+    accumulateTransformations = FALSE
     updateImageStatisticsOnFinishInteraction = FALSE
   }
 }
 module SoCSOVisualizationSettings {
-  internal  {
+  internal {
     frame = "2573 653 184 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "772 144 372 745"
         sizeHint = "372 745"
@@ -621,7 +625,7 @@ module SoCSOVisualizationSettings {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoCSOVisualizationSettings
     autoApply = TRUE
     shouldUseAntiAliasing = TRUE
@@ -632,6 +636,8 @@ module SoCSOVisualizationSettings {
     orientationFilterMode = ORIENTATION_MODE_ALL
     parallelThicknessMode = PARALLEL_THICKNESS_MODE_RELATIVE_TO_SLICE
     showParallelThickness = 0.2
+    showOnViewerWithIdMode = SHOW_ON_ALL_VIEWERS
+    viewerId = viewer1
     ghostingDepthInVoxel = 0
     voxelSlabAugment = 0
     shouldRenderShadow = FALSE
@@ -739,11 +745,11 @@ module SoCSOVisualizationSettings {
   }
 }
 module LocalImage {
-  internal  {
+  internal {
     frame = "2181 669 168 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "716 558 488 144"
         sizeHint = "488 144"
@@ -751,18 +757,18 @@ module LocalImage {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = LocalImage1
     name = $(DemoDataPath)/Thorax1_CT.small.tif
     autoLoad = TRUE
   }
 }
 module SoCSOLiveWireEditor {
-  internal  {
+  internal {
     frame = "2581 525 152 56"
     moduleGroupName = ""
   }
-  fields  {
+  fields {
     instanceName = SoCSOLiveWireEditor
     extensionId = liveWire
     allowCreation = TRUE
@@ -808,10 +814,10 @@ module SoCSOLiveWireEditor {
   }
 }
 module CSOSliceInterpolator {
-  internal  {
+  internal {
     frame = "2305 429 144 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "525 245 353 474"
         sizeHint = "353 474"
@@ -819,7 +825,7 @@ module CSOSliceInterpolator {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = CSOSliceInterpolator
     updateMode = Off
     autoApply = FALSE
@@ -855,11 +861,11 @@ module CSOSliceInterpolator {
   }
 }
 module CSOToSurface {
-  internal  {
+  internal {
     frame = "1793 565 144 56"
     moduleGroupName = WEMs
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "814 500 293 261"
         sizeHint = "293 261"
@@ -867,7 +873,7 @@ module CSOToSurface {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = CSOToSurface
     id = 0
     autoApply = TRUE
@@ -882,12 +888,12 @@ module CSOToSurface {
   }
 }
 module SoWEMRenderer {
-  internal  {
+  internal {
     frame = "1781 429 168 72"
     moduleGroupName = WEMs
     showNetworkPanel = true
   }
-  fields  {
+  fields {
     instanceName = SoWEMRenderer1
     interactionProviderID = ""
     autoApply = TRUE
@@ -903,6 +909,7 @@ module SoWEMRenderer {
     performPreHitTest = FALSE
     cursorShape = CROSS_CURSOR
     colorMode = WEM_COLOR_GENERAL
+    useOnlyFirstLUT = TRUE
     drawFaces = TRUE
     faceDiffuseColor = "0.792156994342804 0.792156994342804 0.792156994342804"
     useFaceAmbientColor = TRUE
@@ -917,19 +924,20 @@ module SoWEMRenderer {
     primitiveValueListValid = TRUE
     primitiveValueListAlphaValid = TRUE
     overwriteAlphaWithPVL = FALSE
-    wemPatchToRender = -1
+    renderPatchSelectionMode = WEM_RENDER_PATCH_SELECT_SINGLE
+    renderPatchSelectionIndex = -1
+    renderPatchSelectionIndices = ""
     maxWEMPatchIndex = -1
-    cachePatches = FALSE
     sendAdjacency = FALSE
     hitModifierKey = AllModifiersMask
     selectedTab = 0
   }
 }
 module SoExaminerViewer {
-  internal  {
+  internal {
     frame = "1793 309 144 56"
     moduleGroupName = WEMs
-    windows  {
+    windows {
       window _viewer {
         geometry = "205 223 400 399"
         sizeHint = "400 400"
@@ -937,7 +945,7 @@ module SoExaminerViewer {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoExaminerViewer1
     renderCaching = AUTO
     boundingBoxCaching = AUTO
@@ -986,7 +994,7 @@ module SoExaminerViewer {
     stereoOffset = 3
     height = 0.78539819
     position = "-0.425613403320313 -210.684387207031 -1266.67065429688"
-    orientation = "-0.977498888969421 0.195081800222397 0.0802430585026741 3.34608268737793"
+    orientation = "-0.977498888969421 0.195081800222397 0.0802430510520935 3.34608268737793"
     nearDistance = 269.79535
     farDistance = 474.53351
     focalDistance = 372.06235
@@ -1008,10 +1016,10 @@ module SoExaminerViewer {
   }
 }
 module SoRenderSurfaceIntersection {
-  internal  {
+  internal {
     frame = "1585 317 192 56"
     moduleGroupName = WEMs
-    windows  {
+    windows {
       window _default {
         geometry = "363 444 401 521"
         sizeHint = "401 521"
@@ -1019,7 +1027,7 @@ module SoRenderSurfaceIntersection {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoRenderSurfaceIntersection
     renderCaching = AUTO
     boundingBoxCaching = AUTO
@@ -1042,10 +1050,10 @@ module SoRenderSurfaceIntersection {
   }
 }
 module View2D {
-  internal  {
+  internal {
     frame = "1589 117 120 56"
     moduleGroupName = WEMs
-    windows  {
+    windows {
       window _default {
         geometry = "48 218 400 400"
         sizeHint = "400 400"
@@ -1053,7 +1061,7 @@ module View2D {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = View2D3
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
@@ -1095,18 +1103,19 @@ module View2D {
     borderOn = FALSE
     borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
     valueHighPrecision = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
     maxPrecision = 4
     enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    scaleLUTForNewImage = TRUE
+    computeLUTOnImageChange = FALSE
   }
 }
 module SoView2DScene {
-  internal  {
+  internal {
     frame = "1609 221 128 56"
     moduleGroupName = WEMs
-    windows  {
+    windows {
       window _default {
         geometry = "1239 487 337 184"
         sizeHint = "315 184"
@@ -1114,12 +1123,11 @@ module SoView2DScene {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoView2DScene
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 1 1"
     selectionTolerance = 4
     needsValidVoxel = TRUE
@@ -1144,7 +1152,7 @@ module SoView2DScene {
     lightingModel = BASE_COLOR
   }
 }
-connections  {
+connections {
   WEMIsoSurface.input0 = LocalImage.outImage
   View2D.inImage = LocalImage.outImage
   SoWEMRenderer.inWEM = WEMIsoSurface.outWEM
@@ -1168,14 +1176,14 @@ connections  {
   View2D3.inInvPreLUT = SoView2DScene.self
   SoView2DScene.sceneGraph = SoRenderSurfaceIntersection.self
 }
-networkModel  {
-  parentItems  {
-    0  {
+networkModel {
+  parentItems {
+    0 {
       MLABNetworkModelItem MLABNetworkModelItemGroup {
         uniqueId = 54
         objectName = WEMs
         parentUniqueId = 0
-        color  {
+        color {
           r = 45
           g = 226
           b = 226
@@ -1187,7 +1195,7 @@ networkModel  {
         objectName = ""
         parentUniqueId = 0
         frame = "594 -21 264 200"
-        backgroundColor  {
+        backgroundColor {
           r = 252
           g = 242
           b = 2
@@ -1220,7 +1228,7 @@ networkModel  {
         objectName = ""
         parentUniqueId = 0
         frame = "2069 -18 204 200"
-        backgroundColor  {
+        backgroundColor {
           r = 252
           g = 242
           b = 2

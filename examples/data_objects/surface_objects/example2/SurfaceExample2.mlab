@@ -1,13 +1,13 @@
 // MDL v1 utf8
-mevislabVersion = 3.5.90.1159
-network  {
+mevislabVersion = 4.2.70.9999
+network {
   watchlist = ""
 }
 module SoExaminerViewer {
-  internal  {
+  internal {
     frame = "1069 157 136 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _viewer {
         geometry = "1007 297 400 400"
         sizeHint = "400 400"
@@ -15,7 +15,7 @@ module SoExaminerViewer {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoExaminerViewer
     renderCaching = AUTO
     boundingBoxCaching = AUTO
@@ -86,12 +86,12 @@ module SoExaminerViewer {
   }
 }
 module SoWEMRenderer {
-  internal  {
+  internal {
     frame = "913 421 160 72"
     moduleGroupName = ""
     showNetworkPanel = true
   }
-  fields  {
+  fields {
     instanceName = SoWEMRenderer
     interactionProviderID = ""
     autoApply = TRUE
@@ -107,6 +107,7 @@ module SoWEMRenderer {
     performPreHitTest = FALSE
     cursorShape = CROSS_CURSOR
     colorMode = WEM_COLOR_GENERAL
+    useOnlyFirstLUT = TRUE
     drawFaces = TRUE
     faceDiffuseColor = "0.792156994342804 0.792156994342804 0.792156994342804"
     useFaceAmbientColor = TRUE
@@ -121,21 +122,22 @@ module SoWEMRenderer {
     primitiveValueListValid = TRUE
     primitiveValueListAlphaValid = TRUE
     overwriteAlphaWithPVL = FALSE
-    wemPatchToRender = -1
+    renderPatchSelectionMode = WEM_RENDER_PATCH_SELECT_SINGLE
+    renderPatchSelectionIndex = -1
+    renderPatchSelectionIndices = ""
     maxWEMPatchIndex = 0
-    cachePatches = FALSE
     sendAdjacency = FALSE
     hitModifierKey = AllModifiersMask
     selectedTab = 0
   }
 }
 module SoWEMRenderer {
-  internal  {
+  internal {
     frame = "1189 421 168 72"
     moduleGroupName = ""
     showNetworkPanel = true
   }
-  fields  {
+  fields {
     instanceName = SoWEMRenderer1
     interactionProviderID = ""
     autoApply = TRUE
@@ -151,6 +153,7 @@ module SoWEMRenderer {
     performPreHitTest = FALSE
     cursorShape = CROSS_CURSOR
     colorMode = WEM_COLOR_GENERAL
+    useOnlyFirstLUT = TRUE
     drawFaces = TRUE
     faceDiffuseColor = "0.792156994342804 0.792156994342804 0.792156994342804"
     useFaceAmbientColor = TRUE
@@ -165,20 +168,21 @@ module SoWEMRenderer {
     primitiveValueListValid = TRUE
     primitiveValueListAlphaValid = TRUE
     overwriteAlphaWithPVL = FALSE
-    wemPatchToRender = -1
+    renderPatchSelectionMode = WEM_RENDER_PATCH_SELECT_SINGLE
+    renderPatchSelectionIndex = -1
+    renderPatchSelectionIndices = ""
     maxWEMPatchIndex = 0
-    cachePatches = FALSE
     sendAdjacency = FALSE
     hitModifierKey = AllModifiersMask
     selectedTab = 0
   }
 }
 module WEMModify {
-  internal  {
+  internal {
     frame = "1185 741 128 56"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "702 285 552 691"
         sizeHint = "517 691"
@@ -186,7 +190,7 @@ module WEMModify {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = WEMModify
     id = 0
     autoApply = TRUE
@@ -234,11 +238,11 @@ module WEMModify {
   }
 }
 module WEMLoad {
-  internal  {
+  internal {
     frame = "1061 853 120 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "800 466 320 328"
         sizeHint = "320 328"
@@ -246,16 +250,16 @@ module WEMLoad {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = WEMLoad
     id = 0
     autoApply = TRUE
-    updateMode = AutoUpdate
     overwriteLabelDescription = FALSE
     label = ""
     description = ""
     shouldComputeNormals = FALSE
     filename = $(DemoDataPath)/venus.off
+    autoLoad = TRUE
     mirrorFaces = FALSE
     generateEdges = TRUE
     triangulateFaces = FALSE
@@ -263,11 +267,11 @@ module WEMLoad {
   }
 }
 module WEMSmooth {
-  internal  {
+  internal {
     frame = "1181 629 136 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "814 429 293 403"
         sizeHint = "293 403"
@@ -275,7 +279,7 @@ module WEMSmooth {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = WEMSmooth
     id = 0
     autoApply = TRUE
@@ -299,11 +303,11 @@ module WEMSmooth {
   }
 }
 module WEMSurfaceDistance {
-  internal  {
+  internal {
     frame = "1037 509 184 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "27 224 316 415"
         sizeHint = "299 415"
@@ -311,7 +315,7 @@ module WEMSurfaceDistance {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = WEMSurfaceDistance
     id = 0
     autoApply = TRUE
@@ -335,10 +339,10 @@ module WEMSurfaceDistance {
   }
 }
 module SoView2D {
-  internal  {
+  internal {
     frame = "1269 253 88 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "741 390 439 481"
         sizeHint = "439 481"
@@ -346,10 +350,11 @@ module SoView2D {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoView2D
     interactionProviderID = ""
     viewerId = viewer
+    userInfo = ""
     startSlice = 0
     sliceStep = 1
     numSlices = 1
@@ -372,6 +377,8 @@ module SoView2D {
     drawImageData = FALSE
     timePoint = 0
     maxTimePoint = 0
+    userIndex = 0
+    maxUserIndex = 0
     snapToCenter = FALSE
     standardKeys = TRUE
     standardKeysNumbers = TRUE
@@ -390,6 +397,7 @@ module SoView2D {
     zoomModeParameter = 1
     invertKeyPanningDirections = FALSE
     invertKeySlicingDirection = FALSE
+    wrapAroundTimePointScrolling = FALSE
     overrideAspectRatio = FALSE
     overrideAspectRatioValue = 1
     alphaFactor = 1
@@ -418,12 +426,12 @@ module SoView2D {
   }
 }
 module ConstantImage {
-  internal  {
+  internal {
     frame = "1381 397 120 72"
     moduleGroupName = ""
     showNetworkPanel = true
   }
-  fields  {
+  fields {
     instanceName = ConstantImage
     sizeX = 256
     sizeY = 256
@@ -437,10 +445,10 @@ module ConstantImage {
   }
 }
 module SoView2DAnnotation {
-  internal  {
+  internal {
     frame = "1045 349 152 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "533 291 777 609"
         sizeHint = "711 609"
@@ -448,12 +456,11 @@ module SoView2DAnnotation {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = SoView2DAnnotation
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 1 1"
     selectionTolerance = 4
     needsValidVoxel = FALSE
@@ -484,6 +491,7 @@ module SoView2DAnnotation {
     showTechnicalInfo = FALSE
     showAnnotation = ANNO_SHOW_DETAILED
     annotationFontSize = ANNO_SIZE_AUTO
+    useDisplayStringForPN = FALSE
     minDetailFontSize = 10
     maxDetailFontSize = 18
     minShortFontSize = 8
@@ -556,6 +564,26 @@ $(PatientID)"
     numInput07 = 0
     numInput08 = 0
     numInput09 = 0
+    input10Name = input10
+    input11Name = input11
+    input12Name = input12
+    input13Name = input13
+    input14Name = input14
+    input15Name = input15
+    input16Name = input16
+    input17Name = input17
+    input18Name = input18
+    input19Name = input19
+    input10Value = ""
+    input11Value = ""
+    input12Value = ""
+    input13Value = ""
+    input14Value = ""
+    input15Value = ""
+    input16Value = ""
+    input17Value = ""
+    input18Value = ""
+    input19Value = ""
     fontWidthDummyString = ""
     targetWidth = 0
     targetHeight = 0
@@ -583,7 +611,7 @@ $(PatientID)"
     backgroundEdgeOpacity = 0.5
   }
 }
-connections  {
+connections {
   SoExaminerViewer.children = "SoWEMRenderer.self SoView2DAnnotation.self SoWEMRenderer1.self SoView2D.self"
   SoWEMRenderer.inWEM = WEMLoad.outWEM
   SoWEMRenderer1.inWEM = WEMSmooth.outWEM

@@ -1,5 +1,5 @@
 // MDL v1 utf8
-mevislabVersion = 4.1.70.3239
+mevislabVersion = 4.2.70.9999
 network {
   watchlist = ""
 }
@@ -19,6 +19,7 @@ module DicomImport {
   }
   fields {
     instanceName = DicomImport
+    source = ""
     files = ""
     inputMode = Directory
     enableRecursiveSearch = TRUE
@@ -109,8 +110,8 @@ module View2D {
     moduleGroupName = ""
     windows {
       window _default {
-        geometry = "243 471 400 400"
-        relativePosition = "-0.2693 -0.0903"
+        geometry = "389 569 400 400"
+        relativePosition = "-0.2699 -0.0905"
         sizeHint = "400 400"
         wasOpen = yes
       }
@@ -121,7 +122,7 @@ module View2D {
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
     view2DExtensionsOn = TRUE
-    startSlice = 173
+    startSlice = 0
     numSlices = 1
     numXSlices = 1
     sliceStep = 1
@@ -162,7 +163,8 @@ module View2D {
     enableSlicing = TRUE
     showColorChannelValues = FALSE
     colorChannelSeparator = " / "
-    useRelativeLUTIfNoInputImage = TRUE
+    scaleLUTForNewImage = TRUE
+    computeLUTOnImageChange = FALSE
   }
 }
 module DicomImportExtraOutput {
@@ -173,7 +175,7 @@ module DicomImportExtraOutput {
   }
   fields {
     instanceName = DicomImportExtraOutput
-    selectedItem = 6
+    selectedItem = 0
   }
 }
 module ExtractRTStruct {
@@ -207,7 +209,6 @@ module SoView2DCSOExtensibleEditor {
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 1 1"
     selectionTolerance = 16
     needsValidVoxel = FALSE
@@ -236,6 +237,7 @@ module SoView2DCSOExtensibleEditor {
     allowSelectionWithDefaultRenderer = TRUE
     renderCSOsOnImagesDependingOnCreationMode = ON_ALL_IMAGES
     updateCSOIdUnderMouseCursor = FALSE
+    updateGhostedCSOIdUnderMouseCursor = FALSE
     accumulateTransformations = TRUE
     updateImageStatisticsOnFinishInteraction = FALSE
   }
@@ -258,6 +260,7 @@ module CSOLabelRenderer {
     extensionId = labelRenderer
     allowModification = TRUE
     shouldRender = TRUE
+    shouldOnlyRenderLabelForOnSliceCSOs = FALSE
     shouldDrawLabelBorderForSelectedCSO = TRUE
     labelBorderMarginX = 2
     labelBorderMarginY = 2
@@ -416,7 +419,7 @@ module SoExaminerViewer {
     stereoOffset = 3
     height = 0.78539819
     position = "592.274658203125 -501.426330566406 172.853942871094"
-    orientation = "0.842681884765625 0.285796403884888 0.456297665834427 1.5371880531311"
+    orientation = "0.842681884765625 0.285796374082565 0.456297636032104 1.5371880531311"
     nearDistance = 465.04492
     farDistance = 1210.4917
     focalDistance = 837.39618
@@ -445,7 +448,7 @@ module DicomImportExtraOutput {
   }
   fields {
     instanceName = DicomImportExtraOutput1
-    selectedItem = 8
+    selectedItem = 0
   }
 }
 module MinMaxScan {
@@ -562,7 +565,6 @@ module SoView2DOverlay {
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 1 1"
     selectionTolerance = 4
     needsValidVoxel = TRUE

@@ -1,14 +1,14 @@
 // MDL v1 utf8
-mevislabVersion = 3.6.0.14
-network  {
+mevislabVersion = 4.2.70.9999
+network {
   watchlist = ""
 }
 module RegionGrowing {
-  internal  {
+  internal {
     frame = "617 364 168 72"
     moduleGroupName = ""
     showNetworkPanel = true
-    windows  {
+    windows {
       window _default {
         geometry = "45 264 639 567"
         sizeHint = "639 567"
@@ -16,7 +16,7 @@ module RegionGrowing {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = RegionGrowing
     autoUpdateMode = AutoUpdate
     lowerThreshold = 544.1181
@@ -52,22 +52,22 @@ module RegionGrowing {
   }
 }
 module LocalImage {
-  internal  {
+  internal {
     frame = "539 495 144 72"
     moduleGroupName = ""
     showNetworkPanel = true
   }
-  fields  {
+  fields {
     instanceName = LocalImage
     name = $(DemoDataPath)/BrainMultiModal/ProbandT1.dcm
     autoLoad = TRUE
   }
 }
 module SoView2DOverlay {
-  internal  {
-    frame = "633 126 136 64"
+  internal {
+    frame = "637 129 136 64"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _automatic {
         geometry = "786 409 355 440"
         sizeHint = "355 440"
@@ -75,12 +75,11 @@ module SoView2DOverlay {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = Overlay
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 1 1"
     selectionTolerance = 4
     needsValidVoxel = TRUE
@@ -118,10 +117,10 @@ module SoView2DOverlay {
   }
 }
 module View2D {
-  internal  {
+  internal {
     frame = "641 11 120 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "1026 340 400 400"
         sizeHint = "400 400"
@@ -129,12 +128,12 @@ module View2D {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = View2D
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
     view2DExtensionsOn = TRUE
-    startSlice = 25
+    startSlice = 40
     numSlices = 1
     numXSlices = 1
     sliceStep = 1
@@ -171,18 +170,19 @@ module View2D {
     borderOn = FALSE
     borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
     valueHighPrecision = TRUE
-    showColorChannelValues = FALSE
-    colorChannelSeparator = " / "
     maxPrecision = 4
     enableSlicing = TRUE
-    useRelativeLUTIfNoInputImage = TRUE
+    showColorChannelValues = FALSE
+    colorChannelSeparator = " / "
+    scaleLUTForNewImage = TRUE
+    computeLUTOnImageChange = FALSE
   }
 }
 module SoView2DMarkerEditor {
-  internal  {
+  internal {
     frame = "702 495 160 64"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "667 279 599 583"
         sizeHint = "587 583"
@@ -190,12 +190,11 @@ module SoView2DMarkerEditor {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = MarkerListEditor
     interactionProviderID = ""
     drawingOn = TRUE
     editingOn = TRUE
-    fixZOn = TRUE
     color = "1 0.0284010004252195 0.165316000580788"
     selectionTolerance = 3
     needsValidVoxel = TRUE
@@ -260,7 +259,7 @@ module SoView2DMarkerEditor {
     cursorShapeDragMove = MOVE_ALL_CURSOR
     cursorShapeDelete = CROSS_MINUS_CURSOR
     listString = ""
-    index = 1
+    index = 0
     persistent = FALSE
     listStringEnable = TRUE
     applySelect = FALSE
@@ -269,7 +268,8 @@ module SoView2DMarkerEditor {
     overflowMode = None
     maxSize = 0
     useInsertTemplate = FALSE
-    posXYZ = "40.5785140991211 -12.6941909790039 2.85157012939453"
+    autoCopyAndTakeOwnership = FALSE
+    posXYZ = "0 0 0"
     posC = 0
     posT = 0
     posU = 0
@@ -284,10 +284,10 @@ module SoView2DMarkerEditor {
   }
 }
 module CloseGap {
-  internal  {
+  internal {
     frame = "657 249 88 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "193 297 290 438"
         sizeHint = "290 438"
@@ -295,7 +295,7 @@ module CloseGap {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = CloseGap
     borderHandling = PadSrcFill
     fillValue = 0
@@ -318,10 +318,10 @@ module CloseGap {
   }
 }
 module View3D {
-  internal  {
+  internal {
     frame = "889 53 144 56"
     moduleGroupName = ""
-    windows  {
+    windows {
       window _default {
         geometry = "461 266 998 609"
         sizeHint = "998 609"
@@ -329,7 +329,7 @@ module View3D {
       }
     }
   }
-  fields  {
+  fields {
     instanceName = View3D
     autoViewAll = TRUE
     inventorInputOn = TRUE
@@ -354,6 +354,7 @@ module View3D {
     alphaFactor = 1
     colorFactor = "1 1 1"
     camType = TRUE
+    camProjectionType = CAMERA_PERSPECTIVE
     camPosition = "242.588134765625 -98.6522750854492 -87.4741287231445"
     camOrientation = "0.740100860595703 0.57647305727005 0.346308559179306 2.22862029075623"
     initialCameraOrientation = CAMERA_KEEP_AS_IS
@@ -367,7 +368,7 @@ module View3D {
     mode = VolumeRendering
     interactiveQuality = Medium
   }
-  internalFields  {
+  internalFields {
     renderer.gradientQuality = GradientQualityAutomatic
     renderer.enhancementAlphaMix = 0.25
     renderer.boundaryEnhancement = FALSE
@@ -436,7 +437,7 @@ module View3D {
     clip.rotation5 = "0.999999940395355 0 0 1.57079994678497"
   }
 }
-connections  {
+connections {
   RegionGrowing.input0 = LocalImage.outImage
   RegionGrowing.inMarkerList = MarkerListEditor.outXMarkerList
   Overlay.image = CloseGap.output0
