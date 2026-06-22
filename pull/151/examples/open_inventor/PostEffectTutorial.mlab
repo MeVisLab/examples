@@ -1,0 +1,647 @@
+// MDL v1 utf8
+mevislabVersion = 4.0.70.2449
+network  {
+  watchlist = ""
+}
+module SoExaminerViewer {
+  internal  {
+    frame = "621 157 184 56"
+    moduleGroupName = ""
+    windows  {
+      window _viewer {
+        geometry = "2137 600 831 536"
+        relativePosition = "-0.1703 0.0181"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoExaminerViewer
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    border = FALSE
+    background = "0 0 0"
+    transparency = BLEND
+    antialiasing = FALSE
+    antialiasingNumPasses = 1
+    useSampleBuffers = FALSE
+    numSamples = 8
+    grabKeyFocus = TRUE
+    enableKeyCommands = TRUE
+    snapshotFormat = SNAPSHOT_RGB
+    outputAviFile = ""
+    autoRedrawWhenRecording = TRUE
+    frameRate = 7
+    frameRateAvi = 15
+    outputSnapshotFile = none
+    outputSnapshotFileWritten = none
+    autoIncreaseFile = TRUE
+    showSnapshotWithShell = FALSE
+    snapCount = 0
+    inputDevicesList = ""
+    headlight = TRUE
+    decoration = TRUE
+    popupMenuEnabled = FALSE
+    viewing = TRUE
+    autoClipping = TRUE
+    drawStyle = VIEW_AS_IS
+    interactiveDrawStyle = VIEW_LOW_COMPLEXITY
+    viewAllFlag = FALSE
+    initialCameraOrientation = CAMERA_KEEP_AS_IS
+    applyCameraOrientation = CAMERA_KEEP_AS_IS
+    cameraType = CAMERA_ORTHOGRAPHIC
+    autoApplyUserSettingOrientation = FALSE
+    userSettingOrientation = "0 0 1 0"
+    automaticViewAll = FALSE
+    storeCurrentState = TRUE
+    saveCamera = TRUE
+    cursor = TRUE
+    isCameraStored = TRUE
+    perspective = FALSE
+    stereoViewing = FALSE
+    stereoOffset = 3
+    height = 591.39911
+    position = "278.234436035156 -531.928466796875 107.573722839355"
+    orientation = "0.00399280060082674 -0.736900866031647 0.675989031791687 3.16513538360596"
+    nearDistance = 515.45874
+    farDistance = 1036.6166
+    focalDistance = 866.16901
+    forceRedrawOnInteraction = FALSE
+    button1events = TO_VIEWER
+    button2events = TO_VIEWER
+    button3events = TO_VIEWER
+    keyEvents = TO_VIEWER
+    animationEnabled = FALSE
+    feedback = FALSE
+    feedbackSize = 32
+    mouseInteraction = ""
+    rotationAxis = "0 1 0"
+    rotationAngle = 360
+    rotationSteps = 80
+    recordRotation = TRUE
+    wheelZoomEnabled = TRUE
+    wheelRotationEnabled = TRUE
+  }
+}
+module LocalImage {
+  internal  {
+    frame = "236 720 184 72"
+    moduleGroupName = "DICOM Object"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "2202 833 480 212"
+        relativePosition = "-0.2281 0.2190"
+        sizeHint = "480 148"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = LocalImage
+    name = $(DemoDataPath)/Shoulder_Fracture.dcm
+    autoLoad = TRUE
+  }
+}
+module WEMIsoSurface {
+  internal  {
+    frame = "252 589 152 72"
+    moduleGroupName = "DICOM Object"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "1985 685 417 351"
+        relativePosition = "-0.3573 0.0914"
+        sizeHint = "417 351"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = WEMIsoSurface
+    id = 0
+    autoApply = TRUE
+    updateMode = AutoUpdate
+    overwriteLabelDescription = FALSE
+    label = ""
+    description = ""
+    shouldComputeNormals = TRUE
+    isoMinValue = 1200
+    isoMaxValue = 2000
+    useMinValue = FALSE
+    useMaxValue = TRUE
+    cellExtend = "3 3 3"
+    useWorldCoords = FALSE
+    useInterpolation = TRUE
+    useQuadrification = FALSE
+    useFaceValueList = FALSE
+    useLUTValueList = TRUE
+    useValenceThreeRemoval = TRUE
+    useZeroLengthEdgeRemoval = TRUE
+    useEdgeRemoval = FALSE
+    timePointIndex = 0
+    taskVerboseLogging = FALSE
+    useVoxelSampling = FALSE
+    voxelSampling = 3
+  }
+}
+module SoWEMRenderer {
+  internal  {
+    frame = "248 458 160 72"
+    moduleGroupName = "DICOM Object"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "87 367 449 515"
+        relativePosition = "-0.3375 -0.1828"
+        sizeHint = "449 515"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoWEMRenderer
+    interactionProviderID = ""
+    autoApply = TRUE
+    autoUpdate = TRUE
+    autoClear = TRUE
+    enableCreaseAngle = FALSE
+    creaseAngle = 75
+    useHighlightSelected = FALSE
+    highlightColor = "1 0 0"
+    highlightIntensity = 0.5
+    faceRenderingMode = WEM_FACE_RENDERING_MODE_AUTO
+    allowHits = FALSE
+    performPreHitTest = FALSE
+    cursorShape = CROSS_CURSOR
+    colorMode = WEM_COLOR_GENERAL
+    drawFaces = TRUE
+    faceDiffuseColor = "0.792156994342804 0.792156994342804 0.792156994342804"
+    useFaceAmbientColor = TRUE
+    faceAmbientColor = "0.266667008399963 0.266667008399963 0.266667008399963"
+    useFaceSpecularColor = TRUE
+    faceSpecularColor = "0.0666669979691505 0.0666669979691505 0.0666669979691505"
+    faceAlphaValue = 1
+    faceShininessValue = 1
+    primitiveValueLists = LUT
+    selectedPrimitiveValueList = LUT
+    selectedPrimitiveValueAlphaList = LUT
+    primitiveValueListValid = TRUE
+    primitiveValueListAlphaValid = TRUE
+    overwriteAlphaWithPVL = FALSE
+    wemPatchToRender = -1
+    maxWEMPatchIndex = 0
+    cachePatches = FALSE
+    sendAdjacency = FALSE
+    hitModifierKey = AllModifiersMask
+    selectedTab = 0
+  }
+}
+module SoToggle {
+  internal  {
+    frame = "-54 458 120 56"
+    moduleGroupName = "Toggle Shading"
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "2847 613 198 34"
+        relativePosition = "0.0344 0.0293"
+        sizeHint = "65 34"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoToggle
+    whichChild = -3
+    on = TRUE
+  }
+}
+module SoShaderPipelineCellShading {
+  internal  {
+    frame = "-17 573 192 56"
+    moduleGroupName = "Toggle Shading"
+    windows  {
+      window _default {
+        geometry = "2710 570 347 121"
+        relativePosition = "0.0021 -0.0078"
+        sizeHint = "339 121"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoShaderPipelineCellShading
+    enabled = TRUE
+    toonSteps = "0.200000002980232 0.300000011920929 0.600000023841858 1"
+    toonDiffuse = 0.329
+  }
+}
+module SoShaderPipeline {
+  internal  {
+    frame = "-164 573 128 56"
+    moduleGroupName = "Toggle Shading"
+    windows  {
+      window _default {
+        geometry = "858 579 204 102"
+        relativePosition = "0.0000 0.0000"
+        sizeHint = "197 102"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoShaderPipeline
+    lighting = LIGHTING_PER_VERTEX
+    texturing = TEXTURING_AUTO
+    doubleSidedLighting = TRUE
+  }
+}
+module SoPostEffectBackground {
+  internal  {
+    frame = "237 261 168 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "646 714 361 152"
+        relativePosition = "-1.0693 0.1164"
+        sizeHint = "329 152"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoPostEffectBackground
+    enabled = TRUE
+    bufferName = colorBuffer
+    mode = Gradient
+    startColor = "0 0.666666686534882 0.498039215803146"
+    endColor = "1 0.458823531866074 0.945098042488098"
+  }
+}
+module SoPostEffectMainGeometry {
+  internal  {
+    frame = "429 261 184 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "659 436 600 388"
+        relativePosition = "-0.0005 -0.1233"
+        sizeHint = "248 388"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoPostEffectMainGeometry
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    enabled = TRUE
+    forceNormalBuffer = FALSE
+    forceEmissiveBuffer = FALSE
+    writeAuxiliaryBuffer = FALSE
+    onlyRenderOpaqueObjects = FALSE
+    clearColorBuffer = FALSE
+    colorBufferName = colorBuffer
+    normalBufferName = normalBuffer
+    depthBufferName = depthBuffer
+    emissiveBufferName = emissiveBuffer
+    auxiliaryBufferName = auxBuffer
+    auxiliaryBufferType = RGBA8
+  }
+}
+module SoPostEffectEdges {
+  internal  {
+    frame = "869 261 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "2394 756 442 317"
+        relativePosition = "-0.1380 0.1526"
+        sizeHint = "266 317"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = SoPostEffectEdges
+    enabled = TRUE
+    colorBufferName = colorBuffer
+    normalBufferName = normalBuffer
+    emissiveBufferName = emissiveBuffer
+    depthBufferName = depthBuffer
+    edgeColor = "0.831372559070587 0.0549019612371922 0.160784319043159"
+    samplingDistance = 2
+    normalAngleThreshold = 180
+    depthSensitivity = 9.04
+    exponent = 1
+    blur = TRUE
+    blurKernelSize = 30
+    mode = SobelDepth
+  }
+}
+module SoSeparator {
+  internal  {
+    frame = "515 451 128 56"
+    moduleGroupName = "Geometry 1"
+  }
+  fields  {
+    instanceName = SoSeparator
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+  }
+}
+module SoMaterial {
+  internal  {
+    frame = "486 571 96 56"
+    moduleGroupName = "Geometry 1"
+    windows  {
+      window _materialeditor {
+        geometry = "2111 187 211 188"
+        relativePosition = "-0.3453 -0.3379"
+        sizeHint = "211 188"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoMaterial
+    ambientColor = "0.290196001529694 0.905882000923157 1"
+    diffuseColor = "0.0784310027956963 0.188234999775887 0.800000011920929"
+    specularColor = "0.352941006422043 0.580392003059387 0.650979995727539"
+    emissiveColor = "0.768626987934113 0.764706015586853 0.847059011459351"
+    shininess = 0
+    transparency = 1
+  }
+}
+module SoTransform {
+  internal  {
+    frame = "602 579 104 56"
+    moduleGroupName = "Geometry 1"
+    windows  {
+      window _default {
+        geometry = "2019 525 440 173"
+        relativePosition = "-0.3339 -0.0466"
+        sizeHint = "440 173"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoTransform
+    translation = "70 70 75"
+    rotation = "0 0 1 0"
+    scaleFactor = "1 1 1"
+    scaleOrientation = "0 0 1 0"
+    center = "5 5 1"
+  }
+}
+module SoPostEffectTransparentGeometry {
+  internal  {
+    frame = "633 261 224 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "848 453 319 354"
+        relativePosition = "0.0250 -0.1086"
+        sizeHint = "222 354"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoPostEffectTransparentGeometry
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+    enabled = TRUE
+    layers = 8
+    useInputDepthBuffer = TRUE
+    writeToDepthBuffer = FALSE
+    useOcclusionQuery = TRUE
+    useTextureBuffer = FALSE
+    colorBufferName = colorBuffer
+    depthBufferName = depthBuffer
+    mode = DualDepthPeeling
+  }
+}
+module SoSeparator {
+  internal  {
+    frame = "986 443 128 56"
+    moduleGroupName = "Geometry 2"
+    windows  {
+      window _viewer {
+        geometry = "759 430 400 400"
+        relativePosition = "-0.0005 -0.1284"
+        sizeHint = "400 400"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoSeparator2
+    renderCaching = AUTO
+    boundingBoxCaching = AUTO
+    renderCulling = AUTO
+    pickCulling = AUTO
+  }
+}
+module SoMaterial {
+  internal  {
+    frame = "883 558 96 56"
+    moduleGroupName = "Geometry 2"
+    windows  {
+      window _materialeditor {
+        geometry = "854 536 211 188"
+        relativePosition = "0.0000 -0.0371"
+        sizeHint = "211 188"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoMaterial2
+    ambientColor = "0.756862998008728 0.192157000303268 0.447059005498886"
+    diffuseColor = "0.800000011920929 0.580392003059387 0.764706015586853"
+    specularColor = "0.709803998470306 0.549019992351532 0.439215987920761"
+    emissiveColor = "0.717647016048431 0.82745099067688 0.886274993419647"
+    shininess = 0.200000002980232
+    transparency = 0.465999990701675
+  }
+}
+module SoTransform {
+  internal  {
+    frame = "998 558 112 56"
+    moduleGroupName = "Geometry 2"
+    windows  {
+      window _default {
+        geometry = "2488 579 440 173"
+        relativePosition = "-0.0896 0.0000"
+        sizeHint = "440 173"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = SoTransform2
+    translation = "5 75 80"
+    rotation = "0 0 1 0"
+    scaleFactor = "1 1 1"
+    scaleOrientation = "0 0 1 0"
+    center = "0 0 0"
+  }
+}
+module SoCube {
+  internal  {
+    frame = "1129 558 88 56"
+    moduleGroupName = "Geometry 2"
+    windows  {
+      window _default {
+        geometry = "2727 766 198 97"
+        relativePosition = "-0.0281 0.1612"
+        sizeHint = "117 97"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = SoCube1
+    width = 60
+    height = 150
+    depth = 150
+  }
+}
+module SoSphere {
+  internal  {
+    frame = "722 571 88 56"
+    moduleGroupName = "Geometry 1"
+    windows  {
+      window _default {
+        geometry = "2800 570 198 120"
+        relativePosition = "0.0099 -0.0078"
+        sizeHint = "153 120"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoSphere
+    radius = 35
+    subdivision = 0
+  }
+}
+module SoPostEffectGlow {
+  internal  {
+    frame = "1017 261 128 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "2654 624 341 315"
+        relativePosition = "-0.0286 0.0388"
+        sizeHint = "341 315"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoPostEffectGlow
+    enabled = TRUE
+    sceneGlowBufferName = colorBuffer
+    outputBufferName = colorBuffer
+    emissiveBufferName = emissiveBuffer
+    emissiveGlow = TRUE
+    sceneGlow = TRUE
+    sceneGlowThreshold = 0.89999998
+    blurKernelSize = 32
+    sampleDistance = 1
+    blurIterations = 1
+    intensity = 1
+    resizeMode = Average2x2
+    blendMode = Add
+  }
+}
+module SoPostEffectRenderer {
+  internal  {
+    frame = "1157 261 152 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SoPostEffectRenderer
+    debugBuffers = FALSE
+    debugTempBuffers = FALSE
+    debugProfiling = FALSE
+    debugPixels = FALSE
+    debugBufferName = ""
+    enableStencilBuffers = TRUE
+    superSampling = SuperSampling_Off
+    colorPrecision = Int8
+  }
+}
+connections  {
+  SoExaminerViewer.children = "SoPostEffectBackground.self SoPostEffectMainGeometry.self SoPostEffectTransparentGeometry.self SoPostEffectEdges.self SoPostEffectGlow.self SoPostEffectRenderer.self"
+  WEMIsoSurface.input0 = LocalImage.outImage
+  SoWEMRenderer.inWEM = WEMIsoSurface.outWEM
+  SoToggle.children = "SoShaderPipeline.self SoShaderPipelineCellShading.self"
+  SoPostEffectMainGeometry.children = "SoToggle.self SoWEMRenderer.self SoSeparator.self"
+  SoSeparator.children = "SoMaterial.self SoTransform.self SoSphere.self"
+  SoPostEffectTransparentGeometry.children = SoSeparator2.self
+  SoSeparator2.children = "SoMaterial2.self SoTransform2.self SoCube1.self"
+}
+networkModel  {
+  parentItems  {
+    0  {
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 21
+        objectName = "Toggle Shading"
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 36
+        objectName = "DICOM Object"
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 99
+        objectName = "Geometry 1"
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+      MLABNetworkModelItem MLABNetworkModelItemGroup {
+        uniqueId = 149
+        objectName = "Geometry 2"
+        parentUniqueId = 0
+        color  {
+          r = 45
+          g = 226
+          b = 226
+          a = 40
+        }
+      }
+    }
+  }
+}
