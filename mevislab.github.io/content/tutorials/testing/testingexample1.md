@@ -66,24 +66,24 @@ from mevis import *
 from TestSupport import Base, Fields, Logging
 from TestSupport.Macros import *
 
-filePath="C:/Program Files/<MeVisLab version>/Packages/MeVisLab/Resources/DemoData/BrainT1Dicom" 
+filePath = "C:/Program Files/<MeVisLab version>/Packages/MeVisLab/Resources/DemoData/BrainT1Dicom" 
 
 def OpenFiles():
-  ctx.field("DicomImport.inputMode").value = "Directory"
-  ctx.field("DicomImport.source").value = filePath
-  ctx.field("DicomImport.triggerImport").touch()
-  MLAB.processEvents()
-  while not ctx.field("DicomImport.ready").value:  
-    MLAB.sleep(1)
-    Base.ignoreWarningAndError(MLAB.processEvents)
-  ctx.field("DicomImport.selectNextItem").touch()
-  MLAB.log("Files imported from: " + ctx.field("DicomImport.source").value)
+    ctx.field("DicomImport.inputMode").value = "Directory"
+    ctx.field("DicomImport.source").value = filePath
+    ctx.field("DicomImport.triggerImport").touch()
+    MLAB.processEvents()
+    while not ctx.field("DicomImport.ready").value:  
+        MLAB.sleep(1)
+        Base.ignoreWarningAndError(MLAB.processEvents)
+    ctx.field("DicomImport.selectNextItem").touch()
+    MLAB.log("Files imported from: " + ctx.field("DicomImport.source").value)
   
 def TEST_DicomImport():
-  expectedValue = 1.0
-  OpenFiles() 
-  currentValue = ctx.field("DicomImport.progress").value
-  ASSERT_FLOAT_EQ(expectedValue, currentValue)
+    expectedValue = 1.0
+    OpenFiles() 
+    currentValue = ctx.field("DicomImport.progress").value
+    ASSERT_FLOAT_EQ(expectedValue, currentValue)
 ```
 {{</highlight>}}
 
