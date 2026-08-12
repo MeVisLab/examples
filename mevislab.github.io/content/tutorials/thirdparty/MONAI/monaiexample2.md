@@ -341,13 +341,13 @@ Let's implement the <inlineCode>_getImage</inlineCode> function first:
 ```Python
 ...
   def _getImage():
-    if ctx.field("SwapFlipDimensions.output0").isValid():
-        # Get image after all modifications have been done
-        image = ctx.field("SwapFlipDimensions.output0").image()
+      if ctx.field("SwapFlipDimensions.output0").isValid():
+          # Get image after all modifications have been done
+          image = ctx.field("SwapFlipDimensions.output0").image()
 
-        return image
-    else:
-        return None
+          return image
+      else:
+          return None
 ...
 ```
 {{</highlight>}}
@@ -447,7 +447,7 @@ Open the *.script* file and add a *Window* section. In this window, we reuse the
 ...
 Window {
     height = 100
-    width = 100
+    width  = 100
     Category {
         Viewer ROISelect.scene.self {
             type    = SoRenderArea

@@ -590,7 +590,7 @@ Interface {
             max          = 1000
         }
         Field selected3DView {
-            type   = Enum
+            type = Enum
             items {
                 item Segmented {}
                 item File {}
@@ -606,7 +606,7 @@ Interface {
             title = Reset
         }
         Field markerPosition {
-            type         = Vector3
+            type = Vector3
         }
         Field applyMarker {
             type  = Trigger
@@ -687,7 +687,7 @@ Window {
               }
             }
             Box Info {
-                layout    = Horizontal
+                layout = Horizontal
                 Field totalVolume {}
             }
         }

@@ -61,7 +61,7 @@ Add the Python function to your *.script* file:
 {{< highlight filename="IterativeTestCase.py" >}}
 ```Python
 def ITERATIVETEST_TestWindowCenter():
-  return testData, testPatient
+    return testData, testPatient
 ```
 {{</highlight>}}
 
@@ -69,12 +69,12 @@ This function defines that <inlineCode>testPatient</inlineCode> shall be called 
 {{< highlight filename="IterativeTestCase.py" >}}
 ```Python
 def testPatient(path, windowCenter):
-  ctx.field("LocalImage.name").value = patientPathPrefix + path
-  tree = ctx.field("LocalImage.outImage").getDicomTree()
-  importValue = str(tree.getTag("WindowCenter").value())
-  dicomValue = str(ctx.field("DicomTagViewer.tagValue0").value)
-  ASSERT_EQ(windowCenter, importValue, "Checking expected WindowCenter value against DICOM tree value.")
-  ASSERT_EQ(windowCenter, dicomValue, "Checking expected WindowCenter value against DicomTagViewer value.")
+    ctx.field("LocalImage.name").value = patientPathPrefix + path
+    tree = ctx.field("LocalImage.outImage").getDicomTree()
+    importValue = str(tree.getTag("WindowCenter").value())
+    dicomValue = str(ctx.field("DicomTagViewer.tagValue0").value)
+    ASSERT_EQ(windowCenter, importValue, "Checking expected WindowCenter value against DICOM tree value.")
+    ASSERT_EQ(windowCenter, dicomValue, "Checking expected WindowCenter value against DicomTagViewer value.")
 ```
 {{</highlight>}}
 
@@ -104,11 +104,11 @@ Now, extend your network by adding a `View2D` module and connect it with the `Lo
 {{< highlight filename="IterativeTestCase.py" >}}
 ```Python
 def testPatient(path, windowCenter):
-  ...
-  Fields.setValue("View2D.startSlice", 0)
-  result = ScreenShot.createOffscreenScreenShot("View2D.self", "screentest.png")
-  Logging.showImage("My screenshot", result)
-  Logging.showFile("Link to screenshot file", result)
+    ...
+    Fields.setValue("View2D.startSlice", 0)
+    result = ScreenShot.createOffscreenScreenShot("View2D.self", "screentest.png")
+    Logging.showImage("My screenshot", result)
+    Logging.showFile("Link to screenshot file", result)
 ```
 {{</highlight>}}
 

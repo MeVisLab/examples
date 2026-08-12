@@ -50,14 +50,14 @@ After loading the file, go to the previously implemented *grabImage* function an
 {{< highlight filename="<YOUR_MODULE_NAME>.py" >}}
 ```Python
 def grabImage():
-  _, img = camera.read()
-  updateImage(img)
-  gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-  faces = face_cascade.detectMultiScale(gray, 1.1, 4)
-  for (x, y, w, h) in faces:
-    cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
-  # Display the output
-  cv2.imshow('img', img)
+    _, img = camera.read()
+    updateImage(img)
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    faces = face_cascade.detectMultiScale(gray, 1.1, 4)
+    for (x, y, w, h) in faces:
+        cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
+    # Display the output
+    cv2.imshow('img', img)
 ```
 {{</highlight>}}
 
@@ -65,13 +65,13 @@ In the end, destroy all OpenCV windows in *releaseCamera* function.
 {{< highlight filename="<YOUR_MODULE_NAME>.py" >}}
 ```Python
 def releaseCamera(_):
-  global camera, _interfaces
-  ctx.removeTimers()
-  _interfaces = []
-  if camera:
-    camera.release()
-    camera = None
-  cv2.destroyAllWindows()
+    global camera, _interfaces
+    ctx.removeTimers()
+    _interfaces = []
+    if camera:
+        camera.release()
+        camera = None
+    cv2.destroyAllWindows()
 ```
 {{</highlight>}}
 

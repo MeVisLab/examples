@@ -76,8 +76,8 @@ ctx.field("DtfSkeletonization.update").touch()
 
 graph = ctx.field("DtfSkeletonization.outBase1").object()
 if graph is not None:
-  for edge in graph.getEdges():
-    print(edge.getId())
+    for edge in graph.getEdges():
+        print(edge.getId())
   
 ctx.field("GraphToVolume.update").touch()
 ```
@@ -108,12 +108,12 @@ ctx.field("DtfSkeletonization.update").touch()
 
 graph = ctx.field("DtfSkeletonization.outBase1").object()
 if graph is not None:
-  label = "Label"
-  for edge in graph.getEdges():
-    for skeleton in edge.getSkeletons():
-      if label not in skeleton.properties:
-        skeleton.createPropertyDouble(label, edge.getId())
-      skeleton.setProperty(label, edge.getId())
+    label = "Label"
+    for edge in graph.getEdges():
+        for skeleton in edge.getSkeletons():
+            if label not in skeleton.properties:
+                skeleton.createPropertyDouble(label, edge.getId())
+            skeleton.setProperty(label, edge.getId())
   
 ctx.field("GraphToVolume.update").touch()
 ```
@@ -182,14 +182,14 @@ ctx.field("DtfSkeletonization.update").touch()
 
 graph = ctx.field("DtfSkeletonization.outBase1").object()
 if graph is not None:
-  label = "Label"
-  print('Num edges', len(graph.getEdges()))
-  for edge in graph.getEdges():
-    end_node = edge.getEndNode()
-    for skeleton in edge.getSkeletons():
-      if label not in skeleton.properties:
-        skeleton.createPropertyDouble(label, skeleton.getProperty("MinDistance"))
-      skeleton.setProperty(label, skeleton.getProperty("MinDistance"))
+    label = "Label"
+    print('Num edges', len(graph.getEdges()))
+    for edge in graph.getEdges():
+        end_node = edge.getEndNode()
+        for skeleton in edge.getSkeletons():
+            if label not in skeleton.properties:
+                skeleton.createPropertyDouble(label, skeleton.getProperty("MinDistance"))
+            skeleton.setProperty(label, skeleton.getProperty("MinDistance"))
 
 ctx.field("GraphToVolume.update").touch()
 ctx.field("SoVascularSystem.apply").touch()
